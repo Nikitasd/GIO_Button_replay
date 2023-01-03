@@ -43,7 +43,7 @@
 
 
 /* USER CODE BEGIN (0) */
-/** @brief Настройка модуля ввода/вывода GIO
+/** @brief Configuring the GIO I/O Module
  */
 #include "gio.h"
 #include "sys_common.h"
@@ -53,12 +53,12 @@
 
 
 /* USER CODE BEGIN (1) */
-/** @brief Структура состояний кнопки
- *  @param Button_amount[4] - массив, хранящий время сигнала/отсутствия
- *  сигнала кнопки.
- *  @param Button_Counter - счетчик состояний сигнала, при изменении сигнала он в
- *  последствии будет изменяться.
- *  @param button - объект структуры Button_State
+/** @brief Button entry structure
+   * @param Button_amount[4] - an array storing signal/absence time
+   * button signal.
+   * @param Button_Counter - signal connection counter, when using a
+   * signal it is in сonsequences will change.
+   * @param button - Button_State object structure
  */
 struct Button_State{
     long int Button_amount[4];
@@ -76,9 +76,9 @@ struct Button_State button;
 */
 
 /* USER CODE BEGIN (2) */
-/** @brief Отсчет времени с момента подачи сигнала с кнопки
- *  @param counter - параметр хранящий продолжительность сигнала
- *  @return counter продолжительность сигнала
+/** @brief Countdown from the moment the signal was given from the button
+  * @param counter - parameter storing signal duration
+  * @return counter signal duration
  */
 int Click_Count(void) {
     long int counter = 0;
@@ -88,9 +88,9 @@ int Click_Count(void) {
     return counter;
 }
 
-/** @brief Отсчет времени с момента отсутствия сигнала с кнопки
- *  @param counter - параметр хранящий продолжительность отсутствия сигнала
- *  @return counter продолжительность отсутствия сигнала
+/** @brief Countdown since no signal from the button
+  * @param counter - parameter storing the duration of the absence of a signal
+  * @return counter no signal duration
  */
 int NoClick_Count(void){
     long int counter = 0;
@@ -100,10 +100,10 @@ int NoClick_Count(void){
     return counter;
 }
 
-/** @brief зацикливание выдержки состояний сигнала хранящихся в массиве.
- *  @param delay - выдержка времени.
- *  @param counter счетчик элементов массива, хранящего время сигнала(его
- *  отсутствия).
+/** @brief looping the excerpt of signal states stored in an array.
+  * @param delay - time delay.
+  * @param counter counter of elements of the array that stores the time
+  * of the signal (its absence).
  */
 void replay(void){
     long int delay, counter;
@@ -120,13 +120,13 @@ void replay(void){
 int main(void)
 {
 /* USER CODE BEGIN (3) */
-/** @brief настройка и инициализация модуля GIO
- *  @detailed при подачи сигнала с кнопки запускается функция
- *  Click_Count(), которая отсчитывает время сигнала. Как только мы
- *  отпускаем кнопку, запускается функция NoClick_Count(), которая
- *  отсчитывает время отсутствия сигнала. Как только у нас заполнился
- *  массив, запускается функция replay(), которая выполняет выдержку
- *  времени хранящуюся в массиве.
+/** @brief configuring and initializing the GIO module
+  * @detailed when a signal is given from the button, the function is started
+  * Click_Count(), which counts the time of the signal. As soon as we
+  * release the button, the NoClick_Count() function is launched, which
+  * counts down the time of no signal. As soon as we have filled
+  * array, the replay() function is run, which performs an excerpt
+  * time stored in an array.
  */
     gioInit();
     gioSetDirection(gioPORTA, 1 << 2);
