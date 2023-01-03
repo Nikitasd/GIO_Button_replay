@@ -1,0 +1,233 @@
+\hypertarget{gio_8c}{}\doxysection{gio.\+c File Reference}
+\label{gio_8c}\index{gio.c@{gio.c}}
+
+
+GIO Driver Implementation File.  
+
+
+{\ttfamily \#include \char`\"{}gio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+vim.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gio_8c_a3a5c5cc04b0105eb43cf8f5556e8207e}{gio\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the GIO Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gio_8c_a0eb9c6b99f383108e0e9ae15e5fd1450}{gio\+Set\+Direction}} (gio\+PORT\+\_\+t $\ast$port, uint32 dir)
+\begin{DoxyCompactList}\small\item\em Set Port Direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gio_8c_a976443b96aca877a030f1e38865f6e44}{gio\+Set\+Bit}} (gio\+PORT\+\_\+t $\ast$port, uint32 bit, uint32 value)
+\begin{DoxyCompactList}\small\item\em Write Bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gio_8c_acc590bf80401dda7f74995de1fc14bf2}{gio\+Set\+Port}} (gio\+PORT\+\_\+t $\ast$port, uint32 value)
+\begin{DoxyCompactList}\small\item\em Write Port Value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{gio_8c_aa8da3702193326982ea93af3f1e505fd}{gio\+Get\+Bit}} (gio\+PORT\+\_\+t $\ast$port, uint32 bit)
+\begin{DoxyCompactList}\small\item\em Read Bit. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{gio_8c_a84c1081ad04ee2a9ce8f4cc3a446cfaf}{gio\+Get\+Port}} (gio\+PORT\+\_\+t $\ast$port)
+\begin{DoxyCompactList}\small\item\em Read Port Value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gio_8c_a33d415247aa6af62c6ce4258da5a5f82}{gio\+Toggle\+Bit}} (gio\+PORT\+\_\+t $\ast$port, uint32 bit)
+\begin{DoxyCompactList}\small\item\em Write Bit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{gio_8c_a917b6cc78732c67a98fc611cb1742353}\label{gio_8c_a917b6cc78732c67a98fc611cb1742353}} 
+void {\bfseries gio\+Enable\+Notification} (gio\+PORT\+\_\+t $\ast$port, uint32 bit)
+\item 
+\mbox{\Hypertarget{gio_8c_af8c9046075b0a6f84fc2732bf5ede5ad}\label{gio_8c_af8c9046075b0a6f84fc2732bf5ede5ad}} 
+void {\bfseries gio\+Disable\+Notification} (gio\+PORT\+\_\+t $\ast$port, uint32 bit)
+\item 
+void \mbox{\hyperlink{gio_8c_adf4ea1311a3d6b62f91e76ef2c6edd50}{gio\+Get\+Config\+Value}} (gio\+\_\+config\+\_\+reg\+\_\+t $\ast$config\+\_\+reg, config\+\_\+value\+\_\+type\+\_\+t type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+GIO Driver Implementation File. 
+
+\begin{DoxyDate}{Date}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+01 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gio_8c_aa8da3702193326982ea93af3f1e505fd}\label{gio_8c_aa8da3702193326982ea93af3f1e505fd}} 
+\index{gio.c@{gio.c}!gioGetBit@{gioGetBit}}
+\index{gioGetBit@{gioGetBit}!gio.c@{gio.c}}
+\doxysubsubsection{\texorpdfstring{gioGetBit()}{gioGetBit()}}
+{\footnotesize\ttfamily uint32 gio\+Get\+Bit (\begin{DoxyParamCaption}\item[{gio\+PORT\+\_\+t $\ast$}]{port,  }\item[{uint32}]{bit }\end{DoxyParamCaption})}
+
+
+
+Read Bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & pointer to GIO port\+:
+\begin{DoxyItemize}
+\item gio\+PORTA\+: PortA pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em bit} & number 0-\/7 that specifies the bit to be written to.
+\begin{DoxyItemize}
+\item 0\+: LSB
+\item 7\+: MSB
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Reads a the current value from the specified pin of the given GIO port \mbox{\Hypertarget{gio_8c_adf4ea1311a3d6b62f91e76ef2c6edd50}\label{gio_8c_adf4ea1311a3d6b62f91e76ef2c6edd50}} 
+\index{gio.c@{gio.c}!gioGetConfigValue@{gioGetConfigValue}}
+\index{gioGetConfigValue@{gioGetConfigValue}!gio.c@{gio.c}}
+\doxysubsubsection{\texorpdfstring{gioGetConfigValue()}{gioGetConfigValue()}}
+{\footnotesize\ttfamily void gio\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{gio\+\_\+config\+\_\+reg\+\_\+t $\ast$}]{config\+\_\+reg,  }\item[{config\+\_\+value\+\_\+type\+\_\+t}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{gio_8c_a84c1081ad04ee2a9ce8f4cc3a446cfaf}\label{gio_8c_a84c1081ad04ee2a9ce8f4cc3a446cfaf}} 
+\index{gio.c@{gio.c}!gioGetPort@{gioGetPort}}
+\index{gioGetPort@{gioGetPort}!gio.c@{gio.c}}
+\doxysubsubsection{\texorpdfstring{gioGetPort()}{gioGetPort()}}
+{\footnotesize\ttfamily uint32 gio\+Get\+Port (\begin{DoxyParamCaption}\item[{gio\+PORT\+\_\+t $\ast$}]{port }\end{DoxyParamCaption})}
+
+
+
+Read Port Value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & pointer to GIO port\+:
+\begin{DoxyItemize}
+\item gio\+PORTA\+: PortA pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Reads a the current value of a given GIO port \mbox{\Hypertarget{gio_8c_a3a5c5cc04b0105eb43cf8f5556e8207e}\label{gio_8c_a3a5c5cc04b0105eb43cf8f5556e8207e}} 
+\index{gio.c@{gio.c}!gioInit@{gioInit}}
+\index{gioInit@{gioInit}!gio.c@{gio.c}}
+\doxysubsubsection{\texorpdfstring{gioInit()}{gioInit()}}
+{\footnotesize\ttfamily void gio\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the GIO Driver. 
+
+This function initializes the GIO module and set the GIO ports to the initial values. bring GIO module out of reset
+
+{\bfseries{initialize}} {\bfseries{Port}} {\bfseries{A}} 
+
+
+\begin{DoxyItemize}
+\item Port A output values
+\item Port A direction
+\item Port A open drain enable
+\item Port A pullup / pulldown selection
+\item Port A pullup / pulldown enable
+\end{DoxyItemize}
+
+{\bfseries{initialize}} {\bfseries{interrupts}} 
+
+
+\begin{DoxyItemize}
+\item interrupt polarity
+\item interrupt level
+\item clear all pending interrupts
+\item enable interrupts
+\end{DoxyItemize}\mbox{\Hypertarget{gio_8c_a976443b96aca877a030f1e38865f6e44}\label{gio_8c_a976443b96aca877a030f1e38865f6e44}} 
+\index{gio.c@{gio.c}!gioSetBit@{gioSetBit}}
+\index{gioSetBit@{gioSetBit}!gio.c@{gio.c}}
+\doxysubsubsection{\texorpdfstring{gioSetBit()}{gioSetBit()}}
+{\footnotesize\ttfamily void gio\+Set\+Bit (\begin{DoxyParamCaption}\item[{gio\+PORT\+\_\+t $\ast$}]{port,  }\item[{uint32}]{bit,  }\item[{uint32}]{value }\end{DoxyParamCaption})}
+
+
+
+Write Bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & pointer to GIO port\+:
+\begin{DoxyItemize}
+\item gio\+PORTA\+: PortA pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em bit} & number 0-\/7 that specifies the bit to be written to.
+\begin{DoxyItemize}
+\item 0\+: LSB
+\item 7\+: MSB 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & binary value to write to bit\\
+\hline
+\end{DoxyParams}
+Writes a value to the specified pin of the given GIO port \mbox{\Hypertarget{gio_8c_a0eb9c6b99f383108e0e9ae15e5fd1450}\label{gio_8c_a0eb9c6b99f383108e0e9ae15e5fd1450}} 
+\index{gio.c@{gio.c}!gioSetDirection@{gioSetDirection}}
+\index{gioSetDirection@{gioSetDirection}!gio.c@{gio.c}}
+\doxysubsubsection{\texorpdfstring{gioSetDirection()}{gioSetDirection()}}
+{\footnotesize\ttfamily void gio\+Set\+Direction (\begin{DoxyParamCaption}\item[{gio\+PORT\+\_\+t $\ast$}]{port,  }\item[{uint32}]{dir }\end{DoxyParamCaption})}
+
+
+
+Set Port Direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & pointer to GIO port\+:
+\begin{DoxyItemize}
+\item gio\+PORTA\+: PortA pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em dir} & value to write to DIR register\\
+\hline
+\end{DoxyParams}
+Set the direction of GIO pins at runtime. \mbox{\Hypertarget{gio_8c_acc590bf80401dda7f74995de1fc14bf2}\label{gio_8c_acc590bf80401dda7f74995de1fc14bf2}} 
+\index{gio.c@{gio.c}!gioSetPort@{gioSetPort}}
+\index{gioSetPort@{gioSetPort}!gio.c@{gio.c}}
+\doxysubsubsection{\texorpdfstring{gioSetPort()}{gioSetPort()}}
+{\footnotesize\ttfamily void gio\+Set\+Port (\begin{DoxyParamCaption}\item[{gio\+PORT\+\_\+t $\ast$}]{port,  }\item[{uint32}]{value }\end{DoxyParamCaption})}
+
+
+
+Write Port Value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & pointer to GIO port\+:
+\begin{DoxyItemize}
+\item gio\+PORTA\+: PortA pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & value to write to port\\
+\hline
+\end{DoxyParams}
+Writes a value to all pin of a given GIO port \mbox{\Hypertarget{gio_8c_a33d415247aa6af62c6ce4258da5a5f82}\label{gio_8c_a33d415247aa6af62c6ce4258da5a5f82}} 
+\index{gio.c@{gio.c}!gioToggleBit@{gioToggleBit}}
+\index{gioToggleBit@{gioToggleBit}!gio.c@{gio.c}}
+\doxysubsubsection{\texorpdfstring{gioToggleBit()}{gioToggleBit()}}
+{\footnotesize\ttfamily void gio\+Toggle\+Bit (\begin{DoxyParamCaption}\item[{gio\+PORT\+\_\+t $\ast$}]{port,  }\item[{uint32}]{bit }\end{DoxyParamCaption})}
+
+
+
+Write Bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & pointer to GIO port\+:
+\begin{DoxyItemize}
+\item gio\+PORTA\+: PortA pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em bit} & number 0-\/7 that specifies the bit to be written to.
+\begin{DoxyItemize}
+\item 0\+: LSB
+\item 7\+: MSB
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Toggle a value to the specified pin of the given GIO port 

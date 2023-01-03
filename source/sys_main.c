@@ -43,20 +43,28 @@
 
 
 /* USER CODE BEGIN (0) */
+/** @brief Настройка модуля ввода/вывода GIO
+ */
 #include "gio.h"
-/*#include "reg_rti.h"
-#include "rti.h"
-#include "rti.c"*/
-
+#include "sys_common.h"
 /* USER CODE END */
 
 /* Include Files */
 
-#include "sys_common.h"
 
 /* USER CODE BEGIN (1) */
-unsigned int i;
-long int button[4];
+/** @brief Структура состояний кнопки
+ *  @param Button_amount[4] - массив, хранящий время сигнала/отсутствия
+ *  сигнала кнопки.
+ *  @param Button_Counter - счетчик состояний сигнала, при изменении сигнала он в
+ *  последствии будет изменяться.
+ *  @param button - объект структуры Button_State
+ */
+struct Button_State{
+    long int Button_amount[4];
+    unsigned int Button_Counter;
+};
+struct Button_State button;
 /* USER CODE END */
 
 /** @fn void main(void)
@@ -68,29 +76,42 @@ long int button[4];
 */
 
 /* USER CODE BEGIN (2) */
-int delay(void) {
-    long int x = 0;
+/** @brief Отсчет времени с момента подачи сигнала с кнопки
+ *  @param counter - параметр хранящий продолжительность сигнала
+ *  @return counter продолжительность сигнала
+ */
+int Click_Count(void) {
+    long int counter = 0;
     while(gioGetBit(gioPORTA, 7)){
-        x += 1;
+        counter += 1;
     }
-    return x;
+    return counter;
 }
 
-int del(void){
-    long int x = 0;
+/** @brief Отсчет времени с момента отсутствия сигнала с кнопки
+ *  @param counter - параметр хранящий продолжительность отсутствия сигнала
+ *  @return counter продолжительность отсутствия сигнала
+ */
+int NoClick_Count(void){
+    long int counter = 0;
     while(gioGetBit(gioPORTA, 7) == 0){
-        x += 1;
+        counter += 1;
     }
-    return x;
+    return counter;
 }
 
+/** @brief зацикливание выдержки состояний сигнала хранящихся в массиве.
+ *  @param delay - выдержка времени.
+ *  @param counter счетчик элементов массива, хранящего время сигнала(его
+ *  отсутствия).
+ */
 void replay(void){
-    long int f, x;
+    long int delay, counter;
     while(1){
-        for(x = 0; x < 4; x++){
-            f = button[x]*4;
+        for(counter = 0; counter < 4; counter++){
+            delay = button.Button_amount[counter]*4;
             gioToggleBit(gioPORTA, 2);
-            while(f--);
+            while(delay--);
         }
     }
 }
@@ -99,28 +120,31 @@ void replay(void){
 int main(void)
 {
 /* USER CODE BEGIN (3) */
+/** @brief настройка и инициализация модуля GIO
+ *  @detailed при подачи сигнала с кнопки запускается функция
+ *  Click_Count(), которая отсчитывает время сигнала. Как только мы
+ *  отпускаем кнопку, запускается функция NoClick_Count(), которая
+ *  отсчитывает время отсутствия сигнала. Как только у нас заполнился
+ *  массив, запускается функция replay(), которая выполняет выдержку
+ *  времени хранящуюся в массиве.
+ */
     gioInit();
     gioSetDirection(gioPORTA, 1 << 2);
-    //int butval = gio
-    i = 0;
-    //gioSetBit(gioPORTA, 2, 1);
+    button.Button_Counter = 0;
     while(1){
-        if(button[3] != 0){
+        if(button.Button_amount[3] != 0){
             replay();
         }
         if(gioGetBit(gioPORTA,7)){
-            button[i] = delay();
-            i++;
+            button.Button_amount[button.Button_Counter] = Click_Count();
+            button.Button_Counter += 1;
         }
-        if(button[0] != 0 && gioGetBit(gioPORTA, 7) == 0){
-            button[i] = del();
-            i++;
+        if(button.Button_amount[0] != 0 && gioGetBit(gioPORTA, 7) == 0){
+            button.Button_amount[button.Button_Counter] = NoClick_Count();
+            button.Button_Counter += 1;
         }
     }
-}
-
     /* USER CODE END */
-
-
+}
 /* USER CODE BEGIN (4) */
 /* USER CODE END */

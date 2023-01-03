@@ -1,0 +1,231 @@
+\hypertarget{system_8c}{}\doxysection{system.\+c File Reference}
+\label{system_8c}\index{system.c@{system.c}}
+
+
+System Driver Source File.  
+
+
+{\ttfamily \#include \char`\"{}system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+selftest.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+pcr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pinmux.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{system_8c_a45f46deb7644048176d5e9347afb939a}{setup\+PLL}} (void)
+\item 
+void \mbox{\hyperlink{system_8c_aaa231cc5e90591363431c63f15360567}{trim\+LPO}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize LPO trim values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system_8c_a4490b16ad7d041537868dc9732b3dac2}{setup\+Flash}} (void)
+\item 
+void \mbox{\hyperlink{system_8c_a57d84f612fd0d9fec4cd8ac58b5d10c3}{periph\+Init}} (void)
+\item 
+void \mbox{\hyperlink{system_8c_aa26c333cac9e8481986232eb8f0d9244}{map\+Clocks}} (void)
+\item 
+void \mbox{\hyperlink{system_8c_ab11a117f1e08391f23d1da05930e7acf}{system\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes System Driver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{system_8c_af970bbab0b866f007e84e236cb1654e9}\label{system_8c_af970bbab0b866f007e84e236cb1654e9}} 
+void {\bfseries system\+Power\+Down} (uint32 mode)
+\item 
+void \mbox{\hyperlink{system_8c_ab3c7742b0b313a8ac595a0ae677c3ccc}{system\+Get\+Config\+Value}} (system\+\_\+config\+\_\+reg\+\_\+t $\ast$config\+\_\+reg, config\+\_\+value\+\_\+type\+\_\+t type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system_8c_afa983f739f63d48487aec38706af5a6f}{tcmflash\+Get\+Config\+Value}} (tcmflash\+\_\+config\+\_\+reg\+\_\+t $\ast$config\+\_\+reg, config\+\_\+value\+\_\+type\+\_\+t type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system_8c_ac61ec208839bdc4fec42ea50268b4db3}{sram\+Get\+Config\+Value}} (sram\+\_\+config\+\_\+reg\+\_\+t $\ast$config\+\_\+reg, config\+\_\+value\+\_\+type\+\_\+t type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system_8c_ac357ba2b9a5627af15fa7be057fffd06}{custom\+Trim\+LPO}} (void)
+\begin{DoxyCompactList}\small\item\em custom function to initilize LPO trim values \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+System Driver Source File. 
+
+\begin{DoxyDate}{Date}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item API Functions
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{system_8c_ac357ba2b9a5627af15fa7be057fffd06}\label{system_8c_ac357ba2b9a5627af15fa7be057fffd06}} 
+\index{system.c@{system.c}!customTrimLPO@{customTrimLPO}}
+\index{customTrimLPO@{customTrimLPO}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{customTrimLPO()}{customTrimLPO()}}
+{\footnotesize\ttfamily custom\+Trim\+LPO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+custom function to initilize LPO trim values 
+
+This function initializes default LPO trim values if OTP value is 0XFFFF, user can also write their own code to handle this case . \mbox{\Hypertarget{system_8c_aa26c333cac9e8481986232eb8f0d9244}\label{system_8c_aa26c333cac9e8481986232eb8f0d9244}} 
+\index{system.c@{system.c}!mapClocks@{mapClocks}}
+\index{mapClocks@{mapClocks}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{mapClocks()}{mapClocks()}}
+{\footnotesize\ttfamily void map\+Clocks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+{\bfseries{Initialize}} {\bfseries{Clock}} {\bfseries{Tree\+:}} 
+
+
+\begin{DoxyItemize}
+\item Disable / Enable clock domain
+\item Wait for until clocks are locked
+\item Map device clock domains to desired sources and configure top-\/level dividers
+\item All clock domains are working off the default clock sources until now
+\item The below assignments can be easily modified using the HALCo\+Gen GUI
+\item Setup GCLK, HCLK and VCLK clock source for normal operation, power down mode and after wakeup
+\item Setup RTICLK1 and RTICLK2 clocks
+\item Setup asynchronous peripheral clock sources for AVCLK1 and AVCLK2
+\item Setup synchronous peripheral clock dividers for VCLK1, VCLK2, VCLK3
+\end{DoxyItemize}\mbox{\Hypertarget{system_8c_a57d84f612fd0d9fec4cd8ac58b5d10c3}\label{system_8c_a57d84f612fd0d9fec4cd8ac58b5d10c3}} 
+\index{system.c@{system.c}!periphInit@{periphInit}}
+\index{periphInit@{periphInit}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{periphInit()}{periphInit()}}
+{\footnotesize\ttfamily void periph\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Disable Peripherals before peripheral powerup
+\item Release peripherals from reset and enable clocks to all peripherals
+\item Power-\/up all peripherals
+\item Enable Peripherals
+\end{DoxyItemize}\mbox{\Hypertarget{system_8c_a4490b16ad7d041537868dc9732b3dac2}\label{system_8c_a4490b16ad7d041537868dc9732b3dac2}} 
+\index{system.c@{system.c}!setupFlash@{setupFlash}}
+\index{setupFlash@{setupFlash}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{setupFlash()}{setupFlash()}}
+{\footnotesize\ttfamily void setup\+Flash (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Setup flash read mode, address wait states and data wait states
+\item Setup flash access wait states for bank 7
+\item Disable write access to flash state machine registers
+\item Setup flash bank power modes
+\end{DoxyItemize}\mbox{\Hypertarget{system_8c_a45f46deb7644048176d5e9347afb939a}\label{system_8c_a45f46deb7644048176d5e9347afb939a}} 
+\index{system.c@{system.c}!setupPLL@{setupPLL}}
+\index{setupPLL@{setupPLL}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{setupPLL()}{setupPLL()}}
+{\footnotesize\ttfamily void setup\+PLL (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Configure PLL control registers
+\end{DoxyItemize}
+
+{\bfseries{Initialize}} {\bfseries{Pll1\+:}} 
+
+
+\begin{DoxyItemize}
+\item Setup pll control register 1\+:
+\item Setup reset on oscillator slip
+\item Setup bypass on pll slip
+\item setup Pll output clock divider to max before Lock
+\item Setup reset on oscillator fail
+\item Setup reference clock divider
+\item Setup Pll multiplier
+\item Setup pll control register 2
+\item Setup spreading rate
+\item Setup bandwidth adjustment
+\item Setup internal Pll output divider
+\item Setup spreading amount
+\item Enable PLL(s) to start up or Lock
+\end{DoxyItemize}\mbox{\Hypertarget{system_8c_ac61ec208839bdc4fec42ea50268b4db3}\label{system_8c_ac61ec208839bdc4fec42ea50268b4db3}} 
+\index{system.c@{system.c}!sramGetConfigValue@{sramGetConfigValue}}
+\index{sramGetConfigValue@{sramGetConfigValue}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{sramGetConfigValue()}{sramGetConfigValue()}}
+{\footnotesize\ttfamily void sram\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{sram\+\_\+config\+\_\+reg\+\_\+t $\ast$}]{config\+\_\+reg,  }\item[{config\+\_\+value\+\_\+type\+\_\+t}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{system_8c_ab3c7742b0b313a8ac595a0ae677c3ccc}\label{system_8c_ab3c7742b0b313a8ac595a0ae677c3ccc}} 
+\index{system.c@{system.c}!systemGetConfigValue@{systemGetConfigValue}}
+\index{systemGetConfigValue@{systemGetConfigValue}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{systemGetConfigValue()}{systemGetConfigValue()}}
+{\footnotesize\ttfamily void system\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{system\+\_\+config\+\_\+reg\+\_\+t $\ast$}]{config\+\_\+reg,  }\item[{config\+\_\+value\+\_\+type\+\_\+t}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{system_8c_ab11a117f1e08391f23d1da05930e7acf}\label{system_8c_ab11a117f1e08391f23d1da05930e7acf}} 
+\index{system.c@{system.c}!systemInit@{systemInit}}
+\index{systemInit@{systemInit}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{systemInit()}{systemInit()}}
+{\footnotesize\ttfamily void system\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes System Driver. 
+
+This function initializes the System driver. 
+\begin{DoxyItemize}
+\item Set up flash address and data wait states based on the target CPU clock frequency The number of address and data wait states for the target CPU clock frequency are specified in the specific part\textquotesingle{}s datasheet.
+\item Configure the LPO such that HF LPO is as close to 10MHz as possible
+\item Wait for PLLs to start up and map clock domains to desired clock sources
+\item set ECLK pins functional mode
+\item set ECLK pins default output value
+\item set ECLK pins output direction
+\item set ECLK pins open drain enable
+\item set ECLK pins pullup/pulldown enable
+\item set ECLK pins pullup/pulldown select
+\item Setup ECLK
+\end{DoxyItemize}\mbox{\Hypertarget{system_8c_afa983f739f63d48487aec38706af5a6f}\label{system_8c_afa983f739f63d48487aec38706af5a6f}} 
+\index{system.c@{system.c}!tcmflashGetConfigValue@{tcmflashGetConfigValue}}
+\index{tcmflashGetConfigValue@{tcmflashGetConfigValue}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{tcmflashGetConfigValue()}{tcmflashGetConfigValue()}}
+{\footnotesize\ttfamily void tcmflash\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{tcmflash\+\_\+config\+\_\+reg\+\_\+t $\ast$}]{config\+\_\+reg,  }\item[{config\+\_\+value\+\_\+type\+\_\+t}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{system_8c_aaa231cc5e90591363431c63f15360567}\label{system_8c_aaa231cc5e90591363431c63f15360567}} 
+\index{system.c@{system.c}!trimLPO@{trimLPO}}
+\index{trimLPO@{trimLPO}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{trimLPO()}{trimLPO()}}
+{\footnotesize\ttfamily void trim\+LPO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize LPO trim values. 
+
+Load TRIM values from OTP if present else call \mbox{\hyperlink{system_8c_ac357ba2b9a5627af15fa7be057fffd06}{custom\+Trim\+LPO()}} function 
