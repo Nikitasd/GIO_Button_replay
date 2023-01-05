@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: Файл include/sys_vim.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Структуры данных</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл sys_vim.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Vectored Interrupt Module Header File.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="reg__vim_8h_source.html">reg_vim.h</a>&quot;</code><br />
+</div>
+<p><a href="sys__vim_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Структуры данных</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvim__config__reg.html">vim_config_reg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a6152f175f61064ebaf812bffd1955bb1"><td class="memItemLeft" align="right" valign="top"><a id="a6152f175f61064ebaf812bffd1955bb1" name="a6152f175f61064ebaf812bffd1955bb1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANNELS</b>&#160;&#160;&#160;96U</td></tr>
+<tr class="separator:a6152f175f61064ebaf812bffd1955bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675f9bf6e7ce634c000ec412f5447570"><td class="memItemLeft" align="right" valign="top"><a id="a675f9bf6e7ce634c000ec412f5447570" name="a675f9bf6e7ce634c000ec412f5447570"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_PARFLG</b>&#160;&#160;&#160;(*(volatile uint32 *)0xFFFFFDECU)</td></tr>
+<tr class="separator:a675f9bf6e7ce634c000ec412f5447570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783fa8b79470fa81c0f04c2d02f5185a"><td class="memItemLeft" align="right" valign="top"><a id="a783fa8b79470fa81c0f04c2d02f5185a" name="a783fa8b79470fa81c0f04c2d02f5185a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_PARCTL</b>&#160;&#160;&#160;(*(volatile uint32 *)0xFFFFFDF0U)</td></tr>
+<tr class="separator:a783fa8b79470fa81c0f04c2d02f5185a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada34a500d5d61108eb0b6ef8b928d60"><td class="memItemLeft" align="right" valign="top"><a id="aada34a500d5d61108eb0b6ef8b928d60" name="aada34a500d5d61108eb0b6ef8b928d60"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_ADDERR</b>&#160;&#160;&#160;(*(volatile uint32 *)0xFFFFFDF4U)</td></tr>
+<tr class="separator:aada34a500d5d61108eb0b6ef8b928d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87417df0a0f398188a4a53c55b31945a"><td class="memItemLeft" align="right" valign="top"><a id="a87417df0a0f398188a4a53c55b31945a" name="a87417df0a0f398188a4a53c55b31945a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_FBPARERR</b>&#160;&#160;&#160;(*(volatile uint32 *)0xFFFFFDF8U)</td></tr>
+<tr class="separator:a87417df0a0f398188a4a53c55b31945a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f1ce694ebfc5e99e0ed07976eec024"><td class="memItemLeft" align="right" valign="top"><a id="a94f1ce694ebfc5e99e0ed07976eec024" name="a94f1ce694ebfc5e99e0ed07976eec024"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIMRAMPARLOC</b>&#160;&#160;&#160;(*(volatile uint32 *)0xFFF82400U)</td></tr>
+<tr class="separator:a94f1ce694ebfc5e99e0ed07976eec024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fcc9b5130da89f08b8969a599f40a4"><td class="memItemLeft" align="right" valign="top"><a id="a35fcc9b5130da89f08b8969a599f40a4" name="a35fcc9b5130da89f08b8969a599f40a4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIMRAMLOC</b>&#160;&#160;&#160;(*(volatile uint32 *)0xFFF82000U)</td></tr>
+<tr class="separator:a35fcc9b5130da89f08b8969a599f40a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8352458fa5952eb60afc4ab10d55aa8f"><td class="memItemLeft" align="right" valign="top"><a id="a8352458fa5952eb60afc4ab10d55aa8f" name="a8352458fa5952eb60afc4ab10d55aa8f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_FIRQPR0_CONFIGVALUE</b></td></tr>
+<tr class="separator:a8352458fa5952eb60afc4ab10d55aa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55dc19320e6537b90e6381acd2cfb577"><td class="memItemLeft" align="right" valign="top"><a id="a55dc19320e6537b90e6381acd2cfb577" name="a55dc19320e6537b90e6381acd2cfb577"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_FIRQPR1_CONFIGVALUE</b></td></tr>
+<tr class="separator:a55dc19320e6537b90e6381acd2cfb577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08055ed41ba8c549d977a3d2719e7f4d"><td class="memItemLeft" align="right" valign="top"><a id="a08055ed41ba8c549d977a3d2719e7f4d" name="a08055ed41ba8c549d977a3d2719e7f4d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_FIRQPR2_CONFIGVALUE</b></td></tr>
+<tr class="separator:a08055ed41ba8c549d977a3d2719e7f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6669d7c4a3e82c66a434107c00296da8"><td class="memItemLeft" align="right" valign="top"><a id="a6669d7c4a3e82c66a434107c00296da8" name="a6669d7c4a3e82c66a434107c00296da8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_FIRQPR3_CONFIGVALUE</b></td></tr>
+<tr class="separator:a6669d7c4a3e82c66a434107c00296da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9217ef0a07f9442625b134fc4a8121d3"><td class="memItemLeft" align="right" valign="top"><a id="a9217ef0a07f9442625b134fc4a8121d3" name="a9217ef0a07f9442625b134fc4a8121d3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_REQMASKSET0_CONFIGVALUE</b></td></tr>
+<tr class="separator:a9217ef0a07f9442625b134fc4a8121d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d9a435907e691878defdc8460c7f3a"><td class="memItemLeft" align="right" valign="top"><a id="ae6d9a435907e691878defdc8460c7f3a" name="ae6d9a435907e691878defdc8460c7f3a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_REQMASKSET1_CONFIGVALUE</b></td></tr>
+<tr class="separator:ae6d9a435907e691878defdc8460c7f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5849a36ba48dc56eaac56efaadae51eb"><td class="memItemLeft" align="right" valign="top"><a id="a5849a36ba48dc56eaac56efaadae51eb" name="a5849a36ba48dc56eaac56efaadae51eb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_REQMASKSET2_CONFIGVALUE</b></td></tr>
+<tr class="separator:a5849a36ba48dc56eaac56efaadae51eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9d3c904e22638fad34daabad3665f7"><td class="memItemLeft" align="right" valign="top"><a id="a6c9d3c904e22638fad34daabad3665f7" name="a6c9d3c904e22638fad34daabad3665f7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_REQMASKSET3_CONFIGVALUE</b></td></tr>
+<tr class="separator:a6c9d3c904e22638fad34daabad3665f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee144679162d8f4676ccc3709883d537"><td class="memItemLeft" align="right" valign="top"><a id="aee144679162d8f4676ccc3709883d537" name="aee144679162d8f4676ccc3709883d537"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_WAKEMASKSET0_CONFIGVALUE</b>&#160;&#160;&#160;0xFFFFFFFFU</td></tr>
+<tr class="separator:aee144679162d8f4676ccc3709883d537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52528d6a6c16c1bccbdba1899bbfe1d"><td class="memItemLeft" align="right" valign="top"><a id="aa52528d6a6c16c1bccbdba1899bbfe1d" name="aa52528d6a6c16c1bccbdba1899bbfe1d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_WAKEMASKSET1_CONFIGVALUE</b>&#160;&#160;&#160;0xFFFFFFFFU</td></tr>
+<tr class="separator:aa52528d6a6c16c1bccbdba1899bbfe1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0318b9761e05f1ac0651563b276e2849"><td class="memItemLeft" align="right" valign="top"><a id="a0318b9761e05f1ac0651563b276e2849" name="a0318b9761e05f1ac0651563b276e2849"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_WAKEMASKSET2_CONFIGVALUE</b>&#160;&#160;&#160;0xFFFFFFFFU</td></tr>
+<tr class="separator:a0318b9761e05f1ac0651563b276e2849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa284ca6325f06e73a7492a27c9c45f35"><td class="memItemLeft" align="right" valign="top"><a id="aa284ca6325f06e73a7492a27c9c45f35" name="aa284ca6325f06e73a7492a27c9c45f35"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_WAKEMASKSET3_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:aa284ca6325f06e73a7492a27c9c45f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0124400be632f488892a08a83b42baa"><td class="memItemLeft" align="right" valign="top"><a id="ab0124400be632f488892a08a83b42baa" name="ab0124400be632f488892a08a83b42baa"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CAPEVT_CONFIGVALUE</b>&#160;&#160;&#160;((uint32)((uint32)0U &lt;&lt; 0U) | (uint32)((uint32)0U &lt;&lt; 16U))</td></tr>
+<tr class="separator:ab0124400be632f488892a08a83b42baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db1f4c38c04e7f86d9888948d43cef5"><td class="memItemLeft" align="right" valign="top"><a id="a9db1f4c38c04e7f86d9888948d43cef5" name="a9db1f4c38c04e7f86d9888948d43cef5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL0_CONFIGVALUE</b>&#160;&#160;&#160;0x00010203U</td></tr>
+<tr class="separator:a9db1f4c38c04e7f86d9888948d43cef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1819ef469802c27ac4917cc4c3810820"><td class="memItemLeft" align="right" valign="top"><a id="a1819ef469802c27ac4917cc4c3810820" name="a1819ef469802c27ac4917cc4c3810820"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL1_CONFIGVALUE</b>&#160;&#160;&#160;0x04050607U</td></tr>
+<tr class="separator:a1819ef469802c27ac4917cc4c3810820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa837344d8dd51487a2835e13a59c5623"><td class="memItemLeft" align="right" valign="top"><a id="aa837344d8dd51487a2835e13a59c5623" name="aa837344d8dd51487a2835e13a59c5623"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL2_CONFIGVALUE</b>&#160;&#160;&#160;0x08090A0BU</td></tr>
+<tr class="separator:aa837344d8dd51487a2835e13a59c5623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86798cafd8b23ceb5b1373fe5ba3d9e0"><td class="memItemLeft" align="right" valign="top"><a id="a86798cafd8b23ceb5b1373fe5ba3d9e0" name="a86798cafd8b23ceb5b1373fe5ba3d9e0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL3_CONFIGVALUE</b>&#160;&#160;&#160;0x0C0D0E0FU</td></tr>
+<tr class="separator:a86798cafd8b23ceb5b1373fe5ba3d9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71310c4283251913bae87dd614115e2"><td class="memItemLeft" align="right" valign="top"><a id="ae71310c4283251913bae87dd614115e2" name="ae71310c4283251913bae87dd614115e2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL4_CONFIGVALUE</b>&#160;&#160;&#160;0x10111213U</td></tr>
+<tr class="separator:ae71310c4283251913bae87dd614115e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f6fefa6dca75eae5ebdc67f7dcd296"><td class="memItemLeft" align="right" valign="top"><a id="af6f6fefa6dca75eae5ebdc67f7dcd296" name="af6f6fefa6dca75eae5ebdc67f7dcd296"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL5_CONFIGVALUE</b>&#160;&#160;&#160;0x14151617U</td></tr>
+<tr class="separator:af6f6fefa6dca75eae5ebdc67f7dcd296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accbfe55fb0f88ebcb209120857a53c24"><td class="memItemLeft" align="right" valign="top"><a id="accbfe55fb0f88ebcb209120857a53c24" name="accbfe55fb0f88ebcb209120857a53c24"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL6_CONFIGVALUE</b>&#160;&#160;&#160;0x18191A1BU</td></tr>
+<tr class="separator:accbfe55fb0f88ebcb209120857a53c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5584960f0f2c0cdfcb4abcaae58bd96"><td class="memItemLeft" align="right" valign="top"><a id="ad5584960f0f2c0cdfcb4abcaae58bd96" name="ad5584960f0f2c0cdfcb4abcaae58bd96"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL7_CONFIGVALUE</b>&#160;&#160;&#160;0x1C1D1E1FU</td></tr>
+<tr class="separator:ad5584960f0f2c0cdfcb4abcaae58bd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d96b1587dac5858174e5b10f314179c"><td class="memItemLeft" align="right" valign="top"><a id="a3d96b1587dac5858174e5b10f314179c" name="a3d96b1587dac5858174e5b10f314179c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL8_CONFIGVALUE</b>&#160;&#160;&#160;0x20212223U</td></tr>
+<tr class="separator:a3d96b1587dac5858174e5b10f314179c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a816e2b9ca9b389d9c5977d7473ad5"><td class="memItemLeft" align="right" valign="top"><a id="a15a816e2b9ca9b389d9c5977d7473ad5" name="a15a816e2b9ca9b389d9c5977d7473ad5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL9_CONFIGVALUE</b>&#160;&#160;&#160;0x24252627U</td></tr>
+<tr class="separator:a15a816e2b9ca9b389d9c5977d7473ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0c7ef4f60792fca1e0963ed5ee8c8a"><td class="memItemLeft" align="right" valign="top"><a id="aee0c7ef4f60792fca1e0963ed5ee8c8a" name="aee0c7ef4f60792fca1e0963ed5ee8c8a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL10_CONFIGVALUE</b>&#160;&#160;&#160;0x28292A2BU</td></tr>
+<tr class="separator:aee0c7ef4f60792fca1e0963ed5ee8c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae613211716c014f194f401ea4bfda584"><td class="memItemLeft" align="right" valign="top"><a id="ae613211716c014f194f401ea4bfda584" name="ae613211716c014f194f401ea4bfda584"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL11_CONFIGVALUE</b>&#160;&#160;&#160;0x2C2D2E2FU</td></tr>
+<tr class="separator:ae613211716c014f194f401ea4bfda584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd6bfc230fec24898a9969115bcc13b"><td class="memItemLeft" align="right" valign="top"><a id="a5bd6bfc230fec24898a9969115bcc13b" name="a5bd6bfc230fec24898a9969115bcc13b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL12_CONFIGVALUE</b>&#160;&#160;&#160;0x30313233U</td></tr>
+<tr class="separator:a5bd6bfc230fec24898a9969115bcc13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac399ae97583f1f23f28e06f9d7066b5f"><td class="memItemLeft" align="right" valign="top"><a id="ac399ae97583f1f23f28e06f9d7066b5f" name="ac399ae97583f1f23f28e06f9d7066b5f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL13_CONFIGVALUE</b>&#160;&#160;&#160;0x34353637U</td></tr>
+<tr class="separator:ac399ae97583f1f23f28e06f9d7066b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2579fcdbba9b20ebc4dc49cbce01b6"><td class="memItemLeft" align="right" valign="top"><a id="a7a2579fcdbba9b20ebc4dc49cbce01b6" name="a7a2579fcdbba9b20ebc4dc49cbce01b6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL14_CONFIGVALUE</b>&#160;&#160;&#160;0x38393A3BU</td></tr>
+<tr class="separator:a7a2579fcdbba9b20ebc4dc49cbce01b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27c7a8e2deba0ac437d3b70258e147c"><td class="memItemLeft" align="right" valign="top"><a id="af27c7a8e2deba0ac437d3b70258e147c" name="af27c7a8e2deba0ac437d3b70258e147c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL15_CONFIGVALUE</b>&#160;&#160;&#160;0x3C3D3E3FU</td></tr>
+<tr class="separator:af27c7a8e2deba0ac437d3b70258e147c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e212a4b991a320d4a97b51ce536b3c"><td class="memItemLeft" align="right" valign="top"><a id="aa5e212a4b991a320d4a97b51ce536b3c" name="aa5e212a4b991a320d4a97b51ce536b3c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL16_CONFIGVALUE</b>&#160;&#160;&#160;0x40414243U</td></tr>
+<tr class="separator:aa5e212a4b991a320d4a97b51ce536b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e26f4a22b5e5b3f2a8b5b2e074536e0"><td class="memItemLeft" align="right" valign="top"><a id="a4e26f4a22b5e5b3f2a8b5b2e074536e0" name="a4e26f4a22b5e5b3f2a8b5b2e074536e0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL17_CONFIGVALUE</b>&#160;&#160;&#160;0x44454647U</td></tr>
+<tr class="separator:a4e26f4a22b5e5b3f2a8b5b2e074536e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af004b2f95fbe4b044b5aa0a2521cd308"><td class="memItemLeft" align="right" valign="top"><a id="af004b2f95fbe4b044b5aa0a2521cd308" name="af004b2f95fbe4b044b5aa0a2521cd308"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL18_CONFIGVALUE</b>&#160;&#160;&#160;0x48494A4BU</td></tr>
+<tr class="separator:af004b2f95fbe4b044b5aa0a2521cd308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d01d143b1b065e826ad7c3a30b2958"><td class="memItemLeft" align="right" valign="top"><a id="aa0d01d143b1b065e826ad7c3a30b2958" name="aa0d01d143b1b065e826ad7c3a30b2958"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL19_CONFIGVALUE</b>&#160;&#160;&#160;0x4C4D4E4FU</td></tr>
+<tr class="separator:aa0d01d143b1b065e826ad7c3a30b2958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac267dd5053c42cd48657f795da2236f0"><td class="memItemLeft" align="right" valign="top"><a id="ac267dd5053c42cd48657f795da2236f0" name="ac267dd5053c42cd48657f795da2236f0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL20_CONFIGVALUE</b>&#160;&#160;&#160;0x50515253U</td></tr>
+<tr class="separator:ac267dd5053c42cd48657f795da2236f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b437fa94dbc6c42419a0eb9672e591"><td class="memItemLeft" align="right" valign="top"><a id="a04b437fa94dbc6c42419a0eb9672e591" name="a04b437fa94dbc6c42419a0eb9672e591"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL21_CONFIGVALUE</b>&#160;&#160;&#160;0x54555657U</td></tr>
+<tr class="separator:a04b437fa94dbc6c42419a0eb9672e591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017dcb7a08bb6115d5b9af65309b5d77"><td class="memItemLeft" align="right" valign="top"><a id="a017dcb7a08bb6115d5b9af65309b5d77" name="a017dcb7a08bb6115d5b9af65309b5d77"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL22_CONFIGVALUE</b>&#160;&#160;&#160;0x58595A5BU</td></tr>
+<tr class="separator:a017dcb7a08bb6115d5b9af65309b5d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a54a83c183bf817db40ef6f8bfa9218"><td class="memItemLeft" align="right" valign="top"><a id="a7a54a83c183bf817db40ef6f8bfa9218" name="a7a54a83c183bf817db40ef6f8bfa9218"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIM_CHANCTRL23_CONFIGVALUE</b>&#160;&#160;&#160;0x5C5D5E5FU</td></tr>
+<tr class="separator:a7a54a83c183bf817db40ef6f8bfa9218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a081e608fbf0927e18d08a4d8a96bf06a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__vim_8h.html#a081e608fbf0927e18d08a4d8a96bf06a">t_isrFuncPTR</a>) (void)</td></tr>
+<tr class="memdesc:a081e608fbf0927e18d08a4d8a96bf06a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISR Function Pointer Type Definition.  <br /></td></tr>
+<tr class="separator:a081e608fbf0927e18d08a4d8a96bf06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f976b365355fd874c50c3f3d15b4d6"><td class="memItemLeft" align="right" valign="top"><a id="ac7f976b365355fd874c50c3f3d15b4d6" name="ac7f976b365355fd874c50c3f3d15b4d6"></a>
+typedef enum <a class="el" href="sys__vim_8h.html#a068bb33b993ffc9103931234af5aeff0">systemInterrupt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>systemInterrupt_t</b></td></tr>
+<tr class="separator:ac7f976b365355fd874c50c3f3d15b4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0daddde1bec07e95e9ecf1ac285ec2"><td class="memItemLeft" align="right" valign="top"><a id="aed0daddde1bec07e95e9ecf1ac285ec2" name="aed0daddde1bec07e95e9ecf1ac285ec2"></a>
+typedef struct <a class="el" href="structvim__config__reg.html">vim_config_reg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vim_config_reg_t</b></td></tr>
+<tr class="separator:aed0daddde1bec07e95e9ecf1ac285ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a068bb33b993ffc9103931234af5aeff0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__vim_8h.html#a068bb33b993ffc9103931234af5aeff0">systemInterrupt</a> { <a class="el" href="group___v_i_m.html#ga068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8">SYS_IRQ</a> = 0U
+, <a class="el" href="group___v_i_m.html#ga068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614">SYS_FIQ</a> = 1U
+ }</td></tr>
+<tr class="memdesc:a068bb33b993ffc9103931234af5aeff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias names for clock sources.  <a href="sys__vim_8h.html#a068bb33b993ffc9103931234af5aeff0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a068bb33b993ffc9103931234af5aeff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a623ee80dfdeb0dabf202441d071b2ae4"><td class="memItemLeft" align="right" valign="top"><a id="a623ee80dfdeb0dabf202441d071b2ae4" name="a623ee80dfdeb0dabf202441d071b2ae4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>esmHighInterrupt</b> (void)</td></tr>
+<tr class="memdesc:a623ee80dfdeb0dabf202441d071b2ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">High Level Interrupt for ESM. <br /></td></tr>
+<tr class="separator:a623ee80dfdeb0dabf202441d071b2ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f9f763a00757966f0aa9acfffc715c4"><td class="memItemLeft" align="right" valign="top"><a id="a1f9f763a00757966f0aa9acfffc715c4" name="a1f9f763a00757966f0aa9acfffc715c4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>phantomInterrupt</b> (void)</td></tr>
+<tr class="separator:a1f9f763a00757966f0aa9acfffc715c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga894b6f212b72787bfa97f1ac62877167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___v_i_m.html#ga894b6f212b72787bfa97f1ac62877167">vimInit</a> (void)</td></tr>
+<tr class="memdesc:ga894b6f212b72787bfa97f1ac62877167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes VIM module.  <br /></td></tr>
+<tr class="separator:ga894b6f212b72787bfa97f1ac62877167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a269c8383f7cbf75df048bb812307bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___v_i_m.html#ga1a269c8383f7cbf75df048bb812307bb">vimChannelMap</a> (uint32 request, uint32 channel, <a class="el" href="sys__vim_8h.html#a081e608fbf0927e18d08a4d8a96bf06a">t_isrFuncPTR</a> handler)</td></tr>
+<tr class="memdesc:ga1a269c8383f7cbf75df048bb812307bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map selected interrupt request to the selected channel.  <br /></td></tr>
+<tr class="separator:ga1a269c8383f7cbf75df048bb812307bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadcc56ba4e8e75c39f782b78f4022bf7a"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>vimEnableInterrupt</b> (uint32 channel, systemInterrupt_t inttype)</td></tr>
+<tr class="separator:gadcc56ba4e8e75c39f782b78f4022bf7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4c74a2a1d17f9c7ec4cc3ba156a230e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___v_i_m.html#gac4c74a2a1d17f9c7ec4cc3ba156a230e">vimDisableInterrupt</a> (uint32 channel)</td></tr>
+<tr class="memdesc:gac4c74a2a1d17f9c7ec4cc3ba156a230e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable interrupt for the the selected channel.  <br /></td></tr>
+<tr class="separator:gac4c74a2a1d17f9c7ec4cc3ba156a230e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8b4aff17dfb436d01775ae6fce955c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___v_i_m.html#gae8b4aff17dfb436d01775ae6fce955c1">vimGetConfigValue</a> (<a class="el" href="structvim__config__reg.html">vim_config_reg_t</a> *config_reg, <a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a> type)</td></tr>
+<tr class="memdesc:gae8b4aff17dfb436d01775ae6fce955c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial or current values of the configuration registers.  <br /></td></tr>
+<tr class="separator:gae8b4aff17dfb436d01775ae6fce955c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Vectored Interrupt Module Header File. </p>
+<dl class="section date"><dt>Дата</dt><dd>11-Dec-2018 </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>04.07.01</dd></dl>
+<p>This file contains:</p><ul>
+<li>VIM Type Definitions</li>
+<li>VIM General Definitions</li>
+</ul>
+<p>which are relevant for Vectored Interrupt Controller. </p>
+</div><h2 class="groupheader">Типы</h2>
+<a id="a081e608fbf0927e18d08a4d8a96bf06a" name="a081e608fbf0927e18d08a4d8a96bf06a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a081e608fbf0927e18d08a4d8a96bf06a">&#9670;&#160;</a></span>t_isrFuncPTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t_isrFuncPTR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISR Function Pointer Type Definition. </p>
+<p>This type is used to access the ISR handler. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a068bb33b993ffc9103931234af5aeff0" name="a068bb33b993ffc9103931234af5aeff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a068bb33b993ffc9103931234af5aeff0">&#9670;&#160;</a></span>systemInterrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="sys__vim_8h.html#a068bb33b993ffc9103931234af5aeff0">systemInterrupt</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias names for clock sources. </p>
+<p>This enumeration is used to provide alias names for the clock sources:</p><ul>
+<li>IRQ</li>
+<li>FIQ </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ga068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8" name="ga068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8"></a>SYS_IRQ&#160;</td><td class="fielddoc"><p>Alias for IRQ interrupt </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ga068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614" name="ga068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614"></a>SYS_FIQ&#160;</td><td class="fielddoc"><p>Alias for FIQ interrupt </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

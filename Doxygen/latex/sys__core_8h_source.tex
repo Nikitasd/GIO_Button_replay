@@ -1,0 +1,131 @@
+\hypertarget{sys__core_8h_source}{}\doxysection{sys\+\_\+core.\+h}
+\label{sys__core_8h_source}\index{include/sys\_core.h@{include/sys\_core.h}}
+\mbox{\hyperlink{sys__core_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00019\ \textcolor{comment}{*}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{*}}
+\DoxyCodeLine{00044\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#ifndef\ \_\_SYS\_CORE\_H\_\_}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ \_\_SYS\_CORE\_H\_\_}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sys__common_8h}{sys\_common.h}}"{}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ USER\_STACK\_LENGTH\ \ \ 0x00001000U}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ SVC\_STACK\_LENGTH\ \ \ \ 0x00000100U}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ FIQ\_STACK\_LENGTH\ \ \ \ 0x00000100U}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ IRQ\_STACK\_LENGTH\ \ \ \ 0x00000100U}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ ABORT\_STACK\_LENGTH\ \ 0x00000100U}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ UNDEF\_STACK\_LENGTH\ \ 0x00000100U}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{comment}{/*\ System\ Core\ Interface\ Functions\ */}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_ace84e011af7f2ca1ec1b090daf07ff80}{\_coreInitRegisters\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a0d1ff5263e206536a363a3aa822629dc}{\_coreInitStackPointer\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ uint32\ \mbox{\hyperlink{sys__core_8h_a279a170e08931509b2d62848fda3eacd}{\_getCPSRValue\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a9ac3ba78e1c8af4d0b6a5381b11858b2}{\_gotoCPUIdle\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_acb52868522528dab172c3c1e3286fbc3}{\_coreEnableIrqVicOffset\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a1e087d887d4b7158cac63c2b7e3b2c7d}{\_coreEnableEventBusExport\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00155\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_aefcf37b494b9f7dad1937e1291ce91e3}{\_coreDisableEventBusExport\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a058f0ace94e7ff9afbd9590568a3da99}{\_coreEnableRamEcc\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00166\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a099bf5e5169755b08ae68126dec3172e}{\_coreDisableRamEcc\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_af15d067f037762a1689da3e8c852ded8}{\_coreEnableFlashEcc\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_aa45114f6b771649caedd4468733fd903}{\_coreDisableFlashEcc\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00198\ uint32\ \mbox{\hyperlink{sys__core_8h_a381fac5107244ffabc8cd922573f40a9}{\_coreGetDataFault\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00203\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a9bac9616a47752dccbbd20ffabd567a2}{\_coreClearDataFault\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00221\ uint32\ \mbox{\hyperlink{sys__core_8h_a91724fbfd4f462ddfd13b4e06bfd30f1}{\_coreGetInstructionFault\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00226\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a156b5a1caa835901b7f14fa3ed578f19}{\_coreClearInstructionFault\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00232\ uint32\ \mbox{\hyperlink{sys__core_8h_ac1c18a027ee5d18323f1aa190a1cbc6c}{\_coreGetDataFaultAddress\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00237\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a121f0f2c2b54c8765c3bafcf983a9158}{\_coreClearDataFaultAddress\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00243\ uint32\ \mbox{\hyperlink{sys__core_8h_a78caf621393ff723bd7bd14ce35a4fd3}{\_coreGetInstructionFaultAddress\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00248\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a4ebc29b8391806a992f045d112f93c09}{\_coreClearInstructionFaultAddress\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00266\ uint32\ \mbox{\hyperlink{sys__core_8h_ac66bf5ebd2ec779e781603e9c93d8ac1}{\_coreGetAuxiliaryDataFault\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00271\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a55eda7cacbe4d0b34134d648266bde59}{\_coreClearAuxiliaryDataFault\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00289\ uint32\ \mbox{\hyperlink{sys__core_8h_a512bb945804e5388297b952423abbe27}{\_coreGetAuxiliaryInstructionFault\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00294\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a95d9d6f4bcc67021dae06384792a8332}{\_coreClearAuxiliaryInstructionFault\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00301\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_acac495075d094804ae0e691ee8045785}{\_disable\_interrupt\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00308\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a091b86fe6f21080606847cc482817dd6}{\_disable\_IRQ\_interrupt\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00315\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a4c2fd615301237797f5bba9fb8ee68a7}{\_disable\_FIQ\_interrupt\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00323\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_ac6bb41a73c651e85ebb47f15e7acf33e}{\_enable\_interrupt\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00331\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a41e8e4dc7ef2ed7eaf51e5db53a39697}{\_esmCcmErrorsClear\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00339\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__core_8h_a6677e111798acb3b452b56c197e5b881}{\_errata\_CORTEXR4\_66\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00342\ \}}
+\DoxyCodeLine{00343\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

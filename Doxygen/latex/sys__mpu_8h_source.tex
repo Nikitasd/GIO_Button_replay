@@ -1,0 +1,192 @@
+\hypertarget{sys__mpu_8h_source}{}\doxysection{sys\+\_\+mpu.\+h}
+\label{sys__mpu_8h_source}\index{include/sys\_mpu.h@{include/sys\_mpu.h}}
+\mbox{\hyperlink{sys__mpu_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00019\ \textcolor{comment}{*}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{*}}
+\DoxyCodeLine{00044\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#ifndef\ \_\_SYS\_MPU\_H\_\_}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ \_\_SYS\_MPU\_H\_\_}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sys__common_8h}{sys\_common.h}}"{}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ mpuREGION1\ 0U}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ mpuREGION2\ 1U}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ mpuREGION3\ 2U}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ mpuREGION4\ 3U}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ mpuREGION5\ 4U}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ mpuREGION6\ 5U}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ mpuREGION7\ 6U}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ mpuREGION8\ 7U}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ mpuREGION\_ENABLE\ 1U}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ mpuREGION\_DISABLE\ 0U}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ mpuSUBREGION0\_DISABLE\ 0x100U}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ mpuSUBREGION1\_DISABLE\ 0x200U}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ mpuSUBREGION2\_DISABLE\ 0x400U}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ mpuSUBREGION3\_DISABLE\ 0x800U}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ mpuSUBREGION4\_DISABLE\ 0x1000U}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ mpuSUBREGION5\_DISABLE\ 0x2000U}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ mpuSUBREGION6\_DISABLE\ 0x4000U}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ mpuSUBREGION7\_DISABLE\ 0x8000U}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00225\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1}{mpuRegionAccessPermission}}}
+\DoxyCodeLine{00226\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a71e95209eb51fb81f4927a18473f2909}{MPU\_PRIV\_NA\_USER\_NA\_EXEC}}\ \ \ =\ 0x0000U,\ }
+\DoxyCodeLine{00228\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac15737631230d90adad78dcca58efa2c}{MPU\_PRIV\_RW\_USER\_NA\_EXEC}}\ \ \ =\ 0x0100U,\ }
+\DoxyCodeLine{00229\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ab7c85e13c15d24467af3afbebbd684ce}{MPU\_PRIV\_RW\_USER\_RO\_EXEC}}\ \ \ =\ 0x0200U,\ }
+\DoxyCodeLine{00230\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a91fd34e957618201088c688afb3d00e1}{MPU\_PRIV\_RW\_USER\_RW\_EXEC}}\ \ \ =\ 0x0300U,\ }
+\DoxyCodeLine{00231\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a3e0ff189c9ad2209d5cb8d3d5d0a62a6}{MPU\_PRIV\_RO\_USER\_NA\_EXEC}}\ \ \ =\ 0x0500U,\ }
+\DoxyCodeLine{00232\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a2b1de33fa510eebcf6666e03efdb2c0b}{MPU\_PRIV\_RO\_USER\_RO\_EXEC}}\ \ \ =\ 0x0600U,\ }
+\DoxyCodeLine{00233\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a1b35504ed735fbf54d0e4afeb9b6bfef}{MPU\_PRIV\_NA\_USER\_NA\_NOEXEC}}\ =\ 0x1000U,\ }
+\DoxyCodeLine{00234\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a584df8003c15606f764443835eb2d1cc}{MPU\_PRIV\_RW\_USER\_NA\_NOEXEC}}\ =\ 0x1100U,\ }
+\DoxyCodeLine{00235\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac22d5d1562c769cdf9c3c45843bbf71e}{MPU\_PRIV\_RW\_USER\_RO\_NOEXEC}}\ =\ 0x1200U,\ }
+\DoxyCodeLine{00236\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1aa927f1a59e947bffd1d57bb3f80fdb3f}{MPU\_PRIV\_RW\_USER\_RW\_NOEXEC}}\ =\ 0x1300U,\ }
+\DoxyCodeLine{00237\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a49aadad40effee8eaee1888f1bc7523f}{MPU\_PRIV\_RO\_USER\_NA\_NOEXEC}}\ =\ 0x1500U,\ }
+\DoxyCodeLine{00238\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a305af04657ce93614d5a46caa08a32fa}{MPU\_PRIV\_RO\_USER\_RO\_NOEXEC}}\ =\ 0x1600U\ \ }
+\DoxyCodeLine{00239\ \};}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00257\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8b}{mpuRegionType}}}
+\DoxyCodeLine{00258\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba75e3267a32fe3501c40c94ac50a8c2c9}{MPU\_STRONGLYORDERED\_SHAREABLE}}\ =\ 0x0000U,\ }
+\DoxyCodeLine{00260\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bac6e42873d58112e0abd4ab0397fb16f0}{MPU\_DEVICE\_SHAREABLE}}\ \ \ \ \ \ \ \ \ \ =\ 0x0001U,\ }
+\DoxyCodeLine{00261\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7921579107082753ba64548e87e87ad7}{MPU\_NORMAL\_OIWTNOWA\_NONSHARED}}\ =\ 0x0002U,\ }
+\DoxyCodeLine{00262\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bad5d6638a6327d870dcd6dfcf0b568145}{MPU\_NORMAL\_OIWBNOWA\_NONSHARED}}\ =\ 0x0003U,\ }
+\DoxyCodeLine{00263\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7c42c90fef7810c72cef488b990bb9bf}{MPU\_NORMAL\_OIWTNOWA\_SHARED}}\ \ \ \ =\ 0x0006U,\ }
+\DoxyCodeLine{00264\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8a5a2af77f1ad1f3982acc7b2a7e80a6}{MPU\_NORMAL\_OIWBNOWA\_SHARED}}\ \ \ \ =\ 0x0007U,\ }
+\DoxyCodeLine{00265\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8babaa855fd1da96245d804127acc41dba5}{MPU\_NORMAL\_OINC\_NONSHARED}}\ \ \ \ \ =\ 0x0008U,\ }
+\DoxyCodeLine{00266\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae05741684610308e3cf310999e795b55}{MPU\_NORMAL\_OIWBWA\_NONSHARED}}\ \ \ =\ 0x000BU,\ }
+\DoxyCodeLine{00267\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8ebd1c0896986829e7f86b4e1c457f9e}{MPU\_NORMAL\_OINC\_SHARED}}\ \ \ \ \ \ \ \ =\ 0x000CU,\ }
+\DoxyCodeLine{00268\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba423e4290786b71c2d673e4487b871623}{MPU\_NORMAL\_OIWBWA\_SHARED}}\ \ \ \ \ \ =\ 0x000FU,\ }
+\DoxyCodeLine{00269\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae40bb13881cc30b7e04a269fd9ba24bf}{MPU\_DEVICE\_NONSHAREABLE}}\ \ \ \ \ \ \ =\ 0x0010U\ \ }
+\DoxyCodeLine{00270\ \};}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00306\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4}{mpuRegionSize}}}
+\DoxyCodeLine{00307\ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a511bdec14ca044d611d6266f1da9be03}{MPU\_32\_BYTES}}\ \ =\ 0x04U\ <<\ 1U,\ }
+\DoxyCodeLine{00309\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6cabcd3028837bca0686309233fc4062}{MPU\_64\_BYTES}}\ \ =\ 0x05U\ <<\ 1U,\ }
+\DoxyCodeLine{00310\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a3f28d2cab418caa9addd762a03cc0209}{MPU\_128\_BYTES}}\ =\ 0x06U\ <<\ 1U,\ }
+\DoxyCodeLine{00311\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a5741c515eb713b91a7f4e09154c1b23c}{MPU\_256\_BYTES}}\ =\ 0x07U\ <<\ 1U,\ }
+\DoxyCodeLine{00312\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4adcde7e97e1c8093cbf6a26a1834b6663}{MPU\_512\_BYTES}}\ =\ 0x08U\ <<\ 1U,\ }
+\DoxyCodeLine{00313\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2a9856e8cf40c119428add4de22e8970}{MPU\_1\_KB}}\ \ \ \ \ \ =\ 0x09U\ <<\ 1U,\ }
+\DoxyCodeLine{00314\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a42919bc91a214dd63552616552098f2d}{MPU\_2\_KB}}\ \ \ \ \ \ =\ 0x0AU\ <<\ 1U,\ }
+\DoxyCodeLine{00315\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a1884443aeecaa5bff6f589443cb62b00}{MPU\_4\_KB}}\ \ \ \ \ \ =\ 0x0BU\ <<\ 1U,\ }
+\DoxyCodeLine{00316\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a8f2e51364d3a181259ba1731c3601906}{MPU\_8\_KB}}\ \ \ \ \ \ =\ 0x0CU\ <<\ 1U,\ }
+\DoxyCodeLine{00317\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4265e557e9bd002bb79629bd69aae2b4}{MPU\_16\_KB}}\ \ \ \ \ =\ 0x0DU\ <<\ 1U,\ }
+\DoxyCodeLine{00318\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9411decee1237234aeff9062286754d8}{MPU\_32\_KB}}\ \ \ \ \ =\ 0x0EU\ <<\ 1U,\ }
+\DoxyCodeLine{00319\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2575c3986bf2e1c69e92b44ebe90ef4b}{MPU\_64\_KB}}\ \ \ \ \ =\ 0x0FU\ <<\ 1U,\ }
+\DoxyCodeLine{00320\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a7a1af8d2d342198c1d155180ea170488}{MPU\_128\_KB}}\ \ \ \ =\ 0x10U\ <<\ 1U,\ }
+\DoxyCodeLine{00321\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af92f964f34cf751a8e3ab76f52806493}{MPU\_256\_KB}}\ \ \ \ =\ 0x11U\ <<\ 1U,\ }
+\DoxyCodeLine{00322\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac028564148ca16cd5276acc9cd9a390e}{MPU\_512\_KB}}\ \ \ \ =\ 0x12U\ <<\ 1U,\ }
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac951ba0deb2bd03348bb493c70cb83ae}{MPU\_1\_MB}}\ \ \ \ \ \ =\ 0x13U\ <<\ 1U,\ }
+\DoxyCodeLine{00324\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac144c184849a059e4c9d6ab692881a91}{MPU\_2\_MB}}\ \ \ \ \ \ =\ 0x14U\ <<\ 1U,\ }
+\DoxyCodeLine{00325\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afe6dce0c17183b519dc9eb08c7c22459}{MPU\_4\_MB}}\ \ \ \ \ \ =\ 0x15U\ <<\ 1U,\ }
+\DoxyCodeLine{00326\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9457427fed2d2c10f4d1408adaf908d2}{MPU\_8\_MB}}\ \ \ \ \ \ =\ 0x16U\ <<\ 1U,\ }
+\DoxyCodeLine{00327\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9dc2f9ac0f12154955d8093d4b5d77d2}{MPU\_16\_MB}}\ \ \ \ \ =\ 0x17U\ <<\ 1U,\ }
+\DoxyCodeLine{00328\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af8be5b9bd577cc8607aff78769685c0c}{MPU\_32\_MB}}\ \ \ \ \ =\ 0x18U\ <<\ 1U,\ }
+\DoxyCodeLine{00329\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6ae7f4af9979b45c94d0d59c304b1df9}{MPU\_64\_MB}}\ \ \ \ \ =\ 0x19U\ <<\ 1U,\ }
+\DoxyCodeLine{00330\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afa7427fc1374ab74cd22d9ea1f184b50}{MPU\_128\_MB}}\ \ \ \ =\ 0x1AU\ <<\ 1U,\ }
+\DoxyCodeLine{00331\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a77ca089f1e110dc21ea74855d06637f8}{MPU\_256\_MB}}\ \ \ \ =\ 0x1BU\ <<\ 1U,\ }
+\DoxyCodeLine{00332\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a71cec1908856a245bc9a81b6b135b325}{MPU\_512\_MB}}\ \ \ \ =\ 0x1CU\ <<\ 1U,\ }
+\DoxyCodeLine{00333\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a59e46ac854d372e07c939bcc0c2ed74a}{MPU\_1\_GB}}\ \ \ \ \ \ =\ 0x1DU\ <<\ 1U,\ }
+\DoxyCodeLine{00334\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4bf756d2ecca8d786f2f4fad0cc12d5e}{MPU\_2\_GB}}\ \ \ \ \ \ =\ 0x1EU\ <<\ 1U,\ }
+\DoxyCodeLine{00335\ \ \ \ \ \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a40ed26c764171cdd33e1adde7c91e566}{MPU\_4\_GB}}\ \ \ \ \ \ =\ 0x1FU\ <<\ 1U\ \ }
+\DoxyCodeLine{00336\ \};}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00343\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_ad42abaa287200c0d7fc438183d4dc067}{\_mpuInit\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00350\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_a91e265587c5b3f02c6dcc26a2fb5f039}{\_mpuEnable\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00357\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_a4d7807ff7486e23a51df3552456576be}{\_mpuDisable\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00364\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_a936e7f2dbacf897764a944ae5628f37a}{\_mpuEnableBackgroundRegion\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00371\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_a91443afa543409ea431ea1eee9495e90}{\_mpuDisableBackgroundRegion\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00372\ }
+\DoxyCodeLine{00379\ uint32\ \mbox{\hyperlink{sys__mpu_8h_a6f6dac8bbfa2be7b821a2f8ab91ff762}{\_mpuGetNumberOfRegions\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00387\ uint32\ \mbox{\hyperlink{sys__mpu_8h_ac93c96b5bd3f442be1878e6b21c330cd}{\_mpuAreRegionsSeparate\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00395\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_a6a44e5a9214462b0699d751b195ab316}{\_mpuSetRegion\_}}(uint32\ region);}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00403\ uint32\ \mbox{\hyperlink{sys__mpu_8h_a4d1d228e9dd9ed2711eed08a19526100}{\_mpuGetRegion\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00412\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_a65d7cb9705012268a9d7629251ba9eef}{\_mpuSetRegionBaseAddress\_}}(uint32\ address);}
+\DoxyCodeLine{00413\ }
+\DoxyCodeLine{00420\ uint32\ \mbox{\hyperlink{sys__mpu_8h_abfa1605a8db4dad08a4cf777d3af72e4}{\_mpuGetRegionBaseAddress\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00453\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_af323aa1f063c246fb495b0f51b618402}{\_mpuSetRegionTypeAndPermission\_}}(uint32\ type,\ uint32\ permission);}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00461\ uint32\ \mbox{\hyperlink{sys__mpu_8h_a59d1991e0db734a6241b0b77b3140cb2}{\_mpuGetRegionType\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00469\ uint32\ \mbox{\hyperlink{sys__mpu_8h_a7626d1502f5f76ec334129313efabbdb}{\_mpuGetRegionPermission\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00470\ }
+\DoxyCodeLine{00481\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__mpu_8h_a137d553610ae3aa8ced6e8aeadd80574}{\_mpuSetRegionSizeRegister\_}}(uint32\ value);}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00484\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00485\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00486\ \}}
+\DoxyCodeLine{00487\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00489\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

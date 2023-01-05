@@ -1,0 +1,187 @@
+\hypertarget{rti_8h_source}{}\doxysection{rti.\+h}
+\label{rti_8h_source}\index{include/rti.h@{include/rti.h}}
+\mbox{\hyperlink{rti_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*}}
+\DoxyCodeLine{00046\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifndef\ \_\_RTI\_H\_\_}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ \_\_RTI\_H\_\_}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__rti_8h}{reg\_rti.h}}"{}}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00056\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{/*\ RTI\ General\ Definitions\ */}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ rtiCOUNTER\_BLOCK0\ 0U}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ rtiCOUNTER\_BLOCK1\ 1U}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ rtiCOMPARE0\ 0U}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ rtiCOMPARE1\ 1U}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ rtiCOMPARE2\ 2U}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ rtiCOMPARE3\ 3U}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ rtiNOTIFICATION\_COMPARE0\ 1U}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ rtiNOTIFICATION\_COMPARE1\ 2U}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ rtiNOTIFICATION\_COMPARE2\ 4U}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ rtiNOTIFICATION\_COMPARE3\ 8U}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ rtiNOTIFICATION\_TIMEBASE\ 0x10000U}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#define\ rtiNOTIFICATION\_COUNTER0\ 0x20000U}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ rtiNOTIFICATION\_COUNTER1\ 0x40000U}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00182\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00187\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{rti_8h_ace82f7b543a55555427f8051e887ef94}{dwdViolationTag}}}
+\DoxyCodeLine{00188\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ NoTime\_Violation\ =\ 0U,}
+\DoxyCodeLine{00190\ \ \ \ \ Time\_Window\_Violation\ =\ 1U,}
+\DoxyCodeLine{00191\ \ \ \ \ EndTime\_Window\_Violation\ =\ 2U,}
+\DoxyCodeLine{00192\ \ \ \ \ StartTime\_Window\_Violation\ =\ 3U,}
+\DoxyCodeLine{00193\ \ \ \ \ Key\_Seq\_Violation\ =\ 4U}
+\DoxyCodeLine{00194\ \}dwdViolation\_t;}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (2)\ */}}
+\DoxyCodeLine{00197\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00202\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{rti_8h_a993959b0dee1f99924509cb6d77e87a7}{dwdResetStatusTag}}}
+\DoxyCodeLine{00203\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ No\_Reset\_Generated\ =\ 0U,}
+\DoxyCodeLine{00205\ \ \ \ \ Reset\_Generated\ \ \ \ =\ 1U}
+\DoxyCodeLine{00206\ \}dwdResetStatus\_t;}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (3)\ */}}
+\DoxyCodeLine{00209\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00214\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{rti_8h_a0ae93153b87182d770552f32ae72e5ce}{dwwdReactionTag}}}
+\DoxyCodeLine{00215\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ Generate\_Reset\ =\ 0x00000005U,}
+\DoxyCodeLine{00217\ \ \ \ \ Generate\_NMI\ \ \ =\ 0x0000000AU}
+\DoxyCodeLine{00218\ \}dwwdReaction\_t;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (4)\ */}}
+\DoxyCodeLine{00221\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00226\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{rti_8h_a05936d3a21abea30570fb554291e18d8}{dwwdWindowSizeTag}}}
+\DoxyCodeLine{00227\ \{}
+\DoxyCodeLine{00228\ \ \ \ \ Size\_100\_Percent\ \ \ =\ 0x00000005U,}
+\DoxyCodeLine{00229\ \ \ \ \ Size\_50\_Percent\ \ \ \ =\ 0x00000050U,}
+\DoxyCodeLine{00230\ \ \ \ \ Size\_25\_Percent\ \ \ \ =\ 0x00000500U,}
+\DoxyCodeLine{00231\ \ \ \ \ Size\_12\_5\_Percent\ \ =\ 0x00005000U,}
+\DoxyCodeLine{00232\ \ \ \ \ Size\_6\_25\_Percent\ \ =\ 0x00050000U,}
+\DoxyCodeLine{00233\ \ \ \ \ Size\_3\_125\_Percent\ =\ 0x00500000U}
+\DoxyCodeLine{00234\ \}dwwdWindowSize\_t;}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (5)\ */}}
+\DoxyCodeLine{00237\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \textcolor{comment}{/*\ Configuration\ registers\ */}}
+\DoxyCodeLine{00240\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrti__config__reg}{rti\_config\_reg}}}
+\DoxyCodeLine{00241\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ uint32\ CONFIG\_GCTRL;}
+\DoxyCodeLine{00243\ \ \ \ \ uint32\ CONFIG\_TBCTRL;}
+\DoxyCodeLine{00244\ \ \ \ \ uint32\ CONFIG\_CAPCTRL;}
+\DoxyCodeLine{00245\ \ \ \ \ uint32\ CONFIG\_COMPCTRL;}
+\DoxyCodeLine{00246\ \ \ \ \ uint32\ CONFIG\_UDCP0;}
+\DoxyCodeLine{00247\ \ \ \ \ uint32\ CONFIG\_UDCP1;}
+\DoxyCodeLine{00248\ \ \ \ \ uint32\ CONFIG\_UDCP2;}
+\DoxyCodeLine{00249\ \ \ \ \ uint32\ CONFIG\_UDCP3;}
+\DoxyCodeLine{00250\ \}\ \mbox{\hyperlink{structrti__config__reg}{rti\_config\_reg\_t}};}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \textcolor{comment}{/*\ Configuration\ registers\ initial\ value\ */}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ RTI\_GCTRL\_CONFIGVALUE\ \ \ 0x00000000U}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ RTI\_TBCTRL\_CONFIGVALUE\ \ 0x00000000U}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ RTI\_CAPCTRL\_CONFIGVALUE\ \ (0U\ |\ 0U)}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ RTI\_COMPCTRL\_CONFIGVALUE\ (0x00001000U\ |\ 0x00000100U\ |\ 0x00000000U\ |\ 0x00000000U)}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ RTI\_UDCP0\_CONFIGVALUE\ 10000U}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ RTI\_UDCP1\_CONFIGVALUE\ 50000U}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ RTI\_UDCP2\_CONFIGVALUE\ 80000U}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#define\ RTI\_UDCP3\_CONFIGVALUE\ 100000U}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00280\ \textcolor{comment}{/*\ RTI\ Interface\ Functions\ */}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga2ab125f7a976afe88811407a39ea1c28}{rtiInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00283\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga63a9d423e889e4be4dcda5856974ab03}{rtiStartCounter}}(uint32\ counter);}
+\DoxyCodeLine{00284\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_gafb1297e071d25cf401b1590487bce097}{rtiStopCounter}}(uint32\ counter);}
+\DoxyCodeLine{00285\ uint32\ \mbox{\hyperlink{group___r_t_i_ga3f5dba3038d17156658db9a648eb2425}{rtiResetCounter}}(uint32\ counter);}
+\DoxyCodeLine{00286\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga68be9dfa7c820e7ccb3c4e059288d371}{rtiSetPeriod}}(uint32\ compare,\ uint32\ period);}
+\DoxyCodeLine{00287\ uint32\ \mbox{\hyperlink{group___r_t_i_ga33763f05be8311dc9ee88a8a6099dbeb}{rtiGetPeriod}}(uint32\ compare);}
+\DoxyCodeLine{00288\ uint32\ \mbox{\hyperlink{group___r_t_i_gaacf32f218cb795601b6a0c8e36a1aaa4}{rtiGetCurrentTick}}(uint32\ compare);}
+\DoxyCodeLine{00289\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga049b10a8828d1d06e900beba6359fed8}{rtiEnableNotification}}(uint32\ notification);}
+\DoxyCodeLine{00290\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_gab2415e212403ef711e6804bbf0ffb3b0}{rtiDisableNotification}}(uint32\ notification);}
+\DoxyCodeLine{00291\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga747a5cd06ff82d29a014e88fbe20aa93}{dwdInit}}(uint16\ dwdPreload);}
+\DoxyCodeLine{00292\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga2d333bcf3001b04a60d6d19e336ccc1e}{dwwdInit}}(dwwdReaction\_t\ Reaction,\ uint16\ dwdPreload,\ dwwdWindowSize\_t\ Window\_Size);}
+\DoxyCodeLine{00293\ uint32\ \mbox{\hyperlink{group___r_t_i_gafcec3271ff40c336ea4b7619d149d448}{dwwdGetCurrentDownCounter}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00294\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga2602a205a0268023fbb8984e82626c7e}{dwdCounterEnable}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00295\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga1ebb089b241933fd6dd88747520f50f5}{dwdSetPreload}}(uint16\ dwdPreload);}
+\DoxyCodeLine{00296\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_gaa7fafc67ed4059093a612cabc42026e5}{dwdReset}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00297\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga882dc32b3f7e02d7654254b7d6127467}{dwdGenerateSysReset}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00298\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{group___r_t_i_gacb458563eda6221fb18bd0187e8375fc}{IsdwdKeySequenceCorrect}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00299\ dwdResetStatus\_t\ \mbox{\hyperlink{group___r_t_i_ga870dd0c9c043e31be58aee3a2a6b25fb}{dwdGetStatus}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00300\ dwdViolation\_t\ \mbox{\hyperlink{group___r_t_i_gac91a05e949909b52d4b8fe401a4500f9}{dwdGetViolationStatus}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00301\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga788f96ec4de7cbbb2ad2e3794d6efb53}{dwdClearFlag}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00302\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_ga530b7108aae1d3f0ad319eb8a959d920}{rtiGetConfigValue}}(\mbox{\hyperlink{structrti__config__reg}{rti\_config\_reg\_t}}\ *config\_reg,\ \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\_value\_type\_t}}\ type);}
+\DoxyCodeLine{00316\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___r_t_i_gaff8f87a03bb4b08ef56c289d91ff610e}{rtiNotification}}(uint32\ notification);}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (6)\ */}}
+\DoxyCodeLine{00319\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00323\ \}}
+\DoxyCodeLine{00324\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*extern\ "{}C"{}\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

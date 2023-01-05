@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: Исходный файл include/sys_pmu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">sys_pmu.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="sys__pmu_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">* Copyright (C) 2009-2018 Texas Instruments Incorporated - www.ti.com </span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">* </span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">* </span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">*  Redistribution and use in source and binary forms, with or without </span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*  modification, are permitted provided that the following conditions </span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*  are met:</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*    Redistributions of source code must retain the above copyright </span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*    notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*    Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*    notice, this list of conditions and the following disclaimer in the </span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*    documentation and/or other materials provided with the   </span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*    distribution.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">*</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">*    Neither the name of Texas Instruments Incorporated nor the names of</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*    its contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*    from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">*</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS </span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">*  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT </span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, </span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT </span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">*  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE </span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">*</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#ifndef __SYS_PMU_H__</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define __SYS_PMU_H__</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &quot;<a class="code" href="sys__common_8h.html">sys_common.h</a>&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">/* USER CODE BEGIN (0) */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/* USER CODE END */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a3b312c6bf558a4205710c5e44c3cc0b4">   66</a></span><span class="preprocessor">#define pmuCOUNTER0 0x00000001U</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a88033e0068fb11f854560d06d6c51714">   75</a></span><span class="preprocessor">#define pmuCOUNTER1 0x00000002U</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a6004659aa96b626f1126404017564abe">   84</a></span><span class="preprocessor">#define pmuCOUNTER2 0x00000004U</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a6ee477e201310d4686e202a584c00f9e">   93</a></span><span class="preprocessor">#define pmuCYCLE_COUNTER 0x80000000U</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a03b6725533687e62c10550dea45089be">  100</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="sys__pmu_8h.html#a03b6725533687e62c10550dea45089be">pmuEvent</a></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    PMU_INST_CACHE_MISS                     = 0x01U,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    PMU_DATA_CACHE_MISS                     = 0x03U,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    PMU_DATA_CACHE_ACCESS                   = 0x04U,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    PMU_DATA_READ_ARCH_EXECUTED             = 0x06U,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    PMU_DATA_WRITE_ARCH_EXECUTED            = 0x07U,</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    PMU_INST_ARCH_EXECUTED                  = 0x08U,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    PMU_EXCEPTION_TAKEN                     = 0x09U,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    PMU_EXCEPTION_RETURN_ARCH_EXECUTED      = 0x0AU,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    PMU_CHANGE_TO_CONTEXT_ID_EXECUTED       = 0x0BU,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    PMU_SW_CHANGE_OF_PC_ARCH_EXECUTED       = 0x0CU,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    PMU_BRANCH_IMM_INST_ARCH_EXECUTED       = 0x0DU,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    PMU_PROC_RETURN_ARCH_EXECUTED           = 0x0EU,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    PMU_UNALIGNED_ACCESS_ARCH_EXECUTED      = 0x0FU,</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    PMU_BRANCH_MISSPREDICTED                = 0x10U,</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    PMU_CYCLE_COUNT                         = 0x11U,</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    PMU_PREDICTABLE_BRANCHES                = 0x12U,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    PMU_INST_BUFFER_STALL                   = 0x40U,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    PMU_DATA_DEPENDENCY_INST_STALL          = 0x41U,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    PMU_DATA_CACHE_WRITE_BACK               = 0x42U,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    PMU_EXT_MEMORY_REQUEST                  = 0x43U,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    PMU_LSU_BUSY_STALL                      = 0x44U,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    PMU_FORCED_DRAIN_OFSTORE_BUFFER         = 0x45U,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    PMU_FIQ_DISABLED_CYCLE_COUNT            = 0x46U,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    PMU_IRQ_DISABLED_CYCLE_COUNT            = 0x47U,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    PMU_ETMEXTOUT_0                         = 0x48U,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    PMU_ETMEXTOUT_1                         = 0x49U,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    PMU_INST_CACHE_TAG_ECC_ERROR            = 0x4AU,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    PMU_INST_CACHE_DATA_ECC_ERROR           = 0x4BU,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    PMU_DATA_CACHE_TAG_ECC_ERROR            = 0x4CU,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    PMU_DATA_CACHE_DATA_ECC_ERROR           = 0x4DU,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    PMU_TCM_FATAL_ECC_ERROR_PREFETCH        = 0x4EU,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    PMU_TCM_FATAL_ECC_ERROR_LOAD_STORE      = 0x4FU,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    PMU_STORE_BUFFER_MERGE                  = 0x50U,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    PMU_LSU_STALL_STORE_BUFFER_FULL         = 0x51U,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    PMU_LSU_STALL_STORE_QUEUE_FULL          = 0x52U,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    PMU_INTEGER_DIV_EXECUTED                = 0x53U,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    PMU_STALL_INTEGER_DIV                   = 0x54U,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    PMU_PLD_INST_LINE_FILL                  = 0x55U,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    PMU_PLD_INST_NO_LINE_FILL               = 0x56U,</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    PMU_NON_CACHEABLE_ACCESS_AXI_MASTER     = 0x57U,</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    PMU_INST_CACHE_ACCESS                   = 0x58U,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    PMU_DOUBLE_DATA_CACHE_ISSUE             = 0x59U,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    PMU_DUAL_ISSUE_CASE_A                   = 0x5AU,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    PMU_DUAL_ISSUE_CASE_B1_B2_F2_F2D        = 0x5BU,</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    PMU_DUAL_ISSUE_OTHER                    = 0x5CU,</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    PMU_DP_FLOAT_INST_EXCECUTED             = 0x5DU,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    PMU_DUAL_ISSUED_PAIR_INST_ARCH_EXECUTED = 0x5EU,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    PMU_DATA_CACHE_DATA_FATAL_ECC_ERROR     = 0x60U,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    PMU_DATA_CACHE_TAG_FATAL_ECC_ERROR      = 0x61U,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    PMU_PROCESSOR_LIVE_LOCK                 = 0x62U,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    PMU_ATCM_MULTI_BIT_ECC_ERROR            = 0x64U,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    PMU_B0TCM_MULTI_BIT_ECC_ERROR           = 0x65U,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    PMU_B1TCM_MULTI_BIT_ECC_ERROR           = 0x66U,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    PMU_ATCM_SINGLE_BIT_ECC_ERROR           = 0x67U,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    PMU_B0TCM_SINGLE_BIT_ECC_ERROR          = 0x68U,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    PMU_B1TCM_SINGLE_BIT_ECC_ERROR          = 0x69U,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    PMU_TCM_COR_ECC_ERROR_LOAD_STORE        = 0x6AU,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    PMU_TCM_COR_ECC_ERROR_PREFETCH          = 0x6BU,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    PMU_TCM_FATAL_ECC_ERROR_AXI_SLAVE       = 0x6CU,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    PMU_TCM_COR_ECC_ERROR_AXI_SLAVE         = 0x6DU</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>};</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a90fc368eb9dc59ce3950e63908177e05">  167</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#a90fc368eb9dc59ce3950e63908177e05">_pmuInit_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a6bcb569866117b8d50c05b8d992cb3e0">  172</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#a6bcb569866117b8d50c05b8d992cb3e0">_pmuEnableCountersGlobal_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a1bdff81dac3f3361f65b97a4197793a2">  177</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#a1bdff81dac3f3361f65b97a4197793a2">_pmuDisableCountersGlobal_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a868e2a6eb16abc1de2c39e8ccb8e9a04">  182</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#a868e2a6eb16abc1de2c39e8ccb8e9a04">_pmuResetCycleCounter_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#abcd7f459dc3ba0d4747df97b76084bb7">  187</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#abcd7f459dc3ba0d4747df97b76084bb7">_pmuResetEventCounters_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a21f3fc4ef80d58b22d0545a5c08f230e">  192</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#a21f3fc4ef80d58b22d0545a5c08f230e">_pmuResetCounters_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a05119721bf5533e9271717127c18c22c">  198</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#a05119721bf5533e9271717127c18c22c">_pmuStartCounters_</a>(uint32 counters);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#abab4f00952caa5d6596db0e6de0f445c">  204</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#abab4f00952caa5d6596db0e6de0f445c">_pmuStopCounters_</a>(uint32 counters);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a4937c9f733852b81cddafbb29e679cff">  211</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="sys__pmu_8h.html#a4937c9f733852b81cddafbb29e679cff">_pmuSetCountEvent_</a>(uint32 counter, uint32 event);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#afd1c5a6e4a8806b15d4e8f72bd33fa16">  218</a></span>uint32 <a class="code hl_function" href="sys__pmu_8h.html#afd1c5a6e4a8806b15d4e8f72bd33fa16">_pmuGetCycleCount_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a201e93f10a431344ef380507d3106cd1">  226</a></span>uint32 <a class="code hl_function" href="sys__pmu_8h.html#a201e93f10a431344ef380507d3106cd1">_pmuGetEventCount_</a>(uint32 counter);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="sys__pmu_8h.html#a1141fd5ac2cd84e241cfc28e8068928f">  233</a></span>uint32 <a class="code hl_function" href="sys__pmu_8h.html#a1141fd5ac2cd84e241cfc28e8068928f">_pmuGetOverflow_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment">/* USER CODE BEGIN (1) */</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">/* USER CODE END */</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>}</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="preprocessor">#endif </span><span class="comment">/*extern &quot;C&quot; */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="asys__common_8h_html"><div class="ttname"><a href="sys__common_8h.html">sys_common.h</a></div><div class="ttdoc">Common Header File.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a03b6725533687e62c10550dea45089be"><div class="ttname"><a href="sys__pmu_8h.html#a03b6725533687e62c10550dea45089be">pmuEvent</a></div><div class="ttdeci">pmuEvent</div><div class="ttdoc">pmu event</div><div class="ttdef"><b>Definition:</b> sys_pmu.h:101</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a05119721bf5533e9271717127c18c22c"><div class="ttname"><a href="sys__pmu_8h.html#a05119721bf5533e9271717127c18c22c">_pmuStartCounters_</a></div><div class="ttdeci">void _pmuStartCounters_(uint32 counters)</div><div class="ttdoc">Starts selected counters.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a1141fd5ac2cd84e241cfc28e8068928f"><div class="ttname"><a href="sys__pmu_8h.html#a1141fd5ac2cd84e241cfc28e8068928f">_pmuGetOverflow_</a></div><div class="ttdeci">uint32 _pmuGetOverflow_(void)</div><div class="ttdoc">Returns current overflow register and clear flags.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a1bdff81dac3f3361f65b97a4197793a2"><div class="ttname"><a href="sys__pmu_8h.html#a1bdff81dac3f3361f65b97a4197793a2">_pmuDisableCountersGlobal_</a></div><div class="ttdeci">void _pmuDisableCountersGlobal_(void)</div><div class="ttdoc">Disable cycle counter and all 3 event counters.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a201e93f10a431344ef380507d3106cd1"><div class="ttname"><a href="sys__pmu_8h.html#a201e93f10a431344ef380507d3106cd1">_pmuGetEventCount_</a></div><div class="ttdeci">uint32 _pmuGetEventCount_(uint32 counter)</div><div class="ttdoc">Returns current event counter value.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a21f3fc4ef80d58b22d0545a5c08f230e"><div class="ttname"><a href="sys__pmu_8h.html#a21f3fc4ef80d58b22d0545a5c08f230e">_pmuResetCounters_</a></div><div class="ttdeci">void _pmuResetCounters_(void)</div><div class="ttdoc">Reset cycle counter and event counters 0-2.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a4937c9f733852b81cddafbb29e679cff"><div class="ttname"><a href="sys__pmu_8h.html#a4937c9f733852b81cddafbb29e679cff">_pmuSetCountEvent_</a></div><div class="ttdeci">void _pmuSetCountEvent_(uint32 counter, uint32 event)</div><div class="ttdoc">Set event counter count event.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a6bcb569866117b8d50c05b8d992cb3e0"><div class="ttname"><a href="sys__pmu_8h.html#a6bcb569866117b8d50c05b8d992cb3e0">_pmuEnableCountersGlobal_</a></div><div class="ttdeci">void _pmuEnableCountersGlobal_(void)</div><div class="ttdoc">Enable and reset cycle counter and all 3 event counters.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a868e2a6eb16abc1de2c39e8ccb8e9a04"><div class="ttname"><a href="sys__pmu_8h.html#a868e2a6eb16abc1de2c39e8ccb8e9a04">_pmuResetCycleCounter_</a></div><div class="ttdeci">void _pmuResetCycleCounter_(void)</div><div class="ttdoc">Reset cycle counter.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_a90fc368eb9dc59ce3950e63908177e05"><div class="ttname"><a href="sys__pmu_8h.html#a90fc368eb9dc59ce3950e63908177e05">_pmuInit_</a></div><div class="ttdeci">void _pmuInit_(void)</div><div class="ttdoc">Initialize Performance Monitor Unit.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_abab4f00952caa5d6596db0e6de0f445c"><div class="ttname"><a href="sys__pmu_8h.html#abab4f00952caa5d6596db0e6de0f445c">_pmuStopCounters_</a></div><div class="ttdeci">void _pmuStopCounters_(uint32 counters)</div><div class="ttdoc">Stops selected counters.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_abcd7f459dc3ba0d4747df97b76084bb7"><div class="ttname"><a href="sys__pmu_8h.html#abcd7f459dc3ba0d4747df97b76084bb7">_pmuResetEventCounters_</a></div><div class="ttdeci">void _pmuResetEventCounters_(void)</div><div class="ttdoc">Reset event counters 0-2.</div></div>
+<div class="ttc" id="asys__pmu_8h_html_afd1c5a6e4a8806b15d4e8f72bd33fa16"><div class="ttname"><a href="sys__pmu_8h.html#afd1c5a6e4a8806b15d4e8f72bd33fa16">_pmuGetCycleCount_</a></div><div class="ttdeci">uint32 _pmuGetCycleCount_(void)</div><div class="ttdoc">Returns current cycle counter value.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

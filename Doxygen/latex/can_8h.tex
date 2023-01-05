@@ -1,0 +1,1149 @@
+\hypertarget{can_8h}{}\doxysection{Файл include/can.h}
+\label{can_8h}\index{include/can.h@{include/can.h}}
+
+
+CAN Driver Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+can.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcan__config__reg}{can\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{can_8h_a9ce8d23c4ec549b852fbf9cb47b408db}\label{can_8h_a9ce8d23c4ec549b852fbf9cb47b408db}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+ACTIVE}~0x00U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN error operation level active (Error counter 0-\/31) ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_ac62e1ad4c8c087f5a4872c8f7e198f9a}\label{can_8h_ac62e1ad4c8c087f5a4872c8f7e198f9a}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+PASSIVE}~0x20U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN error operation level passive (Error counter 32-\/63) ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a8543aef511d26132d9d4137917b541af}\label{can_8h_a8543aef511d26132d9d4137917b541af}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+WARNING}~0x40U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN error operation level warning (Error counter 64-\/127) ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a0e860fa482189c024d530d3f62c59d9c}\label{can_8h_a0e860fa482189c024d530d3f62c59d9c}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+BUS\+\_\+\+OFF}~0x80U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN error operation level bus off (Error counter 128-\/255) ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a9fdc19d4cf52c4910d502b2c8ad73707}\label{can_8h_a9fdc19d4cf52c4910d502b2c8ad73707}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+PARITY\+\_\+\+ERR}~0x100U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN Parity error (Error counter 256-\/511) ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a036c2edfaf5f46a3c148e0dbdd803084}\label{can_8h_a036c2edfaf5f46a3c148e0dbdd803084}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+Tx\+OK}~0x08U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN Sucessful Transmission. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a41a070aceb5afa40de4ef7c145734c89}\label{can_8h_a41a070aceb5afa40de4ef7c145734c89}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+Rx\+OK}~0x10U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN Sucessful Reception. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a08945254736422b59d9eb67316ced7aa}\label{can_8h_a08945254736422b59d9eb67316ced7aa}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+Wake\+Up\+Pnd}~0x200U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN Initiated a Wake\+Up to system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_ab62c369c37cbacedc64dbc20638b9f6d}\label{can_8h_ab62c369c37cbacedc64dbc20638b9f6d}} 
+\#define {\bfseries can\+LEVEL\+\_\+\+PDA}~0x400U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN entered low power mode successfully. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a0ac5d294babced4f817d32d913b60a0f}\label{can_8h_a0ac5d294babced4f817d32d913b60a0f}} 
+\#define {\bfseries can\+ERROR\+\_\+\+OK}~0U
+\item 
+\mbox{\Hypertarget{can_8h_a61b8daf96f461497b07a755f3a00a406}\label{can_8h_a61b8daf96f461497b07a755f3a00a406}} 
+\#define {\bfseries can\+ERROR\+\_\+\+STUFF}~1U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN stuff error an RX message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a1d405bf817604e8c3b42e67d4754cfe4}\label{can_8h_a1d405bf817604e8c3b42e67d4754cfe4}} 
+\#define {\bfseries can\+ERROR\+\_\+\+FORMAT}~2U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN form/format error an RX message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a70b14aafa52074cd9e8dcff8d5963652}\label{can_8h_a70b14aafa52074cd9e8dcff8d5963652}} 
+\#define {\bfseries can\+ERROR\+\_\+\+ACKNOWLEDGE}~3U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN TX message wasn\textquotesingle{}t acknowledged ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a3daeaace2987f85bdf4d5e40ef923411}\label{can_8h_a3daeaace2987f85bdf4d5e40ef923411}} 
+\#define {\bfseries can\+ERROR\+\_\+\+BIT1}~4U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN TX message sending recessive level but monitoring dominant ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a3d6a8568cda4f4bd73b8defcbaa3e4a9}\label{can_8h_a3d6a8568cda4f4bd73b8defcbaa3e4a9}} 
+\#define {\bfseries can\+ERROR\+\_\+\+BIT0}~5U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN TX message sending dominant level but monitoring recessive ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_afd7185c1e9cc86d6e30874c5f2893697}\label{can_8h_afd7185c1e9cc86d6e30874c5f2893697}} 
+\#define {\bfseries can\+ERROR\+\_\+\+CRC}~6U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN RX message received wrong CRC ~\newline
+ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a495165e4a80ba0ff1b1a67ffceb42fb7}{can\+ERROR\+\_\+\+NO}}~7U
+\begin{DoxyCompactList}\small\item\em Alias name for no CAN error occurred. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a6cc8c0a25de981dd573d0690f3c745ae}{can\+MESSAGE\+\_\+\+BOX1}}~1U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a25d31fbbcb61855e39a9ffe95335a936}{can\+MESSAGE\+\_\+\+BOX2}}~2U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a7af7dce5f3d5e0fe197a6048b4372944}{can\+MESSAGE\+\_\+\+BOX3}}~3U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_af849386b1a1ef11dc98cec5fee9a8ca8}{can\+MESSAGE\+\_\+\+BOX4}}~4U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 4. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a13f356a822de686bc3f8a12ea86fb5dd}{can\+MESSAGE\+\_\+\+BOX5}}~5U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 5. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a84a81fde28a58c932c59dc1df42accd2}{can\+MESSAGE\+\_\+\+BOX6}}~6U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a5a323f027d282b38c4aa75ff97a8b982}{can\+MESSAGE\+\_\+\+BOX7}}~7U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 7. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a6cd135cd8736e078d8926d04ae172618}{can\+MESSAGE\+\_\+\+BOX8}}~8U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 8. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a9b2501ad60836a524ce0c2a2c5a9bc31}{can\+MESSAGE\+\_\+\+BOX9}}~9U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 9. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a1b511f2aaebe02cb8efa37528bde28d1}{can\+MESSAGE\+\_\+\+BOX10}}~10U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 10. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_af625ee5de28aab233e4a434b881575cc}{can\+MESSAGE\+\_\+\+BOX11}}~11U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 11. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a11c4efb08fe21c0e1aa1b96caebb582d}{can\+MESSAGE\+\_\+\+BOX12}}~12U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 12. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a66f9eb008622df4b379cb762f32802ea}{can\+MESSAGE\+\_\+\+BOX13}}~13U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 13. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ae5946a766fe8194efa6fe393cb467c80}{can\+MESSAGE\+\_\+\+BOX14}}~14U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 14. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_afee8317dedb66e174ee2f0fc6cc70912}{can\+MESSAGE\+\_\+\+BOX15}}~15U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 15. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a4b9d8b9563be8f4cb9d86ba83bff337c}{can\+MESSAGE\+\_\+\+BOX16}}~16U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 16. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a720b6ffe1e3da7e448a9456ea3df8d37}{can\+MESSAGE\+\_\+\+BOX17}}~17U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 17. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a5eed24b9cac3ef11266f4986a389bc13}{can\+MESSAGE\+\_\+\+BOX18}}~18U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 18. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_aedde57c7b9fefdd3722045f96c4a7407}{can\+MESSAGE\+\_\+\+BOX19}}~19U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 19. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a5c28574272d50f7a7a0f52dfb4a52e84}{can\+MESSAGE\+\_\+\+BOX20}}~20U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 20. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ab381e6a5e545ba6f17f6362b3aa11dc5}{can\+MESSAGE\+\_\+\+BOX21}}~21U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 21. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_aaec513b2c236eab78620d780ff4c276f}{can\+MESSAGE\+\_\+\+BOX22}}~22U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 22. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_af2724460d8d50734692186b4494907ca}{can\+MESSAGE\+\_\+\+BOX23}}~23U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 23. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a85f960dba21026403d04a757f1c94975}{can\+MESSAGE\+\_\+\+BOX24}}~24U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 24. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ab9a3b1c4f729be0680385439c1b5e92e}{can\+MESSAGE\+\_\+\+BOX25}}~25U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 25. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_af481a4245923c3867aa5a187da62c44c}{can\+MESSAGE\+\_\+\+BOX26}}~26U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 26. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_aa58dba1e2ea475a728829ec77f0c98ec}{can\+MESSAGE\+\_\+\+BOX27}}~27U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 27. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a43282b0555ebf57d622534d14e87d4cd}{can\+MESSAGE\+\_\+\+BOX28}}~28U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 28. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_aa80f652fcbe34b8c68ff27a24e0ba1b3}{can\+MESSAGE\+\_\+\+BOX29}}~29U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 29. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_abd5093b90b17883254f21864fc9a6303}{can\+MESSAGE\+\_\+\+BOX30}}~30U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 30. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_aa7cbae50a47cd62ee645b6fe9b7b112e}{can\+MESSAGE\+\_\+\+BOX31}}~31U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 31. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a2b9b1f0939642e801d21ad53868d72e0}{can\+MESSAGE\+\_\+\+BOX32}}~32U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 32. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a940e78810e0af0cfdfcfd5db9d127c3c}{can\+MESSAGE\+\_\+\+BOX33}}~33U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 33. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a10065525832f1199d2e721c94f454857}{can\+MESSAGE\+\_\+\+BOX34}}~34U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 34. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a28a960b9fd260e898f21e93620bfba1f}{can\+MESSAGE\+\_\+\+BOX35}}~35U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 35. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a7e240387dd568c058debac3ca656fd82}{can\+MESSAGE\+\_\+\+BOX36}}~36U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 36. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ad2528acc2ad522871810be5ecb056a3a}{can\+MESSAGE\+\_\+\+BOX37}}~37U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 37. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a9e4c50dc674d1ef8ab98bfba247dfc55}{can\+MESSAGE\+\_\+\+BOX38}}~38U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 38. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a740ce4c2590d80dba5482d0b550637a0}{can\+MESSAGE\+\_\+\+BOX39}}~39U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 39. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a0fab236168f04565c29bec07c6afc222}{can\+MESSAGE\+\_\+\+BOX40}}~40U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 40. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a815b6aa9ef2f4f93b473b6ae54eeca7b}{can\+MESSAGE\+\_\+\+BOX41}}~41U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 41. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ae4e804d3140570dbf345bb4a593037e1}{can\+MESSAGE\+\_\+\+BOX42}}~42U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 42. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_aa02b314f476748353447585ad13aa02c}{can\+MESSAGE\+\_\+\+BOX43}}~43U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 43. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ade5a53f276598fbe1d9c2a287b9c3427}{can\+MESSAGE\+\_\+\+BOX44}}~44U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 44. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a1da4a02922638d9f0b2813a92dc11733}{can\+MESSAGE\+\_\+\+BOX45}}~45U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 45. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a368ac2b9b6c8c9a20e60f2190640c193}{can\+MESSAGE\+\_\+\+BOX46}}~46U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 46. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a9d2b68c2ecbc077ea0b5a06f11be43cf}{can\+MESSAGE\+\_\+\+BOX47}}~47U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 47. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a0a0f5002087e1984c8dc88338e9e89a1}{can\+MESSAGE\+\_\+\+BOX48}}~48U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 48. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ac9f8ed358667835ca34e1d1f6aa9f46b}{can\+MESSAGE\+\_\+\+BOX49}}~49U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 49. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ab8170766a5b88ef02d7688b520b912cd}{can\+MESSAGE\+\_\+\+BOX50}}~50U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 50. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a1956c1d1a400a4bf289453dbfc4dd120}{can\+MESSAGE\+\_\+\+BOX51}}~51U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 51. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_aea41738e75337c9d8beeb10311e2957f}{can\+MESSAGE\+\_\+\+BOX52}}~52U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 52. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_af17c4bc2128bfe922dfa0f428d005001}{can\+MESSAGE\+\_\+\+BOX53}}~53U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 53. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_abb3d5615b69184c1d8085d36b4ab6c97}{can\+MESSAGE\+\_\+\+BOX54}}~54U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 54. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ab51f7537f9323fcd1bbf40ccbb73a000}{can\+MESSAGE\+\_\+\+BOX55}}~55U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 55. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a0e383387f289173dfb0586ebd40a3230}{can\+MESSAGE\+\_\+\+BOX56}}~56U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 56. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a7b946fd9d1e0c5f7bb6cc956e59a3880}{can\+MESSAGE\+\_\+\+BOX57}}~57U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 57. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a25ae7e936680f369958c4755eb37f9f4}{can\+MESSAGE\+\_\+\+BOX58}}~58U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 58. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a9741f1c1ac3a086af76cd9460f9ac7e7}{can\+MESSAGE\+\_\+\+BOX59}}~59U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 59. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_a88aa098ae34470b11ab03cc370ad8c97}{can\+MESSAGE\+\_\+\+BOX60}}~60U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 60. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ab4d2a7835ca268e203138f6565253265}{can\+MESSAGE\+\_\+\+BOX61}}~61U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 61. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ad7f0f3347ff1205854ba6f2bbbd94dca}{can\+MESSAGE\+\_\+\+BOX62}}~62U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 62. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_ae83e91624f7bbf64db061c054e30c33b}{can\+MESSAGE\+\_\+\+BOX63}}~63U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 63. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{can_8h_aac6c500dba049b8f0173dc70d8411b37}{can\+MESSAGE\+\_\+\+BOX64}}~64U
+\begin{DoxyCompactList}\small\item\em Alias name for CAN message box 64. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{can_8h_a9ca8af6c3ea34f8d5df8f7020f398afe}{canloop\+Back\+Type}} \mbox{\hyperlink{can_8h_afe14b0f6de1003d9440f90e9df86918a}{canloop\+Back\+Type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em can\+Loopback type Type Definition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{can_8h_a43da0e1d126e936f7279ada379e1e3d4}\label{can_8h_a43da0e1d126e936f7279ada379e1e3d4}} 
+typedef struct \mbox{\hyperlink{structcan__config__reg}{can\+\_\+config\+\_\+reg}} {\bfseries can\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{can_8h_a9ca8af6c3ea34f8d5df8f7020f398afe}\label{can_8h_a9ca8af6c3ea34f8d5df8f7020f398afe}} 
+enum \mbox{\hyperlink{can_8h_a9ca8af6c3ea34f8d5df8f7020f398afe}{canloop\+Back\+Type}} \{ {\bfseries Internal\+\_\+\+Lbk} = 0x00000010U
+, {\bfseries External\+\_\+\+Lbk} = 0x00000100U
+, {\bfseries Internal\+\_\+\+Silent\+\_\+\+Lbk} = 0x00000018U
+ \}
+\begin{DoxyCompactList}\small\item\em can\+Loopback type definition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries can\+Init} (void)
+\item 
+uint32 {\bfseries can\+Transmit} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box, const uint8 $\ast$data)
+\item 
+uint32 {\bfseries can\+Get\+Data} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box, uint8 $\ast$const data)
+\item 
+uint32 {\bfseries can\+Send\+Remote\+Frame} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+uint32 {\bfseries can\+Fill\+Message\+Object\+Data} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box, const uint8 $\ast$data)
+\item 
+uint32 {\bfseries can\+Is\+Tx\+Message\+Pending} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+uint32 {\bfseries can\+Is\+Rx\+Message\+Arrived} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+uint32 {\bfseries can\+Is\+Message\+Box\+Valid} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+uint32 {\bfseries can\+Get\+Last\+Error} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+uint32 {\bfseries can\+Get\+Error\+Level} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+void {\bfseries can\+Enable\+Error\+Notification} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+void {\bfseries can\+Disable\+Error\+Notification} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+void {\bfseries can\+Enable\+Status\+Change\+Notification} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+void {\bfseries can\+Disable\+Status\+Change\+Notification} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+void {\bfseries can\+Enableloopback} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, \mbox{\hyperlink{can_8h_afe14b0f6de1003d9440f90e9df86918a}{canloop\+Back\+Type\+\_\+t}} Loopbacktype)
+\item 
+void {\bfseries can\+Disableloopback} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+void {\bfseries can\+Io\+Set\+Direction} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 Tx\+Dir, uint32 Rx\+Dir)
+\item 
+void {\bfseries can\+Io\+Set\+Port} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 Tx\+Value, uint32 Rx\+Value)
+\item 
+uint32 {\bfseries can\+Io\+Tx\+Get\+Bit} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+uint32 {\bfseries can\+Io\+Rx\+Get\+Bit} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+uint32 {\bfseries can\+Get\+ID} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+void {\bfseries can\+Update\+ID} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box, uint32 msg\+Box\+Arbit\+Val)
+\item 
+void \mbox{\hyperlink{group___c_a_n_gab54b99b32b9402b55b845029f9118b77}{can\+Error\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 notification)
+\begin{DoxyCompactList}\small\item\em Error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___c_a_n_gafb381df2cdfb4e84f43df0226a757002}{can\+Status\+Change\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 notification)
+\begin{DoxyCompactList}\small\item\em Status Change notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___c_a_n_gacac999ab73fd61efe4dfc10883ea287c}{can\+Message\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Message notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+CAN Driver Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the CAN driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{can_8h_a495165e4a80ba0ff1b1a67ffceb42fb7}\label{can_8h_a495165e4a80ba0ff1b1a67ffceb42fb7}} 
+\index{can.h@{can.h}!canERROR\_NO@{canERROR\_NO}}
+\index{canERROR\_NO@{canERROR\_NO}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canERROR\_NO}{canERROR\_NO}}
+{\footnotesize\ttfamily \#define can\+ERROR\+\_\+\+NO~7U}
+
+
+
+Alias name for no CAN error occurred. 
+
+Alias name for CAN no message has send or received since last call of CANGet\+Last\+Error ~\newline
+ \mbox{\Hypertarget{can_8h_a6cc8c0a25de981dd573d0690f3c745ae}\label{can_8h_a6cc8c0a25de981dd573d0690f3c745ae}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX1@{canMESSAGE\_BOX1}}
+\index{canMESSAGE\_BOX1@{canMESSAGE\_BOX1}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX1}{canMESSAGE\_BOX1}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX1~1U}
+
+
+
+Alias name for CAN message box 1. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a1b511f2aaebe02cb8efa37528bde28d1}\label{can_8h_a1b511f2aaebe02cb8efa37528bde28d1}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX10@{canMESSAGE\_BOX10}}
+\index{canMESSAGE\_BOX10@{canMESSAGE\_BOX10}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX10}{canMESSAGE\_BOX10}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX10~10U}
+
+
+
+Alias name for CAN message box 10. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_af625ee5de28aab233e4a434b881575cc}\label{can_8h_af625ee5de28aab233e4a434b881575cc}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX11@{canMESSAGE\_BOX11}}
+\index{canMESSAGE\_BOX11@{canMESSAGE\_BOX11}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX11}{canMESSAGE\_BOX11}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX11~11U}
+
+
+
+Alias name for CAN message box 11. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a11c4efb08fe21c0e1aa1b96caebb582d}\label{can_8h_a11c4efb08fe21c0e1aa1b96caebb582d}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX12@{canMESSAGE\_BOX12}}
+\index{canMESSAGE\_BOX12@{canMESSAGE\_BOX12}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX12}{canMESSAGE\_BOX12}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX12~12U}
+
+
+
+Alias name for CAN message box 12. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a66f9eb008622df4b379cb762f32802ea}\label{can_8h_a66f9eb008622df4b379cb762f32802ea}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX13@{canMESSAGE\_BOX13}}
+\index{canMESSAGE\_BOX13@{canMESSAGE\_BOX13}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX13}{canMESSAGE\_BOX13}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX13~13U}
+
+
+
+Alias name for CAN message box 13. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ae5946a766fe8194efa6fe393cb467c80}\label{can_8h_ae5946a766fe8194efa6fe393cb467c80}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX14@{canMESSAGE\_BOX14}}
+\index{canMESSAGE\_BOX14@{canMESSAGE\_BOX14}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX14}{canMESSAGE\_BOX14}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX14~14U}
+
+
+
+Alias name for CAN message box 14. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_afee8317dedb66e174ee2f0fc6cc70912}\label{can_8h_afee8317dedb66e174ee2f0fc6cc70912}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX15@{canMESSAGE\_BOX15}}
+\index{canMESSAGE\_BOX15@{canMESSAGE\_BOX15}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX15}{canMESSAGE\_BOX15}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX15~15U}
+
+
+
+Alias name for CAN message box 15. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a4b9d8b9563be8f4cb9d86ba83bff337c}\label{can_8h_a4b9d8b9563be8f4cb9d86ba83bff337c}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX16@{canMESSAGE\_BOX16}}
+\index{canMESSAGE\_BOX16@{canMESSAGE\_BOX16}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX16}{canMESSAGE\_BOX16}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX16~16U}
+
+
+
+Alias name for CAN message box 16. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a720b6ffe1e3da7e448a9456ea3df8d37}\label{can_8h_a720b6ffe1e3da7e448a9456ea3df8d37}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX17@{canMESSAGE\_BOX17}}
+\index{canMESSAGE\_BOX17@{canMESSAGE\_BOX17}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX17}{canMESSAGE\_BOX17}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX17~17U}
+
+
+
+Alias name for CAN message box 17. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a5eed24b9cac3ef11266f4986a389bc13}\label{can_8h_a5eed24b9cac3ef11266f4986a389bc13}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX18@{canMESSAGE\_BOX18}}
+\index{canMESSAGE\_BOX18@{canMESSAGE\_BOX18}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX18}{canMESSAGE\_BOX18}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX18~18U}
+
+
+
+Alias name for CAN message box 18. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_aedde57c7b9fefdd3722045f96c4a7407}\label{can_8h_aedde57c7b9fefdd3722045f96c4a7407}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX19@{canMESSAGE\_BOX19}}
+\index{canMESSAGE\_BOX19@{canMESSAGE\_BOX19}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX19}{canMESSAGE\_BOX19}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX19~19U}
+
+
+
+Alias name for CAN message box 19. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a25d31fbbcb61855e39a9ffe95335a936}\label{can_8h_a25d31fbbcb61855e39a9ffe95335a936}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX2@{canMESSAGE\_BOX2}}
+\index{canMESSAGE\_BOX2@{canMESSAGE\_BOX2}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX2}{canMESSAGE\_BOX2}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX2~2U}
+
+
+
+Alias name for CAN message box 2. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a5c28574272d50f7a7a0f52dfb4a52e84}\label{can_8h_a5c28574272d50f7a7a0f52dfb4a52e84}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX20@{canMESSAGE\_BOX20}}
+\index{canMESSAGE\_BOX20@{canMESSAGE\_BOX20}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX20}{canMESSAGE\_BOX20}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX20~20U}
+
+
+
+Alias name for CAN message box 20. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ab381e6a5e545ba6f17f6362b3aa11dc5}\label{can_8h_ab381e6a5e545ba6f17f6362b3aa11dc5}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX21@{canMESSAGE\_BOX21}}
+\index{canMESSAGE\_BOX21@{canMESSAGE\_BOX21}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX21}{canMESSAGE\_BOX21}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX21~21U}
+
+
+
+Alias name for CAN message box 21. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_aaec513b2c236eab78620d780ff4c276f}\label{can_8h_aaec513b2c236eab78620d780ff4c276f}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX22@{canMESSAGE\_BOX22}}
+\index{canMESSAGE\_BOX22@{canMESSAGE\_BOX22}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX22}{canMESSAGE\_BOX22}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX22~22U}
+
+
+
+Alias name for CAN message box 22. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_af2724460d8d50734692186b4494907ca}\label{can_8h_af2724460d8d50734692186b4494907ca}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX23@{canMESSAGE\_BOX23}}
+\index{canMESSAGE\_BOX23@{canMESSAGE\_BOX23}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX23}{canMESSAGE\_BOX23}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX23~23U}
+
+
+
+Alias name for CAN message box 23. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a85f960dba21026403d04a757f1c94975}\label{can_8h_a85f960dba21026403d04a757f1c94975}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX24@{canMESSAGE\_BOX24}}
+\index{canMESSAGE\_BOX24@{canMESSAGE\_BOX24}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX24}{canMESSAGE\_BOX24}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX24~24U}
+
+
+
+Alias name for CAN message box 24. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ab9a3b1c4f729be0680385439c1b5e92e}\label{can_8h_ab9a3b1c4f729be0680385439c1b5e92e}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX25@{canMESSAGE\_BOX25}}
+\index{canMESSAGE\_BOX25@{canMESSAGE\_BOX25}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX25}{canMESSAGE\_BOX25}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX25~25U}
+
+
+
+Alias name for CAN message box 25. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_af481a4245923c3867aa5a187da62c44c}\label{can_8h_af481a4245923c3867aa5a187da62c44c}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX26@{canMESSAGE\_BOX26}}
+\index{canMESSAGE\_BOX26@{canMESSAGE\_BOX26}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX26}{canMESSAGE\_BOX26}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX26~26U}
+
+
+
+Alias name for CAN message box 26. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_aa58dba1e2ea475a728829ec77f0c98ec}\label{can_8h_aa58dba1e2ea475a728829ec77f0c98ec}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX27@{canMESSAGE\_BOX27}}
+\index{canMESSAGE\_BOX27@{canMESSAGE\_BOX27}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX27}{canMESSAGE\_BOX27}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX27~27U}
+
+
+
+Alias name for CAN message box 27. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a43282b0555ebf57d622534d14e87d4cd}\label{can_8h_a43282b0555ebf57d622534d14e87d4cd}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX28@{canMESSAGE\_BOX28}}
+\index{canMESSAGE\_BOX28@{canMESSAGE\_BOX28}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX28}{canMESSAGE\_BOX28}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX28~28U}
+
+
+
+Alias name for CAN message box 28. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_aa80f652fcbe34b8c68ff27a24e0ba1b3}\label{can_8h_aa80f652fcbe34b8c68ff27a24e0ba1b3}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX29@{canMESSAGE\_BOX29}}
+\index{canMESSAGE\_BOX29@{canMESSAGE\_BOX29}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX29}{canMESSAGE\_BOX29}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX29~29U}
+
+
+
+Alias name for CAN message box 29. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a7af7dce5f3d5e0fe197a6048b4372944}\label{can_8h_a7af7dce5f3d5e0fe197a6048b4372944}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX3@{canMESSAGE\_BOX3}}
+\index{canMESSAGE\_BOX3@{canMESSAGE\_BOX3}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX3}{canMESSAGE\_BOX3}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX3~3U}
+
+
+
+Alias name for CAN message box 3. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_abd5093b90b17883254f21864fc9a6303}\label{can_8h_abd5093b90b17883254f21864fc9a6303}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX30@{canMESSAGE\_BOX30}}
+\index{canMESSAGE\_BOX30@{canMESSAGE\_BOX30}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX30}{canMESSAGE\_BOX30}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX30~30U}
+
+
+
+Alias name for CAN message box 30. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_aa7cbae50a47cd62ee645b6fe9b7b112e}\label{can_8h_aa7cbae50a47cd62ee645b6fe9b7b112e}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX31@{canMESSAGE\_BOX31}}
+\index{canMESSAGE\_BOX31@{canMESSAGE\_BOX31}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX31}{canMESSAGE\_BOX31}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX31~31U}
+
+
+
+Alias name for CAN message box 31. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a2b9b1f0939642e801d21ad53868d72e0}\label{can_8h_a2b9b1f0939642e801d21ad53868d72e0}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX32@{canMESSAGE\_BOX32}}
+\index{canMESSAGE\_BOX32@{canMESSAGE\_BOX32}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX32}{canMESSAGE\_BOX32}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX32~32U}
+
+
+
+Alias name for CAN message box 32. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a940e78810e0af0cfdfcfd5db9d127c3c}\label{can_8h_a940e78810e0af0cfdfcfd5db9d127c3c}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX33@{canMESSAGE\_BOX33}}
+\index{canMESSAGE\_BOX33@{canMESSAGE\_BOX33}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX33}{canMESSAGE\_BOX33}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX33~33U}
+
+
+
+Alias name for CAN message box 33. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a10065525832f1199d2e721c94f454857}\label{can_8h_a10065525832f1199d2e721c94f454857}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX34@{canMESSAGE\_BOX34}}
+\index{canMESSAGE\_BOX34@{canMESSAGE\_BOX34}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX34}{canMESSAGE\_BOX34}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX34~34U}
+
+
+
+Alias name for CAN message box 34. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a28a960b9fd260e898f21e93620bfba1f}\label{can_8h_a28a960b9fd260e898f21e93620bfba1f}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX35@{canMESSAGE\_BOX35}}
+\index{canMESSAGE\_BOX35@{canMESSAGE\_BOX35}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX35}{canMESSAGE\_BOX35}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX35~35U}
+
+
+
+Alias name for CAN message box 35. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a7e240387dd568c058debac3ca656fd82}\label{can_8h_a7e240387dd568c058debac3ca656fd82}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX36@{canMESSAGE\_BOX36}}
+\index{canMESSAGE\_BOX36@{canMESSAGE\_BOX36}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX36}{canMESSAGE\_BOX36}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX36~36U}
+
+
+
+Alias name for CAN message box 36. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ad2528acc2ad522871810be5ecb056a3a}\label{can_8h_ad2528acc2ad522871810be5ecb056a3a}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX37@{canMESSAGE\_BOX37}}
+\index{canMESSAGE\_BOX37@{canMESSAGE\_BOX37}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX37}{canMESSAGE\_BOX37}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX37~37U}
+
+
+
+Alias name for CAN message box 37. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a9e4c50dc674d1ef8ab98bfba247dfc55}\label{can_8h_a9e4c50dc674d1ef8ab98bfba247dfc55}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX38@{canMESSAGE\_BOX38}}
+\index{canMESSAGE\_BOX38@{canMESSAGE\_BOX38}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX38}{canMESSAGE\_BOX38}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX38~38U}
+
+
+
+Alias name for CAN message box 38. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a740ce4c2590d80dba5482d0b550637a0}\label{can_8h_a740ce4c2590d80dba5482d0b550637a0}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX39@{canMESSAGE\_BOX39}}
+\index{canMESSAGE\_BOX39@{canMESSAGE\_BOX39}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX39}{canMESSAGE\_BOX39}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX39~39U}
+
+
+
+Alias name for CAN message box 39. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_af849386b1a1ef11dc98cec5fee9a8ca8}\label{can_8h_af849386b1a1ef11dc98cec5fee9a8ca8}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX4@{canMESSAGE\_BOX4}}
+\index{canMESSAGE\_BOX4@{canMESSAGE\_BOX4}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX4}{canMESSAGE\_BOX4}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX4~4U}
+
+
+
+Alias name for CAN message box 4. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a0fab236168f04565c29bec07c6afc222}\label{can_8h_a0fab236168f04565c29bec07c6afc222}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX40@{canMESSAGE\_BOX40}}
+\index{canMESSAGE\_BOX40@{canMESSAGE\_BOX40}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX40}{canMESSAGE\_BOX40}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX40~40U}
+
+
+
+Alias name for CAN message box 40. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a815b6aa9ef2f4f93b473b6ae54eeca7b}\label{can_8h_a815b6aa9ef2f4f93b473b6ae54eeca7b}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX41@{canMESSAGE\_BOX41}}
+\index{canMESSAGE\_BOX41@{canMESSAGE\_BOX41}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX41}{canMESSAGE\_BOX41}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX41~41U}
+
+
+
+Alias name for CAN message box 41. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ae4e804d3140570dbf345bb4a593037e1}\label{can_8h_ae4e804d3140570dbf345bb4a593037e1}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX42@{canMESSAGE\_BOX42}}
+\index{canMESSAGE\_BOX42@{canMESSAGE\_BOX42}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX42}{canMESSAGE\_BOX42}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX42~42U}
+
+
+
+Alias name for CAN message box 42. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_aa02b314f476748353447585ad13aa02c}\label{can_8h_aa02b314f476748353447585ad13aa02c}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX43@{canMESSAGE\_BOX43}}
+\index{canMESSAGE\_BOX43@{canMESSAGE\_BOX43}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX43}{canMESSAGE\_BOX43}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX43~43U}
+
+
+
+Alias name for CAN message box 43. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ade5a53f276598fbe1d9c2a287b9c3427}\label{can_8h_ade5a53f276598fbe1d9c2a287b9c3427}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX44@{canMESSAGE\_BOX44}}
+\index{canMESSAGE\_BOX44@{canMESSAGE\_BOX44}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX44}{canMESSAGE\_BOX44}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX44~44U}
+
+
+
+Alias name for CAN message box 44. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a1da4a02922638d9f0b2813a92dc11733}\label{can_8h_a1da4a02922638d9f0b2813a92dc11733}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX45@{canMESSAGE\_BOX45}}
+\index{canMESSAGE\_BOX45@{canMESSAGE\_BOX45}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX45}{canMESSAGE\_BOX45}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX45~45U}
+
+
+
+Alias name for CAN message box 45. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a368ac2b9b6c8c9a20e60f2190640c193}\label{can_8h_a368ac2b9b6c8c9a20e60f2190640c193}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX46@{canMESSAGE\_BOX46}}
+\index{canMESSAGE\_BOX46@{canMESSAGE\_BOX46}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX46}{canMESSAGE\_BOX46}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX46~46U}
+
+
+
+Alias name for CAN message box 46. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a9d2b68c2ecbc077ea0b5a06f11be43cf}\label{can_8h_a9d2b68c2ecbc077ea0b5a06f11be43cf}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX47@{canMESSAGE\_BOX47}}
+\index{canMESSAGE\_BOX47@{canMESSAGE\_BOX47}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX47}{canMESSAGE\_BOX47}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX47~47U}
+
+
+
+Alias name for CAN message box 47. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a0a0f5002087e1984c8dc88338e9e89a1}\label{can_8h_a0a0f5002087e1984c8dc88338e9e89a1}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX48@{canMESSAGE\_BOX48}}
+\index{canMESSAGE\_BOX48@{canMESSAGE\_BOX48}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX48}{canMESSAGE\_BOX48}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX48~48U}
+
+
+
+Alias name for CAN message box 48. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ac9f8ed358667835ca34e1d1f6aa9f46b}\label{can_8h_ac9f8ed358667835ca34e1d1f6aa9f46b}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX49@{canMESSAGE\_BOX49}}
+\index{canMESSAGE\_BOX49@{canMESSAGE\_BOX49}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX49}{canMESSAGE\_BOX49}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX49~49U}
+
+
+
+Alias name for CAN message box 49. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a13f356a822de686bc3f8a12ea86fb5dd}\label{can_8h_a13f356a822de686bc3f8a12ea86fb5dd}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX5@{canMESSAGE\_BOX5}}
+\index{canMESSAGE\_BOX5@{canMESSAGE\_BOX5}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX5}{canMESSAGE\_BOX5}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX5~5U}
+
+
+
+Alias name for CAN message box 5. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ab8170766a5b88ef02d7688b520b912cd}\label{can_8h_ab8170766a5b88ef02d7688b520b912cd}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX50@{canMESSAGE\_BOX50}}
+\index{canMESSAGE\_BOX50@{canMESSAGE\_BOX50}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX50}{canMESSAGE\_BOX50}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX50~50U}
+
+
+
+Alias name for CAN message box 50. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a1956c1d1a400a4bf289453dbfc4dd120}\label{can_8h_a1956c1d1a400a4bf289453dbfc4dd120}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX51@{canMESSAGE\_BOX51}}
+\index{canMESSAGE\_BOX51@{canMESSAGE\_BOX51}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX51}{canMESSAGE\_BOX51}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX51~51U}
+
+
+
+Alias name for CAN message box 51. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_aea41738e75337c9d8beeb10311e2957f}\label{can_8h_aea41738e75337c9d8beeb10311e2957f}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX52@{canMESSAGE\_BOX52}}
+\index{canMESSAGE\_BOX52@{canMESSAGE\_BOX52}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX52}{canMESSAGE\_BOX52}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX52~52U}
+
+
+
+Alias name for CAN message box 52. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_af17c4bc2128bfe922dfa0f428d005001}\label{can_8h_af17c4bc2128bfe922dfa0f428d005001}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX53@{canMESSAGE\_BOX53}}
+\index{canMESSAGE\_BOX53@{canMESSAGE\_BOX53}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX53}{canMESSAGE\_BOX53}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX53~53U}
+
+
+
+Alias name for CAN message box 53. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_abb3d5615b69184c1d8085d36b4ab6c97}\label{can_8h_abb3d5615b69184c1d8085d36b4ab6c97}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX54@{canMESSAGE\_BOX54}}
+\index{canMESSAGE\_BOX54@{canMESSAGE\_BOX54}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX54}{canMESSAGE\_BOX54}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX54~54U}
+
+
+
+Alias name for CAN message box 54. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ab51f7537f9323fcd1bbf40ccbb73a000}\label{can_8h_ab51f7537f9323fcd1bbf40ccbb73a000}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX55@{canMESSAGE\_BOX55}}
+\index{canMESSAGE\_BOX55@{canMESSAGE\_BOX55}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX55}{canMESSAGE\_BOX55}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX55~55U}
+
+
+
+Alias name for CAN message box 55. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a0e383387f289173dfb0586ebd40a3230}\label{can_8h_a0e383387f289173dfb0586ebd40a3230}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX56@{canMESSAGE\_BOX56}}
+\index{canMESSAGE\_BOX56@{canMESSAGE\_BOX56}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX56}{canMESSAGE\_BOX56}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX56~56U}
+
+
+
+Alias name for CAN message box 56. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a7b946fd9d1e0c5f7bb6cc956e59a3880}\label{can_8h_a7b946fd9d1e0c5f7bb6cc956e59a3880}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX57@{canMESSAGE\_BOX57}}
+\index{canMESSAGE\_BOX57@{canMESSAGE\_BOX57}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX57}{canMESSAGE\_BOX57}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX57~57U}
+
+
+
+Alias name for CAN message box 57. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a25ae7e936680f369958c4755eb37f9f4}\label{can_8h_a25ae7e936680f369958c4755eb37f9f4}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX58@{canMESSAGE\_BOX58}}
+\index{canMESSAGE\_BOX58@{canMESSAGE\_BOX58}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX58}{canMESSAGE\_BOX58}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX58~58U}
+
+
+
+Alias name for CAN message box 58. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a9741f1c1ac3a086af76cd9460f9ac7e7}\label{can_8h_a9741f1c1ac3a086af76cd9460f9ac7e7}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX59@{canMESSAGE\_BOX59}}
+\index{canMESSAGE\_BOX59@{canMESSAGE\_BOX59}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX59}{canMESSAGE\_BOX59}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX59~59U}
+
+
+
+Alias name for CAN message box 59. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a84a81fde28a58c932c59dc1df42accd2}\label{can_8h_a84a81fde28a58c932c59dc1df42accd2}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX6@{canMESSAGE\_BOX6}}
+\index{canMESSAGE\_BOX6@{canMESSAGE\_BOX6}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX6}{canMESSAGE\_BOX6}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX6~6U}
+
+
+
+Alias name for CAN message box 6. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a88aa098ae34470b11ab03cc370ad8c97}\label{can_8h_a88aa098ae34470b11ab03cc370ad8c97}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX60@{canMESSAGE\_BOX60}}
+\index{canMESSAGE\_BOX60@{canMESSAGE\_BOX60}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX60}{canMESSAGE\_BOX60}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX60~60U}
+
+
+
+Alias name for CAN message box 60. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ab4d2a7835ca268e203138f6565253265}\label{can_8h_ab4d2a7835ca268e203138f6565253265}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX61@{canMESSAGE\_BOX61}}
+\index{canMESSAGE\_BOX61@{canMESSAGE\_BOX61}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX61}{canMESSAGE\_BOX61}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX61~61U}
+
+
+
+Alias name for CAN message box 61. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ad7f0f3347ff1205854ba6f2bbbd94dca}\label{can_8h_ad7f0f3347ff1205854ba6f2bbbd94dca}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX62@{canMESSAGE\_BOX62}}
+\index{canMESSAGE\_BOX62@{canMESSAGE\_BOX62}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX62}{canMESSAGE\_BOX62}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX62~62U}
+
+
+
+Alias name for CAN message box 62. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_ae83e91624f7bbf64db061c054e30c33b}\label{can_8h_ae83e91624f7bbf64db061c054e30c33b}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX63@{canMESSAGE\_BOX63}}
+\index{canMESSAGE\_BOX63@{canMESSAGE\_BOX63}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX63}{canMESSAGE\_BOX63}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX63~63U}
+
+
+
+Alias name for CAN message box 63. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_aac6c500dba049b8f0173dc70d8411b37}\label{can_8h_aac6c500dba049b8f0173dc70d8411b37}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX64@{canMESSAGE\_BOX64}}
+\index{canMESSAGE\_BOX64@{canMESSAGE\_BOX64}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX64}{canMESSAGE\_BOX64}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX64~64U}
+
+
+
+Alias name for CAN message box 64. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a5a323f027d282b38c4aa75ff97a8b982}\label{can_8h_a5a323f027d282b38c4aa75ff97a8b982}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX7@{canMESSAGE\_BOX7}}
+\index{canMESSAGE\_BOX7@{canMESSAGE\_BOX7}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX7}{canMESSAGE\_BOX7}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX7~7U}
+
+
+
+Alias name for CAN message box 7. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a6cd135cd8736e078d8926d04ae172618}\label{can_8h_a6cd135cd8736e078d8926d04ae172618}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX8@{canMESSAGE\_BOX8}}
+\index{canMESSAGE\_BOX8@{canMESSAGE\_BOX8}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX8}{canMESSAGE\_BOX8}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX8~8U}
+
+
+
+Alias name for CAN message box 8. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+\mbox{\Hypertarget{can_8h_a9b2501ad60836a524ce0c2a2c5a9bc31}\label{can_8h_a9b2501ad60836a524ce0c2a2c5a9bc31}} 
+\index{can.h@{can.h}!canMESSAGE\_BOX9@{canMESSAGE\_BOX9}}
+\index{canMESSAGE\_BOX9@{canMESSAGE\_BOX9}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canMESSAGE\_BOX9}{canMESSAGE\_BOX9}}
+{\footnotesize\ttfamily \#define can\+MESSAGE\+\_\+\+BOX9~9U}
+
+
+
+Alias name for CAN message box 9. 
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape message\+Box} 
+\end{DoxyNote}
+
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{can_8h_afe14b0f6de1003d9440f90e9df86918a}\label{can_8h_afe14b0f6de1003d9440f90e9df86918a}} 
+\index{can.h@{can.h}!canloopBackType\_t@{canloopBackType\_t}}
+\index{canloopBackType\_t@{canloopBackType\_t}!can.h@{can.h}}
+\doxysubsubsection{\texorpdfstring{canloopBackType\_t}{canloopBackType\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{can_8h_afe14b0f6de1003d9440f90e9df86918a}{canloop\+Back\+Type\+\_\+t}}}
+
+
+
+can\+Loopback type Type Definition 
+
+This type is used to select the can module Loopback type Digital or Analog loopback. 

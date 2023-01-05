@@ -1,0 +1,93 @@
+\hypertarget{reg__gio_8h_source}{}\doxysection{reg\+\_\+gio.\+h}
+\label{reg__gio_8h_source}\index{include/reg\_gio.h@{include/reg\_gio.h}}
+\mbox{\hyperlink{reg__gio_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*}}
+\DoxyCodeLine{00046\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifndef\ \_\_REG\_GIO\_H\_\_}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ \_\_REG\_GIO\_H\_\_}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sys__common_8h}{sys\_common.h}}"{}}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ Gio\ Register\ Frame\ Definition\ */}}
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgio_base}{gioBase}}}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_acbc9fe1acf08000ba68ea5e70b6b14fa}{GCR0}};\ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ uint32\ \ \ \mbox{\hyperlink{structgio_base_a5b710dde2daddd0da3ff1690218407c8}{rsvd}};\ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_a69af8ece4c9ca6efe28c1858f83b01d1}{INTDET}};\ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_a475e188857e64a2181096a87b1f14bac}{POL}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_a6fa0093604562c59ec3d81bb5b283888}{ENASET}};\ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_a6fdc0422f54b261e2bb2496c6747741c}{ENACLR}};\ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_a4aef2d6388e52fa9e03b1b9c6e232a6e}{LVLSET}};\ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_aba1a9837dea72b12aaae2204b307443d}{LVLCLR}};\ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_ae5fc990881754e81bfe12fb2694f1de3}{FLG}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_ab3dcf07bd247959e26448f588c0ecf73}{OFF1}};\ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_ac202aaaf9aff64254b675889b753f426}{OFF2}};\ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_a69b10dbb472c3d9c590ff2d71beb1a15}{EMU1}};\ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_base_af3217ee2c7569b288bfca2cd7cfc7c66}{EMU2}};\ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \}\ \mbox{\hyperlink{reg__gio_8h_aa668c4a0178e1b9a1ccdf772286ff0b4}{gioBASE\_t}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgio_port}{gioPort}}}
+\DoxyCodeLine{00097\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_port_a1f7c46c73a21947be1d27aa0436b8c84}{DIR}};\ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_port_a0aad77b47de633a0c8e9b953cba464dd}{DIN}};\ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_port_a2ab5ff289fcd14492e0d4ccb60189f1d}{DOUT}};\ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_port_ae26cdf9d49a938a5fe988d1470ae6a20}{DSET}};\ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_port_a4221196c2bea53f44cc90ee4b9e537c1}{DCLR}};\ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_port_a15d9c4276cb8ca1575d7769de651f580}{PDR}};\ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_port_ae0375052eb5bd939bf748f95cebfb177}{PULDIS}};\ }
+\DoxyCodeLine{00105\ \ \ \ \ uint32\ \mbox{\hyperlink{structgio_port_acbc2104f394353c69043e38e3d4056ce}{PSL}};\ \ \ \ }
+\DoxyCodeLine{00106\ \}\ \mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gioPORT\_t}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ gioREG\ \ \ ((gioBASE\_t\ *)0xFFF7BC00U)}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ gioPORTA\ ((gioPORT\_t\ *)0xFFF7BC34U)}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00124\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,38 @@
+\hypertarget{pinmux_8c}{}\doxysection{Файл source/pinmux.c}
+\label{pinmux_8c}\index{source/pinmux.c@{source/pinmux.c}}
+
+
+PINMUX Driver Implementation File.  
+
+
+{\ttfamily \#include \char`\"{}pinmux.\+h\char`\"{}}\newline
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pinmux_8c_a31fa55f119f05af77919d700548b643e}\label{pinmux_8c_a31fa55f119f05af77919d700548b643e}} 
+\#define {\bfseries PINMUX\+\_\+\+SET}(REG,  BALLID,  MUX)~            (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$PINMMR\#\#REG = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$PINMMR\#\#REG \& PINMUX\+\_\+\+BALL\+\_\+\#\#BALLID\#\#\+\_\+\+MASK) $\vert$ (PINMUX\+\_\+\+BALL\+\_\+\#\#BALLID\#\#\+\_\+\#\#MUX))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a9c7439f913ae7f334226784a8f354d8b}\label{pinmux_8c_a9c7439f913ae7f334226784a8f354d8b}} 
+\#define {\bfseries PINMUX\+\_\+\+GIOB\+\_\+\+DISABLE\+\_\+\+HET2\+\_\+\+ENABLE}~            (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$PINMMR29 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$PINMMR29 \& PINMUX\+\_\+\+GIOB\+\_\+\+DISABLE\+\_\+\+HET2\+\_\+\+MASK) $\vert$ PINMUX\+\_\+\+GIOB\+\_\+\+DISABLE\+\_\+\+HET2)
+\item 
+\mbox{\Hypertarget{pinmux_8c_ac320cac5f9d3df53fc90620f52e7aebe}\label{pinmux_8c_ac320cac5f9d3df53fc90620f52e7aebe}} 
+\#define {\bfseries PINMUX\+\_\+\+ALT\+\_\+\+ADC\+\_\+\+TRIGGER\+\_\+\+SELECT}(num)~            (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$PINMMR30 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$PINMMR30 \& PINMUX\+\_\+\+ALT\+\_\+\+ADC\+\_\+\+TRIGGER\+\_\+\+MASK) $\vert$ (PINMUX\+\_\+\+ALT\+\_\+\+ADC\+\_\+\+TRIGGER\+\_\+\#\#num))
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i_o_m_m_ga8fac89d371c9be80b507da3c31144423}{mux\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the PINMUX Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_o_m_m_gae1d5925bc43dd10efb0529ed8fea7e5d}{pinmux\+Get\+Config\+Value}} (\mbox{\hyperlink{structpinmux__config__reg}{pinmux\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+PINMUX Driver Implementation File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01 
+\end{DoxyVersion}

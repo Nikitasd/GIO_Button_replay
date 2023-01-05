@@ -1,0 +1,1388 @@
+\hypertarget{sys__selftest_8h}{}\doxysection{Файл include/sys\+\_\+selftest.h}
+\label{sys__selftest_8h}\index{include/sys\_selftest.h@{include/sys\_selftest.h}}
+
+
+System Memory Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+pbist.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+stc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+efc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+vim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}can.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mibspi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}het.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}htu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esm.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpbist__config__reg}{pbist\+\_\+config\+\_\+reg}}
+\item 
+struct \mbox{\hyperlink{structstc__config__reg}{stc\+\_\+config\+\_\+reg}}
+\item 
+struct \mbox{\hyperlink{structefc__config__reg}{efc\+\_\+config\+\_\+reg}}
+\item 
+struct \mbox{\hyperlink{structccmr4__config__reg}{ccmr4\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aca63e6c2a1e88cd66ed1874570d3dc88}\label{sys__selftest_8h_aca63e6c2a1e88cd66ed1874570d3dc88}} 
+\#define {\bfseries flash1bit\+Error}~($\ast$(volatile uint32 $\ast$)(0x\+F00803\+F0U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a94b582d0aae923f9095eececd94fefcc}\label{sys__selftest_8h_a94b582d0aae923f9095eececd94fefcc}} 
+\#define {\bfseries flash2bit\+Error}~($\ast$(volatile uint32 $\ast$)(0x\+F00803\+F8U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a63619293391b7d9a87ad0a457ecb4c37}\label{sys__selftest_8h_a63619293391b7d9a87ad0a457ecb4c37}} 
+\#define {\bfseries tcram\+A1bit\+Error}~($\ast$(volatile uint32 $\ast$)(0x08400000U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a4419a755c0c6d378d38e4170dd3d9883}\label{sys__selftest_8h_a4419a755c0c6d378d38e4170dd3d9883}} 
+\#define {\bfseries tcram\+A2bit\+Error}~($\ast$(volatile uint32 $\ast$)(0x08400010U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a8a5abf507de25aad0565e7f8f67521fe}\label{sys__selftest_8h_a8a5abf507de25aad0565e7f8f67521fe}} 
+\#define {\bfseries tcram\+B1bit\+Error}~($\ast$(volatile uint32 $\ast$)(0x08400008U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ad4fa2d7af7df2e74b82bc4e23c05b2c3}\label{sys__selftest_8h_ad4fa2d7af7df2e74b82bc4e23c05b2c3}} 
+\#define {\bfseries tcram\+B2bit\+Error}~($\ast$(volatile uint32 $\ast$)(0x08400018U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_abac2827564ffe6b9720925fa157299bf}\label{sys__selftest_8h_abac2827564ffe6b9720925fa157299bf}} 
+\#define {\bfseries tcram\+A1bit}~($\ast$(volatile uint64 $\ast$)(0x08000000U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a714acf7ec1c1aba28a3240e9a1bde19d}\label{sys__selftest_8h_a714acf7ec1c1aba28a3240e9a1bde19d}} 
+\#define {\bfseries tcram\+A2bit}~($\ast$(volatile uint64 $\ast$)(0x08000010U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aa5367b47fa6314d55a55ce16b0b4e51e}\label{sys__selftest_8h_aa5367b47fa6314d55a55ce16b0b4e51e}} 
+\#define {\bfseries tcram\+B1bit}~($\ast$(volatile uint64 $\ast$)(0x08000008U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a3f6b60d17766150e9be450a830c45610}\label{sys__selftest_8h_a3f6b60d17766150e9be450a830c45610}} 
+\#define {\bfseries tcram\+B2bit}~($\ast$(volatile uint64 $\ast$)(0x08000018U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a6914d871cf76625149ae1c80096c2211}\label{sys__selftest_8h_a6914d871cf76625149ae1c80096c2211}} 
+\#define {\bfseries flash\+Bad\+ECC1}~($\ast$(volatile uint32 $\ast$)(0x20000000U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a1e0d1b4917e383dd863c4afb8dad1647}\label{sys__selftest_8h_a1e0d1b4917e383dd863c4afb8dad1647}} 
+\#define {\bfseries flash\+Bad\+ECC2}~($\ast$(volatile uint32 $\ast$)(0x20000010U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae4adc5e9ab5822993da28bd0a3b99da2}\label{sys__selftest_8h_ae4adc5e9ab5822993da28bd0a3b99da2}} 
+\#define {\bfseries CCMSR}~($\ast$(volatile uint32 $\ast$)(0x\+FFFFF600U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a3719b8720a1636d0372f1a4280212e6d}\label{sys__selftest_8h_a3719b8720a1636d0372f1a4280212e6d}} 
+\#define {\bfseries CCMKEYR}~($\ast$(volatile uint32 $\ast$)(0x\+FFFFF604U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a42a2974031aaef2a8b147d586e1cf831}\label{sys__selftest_8h_a42a2974031aaef2a8b147d586e1cf831}} 
+\#define {\bfseries MIBSPI1\+RAMLOC}~($\ast$(volatile uint32 $\ast$)(0x\+FF0\+E0000U))
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a56d72c7aeb783deb573cf6368129aec3}\label{sys__selftest_8h_a56d72c7aeb783deb573cf6368129aec3}} 
+\#define {\bfseries \+\_\+\+\_\+\+PBIST\+\_\+\+H\+\_\+\+\_\+}
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_af96929e92806acd410da3eb0f0fba53c}\label{sys__selftest_8h_af96929e92806acd410da3eb0f0fba53c}} 
+\#define {\bfseries PBIST\+\_\+\+ROM\+\_\+\+PBIST\+\_\+\+RAM\+\_\+\+GROUP}~1U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a5589d05b68ae637d4a60323a3d871e80}\label{sys__selftest_8h_a5589d05b68ae637d4a60323a3d871e80}} 
+\#define {\bfseries STC\+\_\+\+ROM\+\_\+\+PBIST\+\_\+\+RAM\+\_\+\+GROUP}~2U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a016bb102f09739bcc9f7523b2eede9c6}\label{sys__selftest_8h_a016bb102f09739bcc9f7523b2eede9c6}} 
+\#define {\bfseries PBIST\+\_\+\+RAMT\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a620f6570db02a6cb9a50022799de4482}\label{sys__selftest_8h_a620f6570db02a6cb9a50022799de4482}} 
+\#define {\bfseries PBIST\+\_\+\+DLR\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae8e2258ebfc6d6f4bbc243d3792f5225}\label{sys__selftest_8h_ae8e2258ebfc6d6f4bbc243d3792f5225}} 
+\#define {\bfseries PBIST\+\_\+\+PACT\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a1407e3b64164d0917e1c1926b8b60d69}\label{sys__selftest_8h_a1407e3b64164d0917e1c1926b8b60d69}} 
+\#define {\bfseries PBIST\+\_\+\+PBISTID\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a67a2c6a2f8eb2de383255fe5de7cbfdc}\label{sys__selftest_8h_a67a2c6a2f8eb2de383255fe5de7cbfdc}} 
+\#define {\bfseries PBIST\+\_\+\+OVER\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae2bb7bef0267b1ece0df630beee533b1}\label{sys__selftest_8h_ae2bb7bef0267b1ece0df630beee533b1}} 
+\#define {\bfseries PBIST\+\_\+\+FSRDL1\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a0c59f18403964aa42261b2f862518df5}\label{sys__selftest_8h_a0c59f18403964aa42261b2f862518df5}} 
+\#define {\bfseries PBIST\+\_\+\+ROM\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a865b27fac663103182676cdcf0aeb017}\label{sys__selftest_8h_a865b27fac663103182676cdcf0aeb017}} 
+\#define {\bfseries PBIST\+\_\+\+ALGO\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a64b5568ebfee5a8d7443a8414ab66e79}\label{sys__selftest_8h_a64b5568ebfee5a8d7443a8414ab66e79}} 
+\#define {\bfseries PBIST\+\_\+\+RINFOL\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a5419227328645ee895ee5d3ab0403494}\label{sys__selftest_8h_a5419227328645ee895ee5d3ab0403494}} 
+\#define {\bfseries PBIST\+\_\+\+RINFOU\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ac6dbfe137c24938cee4785c2779ccedb}\label{sys__selftest_8h_ac6dbfe137c24938cee4785c2779ccedb}} 
+\#define {\bfseries \+\_\+\+\_\+\+STC\+\_\+\+H\+\_\+\+\_\+}
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a77a1a54daa67c0657bfa9b6100670b76}\label{sys__selftest_8h_a77a1a54daa67c0657bfa9b6100670b76}} 
+\#define {\bfseries STC\+\_\+\+INTERVAL}~26U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a03004e33fb008c2eed2f0739bb4a39f7}\label{sys__selftest_8h_a03004e33fb008c2eed2f0739bb4a39f7}} 
+\#define {\bfseries STC\+\_\+\+MAX\+\_\+\+TIMEOUT}~0x\+FFFFFFFFU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a22bea734601c10966500516b086befe9}\label{sys__selftest_8h_a22bea734601c10966500516b086befe9}} 
+\#define {\bfseries STC\+\_\+\+STCGCR0\+\_\+\+CONFIGVALUE}~0x\+FFFF0000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a0933bbfe847f972c03187cad4d793029}\label{sys__selftest_8h_a0933bbfe847f972c03187cad4d793029}} 
+\#define {\bfseries STC\+\_\+\+STCGCR1\+\_\+\+CONFIGVALUE}~0x5U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a913cae6640515d4117ecfd500ef7f3e9}\label{sys__selftest_8h_a913cae6640515d4117ecfd500ef7f3e9}} 
+\#define {\bfseries STC\+\_\+\+STCTPR\+\_\+\+CONFIGVALUE}~0x\+FFFFFFFFU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae0311020e428cc924fc1502999b0a0e5}\label{sys__selftest_8h_ae0311020e428cc924fc1502999b0a0e5}} 
+\#define {\bfseries STC\+\_\+\+STCSCSCR\+\_\+\+CONFIGVALUE}~0x5U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a4f010fd98c8c4b44b9fc63c6604253ee}\label{sys__selftest_8h_a4f010fd98c8c4b44b9fc63c6604253ee}} 
+\#define {\bfseries \+\_\+\+\_\+\+EFC\+\_\+\+H\+\_\+\+\_\+}
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a6ad4c7f924e24241629dc10ed6b433f9}\label{sys__selftest_8h_a6ad4c7f924e24241629dc10ed6b433f9}} 
+\#define {\bfseries INPUT\+\_\+\+ENABLE}~0x0000000\+FU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a40984b9ac260aa5f3467e55a91cfff30}\label{sys__selftest_8h_a40984b9ac260aa5f3467e55a91cfff30}} 
+\#define {\bfseries INPUT\+\_\+\+DISABLE}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a70963ccca5ce8f7dca6a88b752c9a538}\label{sys__selftest_8h_a70963ccca5ce8f7dca6a88b752c9a538}} 
+\#define {\bfseries SYS\+\_\+\+WS\+\_\+\+READ\+\_\+\+STATES}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a7baeb8bdab8847f3907a81219ff9df61}\label{sys__selftest_8h_a7baeb8bdab8847f3907a81219ff9df61}} 
+\#define {\bfseries SYS\+\_\+\+REPAIR\+\_\+\+EN\+\_\+0}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a199d403c843879c806d1b470e9708341}\label{sys__selftest_8h_a199d403c843879c806d1b470e9708341}} 
+\#define {\bfseries SYS\+\_\+\+REPAIR\+\_\+\+EN\+\_\+3}~0x00000100U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ab73629f432272dc96d03a3ca4ce14092}\label{sys__selftest_8h_ab73629f432272dc96d03a3ca4ce14092}} 
+\#define {\bfseries SYS\+\_\+\+REPAIR\+\_\+\+EN\+\_\+5}~0x00000200U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a023b6896e0c2430b0162782e92bf0cf2}\label{sys__selftest_8h_a023b6896e0c2430b0162782e92bf0cf2}} 
+\#define {\bfseries SYS\+\_\+\+DEID\+\_\+\+AUTOLOAD\+\_\+\+EN}~0x00000400U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a5e86a322a5653fa3b3fe3153fd4d89ab}\label{sys__selftest_8h_a5e86a322a5653fa3b3fe3153fd4d89ab}} 
+\#define {\bfseries EFC\+\_\+\+FDI\+\_\+\+EN}~0x00000800U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_acbff457aff1e7185198add1da6e1a59c}\label{sys__selftest_8h_acbff457aff1e7185198add1da6e1a59c}} 
+\#define {\bfseries EFC\+\_\+\+FDI\+\_\+\+DIS}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae8947cdee7e1ece2f0ddf0b4312fa2cc}\label{sys__selftest_8h_ae8947cdee7e1ece2f0ddf0b4312fa2cc}} 
+\#define {\bfseries SYS\+\_\+\+ECC\+\_\+\+OVERRIDE\+\_\+\+EN}~0x00001000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a761c6c3c551e08703f4046319c092553}\label{sys__selftest_8h_a761c6c3c551e08703f4046319c092553}} 
+\#define {\bfseries SYS\+\_\+\+ECC\+\_\+\+OVERRIDE\+\_\+\+DIS}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aee98d02032ea1d9c25462881906d488f}\label{sys__selftest_8h_aee98d02032ea1d9c25462881906d488f}} 
+\#define {\bfseries SYS\+\_\+\+ECC\+\_\+\+SELF\+\_\+\+TEST\+\_\+\+EN}~0x00002000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a84dd968e5c5646e17a635eedfd3d4af6}\label{sys__selftest_8h_a84dd968e5c5646e17a635eedfd3d4af6}} 
+\#define {\bfseries SYS\+\_\+\+ECC\+\_\+\+SELF\+\_\+\+TEST\+\_\+\+DIS}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_af3986297b99a9f545ec6c28f8b8edbf4}\label{sys__selftest_8h_af3986297b99a9f545ec6c28f8b8edbf4}} 
+\#define {\bfseries OUTPUT\+\_\+\+ENABLE}~0x0003\+C000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_acc9eb2479607a79b7af314b985f8d3f0}\label{sys__selftest_8h_acc9eb2479607a79b7af314b985f8d3f0}} 
+\#define {\bfseries OUTPUT\+\_\+\+DISABLE}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a394b60c80e9f57bd372648cca3077d9b}\label{sys__selftest_8h_a394b60c80e9f57bd372648cca3077d9b}} 
+\#define {\bfseries EFC\+\_\+\+AUTOLOAD\+\_\+\+ERROR\+\_\+\+EN}~0x00040000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a528d36a8cba2cb7437f24a06766b1300}\label{sys__selftest_8h_a528d36a8cba2cb7437f24a06766b1300}} 
+\#define {\bfseries EFC\+\_\+\+INSTRUCTION\+\_\+\+ERROR\+\_\+\+EN}~0x00080000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a2c45ef8a51ac122bce6633946a838e34}\label{sys__selftest_8h_a2c45ef8a51ac122bce6633946a838e34}} 
+\#define {\bfseries EFC\+\_\+\+INSTRUCTION\+\_\+\+INFO\+\_\+\+EN}~0x00100000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_addc8c1839388d94cfc070bfcc006ba0d}\label{sys__selftest_8h_addc8c1839388d94cfc070bfcc006ba0d}} 
+\#define {\bfseries EFC\+\_\+\+SELF\+\_\+\+TEST\+\_\+\+ERROR\+\_\+\+EN}~0x00200000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a0f0c81a7a3b2ff0d60f0ee590b51ae6f}\label{sys__selftest_8h_a0f0c81a7a3b2ff0d60f0ee590b51ae6f}} 
+\#define {\bfseries EFC\+\_\+\+AUTOLOAD\+\_\+\+ERROR\+\_\+\+DIS}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae7f57325fb8c6ceb487b2a044364d78b}\label{sys__selftest_8h_ae7f57325fb8c6ceb487b2a044364d78b}} 
+\#define {\bfseries EFC\+\_\+\+INSTRUCTION\+\_\+\+ERROR\+\_\+\+DIS}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a9f4eae529953b90ec7d4afe13616606a}\label{sys__selftest_8h_a9f4eae529953b90ec7d4afe13616606a}} 
+\#define {\bfseries EFC\+\_\+\+INSTRUCTION\+\_\+\+INFO\+\_\+\+DIS}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ada6191d891f9f51176801e0776ee7a6a}\label{sys__selftest_8h_ada6191d891f9f51176801e0776ee7a6a}} 
+\#define {\bfseries EFC\+\_\+\+SELF\+\_\+\+TEST\+\_\+\+ERROR\+\_\+\+DIS}~0x00000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_af62fab23e0e159851d615cf94022d58a}\label{sys__selftest_8h_af62fab23e0e159851d615cf94022d58a}} 
+\#define {\bfseries DISABLE\+\_\+\+READ\+\_\+\+ROW0}~0x00800000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_abb048a5f37b2970c94621cb4000f198a}\label{sys__selftest_8h_abb048a5f37b2970c94621cb4000f198a}} 
+\#define {\bfseries SYS\+\_\+\+REPAIR\+\_\+0}~0x00000010U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a628da0579dc45b5aff788e8791191bf1}\label{sys__selftest_8h_a628da0579dc45b5aff788e8791191bf1}} 
+\#define {\bfseries SYS\+\_\+\+REPAIR\+\_\+3}~0x00000010U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ab865911e5be4a16e27f447c52335aadb}\label{sys__selftest_8h_ab865911e5be4a16e27f447c52335aadb}} 
+\#define {\bfseries SYS\+\_\+\+REPAIR\+\_\+5}~0x00000020U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ad11f1018dc2cf771d3d059b17439d90b}\label{sys__selftest_8h_ad11f1018dc2cf771d3d059b17439d90b}} 
+\#define {\bfseries SYS\+\_\+\+DEID\+\_\+\+AUTOLOAD}~0x00000040U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a7fdf03c49fd6292a43209e8f1400eb90}\label{sys__selftest_8h_a7fdf03c49fd6292a43209e8f1400eb90}} 
+\#define {\bfseries SYS\+\_\+\+FCLRZ}~0x00000080U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a98046388c8e057daa293f54df7210b5e}\label{sys__selftest_8h_a98046388c8e057daa293f54df7210b5e}} 
+\#define {\bfseries EFC\+\_\+\+READY}~0x00000100U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae15537ce27ea12fe06103795acf3c68d}\label{sys__selftest_8h_ae15537ce27ea12fe06103795acf3c68d}} 
+\#define {\bfseries SYS\+\_\+\+ECC\+\_\+\+OVERRIDE}~0x00000200U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ac167daccd10770e318f9e40076611551}\label{sys__selftest_8h_ac167daccd10770e318f9e40076611551}} 
+\#define {\bfseries EFC\+\_\+\+AUTOLOAD\+\_\+\+ERROR}~0x00000400U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a482dc6fc304c6207126886d1e82d9195}\label{sys__selftest_8h_a482dc6fc304c6207126886d1e82d9195}} 
+\#define {\bfseries EFC\+\_\+\+INSTRUCTION\+\_\+\+ERROR}~0x00000800U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae6cbfcf78efd7be2bef30d62906dade2}\label{sys__selftest_8h_ae6cbfcf78efd7be2bef30d62906dade2}} 
+\#define {\bfseries EFC\+\_\+\+INSTRUCTION\+\_\+\+INFO}~0x00001000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aee231669b49aaec4e6ff7513d5ec196e}\label{sys__selftest_8h_aee231669b49aaec4e6ff7513d5ec196e}} 
+\#define {\bfseries SYS\+\_\+\+ECC\+\_\+\+SELF\+\_\+\+TEST}~0x00002000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a342fe812e02f07a1776dd7e18b6d2e75}\label{sys__selftest_8h_a342fe812e02f07a1776dd7e18b6d2e75}} 
+\#define {\bfseries EFC\+\_\+\+SELF\+\_\+\+TEST\+\_\+\+ERROR}~0x00004000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a5b907280d18c6b78b94af98053943371}\label{sys__selftest_8h_a5b907280d18c6b78b94af98053943371}} 
+\#define {\bfseries EFC\+\_\+\+SELF\+\_\+\+TEST\+\_\+\+DONE}~0x00008000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a799517031a8334a42807b119bb456c53}\label{sys__selftest_8h_a799517031a8334a42807b119bb456c53}} 
+\#define {\bfseries TIME\+\_\+\+OUT}~0x01
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a33345c73e3ecd0308d7dfd4d9d6e5068}\label{sys__selftest_8h_a33345c73e3ecd0308d7dfd4d9d6e5068}} 
+\#define {\bfseries AUTOLOAD\+\_\+\+NO\+\_\+\+FUSEROM\+\_\+\+DATA}~0x02U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ab55be881def698e013350d3fdf8158b8}\label{sys__selftest_8h_ab55be881def698e013350d3fdf8158b8}} 
+\#define {\bfseries AUTOLOAD\+\_\+\+SIGN\+\_\+\+FAIL}~0x03U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a534ffd478954216e76a4230153feeb40}\label{sys__selftest_8h_a534ffd478954216e76a4230153feeb40}} 
+\#define {\bfseries AUTOLOAD\+\_\+\+PROG\+\_\+\+INTERRUPT}~0x04U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a1ace6eabf3670e9134a7622538d1032d}\label{sys__selftest_8h_a1ace6eabf3670e9134a7622538d1032d}} 
+\#define {\bfseries AUTOLOAD\+\_\+\+TWO\+\_\+\+BIT\+\_\+\+ERR}~0x05U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_af6776eee94565509c9fc3f154b07e18a}\label{sys__selftest_8h_af6776eee94565509c9fc3f154b07e18a}} 
+\#define {\bfseries PROGRAME\+\_\+\+WR\+\_\+\+P\+\_\+\+SET}~0x06U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_afad097629429c48d85ebb6b2d20e19ce}\label{sys__selftest_8h_afad097629429c48d85ebb6b2d20e19ce}} 
+\#define {\bfseries PROGRAME\+\_\+\+MNY\+\_\+\+DATA\+\_\+\+ITERTN}~0x07U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a3c107cfa39405533495da56a8dc43487}\label{sys__selftest_8h_a3c107cfa39405533495da56a8dc43487}} 
+\#define {\bfseries PROGRAME\+\_\+\+MNY\+\_\+\+CNTR\+\_\+\+ITERTN}~0x08U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a64126aedd15b0eb23868590eb948f8a6}\label{sys__selftest_8h_a64126aedd15b0eb23868590eb948f8a6}} 
+\#define {\bfseries UN\+\_\+\+PROGRAME\+\_\+\+BIT\+\_\+\+SET}~0x09U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a5f6d9bad83b9e7faecefc0b8ae60abf6}\label{sys__selftest_8h_a5f6d9bad83b9e7faecefc0b8ae60abf6}} 
+\#define {\bfseries REDUNDANT\+\_\+\+REPAIR\+\_\+\+ROW}~0x0\+AU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a8e804301a495082cdd76a8905709a8da}\label{sys__selftest_8h_a8e804301a495082cdd76a8905709a8da}} 
+\#define {\bfseries PROGRAME\+\_\+\+MNY\+\_\+\+CRA\+\_\+\+ITERTN}~0x0\+BU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aa9262e67956257e83cb9c0fe890942c5}\label{sys__selftest_8h_aa9262e67956257e83cb9c0fe890942c5}} 
+\#define {\bfseries PROGRAME\+\_\+\+SAME\+\_\+\+DATA}~0x0\+CU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a140b24daaa84cf8383025968c613dbf4}\label{sys__selftest_8h_a140b24daaa84cf8383025968c613dbf4}} 
+\#define {\bfseries PROGRAME\+\_\+\+CMP\+\_\+\+SKIP}~0x0\+DU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_af3a076677668a763e357c24c62e69efb}\label{sys__selftest_8h_af3a076677668a763e357c24c62e69efb}} 
+\#define {\bfseries PROGRAME\+\_\+\+ABORT}~0x0\+EU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a8402fbb5ed7be5e13fb449af283bf4ae}\label{sys__selftest_8h_a8402fbb5ed7be5e13fb449af283bf4ae}} 
+\#define {\bfseries PROGRAME\+\_\+\+INCORRECT\+\_\+\+KEY}~0x0\+FU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a6905b6f6b54fa03628867cf89acefaf7}\label{sys__selftest_8h_a6905b6f6b54fa03628867cf89acefaf7}} 
+\#define {\bfseries FUSEROM\+\_\+\+LASTROW\+\_\+\+STUCK}~0x10U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a232bb3ab81ba618561dbd6cfb2406795}\label{sys__selftest_8h_a232bb3ab81ba618561dbd6cfb2406795}} 
+\#define {\bfseries AUTOLOAD\+\_\+\+SINGLE\+\_\+\+BIT\+\_\+\+ERR}~0x15U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a45fbe4bce3f0de28d65b17a6ce0204fc}\label{sys__selftest_8h_a45fbe4bce3f0de28d65b17a6ce0204fc}} 
+\#define {\bfseries DUMPWORD\+\_\+\+TWO\+\_\+\+BIT\+\_\+\+ERR}~0x16U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a75a35d84247bc076e988d08b47837ca8}\label{sys__selftest_8h_a75a35d84247bc076e988d08b47837ca8}} 
+\#define {\bfseries DUMPWORD\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+ERR}~0x17U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a1eb43f8f0ef0e6dff8579e43942f68f5}\label{sys__selftest_8h_a1eb43f8f0ef0e6dff8579e43942f68f5}} 
+\#define {\bfseries SELF\+\_\+\+TEST\+\_\+\+ERROR}~0x18U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aee29a44e45a315579ec9b6d24bbf30e3}\label{sys__selftest_8h_aee29a44e45a315579ec9b6d24bbf30e3}} 
+\#define {\bfseries INSTRUCTION\+\_\+\+DONE}~0x20U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a2264464750f063ca528884bd1dfabe0f}\label{sys__selftest_8h_a2264464750f063ca528884bd1dfabe0f}} 
+\#define {\bfseries TEST\+\_\+\+UNPROGRAME\+\_\+\+ROM}~0x01000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a360eb47ba2240230ab1decfb31641be6}\label{sys__selftest_8h_a360eb47ba2240230ab1decfb31641be6}} 
+\#define {\bfseries PROGRAME\+\_\+\+CRA}~0x02000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a4ea174de0517304b91eb4c1e219a66b9}\label{sys__selftest_8h_a4ea174de0517304b91eb4c1e219a66b9}} 
+\#define {\bfseries DUMP\+\_\+\+WORD}~0x04000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a89e2d51e6caa9469aadea6e266a3b27f}\label{sys__selftest_8h_a89e2d51e6caa9469aadea6e266a3b27f}} 
+\#define {\bfseries LOAD\+\_\+\+FUSE\+\_\+\+SCAN\+\_\+\+CHAIN}~0x05000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a96503442607870a6024e99421ccdafaf}\label{sys__selftest_8h_a96503442607870a6024e99421ccdafaf}} 
+\#define {\bfseries PROGRAME\+\_\+\+DATA}~0x07000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a9a91fc9c2f61dd864c7a0a3efc69e225}\label{sys__selftest_8h_a9a91fc9c2f61dd864c7a0a3efc69e225}} 
+\#define {\bfseries RUN\+\_\+\+AUTOLOAD\+\_\+8}~0x08000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ac14c61a814ae08078433ea5cfdb18af4}\label{sys__selftest_8h_ac14c61a814ae08078433ea5cfdb18af4}} 
+\#define {\bfseries RUN\+\_\+\+AUTOLOAD\+\_\+A}~0x0\+A000000U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a288eecf0ec085c36f466df4551b7164a}\label{sys__selftest_8h_a288eecf0ec085c36f466df4551b7164a}} 
+\#define {\bfseries EFC\+\_\+\+BOUNDARY\+\_\+\+CONFIGVALUE}~0x0000200\+FU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a8e524bdf80ba4e547dd866cc2fe03105}\label{sys__selftest_8h_a8e524bdf80ba4e547dd866cc2fe03105}} 
+\#define {\bfseries EFC\+\_\+\+PINS\+\_\+\+CONFIGVALUE}~0x000082\+E0U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a7ba8312d57a3f0aec5c1ed160f1c694a}\label{sys__selftest_8h_a7ba8312d57a3f0aec5c1ed160f1c694a}} 
+\#define {\bfseries EFC\+\_\+\+SELFTESTCYCLES\+\_\+\+CONFIGVALUE}~0x00000258U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a57f9eb7207341c8048067500147a4b5a}\label{sys__selftest_8h_a57f9eb7207341c8048067500147a4b5a}} 
+\#define {\bfseries EFC\+\_\+\+SELFTESTSIGN\+\_\+\+CONFIGVALUE}~0x5362\+F97\+FU
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a6a4b462491b2c7905b5cba570ecd4ca2}\label{sys__selftest_8h_a6a4b462491b2c7905b5cba570ecd4ca2}} 
+\#define {\bfseries CCMSELFCHECK\+\_\+\+FAIL1}~1U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a38de74d4b442f036fb14557d3674351f}\label{sys__selftest_8h_a38de74d4b442f036fb14557d3674351f}} 
+\#define {\bfseries CCMSELFCHECK\+\_\+\+FAIL2}~2U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a24224cf0e2e92f068a44fb1d37b73cad}\label{sys__selftest_8h_a24224cf0e2e92f068a44fb1d37b73cad}} 
+\#define {\bfseries CCMSELFCHECK\+\_\+\+FAIL3}~3U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a01fc2a9e922fa7819cae218945564050}\label{sys__selftest_8h_a01fc2a9e922fa7819cae218945564050}} 
+\#define {\bfseries CCMSELFCHECK\+\_\+\+FAIL4}~4U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a2c715255a484a26947c50634201ddb59}\label{sys__selftest_8h_a2c715255a484a26947c50634201ddb59}} 
+\#define {\bfseries PBISTSELFCHECK\+\_\+\+FAIL1}~5U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ad4cd5422a62d7c975be886444583d320}\label{sys__selftest_8h_ad4cd5422a62d7c975be886444583d320}} 
+\#define {\bfseries EFCCHECK\+\_\+\+FAIL1}~6U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aab106d935aef8d0fb46b717126a9d501}\label{sys__selftest_8h_aab106d935aef8d0fb46b717126a9d501}} 
+\#define {\bfseries EFCCHECK\+\_\+\+FAIL2}~7U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aba81c7e85cf7bc8a2b34cbf0f826264a}\label{sys__selftest_8h_aba81c7e85cf7bc8a2b34cbf0f826264a}} 
+\#define {\bfseries FMCECCCHECK\+\_\+\+FAIL1}~8U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a6108549362abadab5cc3de30c4407797}\label{sys__selftest_8h_a6108549362abadab5cc3de30c4407797}} 
+\#define {\bfseries CHECKB0\+RAMECC\+\_\+\+FAIL1}~9U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a651d3db51690b813ac5c6b46a8a7fefd}\label{sys__selftest_8h_a651d3db51690b813ac5c6b46a8a7fefd}} 
+\#define {\bfseries CHECKB1\+RAMECC\+\_\+\+FAIL1}~10U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_af9c5aa7ced6f67ab9436a1c545fa2891}\label{sys__selftest_8h_af9c5aa7ced6f67ab9436a1c545fa2891}} 
+\#define {\bfseries CHECKFLASHECC\+\_\+\+FAIL1}~11U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a8d9357f464c503e3c03c63675e25e3af}\label{sys__selftest_8h_a8d9357f464c503e3c03c63675e25e3af}} 
+\#define {\bfseries VIMPARITYCHECK\+\_\+\+FAIL1}~12U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a329fb87cc87abaad50e23037883b0bad}\label{sys__selftest_8h_a329fb87cc87abaad50e23037883b0bad}} 
+\#define {\bfseries DMAPARITYCHECK\+\_\+\+FAIL1}~13U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a6b491ff4392725401c2b0f0fcdbbeb71}\label{sys__selftest_8h_a6b491ff4392725401c2b0f0fcdbbeb71}} 
+\#define {\bfseries HET1\+PARITYCHECK\+\_\+\+FAIL1}~14U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_adef0d372d5efab7a7050c298926ca599}\label{sys__selftest_8h_adef0d372d5efab7a7050c298926ca599}} 
+\#define {\bfseries HTU1\+PARITYCHECK\+\_\+\+FAIL1}~15U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a71b59f48c8b4cd31855bc8be26799fd5}\label{sys__selftest_8h_a71b59f48c8b4cd31855bc8be26799fd5}} 
+\#define {\bfseries HET2\+PARITYCHECK\+\_\+\+FAIL1}~16U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a3670fe5135c8d58ca7a14494f8bacd1d}\label{sys__selftest_8h_a3670fe5135c8d58ca7a14494f8bacd1d}} 
+\#define {\bfseries HTU2\+PARITYCHECK\+\_\+\+FAIL1}~17U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aa23673ac7744faf671fa938a4b4aa269}\label{sys__selftest_8h_aa23673ac7744faf671fa938a4b4aa269}} 
+\#define {\bfseries ADC1\+PARITYCHECK\+\_\+\+FAIL1}~18U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_afaf541dd29cf34228788612913ef30a9}\label{sys__selftest_8h_afaf541dd29cf34228788612913ef30a9}} 
+\#define {\bfseries ADC2\+PARITYCHECK\+\_\+\+FAIL1}~19U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a037dbcfb034678b2dee3b9b9eeca0cb2}\label{sys__selftest_8h_a037dbcfb034678b2dee3b9b9eeca0cb2}} 
+\#define {\bfseries CAN1\+PARITYCHECK\+\_\+\+FAIL1}~20U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a6f82c4db94689255f861b821a4f1252c}\label{sys__selftest_8h_a6f82c4db94689255f861b821a4f1252c}} 
+\#define {\bfseries CAN2\+PARITYCHECK\+\_\+\+FAIL1}~21U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a65e0f1865820cce3f8116aff76010b4a}\label{sys__selftest_8h_a65e0f1865820cce3f8116aff76010b4a}} 
+\#define {\bfseries CAN3\+PARITYCHECK\+\_\+\+FAIL1}~22U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a4b267a9a1005ec0f21fece5db4c4a868}\label{sys__selftest_8h_a4b267a9a1005ec0f21fece5db4c4a868}} 
+\#define {\bfseries MIBSPI1\+PARITYCHECK\+\_\+\+FAIL1}~23U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ab7d3f63b7e6d8c2a9936c7d8edd6a10e}\label{sys__selftest_8h_ab7d3f63b7e6d8c2a9936c7d8edd6a10e}} 
+\#define {\bfseries MIBSPI3\+PARITYCHECK\+\_\+\+FAIL1}~24U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae508f304998876bd980e454daddbbfeb}\label{sys__selftest_8h_ae508f304998876bd980e454daddbbfeb}} 
+\#define {\bfseries MIBSPI5\+PARITYCHECK\+\_\+\+FAIL1}~25U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae9894f581ca5c3693744a405d1bd9139}\label{sys__selftest_8h_ae9894f581ca5c3693744a405d1bd9139}} 
+\#define {\bfseries CHECKRAMECC\+\_\+\+FAIL1}~26U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a31c67cbe6dae94e62e3e7d9c60e81ecd}\label{sys__selftest_8h_a31c67cbe6dae94e62e3e7d9c60e81ecd}} 
+\#define {\bfseries CHECKRAMECC\+\_\+\+FAIL2}~27U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ac78720f87a8cc27894655da45c5dce72}\label{sys__selftest_8h_ac78720f87a8cc27894655da45c5dce72}} 
+\#define {\bfseries CHECKCLOCKMONITOR\+\_\+\+FAIL1}~28U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a4f1d71b18109c9e69133e31bf6b1f816}\label{sys__selftest_8h_a4f1d71b18109c9e69133e31bf6b1f816}} 
+\#define {\bfseries CHECKFLASHEEPROMECC\+\_\+\+FAIL1}~29U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a2fec5649dfd374b3e1445a3e9f2f6e11}\label{sys__selftest_8h_a2fec5649dfd374b3e1445a3e9f2f6e11}} 
+\#define {\bfseries CHECKFLASHEEPROMECC\+\_\+\+FAIL2}~31U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a98b1e3e27d73d1e82e3b0e3e70f6b30a}\label{sys__selftest_8h_a98b1e3e27d73d1e82e3b0e3e70f6b30a}} 
+\#define {\bfseries CHECKFLASHEEPROMECC\+\_\+\+FAIL3}~32U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_abb27d83424219db43bb0510f0700fa09}\label{sys__selftest_8h_abb27d83424219db43bb0510f0700fa09}} 
+\#define {\bfseries CHECKFLASHEEPROMECC\+\_\+\+FAIL4}~33U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_aff5c5a26aae744c0f4f08b377fc1a600}\label{sys__selftest_8h_aff5c5a26aae744c0f4f08b377fc1a600}} 
+\#define {\bfseries CHECKPLL1\+SLIP\+\_\+\+FAIL1}~34U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a4e3184d98e0ce9f972ca6d99b4a33b89}\label{sys__selftest_8h_a4e3184d98e0ce9f972ca6d99b4a33b89}} 
+\#define {\bfseries CHECKRAMADDRPARITY\+\_\+\+FAIL1}~35U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ad8b7df35ad159115c9c5d9f31180d23e}\label{sys__selftest_8h_ad8b7df35ad159115c9c5d9f31180d23e}} 
+\#define {\bfseries CHECKRAMADDRPARITY\+\_\+\+FAIL2}~36U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a4e6a4641e6e1910d58b6aa5f15ebd30a}\label{sys__selftest_8h_a4e6a4641e6e1910d58b6aa5f15ebd30a}} 
+\#define {\bfseries CHECKRAMUERRTEST\+\_\+\+FAIL1}~37U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a2058f60f557d121472d78be2a1e0be56}\label{sys__selftest_8h_a2058f60f557d121472d78be2a1e0be56}} 
+\#define {\bfseries CHECKRAMUERRTEST\+\_\+\+FAIL2}~38U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a1cd0263f8d9e1086d16872a1d161911d}\label{sys__selftest_8h_a1cd0263f8d9e1086d16872a1d161911d}} 
+\#define {\bfseries FMCBUS1\+PARITYCHECK\+\_\+\+FAIL1}~39U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_acd60ff5ea372fd4b33bc0d0f10a0f0a3}\label{sys__selftest_8h_acd60ff5ea372fd4b33bc0d0f10a0f0a3}} 
+\#define {\bfseries FMCBUS1\+PARITYCHECK\+\_\+\+FAIL2}~40U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ae0ea1504dee7ed93929e037b28014215}\label{sys__selftest_8h_ae0ea1504dee7ed93929e037b28014215}} 
+\#define {\bfseries PBISTSELFCHECK\+\_\+\+FAIL2}~41U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_ad5c9efe1c93f8f873290e8eb50d58d46}\label{sys__selftest_8h_ad5c9efe1c93f8f873290e8eb50d58d46}} 
+\#define {\bfseries PBISTSELFCHECK\+\_\+\+FAIL3}~42U
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a4da28ec324d888cbab0ee3630cd8fd14}\label{sys__selftest_8h_a4da28ec324d888cbab0ee3630cd8fd14}} 
+\#define {\bfseries CCMR4\+\_\+\+CCMKEYR\+\_\+\+CONFIGVALUE}~0U
+\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_afbacca7dc2c86878ea357e715b7481f8}\label{sys__selftest_8h_afbacca7dc2c86878ea357e715b7481f8}} 
+typedef struct \mbox{\hyperlink{structpbist__config__reg}{pbist\+\_\+config\+\_\+reg}} {\bfseries pbist\+\_\+config\+\_\+reg\+\_\+t}
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a317205a205a5d56542b84531609809f1}\label{sys__selftest_8h_a317205a205a5d56542b84531609809f1}} 
+typedef struct \mbox{\hyperlink{structstc__config__reg}{stc\+\_\+config\+\_\+reg}} {\bfseries stc\+\_\+config\+\_\+reg\+\_\+t}
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_a0337e3b52f237f6b89048c9fe8c4a210}\label{sys__selftest_8h_a0337e3b52f237f6b89048c9fe8c4a210}} 
+typedef struct \mbox{\hyperlink{structefc__config__reg}{efc\+\_\+config\+\_\+reg}} {\bfseries efc\+\_\+config\+\_\+reg\+\_\+t}
+\item 
+\mbox{\Hypertarget{sys__selftest_8h_af698ac3e21b676af198d4a5c00ed1626}\label{sys__selftest_8h_af698ac3e21b676af198d4a5c00ed1626}} 
+typedef struct \mbox{\hyperlink{structccmr4__config__reg}{ccmr4\+\_\+config\+\_\+reg}} {\bfseries ccmr4\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3}{pbist\+Port}} \{ \mbox{\hyperlink{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3a2f1ea5882d645e86e9a7e8f809c5f5ea}{PBIST\+\_\+\+PORT0}} = 0U
+, \mbox{\hyperlink{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3ac933996e0cb7472c44de4b2f2f18e340}{PBIST\+\_\+\+PORT1}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for pbist Port number. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0}{pbist\+Algo}} \{ \newline
+\mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0af4dbf763a322a39325c6fe8ef24512f3}{PBIST\+\_\+\+Triple\+Read\+Slow}} = 0x00000001U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a3cb6e6cbfa091ed9eb5158e68a2bb573}{PBIST\+\_\+\+Triple\+Read\+Fast}} = 0x00000002U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a145f5abb0d1630f7dc3919cab37af13b}{PBIST\+\_\+\+March13\+N\+\_\+\+DP}} = 0x00000004U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5c6bcc919d0ee3f730d98812346148d8}{PBIST\+\_\+\+March13\+N\+\_\+\+SP}} = 0x00000008U
+, \newline
+\mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a31c36c35bbfe957b4f6225cf67dd1f58}{PBIST\+\_\+\+DOWN1a\+\_\+\+DP}} = 0x00000010U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a8702034b17d9db4bb18e08316fcc4b73}{PBIST\+\_\+\+DOWN1a\+\_\+\+SP}} = 0x00000020U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad17fc4abcff110ca8d3e8fd7ce1c252b}{PBIST\+\_\+\+Map\+Column\+\_\+\+DP}} = 0x00000040U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a73e5dcee238f5f5d45e510363979bd8f}{PBIST\+\_\+\+Map\+Column\+\_\+\+SP}} = 0x00000080U
+, \newline
+\mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad80f8831809b125fcf872eb2d8fa2516}{PBIST\+\_\+\+Precharge\+\_\+\+DP}} = 0x00000100U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a3b93011b85a66e4b539f3546d9d511a4}{PBIST\+\_\+\+Precharge\+\_\+\+SP}} = 0x00000200U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2c1c27da2103ab9b7a079539c19d51b4}{PBIST\+\_\+\+DTXN2a\+\_\+\+DP}} = 0x00000400U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad9f3d4a20607f6b6b9745a1b8461d5fd}{PBIST\+\_\+\+DTXN2a\+\_\+\+SP}} = 0x00000800U
+, \newline
+\mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2d81c60e8e03c58e685ce600819be3b9}{PBIST\+\_\+\+PMOSOpen\+\_\+\+DP}} = 0x00001000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a89088597e412ed375f0fb37dfd075e0c}{PBIST\+\_\+\+PMOSOpen\+\_\+\+SP}} = 0x00002000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2cbd15e057f6952a6ae3e17e419aec79}{PBIST\+\_\+\+PPMOSOpen\+Slice1\+\_\+\+DP}} = 0x00004000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2d2b586d443245d0b3f19719c8fa595e}{PBIST\+\_\+\+PPMOSOpen\+Slice2\+\_\+\+DP}} = 0x00008000U
+, \newline
+\mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a54e7e5c71a565a37d275301cbb90492e}{PBIST\+\_\+\+Flip10\+\_\+\+DP}} = 0x00010000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2c8460e84b96f150fe537258ab5bcb8b}{PBIST\+\_\+\+Flip10\+\_\+\+SP}} = 0x00020000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5649232fff072a106f9caadada52bde3}{PBIST\+\_\+\+IDDQ\+\_\+\+DP}} = 0x00040000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a312bcd90a80f7e21dbcfd86f36580d6a}{PBIST\+\_\+\+IDDQ\+\_\+\+SP}} = 0x00080000U
+, \newline
+\mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a528b4a83d409a6c38890d84c80b33110}{PBIST\+\_\+\+Retention\+\_\+\+DP}} = 0x00100000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a6fb080b84d2de9f1b51ca4a135f5cef5}{PBIST\+\_\+\+Retention\+\_\+\+SP}} = 0x00200000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a8ae8831ab9d156185cfe6add75747f11}{PBIST\+\_\+\+IDDQ2\+\_\+\+DP}} = 0x00400000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0aaa10af6b1ef6a452d4c5697c90d768bc}{PBIST\+\_\+\+IDDQ2\+\_\+\+SP}} = 0x00800000U
+, \newline
+\mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2ef8bd1190cd0470504d1fa7a08baba9}{PBIST\+\_\+\+Retention2\+\_\+\+DP}} = 0x01000000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a971c53636d2d1a3d7c6548c0c821debd}{PBIST\+\_\+\+Retention2\+\_\+\+SP}} = 0x02000000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5aadd9835f14c322dd264f4c7366353f}{PBIST\+\_\+\+IDDQRow\+Stripe\+\_\+\+DP}} = 0x04000000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0abce63d0b00686b76dbf44d2a622df0fe}{PBIST\+\_\+\+IDDQRow\+Stripe\+\_\+\+SP}} = 0x08000000U
+, \newline
+\mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad5a55084ac740ad2c5e433167b4b858f}{PBIST\+\_\+\+IDDQRow\+Stripe2\+\_\+\+DP}} = 0x10000000U
+, \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ae8b5ceba9ae5a71e3b6cf4a9b345d252}{PBIST\+\_\+\+IDDQRow\+Stripe2\+\_\+\+SP}} = 0x20000000U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for pbist Algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sys__selftest_8h_a01f1d76b843e64acb8bb464d79b9cd45}{memory\+Port0\+Test\+Fail\+Notification}} (uint32 group\+Select, uint32 data\+Select, uint32 address, uint32 data)
+\begin{DoxyCompactList}\small\item\em Memory Port 0 test fail notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a27770bcd3ed64bdd085157a5c99a3502}{memory\+Port1\+Test\+Fail\+Notification}} (uint32 group\+Select, uint32 data\+Select, uint32 address, uint32 data)
+\begin{DoxyCompactList}\small\item\em Memory Port 1 test fail notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a1edb8a500b4ad0f3e87b93245856a937}{pbist\+Get\+Config\+Value}} (\mbox{\hyperlink{structpbist__config__reg}{pbist\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_afb360fa06ebe94d06978d25371ed2140}{stc\+Get\+Config\+Value}} (\mbox{\hyperlink{structstc__config__reg}{stc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_ac76ed167d7b4b27eedea0eb37de6acc2}{efc\+Get\+Config\+Value}} (\mbox{\hyperlink{structefc__config__reg}{efc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a2f7aaa1d96319ecb5d7b6cec31c56670}{ccm\+Self\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em CCM module self check Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a54f7309e862bab7a63c2c176c4b7cee9}{stc\+Self\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em STC module self check Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a2c1518db428c8ab63a56048cadfb4e6e}{stc\+Self\+Check\+Fail}} (void)
+\begin{DoxyCompactList}\small\item\em STC Self test check fail service routine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a27cee1191b0027e90cbb9c66983596b9}{cpu\+Self\+Test}} (uint32 no\+\_\+of\+\_\+intervals, uint32 max\+\_\+timeout, boolean restart\+\_\+test)
+\begin{DoxyCompactList}\small\item\em CPU self test Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a932e8fff5749ae8038f0fbbe9029ec44}{cpu\+Self\+Test\+Fail}} (void)
+\begin{DoxyCompactList}\small\item\em CPU Self test check fail service routine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a3184dfe0846903e1111348942160dfe7}{memory\+Init}} (uint32 ram)
+\begin{DoxyCompactList}\small\item\em Memory Initialization Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_ac9b7e2d9da2b5166a9ea002d431e54ef}{pbist\+Self\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em PBIST self test Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_ad5fcc064d8d51dda635d83235cf37e3e}{pbist\+Run}} (uint32 raminfoL, uint32 algomask)
+\begin{DoxyCompactList}\small\item\em CPU self test Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a1ea172c81d7549cd8181de098a91b752}{pbist\+Stop}} (void)
+\begin{DoxyCompactList}\small\item\em Routine to stop PBIST test enabled. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{sys__selftest_8h_a2675f441b1c7bbadd9877cfd586bf959}{pbist\+Is\+Test\+Completed}} (void)
+\begin{DoxyCompactList}\small\item\em Checks to see if the PBIST test is completed. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{sys__selftest_8h_a975a794505ddcaf5d1c68e7a229fc8ae}{pbist\+Is\+Test\+Passed}} (void)
+\begin{DoxyCompactList}\small\item\em Checks to see if the PBIST test is completed successfully. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{sys__selftest_8h_a3edbda42e27655bb5e9a3d067ab09caf}{pbist\+Port\+Test\+Status}} (uint32 port)
+\begin{DoxyCompactList}\small\item\em Checks to see if the PBIST Port test is completed successfully. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__selftest_8h_adc8a571e336b788da775b5279597c9f9}\label{sys__selftest_8h_adc8a571e336b788da775b5279597c9f9}} 
+void {\bfseries pbist\+Fail} (void)
+\item 
+uint32 \mbox{\hyperlink{sys__selftest_8h_a646eb27315f3ce47edde97c563389f76}{efc\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em EFUSE module self check Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_afd6cec31a44e7c8e325a744e9bcbf601}{efc\+Self\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em EFUSE module self check Driver. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{sys__selftest_8h_a9973f032c29389602b684d30ea390fad}{efc\+Stuck\+Zero\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em Checks to see if the EFUSE Stuck at zero test is completed successfully. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{sys__selftest_8h_ad44409ae54516ba10303dd5c011f4fa6}{checkefc\+Self\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em EFUSE module self check Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a3248a50d5c0516f336b46aa0114ba9be}{fmc\+Bus2\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Self Check Flash Bus2 Interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a183a0d9f1300394cff2f8fe0aa034d4b}{fmc\+ECCcheck}} (void)
+\begin{DoxyCompactList}\small\item\em Check Flash ECC Single Bit and multi Bit errors detection logic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__selftest_8h_aa035d17d1ecb2d6bb095a5c0b44a2143}\label{sys__selftest_8h_aa035d17d1ecb2d6bb095a5c0b44a2143}} 
+void {\bfseries fmc\+Bus1\+Parity\+Check} (void)
+\item 
+void \mbox{\hyperlink{sys__selftest_8h_ad4cbf907aa7750c1c3601ed191842dd9}{check\+B0\+RAMECC}} (void)
+\begin{DoxyCompactList}\small\item\em Check TCRAM1 ECC error detection logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_ab5e986484f3be2af5cd3a7595ba346c2}{check\+B1\+RAMECC}} (void)
+\begin{DoxyCompactList}\small\item\em Check TCRAM2 ECC error detection logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a02bb81fd1b585ba20d4c6e7ed427a4ac}{check\+Flash\+ECC}} (void)
+\begin{DoxyCompactList}\small\item\em Check Flash ECC error detection logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_af7297818ebd5ffd62488091aa9633bf9}{vim\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Routine to check VIM RAM parity error detection and signaling mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a0267c576250cc80c1ffafae379fcd937}{adc1\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Routine to check ADC1 RAM parity error detection and signaling mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a66f658578435dc4d3984c76a3d2ed959}{het1\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Routine to check HET1 RAM parity error detection and signaling mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a5f69665c7b7abb003cfb4a314ce1e943}{htu1\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Routine to check HTU1 RAM parity error detection and signaling mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a034e78d72a2a9231d27d78256d3d194e}{can1\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Routine to check CAN1 RAM parity error detection and signaling mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a0b4bb222e016b734e702da6a1ec5ab8a}{can2\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Routine to check CAN2 RAM parity error detection and signaling mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a050e0c2257b541e651eb35d32f10c98d}{mibspi1\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Routine to check MIBSPI1 RAM parity error detection and signaling mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a421594cf13d3b5ca42435c5a5604721c}{check\+RAMECC}} (void)
+\begin{DoxyCompactList}\small\item\em Check TCRAM ECC error detection logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a012696be6fb67f7debf6f1ff6f9e3331}{check\+Clock\+Monitor}} (void)
+\begin{DoxyCompactList}\small\item\em Check clock monitor failure detection logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a239d7544f8bb38fc73056467dbeb9e7c}{check\+Flash\+EEPROMECC}} (void)
+\begin{DoxyCompactList}\small\item\em Check Flash EEPROM ECC error detection logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a08d6355b5f4052d4ef5d2d995032ba22}{check\+PLL1\+Slip}} (void)
+\begin{DoxyCompactList}\small\item\em Check PLL1 Slip detection logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a85eb55d96d4a491e84a930dbea0e89a5}{check\+RAMAddr\+Parity}} (void)
+\begin{DoxyCompactList}\small\item\em Check TCRAM Address parity error detection and signaling mechanism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a7e5bbec947e5db02df2bda4ba2230677}{check\+RAMUERRTest}} (void)
+\begin{DoxyCompactList}\small\item\em Run RAM test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_af9ecd48548d7a3d98d5dcc44d1e7ca51}{enable\+Parity}} (void)
+\begin{DoxyCompactList}\small\item\em Enable peripheral RAM parity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a15b66d583493adf7dc0ce8e3a89f00f5}{disable\+Parity}} (void)
+\begin{DoxyCompactList}\small\item\em Disable peripheral RAM parity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a58597c65615a9a0f05d48135ad48c0d6}{custom\+\_\+dabort}} (void)
+\begin{DoxyCompactList}\small\item\em Custom Data abort routine for the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_ae96e990763ae7d45bd55ea5a27299a47}{selftest\+Fail\+Notification}} (uint32 flag)
+\begin{DoxyCompactList}\small\item\em Self test fail service routine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_a1f3b71a00b6347cb5f7f6eb922c36c9e}{errata\+\_\+\+PBIST\+\_\+4}} (void)
+\begin{DoxyCompactList}\small\item\em Workaround for the Errata PBIST\#4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__selftest_8h_ab288da76a8169e1a92586cd06079358f}{ccmr4\+Get\+Config\+Value}} (\mbox{\hyperlink{structccmr4__config__reg}{ccmr4\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+System Memory Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Efuse Self Test Functions
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\doxysubsection{Перечисления}
+\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistAlgo@{pbistAlgo}}
+\index{pbistAlgo@{pbistAlgo}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistAlgo}{pbistAlgo}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0}{pbist\+Algo}}}
+
+
+
+Alias names for pbist Algorithm. 
+
+This enumeration is used to provide alias names for the pbist Algorithm \begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_TripleReadSlow@{PBIST\_TripleReadSlow}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_TripleReadSlow@{PBIST\_TripleReadSlow}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0af4dbf763a322a39325c6fe8ef24512f3}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0af4dbf763a322a39325c6fe8ef24512f3}} 
+PBIST\+\_\+\+Triple\+Read\+Slow&TRIPLE\+\_\+\+READ\+\_\+\+SLOW\+\_\+\+READ for PBIST and STC ROM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_TripleReadFast@{PBIST\_TripleReadFast}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_TripleReadFast@{PBIST\_TripleReadFast}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a3cb6e6cbfa091ed9eb5158e68a2bb573}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a3cb6e6cbfa091ed9eb5158e68a2bb573}} 
+PBIST\+\_\+\+Triple\+Read\+Fast&TRIPLE\+\_\+\+READ\+\_\+\+SLOW\+\_\+\+READ for PBIST and STC ROM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_March13N\_DP@{PBIST\_March13N\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_March13N\_DP@{PBIST\_March13N\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a145f5abb0d1630f7dc3919cab37af13b}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a145f5abb0d1630f7dc3919cab37af13b}} 
+PBIST\+\_\+\+March13\+N\+\_\+\+DP&March13 N Algo for 2 Port mem \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_March13N\_SP@{PBIST\_March13N\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_March13N\_SP@{PBIST\_March13N\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5c6bcc919d0ee3f730d98812346148d8}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5c6bcc919d0ee3f730d98812346148d8}} 
+PBIST\+\_\+\+March13\+N\+\_\+\+SP&March13 N Algo for 1 Port mem \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_DOWN1a\_DP@{PBIST\_DOWN1a\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_DOWN1a\_DP@{PBIST\_DOWN1a\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a31c36c35bbfe957b4f6225cf67dd1f58}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a31c36c35bbfe957b4f6225cf67dd1f58}} 
+PBIST\+\_\+\+DOWN1a\+\_\+\+DP&Down1a Algor forces the switching fo all data bits \& most addr bits on consecutive read cycles \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_DOWN1a\_SP@{PBIST\_DOWN1a\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_DOWN1a\_SP@{PBIST\_DOWN1a\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a8702034b17d9db4bb18e08316fcc4b73}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a8702034b17d9db4bb18e08316fcc4b73}} 
+PBIST\+\_\+\+DOWN1a\+\_\+\+SP&Down1a Algor forces the switching fo all data bits \& most addr bits on consecutive read cycles \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_MapColumn\_DP@{PBIST\_MapColumn\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_MapColumn\_DP@{PBIST\_MapColumn\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad17fc4abcff110ca8d3e8fd7ce1c252b}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad17fc4abcff110ca8d3e8fd7ce1c252b}} 
+PBIST\+\_\+\+Map\+Column\+\_\+\+DP&Map Column algo (to identify bit line senstivities) for 2 Port memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_MapColumn\_SP@{PBIST\_MapColumn\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_MapColumn\_SP@{PBIST\_MapColumn\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a73e5dcee238f5f5d45e510363979bd8f}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a73e5dcee238f5f5d45e510363979bd8f}} 
+PBIST\+\_\+\+Map\+Column\+\_\+\+SP&Map Column algo (to identify bit line senstivities) for 1 Port memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_Precharge\_DP@{PBIST\_Precharge\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_Precharge\_DP@{PBIST\_Precharge\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad80f8831809b125fcf872eb2d8fa2516}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad80f8831809b125fcf872eb2d8fa2516}} 
+PBIST\+\_\+\+Precharge\+\_\+\+DP&Pre-\/\+Charge algo to exercise pre-\/charge capability for 2 port memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_Precharge\_SP@{PBIST\_Precharge\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_Precharge\_SP@{PBIST\_Precharge\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a3b93011b85a66e4b539f3546d9d511a4}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a3b93011b85a66e4b539f3546d9d511a4}} 
+PBIST\+\_\+\+Precharge\+\_\+\+SP&Pre-\/\+Charge algo to exercise pre-\/charge capability for 1 port memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_DTXN2a\_DP@{PBIST\_DTXN2a\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_DTXN2a\_DP@{PBIST\_DTXN2a\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2c1c27da2103ab9b7a079539c19d51b4}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2c1c27da2103ab9b7a079539c19d51b4}} 
+PBIST\+\_\+\+DTXN2a\+\_\+\+DP&Global column decode logic algo for 2 Port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_DTXN2a\_SP@{PBIST\_DTXN2a\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_DTXN2a\_SP@{PBIST\_DTXN2a\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad9f3d4a20607f6b6b9745a1b8461d5fd}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad9f3d4a20607f6b6b9745a1b8461d5fd}} 
+PBIST\+\_\+\+DTXN2a\+\_\+\+SP&Global column decode logic algo for 1 Port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_PMOSOpen\_DP@{PBIST\_PMOSOpen\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_PMOSOpen\_DP@{PBIST\_PMOSOpen\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2d81c60e8e03c58e685ce600819be3b9}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2d81c60e8e03c58e685ce600819be3b9}} 
+PBIST\+\_\+\+PMOSOpen\+\_\+\+DP&pmos oper algo for 2 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_PMOSOpen\_SP@{PBIST\_PMOSOpen\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_PMOSOpen\_SP@{PBIST\_PMOSOpen\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a89088597e412ed375f0fb37dfd075e0c}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a89088597e412ed375f0fb37dfd075e0c}} 
+PBIST\+\_\+\+PMOSOpen\+\_\+\+SP&pmos oper algo for 1 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_PPMOSOpenSlice1\_DP@{PBIST\_PPMOSOpenSlice1\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_PPMOSOpenSlice1\_DP@{PBIST\_PPMOSOpenSlice1\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2cbd15e057f6952a6ae3e17e419aec79}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2cbd15e057f6952a6ae3e17e419aec79}} 
+PBIST\+\_\+\+PPMOSOpen\+Slice1\+\_\+\+DP&pmos open slice1 for 2port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_PPMOSOpenSlice2\_DP@{PBIST\_PPMOSOpenSlice2\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_PPMOSOpenSlice2\_DP@{PBIST\_PPMOSOpenSlice2\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2d2b586d443245d0b3f19719c8fa595e}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2d2b586d443245d0b3f19719c8fa595e}} 
+PBIST\+\_\+\+PPMOSOpen\+Slice2\+\_\+\+DP&pmos open slice2 for 2port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_Flip10\_DP@{PBIST\_Flip10\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_Flip10\_DP@{PBIST\_Flip10\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a54e7e5c71a565a37d275301cbb90492e}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a54e7e5c71a565a37d275301cbb90492e}} 
+PBIST\+\_\+\+Flip10\+\_\+\+DP&flip10 algo for 2 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_Flip10\_SP@{PBIST\_Flip10\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_Flip10\_SP@{PBIST\_Flip10\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2c8460e84b96f150fe537258ab5bcb8b}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2c8460e84b96f150fe537258ab5bcb8b}} 
+PBIST\+\_\+\+Flip10\+\_\+\+SP&flip10 algo for 1 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_IDDQ\_DP@{PBIST\_IDDQ\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_IDDQ\_DP@{PBIST\_IDDQ\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5649232fff072a106f9caadada52bde3}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5649232fff072a106f9caadada52bde3}} 
+PBIST\+\_\+\+IDDQ\+\_\+\+DP&iddq algo for 2 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_IDDQ\_SP@{PBIST\_IDDQ\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_IDDQ\_SP@{PBIST\_IDDQ\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a312bcd90a80f7e21dbcfd86f36580d6a}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a312bcd90a80f7e21dbcfd86f36580d6a}} 
+PBIST\+\_\+\+IDDQ\+\_\+\+SP&iddq algo for 1 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_Retention\_DP@{PBIST\_Retention\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_Retention\_DP@{PBIST\_Retention\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a528b4a83d409a6c38890d84c80b33110}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a528b4a83d409a6c38890d84c80b33110}} 
+PBIST\+\_\+\+Retention\+\_\+\+DP&retention algo for 2 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_Retention\_SP@{PBIST\_Retention\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_Retention\_SP@{PBIST\_Retention\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a6fb080b84d2de9f1b51ca4a135f5cef5}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a6fb080b84d2de9f1b51ca4a135f5cef5}} 
+PBIST\+\_\+\+Retention\+\_\+\+SP&retention algo for 1 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_IDDQ2\_DP@{PBIST\_IDDQ2\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_IDDQ2\_DP@{PBIST\_IDDQ2\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a8ae8831ab9d156185cfe6add75747f11}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a8ae8831ab9d156185cfe6add75747f11}} 
+PBIST\+\_\+\+IDDQ2\+\_\+\+DP&iddq2 algo for 2 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_IDDQ2\_SP@{PBIST\_IDDQ2\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_IDDQ2\_SP@{PBIST\_IDDQ2\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0aaa10af6b1ef6a452d4c5697c90d768bc}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0aaa10af6b1ef6a452d4c5697c90d768bc}} 
+PBIST\+\_\+\+IDDQ2\+\_\+\+SP&iddq2 algo for 1 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_Retention2\_DP@{PBIST\_Retention2\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_Retention2\_DP@{PBIST\_Retention2\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2ef8bd1190cd0470504d1fa7a08baba9}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a2ef8bd1190cd0470504d1fa7a08baba9}} 
+PBIST\+\_\+\+Retention2\+\_\+\+DP&retention2 algo for 2 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_Retention2\_SP@{PBIST\_Retention2\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_Retention2\_SP@{PBIST\_Retention2\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a971c53636d2d1a3d7c6548c0c821debd}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a971c53636d2d1a3d7c6548c0c821debd}} 
+PBIST\+\_\+\+Retention2\+\_\+\+SP&retention2 algo for 1 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_IDDQRowStripe\_DP@{PBIST\_IDDQRowStripe\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_IDDQRowStripe\_DP@{PBIST\_IDDQRowStripe\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5aadd9835f14c322dd264f4c7366353f}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0a5aadd9835f14c322dd264f4c7366353f}} 
+PBIST\+\_\+\+IDDQRow\+Stripe\+\_\+\+DP&iddqwstripe algo for 2 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_IDDQRowStripe\_SP@{PBIST\_IDDQRowStripe\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_IDDQRowStripe\_SP@{PBIST\_IDDQRowStripe\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0abce63d0b00686b76dbf44d2a622df0fe}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0abce63d0b00686b76dbf44d2a622df0fe}} 
+PBIST\+\_\+\+IDDQRow\+Stripe\+\_\+\+SP&iddqwstripe algo for 1 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_IDDQRowStripe2\_DP@{PBIST\_IDDQRowStripe2\_DP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_IDDQRowStripe2\_DP@{PBIST\_IDDQRowStripe2\_DP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad5a55084ac740ad2c5e433167b4b858f}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ad5a55084ac740ad2c5e433167b4b858f}} 
+PBIST\+\_\+\+IDDQRow\+Stripe2\+\_\+\+DP&iddqwstripe2 algo for 2 port memories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_IDDQRowStripe2\_SP@{PBIST\_IDDQRowStripe2\_SP}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_IDDQRowStripe2\_SP@{PBIST\_IDDQRowStripe2\_SP}}}\mbox{\Hypertarget{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ae8b5ceba9ae5a71e3b6cf4a9b345d252}\label{sys__selftest_8h_adfcacf6330b62bf56ff01b0016dc43d0ae8b5ceba9ae5a71e3b6cf4a9b345d252}} 
+PBIST\+\_\+\+IDDQRow\+Stripe2\+\_\+\+SP&iddqwstripe2 algo for 1 port memories \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3}\label{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistPort@{pbistPort}}
+\index{pbistPort@{pbistPort}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistPort}{pbistPort}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3}{pbist\+Port}}}
+
+
+
+Alias names for pbist Port number. 
+
+This enumeration is used to provide alias names for the pbist Port number
+\begin{DoxyItemize}
+\item PBIST\+\_\+\+PORT0
+\item PBIST\+\_\+\+PORT1
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Заметки}
+Check the datasheet for the port avaiability 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_PORT0@{PBIST\_PORT0}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_PORT0@{PBIST\_PORT0}}}\mbox{\Hypertarget{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3a2f1ea5882d645e86e9a7e8f809c5f5ea}\label{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3a2f1ea5882d645e86e9a7e8f809c5f5ea}} 
+PBIST\+\_\+\+PORT0&Alias for PBIST Port 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PBIST\_PORT1@{PBIST\_PORT1}!sys\_selftest.h@{sys\_selftest.h}}\index{sys\_selftest.h@{sys\_selftest.h}!PBIST\_PORT1@{PBIST\_PORT1}}}\mbox{\Hypertarget{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3ac933996e0cb7472c44de4b2f2f18e340}\label{sys__selftest_8h_aedcde68ef8c4640e211695cebd10afa3ac933996e0cb7472c44de4b2f2f18e340}} 
+PBIST\+\_\+\+PORT1&Alias for PBIST Port 1 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{sys__selftest_8h_a0267c576250cc80c1ffafae379fcd937}\label{sys__selftest_8h_a0267c576250cc80c1ffafae379fcd937}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!adc1ParityCheck@{adc1ParityCheck}}
+\index{adc1ParityCheck@{adc1ParityCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{adc1ParityCheck()}{adc1ParityCheck()}}
+{\footnotesize\ttfamily void adc1\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Routine to check ADC1 RAM parity error detection and signaling mechanism. 
+
+Routine to check ADC1 RAM parity error detection and signaling mechanism \mbox{\Hypertarget{sys__selftest_8h_a034e78d72a2a9231d27d78256d3d194e}\label{sys__selftest_8h_a034e78d72a2a9231d27d78256d3d194e}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!can1ParityCheck@{can1ParityCheck}}
+\index{can1ParityCheck@{can1ParityCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{can1ParityCheck()}{can1ParityCheck()}}
+{\footnotesize\ttfamily void can1\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Routine to check CAN1 RAM parity error detection and signaling mechanism. 
+
+Routine to check CAN1 RAM parity error detection and signaling mechanism \mbox{\Hypertarget{sys__selftest_8h_a0b4bb222e016b734e702da6a1ec5ab8a}\label{sys__selftest_8h_a0b4bb222e016b734e702da6a1ec5ab8a}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!can2ParityCheck@{can2ParityCheck}}
+\index{can2ParityCheck@{can2ParityCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{can2ParityCheck()}{can2ParityCheck()}}
+{\footnotesize\ttfamily void can2\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Routine to check CAN2 RAM parity error detection and signaling mechanism. 
+
+Routine to check CAN2 RAM parity error detection and signaling mechanism \mbox{\Hypertarget{sys__selftest_8h_ab288da76a8169e1a92586cd06079358f}\label{sys__selftest_8h_ab288da76a8169e1a92586cd06079358f}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!ccmr4GetConfigValue@{ccmr4GetConfigValue}}
+\index{ccmr4GetConfigValue@{ccmr4GetConfigValue}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{ccmr4GetConfigValue()}{ccmr4GetConfigValue()}}
+{\footnotesize\ttfamily void ccmr4\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structccmr4__config__reg}{ccmr4\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{sys__selftest_8h_a2f7aaa1d96319ecb5d7b6cec31c56670}\label{sys__selftest_8h_a2f7aaa1d96319ecb5d7b6cec31c56670}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!ccmSelfCheck@{ccmSelfCheck}}
+\index{ccmSelfCheck@{ccmSelfCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{ccmSelfCheck()}{ccmSelfCheck()}}
+{\footnotesize\ttfamily void ccm\+Self\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+CCM module self check Driver. 
+
+This function self checks the CCM module. \mbox{\Hypertarget{sys__selftest_8h_ad4cbf907aa7750c1c3601ed191842dd9}\label{sys__selftest_8h_ad4cbf907aa7750c1c3601ed191842dd9}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkB0RAMECC@{checkB0RAMECC}}
+\index{checkB0RAMECC@{checkB0RAMECC}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkB0RAMECC()}{checkB0RAMECC()}}
+{\footnotesize\ttfamily void check\+B0\+RAMECC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check TCRAM1 ECC error detection logic. 
+
+This function checks TCRAM1 ECC error detection logic. \mbox{\Hypertarget{sys__selftest_8h_ab5e986484f3be2af5cd3a7595ba346c2}\label{sys__selftest_8h_ab5e986484f3be2af5cd3a7595ba346c2}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkB1RAMECC@{checkB1RAMECC}}
+\index{checkB1RAMECC@{checkB1RAMECC}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkB1RAMECC()}{checkB1RAMECC()}}
+{\footnotesize\ttfamily void check\+B1\+RAMECC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check TCRAM2 ECC error detection logic. 
+
+This function checks TCRAM2 ECC error detection logic. \mbox{\Hypertarget{sys__selftest_8h_a012696be6fb67f7debf6f1ff6f9e3331}\label{sys__selftest_8h_a012696be6fb67f7debf6f1ff6f9e3331}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkClockMonitor@{checkClockMonitor}}
+\index{checkClockMonitor@{checkClockMonitor}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkClockMonitor()}{checkClockMonitor()}}
+{\footnotesize\ttfamily void check\+Clock\+Monitor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check clock monitor failure detection logic. 
+
+This function checks clock monitor failure detection logic. \mbox{\Hypertarget{sys__selftest_8h_ad44409ae54516ba10303dd5c011f4fa6}\label{sys__selftest_8h_ad44409ae54516ba10303dd5c011f4fa6}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkefcSelfTest@{checkefcSelfTest}}
+\index{checkefcSelfTest@{checkefcSelfTest}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkefcSelfTest()}{checkefcSelfTest()}}
+{\footnotesize\ttfamily boolean checkefc\+Self\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+EFUSE module self check Driver. 
+
+\begin{DoxyReturn}{Возвращает}
+Returns TRUE if EFC Selftest was a PASS, else FALSE
+\end{DoxyReturn}
+This function returns the status of efc\+Self\+Test. Note\+: This function can be called only after calling efc\+Self\+Test \mbox{\Hypertarget{sys__selftest_8h_a02bb81fd1b585ba20d4c6e7ed427a4ac}\label{sys__selftest_8h_a02bb81fd1b585ba20d4c6e7ed427a4ac}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkFlashECC@{checkFlashECC}}
+\index{checkFlashECC@{checkFlashECC}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkFlashECC()}{checkFlashECC()}}
+{\footnotesize\ttfamily void check\+Flash\+ECC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check Flash ECC error detection logic. 
+
+This function checks Flash ECC error detection logic. \mbox{\Hypertarget{sys__selftest_8h_a239d7544f8bb38fc73056467dbeb9e7c}\label{sys__selftest_8h_a239d7544f8bb38fc73056467dbeb9e7c}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkFlashEEPROMECC@{checkFlashEEPROMECC}}
+\index{checkFlashEEPROMECC@{checkFlashEEPROMECC}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkFlashEEPROMECC()}{checkFlashEEPROMECC()}}
+{\footnotesize\ttfamily void check\+Flash\+EEPROMECC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check Flash EEPROM ECC error detection logic. 
+
+This function checks Flash EEPROM ECC error detection logic. \mbox{\Hypertarget{sys__selftest_8h_a08d6355b5f4052d4ef5d2d995032ba22}\label{sys__selftest_8h_a08d6355b5f4052d4ef5d2d995032ba22}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkPLL1Slip@{checkPLL1Slip}}
+\index{checkPLL1Slip@{checkPLL1Slip}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkPLL1Slip()}{checkPLL1Slip()}}
+{\footnotesize\ttfamily void check\+PLL1\+Slip (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check PLL1 Slip detection logic. 
+
+This function checks PLL1 Slip detection logic. \mbox{\Hypertarget{sys__selftest_8h_a85eb55d96d4a491e84a930dbea0e89a5}\label{sys__selftest_8h_a85eb55d96d4a491e84a930dbea0e89a5}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkRAMAddrParity@{checkRAMAddrParity}}
+\index{checkRAMAddrParity@{checkRAMAddrParity}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkRAMAddrParity()}{checkRAMAddrParity()}}
+{\footnotesize\ttfamily void check\+RAMAddr\+Parity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check TCRAM Address parity error detection and signaling mechanism. 
+
+This function TCRAM Address parity error detection and signaling mechanism. \mbox{\Hypertarget{sys__selftest_8h_a421594cf13d3b5ca42435c5a5604721c}\label{sys__selftest_8h_a421594cf13d3b5ca42435c5a5604721c}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkRAMECC@{checkRAMECC}}
+\index{checkRAMECC@{checkRAMECC}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkRAMECC()}{checkRAMECC()}}
+{\footnotesize\ttfamily void check\+RAMECC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check TCRAM ECC error detection logic. 
+
+This function checks TCRAM ECC error detection logic. \mbox{\Hypertarget{sys__selftest_8h_a7e5bbec947e5db02df2bda4ba2230677}\label{sys__selftest_8h_a7e5bbec947e5db02df2bda4ba2230677}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!checkRAMUERRTest@{checkRAMUERRTest}}
+\index{checkRAMUERRTest@{checkRAMUERRTest}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{checkRAMUERRTest()}{checkRAMUERRTest()}}
+{\footnotesize\ttfamily void check\+RAMUERRTest (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Run RAM test. 
+
+This function runs RAM test to test the redundant address decode and compare logic. \mbox{\Hypertarget{sys__selftest_8h_a27cee1191b0027e90cbb9c66983596b9}\label{sys__selftest_8h_a27cee1191b0027e90cbb9c66983596b9}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!cpuSelfTest@{cpuSelfTest}}
+\index{cpuSelfTest@{cpuSelfTest}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{cpuSelfTest()}{cpuSelfTest()}}
+{\footnotesize\ttfamily void cpu\+Self\+Test (\begin{DoxyParamCaption}\item[{uint32}]{no\+\_\+of\+\_\+intervals,  }\item[{uint32}]{max\+\_\+timeout,  }\item[{boolean}]{restart\+\_\+test }\end{DoxyParamCaption})}
+
+
+
+CPU self test Driver. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em no\+\_\+of\+\_\+intervals} & -\/ Number of Test Intervals to be \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+\_\+timeout} & -\/ Maximum Timeout to complete selected test Intervals \\
+\hline
+\mbox{\texttt{ in}}  & {\em restart\+\_\+test} & -\/ Restart the test from Interval 0 or Continue from where it stopped.\\
+\hline
+\end{DoxyParams}
+This function is called to perform CPU self test using STC module. \mbox{\Hypertarget{sys__selftest_8h_a932e8fff5749ae8038f0fbbe9029ec44}\label{sys__selftest_8h_a932e8fff5749ae8038f0fbbe9029ec44}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!cpuSelfTestFail@{cpuSelfTestFail}}
+\index{cpuSelfTestFail@{cpuSelfTestFail}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{cpuSelfTestFail()}{cpuSelfTestFail()}}
+{\footnotesize\ttfamily void cpu\+Self\+Test\+Fail (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+CPU Self test check fail service routine. 
+
+This function is called if CPU Self test check fail. \mbox{\Hypertarget{sys__selftest_8h_a58597c65615a9a0f05d48135ad48c0d6}\label{sys__selftest_8h_a58597c65615a9a0f05d48135ad48c0d6}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!custom\_dabort@{custom\_dabort}}
+\index{custom\_dabort@{custom\_dabort}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{custom\_dabort()}{custom\_dabort()}}
+{\footnotesize\ttfamily void custom\+\_\+dabort (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Custom Data abort routine for the application. 
+
+Custom Data abort routine for the application. \mbox{\Hypertarget{sys__selftest_8h_a15b66d583493adf7dc0ce8e3a89f00f5}\label{sys__selftest_8h_a15b66d583493adf7dc0ce8e3a89f00f5}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!disableParity@{disableParity}}
+\index{disableParity@{disableParity}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{disableParity()}{disableParity()}}
+{\footnotesize\ttfamily void disable\+Parity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable peripheral RAM parity. 
+
+This function disables RAM parity for all peripherals for which RAM parity check is enabled. This function is called after memory\+Init in the startup \mbox{\Hypertarget{sys__selftest_8h_a646eb27315f3ce47edde97c563389f76}\label{sys__selftest_8h_a646eb27315f3ce47edde97c563389f76}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!efcCheck@{efcCheck}}
+\index{efcCheck@{efcCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{efcCheck()}{efcCheck()}}
+{\footnotesize\ttfamily uint32 efc\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+EFUSE module self check Driver. 
+
+\begin{DoxyReturn}{Возвращает}
+Returns 0 if no error was detected during autoload and Stuck At Zero Test passed 1 if no error was detected during autoload but Stuck At Zero Test failed 2 if there was a single-\/bit error detected during autoload 3 if some other error occurred during autoload
+\end{DoxyReturn}
+This function self checks the EFUSE module. \mbox{\Hypertarget{sys__selftest_8h_ac76ed167d7b4b27eedea0eb37de6acc2}\label{sys__selftest_8h_ac76ed167d7b4b27eedea0eb37de6acc2}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!efcGetConfigValue@{efcGetConfigValue}}
+\index{efcGetConfigValue@{efcGetConfigValue}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{efcGetConfigValue()}{efcGetConfigValue()}}
+{\footnotesize\ttfamily void efc\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structefc__config__reg}{efc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{sys__selftest_8h_afd6cec31a44e7c8e325a744e9bcbf601}\label{sys__selftest_8h_afd6cec31a44e7c8e325a744e9bcbf601}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!efcSelfTest@{efcSelfTest}}
+\index{efcSelfTest@{efcSelfTest}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{efcSelfTest()}{efcSelfTest()}}
+{\footnotesize\ttfamily void efc\+Self\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+EFUSE module self check Driver. 
+
+This function self checks the EFSUE module. \mbox{\Hypertarget{sys__selftest_8h_a9973f032c29389602b684d30ea390fad}\label{sys__selftest_8h_a9973f032c29389602b684d30ea390fad}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!efcStuckZeroTest@{efcStuckZeroTest}}
+\index{efcStuckZeroTest@{efcStuckZeroTest}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{efcStuckZeroTest()}{efcStuckZeroTest()}}
+{\footnotesize\ttfamily boolean efc\+Stuck\+Zero\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks to see if the EFUSE Stuck at zero test is completed successfully. 
+
+\begin{DoxyReturn}{Возвращает}
+1 if EFUSE Stuck at zero test completed, otherwise 0.
+\end{DoxyReturn}
+Checks to see if the EFUSE Stuck at zero test is completed successfully. \mbox{\Hypertarget{sys__selftest_8h_af9ecd48548d7a3d98d5dcc44d1e7ca51}\label{sys__selftest_8h_af9ecd48548d7a3d98d5dcc44d1e7ca51}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!enableParity@{enableParity}}
+\index{enableParity@{enableParity}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{enableParity()}{enableParity()}}
+{\footnotesize\ttfamily void enable\+Parity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable peripheral RAM parity. 
+
+This function enables RAM parity for all peripherals for which RAM parity check is enabled. This function is called before memory\+Init in the startup \mbox{\Hypertarget{sys__selftest_8h_a1f3b71a00b6347cb5f7f6eb922c36c9e}\label{sys__selftest_8h_a1f3b71a00b6347cb5f7f6eb922c36c9e}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!errata\_PBIST\_4@{errata\_PBIST\_4}}
+\index{errata\_PBIST\_4@{errata\_PBIST\_4}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{errata\_PBIST\_4()}{errata\_PBIST\_4()}}
+{\footnotesize\ttfamily void errata\+\_\+\+PBIST\+\_\+4 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Workaround for the Errata PBIST\#4. 
+
+This function is workaround for Errata PBIST\#4. This function is designed to initialize the ROMs using the PBIST controller. The CPU will configure the PBIST controller to test the PBIST ROM and STC ROM. This function should be called at startup after system init before using the ROMs.
+
+\begin{DoxyNote}{Заметки}
+\+: This Function uses register\textquotesingle{}s which are not exposed to users through TRM , to run custom algorithm. User can use this function as Black box. 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__selftest_8h_a3248a50d5c0516f336b46aa0114ba9be}\label{sys__selftest_8h_a3248a50d5c0516f336b46aa0114ba9be}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!fmcBus2Check@{fmcBus2Check}}
+\index{fmcBus2Check@{fmcBus2Check}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{fmcBus2Check()}{fmcBus2Check()}}
+{\footnotesize\ttfamily void fmc\+Bus2\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Self Check Flash Bus2 Interface. 
+
+This function self checks Flash Bus2 Interface \mbox{\Hypertarget{sys__selftest_8h_a183a0d9f1300394cff2f8fe0aa034d4b}\label{sys__selftest_8h_a183a0d9f1300394cff2f8fe0aa034d4b}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!fmcECCcheck@{fmcECCcheck}}
+\index{fmcECCcheck@{fmcECCcheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{fmcECCcheck()}{fmcECCcheck()}}
+{\footnotesize\ttfamily void fmc\+ECCcheck (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check Flash ECC Single Bit and multi Bit errors detection logic. 
+
+This function Checks Flash ECC Single Bit and multi Bit errors detection logic. \mbox{\Hypertarget{sys__selftest_8h_a66f658578435dc4d3984c76a3d2ed959}\label{sys__selftest_8h_a66f658578435dc4d3984c76a3d2ed959}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!het1ParityCheck@{het1ParityCheck}}
+\index{het1ParityCheck@{het1ParityCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{het1ParityCheck()}{het1ParityCheck()}}
+{\footnotesize\ttfamily void het1\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Routine to check HET1 RAM parity error detection and signaling mechanism. 
+
+Routine to check HET1 RAM parity error detection and signaling mechanism \mbox{\Hypertarget{sys__selftest_8h_a5f69665c7b7abb003cfb4a314ce1e943}\label{sys__selftest_8h_a5f69665c7b7abb003cfb4a314ce1e943}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!htu1ParityCheck@{htu1ParityCheck}}
+\index{htu1ParityCheck@{htu1ParityCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{htu1ParityCheck()}{htu1ParityCheck()}}
+{\footnotesize\ttfamily void htu1\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Routine to check HTU1 RAM parity error detection and signaling mechanism. 
+
+Routine to check HTU1 RAM parity error detection and signaling mechanism \mbox{\Hypertarget{sys__selftest_8h_a3184dfe0846903e1111348942160dfe7}\label{sys__selftest_8h_a3184dfe0846903e1111348942160dfe7}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!memoryInit@{memoryInit}}
+\index{memoryInit@{memoryInit}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{memoryInit()}{memoryInit()}}
+{\footnotesize\ttfamily void memory\+Init (\begin{DoxyParamCaption}\item[{uint32}]{ram }\end{DoxyParamCaption})}
+
+
+
+Memory Initialization Driver. 
+
+This function is called to perform Memory initialization of selected RAM\textquotesingle{}s. \mbox{\Hypertarget{sys__selftest_8h_a01f1d76b843e64acb8bb464d79b9cd45}\label{sys__selftest_8h_a01f1d76b843e64acb8bb464d79b9cd45}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!memoryPort0TestFailNotification@{memoryPort0TestFailNotification}}
+\index{memoryPort0TestFailNotification@{memoryPort0TestFailNotification}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{memoryPort0TestFailNotification()}{memoryPort0TestFailNotification()}}
+{\footnotesize\ttfamily void memory\+Port0\+Test\+Fail\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{group\+Select,  }\item[{uint32}]{data\+Select,  }\item[{uint32}]{address,  }\item[{uint32}]{data }\end{DoxyParamCaption})}
+
+
+
+Memory Port 0 test fail notification. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em group\+Select} & Failing Ram group select\+: \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+Select} & Failing Ram data select\+: \\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & Failing Ram offset\+: \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Failing data at address\+:\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+This function has to be provide by the user. 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__selftest_8h_a27770bcd3ed64bdd085157a5c99a3502}\label{sys__selftest_8h_a27770bcd3ed64bdd085157a5c99a3502}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!memoryPort1TestFailNotification@{memoryPort1TestFailNotification}}
+\index{memoryPort1TestFailNotification@{memoryPort1TestFailNotification}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{memoryPort1TestFailNotification()}{memoryPort1TestFailNotification()}}
+{\footnotesize\ttfamily void memory\+Port1\+Test\+Fail\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{group\+Select,  }\item[{uint32}]{data\+Select,  }\item[{uint32}]{address,  }\item[{uint32}]{data }\end{DoxyParamCaption})}
+
+
+
+Memory Port 1 test fail notification. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em group\+Select} & Failing Ram group select\+: \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+Select} & Failing Ram data select\+: \\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & Failing Ram offset\+: \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Failing data at address\+:\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+This function has to be provide by the user. 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__selftest_8h_a050e0c2257b541e651eb35d32f10c98d}\label{sys__selftest_8h_a050e0c2257b541e651eb35d32f10c98d}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!mibspi1ParityCheck@{mibspi1ParityCheck}}
+\index{mibspi1ParityCheck@{mibspi1ParityCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{mibspi1ParityCheck()}{mibspi1ParityCheck()}}
+{\footnotesize\ttfamily void mibspi1\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Routine to check MIBSPI1 RAM parity error detection and signaling mechanism. 
+
+Routine to check MIBSPI1 RAM parity error detection and signaling mechanism \mbox{\Hypertarget{sys__selftest_8h_a1edb8a500b4ad0f3e87b93245856a937}\label{sys__selftest_8h_a1edb8a500b4ad0f3e87b93245856a937}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistGetConfigValue@{pbistGetConfigValue}}
+\index{pbistGetConfigValue@{pbistGetConfigValue}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistGetConfigValue()}{pbistGetConfigValue()}}
+{\footnotesize\ttfamily void pbist\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpbist__config__reg}{pbist\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{sys__selftest_8h_a2675f441b1c7bbadd9877cfd586bf959}\label{sys__selftest_8h_a2675f441b1c7bbadd9877cfd586bf959}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistIsTestCompleted@{pbistIsTestCompleted}}
+\index{pbistIsTestCompleted@{pbistIsTestCompleted}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistIsTestCompleted()}{pbistIsTestCompleted()}}
+{\footnotesize\ttfamily boolean pbist\+Is\+Test\+Completed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks to see if the PBIST test is completed. 
+
+\begin{DoxyReturn}{Возвращает}
+1 if PBIST test completed, otherwise 0.
+\end{DoxyReturn}
+Checks to see if the PBIST test is completed. \mbox{\Hypertarget{sys__selftest_8h_a975a794505ddcaf5d1c68e7a229fc8ae}\label{sys__selftest_8h_a975a794505ddcaf5d1c68e7a229fc8ae}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistIsTestPassed@{pbistIsTestPassed}}
+\index{pbistIsTestPassed@{pbistIsTestPassed}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistIsTestPassed()}{pbistIsTestPassed()}}
+{\footnotesize\ttfamily boolean pbist\+Is\+Test\+Passed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks to see if the PBIST test is completed successfully. 
+
+\begin{DoxyReturn}{Возвращает}
+1 if PBIST test passed, otherwise 0.
+\end{DoxyReturn}
+Checks to see if the PBIST test is completed successfully. \mbox{\Hypertarget{sys__selftest_8h_a3edbda42e27655bb5e9a3d067ab09caf}\label{sys__selftest_8h_a3edbda42e27655bb5e9a3d067ab09caf}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistPortTestStatus@{pbistPortTestStatus}}
+\index{pbistPortTestStatus@{pbistPortTestStatus}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistPortTestStatus()}{pbistPortTestStatus()}}
+{\footnotesize\ttfamily boolean pbist\+Port\+Test\+Status (\begin{DoxyParamCaption}\item[{uint32}]{port }\end{DoxyParamCaption})}
+
+
+
+Checks to see if the PBIST Port test is completed successfully. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em port} & -\/ Select the port to get the status. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+1 if PBIST Port test completed successfully, otherwise 0.
+\end{DoxyReturn}
+Checks to see if the selected PBIST Port test is completed successfully. \mbox{\Hypertarget{sys__selftest_8h_ad5fcc064d8d51dda635d83235cf37e3e}\label{sys__selftest_8h_ad5fcc064d8d51dda635d83235cf37e3e}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistRun@{pbistRun}}
+\index{pbistRun@{pbistRun}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistRun()}{pbistRun()}}
+{\footnotesize\ttfamily void pbist\+Run (\begin{DoxyParamCaption}\item[{uint32}]{raminfoL,  }\item[{uint32}]{algomask }\end{DoxyParamCaption})}
+
+
+
+CPU self test Driver. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em raminfoL} & -\/ Select the list of RAM to be tested. \\
+\hline
+\mbox{\texttt{ in}}  & {\em algomask} & -\/ Select the list of Algorithm to be run.\\
+\hline
+\end{DoxyParams}
+This function performs Memory Built-\/in Self test using PBIST module. \mbox{\Hypertarget{sys__selftest_8h_ac9b7e2d9da2b5166a9ea002d431e54ef}\label{sys__selftest_8h_ac9b7e2d9da2b5166a9ea002d431e54ef}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistSelfCheck@{pbistSelfCheck}}
+\index{pbistSelfCheck@{pbistSelfCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistSelfCheck()}{pbistSelfCheck()}}
+{\footnotesize\ttfamily void pbist\+Self\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+PBIST self test Driver. 
+
+This function is called to perform PBIST self test.
+
+\begin{DoxyNote}{Заметки}
+This Function uses register\textquotesingle{}s which are not exposed to users through TRM , to run custom algorithm to make PBIST Fail. Users can use this function as Black box. 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__selftest_8h_a1ea172c81d7549cd8181de098a91b752}\label{sys__selftest_8h_a1ea172c81d7549cd8181de098a91b752}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!pbistStop@{pbistStop}}
+\index{pbistStop@{pbistStop}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{pbistStop()}{pbistStop()}}
+{\footnotesize\ttfamily void pbist\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Routine to stop PBIST test enabled. 
+
+This function is called to stop PBIST after test is performed. \mbox{\Hypertarget{sys__selftest_8h_ae96e990763ae7d45bd55ea5a27299a47}\label{sys__selftest_8h_ae96e990763ae7d45bd55ea5a27299a47}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!selftestFailNotification@{selftestFailNotification}}
+\index{selftestFailNotification@{selftestFailNotification}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{selftestFailNotification()}{selftestFailNotification()}}
+{\footnotesize\ttfamily void selftest\+Fail\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{flag }\end{DoxyParamCaption})}
+
+
+
+Self test fail service routine. 
+
+This function is called if there is a self test fail with appropriate flag \mbox{\Hypertarget{sys__selftest_8h_afb360fa06ebe94d06978d25371ed2140}\label{sys__selftest_8h_afb360fa06ebe94d06978d25371ed2140}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!stcGetConfigValue@{stcGetConfigValue}}
+\index{stcGetConfigValue@{stcGetConfigValue}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{stcGetConfigValue()}{stcGetConfigValue()}}
+{\footnotesize\ttfamily void stc\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstc__config__reg}{stc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{sys__selftest_8h_a54f7309e862bab7a63c2c176c4b7cee9}\label{sys__selftest_8h_a54f7309e862bab7a63c2c176c4b7cee9}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!stcSelfCheck@{stcSelfCheck}}
+\index{stcSelfCheck@{stcSelfCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{stcSelfCheck()}{stcSelfCheck()}}
+{\footnotesize\ttfamily void stc\+Self\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+STC module self check Driver. 
+
+This function is called to perform STC module self check. \mbox{\Hypertarget{sys__selftest_8h_a2c1518db428c8ab63a56048cadfb4e6e}\label{sys__selftest_8h_a2c1518db428c8ab63a56048cadfb4e6e}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!stcSelfCheckFail@{stcSelfCheckFail}}
+\index{stcSelfCheckFail@{stcSelfCheckFail}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{stcSelfCheckFail()}{stcSelfCheckFail()}}
+{\footnotesize\ttfamily void stc\+Self\+Check\+Fail (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+STC Self test check fail service routine. 
+
+This function is called if STC Self test check fail. \mbox{\Hypertarget{sys__selftest_8h_af7297818ebd5ffd62488091aa9633bf9}\label{sys__selftest_8h_af7297818ebd5ffd62488091aa9633bf9}} 
+\index{sys\_selftest.h@{sys\_selftest.h}!vimParityCheck@{vimParityCheck}}
+\index{vimParityCheck@{vimParityCheck}!sys\_selftest.h@{sys\_selftest.h}}
+\doxysubsubsection{\texorpdfstring{vimParityCheck()}{vimParityCheck()}}
+{\footnotesize\ttfamily void vim\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Routine to check VIM RAM parity error detection and signaling mechanism. 
+
+Routine to check VIM RAM parity error detection and signaling mechanism 

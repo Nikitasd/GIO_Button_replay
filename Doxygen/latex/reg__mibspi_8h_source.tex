@@ -1,0 +1,151 @@
+\hypertarget{reg__mibspi_8h_source}{}\doxysection{reg\+\_\+mibspi.\+h}
+\label{reg__mibspi_8h_source}\index{include/reg\_mibspi.h@{include/reg\_mibspi.h}}
+\mbox{\hyperlink{reg__mibspi_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*}}
+\DoxyCodeLine{00046\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifndef\ \_\_REG\_MIBSPI\_H\_\_}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ \_\_REG\_MIBSPI\_H\_\_}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sys__common_8h}{sys\_common.h}}"{}}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__gio_8h}{reg\_gio.h}}"{}}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{/*\ Mibspi\ Register\ Frame\ Definition\ */}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmibspi_base}{mibspiBase}}}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_acbc9fe1acf08000ba68ea5e70b6b14fa}{GCR0}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a0be2903733c4e4bb87d6e5c19508a94a}{GCR1}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_ab35e134c1ec20005b074d8c2240d4dd0}{INT0}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a366cd98e9c14d4333c9a92a25b531232}{LVL}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_ae5fc990881754e81bfe12fb2694f1de3}{FLG}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_aef60d1b8ce6bdbd0a93e7f9c4e00a65e}{PC0}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a5fc27af839084e4863695a12a57062fb}{PC1}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a90afd8e041f9a59841bc646b80595d8f}{PC2}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a7c1bfd6d5cd8e0a8c2ea9c371bdbb53f}{PC3}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a5a35d298004fc8c040ca2b87e6393c4a}{PC4}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a05b2865692994864c3e890683f09bf9f}{PC5}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_abd391e35a3bac06b22678c75abc354bb}{PC6}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_adb086e87b2a1a5f66c465c9ab38c7f32}{PC7}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_ac9279e2dc82e473c11905a372c3813f0}{PC8}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a595558e4f7971966b1813002360c3e69}{DAT0}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a65c1e61796ae6b97657b55052b61f974}{DAT1}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a142688d33f66d99f3c05fcbbb8cc0053}{BUF}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a225154b8660a1a3f90be6d9eb973a78e}{EMU}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a898114f1d9164a542e0eee45ac32b65e}{DELAY}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a79310c1ce638cabc2a50cd0b8d878963}{DEF}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a53e4ef840458f4c175c46974e46303f0}{FMT0}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a41a7527e35b73ffe376cf8ea84cd4463}{FMT1}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a93bbf1d8e244505c705352d84dcf46dd}{FMT2}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a2b45e26a1596e8618a1fb5ee50e1eb36}{FMT3}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_afe728bec13c8b28a0090a414741a17e9}{INTVECT0}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_ac89399dc4b18e0f20ae8083ca06efb5f}{INTVECT1}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a5536c2df245940d01cf75ff4e5e0c29b}{SRSEL}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a711d67ee8ba48be2f8ce9a6d35ef1c9d}{PMCTRL}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a43e2d1183d1e60b3260459a14558e076}{MIBSPIE}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a332b4fe3d0fbe1b649878676b5343113}{TGITENST}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a87e250dd9336fcb1048ed5e9b9bcb9cc}{TGITENCR}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a7bbe3fcece388ff9b7eb953f46720783}{TGITLVST}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_acca4540b52cda754a4243610996040ff}{TGITLVCR}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a7a79d029fabf4f3440fc648c09068867}{TGINTFLG}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ uint32\ \ \ \ \mbox{\hyperlink{structmibspi_base_a0c8e85ffda7ebee2c0eecd3f70e163e0}{rsvd1}}[2U];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a8d938e446cea8ccadf042cb37df8bb4f}{TICKCNT}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a42595464d3e9ef9de9f0d94509b9312a}{LTGPEND}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a6045889a1c00d946fcbaaed44d654846}{TGCTRL}}[16U];\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a9c951b19f480260d75f95673b1c67a02}{DMACTRL}}[8U];\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_aa0ecc51a1a8c95d9936d3b497cd3b5a4}{DMACOUNT}}[8U];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a60d2fd35c18178aeaf931f528efd2655}{DMACNTLEN}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ uint32\ \ \ \ \mbox{\hyperlink{structmibspi_base_af7e9341fe6900c82e1dc8f9d31036cfc}{rsvd2}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a2165dcea4fa7f1ce04c65e77d7816fa1}{UERRCTRL}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_aa495ee9052d2595fc6d55aee1a152c04}{UERRSTAT}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_aefd605123d872e8600d51a773775336a}{UERRADDRRX}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_ad955d9d4895c7e298514e740914a2413}{UERRADDRTX}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a6811e3dcb64be197448efbdecce9627a}{RXOVRN\_BUF\_ADDR}};\ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a718cc66e0b1d80c50e38a08f4b98e682}{IOLPKTSTCR}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_a489fd5597dfa83ec53dc837b8095d011}{EXT\_PRESCALE1}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ uint32\ \ \mbox{\hyperlink{structmibspi_base_ae207e43f3ff254076b0b2b4223e8c568}{EXT\_PRESCALE2}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \}\ \mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspiBASE\_t}};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ mibspiREG1\ ((mibspiBASE\_t\ *)0xFFF7F400U)}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ mibspiPORT1\ ((gioPORT\_t\ *)0xFFF7F418U)}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00155\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmibspi_ram_base}{mibspiRamBase}}}
+\DoxyCodeLine{00156\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{struct\ }}
+\DoxyCodeLine{00158\ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#if\ ((\_\_little\_endian\_\_\ ==\ 1)\ ||\ (\_\_LITTLE\_ENDIAN\_\_\ ==\ 1))}}
+\DoxyCodeLine{00160\ \ \ \ \ \ uint16\ \ \mbox{\hyperlink{structmibspi_ram_base_ad18956a92906074e25050233dd00e99b}{data}};\ \ \ \ \ }
+\DoxyCodeLine{00161\ \ \ \ \ \ uint16\ \ \mbox{\hyperlink{structmibspi_ram_base_a128392954318ec66b78f62b81b4473eb}{control}};\ \ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00163\ \ \ \ \ \ uint16\ \ \mbox{\hyperlink{structmibspi_ram_base_a128392954318ec66b78f62b81b4473eb}{control}};\ \ }
+\DoxyCodeLine{00164\ \ \ \ \ \ uint16\ \ \mbox{\hyperlink{structmibspi_ram_base_ad18956a92906074e25050233dd00e99b}{data}};\ \ \ \ \ }
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00166\ \ \ \ \ \}\ tx[128];}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00168\ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#if\ ((\_\_little\_endian\_\_\ ==\ 1)\ ||\ (\_\_LITTLE\_ENDIAN\_\_\ ==\ 1))}}
+\DoxyCodeLine{00170\ \ \ \ \ \ uint16\ \mbox{\hyperlink{structmibspi_ram_base_ad18956a92906074e25050233dd00e99b}{data}};\ \ \ \ \ }
+\DoxyCodeLine{00171\ \ \ \ \ \ uint16\ \mbox{\hyperlink{structmibspi_ram_base_ae15f0808741c35cb9a8d231105d8beea}{flags}};\ \ \ \ }
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00173\ \ \ \ \ \ uint16\ \mbox{\hyperlink{structmibspi_ram_base_ae15f0808741c35cb9a8d231105d8beea}{flags}};\ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \ uint16\ \mbox{\hyperlink{structmibspi_ram_base_ad18956a92906074e25050233dd00e99b}{data}};\ \ \ \ \ }
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00176\ \ \ \ \ \}\ rx[128];}
+\DoxyCodeLine{00177\ \}\ \mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspiRAM\_t}};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ mibspiRAM1\ ((mibspiRAM\_t\ *)0xFF0E0000U)}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ mibspiPARRAM1\ (*(volatile\ uint32\ *)(0xFF0E0000U\ +\ 0x00000400U))}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00195\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

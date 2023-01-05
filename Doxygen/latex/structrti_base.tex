@@ -1,0 +1,336 @@
+\hypertarget{structrti_base}{}\doxysection{Структура rti\+Base}
+\label{structrti_base}\index{rtiBase@{rtiBase}}
+
+
+RTI Register Frame Definition.  
+
+
+
+
+{\ttfamily \#include $<$reg\+\_\+rti.\+h$>$}
+
+\doxysubsection*{Поля данных}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_ab893b766406eb65ef57d804f2c956c7e}{GCTRL}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a6cac17d47ad920d2d3bc924f52001331}{TBCTRL}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a684a35ed853bc2c8eeb46370f0be2474}{CAPCTRL}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_ac517537180cd099898debd4d841222f8}{COMPCTRL}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32 \mbox{\hyperlink{structrti_base_a0e63fde474601b67ec2b6848658b02b6}{FRCx}}\\
+\>uint32 \mbox{\hyperlink{structrti_base_a15e54c65130367209e65dd992996eacd}{UCx}}\\
+\>uint32 \mbox{\hyperlink{structrti_base_a44e01074017e8036ae193671137cdd41}{CPUCx}}\\
+\>uint32 \mbox{\hyperlink{structrti_base_a157d52061ee945a71c2c46674a89cf40}{rsvd1}}\\
+\>uint32 \mbox{\hyperlink{structrti_base_a4d1a94d2d6dba63200a5be961850587a}{CAFRCx}}\\
+\>uint32 \mbox{\hyperlink{structrti_base_abcb1a3131d72bc7bfc6cdf905a5d27f3}{CAUCx}}\\
+\>uint32 \mbox{\hyperlink{structrti_base_a6ea289e88daafd93ffdaad9df5ee2a01}{rsvd2}} \mbox{[}2U\mbox{]}\\
+\} \mbox{\hyperlink{structrti_base_abf7bc96b88719be936533d818a4936a9}{CNT}} \mbox{[}2U\mbox{]}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32 \mbox{\hyperlink{structrti_base_af95a403a102bd3009dcc4d7a24b9fe06}{COMPx}}\\
+\>uint32 \mbox{\hyperlink{structrti_base_a7fc40440adb17f674c91ccdaf88ccd59}{UDCPx}}\\
+\} \mbox{\hyperlink{structrti_base_a8372780060c433c1e47c234714ce3726}{CMP}} \mbox{[}4U\mbox{]}\\
+
+\end{tabbing}\item 
+uint32 \mbox{\hyperlink{structrti_base_a01d7bc92c1dc53313fe82dd96437c093}{TBLCOMP}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_ad8cc64699c89e3fb52436c4af8c88b3b}{TBHCOMP}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a2a165b52a98dfc834a37ce050477cf09}{rsvd3}} \mbox{[}2U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a009d9cd36ec3c4b8e50695e7cf731d76}{SETINTENA}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a38883a8e3150e8bd82feac9295758713}{CLEARINTENA}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a10130e4049dc57f52ca5249ba0acbb1a}{INTFLAG}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a7cdaa346531096f97ff5a92cee5d88f4}{rsvd4}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a4495cbc382e005f0e4644cf4884a2982}{DWDCTRL}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a6df6b5ecf592fb9d8d0d7825bf684b22}{DWDPRLD}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a6f8589aee36cd9124f742e2fb1ca6e2b}{WDSTATUS}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_ae57a82e26a83e7936741a1248937fed8}{WDKEY}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_ab5eff1c6777fbf69c36041cac7bb956f}{DWDCNTR}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_af3b1f8c5ee71106676d277d7fd051660}{WWDRXNCTRL}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a51806172499acb281a5c55fb8925693e}{WWDSIZECTRL}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a136cae5c1526703d98c78f07c40aed73}{INTCLRENABLE}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a537bbb7c58adb055b1a842c74da47b47}{COMP0\+CLR}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a17a78a0195059243af63e5ea21b4f137}{COMP1\+CLR}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a178886783a635f38eeceee0cb52712d4}{COMP2\+CLR}}
+\item 
+uint32 \mbox{\hyperlink{structrti_base_a897b1c1b9ccbeb5203c32a9046288735}{COMP3\+CLR}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+RTI Register Frame Definition. 
+
+This type is used to access the RTI Registers. 
+
+\doxysubsection{Поля}
+\mbox{\Hypertarget{structrti_base_a4d1a94d2d6dba63200a5be961850587a}\label{structrti_base_a4d1a94d2d6dba63200a5be961850587a}} 
+\index{rtiBase@{rtiBase}!CAFRCx@{CAFRCx}}
+\index{CAFRCx@{CAFRCx}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{CAFRCx}{CAFRCx}}
+{\footnotesize\ttfamily uint32 CAFRCx}
+
+0x0020,0x0040\+: Capture Free Running Counter x Register \mbox{\Hypertarget{structrti_base_a684a35ed853bc2c8eeb46370f0be2474}\label{structrti_base_a684a35ed853bc2c8eeb46370f0be2474}} 
+\index{rtiBase@{rtiBase}!CAPCTRL@{CAPCTRL}}
+\index{CAPCTRL@{CAPCTRL}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{CAPCTRL}{CAPCTRL}}
+{\footnotesize\ttfamily uint32 CAPCTRL}
+
+0x0008\+: Capture Control Register ~\newline
+ \mbox{\Hypertarget{structrti_base_abcb1a3131d72bc7bfc6cdf905a5d27f3}\label{structrti_base_abcb1a3131d72bc7bfc6cdf905a5d27f3}} 
+\index{rtiBase@{rtiBase}!CAUCx@{CAUCx}}
+\index{CAUCx@{CAUCx}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{CAUCx}{CAUCx}}
+{\footnotesize\ttfamily uint32 CAUCx}
+
+0x0024,0x0044\+: Capture Up Counter x Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a38883a8e3150e8bd82feac9295758713}\label{structrti_base_a38883a8e3150e8bd82feac9295758713}} 
+\index{rtiBase@{rtiBase}!CLEARINTENA@{CLEARINTENA}}
+\index{CLEARINTENA@{CLEARINTENA}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{CLEARINTENA}{CLEARINTENA}}
+{\footnotesize\ttfamily uint32 CLEARINTENA}
+
+0x0084\+: Clear/\+Status Interrupt Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a8372780060c433c1e47c234714ce3726}\label{structrti_base_a8372780060c433c1e47c234714ce3726}} 
+\index{rtiBase@{rtiBase}!CMP@{CMP}}
+\index{CMP@{CMP}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct  \{ ... \}  CMP\mbox{[}4U\mbox{]}}
+
+Compare x selection\+:
+\begin{DoxyItemize}
+\item 0\+: Compare 0
+\item 1\+: Compare 1
+\item 2\+: Compare 2
+\item 3\+: Compare 3 ~\newline
+ 
+\end{DoxyItemize}\mbox{\Hypertarget{structrti_base_abf7bc96b88719be936533d818a4936a9}\label{structrti_base_abf7bc96b88719be936533d818a4936a9}} 
+\index{rtiBase@{rtiBase}!CNT@{CNT}}
+\index{CNT@{CNT}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct  \{ ... \}  CNT\mbox{[}2U\mbox{]}}
+
+Counter x selection\+:
+\begin{DoxyItemize}
+\item 0\+: Counter 0
+\item 1\+: Counter 1 ~\newline
+ 
+\end{DoxyItemize}\mbox{\Hypertarget{structrti_base_a537bbb7c58adb055b1a842c74da47b47}\label{structrti_base_a537bbb7c58adb055b1a842c74da47b47}} 
+\index{rtiBase@{rtiBase}!COMP0CLR@{COMP0CLR}}
+\index{COMP0CLR@{COMP0CLR}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{COMP0CLR}{COMP0CLR}}
+{\footnotesize\ttfamily uint32 COMP0\+CLR}
+
+0x00\+B0\+: RTI Compare 0 Clear Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a17a78a0195059243af63e5ea21b4f137}\label{structrti_base_a17a78a0195059243af63e5ea21b4f137}} 
+\index{rtiBase@{rtiBase}!COMP1CLR@{COMP1CLR}}
+\index{COMP1CLR@{COMP1CLR}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{COMP1CLR}{COMP1CLR}}
+{\footnotesize\ttfamily uint32 COMP1\+CLR}
+
+0x00\+B4\+: RTI Compare 1 Clear Register \mbox{\Hypertarget{structrti_base_a178886783a635f38eeceee0cb52712d4}\label{structrti_base_a178886783a635f38eeceee0cb52712d4}} 
+\index{rtiBase@{rtiBase}!COMP2CLR@{COMP2CLR}}
+\index{COMP2CLR@{COMP2CLR}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{COMP2CLR}{COMP2CLR}}
+{\footnotesize\ttfamily uint32 COMP2\+CLR}
+
+0x00\+B8\+: RTI Compare 2 Clear Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a897b1c1b9ccbeb5203c32a9046288735}\label{structrti_base_a897b1c1b9ccbeb5203c32a9046288735}} 
+\index{rtiBase@{rtiBase}!COMP3CLR@{COMP3CLR}}
+\index{COMP3CLR@{COMP3CLR}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{COMP3CLR}{COMP3CLR}}
+{\footnotesize\ttfamily uint32 COMP3\+CLR}
+
+0x00\+BC\+: RTI Compare 3 Clear Register ~\newline
+ \mbox{\Hypertarget{structrti_base_ac517537180cd099898debd4d841222f8}\label{structrti_base_ac517537180cd099898debd4d841222f8}} 
+\index{rtiBase@{rtiBase}!COMPCTRL@{COMPCTRL}}
+\index{COMPCTRL@{COMPCTRL}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{COMPCTRL}{COMPCTRL}}
+{\footnotesize\ttfamily uint32 COMPCTRL}
+
+0x000C\+: Compare Control Register ~\newline
+ \mbox{\Hypertarget{structrti_base_af95a403a102bd3009dcc4d7a24b9fe06}\label{structrti_base_af95a403a102bd3009dcc4d7a24b9fe06}} 
+\index{rtiBase@{rtiBase}!COMPx@{COMPx}}
+\index{COMPx@{COMPx}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{COMPx}{COMPx}}
+{\footnotesize\ttfamily uint32 COMPx}
+
+0x0050,0x0058,0x0060,0x0068\+: Compare x Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a44e01074017e8036ae193671137cdd41}\label{structrti_base_a44e01074017e8036ae193671137cdd41}} 
+\index{rtiBase@{rtiBase}!CPUCx@{CPUCx}}
+\index{CPUCx@{CPUCx}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{CPUCx}{CPUCx}}
+{\footnotesize\ttfamily uint32 CPUCx}
+
+0x0018,0x0038\+: Compare Up Counter x Register ~\newline
+ \mbox{\Hypertarget{structrti_base_ab5eff1c6777fbf69c36041cac7bb956f}\label{structrti_base_ab5eff1c6777fbf69c36041cac7bb956f}} 
+\index{rtiBase@{rtiBase}!DWDCNTR@{DWDCNTR}}
+\index{DWDCNTR@{DWDCNTR}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{DWDCNTR}{DWDCNTR}}
+{\footnotesize\ttfamily uint32 DWDCNTR}
+
+0x00\+A0\+: Digital Watchdog Down Counter ~\newline
+ \mbox{\Hypertarget{structrti_base_a4495cbc382e005f0e4644cf4884a2982}\label{structrti_base_a4495cbc382e005f0e4644cf4884a2982}} 
+\index{rtiBase@{rtiBase}!DWDCTRL@{DWDCTRL}}
+\index{DWDCTRL@{DWDCTRL}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{DWDCTRL}{DWDCTRL}}
+{\footnotesize\ttfamily uint32 DWDCTRL}
+
+0x0090\+: Digital Watchdog Control Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a6df6b5ecf592fb9d8d0d7825bf684b22}\label{structrti_base_a6df6b5ecf592fb9d8d0d7825bf684b22}} 
+\index{rtiBase@{rtiBase}!DWDPRLD@{DWDPRLD}}
+\index{DWDPRLD@{DWDPRLD}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{DWDPRLD}{DWDPRLD}}
+{\footnotesize\ttfamily uint32 DWDPRLD}
+
+0x0094\+: Digital Watchdog Preload Register \mbox{\Hypertarget{structrti_base_a0e63fde474601b67ec2b6848658b02b6}\label{structrti_base_a0e63fde474601b67ec2b6848658b02b6}} 
+\index{rtiBase@{rtiBase}!FRCx@{FRCx}}
+\index{FRCx@{FRCx}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{FRCx}{FRCx}}
+{\footnotesize\ttfamily uint32 FRCx}
+
+0x0010,0x0030\+: Free Running Counter x Register ~\newline
+ \mbox{\Hypertarget{structrti_base_ab893b766406eb65ef57d804f2c956c7e}\label{structrti_base_ab893b766406eb65ef57d804f2c956c7e}} 
+\index{rtiBase@{rtiBase}!GCTRL@{GCTRL}}
+\index{GCTRL@{GCTRL}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{GCTRL}{GCTRL}}
+{\footnotesize\ttfamily uint32 GCTRL}
+
+0x0000\+: Global Control Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a136cae5c1526703d98c78f07c40aed73}\label{structrti_base_a136cae5c1526703d98c78f07c40aed73}} 
+\index{rtiBase@{rtiBase}!INTCLRENABLE@{INTCLRENABLE}}
+\index{INTCLRENABLE@{INTCLRENABLE}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{INTCLRENABLE}{INTCLRENABLE}}
+{\footnotesize\ttfamily uint32 INTCLRENABLE}
+
+0x00\+AC\+: RTI Compare Interrupt Clear Enable Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a10130e4049dc57f52ca5249ba0acbb1a}\label{structrti_base_a10130e4049dc57f52ca5249ba0acbb1a}} 
+\index{rtiBase@{rtiBase}!INTFLAG@{INTFLAG}}
+\index{INTFLAG@{INTFLAG}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{INTFLAG}{INTFLAG}}
+{\footnotesize\ttfamily uint32 INTFLAG}
+
+0x0088\+: Interrupt Flag Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a157d52061ee945a71c2c46674a89cf40}\label{structrti_base_a157d52061ee945a71c2c46674a89cf40}} 
+\index{rtiBase@{rtiBase}!rsvd1@{rsvd1}}
+\index{rsvd1@{rsvd1}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{rsvd1}{rsvd1}}
+{\footnotesize\ttfamily uint32 rsvd1}
+
+0x001C,0x003C\+: Reserved ~\newline
+ \mbox{\Hypertarget{structrti_base_a6ea289e88daafd93ffdaad9df5ee2a01}\label{structrti_base_a6ea289e88daafd93ffdaad9df5ee2a01}} 
+\index{rtiBase@{rtiBase}!rsvd2@{rsvd2}}
+\index{rsvd2@{rsvd2}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{rsvd2}{rsvd2}}
+{\footnotesize\ttfamily uint32 rsvd2\mbox{[}2U\mbox{]}}
+
+0x0028,0x0048\+: Reserved ~\newline
+ \mbox{\Hypertarget{structrti_base_a2a165b52a98dfc834a37ce050477cf09}\label{structrti_base_a2a165b52a98dfc834a37ce050477cf09}} 
+\index{rtiBase@{rtiBase}!rsvd3@{rsvd3}}
+\index{rsvd3@{rsvd3}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{rsvd3}{rsvd3}}
+{\footnotesize\ttfamily uint32 rsvd3\mbox{[}2U\mbox{]}}
+
+0x0078\+: Reserved ~\newline
+ \mbox{\Hypertarget{structrti_base_a7cdaa346531096f97ff5a92cee5d88f4}\label{structrti_base_a7cdaa346531096f97ff5a92cee5d88f4}} 
+\index{rtiBase@{rtiBase}!rsvd4@{rsvd4}}
+\index{rsvd4@{rsvd4}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{rsvd4}{rsvd4}}
+{\footnotesize\ttfamily uint32 rsvd4}
+
+0x008C\+: Reserved ~\newline
+ \mbox{\Hypertarget{structrti_base_a009d9cd36ec3c4b8e50695e7cf731d76}\label{structrti_base_a009d9cd36ec3c4b8e50695e7cf731d76}} 
+\index{rtiBase@{rtiBase}!SETINTENA@{SETINTENA}}
+\index{SETINTENA@{SETINTENA}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{SETINTENA}{SETINTENA}}
+{\footnotesize\ttfamily uint32 SETINTENA}
+
+0x0080\+: Set/\+Status Interrupt Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a6cac17d47ad920d2d3bc924f52001331}\label{structrti_base_a6cac17d47ad920d2d3bc924f52001331}} 
+\index{rtiBase@{rtiBase}!TBCTRL@{TBCTRL}}
+\index{TBCTRL@{TBCTRL}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{TBCTRL}{TBCTRL}}
+{\footnotesize\ttfamily uint32 TBCTRL}
+
+0x0004\+: Timebase Control Register \mbox{\Hypertarget{structrti_base_ad8cc64699c89e3fb52436c4af8c88b3b}\label{structrti_base_ad8cc64699c89e3fb52436c4af8c88b3b}} 
+\index{rtiBase@{rtiBase}!TBHCOMP@{TBHCOMP}}
+\index{TBHCOMP@{TBHCOMP}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{TBHCOMP}{TBHCOMP}}
+{\footnotesize\ttfamily uint32 TBHCOMP}
+
+0x0074\+: External Clock Timebase High Compare Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a01d7bc92c1dc53313fe82dd96437c093}\label{structrti_base_a01d7bc92c1dc53313fe82dd96437c093}} 
+\index{rtiBase@{rtiBase}!TBLCOMP@{TBLCOMP}}
+\index{TBLCOMP@{TBLCOMP}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{TBLCOMP}{TBLCOMP}}
+{\footnotesize\ttfamily uint32 TBLCOMP}
+
+0x0070\+: External Clock Timebase Low Compare Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a15e54c65130367209e65dd992996eacd}\label{structrti_base_a15e54c65130367209e65dd992996eacd}} 
+\index{rtiBase@{rtiBase}!UCx@{UCx}}
+\index{UCx@{UCx}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{UCx}{UCx}}
+{\footnotesize\ttfamily uint32 UCx}
+
+0x0014,0x0034\+: Up Counter x Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a7fc40440adb17f674c91ccdaf88ccd59}\label{structrti_base_a7fc40440adb17f674c91ccdaf88ccd59}} 
+\index{rtiBase@{rtiBase}!UDCPx@{UDCPx}}
+\index{UDCPx@{UDCPx}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{UDCPx}{UDCPx}}
+{\footnotesize\ttfamily uint32 UDCPx}
+
+0x0054,0x005C,0x0064,0x006C\+: Update Compare x Register \mbox{\Hypertarget{structrti_base_ae57a82e26a83e7936741a1248937fed8}\label{structrti_base_ae57a82e26a83e7936741a1248937fed8}} 
+\index{rtiBase@{rtiBase}!WDKEY@{WDKEY}}
+\index{WDKEY@{WDKEY}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{WDKEY}{WDKEY}}
+{\footnotesize\ttfamily uint32 WDKEY}
+
+0x009C\+: Watchdog Key Register ~\newline
+ \mbox{\Hypertarget{structrti_base_a6f8589aee36cd9124f742e2fb1ca6e2b}\label{structrti_base_a6f8589aee36cd9124f742e2fb1ca6e2b}} 
+\index{rtiBase@{rtiBase}!WDSTATUS@{WDSTATUS}}
+\index{WDSTATUS@{WDSTATUS}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{WDSTATUS}{WDSTATUS}}
+{\footnotesize\ttfamily uint32 WDSTATUS}
+
+0x0098\+: Watchdog Status Register ~\newline
+ \mbox{\Hypertarget{structrti_base_af3b1f8c5ee71106676d277d7fd051660}\label{structrti_base_af3b1f8c5ee71106676d277d7fd051660}} 
+\index{rtiBase@{rtiBase}!WWDRXNCTRL@{WWDRXNCTRL}}
+\index{WWDRXNCTRL@{WWDRXNCTRL}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{WWDRXNCTRL}{WWDRXNCTRL}}
+{\footnotesize\ttfamily uint32 WWDRXNCTRL}
+
+0x00\+A4\+: Digital Windowed Watchdog Reaction Control \mbox{\Hypertarget{structrti_base_a51806172499acb281a5c55fb8925693e}\label{structrti_base_a51806172499acb281a5c55fb8925693e}} 
+\index{rtiBase@{rtiBase}!WWDSIZECTRL@{WWDSIZECTRL}}
+\index{WWDSIZECTRL@{WWDSIZECTRL}!rtiBase@{rtiBase}}
+\doxysubsubsection{\texorpdfstring{WWDSIZECTRL}{WWDSIZECTRL}}
+{\footnotesize\ttfamily uint32 WWDSIZECTRL}
+
+0x00\+A8\+: Digital Windowed Watchdog Window Size Control ~\newline
+ 
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{reg__rti_8h}{reg\+\_\+rti.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+\hypertarget{reg__pinmux_8h}{}\doxysection{Файл include/reg\+\_\+pinmux.h}
+\label{reg__pinmux_8h}\index{include/reg\_pinmux.h@{include/reg\_pinmux.h}}
+
+
+PINMUX Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structiomm_err_fault}{iomm\+Err\+Fault}}
+\begin{DoxyCompactList}\small\item\em IOMM Error and Fault Register Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpin_mux_kicker}{pin\+Mux\+Kicker}}
+\begin{DoxyCompactList}\small\item\em Pin Muxing Kicker Register Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpin_mux_base}{pin\+Mux\+Base}}
+\begin{DoxyCompactList}\small\item\em PINMUX Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reg__pinmux_8h_ae338162fd39e7cf3b839025fbaeb75e8}\label{reg__pinmux_8h_ae338162fd39e7cf3b839025fbaeb75e8}} 
+\#define {\bfseries REVISION\+\_\+\+REG}~($\ast$(volatile uint32 $\ast$)0x\+FFFFEA00U)
+\item 
+\mbox{\Hypertarget{reg__pinmux_8h_a7038a92621ad2962530a04b574533265}\label{reg__pinmux_8h_a7038a92621ad2962530a04b574533265}} 
+\#define {\bfseries ENDIAN\+\_\+\+REG}~($\ast$(volatile uint32 $\ast$)0x\+FFFFEA20U)
+\item 
+\#define \mbox{\hyperlink{reg__pinmux_8h_a97bc1b11f0e7c915f7d5e472a6fbb815}{iomm\+Err\+Fault\+Reg}}~((\mbox{\hyperlink{structiomm_err_fault}{iomm\+Err\+Fault\+\_\+t}} $\ast$) 0x\+FFFFEAE0U)
+\begin{DoxyCompactList}\small\item\em IOMM Error Fault Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}{kicker\+Reg}}~((\mbox{\hyperlink{structpin_mux_kicker}{pin\+Mux\+KICKER\+\_\+t}} $\ast$) 0x\+FFFFEA38U)
+\begin{DoxyCompactList}\small\item\em Pin Muxing Kicker Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}~((\mbox{\hyperlink{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}{pin\+Mux\+BASE\+\_\+t}} $\ast$) 0x\+FFFFEB10U)
+\begin{DoxyCompactList}\small\item\em Pin Muxing Control Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reg__pinmux_8h_a120cfa4cb2345b6985f882c3cdff85bb}\label{reg__pinmux_8h_a120cfa4cb2345b6985f882c3cdff85bb}} 
+typedef volatile struct \mbox{\hyperlink{structiomm_err_fault}{iomm\+Err\+Fault}} {\bfseries iomm\+Err\+Fault\+\_\+t}
+\item 
+\mbox{\Hypertarget{reg__pinmux_8h_aa4b12c772fea6006b81d233a399360e8}\label{reg__pinmux_8h_aa4b12c772fea6006b81d233a399360e8}} 
+typedef volatile struct \mbox{\hyperlink{structpin_mux_kicker}{pin\+Mux\+Kicker}} {\bfseries pin\+Mux\+KICKER\+\_\+t}
+\item 
+typedef volatile struct \mbox{\hyperlink{structpin_mux_base}{pin\+Mux\+Base}} \mbox{\hyperlink{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}{pin\+Mux\+BASE\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em PINMUX Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+PINMUX Register Layer Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the PINMUX driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{reg__pinmux_8h_a97bc1b11f0e7c915f7d5e472a6fbb815}\label{reg__pinmux_8h_a97bc1b11f0e7c915f7d5e472a6fbb815}} 
+\index{reg\_pinmux.h@{reg\_pinmux.h}!iommErrFaultReg@{iommErrFaultReg}}
+\index{iommErrFaultReg@{iommErrFaultReg}!reg\_pinmux.h@{reg\_pinmux.h}}
+\doxysubsubsection{\texorpdfstring{iommErrFaultReg}{iommErrFaultReg}}
+{\footnotesize\ttfamily \#define iomm\+Err\+Fault\+Reg~((\mbox{\hyperlink{structiomm_err_fault}{iomm\+Err\+Fault\+\_\+t}} $\ast$) 0x\+FFFFEAE0U)}
+
+
+
+IOMM Error Fault Register Frame Pointer. 
+
+\begin{DoxyVerb}    This pointer is used to control IOMM Error and Fault across the device.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}\label{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}} 
+\index{reg\_pinmux.h@{reg\_pinmux.h}!kickerReg@{kickerReg}}
+\index{kickerReg@{kickerReg}!reg\_pinmux.h@{reg\_pinmux.h}}
+\doxysubsubsection{\texorpdfstring{kickerReg}{kickerReg}}
+{\footnotesize\ttfamily \#define kicker\+Reg~((\mbox{\hyperlink{structpin_mux_kicker}{pin\+Mux\+KICKER\+\_\+t}} $\ast$) 0x\+FFFFEA38U)}
+
+
+
+Pin Muxing Kicker Register Frame Pointer. 
+
+\begin{DoxyVerb}This pointer is used to enable and disable muxing across the device.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}\label{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}} 
+\index{reg\_pinmux.h@{reg\_pinmux.h}!pinMuxReg@{pinMuxReg}}
+\index{pinMuxReg@{pinMuxReg}!reg\_pinmux.h@{reg\_pinmux.h}}
+\doxysubsubsection{\texorpdfstring{pinMuxReg}{pinMuxReg}}
+{\footnotesize\ttfamily \#define pin\+Mux\+Reg~((\mbox{\hyperlink{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}{pin\+Mux\+BASE\+\_\+t}} $\ast$) 0x\+FFFFEB10U)}
+
+
+
+Pin Muxing Control Register Frame Pointer. 
+
+\begin{DoxyVerb}This pointer is used to set the muxing registers across the device.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}\label{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}} 
+\index{reg\_pinmux.h@{reg\_pinmux.h}!pinMuxBASE\_t@{pinMuxBASE\_t}}
+\index{pinMuxBASE\_t@{pinMuxBASE\_t}!reg\_pinmux.h@{reg\_pinmux.h}}
+\doxysubsubsection{\texorpdfstring{pinMuxBASE\_t}{pinMuxBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}{pin\+Mux\+BASE\+\_\+t}}}
+
+
+
+PINMUX Register Frame Type Definition. 
+
+This type is used to access the PINMUX Registers. 

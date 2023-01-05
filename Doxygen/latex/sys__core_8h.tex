@@ -1,0 +1,480 @@
+\hypertarget{sys__core_8h}{}\doxysection{Файл include/sys\+\_\+core.h}
+\label{sys__core_8h}\index{include/sys\_core.h@{include/sys\_core.h}}
+
+
+System Core Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sys__core_8h_ad7459d992fb4a93e1a27b32efa0a3ae9}{USER\+\_\+\+STACK\+\_\+\+LENGTH}}~0x00001000U
+\begin{DoxyCompactList}\small\item\em USER Mode Stack length (in bytes) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__core_8h_af7f8b8522d66ed4c88bea8794b7c4722}{SVC\+\_\+\+STACK\+\_\+\+LENGTH}}~0x00000100U
+\begin{DoxyCompactList}\small\item\em SVC Mode Stack length (in bytes) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__core_8h_aeaba33fdbc02c73828ea33ac17045e91}{FIQ\+\_\+\+STACK\+\_\+\+LENGTH}}~0x00000100U
+\begin{DoxyCompactList}\small\item\em FIQ Mode Stack length (in bytes) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__core_8h_a550815ce1edcfbf841a47cfee2dccf42}{IRQ\+\_\+\+STACK\+\_\+\+LENGTH}}~0x00000100U
+\begin{DoxyCompactList}\small\item\em IRQ Mode Stack length (in bytes) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__core_8h_ab23f4a0885c00185030f6c71460249c1}{ABORT\+\_\+\+STACK\+\_\+\+LENGTH}}~0x00000100U
+\begin{DoxyCompactList}\small\item\em ABORT Mode Stack length (in bytes) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__core_8h_afa8492366c021ada12ea09f5ce86f831}{UNDEF\+\_\+\+STACK\+\_\+\+LENGTH}}~0x00000100U
+\begin{DoxyCompactList}\small\item\em UNDEF Mode Stack length (in bytes) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__core_8h_ace84e011af7f2ca1ec1b090daf07ff80}\label{sys__core_8h_ace84e011af7f2ca1ec1b090daf07ff80}} 
+void {\bfseries \+\_\+core\+Init\+Registers\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Core register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a0d1ff5263e206536a363a3aa822629dc}\label{sys__core_8h_a0d1ff5263e206536a363a3aa822629dc}} 
+void {\bfseries \+\_\+core\+Init\+Stack\+Pointer\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Core stack pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a279a170e08931509b2d62848fda3eacd}\label{sys__core_8h_a279a170e08931509b2d62848fda3eacd}} 
+uint32 {\bfseries \+\_\+get\+CPSRValue\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Get CPSR Value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a9ac3ba78e1c8af4d0b6a5381b11858b2}\label{sys__core_8h_a9ac3ba78e1c8af4d0b6a5381b11858b2}} 
+void {\bfseries \+\_\+goto\+CPUIdle\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Take CPU to Idle state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_acb52868522528dab172c3c1e3286fbc3}\label{sys__core_8h_acb52868522528dab172c3c1e3286fbc3}} 
+void {\bfseries \+\_\+core\+Enable\+Irq\+Vic\+Offset\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Enable Irq offset propagation via Vic controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_a1e087d887d4b7158cac63c2b7e3b2c7d}{\+\_\+core\+Enable\+Event\+Bus\+Export\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Enable event bus export for external monitoring modules. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_aefcf37b494b9f7dad1937e1291ce91e3}{\+\_\+core\+Disable\+Event\+Bus\+Export\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Disable event bus export for external monitoring modules. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_a058f0ace94e7ff9afbd9590568a3da99}{\+\_\+core\+Enable\+Ram\+Ecc\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Enable external ecc error for RAM odd and even bank. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a099bf5e5169755b08ae68126dec3172e}\label{sys__core_8h_a099bf5e5169755b08ae68126dec3172e}} 
+void {\bfseries \+\_\+core\+Disable\+Ram\+Ecc\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Disable external ecc error for RAM odd and even bank. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_af15d067f037762a1689da3e8c852ded8}{\+\_\+core\+Enable\+Flash\+Ecc\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Enable external ecc error for the Flash. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_aa45114f6b771649caedd4468733fd903}\label{sys__core_8h_aa45114f6b771649caedd4468733fd903}} 
+void {\bfseries \+\_\+core\+Disable\+Flash\+Ecc\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Disable external ecc error for the Flash. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__core_8h_a381fac5107244ffabc8cd922573f40a9}{\+\_\+core\+Get\+Data\+Fault\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Get core data fault status register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a9bac9616a47752dccbbd20ffabd567a2}\label{sys__core_8h_a9bac9616a47752dccbbd20ffabd567a2}} 
+void {\bfseries \+\_\+core\+Clear\+Data\+Fault\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Clear core data fault status register. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__core_8h_a91724fbfd4f462ddfd13b4e06bfd30f1}{\+\_\+core\+Get\+Instruction\+Fault\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Get core instruction fault status register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a156b5a1caa835901b7f14fa3ed578f19}\label{sys__core_8h_a156b5a1caa835901b7f14fa3ed578f19}} 
+void {\bfseries \+\_\+core\+Clear\+Instruction\+Fault\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Clear core instruction fault status register. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__core_8h_ac1c18a027ee5d18323f1aa190a1cbc6c}{\+\_\+core\+Get\+Data\+Fault\+Address\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Get core data fault address register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a121f0f2c2b54c8765c3bafcf983a9158}\label{sys__core_8h_a121f0f2c2b54c8765c3bafcf983a9158}} 
+void {\bfseries \+\_\+core\+Clear\+Data\+Fault\+Address\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Clear core data fault address register. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__core_8h_a78caf621393ff723bd7bd14ce35a4fd3}{\+\_\+core\+Get\+Instruction\+Fault\+Address\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Get core instruction fault address register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a4ebc29b8391806a992f045d112f93c09}\label{sys__core_8h_a4ebc29b8391806a992f045d112f93c09}} 
+void {\bfseries \+\_\+core\+Clear\+Instruction\+Fault\+Address\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Clear core instruction fault address register. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__core_8h_ac66bf5ebd2ec779e781603e9c93d8ac1}{\+\_\+core\+Get\+Auxiliary\+Data\+Fault\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Get core auxiliary data fault status register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a55eda7cacbe4d0b34134d648266bde59}\label{sys__core_8h_a55eda7cacbe4d0b34134d648266bde59}} 
+void {\bfseries \+\_\+core\+Clear\+Auxiliary\+Data\+Fault\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Clear core auxiliary data fault status register. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__core_8h_a512bb945804e5388297b952423abbe27}{\+\_\+core\+Get\+Auxiliary\+Instruction\+Fault\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Get core auxiliary instruction fault status register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__core_8h_a95d9d6f4bcc67021dae06384792a8332}\label{sys__core_8h_a95d9d6f4bcc67021dae06384792a8332}} 
+void {\bfseries \+\_\+core\+Clear\+Auxiliary\+Instruction\+Fault\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Clear core auxiliary instruction fault status register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_acac495075d094804ae0e691ee8045785}{\+\_\+disable\+\_\+interrupt\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Disable IRQ and FIQ Interrupt mode in CPSR register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_a091b86fe6f21080606847cc482817dd6}{\+\_\+disable\+\_\+\+IRQ\+\_\+interrupt\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Disable IRQ Interrupt mode in CPSR register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_a4c2fd615301237797f5bba9fb8ee68a7}{\+\_\+disable\+\_\+\+FIQ\+\_\+interrupt\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Disable FIQ Interrupt mode in CPSR register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_ac6bb41a73c651e85ebb47f15e7acf33e}{\+\_\+enable\+\_\+interrupt\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Enable IRQ and FIQ Interrupt mode in CPSR register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_a41e8e4dc7ef2ed7eaf51e5db53a39697}{\+\_\+esm\+Ccm\+Errors\+Clear\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Clears ESM Error caused due to CCM Errata in RevA Silicon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__core_8h_a6677e111798acb3b452b56c197e5b881}{\+\_\+errata\+\_\+\+CORTEXR4\+\_\+66\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Work Around for Errata CORTEX-\/\+R4\#66. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+System Core Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Core Interface Functions
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{sys__core_8h_ab23f4a0885c00185030f6c71460249c1}\label{sys__core_8h_ab23f4a0885c00185030f6c71460249c1}} 
+\index{sys\_core.h@{sys\_core.h}!ABORT\_STACK\_LENGTH@{ABORT\_STACK\_LENGTH}}
+\index{ABORT\_STACK\_LENGTH@{ABORT\_STACK\_LENGTH}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{ABORT\_STACK\_LENGTH}{ABORT\_STACK\_LENGTH}}
+{\footnotesize\ttfamily \#define ABORT\+\_\+\+STACK\+\_\+\+LENGTH~0x00000100U}
+
+
+
+ABORT Mode Stack length (in bytes) 
+
+Alias for ABORT Mode Stack length (in bytes)
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro for ABORT Mode Stack length (in bytes) 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__core_8h_aeaba33fdbc02c73828ea33ac17045e91}\label{sys__core_8h_aeaba33fdbc02c73828ea33ac17045e91}} 
+\index{sys\_core.h@{sys\_core.h}!FIQ\_STACK\_LENGTH@{FIQ\_STACK\_LENGTH}}
+\index{FIQ\_STACK\_LENGTH@{FIQ\_STACK\_LENGTH}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{FIQ\_STACK\_LENGTH}{FIQ\_STACK\_LENGTH}}
+{\footnotesize\ttfamily \#define FIQ\+\_\+\+STACK\+\_\+\+LENGTH~0x00000100U}
+
+
+
+FIQ Mode Stack length (in bytes) 
+
+Alias for FIQ Mode Stack length (in bytes)
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro for FIQ Mode Stack length (in bytes) 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__core_8h_a550815ce1edcfbf841a47cfee2dccf42}\label{sys__core_8h_a550815ce1edcfbf841a47cfee2dccf42}} 
+\index{sys\_core.h@{sys\_core.h}!IRQ\_STACK\_LENGTH@{IRQ\_STACK\_LENGTH}}
+\index{IRQ\_STACK\_LENGTH@{IRQ\_STACK\_LENGTH}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{IRQ\_STACK\_LENGTH}{IRQ\_STACK\_LENGTH}}
+{\footnotesize\ttfamily \#define IRQ\+\_\+\+STACK\+\_\+\+LENGTH~0x00000100U}
+
+
+
+IRQ Mode Stack length (in bytes) 
+
+Alias for IRQ Mode Stack length (in bytes)
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro for IRQ Mode Stack length (in bytes) 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__core_8h_af7f8b8522d66ed4c88bea8794b7c4722}\label{sys__core_8h_af7f8b8522d66ed4c88bea8794b7c4722}} 
+\index{sys\_core.h@{sys\_core.h}!SVC\_STACK\_LENGTH@{SVC\_STACK\_LENGTH}}
+\index{SVC\_STACK\_LENGTH@{SVC\_STACK\_LENGTH}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{SVC\_STACK\_LENGTH}{SVC\_STACK\_LENGTH}}
+{\footnotesize\ttfamily \#define SVC\+\_\+\+STACK\+\_\+\+LENGTH~0x00000100U}
+
+
+
+SVC Mode Stack length (in bytes) 
+
+Alias for SVC Mode Stack length (in bytes)
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro for SVC Mode Stack length (in bytes) 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__core_8h_afa8492366c021ada12ea09f5ce86f831}\label{sys__core_8h_afa8492366c021ada12ea09f5ce86f831}} 
+\index{sys\_core.h@{sys\_core.h}!UNDEF\_STACK\_LENGTH@{UNDEF\_STACK\_LENGTH}}
+\index{UNDEF\_STACK\_LENGTH@{UNDEF\_STACK\_LENGTH}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{UNDEF\_STACK\_LENGTH}{UNDEF\_STACK\_LENGTH}}
+{\footnotesize\ttfamily \#define UNDEF\+\_\+\+STACK\+\_\+\+LENGTH~0x00000100U}
+
+
+
+UNDEF Mode Stack length (in bytes) 
+
+Alias for UNDEF Mode Stack length (in bytes)
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro for UNDEF Mode Stack length (in bytes) 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__core_8h_ad7459d992fb4a93e1a27b32efa0a3ae9}\label{sys__core_8h_ad7459d992fb4a93e1a27b32efa0a3ae9}} 
+\index{sys\_core.h@{sys\_core.h}!USER\_STACK\_LENGTH@{USER\_STACK\_LENGTH}}
+\index{USER\_STACK\_LENGTH@{USER\_STACK\_LENGTH}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{USER\_STACK\_LENGTH}{USER\_STACK\_LENGTH}}
+{\footnotesize\ttfamily \#define USER\+\_\+\+STACK\+\_\+\+LENGTH~0x00001000U}
+
+
+
+USER Mode Stack length (in bytes) 
+
+Alias for USER Mode Stack length (in bytes)
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro for USER Mode Stack length (in bytes) 
+\end{DoxyNote}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{sys__core_8h_aefcf37b494b9f7dad1937e1291ce91e3}\label{sys__core_8h_aefcf37b494b9f7dad1937e1291ce91e3}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreDisableEventBusExport\_@{\_coreDisableEventBusExport\_}}
+\index{\_coreDisableEventBusExport\_@{\_coreDisableEventBusExport\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreDisableEventBusExport\_()}{\_coreDisableEventBusExport\_()}}
+{\footnotesize\ttfamily void \+\_\+core\+Disable\+Event\+Bus\+Export\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable event bus export for external monitoring modules. 
+
+This function disables event bus exports to external monitoring modules like tightly coupled RAM wrapper, Flash wrapper and error signaling module. \mbox{\Hypertarget{sys__core_8h_a1e087d887d4b7158cac63c2b7e3b2c7d}\label{sys__core_8h_a1e087d887d4b7158cac63c2b7e3b2c7d}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreEnableEventBusExport\_@{\_coreEnableEventBusExport\_}}
+\index{\_coreEnableEventBusExport\_@{\_coreEnableEventBusExport\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreEnableEventBusExport\_()}{\_coreEnableEventBusExport\_()}}
+{\footnotesize\ttfamily void \+\_\+core\+Enable\+Event\+Bus\+Export\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable event bus export for external monitoring modules. 
+
+\begin{DoxyNote}{Заметки}
+It is required to enable event bus export to process ecc issues.
+\end{DoxyNote}
+This function enables event bus exports to external monitoring modules like tightly coupled RAM wrapper, Flash wrapper and error signaling module. \mbox{\Hypertarget{sys__core_8h_af15d067f037762a1689da3e8c852ded8}\label{sys__core_8h_af15d067f037762a1689da3e8c852ded8}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreEnableFlashEcc\_@{\_coreEnableFlashEcc\_}}
+\index{\_coreEnableFlashEcc\_@{\_coreEnableFlashEcc\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreEnableFlashEcc\_()}{\_coreEnableFlashEcc\_()}}
+{\footnotesize\ttfamily void \+\_\+core\+Enable\+Flash\+Ecc\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable external ecc error for the Flash. 
+
+\begin{DoxyNote}{Заметки}
+It is required to enable event bus export to process ecc issues. 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__core_8h_a058f0ace94e7ff9afbd9590568a3da99}\label{sys__core_8h_a058f0ace94e7ff9afbd9590568a3da99}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreEnableRamEcc\_@{\_coreEnableRamEcc\_}}
+\index{\_coreEnableRamEcc\_@{\_coreEnableRamEcc\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreEnableRamEcc\_()}{\_coreEnableRamEcc\_()}}
+{\footnotesize\ttfamily void \+\_\+core\+Enable\+Ram\+Ecc\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable external ecc error for RAM odd and even bank. 
+
+\begin{DoxyNote}{Заметки}
+It is required to enable event bus export to process ecc issues. 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__core_8h_ac66bf5ebd2ec779e781603e9c93d8ac1}\label{sys__core_8h_ac66bf5ebd2ec779e781603e9c93d8ac1}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreGetAuxiliaryDataFault\_@{\_coreGetAuxiliaryDataFault\_}}
+\index{\_coreGetAuxiliaryDataFault\_@{\_coreGetAuxiliaryDataFault\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreGetAuxiliaryDataFault\_()}{\_coreGetAuxiliaryDataFault\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+core\+Get\+Auxiliary\+Data\+Fault\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get core auxiliary data fault status register. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return the auxiliary data fault status register value\+:
+\begin{DoxyItemize}
+\item bit \mbox{[}13..5\mbox{]}\+:
+\begin{DoxyItemize}
+\item Index value for access giving error
+\end{DoxyItemize}
+\item bit \mbox{[}21\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0\+: Unrecoverable error
+\item 1\+: Recoverable error
+\end{DoxyItemize}
+\item bit \mbox{[}23..22\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0\+: Side cache
+\item 1\+: Side ATCM (Flash)
+\item 2\+: Side BTCM (RAM)
+\item 3\+: Reserved
+\end{DoxyItemize}
+\item bit \mbox{[}27..24\mbox{]}\+:
+\begin{DoxyItemize}
+\item Cache way or way in which error occurred 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__core_8h_a512bb945804e5388297b952423abbe27}\label{sys__core_8h_a512bb945804e5388297b952423abbe27}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreGetAuxiliaryInstructionFault\_@{\_coreGetAuxiliaryInstructionFault\_}}
+\index{\_coreGetAuxiliaryInstructionFault\_@{\_coreGetAuxiliaryInstructionFault\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreGetAuxiliaryInstructionFault\_()}{\_coreGetAuxiliaryInstructionFault\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+core\+Get\+Auxiliary\+Instruction\+Fault\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get core auxiliary instruction fault status register. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return the auxiliary instruction fault status register value\+:
+\begin{DoxyItemize}
+\item bit \mbox{[}13..5\mbox{]}\+:
+\begin{DoxyItemize}
+\item Index value for access giving error
+\end{DoxyItemize}
+\item bit \mbox{[}21\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0\+: Unrecoverable error
+\item 1\+: Recoverable error
+\end{DoxyItemize}
+\item bit \mbox{[}23..22\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0\+: Side cache
+\item 1\+: Side ATCM (Flash)
+\item 2\+: Side BTCM (RAM)
+\item 3\+: Reserved
+\end{DoxyItemize}
+\item bit \mbox{[}27..24\mbox{]}\+:
+\begin{DoxyItemize}
+\item Cache way or way in which error occurred 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__core_8h_a381fac5107244ffabc8cd922573f40a9}\label{sys__core_8h_a381fac5107244ffabc8cd922573f40a9}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreGetDataFault\_@{\_coreGetDataFault\_}}
+\index{\_coreGetDataFault\_@{\_coreGetDataFault\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreGetDataFault\_()}{\_coreGetDataFault\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+core\+Get\+Data\+Fault\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get core data fault status register. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return the data fault status register value\+:
+\begin{DoxyItemize}
+\item bit \mbox{[}10,3..0\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0b00001\+: Alignment -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b00000\+: Background -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b01101\+: Permission -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b01000\+: Precise External Abort -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b10110\+: Imprecise External Abort -\/\texorpdfstring{$>$}{>} address is unpredictable
+\item 0b11001\+: Precise ECC Error -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b11000\+: Imprecise ECC Error -\/\texorpdfstring{$>$}{>} address is unpredictable
+\item 0b00010\+: Debug -\/\texorpdfstring{$>$}{>} address is unchanged
+\end{DoxyItemize}
+\item bit \mbox{[}11\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0\+: Read
+\item 1\+: Write
+\end{DoxyItemize}
+\item bit \mbox{[}12\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0\+: AXI Decode Error (DECERR)
+\item 1\+: AXI Slave Error (SLVERR) 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__core_8h_ac1c18a027ee5d18323f1aa190a1cbc6c}\label{sys__core_8h_ac1c18a027ee5d18323f1aa190a1cbc6c}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreGetDataFaultAddress\_@{\_coreGetDataFaultAddress\_}}
+\index{\_coreGetDataFaultAddress\_@{\_coreGetDataFaultAddress\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreGetDataFaultAddress\_()}{\_coreGetDataFaultAddress\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+core\+Get\+Data\+Fault\+Address\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get core data fault address register. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return the data fault address\+: 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__core_8h_a91724fbfd4f462ddfd13b4e06bfd30f1}\label{sys__core_8h_a91724fbfd4f462ddfd13b4e06bfd30f1}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreGetInstructionFault\_@{\_coreGetInstructionFault\_}}
+\index{\_coreGetInstructionFault\_@{\_coreGetInstructionFault\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreGetInstructionFault\_()}{\_coreGetInstructionFault\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+core\+Get\+Instruction\+Fault\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get core instruction fault status register. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return the instruction fault status register value\+:
+\begin{DoxyItemize}
+\item bit \mbox{[}10,3..0\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0b00001\+: Alignment -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b00000\+: Background -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b01101\+: Permission -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b01000\+: Precise External Abort -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b10110\+: Imprecise External Abort -\/\texorpdfstring{$>$}{>} address is unpredictable
+\item 0b11001\+: Precise ECC Error -\/\texorpdfstring{$>$}{>} address is valid
+\item 0b11000\+: Imprecise ECC Error -\/\texorpdfstring{$>$}{>} address is unpredictable
+\item 0b00010\+: Debug -\/\texorpdfstring{$>$}{>} address is unchanged
+\end{DoxyItemize}
+\item bit \mbox{[}12\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0\+: AXI Decode Error (DECERR)
+\item 1\+: AXI Slave Error (SLVERR) 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__core_8h_a78caf621393ff723bd7bd14ce35a4fd3}\label{sys__core_8h_a78caf621393ff723bd7bd14ce35a4fd3}} 
+\index{sys\_core.h@{sys\_core.h}!\_coreGetInstructionFaultAddress\_@{\_coreGetInstructionFaultAddress\_}}
+\index{\_coreGetInstructionFaultAddress\_@{\_coreGetInstructionFaultAddress\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_coreGetInstructionFaultAddress\_()}{\_coreGetInstructionFaultAddress\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+core\+Get\+Instruction\+Fault\+Address\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get core instruction fault address register. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return the instruction fault address\+: 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__core_8h_a4c2fd615301237797f5bba9fb8ee68a7}\label{sys__core_8h_a4c2fd615301237797f5bba9fb8ee68a7}} 
+\index{sys\_core.h@{sys\_core.h}!\_disable\_FIQ\_interrupt\_@{\_disable\_FIQ\_interrupt\_}}
+\index{\_disable\_FIQ\_interrupt\_@{\_disable\_FIQ\_interrupt\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_disable\_FIQ\_interrupt\_()}{\_disable\_FIQ\_interrupt\_()}}
+{\footnotesize\ttfamily void \+\_\+disable\+\_\+\+FIQ\+\_\+interrupt\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable FIQ Interrupt mode in CPSR register. 
+
+This function disables IRQ Interrupt mode in CPSR register. \mbox{\Hypertarget{sys__core_8h_acac495075d094804ae0e691ee8045785}\label{sys__core_8h_acac495075d094804ae0e691ee8045785}} 
+\index{sys\_core.h@{sys\_core.h}!\_disable\_interrupt\_@{\_disable\_interrupt\_}}
+\index{\_disable\_interrupt\_@{\_disable\_interrupt\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_disable\_interrupt\_()}{\_disable\_interrupt\_()}}
+{\footnotesize\ttfamily void \+\_\+disable\+\_\+interrupt\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable IRQ and FIQ Interrupt mode in CPSR register. 
+
+This function disables IRQ and FIQ Interrupt mode in CPSR register. \mbox{\Hypertarget{sys__core_8h_a091b86fe6f21080606847cc482817dd6}\label{sys__core_8h_a091b86fe6f21080606847cc482817dd6}} 
+\index{sys\_core.h@{sys\_core.h}!\_disable\_IRQ\_interrupt\_@{\_disable\_IRQ\_interrupt\_}}
+\index{\_disable\_IRQ\_interrupt\_@{\_disable\_IRQ\_interrupt\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_disable\_IRQ\_interrupt\_()}{\_disable\_IRQ\_interrupt\_()}}
+{\footnotesize\ttfamily void \+\_\+disable\+\_\+\+IRQ\+\_\+interrupt\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable IRQ Interrupt mode in CPSR register. 
+
+This function disables IRQ Interrupt mode in CPSR register. \mbox{\Hypertarget{sys__core_8h_ac6bb41a73c651e85ebb47f15e7acf33e}\label{sys__core_8h_ac6bb41a73c651e85ebb47f15e7acf33e}} 
+\index{sys\_core.h@{sys\_core.h}!\_enable\_interrupt\_@{\_enable\_interrupt\_}}
+\index{\_enable\_interrupt\_@{\_enable\_interrupt\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_enable\_interrupt\_()}{\_enable\_interrupt\_()}}
+{\footnotesize\ttfamily void \+\_\+enable\+\_\+interrupt\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable IRQ and FIQ Interrupt mode in CPSR register. 
+
+This function Enables IRQ and FIQ Interrupt mode in CPSR register. User must call this function to enable Interrupts in non-\/\+OS environments. \mbox{\Hypertarget{sys__core_8h_a6677e111798acb3b452b56c197e5b881}\label{sys__core_8h_a6677e111798acb3b452b56c197e5b881}} 
+\index{sys\_core.h@{sys\_core.h}!\_errata\_CORTEXR4\_66\_@{\_errata\_CORTEXR4\_66\_}}
+\index{\_errata\_CORTEXR4\_66\_@{\_errata\_CORTEXR4\_66\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_errata\_CORTEXR4\_66\_()}{\_errata\_CORTEXR4\_66\_()}}
+{\footnotesize\ttfamily void \+\_\+errata\+\_\+\+CORTEXR4\+\_\+66\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Work Around for Errata CORTEX-\/\+R4\#66. 
+
+This function Disable out-\/of-\/order completion for divide instructions in Auxiliary Control register. \mbox{\Hypertarget{sys__core_8h_a41e8e4dc7ef2ed7eaf51e5db53a39697}\label{sys__core_8h_a41e8e4dc7ef2ed7eaf51e5db53a39697}} 
+\index{sys\_core.h@{sys\_core.h}!\_esmCcmErrorsClear\_@{\_esmCcmErrorsClear\_}}
+\index{\_esmCcmErrorsClear\_@{\_esmCcmErrorsClear\_}!sys\_core.h@{sys\_core.h}}
+\doxysubsubsection{\texorpdfstring{\_esmCcmErrorsClear\_()}{\_esmCcmErrorsClear\_()}}
+{\footnotesize\ttfamily void \+\_\+esm\+Ccm\+Errors\+Clear\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clears ESM Error caused due to CCM Errata in RevA Silicon. 
+
+This function Clears ESM Error caused due to CCM Errata in RevA Silicon immediately after powerup. 

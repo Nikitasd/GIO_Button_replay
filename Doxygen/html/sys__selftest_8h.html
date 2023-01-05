@@ -1,0 +1,2035 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: Файл include/sys_selftest.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Структуры данных</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл sys_selftest.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>System Memory Header File.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="reg__pbist_8h_source.html">reg_pbist.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="reg__stc_8h_source.html">reg_stc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="reg__efc_8h_source.html">reg_efc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sys__core_8h_source.html">sys_core.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="system_8h_source.html">system.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sys__vim_8h_source.html">sys_vim.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="adc_8h_source.html">adc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="can_8h_source.html">can.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mibspi_8h_source.html">mibspi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="het_8h_source.html">het.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="htu_8h_source.html">htu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="esm_8h_source.html">esm.h</a>&quot;</code><br />
+</div>
+<p><a href="sys__selftest_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Структуры данных</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpbist__config__reg.html">pbist_config_reg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstc__config__reg.html">stc_config_reg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structefc__config__reg.html">efc_config_reg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structccmr4__config__reg.html">ccmr4_config_reg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:aca63e6c2a1e88cd66ed1874570d3dc88"><td class="memItemLeft" align="right" valign="top"><a id="aca63e6c2a1e88cd66ed1874570d3dc88" name="aca63e6c2a1e88cd66ed1874570d3dc88"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>flash1bitError</b>&#160;&#160;&#160;(*(volatile uint32 *)(0xF00803F0U))</td></tr>
+<tr class="separator:aca63e6c2a1e88cd66ed1874570d3dc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b582d0aae923f9095eececd94fefcc"><td class="memItemLeft" align="right" valign="top"><a id="a94b582d0aae923f9095eececd94fefcc" name="a94b582d0aae923f9095eececd94fefcc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>flash2bitError</b>&#160;&#160;&#160;(*(volatile uint32 *)(0xF00803F8U))</td></tr>
+<tr class="separator:a94b582d0aae923f9095eececd94fefcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63619293391b7d9a87ad0a457ecb4c37"><td class="memItemLeft" align="right" valign="top"><a id="a63619293391b7d9a87ad0a457ecb4c37" name="a63619293391b7d9a87ad0a457ecb4c37"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tcramA1bitError</b>&#160;&#160;&#160;(*(volatile uint32 *)(0x08400000U))</td></tr>
+<tr class="separator:a63619293391b7d9a87ad0a457ecb4c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4419a755c0c6d378d38e4170dd3d9883"><td class="memItemLeft" align="right" valign="top"><a id="a4419a755c0c6d378d38e4170dd3d9883" name="a4419a755c0c6d378d38e4170dd3d9883"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tcramA2bitError</b>&#160;&#160;&#160;(*(volatile uint32 *)(0x08400010U))</td></tr>
+<tr class="separator:a4419a755c0c6d378d38e4170dd3d9883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5abf507de25aad0565e7f8f67521fe"><td class="memItemLeft" align="right" valign="top"><a id="a8a5abf507de25aad0565e7f8f67521fe" name="a8a5abf507de25aad0565e7f8f67521fe"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tcramB1bitError</b>&#160;&#160;&#160;(*(volatile uint32 *)(0x08400008U))</td></tr>
+<tr class="separator:a8a5abf507de25aad0565e7f8f67521fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fa2d7af7df2e74b82bc4e23c05b2c3"><td class="memItemLeft" align="right" valign="top"><a id="ad4fa2d7af7df2e74b82bc4e23c05b2c3" name="ad4fa2d7af7df2e74b82bc4e23c05b2c3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tcramB2bitError</b>&#160;&#160;&#160;(*(volatile uint32 *)(0x08400018U))</td></tr>
+<tr class="separator:ad4fa2d7af7df2e74b82bc4e23c05b2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac2827564ffe6b9720925fa157299bf"><td class="memItemLeft" align="right" valign="top"><a id="abac2827564ffe6b9720925fa157299bf" name="abac2827564ffe6b9720925fa157299bf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tcramA1bit</b>&#160;&#160;&#160;(*(volatile uint64 *)(0x08000000U))</td></tr>
+<tr class="separator:abac2827564ffe6b9720925fa157299bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714acf7ec1c1aba28a3240e9a1bde19d"><td class="memItemLeft" align="right" valign="top"><a id="a714acf7ec1c1aba28a3240e9a1bde19d" name="a714acf7ec1c1aba28a3240e9a1bde19d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tcramA2bit</b>&#160;&#160;&#160;(*(volatile uint64 *)(0x08000010U))</td></tr>
+<tr class="separator:a714acf7ec1c1aba28a3240e9a1bde19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5367b47fa6314d55a55ce16b0b4e51e"><td class="memItemLeft" align="right" valign="top"><a id="aa5367b47fa6314d55a55ce16b0b4e51e" name="aa5367b47fa6314d55a55ce16b0b4e51e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tcramB1bit</b>&#160;&#160;&#160;(*(volatile uint64 *)(0x08000008U))</td></tr>
+<tr class="separator:aa5367b47fa6314d55a55ce16b0b4e51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6b60d17766150e9be450a830c45610"><td class="memItemLeft" align="right" valign="top"><a id="a3f6b60d17766150e9be450a830c45610" name="a3f6b60d17766150e9be450a830c45610"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tcramB2bit</b>&#160;&#160;&#160;(*(volatile uint64 *)(0x08000018U))</td></tr>
+<tr class="separator:a3f6b60d17766150e9be450a830c45610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6914d871cf76625149ae1c80096c2211"><td class="memItemLeft" align="right" valign="top"><a id="a6914d871cf76625149ae1c80096c2211" name="a6914d871cf76625149ae1c80096c2211"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>flashBadECC1</b>&#160;&#160;&#160;(*(volatile uint32 *)(0x20000000U))</td></tr>
+<tr class="separator:a6914d871cf76625149ae1c80096c2211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0d1b4917e383dd863c4afb8dad1647"><td class="memItemLeft" align="right" valign="top"><a id="a1e0d1b4917e383dd863c4afb8dad1647" name="a1e0d1b4917e383dd863c4afb8dad1647"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>flashBadECC2</b>&#160;&#160;&#160;(*(volatile uint32 *)(0x20000010U))</td></tr>
+<tr class="separator:a1e0d1b4917e383dd863c4afb8dad1647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4adc5e9ab5822993da28bd0a3b99da2"><td class="memItemLeft" align="right" valign="top"><a id="ae4adc5e9ab5822993da28bd0a3b99da2" name="ae4adc5e9ab5822993da28bd0a3b99da2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CCMSR</b>&#160;&#160;&#160;(*(volatile uint32 *)(0xFFFFF600U))</td></tr>
+<tr class="separator:ae4adc5e9ab5822993da28bd0a3b99da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3719b8720a1636d0372f1a4280212e6d"><td class="memItemLeft" align="right" valign="top"><a id="a3719b8720a1636d0372f1a4280212e6d" name="a3719b8720a1636d0372f1a4280212e6d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CCMKEYR</b>&#160;&#160;&#160;(*(volatile uint32 *)(0xFFFFF604U))</td></tr>
+<tr class="separator:a3719b8720a1636d0372f1a4280212e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a2974031aaef2a8b147d586e1cf831"><td class="memItemLeft" align="right" valign="top"><a id="a42a2974031aaef2a8b147d586e1cf831" name="a42a2974031aaef2a8b147d586e1cf831"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MIBSPI1RAMLOC</b>&#160;&#160;&#160;(*(volatile uint32 *)(0xFF0E0000U))</td></tr>
+<tr class="separator:a42a2974031aaef2a8b147d586e1cf831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d72c7aeb783deb573cf6368129aec3"><td class="memItemLeft" align="right" valign="top"><a id="a56d72c7aeb783deb573cf6368129aec3" name="a56d72c7aeb783deb573cf6368129aec3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__PBIST_H__</b></td></tr>
+<tr class="separator:a56d72c7aeb783deb573cf6368129aec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96929e92806acd410da3eb0f0fba53c"><td class="memItemLeft" align="right" valign="top"><a id="af96929e92806acd410da3eb0f0fba53c" name="af96929e92806acd410da3eb0f0fba53c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_ROM_PBIST_RAM_GROUP</b>&#160;&#160;&#160;1U</td></tr>
+<tr class="separator:af96929e92806acd410da3eb0f0fba53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5589d05b68ae637d4a60323a3d871e80"><td class="memItemLeft" align="right" valign="top"><a id="a5589d05b68ae637d4a60323a3d871e80" name="a5589d05b68ae637d4a60323a3d871e80"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STC_ROM_PBIST_RAM_GROUP</b>&#160;&#160;&#160;2U</td></tr>
+<tr class="separator:a5589d05b68ae637d4a60323a3d871e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016bb102f09739bcc9f7523b2eede9c6"><td class="memItemLeft" align="right" valign="top"><a id="a016bb102f09739bcc9f7523b2eede9c6" name="a016bb102f09739bcc9f7523b2eede9c6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_RAMT_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a016bb102f09739bcc9f7523b2eede9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620f6570db02a6cb9a50022799de4482"><td class="memItemLeft" align="right" valign="top"><a id="a620f6570db02a6cb9a50022799de4482" name="a620f6570db02a6cb9a50022799de4482"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_DLR_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a620f6570db02a6cb9a50022799de4482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e2258ebfc6d6f4bbc243d3792f5225"><td class="memItemLeft" align="right" valign="top"><a id="ae8e2258ebfc6d6f4bbc243d3792f5225" name="ae8e2258ebfc6d6f4bbc243d3792f5225"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_PACT_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:ae8e2258ebfc6d6f4bbc243d3792f5225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1407e3b64164d0917e1c1926b8b60d69"><td class="memItemLeft" align="right" valign="top"><a id="a1407e3b64164d0917e1c1926b8b60d69" name="a1407e3b64164d0917e1c1926b8b60d69"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_PBISTID_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a1407e3b64164d0917e1c1926b8b60d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67a2c6a2f8eb2de383255fe5de7cbfdc"><td class="memItemLeft" align="right" valign="top"><a id="a67a2c6a2f8eb2de383255fe5de7cbfdc" name="a67a2c6a2f8eb2de383255fe5de7cbfdc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_OVER_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a67a2c6a2f8eb2de383255fe5de7cbfdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2bb7bef0267b1ece0df630beee533b1"><td class="memItemLeft" align="right" valign="top"><a id="ae2bb7bef0267b1ece0df630beee533b1" name="ae2bb7bef0267b1ece0df630beee533b1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_FSRDL1_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:ae2bb7bef0267b1ece0df630beee533b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c59f18403964aa42261b2f862518df5"><td class="memItemLeft" align="right" valign="top"><a id="a0c59f18403964aa42261b2f862518df5" name="a0c59f18403964aa42261b2f862518df5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_ROM_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a0c59f18403964aa42261b2f862518df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865b27fac663103182676cdcf0aeb017"><td class="memItemLeft" align="right" valign="top"><a id="a865b27fac663103182676cdcf0aeb017" name="a865b27fac663103182676cdcf0aeb017"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_ALGO_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a865b27fac663103182676cdcf0aeb017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b5568ebfee5a8d7443a8414ab66e79"><td class="memItemLeft" align="right" valign="top"><a id="a64b5568ebfee5a8d7443a8414ab66e79" name="a64b5568ebfee5a8d7443a8414ab66e79"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_RINFOL_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a64b5568ebfee5a8d7443a8414ab66e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5419227328645ee895ee5d3ab0403494"><td class="memItemLeft" align="right" valign="top"><a id="a5419227328645ee895ee5d3ab0403494" name="a5419227328645ee895ee5d3ab0403494"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBIST_RINFOU_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a5419227328645ee895ee5d3ab0403494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6dbfe137c24938cee4785c2779ccedb"><td class="memItemLeft" align="right" valign="top"><a id="ac6dbfe137c24938cee4785c2779ccedb" name="ac6dbfe137c24938cee4785c2779ccedb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__STC_H__</b></td></tr>
+<tr class="separator:ac6dbfe137c24938cee4785c2779ccedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a1a54daa67c0657bfa9b6100670b76"><td class="memItemLeft" align="right" valign="top"><a id="a77a1a54daa67c0657bfa9b6100670b76" name="a77a1a54daa67c0657bfa9b6100670b76"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STC_INTERVAL</b>&#160;&#160;&#160;26U</td></tr>
+<tr class="separator:a77a1a54daa67c0657bfa9b6100670b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03004e33fb008c2eed2f0739bb4a39f7"><td class="memItemLeft" align="right" valign="top"><a id="a03004e33fb008c2eed2f0739bb4a39f7" name="a03004e33fb008c2eed2f0739bb4a39f7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STC_MAX_TIMEOUT</b>&#160;&#160;&#160;0xFFFFFFFFU</td></tr>
+<tr class="separator:a03004e33fb008c2eed2f0739bb4a39f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22bea734601c10966500516b086befe9"><td class="memItemLeft" align="right" valign="top"><a id="a22bea734601c10966500516b086befe9" name="a22bea734601c10966500516b086befe9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STC_STCGCR0_CONFIGVALUE</b>&#160;&#160;&#160;0xFFFF0000U</td></tr>
+<tr class="separator:a22bea734601c10966500516b086befe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0933bbfe847f972c03187cad4d793029"><td class="memItemLeft" align="right" valign="top"><a id="a0933bbfe847f972c03187cad4d793029" name="a0933bbfe847f972c03187cad4d793029"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STC_STCGCR1_CONFIGVALUE</b>&#160;&#160;&#160;0x5U</td></tr>
+<tr class="separator:a0933bbfe847f972c03187cad4d793029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913cae6640515d4117ecfd500ef7f3e9"><td class="memItemLeft" align="right" valign="top"><a id="a913cae6640515d4117ecfd500ef7f3e9" name="a913cae6640515d4117ecfd500ef7f3e9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STC_STCTPR_CONFIGVALUE</b>&#160;&#160;&#160;0xFFFFFFFFU</td></tr>
+<tr class="separator:a913cae6640515d4117ecfd500ef7f3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0311020e428cc924fc1502999b0a0e5"><td class="memItemLeft" align="right" valign="top"><a id="ae0311020e428cc924fc1502999b0a0e5" name="ae0311020e428cc924fc1502999b0a0e5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STC_STCSCSCR_CONFIGVALUE</b>&#160;&#160;&#160;0x5U</td></tr>
+<tr class="separator:ae0311020e428cc924fc1502999b0a0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f010fd98c8c4b44b9fc63c6604253ee"><td class="memItemLeft" align="right" valign="top"><a id="a4f010fd98c8c4b44b9fc63c6604253ee" name="a4f010fd98c8c4b44b9fc63c6604253ee"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__EFC_H__</b></td></tr>
+<tr class="separator:a4f010fd98c8c4b44b9fc63c6604253ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad4c7f924e24241629dc10ed6b433f9"><td class="memItemLeft" align="right" valign="top"><a id="a6ad4c7f924e24241629dc10ed6b433f9" name="a6ad4c7f924e24241629dc10ed6b433f9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>INPUT_ENABLE</b>&#160;&#160;&#160;0x0000000FU</td></tr>
+<tr class="separator:a6ad4c7f924e24241629dc10ed6b433f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40984b9ac260aa5f3467e55a91cfff30"><td class="memItemLeft" align="right" valign="top"><a id="a40984b9ac260aa5f3467e55a91cfff30" name="a40984b9ac260aa5f3467e55a91cfff30"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>INPUT_DISABLE</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:a40984b9ac260aa5f3467e55a91cfff30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70963ccca5ce8f7dca6a88b752c9a538"><td class="memItemLeft" align="right" valign="top"><a id="a70963ccca5ce8f7dca6a88b752c9a538" name="a70963ccca5ce8f7dca6a88b752c9a538"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_WS_READ_STATES</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:a70963ccca5ce8f7dca6a88b752c9a538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7baeb8bdab8847f3907a81219ff9df61"><td class="memItemLeft" align="right" valign="top"><a id="a7baeb8bdab8847f3907a81219ff9df61" name="a7baeb8bdab8847f3907a81219ff9df61"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REPAIR_EN_0</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:a7baeb8bdab8847f3907a81219ff9df61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199d403c843879c806d1b470e9708341"><td class="memItemLeft" align="right" valign="top"><a id="a199d403c843879c806d1b470e9708341" name="a199d403c843879c806d1b470e9708341"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REPAIR_EN_3</b>&#160;&#160;&#160;0x00000100U</td></tr>
+<tr class="separator:a199d403c843879c806d1b470e9708341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73629f432272dc96d03a3ca4ce14092"><td class="memItemLeft" align="right" valign="top"><a id="ab73629f432272dc96d03a3ca4ce14092" name="ab73629f432272dc96d03a3ca4ce14092"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REPAIR_EN_5</b>&#160;&#160;&#160;0x00000200U</td></tr>
+<tr class="separator:ab73629f432272dc96d03a3ca4ce14092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023b6896e0c2430b0162782e92bf0cf2"><td class="memItemLeft" align="right" valign="top"><a id="a023b6896e0c2430b0162782e92bf0cf2" name="a023b6896e0c2430b0162782e92bf0cf2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_DEID_AUTOLOAD_EN</b>&#160;&#160;&#160;0x00000400U</td></tr>
+<tr class="separator:a023b6896e0c2430b0162782e92bf0cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e86a322a5653fa3b3fe3153fd4d89ab"><td class="memItemLeft" align="right" valign="top"><a id="a5e86a322a5653fa3b3fe3153fd4d89ab" name="a5e86a322a5653fa3b3fe3153fd4d89ab"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_FDI_EN</b>&#160;&#160;&#160;0x00000800U</td></tr>
+<tr class="separator:a5e86a322a5653fa3b3fe3153fd4d89ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbff457aff1e7185198add1da6e1a59c"><td class="memItemLeft" align="right" valign="top"><a id="acbff457aff1e7185198add1da6e1a59c" name="acbff457aff1e7185198add1da6e1a59c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_FDI_DIS</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:acbff457aff1e7185198add1da6e1a59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8947cdee7e1ece2f0ddf0b4312fa2cc"><td class="memItemLeft" align="right" valign="top"><a id="ae8947cdee7e1ece2f0ddf0b4312fa2cc" name="ae8947cdee7e1ece2f0ddf0b4312fa2cc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_ECC_OVERRIDE_EN</b>&#160;&#160;&#160;0x00001000U</td></tr>
+<tr class="separator:ae8947cdee7e1ece2f0ddf0b4312fa2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761c6c3c551e08703f4046319c092553"><td class="memItemLeft" align="right" valign="top"><a id="a761c6c3c551e08703f4046319c092553" name="a761c6c3c551e08703f4046319c092553"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_ECC_OVERRIDE_DIS</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:a761c6c3c551e08703f4046319c092553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee98d02032ea1d9c25462881906d488f"><td class="memItemLeft" align="right" valign="top"><a id="aee98d02032ea1d9c25462881906d488f" name="aee98d02032ea1d9c25462881906d488f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_ECC_SELF_TEST_EN</b>&#160;&#160;&#160;0x00002000U</td></tr>
+<tr class="separator:aee98d02032ea1d9c25462881906d488f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84dd968e5c5646e17a635eedfd3d4af6"><td class="memItemLeft" align="right" valign="top"><a id="a84dd968e5c5646e17a635eedfd3d4af6" name="a84dd968e5c5646e17a635eedfd3d4af6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_ECC_SELF_TEST_DIS</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:a84dd968e5c5646e17a635eedfd3d4af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3986297b99a9f545ec6c28f8b8edbf4"><td class="memItemLeft" align="right" valign="top"><a id="af3986297b99a9f545ec6c28f8b8edbf4" name="af3986297b99a9f545ec6c28f8b8edbf4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OUTPUT_ENABLE</b>&#160;&#160;&#160;0x0003C000U</td></tr>
+<tr class="separator:af3986297b99a9f545ec6c28f8b8edbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9eb2479607a79b7af314b985f8d3f0"><td class="memItemLeft" align="right" valign="top"><a id="acc9eb2479607a79b7af314b985f8d3f0" name="acc9eb2479607a79b7af314b985f8d3f0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OUTPUT_DISABLE</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:acc9eb2479607a79b7af314b985f8d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394b60c80e9f57bd372648cca3077d9b"><td class="memItemLeft" align="right" valign="top"><a id="a394b60c80e9f57bd372648cca3077d9b" name="a394b60c80e9f57bd372648cca3077d9b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_AUTOLOAD_ERROR_EN</b>&#160;&#160;&#160;0x00040000U</td></tr>
+<tr class="separator:a394b60c80e9f57bd372648cca3077d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528d36a8cba2cb7437f24a06766b1300"><td class="memItemLeft" align="right" valign="top"><a id="a528d36a8cba2cb7437f24a06766b1300" name="a528d36a8cba2cb7437f24a06766b1300"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_INSTRUCTION_ERROR_EN</b>&#160;&#160;&#160;0x00080000U</td></tr>
+<tr class="separator:a528d36a8cba2cb7437f24a06766b1300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c45ef8a51ac122bce6633946a838e34"><td class="memItemLeft" align="right" valign="top"><a id="a2c45ef8a51ac122bce6633946a838e34" name="a2c45ef8a51ac122bce6633946a838e34"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_INSTRUCTION_INFO_EN</b>&#160;&#160;&#160;0x00100000U</td></tr>
+<tr class="separator:a2c45ef8a51ac122bce6633946a838e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc8c1839388d94cfc070bfcc006ba0d"><td class="memItemLeft" align="right" valign="top"><a id="addc8c1839388d94cfc070bfcc006ba0d" name="addc8c1839388d94cfc070bfcc006ba0d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_SELF_TEST_ERROR_EN</b>&#160;&#160;&#160;0x00200000U</td></tr>
+<tr class="separator:addc8c1839388d94cfc070bfcc006ba0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f0c81a7a3b2ff0d60f0ee590b51ae6f"><td class="memItemLeft" align="right" valign="top"><a id="a0f0c81a7a3b2ff0d60f0ee590b51ae6f" name="a0f0c81a7a3b2ff0d60f0ee590b51ae6f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_AUTOLOAD_ERROR_DIS</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:a0f0c81a7a3b2ff0d60f0ee590b51ae6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f57325fb8c6ceb487b2a044364d78b"><td class="memItemLeft" align="right" valign="top"><a id="ae7f57325fb8c6ceb487b2a044364d78b" name="ae7f57325fb8c6ceb487b2a044364d78b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_INSTRUCTION_ERROR_DIS</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:ae7f57325fb8c6ceb487b2a044364d78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4eae529953b90ec7d4afe13616606a"><td class="memItemLeft" align="right" valign="top"><a id="a9f4eae529953b90ec7d4afe13616606a" name="a9f4eae529953b90ec7d4afe13616606a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_INSTRUCTION_INFO_DIS</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:a9f4eae529953b90ec7d4afe13616606a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6191d891f9f51176801e0776ee7a6a"><td class="memItemLeft" align="right" valign="top"><a id="ada6191d891f9f51176801e0776ee7a6a" name="ada6191d891f9f51176801e0776ee7a6a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_SELF_TEST_ERROR_DIS</b>&#160;&#160;&#160;0x00000000U</td></tr>
+<tr class="separator:ada6191d891f9f51176801e0776ee7a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62fab23e0e159851d615cf94022d58a"><td class="memItemLeft" align="right" valign="top"><a id="af62fab23e0e159851d615cf94022d58a" name="af62fab23e0e159851d615cf94022d58a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DISABLE_READ_ROW0</b>&#160;&#160;&#160;0x00800000U</td></tr>
+<tr class="separator:af62fab23e0e159851d615cf94022d58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb048a5f37b2970c94621cb4000f198a"><td class="memItemLeft" align="right" valign="top"><a id="abb048a5f37b2970c94621cb4000f198a" name="abb048a5f37b2970c94621cb4000f198a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REPAIR_0</b>&#160;&#160;&#160;0x00000010U</td></tr>
+<tr class="separator:abb048a5f37b2970c94621cb4000f198a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628da0579dc45b5aff788e8791191bf1"><td class="memItemLeft" align="right" valign="top"><a id="a628da0579dc45b5aff788e8791191bf1" name="a628da0579dc45b5aff788e8791191bf1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REPAIR_3</b>&#160;&#160;&#160;0x00000010U</td></tr>
+<tr class="separator:a628da0579dc45b5aff788e8791191bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab865911e5be4a16e27f447c52335aadb"><td class="memItemLeft" align="right" valign="top"><a id="ab865911e5be4a16e27f447c52335aadb" name="ab865911e5be4a16e27f447c52335aadb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REPAIR_5</b>&#160;&#160;&#160;0x00000020U</td></tr>
+<tr class="separator:ab865911e5be4a16e27f447c52335aadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11f1018dc2cf771d3d059b17439d90b"><td class="memItemLeft" align="right" valign="top"><a id="ad11f1018dc2cf771d3d059b17439d90b" name="ad11f1018dc2cf771d3d059b17439d90b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_DEID_AUTOLOAD</b>&#160;&#160;&#160;0x00000040U</td></tr>
+<tr class="separator:ad11f1018dc2cf771d3d059b17439d90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fdf03c49fd6292a43209e8f1400eb90"><td class="memItemLeft" align="right" valign="top"><a id="a7fdf03c49fd6292a43209e8f1400eb90" name="a7fdf03c49fd6292a43209e8f1400eb90"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_FCLRZ</b>&#160;&#160;&#160;0x00000080U</td></tr>
+<tr class="separator:a7fdf03c49fd6292a43209e8f1400eb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98046388c8e057daa293f54df7210b5e"><td class="memItemLeft" align="right" valign="top"><a id="a98046388c8e057daa293f54df7210b5e" name="a98046388c8e057daa293f54df7210b5e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_READY</b>&#160;&#160;&#160;0x00000100U</td></tr>
+<tr class="separator:a98046388c8e057daa293f54df7210b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15537ce27ea12fe06103795acf3c68d"><td class="memItemLeft" align="right" valign="top"><a id="ae15537ce27ea12fe06103795acf3c68d" name="ae15537ce27ea12fe06103795acf3c68d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_ECC_OVERRIDE</b>&#160;&#160;&#160;0x00000200U</td></tr>
+<tr class="separator:ae15537ce27ea12fe06103795acf3c68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac167daccd10770e318f9e40076611551"><td class="memItemLeft" align="right" valign="top"><a id="ac167daccd10770e318f9e40076611551" name="ac167daccd10770e318f9e40076611551"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_AUTOLOAD_ERROR</b>&#160;&#160;&#160;0x00000400U</td></tr>
+<tr class="separator:ac167daccd10770e318f9e40076611551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482dc6fc304c6207126886d1e82d9195"><td class="memItemLeft" align="right" valign="top"><a id="a482dc6fc304c6207126886d1e82d9195" name="a482dc6fc304c6207126886d1e82d9195"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_INSTRUCTION_ERROR</b>&#160;&#160;&#160;0x00000800U</td></tr>
+<tr class="separator:a482dc6fc304c6207126886d1e82d9195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6cbfcf78efd7be2bef30d62906dade2"><td class="memItemLeft" align="right" valign="top"><a id="ae6cbfcf78efd7be2bef30d62906dade2" name="ae6cbfcf78efd7be2bef30d62906dade2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_INSTRUCTION_INFO</b>&#160;&#160;&#160;0x00001000U</td></tr>
+<tr class="separator:ae6cbfcf78efd7be2bef30d62906dade2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee231669b49aaec4e6ff7513d5ec196e"><td class="memItemLeft" align="right" valign="top"><a id="aee231669b49aaec4e6ff7513d5ec196e" name="aee231669b49aaec4e6ff7513d5ec196e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_ECC_SELF_TEST</b>&#160;&#160;&#160;0x00002000U</td></tr>
+<tr class="separator:aee231669b49aaec4e6ff7513d5ec196e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342fe812e02f07a1776dd7e18b6d2e75"><td class="memItemLeft" align="right" valign="top"><a id="a342fe812e02f07a1776dd7e18b6d2e75" name="a342fe812e02f07a1776dd7e18b6d2e75"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_SELF_TEST_ERROR</b>&#160;&#160;&#160;0x00004000U</td></tr>
+<tr class="separator:a342fe812e02f07a1776dd7e18b6d2e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b907280d18c6b78b94af98053943371"><td class="memItemLeft" align="right" valign="top"><a id="a5b907280d18c6b78b94af98053943371" name="a5b907280d18c6b78b94af98053943371"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_SELF_TEST_DONE</b>&#160;&#160;&#160;0x00008000U</td></tr>
+<tr class="separator:a5b907280d18c6b78b94af98053943371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a799517031a8334a42807b119bb456c53"><td class="memItemLeft" align="right" valign="top"><a id="a799517031a8334a42807b119bb456c53" name="a799517031a8334a42807b119bb456c53"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_OUT</b>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a799517031a8334a42807b119bb456c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33345c73e3ecd0308d7dfd4d9d6e5068"><td class="memItemLeft" align="right" valign="top"><a id="a33345c73e3ecd0308d7dfd4d9d6e5068" name="a33345c73e3ecd0308d7dfd4d9d6e5068"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUTOLOAD_NO_FUSEROM_DATA</b>&#160;&#160;&#160;0x02U</td></tr>
+<tr class="separator:a33345c73e3ecd0308d7dfd4d9d6e5068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55be881def698e013350d3fdf8158b8"><td class="memItemLeft" align="right" valign="top"><a id="ab55be881def698e013350d3fdf8158b8" name="ab55be881def698e013350d3fdf8158b8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUTOLOAD_SIGN_FAIL</b>&#160;&#160;&#160;0x03U</td></tr>
+<tr class="separator:ab55be881def698e013350d3fdf8158b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534ffd478954216e76a4230153feeb40"><td class="memItemLeft" align="right" valign="top"><a id="a534ffd478954216e76a4230153feeb40" name="a534ffd478954216e76a4230153feeb40"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUTOLOAD_PROG_INTERRUPT</b>&#160;&#160;&#160;0x04U</td></tr>
+<tr class="separator:a534ffd478954216e76a4230153feeb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ace6eabf3670e9134a7622538d1032d"><td class="memItemLeft" align="right" valign="top"><a id="a1ace6eabf3670e9134a7622538d1032d" name="a1ace6eabf3670e9134a7622538d1032d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUTOLOAD_TWO_BIT_ERR</b>&#160;&#160;&#160;0x05U</td></tr>
+<tr class="separator:a1ace6eabf3670e9134a7622538d1032d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6776eee94565509c9fc3f154b07e18a"><td class="memItemLeft" align="right" valign="top"><a id="af6776eee94565509c9fc3f154b07e18a" name="af6776eee94565509c9fc3f154b07e18a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_WR_P_SET</b>&#160;&#160;&#160;0x06U</td></tr>
+<tr class="separator:af6776eee94565509c9fc3f154b07e18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad097629429c48d85ebb6b2d20e19ce"><td class="memItemLeft" align="right" valign="top"><a id="afad097629429c48d85ebb6b2d20e19ce" name="afad097629429c48d85ebb6b2d20e19ce"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_MNY_DATA_ITERTN</b>&#160;&#160;&#160;0x07U</td></tr>
+<tr class="separator:afad097629429c48d85ebb6b2d20e19ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c107cfa39405533495da56a8dc43487"><td class="memItemLeft" align="right" valign="top"><a id="a3c107cfa39405533495da56a8dc43487" name="a3c107cfa39405533495da56a8dc43487"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_MNY_CNTR_ITERTN</b>&#160;&#160;&#160;0x08U</td></tr>
+<tr class="separator:a3c107cfa39405533495da56a8dc43487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64126aedd15b0eb23868590eb948f8a6"><td class="memItemLeft" align="right" valign="top"><a id="a64126aedd15b0eb23868590eb948f8a6" name="a64126aedd15b0eb23868590eb948f8a6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UN_PROGRAME_BIT_SET</b>&#160;&#160;&#160;0x09U</td></tr>
+<tr class="separator:a64126aedd15b0eb23868590eb948f8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6d9bad83b9e7faecefc0b8ae60abf6"><td class="memItemLeft" align="right" valign="top"><a id="a5f6d9bad83b9e7faecefc0b8ae60abf6" name="a5f6d9bad83b9e7faecefc0b8ae60abf6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDUNDANT_REPAIR_ROW</b>&#160;&#160;&#160;0x0AU</td></tr>
+<tr class="separator:a5f6d9bad83b9e7faecefc0b8ae60abf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e804301a495082cdd76a8905709a8da"><td class="memItemLeft" align="right" valign="top"><a id="a8e804301a495082cdd76a8905709a8da" name="a8e804301a495082cdd76a8905709a8da"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_MNY_CRA_ITERTN</b>&#160;&#160;&#160;0x0BU</td></tr>
+<tr class="separator:a8e804301a495082cdd76a8905709a8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9262e67956257e83cb9c0fe890942c5"><td class="memItemLeft" align="right" valign="top"><a id="aa9262e67956257e83cb9c0fe890942c5" name="aa9262e67956257e83cb9c0fe890942c5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_SAME_DATA</b>&#160;&#160;&#160;0x0CU</td></tr>
+<tr class="separator:aa9262e67956257e83cb9c0fe890942c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140b24daaa84cf8383025968c613dbf4"><td class="memItemLeft" align="right" valign="top"><a id="a140b24daaa84cf8383025968c613dbf4" name="a140b24daaa84cf8383025968c613dbf4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_CMP_SKIP</b>&#160;&#160;&#160;0x0DU</td></tr>
+<tr class="separator:a140b24daaa84cf8383025968c613dbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a076677668a763e357c24c62e69efb"><td class="memItemLeft" align="right" valign="top"><a id="af3a076677668a763e357c24c62e69efb" name="af3a076677668a763e357c24c62e69efb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_ABORT</b>&#160;&#160;&#160;0x0EU</td></tr>
+<tr class="separator:af3a076677668a763e357c24c62e69efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8402fbb5ed7be5e13fb449af283bf4ae"><td class="memItemLeft" align="right" valign="top"><a id="a8402fbb5ed7be5e13fb449af283bf4ae" name="a8402fbb5ed7be5e13fb449af283bf4ae"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_INCORRECT_KEY</b>&#160;&#160;&#160;0x0FU</td></tr>
+<tr class="separator:a8402fbb5ed7be5e13fb449af283bf4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6905b6f6b54fa03628867cf89acefaf7"><td class="memItemLeft" align="right" valign="top"><a id="a6905b6f6b54fa03628867cf89acefaf7" name="a6905b6f6b54fa03628867cf89acefaf7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FUSEROM_LASTROW_STUCK</b>&#160;&#160;&#160;0x10U</td></tr>
+<tr class="separator:a6905b6f6b54fa03628867cf89acefaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a232bb3ab81ba618561dbd6cfb2406795"><td class="memItemLeft" align="right" valign="top"><a id="a232bb3ab81ba618561dbd6cfb2406795" name="a232bb3ab81ba618561dbd6cfb2406795"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUTOLOAD_SINGLE_BIT_ERR</b>&#160;&#160;&#160;0x15U</td></tr>
+<tr class="separator:a232bb3ab81ba618561dbd6cfb2406795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fbe4bce3f0de28d65b17a6ce0204fc"><td class="memItemLeft" align="right" valign="top"><a id="a45fbe4bce3f0de28d65b17a6ce0204fc" name="a45fbe4bce3f0de28d65b17a6ce0204fc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DUMPWORD_TWO_BIT_ERR</b>&#160;&#160;&#160;0x16U</td></tr>
+<tr class="separator:a45fbe4bce3f0de28d65b17a6ce0204fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a35d84247bc076e988d08b47837ca8"><td class="memItemLeft" align="right" valign="top"><a id="a75a35d84247bc076e988d08b47837ca8" name="a75a35d84247bc076e988d08b47837ca8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DUMPWORD_ONE_BIT_ERR</b>&#160;&#160;&#160;0x17U</td></tr>
+<tr class="separator:a75a35d84247bc076e988d08b47837ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb43f8f0ef0e6dff8579e43942f68f5"><td class="memItemLeft" align="right" valign="top"><a id="a1eb43f8f0ef0e6dff8579e43942f68f5" name="a1eb43f8f0ef0e6dff8579e43942f68f5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SELF_TEST_ERROR</b>&#160;&#160;&#160;0x18U</td></tr>
+<tr class="separator:a1eb43f8f0ef0e6dff8579e43942f68f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee29a44e45a315579ec9b6d24bbf30e3"><td class="memItemLeft" align="right" valign="top"><a id="aee29a44e45a315579ec9b6d24bbf30e3" name="aee29a44e45a315579ec9b6d24bbf30e3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>INSTRUCTION_DONE</b>&#160;&#160;&#160;0x20U</td></tr>
+<tr class="separator:aee29a44e45a315579ec9b6d24bbf30e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2264464750f063ca528884bd1dfabe0f"><td class="memItemLeft" align="right" valign="top"><a id="a2264464750f063ca528884bd1dfabe0f" name="a2264464750f063ca528884bd1dfabe0f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_UNPROGRAME_ROM</b>&#160;&#160;&#160;0x01000000U</td></tr>
+<tr class="separator:a2264464750f063ca528884bd1dfabe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a360eb47ba2240230ab1decfb31641be6"><td class="memItemLeft" align="right" valign="top"><a id="a360eb47ba2240230ab1decfb31641be6" name="a360eb47ba2240230ab1decfb31641be6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_CRA</b>&#160;&#160;&#160;0x02000000U</td></tr>
+<tr class="separator:a360eb47ba2240230ab1decfb31641be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea174de0517304b91eb4c1e219a66b9"><td class="memItemLeft" align="right" valign="top"><a id="a4ea174de0517304b91eb4c1e219a66b9" name="a4ea174de0517304b91eb4c1e219a66b9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DUMP_WORD</b>&#160;&#160;&#160;0x04000000U</td></tr>
+<tr class="separator:a4ea174de0517304b91eb4c1e219a66b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e2d51e6caa9469aadea6e266a3b27f"><td class="memItemLeft" align="right" valign="top"><a id="a89e2d51e6caa9469aadea6e266a3b27f" name="a89e2d51e6caa9469aadea6e266a3b27f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOAD_FUSE_SCAN_CHAIN</b>&#160;&#160;&#160;0x05000000U</td></tr>
+<tr class="separator:a89e2d51e6caa9469aadea6e266a3b27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96503442607870a6024e99421ccdafaf"><td class="memItemLeft" align="right" valign="top"><a id="a96503442607870a6024e99421ccdafaf" name="a96503442607870a6024e99421ccdafaf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAME_DATA</b>&#160;&#160;&#160;0x07000000U</td></tr>
+<tr class="separator:a96503442607870a6024e99421ccdafaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a91fc9c2f61dd864c7a0a3efc69e225"><td class="memItemLeft" align="right" valign="top"><a id="a9a91fc9c2f61dd864c7a0a3efc69e225" name="a9a91fc9c2f61dd864c7a0a3efc69e225"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RUN_AUTOLOAD_8</b>&#160;&#160;&#160;0x08000000U</td></tr>
+<tr class="separator:a9a91fc9c2f61dd864c7a0a3efc69e225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14c61a814ae08078433ea5cfdb18af4"><td class="memItemLeft" align="right" valign="top"><a id="ac14c61a814ae08078433ea5cfdb18af4" name="ac14c61a814ae08078433ea5cfdb18af4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RUN_AUTOLOAD_A</b>&#160;&#160;&#160;0x0A000000U</td></tr>
+<tr class="separator:ac14c61a814ae08078433ea5cfdb18af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288eecf0ec085c36f466df4551b7164a"><td class="memItemLeft" align="right" valign="top"><a id="a288eecf0ec085c36f466df4551b7164a" name="a288eecf0ec085c36f466df4551b7164a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_BOUNDARY_CONFIGVALUE</b>&#160;&#160;&#160;0x0000200FU</td></tr>
+<tr class="separator:a288eecf0ec085c36f466df4551b7164a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e524bdf80ba4e547dd866cc2fe03105"><td class="memItemLeft" align="right" valign="top"><a id="a8e524bdf80ba4e547dd866cc2fe03105" name="a8e524bdf80ba4e547dd866cc2fe03105"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_PINS_CONFIGVALUE</b>&#160;&#160;&#160;0x000082E0U</td></tr>
+<tr class="separator:a8e524bdf80ba4e547dd866cc2fe03105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba8312d57a3f0aec5c1ed160f1c694a"><td class="memItemLeft" align="right" valign="top"><a id="a7ba8312d57a3f0aec5c1ed160f1c694a" name="a7ba8312d57a3f0aec5c1ed160f1c694a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_SELFTESTCYCLES_CONFIGVALUE</b>&#160;&#160;&#160;0x00000258U</td></tr>
+<tr class="separator:a7ba8312d57a3f0aec5c1ed160f1c694a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f9eb7207341c8048067500147a4b5a"><td class="memItemLeft" align="right" valign="top"><a id="a57f9eb7207341c8048067500147a4b5a" name="a57f9eb7207341c8048067500147a4b5a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFC_SELFTESTSIGN_CONFIGVALUE</b>&#160;&#160;&#160;0x5362F97FU</td></tr>
+<tr class="separator:a57f9eb7207341c8048067500147a4b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4b462491b2c7905b5cba570ecd4ca2"><td class="memItemLeft" align="right" valign="top"><a id="a6a4b462491b2c7905b5cba570ecd4ca2" name="a6a4b462491b2c7905b5cba570ecd4ca2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CCMSELFCHECK_FAIL1</b>&#160;&#160;&#160;1U</td></tr>
+<tr class="separator:a6a4b462491b2c7905b5cba570ecd4ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38de74d4b442f036fb14557d3674351f"><td class="memItemLeft" align="right" valign="top"><a id="a38de74d4b442f036fb14557d3674351f" name="a38de74d4b442f036fb14557d3674351f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CCMSELFCHECK_FAIL2</b>&#160;&#160;&#160;2U</td></tr>
+<tr class="separator:a38de74d4b442f036fb14557d3674351f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24224cf0e2e92f068a44fb1d37b73cad"><td class="memItemLeft" align="right" valign="top"><a id="a24224cf0e2e92f068a44fb1d37b73cad" name="a24224cf0e2e92f068a44fb1d37b73cad"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CCMSELFCHECK_FAIL3</b>&#160;&#160;&#160;3U</td></tr>
+<tr class="separator:a24224cf0e2e92f068a44fb1d37b73cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01fc2a9e922fa7819cae218945564050"><td class="memItemLeft" align="right" valign="top"><a id="a01fc2a9e922fa7819cae218945564050" name="a01fc2a9e922fa7819cae218945564050"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CCMSELFCHECK_FAIL4</b>&#160;&#160;&#160;4U</td></tr>
+<tr class="separator:a01fc2a9e922fa7819cae218945564050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c715255a484a26947c50634201ddb59"><td class="memItemLeft" align="right" valign="top"><a id="a2c715255a484a26947c50634201ddb59" name="a2c715255a484a26947c50634201ddb59"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBISTSELFCHECK_FAIL1</b>&#160;&#160;&#160;5U</td></tr>
+<tr class="separator:a2c715255a484a26947c50634201ddb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4cd5422a62d7c975be886444583d320"><td class="memItemLeft" align="right" valign="top"><a id="ad4cd5422a62d7c975be886444583d320" name="ad4cd5422a62d7c975be886444583d320"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFCCHECK_FAIL1</b>&#160;&#160;&#160;6U</td></tr>
+<tr class="separator:ad4cd5422a62d7c975be886444583d320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab106d935aef8d0fb46b717126a9d501"><td class="memItemLeft" align="right" valign="top"><a id="aab106d935aef8d0fb46b717126a9d501" name="aab106d935aef8d0fb46b717126a9d501"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EFCCHECK_FAIL2</b>&#160;&#160;&#160;7U</td></tr>
+<tr class="separator:aab106d935aef8d0fb46b717126a9d501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba81c7e85cf7bc8a2b34cbf0f826264a"><td class="memItemLeft" align="right" valign="top"><a id="aba81c7e85cf7bc8a2b34cbf0f826264a" name="aba81c7e85cf7bc8a2b34cbf0f826264a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FMCECCCHECK_FAIL1</b>&#160;&#160;&#160;8U</td></tr>
+<tr class="separator:aba81c7e85cf7bc8a2b34cbf0f826264a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6108549362abadab5cc3de30c4407797"><td class="memItemLeft" align="right" valign="top"><a id="a6108549362abadab5cc3de30c4407797" name="a6108549362abadab5cc3de30c4407797"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKB0RAMECC_FAIL1</b>&#160;&#160;&#160;9U</td></tr>
+<tr class="separator:a6108549362abadab5cc3de30c4407797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651d3db51690b813ac5c6b46a8a7fefd"><td class="memItemLeft" align="right" valign="top"><a id="a651d3db51690b813ac5c6b46a8a7fefd" name="a651d3db51690b813ac5c6b46a8a7fefd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKB1RAMECC_FAIL1</b>&#160;&#160;&#160;10U</td></tr>
+<tr class="separator:a651d3db51690b813ac5c6b46a8a7fefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c5aa7ced6f67ab9436a1c545fa2891"><td class="memItemLeft" align="right" valign="top"><a id="af9c5aa7ced6f67ab9436a1c545fa2891" name="af9c5aa7ced6f67ab9436a1c545fa2891"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKFLASHECC_FAIL1</b>&#160;&#160;&#160;11U</td></tr>
+<tr class="separator:af9c5aa7ced6f67ab9436a1c545fa2891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9357f464c503e3c03c63675e25e3af"><td class="memItemLeft" align="right" valign="top"><a id="a8d9357f464c503e3c03c63675e25e3af" name="a8d9357f464c503e3c03c63675e25e3af"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VIMPARITYCHECK_FAIL1</b>&#160;&#160;&#160;12U</td></tr>
+<tr class="separator:a8d9357f464c503e3c03c63675e25e3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a329fb87cc87abaad50e23037883b0bad"><td class="memItemLeft" align="right" valign="top"><a id="a329fb87cc87abaad50e23037883b0bad" name="a329fb87cc87abaad50e23037883b0bad"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DMAPARITYCHECK_FAIL1</b>&#160;&#160;&#160;13U</td></tr>
+<tr class="separator:a329fb87cc87abaad50e23037883b0bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b491ff4392725401c2b0f0fcdbbeb71"><td class="memItemLeft" align="right" valign="top"><a id="a6b491ff4392725401c2b0f0fcdbbeb71" name="a6b491ff4392725401c2b0f0fcdbbeb71"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HET1PARITYCHECK_FAIL1</b>&#160;&#160;&#160;14U</td></tr>
+<tr class="separator:a6b491ff4392725401c2b0f0fcdbbeb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef0d372d5efab7a7050c298926ca599"><td class="memItemLeft" align="right" valign="top"><a id="adef0d372d5efab7a7050c298926ca599" name="adef0d372d5efab7a7050c298926ca599"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HTU1PARITYCHECK_FAIL1</b>&#160;&#160;&#160;15U</td></tr>
+<tr class="separator:adef0d372d5efab7a7050c298926ca599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b59f48c8b4cd31855bc8be26799fd5"><td class="memItemLeft" align="right" valign="top"><a id="a71b59f48c8b4cd31855bc8be26799fd5" name="a71b59f48c8b4cd31855bc8be26799fd5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HET2PARITYCHECK_FAIL1</b>&#160;&#160;&#160;16U</td></tr>
+<tr class="separator:a71b59f48c8b4cd31855bc8be26799fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3670fe5135c8d58ca7a14494f8bacd1d"><td class="memItemLeft" align="right" valign="top"><a id="a3670fe5135c8d58ca7a14494f8bacd1d" name="a3670fe5135c8d58ca7a14494f8bacd1d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HTU2PARITYCHECK_FAIL1</b>&#160;&#160;&#160;17U</td></tr>
+<tr class="separator:a3670fe5135c8d58ca7a14494f8bacd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23673ac7744faf671fa938a4b4aa269"><td class="memItemLeft" align="right" valign="top"><a id="aa23673ac7744faf671fa938a4b4aa269" name="aa23673ac7744faf671fa938a4b4aa269"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADC1PARITYCHECK_FAIL1</b>&#160;&#160;&#160;18U</td></tr>
+<tr class="separator:aa23673ac7744faf671fa938a4b4aa269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf541dd29cf34228788612913ef30a9"><td class="memItemLeft" align="right" valign="top"><a id="afaf541dd29cf34228788612913ef30a9" name="afaf541dd29cf34228788612913ef30a9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADC2PARITYCHECK_FAIL1</b>&#160;&#160;&#160;19U</td></tr>
+<tr class="separator:afaf541dd29cf34228788612913ef30a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037dbcfb034678b2dee3b9b9eeca0cb2"><td class="memItemLeft" align="right" valign="top"><a id="a037dbcfb034678b2dee3b9b9eeca0cb2" name="a037dbcfb034678b2dee3b9b9eeca0cb2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CAN1PARITYCHECK_FAIL1</b>&#160;&#160;&#160;20U</td></tr>
+<tr class="separator:a037dbcfb034678b2dee3b9b9eeca0cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f82c4db94689255f861b821a4f1252c"><td class="memItemLeft" align="right" valign="top"><a id="a6f82c4db94689255f861b821a4f1252c" name="a6f82c4db94689255f861b821a4f1252c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CAN2PARITYCHECK_FAIL1</b>&#160;&#160;&#160;21U</td></tr>
+<tr class="separator:a6f82c4db94689255f861b821a4f1252c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e0f1865820cce3f8116aff76010b4a"><td class="memItemLeft" align="right" valign="top"><a id="a65e0f1865820cce3f8116aff76010b4a" name="a65e0f1865820cce3f8116aff76010b4a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CAN3PARITYCHECK_FAIL1</b>&#160;&#160;&#160;22U</td></tr>
+<tr class="separator:a65e0f1865820cce3f8116aff76010b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b267a9a1005ec0f21fece5db4c4a868"><td class="memItemLeft" align="right" valign="top"><a id="a4b267a9a1005ec0f21fece5db4c4a868" name="a4b267a9a1005ec0f21fece5db4c4a868"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MIBSPI1PARITYCHECK_FAIL1</b>&#160;&#160;&#160;23U</td></tr>
+<tr class="separator:a4b267a9a1005ec0f21fece5db4c4a868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d3f63b7e6d8c2a9936c7d8edd6a10e"><td class="memItemLeft" align="right" valign="top"><a id="ab7d3f63b7e6d8c2a9936c7d8edd6a10e" name="ab7d3f63b7e6d8c2a9936c7d8edd6a10e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MIBSPI3PARITYCHECK_FAIL1</b>&#160;&#160;&#160;24U</td></tr>
+<tr class="separator:ab7d3f63b7e6d8c2a9936c7d8edd6a10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae508f304998876bd980e454daddbbfeb"><td class="memItemLeft" align="right" valign="top"><a id="ae508f304998876bd980e454daddbbfeb" name="ae508f304998876bd980e454daddbbfeb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MIBSPI5PARITYCHECK_FAIL1</b>&#160;&#160;&#160;25U</td></tr>
+<tr class="separator:ae508f304998876bd980e454daddbbfeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9894f581ca5c3693744a405d1bd9139"><td class="memItemLeft" align="right" valign="top"><a id="ae9894f581ca5c3693744a405d1bd9139" name="ae9894f581ca5c3693744a405d1bd9139"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKRAMECC_FAIL1</b>&#160;&#160;&#160;26U</td></tr>
+<tr class="separator:ae9894f581ca5c3693744a405d1bd9139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c67cbe6dae94e62e3e7d9c60e81ecd"><td class="memItemLeft" align="right" valign="top"><a id="a31c67cbe6dae94e62e3e7d9c60e81ecd" name="a31c67cbe6dae94e62e3e7d9c60e81ecd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKRAMECC_FAIL2</b>&#160;&#160;&#160;27U</td></tr>
+<tr class="separator:a31c67cbe6dae94e62e3e7d9c60e81ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac78720f87a8cc27894655da45c5dce72"><td class="memItemLeft" align="right" valign="top"><a id="ac78720f87a8cc27894655da45c5dce72" name="ac78720f87a8cc27894655da45c5dce72"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKCLOCKMONITOR_FAIL1</b>&#160;&#160;&#160;28U</td></tr>
+<tr class="separator:ac78720f87a8cc27894655da45c5dce72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1d71b18109c9e69133e31bf6b1f816"><td class="memItemLeft" align="right" valign="top"><a id="a4f1d71b18109c9e69133e31bf6b1f816" name="a4f1d71b18109c9e69133e31bf6b1f816"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKFLASHEEPROMECC_FAIL1</b>&#160;&#160;&#160;29U</td></tr>
+<tr class="separator:a4f1d71b18109c9e69133e31bf6b1f816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fec5649dfd374b3e1445a3e9f2f6e11"><td class="memItemLeft" align="right" valign="top"><a id="a2fec5649dfd374b3e1445a3e9f2f6e11" name="a2fec5649dfd374b3e1445a3e9f2f6e11"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKFLASHEEPROMECC_FAIL2</b>&#160;&#160;&#160;31U</td></tr>
+<tr class="separator:a2fec5649dfd374b3e1445a3e9f2f6e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b1e3e27d73d1e82e3b0e3e70f6b30a"><td class="memItemLeft" align="right" valign="top"><a id="a98b1e3e27d73d1e82e3b0e3e70f6b30a" name="a98b1e3e27d73d1e82e3b0e3e70f6b30a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKFLASHEEPROMECC_FAIL3</b>&#160;&#160;&#160;32U</td></tr>
+<tr class="separator:a98b1e3e27d73d1e82e3b0e3e70f6b30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb27d83424219db43bb0510f0700fa09"><td class="memItemLeft" align="right" valign="top"><a id="abb27d83424219db43bb0510f0700fa09" name="abb27d83424219db43bb0510f0700fa09"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKFLASHEEPROMECC_FAIL4</b>&#160;&#160;&#160;33U</td></tr>
+<tr class="separator:abb27d83424219db43bb0510f0700fa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5c5a26aae744c0f4f08b377fc1a600"><td class="memItemLeft" align="right" valign="top"><a id="aff5c5a26aae744c0f4f08b377fc1a600" name="aff5c5a26aae744c0f4f08b377fc1a600"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKPLL1SLIP_FAIL1</b>&#160;&#160;&#160;34U</td></tr>
+<tr class="separator:aff5c5a26aae744c0f4f08b377fc1a600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e3184d98e0ce9f972ca6d99b4a33b89"><td class="memItemLeft" align="right" valign="top"><a id="a4e3184d98e0ce9f972ca6d99b4a33b89" name="a4e3184d98e0ce9f972ca6d99b4a33b89"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKRAMADDRPARITY_FAIL1</b>&#160;&#160;&#160;35U</td></tr>
+<tr class="separator:a4e3184d98e0ce9f972ca6d99b4a33b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b7df35ad159115c9c5d9f31180d23e"><td class="memItemLeft" align="right" valign="top"><a id="ad8b7df35ad159115c9c5d9f31180d23e" name="ad8b7df35ad159115c9c5d9f31180d23e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKRAMADDRPARITY_FAIL2</b>&#160;&#160;&#160;36U</td></tr>
+<tr class="separator:ad8b7df35ad159115c9c5d9f31180d23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6a4641e6e1910d58b6aa5f15ebd30a"><td class="memItemLeft" align="right" valign="top"><a id="a4e6a4641e6e1910d58b6aa5f15ebd30a" name="a4e6a4641e6e1910d58b6aa5f15ebd30a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKRAMUERRTEST_FAIL1</b>&#160;&#160;&#160;37U</td></tr>
+<tr class="separator:a4e6a4641e6e1910d58b6aa5f15ebd30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2058f60f557d121472d78be2a1e0be56"><td class="memItemLeft" align="right" valign="top"><a id="a2058f60f557d121472d78be2a1e0be56" name="a2058f60f557d121472d78be2a1e0be56"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHECKRAMUERRTEST_FAIL2</b>&#160;&#160;&#160;38U</td></tr>
+<tr class="separator:a2058f60f557d121472d78be2a1e0be56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd0263f8d9e1086d16872a1d161911d"><td class="memItemLeft" align="right" valign="top"><a id="a1cd0263f8d9e1086d16872a1d161911d" name="a1cd0263f8d9e1086d16872a1d161911d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FMCBUS1PARITYCHECK_FAIL1</b>&#160;&#160;&#160;39U</td></tr>
+<tr class="separator:a1cd0263f8d9e1086d16872a1d161911d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd60ff5ea372fd4b33bc0d0f10a0f0a3"><td class="memItemLeft" align="right" valign="top"><a id="acd60ff5ea372fd4b33bc0d0f10a0f0a3" name="acd60ff5ea372fd4b33bc0d0f10a0f0a3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FMCBUS1PARITYCHECK_FAIL2</b>&#160;&#160;&#160;40U</td></tr>
+<tr class="separator:acd60ff5ea372fd4b33bc0d0f10a0f0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ea1504dee7ed93929e037b28014215"><td class="memItemLeft" align="right" valign="top"><a id="ae0ea1504dee7ed93929e037b28014215" name="ae0ea1504dee7ed93929e037b28014215"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBISTSELFCHECK_FAIL2</b>&#160;&#160;&#160;41U</td></tr>
+<tr class="separator:ae0ea1504dee7ed93929e037b28014215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c9efe1c93f8f873290e8eb50d58d46"><td class="memItemLeft" align="right" valign="top"><a id="ad5c9efe1c93f8f873290e8eb50d58d46" name="ad5c9efe1c93f8f873290e8eb50d58d46"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PBISTSELFCHECK_FAIL3</b>&#160;&#160;&#160;42U</td></tr>
+<tr class="separator:ad5c9efe1c93f8f873290e8eb50d58d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da28ec324d888cbab0ee3630cd8fd14"><td class="memItemLeft" align="right" valign="top"><a id="a4da28ec324d888cbab0ee3630cd8fd14" name="a4da28ec324d888cbab0ee3630cd8fd14"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CCMR4_CCMKEYR_CONFIGVALUE</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a4da28ec324d888cbab0ee3630cd8fd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:afbacca7dc2c86878ea357e715b7481f8"><td class="memItemLeft" align="right" valign="top"><a id="afbacca7dc2c86878ea357e715b7481f8" name="afbacca7dc2c86878ea357e715b7481f8"></a>
+typedef struct <a class="el" href="structpbist__config__reg.html">pbist_config_reg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pbist_config_reg_t</b></td></tr>
+<tr class="separator:afbacca7dc2c86878ea357e715b7481f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317205a205a5d56542b84531609809f1"><td class="memItemLeft" align="right" valign="top"><a id="a317205a205a5d56542b84531609809f1" name="a317205a205a5d56542b84531609809f1"></a>
+typedef struct <a class="el" href="structstc__config__reg.html">stc_config_reg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stc_config_reg_t</b></td></tr>
+<tr class="separator:a317205a205a5d56542b84531609809f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0337e3b52f237f6b89048c9fe8c4a210"><td class="memItemLeft" align="right" valign="top"><a id="a0337e3b52f237f6b89048c9fe8c4a210" name="a0337e3b52f237f6b89048c9fe8c4a210"></a>
+typedef struct <a class="el" href="structefc__config__reg.html">efc_config_reg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>efc_config_reg_t</b></td></tr>
+<tr class="separator:a0337e3b52f237f6b89048c9fe8c4a210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af698ac3e21b676af198d4a5c00ed1626"><td class="memItemLeft" align="right" valign="top"><a id="af698ac3e21b676af198d4a5c00ed1626" name="af698ac3e21b676af198d4a5c00ed1626"></a>
+typedef struct <a class="el" href="structccmr4__config__reg.html">ccmr4_config_reg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ccmr4_config_reg_t</b></td></tr>
+<tr class="separator:af698ac3e21b676af198d4a5c00ed1626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:aedcde68ef8c4640e211695cebd10afa3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#aedcde68ef8c4640e211695cebd10afa3">pbistPort</a> { <a class="el" href="sys__selftest_8h.html#aedcde68ef8c4640e211695cebd10afa3a2f1ea5882d645e86e9a7e8f809c5f5ea">PBIST_PORT0</a> = 0U
+, <a class="el" href="sys__selftest_8h.html#aedcde68ef8c4640e211695cebd10afa3ac933996e0cb7472c44de4b2f2f18e340">PBIST_PORT1</a> = 1U
+ }</td></tr>
+<tr class="memdesc:aedcde68ef8c4640e211695cebd10afa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias names for pbist Port number.  <a href="sys__selftest_8h.html#aedcde68ef8c4640e211695cebd10afa3">Подробнее...</a><br /></td></tr>
+<tr class="separator:aedcde68ef8c4640e211695cebd10afa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfcacf6330b62bf56ff01b0016dc43d0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0">pbistAlgo</a> { <br />
+&#160;&#160;<a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0af4dbf763a322a39325c6fe8ef24512f3">PBIST_TripleReadSlow</a> = 0x00000001U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a3cb6e6cbfa091ed9eb5158e68a2bb573">PBIST_TripleReadFast</a> = 0x00000002U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a145f5abb0d1630f7dc3919cab37af13b">PBIST_March13N_DP</a> = 0x00000004U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a5c6bcc919d0ee3f730d98812346148d8">PBIST_March13N_SP</a> = 0x00000008U
+, <br />
+&#160;&#160;<a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a31c36c35bbfe957b4f6225cf67dd1f58">PBIST_DOWN1a_DP</a> = 0x00000010U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a8702034b17d9db4bb18e08316fcc4b73">PBIST_DOWN1a_SP</a> = 0x00000020U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0ad17fc4abcff110ca8d3e8fd7ce1c252b">PBIST_MapColumn_DP</a> = 0x00000040U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a73e5dcee238f5f5d45e510363979bd8f">PBIST_MapColumn_SP</a> = 0x00000080U
+, <br />
+&#160;&#160;<a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0ad80f8831809b125fcf872eb2d8fa2516">PBIST_Precharge_DP</a> = 0x00000100U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a3b93011b85a66e4b539f3546d9d511a4">PBIST_Precharge_SP</a> = 0x00000200U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a2c1c27da2103ab9b7a079539c19d51b4">PBIST_DTXN2a_DP</a> = 0x00000400U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0ad9f3d4a20607f6b6b9745a1b8461d5fd">PBIST_DTXN2a_SP</a> = 0x00000800U
+, <br />
+&#160;&#160;<a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a2d81c60e8e03c58e685ce600819be3b9">PBIST_PMOSOpen_DP</a> = 0x00001000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a89088597e412ed375f0fb37dfd075e0c">PBIST_PMOSOpen_SP</a> = 0x00002000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a2cbd15e057f6952a6ae3e17e419aec79">PBIST_PPMOSOpenSlice1_DP</a> = 0x00004000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a2d2b586d443245d0b3f19719c8fa595e">PBIST_PPMOSOpenSlice2_DP</a> = 0x00008000U
+, <br />
+&#160;&#160;<a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a54e7e5c71a565a37d275301cbb90492e">PBIST_Flip10_DP</a> = 0x00010000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a2c8460e84b96f150fe537258ab5bcb8b">PBIST_Flip10_SP</a> = 0x00020000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a5649232fff072a106f9caadada52bde3">PBIST_IDDQ_DP</a> = 0x00040000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a312bcd90a80f7e21dbcfd86f36580d6a">PBIST_IDDQ_SP</a> = 0x00080000U
+, <br />
+&#160;&#160;<a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a528b4a83d409a6c38890d84c80b33110">PBIST_Retention_DP</a> = 0x00100000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a6fb080b84d2de9f1b51ca4a135f5cef5">PBIST_Retention_SP</a> = 0x00200000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a8ae8831ab9d156185cfe6add75747f11">PBIST_IDDQ2_DP</a> = 0x00400000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0aaa10af6b1ef6a452d4c5697c90d768bc">PBIST_IDDQ2_SP</a> = 0x00800000U
+, <br />
+&#160;&#160;<a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a2ef8bd1190cd0470504d1fa7a08baba9">PBIST_Retention2_DP</a> = 0x01000000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a971c53636d2d1a3d7c6548c0c821debd">PBIST_Retention2_SP</a> = 0x02000000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0a5aadd9835f14c322dd264f4c7366353f">PBIST_IDDQRowStripe_DP</a> = 0x04000000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0abce63d0b00686b76dbf44d2a622df0fe">PBIST_IDDQRowStripe_SP</a> = 0x08000000U
+, <br />
+&#160;&#160;<a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0ad5a55084ac740ad2c5e433167b4b858f">PBIST_IDDQRowStripe2_DP</a> = 0x10000000U
+, <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0ae8b5ceba9ae5a71e3b6cf4a9b345d252">PBIST_IDDQRowStripe2_SP</a> = 0x20000000U
+<br />
+ }</td></tr>
+<tr class="memdesc:adfcacf6330b62bf56ff01b0016dc43d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias names for pbist Algorithm.  <a href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:adfcacf6330b62bf56ff01b0016dc43d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a01f1d76b843e64acb8bb464d79b9cd45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a01f1d76b843e64acb8bb464d79b9cd45">memoryPort0TestFailNotification</a> (uint32 groupSelect, uint32 dataSelect, uint32 address, uint32 data)</td></tr>
+<tr class="memdesc:a01f1d76b843e64acb8bb464d79b9cd45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory Port 0 test fail notification.  <br /></td></tr>
+<tr class="separator:a01f1d76b843e64acb8bb464d79b9cd45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27770bcd3ed64bdd085157a5c99a3502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a27770bcd3ed64bdd085157a5c99a3502">memoryPort1TestFailNotification</a> (uint32 groupSelect, uint32 dataSelect, uint32 address, uint32 data)</td></tr>
+<tr class="memdesc:a27770bcd3ed64bdd085157a5c99a3502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory Port 1 test fail notification.  <br /></td></tr>
+<tr class="separator:a27770bcd3ed64bdd085157a5c99a3502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edb8a500b4ad0f3e87b93245856a937"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a1edb8a500b4ad0f3e87b93245856a937">pbistGetConfigValue</a> (<a class="el" href="structpbist__config__reg.html">pbist_config_reg_t</a> *config_reg, <a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a> type)</td></tr>
+<tr class="memdesc:a1edb8a500b4ad0f3e87b93245856a937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial or current values of the configuration registers.  <br /></td></tr>
+<tr class="separator:a1edb8a500b4ad0f3e87b93245856a937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb360fa06ebe94d06978d25371ed2140"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#afb360fa06ebe94d06978d25371ed2140">stcGetConfigValue</a> (<a class="el" href="structstc__config__reg.html">stc_config_reg_t</a> *config_reg, <a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a> type)</td></tr>
+<tr class="memdesc:afb360fa06ebe94d06978d25371ed2140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial or current values of the configuration registers.  <br /></td></tr>
+<tr class="separator:afb360fa06ebe94d06978d25371ed2140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76ed167d7b4b27eedea0eb37de6acc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#ac76ed167d7b4b27eedea0eb37de6acc2">efcGetConfigValue</a> (<a class="el" href="structefc__config__reg.html">efc_config_reg_t</a> *config_reg, <a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a> type)</td></tr>
+<tr class="memdesc:ac76ed167d7b4b27eedea0eb37de6acc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial or current values of the configuration registers.  <br /></td></tr>
+<tr class="separator:ac76ed167d7b4b27eedea0eb37de6acc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7aaa1d96319ecb5d7b6cec31c56670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a2f7aaa1d96319ecb5d7b6cec31c56670">ccmSelfCheck</a> (void)</td></tr>
+<tr class="memdesc:a2f7aaa1d96319ecb5d7b6cec31c56670"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCM module self check Driver.  <br /></td></tr>
+<tr class="separator:a2f7aaa1d96319ecb5d7b6cec31c56670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f7309e862bab7a63c2c176c4b7cee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a54f7309e862bab7a63c2c176c4b7cee9">stcSelfCheck</a> (void)</td></tr>
+<tr class="memdesc:a54f7309e862bab7a63c2c176c4b7cee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">STC module self check Driver.  <br /></td></tr>
+<tr class="separator:a54f7309e862bab7a63c2c176c4b7cee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c1518db428c8ab63a56048cadfb4e6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a2c1518db428c8ab63a56048cadfb4e6e">stcSelfCheckFail</a> (void)</td></tr>
+<tr class="memdesc:a2c1518db428c8ab63a56048cadfb4e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">STC Self test check fail service routine.  <br /></td></tr>
+<tr class="separator:a2c1518db428c8ab63a56048cadfb4e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27cee1191b0027e90cbb9c66983596b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a27cee1191b0027e90cbb9c66983596b9">cpuSelfTest</a> (uint32 no_of_intervals, uint32 max_timeout, boolean restart_test)</td></tr>
+<tr class="memdesc:a27cee1191b0027e90cbb9c66983596b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU self test Driver.  <br /></td></tr>
+<tr class="separator:a27cee1191b0027e90cbb9c66983596b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932e8fff5749ae8038f0fbbe9029ec44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a932e8fff5749ae8038f0fbbe9029ec44">cpuSelfTestFail</a> (void)</td></tr>
+<tr class="memdesc:a932e8fff5749ae8038f0fbbe9029ec44"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU Self test check fail service routine.  <br /></td></tr>
+<tr class="separator:a932e8fff5749ae8038f0fbbe9029ec44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3184dfe0846903e1111348942160dfe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a3184dfe0846903e1111348942160dfe7">memoryInit</a> (uint32 ram)</td></tr>
+<tr class="memdesc:a3184dfe0846903e1111348942160dfe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory Initialization Driver.  <br /></td></tr>
+<tr class="separator:a3184dfe0846903e1111348942160dfe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b7e2d9da2b5166a9ea002d431e54ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#ac9b7e2d9da2b5166a9ea002d431e54ef">pbistSelfCheck</a> (void)</td></tr>
+<tr class="memdesc:ac9b7e2d9da2b5166a9ea002d431e54ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">PBIST self test Driver.  <br /></td></tr>
+<tr class="separator:ac9b7e2d9da2b5166a9ea002d431e54ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5fcc064d8d51dda635d83235cf37e3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#ad5fcc064d8d51dda635d83235cf37e3e">pbistRun</a> (uint32 raminfoL, uint32 algomask)</td></tr>
+<tr class="memdesc:ad5fcc064d8d51dda635d83235cf37e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU self test Driver.  <br /></td></tr>
+<tr class="separator:ad5fcc064d8d51dda635d83235cf37e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea172c81d7549cd8181de098a91b752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a1ea172c81d7549cd8181de098a91b752">pbistStop</a> (void)</td></tr>
+<tr class="memdesc:a1ea172c81d7549cd8181de098a91b752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to stop PBIST test enabled.  <br /></td></tr>
+<tr class="separator:a1ea172c81d7549cd8181de098a91b752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2675f441b1c7bbadd9877cfd586bf959"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a2675f441b1c7bbadd9877cfd586bf959">pbistIsTestCompleted</a> (void)</td></tr>
+<tr class="memdesc:a2675f441b1c7bbadd9877cfd586bf959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if the PBIST test is completed.  <br /></td></tr>
+<tr class="separator:a2675f441b1c7bbadd9877cfd586bf959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975a794505ddcaf5d1c68e7a229fc8ae"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a975a794505ddcaf5d1c68e7a229fc8ae">pbistIsTestPassed</a> (void)</td></tr>
+<tr class="memdesc:a975a794505ddcaf5d1c68e7a229fc8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if the PBIST test is completed successfully.  <br /></td></tr>
+<tr class="separator:a975a794505ddcaf5d1c68e7a229fc8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3edbda42e27655bb5e9a3d067ab09caf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a3edbda42e27655bb5e9a3d067ab09caf">pbistPortTestStatus</a> (uint32 port)</td></tr>
+<tr class="memdesc:a3edbda42e27655bb5e9a3d067ab09caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if the PBIST Port test is completed successfully.  <br /></td></tr>
+<tr class="separator:a3edbda42e27655bb5e9a3d067ab09caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc8a571e336b788da775b5279597c9f9"><td class="memItemLeft" align="right" valign="top"><a id="adc8a571e336b788da775b5279597c9f9" name="adc8a571e336b788da775b5279597c9f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pbistFail</b> (void)</td></tr>
+<tr class="separator:adc8a571e336b788da775b5279597c9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646eb27315f3ce47edde97c563389f76"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a646eb27315f3ce47edde97c563389f76">efcCheck</a> (void)</td></tr>
+<tr class="memdesc:a646eb27315f3ce47edde97c563389f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">EFUSE module self check Driver.  <br /></td></tr>
+<tr class="separator:a646eb27315f3ce47edde97c563389f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6cec31a44e7c8e325a744e9bcbf601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#afd6cec31a44e7c8e325a744e9bcbf601">efcSelfTest</a> (void)</td></tr>
+<tr class="memdesc:afd6cec31a44e7c8e325a744e9bcbf601"><td class="mdescLeft">&#160;</td><td class="mdescRight">EFUSE module self check Driver.  <br /></td></tr>
+<tr class="separator:afd6cec31a44e7c8e325a744e9bcbf601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9973f032c29389602b684d30ea390fad"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a9973f032c29389602b684d30ea390fad">efcStuckZeroTest</a> (void)</td></tr>
+<tr class="memdesc:a9973f032c29389602b684d30ea390fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if the EFUSE Stuck at zero test is completed successfully.  <br /></td></tr>
+<tr class="separator:a9973f032c29389602b684d30ea390fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44409ae54516ba10303dd5c011f4fa6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#ad44409ae54516ba10303dd5c011f4fa6">checkefcSelfTest</a> (void)</td></tr>
+<tr class="memdesc:ad44409ae54516ba10303dd5c011f4fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">EFUSE module self check Driver.  <br /></td></tr>
+<tr class="separator:ad44409ae54516ba10303dd5c011f4fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3248a50d5c0516f336b46aa0114ba9be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a3248a50d5c0516f336b46aa0114ba9be">fmcBus2Check</a> (void)</td></tr>
+<tr class="memdesc:a3248a50d5c0516f336b46aa0114ba9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Self Check Flash Bus2 Interface.  <br /></td></tr>
+<tr class="separator:a3248a50d5c0516f336b46aa0114ba9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183a0d9f1300394cff2f8fe0aa034d4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a183a0d9f1300394cff2f8fe0aa034d4b">fmcECCcheck</a> (void)</td></tr>
+<tr class="memdesc:a183a0d9f1300394cff2f8fe0aa034d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Flash ECC Single Bit and multi Bit errors detection logic.  <br /></td></tr>
+<tr class="separator:a183a0d9f1300394cff2f8fe0aa034d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa035d17d1ecb2d6bb095a5c0b44a2143"><td class="memItemLeft" align="right" valign="top"><a id="aa035d17d1ecb2d6bb095a5c0b44a2143" name="aa035d17d1ecb2d6bb095a5c0b44a2143"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fmcBus1ParityCheck</b> (void)</td></tr>
+<tr class="separator:aa035d17d1ecb2d6bb095a5c0b44a2143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4cbf907aa7750c1c3601ed191842dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#ad4cbf907aa7750c1c3601ed191842dd9">checkB0RAMECC</a> (void)</td></tr>
+<tr class="memdesc:ad4cbf907aa7750c1c3601ed191842dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check TCRAM1 ECC error detection logic.  <br /></td></tr>
+<tr class="separator:ad4cbf907aa7750c1c3601ed191842dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e986484f3be2af5cd3a7595ba346c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#ab5e986484f3be2af5cd3a7595ba346c2">checkB1RAMECC</a> (void)</td></tr>
+<tr class="memdesc:ab5e986484f3be2af5cd3a7595ba346c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check TCRAM2 ECC error detection logic.  <br /></td></tr>
+<tr class="separator:ab5e986484f3be2af5cd3a7595ba346c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02bb81fd1b585ba20d4c6e7ed427a4ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a02bb81fd1b585ba20d4c6e7ed427a4ac">checkFlashECC</a> (void)</td></tr>
+<tr class="memdesc:a02bb81fd1b585ba20d4c6e7ed427a4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Flash ECC error detection logic.  <br /></td></tr>
+<tr class="separator:a02bb81fd1b585ba20d4c6e7ed427a4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7297818ebd5ffd62488091aa9633bf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#af7297818ebd5ffd62488091aa9633bf9">vimParityCheck</a> (void)</td></tr>
+<tr class="memdesc:af7297818ebd5ffd62488091aa9633bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to check VIM RAM parity error detection and signaling mechanism.  <br /></td></tr>
+<tr class="separator:af7297818ebd5ffd62488091aa9633bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0267c576250cc80c1ffafae379fcd937"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a0267c576250cc80c1ffafae379fcd937">adc1ParityCheck</a> (void)</td></tr>
+<tr class="memdesc:a0267c576250cc80c1ffafae379fcd937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to check ADC1 RAM parity error detection and signaling mechanism.  <br /></td></tr>
+<tr class="separator:a0267c576250cc80c1ffafae379fcd937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f658578435dc4d3984c76a3d2ed959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a66f658578435dc4d3984c76a3d2ed959">het1ParityCheck</a> (void)</td></tr>
+<tr class="memdesc:a66f658578435dc4d3984c76a3d2ed959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to check HET1 RAM parity error detection and signaling mechanism.  <br /></td></tr>
+<tr class="separator:a66f658578435dc4d3984c76a3d2ed959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f69665c7b7abb003cfb4a314ce1e943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a5f69665c7b7abb003cfb4a314ce1e943">htu1ParityCheck</a> (void)</td></tr>
+<tr class="memdesc:a5f69665c7b7abb003cfb4a314ce1e943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to check HTU1 RAM parity error detection and signaling mechanism.  <br /></td></tr>
+<tr class="separator:a5f69665c7b7abb003cfb4a314ce1e943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034e78d72a2a9231d27d78256d3d194e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a034e78d72a2a9231d27d78256d3d194e">can1ParityCheck</a> (void)</td></tr>
+<tr class="memdesc:a034e78d72a2a9231d27d78256d3d194e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to check CAN1 RAM parity error detection and signaling mechanism.  <br /></td></tr>
+<tr class="separator:a034e78d72a2a9231d27d78256d3d194e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b4bb222e016b734e702da6a1ec5ab8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a0b4bb222e016b734e702da6a1ec5ab8a">can2ParityCheck</a> (void)</td></tr>
+<tr class="memdesc:a0b4bb222e016b734e702da6a1ec5ab8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to check CAN2 RAM parity error detection and signaling mechanism.  <br /></td></tr>
+<tr class="separator:a0b4bb222e016b734e702da6a1ec5ab8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a050e0c2257b541e651eb35d32f10c98d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a050e0c2257b541e651eb35d32f10c98d">mibspi1ParityCheck</a> (void)</td></tr>
+<tr class="memdesc:a050e0c2257b541e651eb35d32f10c98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to check MIBSPI1 RAM parity error detection and signaling mechanism.  <br /></td></tr>
+<tr class="separator:a050e0c2257b541e651eb35d32f10c98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a421594cf13d3b5ca42435c5a5604721c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a421594cf13d3b5ca42435c5a5604721c">checkRAMECC</a> (void)</td></tr>
+<tr class="memdesc:a421594cf13d3b5ca42435c5a5604721c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check TCRAM ECC error detection logic.  <br /></td></tr>
+<tr class="separator:a421594cf13d3b5ca42435c5a5604721c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012696be6fb67f7debf6f1ff6f9e3331"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a012696be6fb67f7debf6f1ff6f9e3331">checkClockMonitor</a> (void)</td></tr>
+<tr class="memdesc:a012696be6fb67f7debf6f1ff6f9e3331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check clock monitor failure detection logic.  <br /></td></tr>
+<tr class="separator:a012696be6fb67f7debf6f1ff6f9e3331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239d7544f8bb38fc73056467dbeb9e7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a239d7544f8bb38fc73056467dbeb9e7c">checkFlashEEPROMECC</a> (void)</td></tr>
+<tr class="memdesc:a239d7544f8bb38fc73056467dbeb9e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Flash EEPROM ECC error detection logic.  <br /></td></tr>
+<tr class="separator:a239d7544f8bb38fc73056467dbeb9e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08d6355b5f4052d4ef5d2d995032ba22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a08d6355b5f4052d4ef5d2d995032ba22">checkPLL1Slip</a> (void)</td></tr>
+<tr class="memdesc:a08d6355b5f4052d4ef5d2d995032ba22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check PLL1 Slip detection logic.  <br /></td></tr>
+<tr class="separator:a08d6355b5f4052d4ef5d2d995032ba22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85eb55d96d4a491e84a930dbea0e89a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a85eb55d96d4a491e84a930dbea0e89a5">checkRAMAddrParity</a> (void)</td></tr>
+<tr class="memdesc:a85eb55d96d4a491e84a930dbea0e89a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check TCRAM Address parity error detection and signaling mechanism.  <br /></td></tr>
+<tr class="separator:a85eb55d96d4a491e84a930dbea0e89a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5bbec947e5db02df2bda4ba2230677"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a7e5bbec947e5db02df2bda4ba2230677">checkRAMUERRTest</a> (void)</td></tr>
+<tr class="memdesc:a7e5bbec947e5db02df2bda4ba2230677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run RAM test.  <br /></td></tr>
+<tr class="separator:a7e5bbec947e5db02df2bda4ba2230677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ecd48548d7a3d98d5dcc44d1e7ca51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#af9ecd48548d7a3d98d5dcc44d1e7ca51">enableParity</a> (void)</td></tr>
+<tr class="memdesc:af9ecd48548d7a3d98d5dcc44d1e7ca51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable peripheral RAM parity.  <br /></td></tr>
+<tr class="separator:af9ecd48548d7a3d98d5dcc44d1e7ca51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b66d583493adf7dc0ce8e3a89f00f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a15b66d583493adf7dc0ce8e3a89f00f5">disableParity</a> (void)</td></tr>
+<tr class="memdesc:a15b66d583493adf7dc0ce8e3a89f00f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable peripheral RAM parity.  <br /></td></tr>
+<tr class="separator:a15b66d583493adf7dc0ce8e3a89f00f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58597c65615a9a0f05d48135ad48c0d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a58597c65615a9a0f05d48135ad48c0d6">custom_dabort</a> (void)</td></tr>
+<tr class="memdesc:a58597c65615a9a0f05d48135ad48c0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom Data abort routine for the application.  <br /></td></tr>
+<tr class="separator:a58597c65615a9a0f05d48135ad48c0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96e990763ae7d45bd55ea5a27299a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#ae96e990763ae7d45bd55ea5a27299a47">selftestFailNotification</a> (uint32 flag)</td></tr>
+<tr class="memdesc:ae96e990763ae7d45bd55ea5a27299a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Self test fail service routine.  <br /></td></tr>
+<tr class="separator:ae96e990763ae7d45bd55ea5a27299a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3b71a00b6347cb5f7f6eb922c36c9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#a1f3b71a00b6347cb5f7f6eb922c36c9e">errata_PBIST_4</a> (void)</td></tr>
+<tr class="memdesc:a1f3b71a00b6347cb5f7f6eb922c36c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Workaround for the Errata PBIST#4.  <br /></td></tr>
+<tr class="separator:a1f3b71a00b6347cb5f7f6eb922c36c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab288da76a8169e1a92586cd06079358f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__selftest_8h.html#ab288da76a8169e1a92586cd06079358f">ccmr4GetConfigValue</a> (<a class="el" href="structccmr4__config__reg.html">ccmr4_config_reg_t</a> *config_reg, <a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a> type)</td></tr>
+<tr class="memdesc:ab288da76a8169e1a92586cd06079358f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial or current values of the configuration registers.  <br /></td></tr>
+<tr class="separator:ab288da76a8169e1a92586cd06079358f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>System Memory Header File. </p>
+<dl class="section date"><dt>Дата</dt><dd>11-Dec-2018 </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>04.07.01</dd></dl>
+<p>This file contains:</p><ul>
+<li>Efuse Self Test Functions</li>
+</ul>
+<p>which are relevant for the System driver. </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="adfcacf6330b62bf56ff01b0016dc43d0" name="adfcacf6330b62bf56ff01b0016dc43d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfcacf6330b62bf56ff01b0016dc43d0">&#9670;&#160;</a></span>pbistAlgo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="sys__selftest_8h.html#adfcacf6330b62bf56ff01b0016dc43d0">pbistAlgo</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias names for pbist Algorithm. </p>
+<p>This enumeration is used to provide alias names for the pbist Algorithm </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0af4dbf763a322a39325c6fe8ef24512f3" name="adfcacf6330b62bf56ff01b0016dc43d0af4dbf763a322a39325c6fe8ef24512f3"></a>PBIST_TripleReadSlow&#160;</td><td class="fielddoc"><p>TRIPLE_READ_SLOW_READ for PBIST and STC ROM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a3cb6e6cbfa091ed9eb5158e68a2bb573" name="adfcacf6330b62bf56ff01b0016dc43d0a3cb6e6cbfa091ed9eb5158e68a2bb573"></a>PBIST_TripleReadFast&#160;</td><td class="fielddoc"><p>TRIPLE_READ_SLOW_READ for PBIST and STC ROM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a145f5abb0d1630f7dc3919cab37af13b" name="adfcacf6330b62bf56ff01b0016dc43d0a145f5abb0d1630f7dc3919cab37af13b"></a>PBIST_March13N_DP&#160;</td><td class="fielddoc"><p>March13 N Algo for 2 Port mem </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a5c6bcc919d0ee3f730d98812346148d8" name="adfcacf6330b62bf56ff01b0016dc43d0a5c6bcc919d0ee3f730d98812346148d8"></a>PBIST_March13N_SP&#160;</td><td class="fielddoc"><p>March13 N Algo for 1 Port mem </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a31c36c35bbfe957b4f6225cf67dd1f58" name="adfcacf6330b62bf56ff01b0016dc43d0a31c36c35bbfe957b4f6225cf67dd1f58"></a>PBIST_DOWN1a_DP&#160;</td><td class="fielddoc"><p>Down1a Algor forces the switching fo all data bits &amp; most addr bits on consecutive read cycles </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a8702034b17d9db4bb18e08316fcc4b73" name="adfcacf6330b62bf56ff01b0016dc43d0a8702034b17d9db4bb18e08316fcc4b73"></a>PBIST_DOWN1a_SP&#160;</td><td class="fielddoc"><p>Down1a Algor forces the switching fo all data bits &amp; most addr bits on consecutive read cycles </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0ad17fc4abcff110ca8d3e8fd7ce1c252b" name="adfcacf6330b62bf56ff01b0016dc43d0ad17fc4abcff110ca8d3e8fd7ce1c252b"></a>PBIST_MapColumn_DP&#160;</td><td class="fielddoc"><p>Map Column algo (to identify bit line senstivities) for 2 Port memory </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a73e5dcee238f5f5d45e510363979bd8f" name="adfcacf6330b62bf56ff01b0016dc43d0a73e5dcee238f5f5d45e510363979bd8f"></a>PBIST_MapColumn_SP&#160;</td><td class="fielddoc"><p>Map Column algo (to identify bit line senstivities) for 1 Port memory </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0ad80f8831809b125fcf872eb2d8fa2516" name="adfcacf6330b62bf56ff01b0016dc43d0ad80f8831809b125fcf872eb2d8fa2516"></a>PBIST_Precharge_DP&#160;</td><td class="fielddoc"><p>Pre-Charge algo to exercise pre-charge capability for 2 port memory </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a3b93011b85a66e4b539f3546d9d511a4" name="adfcacf6330b62bf56ff01b0016dc43d0a3b93011b85a66e4b539f3546d9d511a4"></a>PBIST_Precharge_SP&#160;</td><td class="fielddoc"><p>Pre-Charge algo to exercise pre-charge capability for 1 port memory </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a2c1c27da2103ab9b7a079539c19d51b4" name="adfcacf6330b62bf56ff01b0016dc43d0a2c1c27da2103ab9b7a079539c19d51b4"></a>PBIST_DTXN2a_DP&#160;</td><td class="fielddoc"><p>Global column decode logic algo for 2 Port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0ad9f3d4a20607f6b6b9745a1b8461d5fd" name="adfcacf6330b62bf56ff01b0016dc43d0ad9f3d4a20607f6b6b9745a1b8461d5fd"></a>PBIST_DTXN2a_SP&#160;</td><td class="fielddoc"><p>Global column decode logic algo for 1 Port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a2d81c60e8e03c58e685ce600819be3b9" name="adfcacf6330b62bf56ff01b0016dc43d0a2d81c60e8e03c58e685ce600819be3b9"></a>PBIST_PMOSOpen_DP&#160;</td><td class="fielddoc"><p>pmos oper algo for 2 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a89088597e412ed375f0fb37dfd075e0c" name="adfcacf6330b62bf56ff01b0016dc43d0a89088597e412ed375f0fb37dfd075e0c"></a>PBIST_PMOSOpen_SP&#160;</td><td class="fielddoc"><p>pmos oper algo for 1 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a2cbd15e057f6952a6ae3e17e419aec79" name="adfcacf6330b62bf56ff01b0016dc43d0a2cbd15e057f6952a6ae3e17e419aec79"></a>PBIST_PPMOSOpenSlice1_DP&#160;</td><td class="fielddoc"><p>pmos open slice1 for 2port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a2d2b586d443245d0b3f19719c8fa595e" name="adfcacf6330b62bf56ff01b0016dc43d0a2d2b586d443245d0b3f19719c8fa595e"></a>PBIST_PPMOSOpenSlice2_DP&#160;</td><td class="fielddoc"><p>pmos open slice2 for 2port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a54e7e5c71a565a37d275301cbb90492e" name="adfcacf6330b62bf56ff01b0016dc43d0a54e7e5c71a565a37d275301cbb90492e"></a>PBIST_Flip10_DP&#160;</td><td class="fielddoc"><p>flip10 algo for 2 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a2c8460e84b96f150fe537258ab5bcb8b" name="adfcacf6330b62bf56ff01b0016dc43d0a2c8460e84b96f150fe537258ab5bcb8b"></a>PBIST_Flip10_SP&#160;</td><td class="fielddoc"><p>flip10 algo for 1 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a5649232fff072a106f9caadada52bde3" name="adfcacf6330b62bf56ff01b0016dc43d0a5649232fff072a106f9caadada52bde3"></a>PBIST_IDDQ_DP&#160;</td><td class="fielddoc"><p>iddq algo for 2 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a312bcd90a80f7e21dbcfd86f36580d6a" name="adfcacf6330b62bf56ff01b0016dc43d0a312bcd90a80f7e21dbcfd86f36580d6a"></a>PBIST_IDDQ_SP&#160;</td><td class="fielddoc"><p>iddq algo for 1 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a528b4a83d409a6c38890d84c80b33110" name="adfcacf6330b62bf56ff01b0016dc43d0a528b4a83d409a6c38890d84c80b33110"></a>PBIST_Retention_DP&#160;</td><td class="fielddoc"><p>retention algo for 2 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a6fb080b84d2de9f1b51ca4a135f5cef5" name="adfcacf6330b62bf56ff01b0016dc43d0a6fb080b84d2de9f1b51ca4a135f5cef5"></a>PBIST_Retention_SP&#160;</td><td class="fielddoc"><p>retention algo for 1 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a8ae8831ab9d156185cfe6add75747f11" name="adfcacf6330b62bf56ff01b0016dc43d0a8ae8831ab9d156185cfe6add75747f11"></a>PBIST_IDDQ2_DP&#160;</td><td class="fielddoc"><p>iddq2 algo for 2 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0aaa10af6b1ef6a452d4c5697c90d768bc" name="adfcacf6330b62bf56ff01b0016dc43d0aaa10af6b1ef6a452d4c5697c90d768bc"></a>PBIST_IDDQ2_SP&#160;</td><td class="fielddoc"><p>iddq2 algo for 1 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a2ef8bd1190cd0470504d1fa7a08baba9" name="adfcacf6330b62bf56ff01b0016dc43d0a2ef8bd1190cd0470504d1fa7a08baba9"></a>PBIST_Retention2_DP&#160;</td><td class="fielddoc"><p>retention2 algo for 2 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a971c53636d2d1a3d7c6548c0c821debd" name="adfcacf6330b62bf56ff01b0016dc43d0a971c53636d2d1a3d7c6548c0c821debd"></a>PBIST_Retention2_SP&#160;</td><td class="fielddoc"><p>retention2 algo for 1 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0a5aadd9835f14c322dd264f4c7366353f" name="adfcacf6330b62bf56ff01b0016dc43d0a5aadd9835f14c322dd264f4c7366353f"></a>PBIST_IDDQRowStripe_DP&#160;</td><td class="fielddoc"><p>iddqwstripe algo for 2 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0abce63d0b00686b76dbf44d2a622df0fe" name="adfcacf6330b62bf56ff01b0016dc43d0abce63d0b00686b76dbf44d2a622df0fe"></a>PBIST_IDDQRowStripe_SP&#160;</td><td class="fielddoc"><p>iddqwstripe algo for 1 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0ad5a55084ac740ad2c5e433167b4b858f" name="adfcacf6330b62bf56ff01b0016dc43d0ad5a55084ac740ad2c5e433167b4b858f"></a>PBIST_IDDQRowStripe2_DP&#160;</td><td class="fielddoc"><p>iddqwstripe2 algo for 2 port memories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfcacf6330b62bf56ff01b0016dc43d0ae8b5ceba9ae5a71e3b6cf4a9b345d252" name="adfcacf6330b62bf56ff01b0016dc43d0ae8b5ceba9ae5a71e3b6cf4a9b345d252"></a>PBIST_IDDQRowStripe2_SP&#160;</td><td class="fielddoc"><p>iddqwstripe2 algo for 1 port memories </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aedcde68ef8c4640e211695cebd10afa3" name="aedcde68ef8c4640e211695cebd10afa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedcde68ef8c4640e211695cebd10afa3">&#9670;&#160;</a></span>pbistPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="sys__selftest_8h.html#aedcde68ef8c4640e211695cebd10afa3">pbistPort</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias names for pbist Port number. </p>
+<p>This enumeration is used to provide alias names for the pbist Port number</p><ul>
+<li>PBIST_PORT0</li>
+<li>PBIST_PORT1</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>Check the datasheet for the port avaiability </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aedcde68ef8c4640e211695cebd10afa3a2f1ea5882d645e86e9a7e8f809c5f5ea" name="aedcde68ef8c4640e211695cebd10afa3a2f1ea5882d645e86e9a7e8f809c5f5ea"></a>PBIST_PORT0&#160;</td><td class="fielddoc"><p>Alias for PBIST Port 0 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedcde68ef8c4640e211695cebd10afa3ac933996e0cb7472c44de4b2f2f18e340" name="aedcde68ef8c4640e211695cebd10afa3ac933996e0cb7472c44de4b2f2f18e340"></a>PBIST_PORT1&#160;</td><td class="fielddoc"><p>Alias for PBIST Port 1 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a0267c576250cc80c1ffafae379fcd937" name="a0267c576250cc80c1ffafae379fcd937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0267c576250cc80c1ffafae379fcd937">&#9670;&#160;</a></span>adc1ParityCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void adc1ParityCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine to check ADC1 RAM parity error detection and signaling mechanism. </p>
+<p>Routine to check ADC1 RAM parity error detection and signaling mechanism </p>
+
+</div>
+</div>
+<a id="a034e78d72a2a9231d27d78256d3d194e" name="a034e78d72a2a9231d27d78256d3d194e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034e78d72a2a9231d27d78256d3d194e">&#9670;&#160;</a></span>can1ParityCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void can1ParityCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine to check CAN1 RAM parity error detection and signaling mechanism. </p>
+<p>Routine to check CAN1 RAM parity error detection and signaling mechanism </p>
+
+</div>
+</div>
+<a id="a0b4bb222e016b734e702da6a1ec5ab8a" name="a0b4bb222e016b734e702da6a1ec5ab8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b4bb222e016b734e702da6a1ec5ab8a">&#9670;&#160;</a></span>can2ParityCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void can2ParityCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine to check CAN2 RAM parity error detection and signaling mechanism. </p>
+<p>Routine to check CAN2 RAM parity error detection and signaling mechanism </p>
+
+</div>
+</div>
+<a id="ab288da76a8169e1a92586cd06079358f" name="ab288da76a8169e1a92586cd06079358f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab288da76a8169e1a92586cd06079358f">&#9670;&#160;</a></span>ccmr4GetConfigValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ccmr4GetConfigValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structccmr4__config__reg.html">ccmr4_config_reg_t</a> *&#160;</td>
+          <td class="paramname"><em>config_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the initial or current values of the configuration registers. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*config_reg</td><td>pointer to the struct to which the initial or current value of the configuration registers need to be stored </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>whether initial or current value of the configuration registers need to be stored<ul>
+<li>InitialValue: initial value of the configuration registers will be stored in the struct pointed by config_reg</li>
+<li>CurrentValue: initial value of the configuration registers will be stored in the struct pointed by config_reg</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function will copy the initial or current value (depending on the parameter 'type') of the configuration registers to the struct pointed by config_reg </p>
+
+</div>
+</div>
+<a id="a2f7aaa1d96319ecb5d7b6cec31c56670" name="a2f7aaa1d96319ecb5d7b6cec31c56670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7aaa1d96319ecb5d7b6cec31c56670">&#9670;&#160;</a></span>ccmSelfCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ccmSelfCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CCM module self check Driver. </p>
+<p>This function self checks the CCM module. </p>
+
+</div>
+</div>
+<a id="ad4cbf907aa7750c1c3601ed191842dd9" name="ad4cbf907aa7750c1c3601ed191842dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cbf907aa7750c1c3601ed191842dd9">&#9670;&#160;</a></span>checkB0RAMECC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkB0RAMECC </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check TCRAM1 ECC error detection logic. </p>
+<p>This function checks TCRAM1 ECC error detection logic. </p>
+
+</div>
+</div>
+<a id="ab5e986484f3be2af5cd3a7595ba346c2" name="ab5e986484f3be2af5cd3a7595ba346c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5e986484f3be2af5cd3a7595ba346c2">&#9670;&#160;</a></span>checkB1RAMECC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkB1RAMECC </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check TCRAM2 ECC error detection logic. </p>
+<p>This function checks TCRAM2 ECC error detection logic. </p>
+
+</div>
+</div>
+<a id="a012696be6fb67f7debf6f1ff6f9e3331" name="a012696be6fb67f7debf6f1ff6f9e3331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a012696be6fb67f7debf6f1ff6f9e3331">&#9670;&#160;</a></span>checkClockMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkClockMonitor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check clock monitor failure detection logic. </p>
+<p>This function checks clock monitor failure detection logic. </p>
+
+</div>
+</div>
+<a id="ad44409ae54516ba10303dd5c011f4fa6" name="ad44409ae54516ba10303dd5c011f4fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44409ae54516ba10303dd5c011f4fa6">&#9670;&#160;</a></span>checkefcSelfTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean checkefcSelfTest </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EFUSE module self check Driver. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Returns TRUE if EFC Selftest was a PASS, else FALSE</dd></dl>
+<p>This function returns the status of efcSelfTest. Note: This function can be called only after calling efcSelfTest </p>
+
+</div>
+</div>
+<a id="a02bb81fd1b585ba20d4c6e7ed427a4ac" name="a02bb81fd1b585ba20d4c6e7ed427a4ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02bb81fd1b585ba20d4c6e7ed427a4ac">&#9670;&#160;</a></span>checkFlashECC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkFlashECC </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check Flash ECC error detection logic. </p>
+<p>This function checks Flash ECC error detection logic. </p>
+
+</div>
+</div>
+<a id="a239d7544f8bb38fc73056467dbeb9e7c" name="a239d7544f8bb38fc73056467dbeb9e7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239d7544f8bb38fc73056467dbeb9e7c">&#9670;&#160;</a></span>checkFlashEEPROMECC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkFlashEEPROMECC </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check Flash EEPROM ECC error detection logic. </p>
+<p>This function checks Flash EEPROM ECC error detection logic. </p>
+
+</div>
+</div>
+<a id="a08d6355b5f4052d4ef5d2d995032ba22" name="a08d6355b5f4052d4ef5d2d995032ba22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d6355b5f4052d4ef5d2d995032ba22">&#9670;&#160;</a></span>checkPLL1Slip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkPLL1Slip </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check PLL1 Slip detection logic. </p>
+<p>This function checks PLL1 Slip detection logic. </p>
+
+</div>
+</div>
+<a id="a85eb55d96d4a491e84a930dbea0e89a5" name="a85eb55d96d4a491e84a930dbea0e89a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85eb55d96d4a491e84a930dbea0e89a5">&#9670;&#160;</a></span>checkRAMAddrParity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkRAMAddrParity </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check TCRAM Address parity error detection and signaling mechanism. </p>
+<p>This function TCRAM Address parity error detection and signaling mechanism. </p>
+
+</div>
+</div>
+<a id="a421594cf13d3b5ca42435c5a5604721c" name="a421594cf13d3b5ca42435c5a5604721c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421594cf13d3b5ca42435c5a5604721c">&#9670;&#160;</a></span>checkRAMECC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkRAMECC </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check TCRAM ECC error detection logic. </p>
+<p>This function checks TCRAM ECC error detection logic. </p>
+
+</div>
+</div>
+<a id="a7e5bbec947e5db02df2bda4ba2230677" name="a7e5bbec947e5db02df2bda4ba2230677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5bbec947e5db02df2bda4ba2230677">&#9670;&#160;</a></span>checkRAMUERRTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkRAMUERRTest </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run RAM test. </p>
+<p>This function runs RAM test to test the redundant address decode and compare logic. </p>
+
+</div>
+</div>
+<a id="a27cee1191b0027e90cbb9c66983596b9" name="a27cee1191b0027e90cbb9c66983596b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27cee1191b0027e90cbb9c66983596b9">&#9670;&#160;</a></span>cpuSelfTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cpuSelfTest </td>
+          <td>(</td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>no_of_intervals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>max_timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>restart_test</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CPU self test Driver. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">no_of_intervals</td><td>- Number of Test Intervals to be </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_timeout</td><td>- Maximum Timeout to complete selected test Intervals </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">restart_test</td><td>- Restart the test from Interval 0 or Continue from where it stopped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is called to perform CPU self test using STC module. </p>
+
+</div>
+</div>
+<a id="a932e8fff5749ae8038f0fbbe9029ec44" name="a932e8fff5749ae8038f0fbbe9029ec44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932e8fff5749ae8038f0fbbe9029ec44">&#9670;&#160;</a></span>cpuSelfTestFail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cpuSelfTestFail </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CPU Self test check fail service routine. </p>
+<p>This function is called if CPU Self test check fail. </p>
+
+</div>
+</div>
+<a id="a58597c65615a9a0f05d48135ad48c0d6" name="a58597c65615a9a0f05d48135ad48c0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58597c65615a9a0f05d48135ad48c0d6">&#9670;&#160;</a></span>custom_dabort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void custom_dabort </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Custom Data abort routine for the application. </p>
+<p>Custom Data abort routine for the application. </p>
+
+</div>
+</div>
+<a id="a15b66d583493adf7dc0ce8e3a89f00f5" name="a15b66d583493adf7dc0ce8e3a89f00f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b66d583493adf7dc0ce8e3a89f00f5">&#9670;&#160;</a></span>disableParity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disableParity </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable peripheral RAM parity. </p>
+<p>This function disables RAM parity for all peripherals for which RAM parity check is enabled. This function is called after memoryInit in the startup </p>
+
+</div>
+</div>
+<a id="a646eb27315f3ce47edde97c563389f76" name="a646eb27315f3ce47edde97c563389f76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646eb27315f3ce47edde97c563389f76">&#9670;&#160;</a></span>efcCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 efcCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EFUSE module self check Driver. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Returns 0 if no error was detected during autoload and Stuck At Zero Test passed 1 if no error was detected during autoload but Stuck At Zero Test failed 2 if there was a single-bit error detected during autoload 3 if some other error occurred during autoload</dd></dl>
+<p>This function self checks the EFUSE module. </p>
+
+</div>
+</div>
+<a id="ac76ed167d7b4b27eedea0eb37de6acc2" name="ac76ed167d7b4b27eedea0eb37de6acc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76ed167d7b4b27eedea0eb37de6acc2">&#9670;&#160;</a></span>efcGetConfigValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void efcGetConfigValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structefc__config__reg.html">efc_config_reg_t</a> *&#160;</td>
+          <td class="paramname"><em>config_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the initial or current values of the configuration registers. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*config_reg</td><td>pointer to the struct to which the initial or current value of the configuration registers need to be stored </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>whether initial or current value of the configuration registers need to be stored<ul>
+<li>InitialValue: initial value of the configuration registers will be stored in the struct pointed by config_reg</li>
+<li>CurrentValue: initial value of the configuration registers will be stored in the struct pointed by config_reg</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function will copy the initial or current value (depending on the parameter 'type') of the configuration registers to the struct pointed by config_reg </p>
+
+</div>
+</div>
+<a id="afd6cec31a44e7c8e325a744e9bcbf601" name="afd6cec31a44e7c8e325a744e9bcbf601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6cec31a44e7c8e325a744e9bcbf601">&#9670;&#160;</a></span>efcSelfTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void efcSelfTest </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EFUSE module self check Driver. </p>
+<p>This function self checks the EFSUE module. </p>
+
+</div>
+</div>
+<a id="a9973f032c29389602b684d30ea390fad" name="a9973f032c29389602b684d30ea390fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9973f032c29389602b684d30ea390fad">&#9670;&#160;</a></span>efcStuckZeroTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean efcStuckZeroTest </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks to see if the EFUSE Stuck at zero test is completed successfully. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>1 if EFUSE Stuck at zero test completed, otherwise 0.</dd></dl>
+<p>Checks to see if the EFUSE Stuck at zero test is completed successfully. </p>
+
+</div>
+</div>
+<a id="af9ecd48548d7a3d98d5dcc44d1e7ca51" name="af9ecd48548d7a3d98d5dcc44d1e7ca51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ecd48548d7a3d98d5dcc44d1e7ca51">&#9670;&#160;</a></span>enableParity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enableParity </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable peripheral RAM parity. </p>
+<p>This function enables RAM parity for all peripherals for which RAM parity check is enabled. This function is called before memoryInit in the startup </p>
+
+</div>
+</div>
+<a id="a1f3b71a00b6347cb5f7f6eb922c36c9e" name="a1f3b71a00b6347cb5f7f6eb922c36c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f3b71a00b6347cb5f7f6eb922c36c9e">&#9670;&#160;</a></span>errata_PBIST_4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errata_PBIST_4 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Workaround for the Errata PBIST#4. </p>
+<p>This function is workaround for Errata PBIST#4. This function is designed to initialize the ROMs using the PBIST controller. The CPU will configure the PBIST controller to test the PBIST ROM and STC ROM. This function should be called at startup after system init before using the ROMs.</p>
+<dl class="section note"><dt>Заметки</dt><dd>: This Function uses register's which are not exposed to users through TRM , to run custom algorithm. User can use this function as Black box. </dd></dl>
+
+</div>
+</div>
+<a id="a3248a50d5c0516f336b46aa0114ba9be" name="a3248a50d5c0516f336b46aa0114ba9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3248a50d5c0516f336b46aa0114ba9be">&#9670;&#160;</a></span>fmcBus2Check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fmcBus2Check </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Self Check Flash Bus2 Interface. </p>
+<p>This function self checks Flash Bus2 Interface </p>
+
+</div>
+</div>
+<a id="a183a0d9f1300394cff2f8fe0aa034d4b" name="a183a0d9f1300394cff2f8fe0aa034d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183a0d9f1300394cff2f8fe0aa034d4b">&#9670;&#160;</a></span>fmcECCcheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fmcECCcheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check Flash ECC Single Bit and multi Bit errors detection logic. </p>
+<p>This function Checks Flash ECC Single Bit and multi Bit errors detection logic. </p>
+
+</div>
+</div>
+<a id="a66f658578435dc4d3984c76a3d2ed959" name="a66f658578435dc4d3984c76a3d2ed959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f658578435dc4d3984c76a3d2ed959">&#9670;&#160;</a></span>het1ParityCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void het1ParityCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine to check HET1 RAM parity error detection and signaling mechanism. </p>
+<p>Routine to check HET1 RAM parity error detection and signaling mechanism </p>
+
+</div>
+</div>
+<a id="a5f69665c7b7abb003cfb4a314ce1e943" name="a5f69665c7b7abb003cfb4a314ce1e943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f69665c7b7abb003cfb4a314ce1e943">&#9670;&#160;</a></span>htu1ParityCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void htu1ParityCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine to check HTU1 RAM parity error detection and signaling mechanism. </p>
+<p>Routine to check HTU1 RAM parity error detection and signaling mechanism </p>
+
+</div>
+</div>
+<a id="a3184dfe0846903e1111348942160dfe7" name="a3184dfe0846903e1111348942160dfe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3184dfe0846903e1111348942160dfe7">&#9670;&#160;</a></span>memoryInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void memoryInit </td>
+          <td>(</td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>ram</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Memory Initialization Driver. </p>
+<p>This function is called to perform Memory initialization of selected RAM's. </p>
+
+</div>
+</div>
+<a id="a01f1d76b843e64acb8bb464d79b9cd45" name="a01f1d76b843e64acb8bb464d79b9cd45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f1d76b843e64acb8bb464d79b9cd45">&#9670;&#160;</a></span>memoryPort0TestFailNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void memoryPort0TestFailNotification </td>
+          <td>(</td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>groupSelect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>dataSelect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Memory Port 0 test fail notification. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">groupSelect</td><td>Failing Ram group select: </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSelect</td><td>Failing Ram data select: </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>Failing Ram offset: </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Failing data at address:</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>This function has to be provide by the user. </dd></dl>
+
+</div>
+</div>
+<a id="a27770bcd3ed64bdd085157a5c99a3502" name="a27770bcd3ed64bdd085157a5c99a3502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27770bcd3ed64bdd085157a5c99a3502">&#9670;&#160;</a></span>memoryPort1TestFailNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void memoryPort1TestFailNotification </td>
+          <td>(</td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>groupSelect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>dataSelect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Memory Port 1 test fail notification. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">groupSelect</td><td>Failing Ram group select: </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSelect</td><td>Failing Ram data select: </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>Failing Ram offset: </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Failing data at address:</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>This function has to be provide by the user. </dd></dl>
+
+</div>
+</div>
+<a id="a050e0c2257b541e651eb35d32f10c98d" name="a050e0c2257b541e651eb35d32f10c98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050e0c2257b541e651eb35d32f10c98d">&#9670;&#160;</a></span>mibspi1ParityCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mibspi1ParityCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine to check MIBSPI1 RAM parity error detection and signaling mechanism. </p>
+<p>Routine to check MIBSPI1 RAM parity error detection and signaling mechanism </p>
+
+</div>
+</div>
+<a id="a1edb8a500b4ad0f3e87b93245856a937" name="a1edb8a500b4ad0f3e87b93245856a937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1edb8a500b4ad0f3e87b93245856a937">&#9670;&#160;</a></span>pbistGetConfigValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pbistGetConfigValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpbist__config__reg.html">pbist_config_reg_t</a> *&#160;</td>
+          <td class="paramname"><em>config_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the initial or current values of the configuration registers. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*config_reg</td><td>pointer to the struct to which the initial or current value of the configuration registers need to be stored </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>whether initial or current value of the configuration registers need to be stored<ul>
+<li>InitialValue: initial value of the configuration registers will be stored in the struct pointed by config_reg</li>
+<li>CurrentValue: initial value of the configuration registers will be stored in the struct pointed by config_reg</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function will copy the initial or current value (depending on the parameter 'type') of the configuration registers to the struct pointed by config_reg </p>
+
+</div>
+</div>
+<a id="a2675f441b1c7bbadd9877cfd586bf959" name="a2675f441b1c7bbadd9877cfd586bf959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2675f441b1c7bbadd9877cfd586bf959">&#9670;&#160;</a></span>pbistIsTestCompleted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean pbistIsTestCompleted </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks to see if the PBIST test is completed. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>1 if PBIST test completed, otherwise 0.</dd></dl>
+<p>Checks to see if the PBIST test is completed. </p>
+
+</div>
+</div>
+<a id="a975a794505ddcaf5d1c68e7a229fc8ae" name="a975a794505ddcaf5d1c68e7a229fc8ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975a794505ddcaf5d1c68e7a229fc8ae">&#9670;&#160;</a></span>pbistIsTestPassed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean pbistIsTestPassed </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks to see if the PBIST test is completed successfully. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>1 if PBIST test passed, otherwise 0.</dd></dl>
+<p>Checks to see if the PBIST test is completed successfully. </p>
+
+</div>
+</div>
+<a id="a3edbda42e27655bb5e9a3d067ab09caf" name="a3edbda42e27655bb5e9a3d067ab09caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3edbda42e27655bb5e9a3d067ab09caf">&#9670;&#160;</a></span>pbistPortTestStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean pbistPortTestStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks to see if the PBIST Port test is completed successfully. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>- Select the port to get the status. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>1 if PBIST Port test completed successfully, otherwise 0.</dd></dl>
+<p>Checks to see if the selected PBIST Port test is completed successfully. </p>
+
+</div>
+</div>
+<a id="ad5fcc064d8d51dda635d83235cf37e3e" name="ad5fcc064d8d51dda635d83235cf37e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5fcc064d8d51dda635d83235cf37e3e">&#9670;&#160;</a></span>pbistRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pbistRun </td>
+          <td>(</td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>raminfoL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>algomask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CPU self test Driver. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">raminfoL</td><td>- Select the list of RAM to be tested. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">algomask</td><td>- Select the list of Algorithm to be run.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function performs Memory Built-in Self test using PBIST module. </p>
+
+</div>
+</div>
+<a id="ac9b7e2d9da2b5166a9ea002d431e54ef" name="ac9b7e2d9da2b5166a9ea002d431e54ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b7e2d9da2b5166a9ea002d431e54ef">&#9670;&#160;</a></span>pbistSelfCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pbistSelfCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PBIST self test Driver. </p>
+<p>This function is called to perform PBIST self test.</p>
+<dl class="section note"><dt>Заметки</dt><dd>This Function uses register's which are not exposed to users through TRM , to run custom algorithm to make PBIST Fail. Users can use this function as Black box. </dd></dl>
+
+</div>
+</div>
+<a id="a1ea172c81d7549cd8181de098a91b752" name="a1ea172c81d7549cd8181de098a91b752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea172c81d7549cd8181de098a91b752">&#9670;&#160;</a></span>pbistStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pbistStop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine to stop PBIST test enabled. </p>
+<p>This function is called to stop PBIST after test is performed. </p>
+
+</div>
+</div>
+<a id="ae96e990763ae7d45bd55ea5a27299a47" name="ae96e990763ae7d45bd55ea5a27299a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae96e990763ae7d45bd55ea5a27299a47">&#9670;&#160;</a></span>selftestFailNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void selftestFailNotification </td>
+          <td>(</td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Self test fail service routine. </p>
+<p>This function is called if there is a self test fail with appropriate flag </p>
+
+</div>
+</div>
+<a id="afb360fa06ebe94d06978d25371ed2140" name="afb360fa06ebe94d06978d25371ed2140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb360fa06ebe94d06978d25371ed2140">&#9670;&#160;</a></span>stcGetConfigValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stcGetConfigValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structstc__config__reg.html">stc_config_reg_t</a> *&#160;</td>
+          <td class="paramname"><em>config_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the initial or current values of the configuration registers. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*config_reg</td><td>pointer to the struct to which the initial or current value of the configuration registers need to be stored </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>whether initial or current value of the configuration registers need to be stored<ul>
+<li>InitialValue: initial value of the configuration registers will be stored in the struct pointed by config_reg</li>
+<li>CurrentValue: initial value of the configuration registers will be stored in the struct pointed by config_reg</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function will copy the initial or current value (depending on the parameter 'type') of the configuration registers to the struct pointed by config_reg </p>
+
+</div>
+</div>
+<a id="a54f7309e862bab7a63c2c176c4b7cee9" name="a54f7309e862bab7a63c2c176c4b7cee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f7309e862bab7a63c2c176c4b7cee9">&#9670;&#160;</a></span>stcSelfCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stcSelfCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>STC module self check Driver. </p>
+<p>This function is called to perform STC module self check. </p>
+
+</div>
+</div>
+<a id="a2c1518db428c8ab63a56048cadfb4e6e" name="a2c1518db428c8ab63a56048cadfb4e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c1518db428c8ab63a56048cadfb4e6e">&#9670;&#160;</a></span>stcSelfCheckFail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stcSelfCheckFail </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>STC Self test check fail service routine. </p>
+<p>This function is called if STC Self test check fail. </p>
+
+</div>
+</div>
+<a id="af7297818ebd5ffd62488091aa9633bf9" name="af7297818ebd5ffd62488091aa9633bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7297818ebd5ffd62488091aa9633bf9">&#9670;&#160;</a></span>vimParityCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vimParityCheck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine to check VIM RAM parity error detection and signaling mechanism. </p>
+<p>Routine to check VIM RAM parity error detection and signaling mechanism </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

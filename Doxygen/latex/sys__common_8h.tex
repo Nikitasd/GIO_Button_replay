@@ -1,0 +1,84 @@
+\hypertarget{sys__common_8h}{}\doxysection{Файл include/sys\+\_\+common.h}
+\label{sys__common_8h}\index{include/sys\_common.h@{include/sys\_common.h}}
+
+
+Common Header File.  
+
+
+{\ttfamily \#include \char`\"{}hal\+\_\+stdtypes.\+h\char`\"{}}\newline
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__common_8h_a5f8bd57b826c738330c2a6529dde85a1}\label{sys__common_8h_a5f8bd57b826c738330c2a6529dde85a1}} 
+\#define {\bfseries \+\_\+\+TBOOLEAN\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{sys__common_8h_aa1c819ae4cbecb365115985d3d05af64}\label{sys__common_8h_aa1c819ae4cbecb365115985d3d05af64}} 
+\#define {\bfseries \+\_\+\+\_\+little\+\_\+endian\+\_\+\+\_\+}~0
+\item 
+\mbox{\Hypertarget{sys__common_8h_a25c46c075890625fec5c2f92a369ab21}\label{sys__common_8h_a25c46c075890625fec5c2f92a369ab21}} 
+\#define {\bfseries \+\_\+\+\_\+\+LITTLE\+\_\+\+ENDIAN\+\_\+\+\_\+}~0
+\item 
+\mbox{\Hypertarget{sys__common_8h_a28301f76c53b643912da7c538f74e2c6}\label{sys__common_8h_a28301f76c53b643912da7c538f74e2c6}} 
+\#define {\bfseries ASSERT}(expr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__common_8h_a213636f3ce4aaa455787ad5176abaa0e}\label{sys__common_8h_a213636f3ce4aaa455787ad5176abaa0e}} 
+typedef boolean {\bfseries t\+Boolean}
+\item 
+typedef enum \mbox{\hyperlink{sys__common_8h_af51e0805c8b756cbd60da2fa1b9faa39}{loop\+Back\+Type}} \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Loopback type Type Definition. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{sys__common_8h_a40ea02e1b9ddc5a0eba81e4269f157dc}{config\+\_\+value\+\_\+type}} \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em config type Type Definition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__common_8h_af51e0805c8b756cbd60da2fa1b9faa39}\label{sys__common_8h_af51e0805c8b756cbd60da2fa1b9faa39}} 
+enum \mbox{\hyperlink{sys__common_8h_af51e0805c8b756cbd60da2fa1b9faa39}{loop\+Back\+Type}} \{ {\bfseries Digital\+\_\+\+Lbk} = 0U
+, {\bfseries Analog\+\_\+\+Lbk} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Loopback type definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__common_8h_a40ea02e1b9ddc5a0eba81e4269f157dc}\label{sys__common_8h_a40ea02e1b9ddc5a0eba81e4269f157dc}} 
+enum \mbox{\hyperlink{sys__common_8h_a40ea02e1b9ddc5a0eba81e4269f157dc}{config\+\_\+value\+\_\+type}} \{ {\bfseries Initial\+Value}
+, {\bfseries Current\+Value}
+ \}
+\begin{DoxyCompactList}\small\item\em config type definition \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Common Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item General Definitions
+\end{DoxyItemize}which are relevant for all drivers. 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}\label{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}} 
+\index{sys\_common.h@{sys\_common.h}!config\_value\_type\_t@{config\_value\_type\_t}}
+\index{config\_value\_type\_t@{config\_value\_type\_t}!sys\_common.h@{sys\_common.h}}
+\doxysubsubsection{\texorpdfstring{config\_value\_type\_t}{config\_value\_type\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}
+
+
+
+config type Type Definition 
+
+This type is used to specify the Initial and Current value. \mbox{\Hypertarget{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}\label{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}} 
+\index{sys\_common.h@{sys\_common.h}!loopBackType\_t@{loopBackType\_t}}
+\index{loopBackType\_t@{loopBackType\_t}!sys\_common.h@{sys\_common.h}}
+\doxysubsubsection{\texorpdfstring{loopBackType\_t}{loopBackType\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}}}
+
+
+
+Loopback type Type Definition. 
+
+This type is used to select the module Loopback type Digital or Analog loopback. 

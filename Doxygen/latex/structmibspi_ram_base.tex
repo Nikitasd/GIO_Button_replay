@@ -1,0 +1,67 @@
+\hypertarget{structmibspi_ram_base}{}\doxysection{Структура mibspi\+Ram\+Base}
+\label{structmibspi_ram_base}\index{mibspiRamBase@{mibspiRamBase}}
+
+
+MIBSPI Buffer RAM Definition.  
+
+
+
+
+{\ttfamily \#include $<$reg\+\_\+mibspi.\+h$>$}
+
+\doxysubsection*{Поля данных}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmibspi_ram_base_a59d81fbbd6efe4535efd3117a621cb94}\label{structmibspi_ram_base_a59d81fbbd6efe4535efd3117a621cb94}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16 \mbox{\hyperlink{structmibspi_ram_base_a128392954318ec66b78f62b81b4473eb}{control}}\\
+\>uint16 \mbox{\hyperlink{structmibspi_ram_base_ad18956a92906074e25050233dd00e99b}{data}}\\
+\} {\bfseries tx} \mbox{[}128\mbox{]}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structmibspi_ram_base_a878570b6b1f19a4eacc25211d8d8cf68}\label{structmibspi_ram_base_a878570b6b1f19a4eacc25211d8d8cf68}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16 \mbox{\hyperlink{structmibspi_ram_base_ae15f0808741c35cb9a8d231105d8beea}{flags}}\\
+\>uint16 \mbox{\hyperlink{structmibspi_ram_base_ad18956a92906074e25050233dd00e99b}{data}}\\
+\} {\bfseries rx} \mbox{[}128\mbox{]}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+MIBSPI Buffer RAM Definition. 
+
+This structure is used to access the MIBSPI buffer memory. 
+
+\doxysubsection{Поля}
+\mbox{\Hypertarget{structmibspi_ram_base_a128392954318ec66b78f62b81b4473eb}\label{structmibspi_ram_base_a128392954318ec66b78f62b81b4473eb}} 
+\index{mibspiRamBase@{mibspiRamBase}!control@{control}}
+\index{control@{control}!mibspiRamBase@{mibspiRamBase}}
+\doxysubsubsection{\texorpdfstring{control}{control}}
+{\footnotesize\ttfamily uint16 control}
+
+tx buffer control \mbox{\Hypertarget{structmibspi_ram_base_ad18956a92906074e25050233dd00e99b}\label{structmibspi_ram_base_ad18956a92906074e25050233dd00e99b}} 
+\index{mibspiRamBase@{mibspiRamBase}!data@{data}}
+\index{data@{data}!mibspiRamBase@{mibspiRamBase}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint16 data}
+
+tx buffer data ~\newline
+
+
+rx buffer data ~\newline
+ \mbox{\Hypertarget{structmibspi_ram_base_ae15f0808741c35cb9a8d231105d8beea}\label{structmibspi_ram_base_ae15f0808741c35cb9a8d231105d8beea}} 
+\index{mibspiRamBase@{mibspiRamBase}!flags@{flags}}
+\index{flags@{flags}!mibspiRamBase@{mibspiRamBase}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily uint16 flags}
+
+rx buffer flags 
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{reg__mibspi_8h}{reg\+\_\+mibspi.\+h}}\end{DoxyCompactItemize}

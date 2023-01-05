@@ -1,0 +1,240 @@
+\hypertarget{sys__vim_8h}{}\doxysection{Файл include/sys\+\_\+vim.h}
+\label{sys__vim_8h}\index{include/sys\_vim.h@{include/sys\_vim.h}}
+
+
+Vectored Interrupt Module Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+vim.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a6152f175f61064ebaf812bffd1955bb1}\label{sys__vim_8h_a6152f175f61064ebaf812bffd1955bb1}} 
+\#define {\bfseries VIM\+\_\+\+CHANNELS}~96U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a675f9bf6e7ce634c000ec412f5447570}\label{sys__vim_8h_a675f9bf6e7ce634c000ec412f5447570}} 
+\#define {\bfseries VIM\+\_\+\+PARFLG}~($\ast$(volatile uint32 $\ast$)0x\+FFFFFDECU)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a783fa8b79470fa81c0f04c2d02f5185a}\label{sys__vim_8h_a783fa8b79470fa81c0f04c2d02f5185a}} 
+\#define {\bfseries VIM\+\_\+\+PARCTL}~($\ast$(volatile uint32 $\ast$)0x\+FFFFFDF0U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aada34a500d5d61108eb0b6ef8b928d60}\label{sys__vim_8h_aada34a500d5d61108eb0b6ef8b928d60}} 
+\#define {\bfseries VIM\+\_\+\+ADDERR}~($\ast$(volatile uint32 $\ast$)0x\+FFFFFDF4U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a87417df0a0f398188a4a53c55b31945a}\label{sys__vim_8h_a87417df0a0f398188a4a53c55b31945a}} 
+\#define {\bfseries VIM\+\_\+\+FBPARERR}~($\ast$(volatile uint32 $\ast$)0x\+FFFFFDF8U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a94f1ce694ebfc5e99e0ed07976eec024}\label{sys__vim_8h_a94f1ce694ebfc5e99e0ed07976eec024}} 
+\#define {\bfseries VIMRAMPARLOC}~($\ast$(volatile uint32 $\ast$)0x\+FFF82400U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a35fcc9b5130da89f08b8969a599f40a4}\label{sys__vim_8h_a35fcc9b5130da89f08b8969a599f40a4}} 
+\#define {\bfseries VIMRAMLOC}~($\ast$(volatile uint32 $\ast$)0x\+FFF82000U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a8352458fa5952eb60afc4ab10d55aa8f}\label{sys__vim_8h_a8352458fa5952eb60afc4ab10d55aa8f}} 
+\#define {\bfseries VIM\+\_\+\+FIRQPR0\+\_\+\+CONFIGVALUE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a55dc19320e6537b90e6381acd2cfb577}\label{sys__vim_8h_a55dc19320e6537b90e6381acd2cfb577}} 
+\#define {\bfseries VIM\+\_\+\+FIRQPR1\+\_\+\+CONFIGVALUE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a08055ed41ba8c549d977a3d2719e7f4d}\label{sys__vim_8h_a08055ed41ba8c549d977a3d2719e7f4d}} 
+\#define {\bfseries VIM\+\_\+\+FIRQPR2\+\_\+\+CONFIGVALUE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a6669d7c4a3e82c66a434107c00296da8}\label{sys__vim_8h_a6669d7c4a3e82c66a434107c00296da8}} 
+\#define {\bfseries VIM\+\_\+\+FIRQPR3\+\_\+\+CONFIGVALUE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a9217ef0a07f9442625b134fc4a8121d3}\label{sys__vim_8h_a9217ef0a07f9442625b134fc4a8121d3}} 
+\#define {\bfseries VIM\+\_\+\+REQMASKSET0\+\_\+\+CONFIGVALUE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ae6d9a435907e691878defdc8460c7f3a}\label{sys__vim_8h_ae6d9a435907e691878defdc8460c7f3a}} 
+\#define {\bfseries VIM\+\_\+\+REQMASKSET1\+\_\+\+CONFIGVALUE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a5849a36ba48dc56eaac56efaadae51eb}\label{sys__vim_8h_a5849a36ba48dc56eaac56efaadae51eb}} 
+\#define {\bfseries VIM\+\_\+\+REQMASKSET2\+\_\+\+CONFIGVALUE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a6c9d3c904e22638fad34daabad3665f7}\label{sys__vim_8h_a6c9d3c904e22638fad34daabad3665f7}} 
+\#define {\bfseries VIM\+\_\+\+REQMASKSET3\+\_\+\+CONFIGVALUE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aee144679162d8f4676ccc3709883d537}\label{sys__vim_8h_aee144679162d8f4676ccc3709883d537}} 
+\#define {\bfseries VIM\+\_\+\+WAKEMASKSET0\+\_\+\+CONFIGVALUE}~0x\+FFFFFFFFU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa52528d6a6c16c1bccbdba1899bbfe1d}\label{sys__vim_8h_aa52528d6a6c16c1bccbdba1899bbfe1d}} 
+\#define {\bfseries VIM\+\_\+\+WAKEMASKSET1\+\_\+\+CONFIGVALUE}~0x\+FFFFFFFFU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a0318b9761e05f1ac0651563b276e2849}\label{sys__vim_8h_a0318b9761e05f1ac0651563b276e2849}} 
+\#define {\bfseries VIM\+\_\+\+WAKEMASKSET2\+\_\+\+CONFIGVALUE}~0x\+FFFFFFFFU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa284ca6325f06e73a7492a27c9c45f35}\label{sys__vim_8h_aa284ca6325f06e73a7492a27c9c45f35}} 
+\#define {\bfseries VIM\+\_\+\+WAKEMASKSET3\+\_\+\+CONFIGVALUE}~0U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ab0124400be632f488892a08a83b42baa}\label{sys__vim_8h_ab0124400be632f488892a08a83b42baa}} 
+\#define {\bfseries VIM\+\_\+\+CAPEVT\+\_\+\+CONFIGVALUE}~((uint32)((uint32)0U $<$$<$ 0U) $\vert$ (uint32)((uint32)0U $<$$<$ 16U))
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a9db1f4c38c04e7f86d9888948d43cef5}\label{sys__vim_8h_a9db1f4c38c04e7f86d9888948d43cef5}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL0\+\_\+\+CONFIGVALUE}~0x00010203U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a1819ef469802c27ac4917cc4c3810820}\label{sys__vim_8h_a1819ef469802c27ac4917cc4c3810820}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL1\+\_\+\+CONFIGVALUE}~0x04050607U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa837344d8dd51487a2835e13a59c5623}\label{sys__vim_8h_aa837344d8dd51487a2835e13a59c5623}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL2\+\_\+\+CONFIGVALUE}~0x08090\+A0\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a86798cafd8b23ceb5b1373fe5ba3d9e0}\label{sys__vim_8h_a86798cafd8b23ceb5b1373fe5ba3d9e0}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL3\+\_\+\+CONFIGVALUE}~0x0\+C0\+D0\+E0\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ae71310c4283251913bae87dd614115e2}\label{sys__vim_8h_ae71310c4283251913bae87dd614115e2}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL4\+\_\+\+CONFIGVALUE}~0x10111213U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_af6f6fefa6dca75eae5ebdc67f7dcd296}\label{sys__vim_8h_af6f6fefa6dca75eae5ebdc67f7dcd296}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL5\+\_\+\+CONFIGVALUE}~0x14151617U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_accbfe55fb0f88ebcb209120857a53c24}\label{sys__vim_8h_accbfe55fb0f88ebcb209120857a53c24}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL6\+\_\+\+CONFIGVALUE}~0x18191\+A1\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ad5584960f0f2c0cdfcb4abcaae58bd96}\label{sys__vim_8h_ad5584960f0f2c0cdfcb4abcaae58bd96}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL7\+\_\+\+CONFIGVALUE}~0x1\+C1\+D1\+E1\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a3d96b1587dac5858174e5b10f314179c}\label{sys__vim_8h_a3d96b1587dac5858174e5b10f314179c}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL8\+\_\+\+CONFIGVALUE}~0x20212223U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a15a816e2b9ca9b389d9c5977d7473ad5}\label{sys__vim_8h_a15a816e2b9ca9b389d9c5977d7473ad5}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL9\+\_\+\+CONFIGVALUE}~0x24252627U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aee0c7ef4f60792fca1e0963ed5ee8c8a}\label{sys__vim_8h_aee0c7ef4f60792fca1e0963ed5ee8c8a}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL10\+\_\+\+CONFIGVALUE}~0x28292\+A2\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ae613211716c014f194f401ea4bfda584}\label{sys__vim_8h_ae613211716c014f194f401ea4bfda584}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL11\+\_\+\+CONFIGVALUE}~0x2\+C2\+D2\+E2\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a5bd6bfc230fec24898a9969115bcc13b}\label{sys__vim_8h_a5bd6bfc230fec24898a9969115bcc13b}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL12\+\_\+\+CONFIGVALUE}~0x30313233U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ac399ae97583f1f23f28e06f9d7066b5f}\label{sys__vim_8h_ac399ae97583f1f23f28e06f9d7066b5f}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL13\+\_\+\+CONFIGVALUE}~0x34353637U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a7a2579fcdbba9b20ebc4dc49cbce01b6}\label{sys__vim_8h_a7a2579fcdbba9b20ebc4dc49cbce01b6}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL14\+\_\+\+CONFIGVALUE}~0x38393\+A3\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_af27c7a8e2deba0ac437d3b70258e147c}\label{sys__vim_8h_af27c7a8e2deba0ac437d3b70258e147c}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL15\+\_\+\+CONFIGVALUE}~0x3\+C3\+D3\+E3\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa5e212a4b991a320d4a97b51ce536b3c}\label{sys__vim_8h_aa5e212a4b991a320d4a97b51ce536b3c}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL16\+\_\+\+CONFIGVALUE}~0x40414243U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a4e26f4a22b5e5b3f2a8b5b2e074536e0}\label{sys__vim_8h_a4e26f4a22b5e5b3f2a8b5b2e074536e0}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL17\+\_\+\+CONFIGVALUE}~0x44454647U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_af004b2f95fbe4b044b5aa0a2521cd308}\label{sys__vim_8h_af004b2f95fbe4b044b5aa0a2521cd308}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL18\+\_\+\+CONFIGVALUE}~0x48494\+A4\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa0d01d143b1b065e826ad7c3a30b2958}\label{sys__vim_8h_aa0d01d143b1b065e826ad7c3a30b2958}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL19\+\_\+\+CONFIGVALUE}~0x4\+C4\+D4\+E4\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ac267dd5053c42cd48657f795da2236f0}\label{sys__vim_8h_ac267dd5053c42cd48657f795da2236f0}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL20\+\_\+\+CONFIGVALUE}~0x50515253U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a04b437fa94dbc6c42419a0eb9672e591}\label{sys__vim_8h_a04b437fa94dbc6c42419a0eb9672e591}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL21\+\_\+\+CONFIGVALUE}~0x54555657U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a017dcb7a08bb6115d5b9af65309b5d77}\label{sys__vim_8h_a017dcb7a08bb6115d5b9af65309b5d77}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL22\+\_\+\+CONFIGVALUE}~0x58595\+A5\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a7a54a83c183bf817db40ef6f8bfa9218}\label{sys__vim_8h_a7a54a83c183bf817db40ef6f8bfa9218}} 
+\#define {\bfseries VIM\+\_\+\+CHANCTRL23\+\_\+\+CONFIGVALUE}~0x5\+C5\+D5\+E5\+FU
+\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}{t\+\_\+isr\+Func\+PTR}}) (void)
+\begin{DoxyCompactList}\small\item\em ISR Function Pointer Type Definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__vim_8h_ac7f976b365355fd874c50c3f3d15b4d6}\label{sys__vim_8h_ac7f976b365355fd874c50c3f3d15b4d6}} 
+typedef enum \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}{system\+Interrupt}} {\bfseries system\+Interrupt\+\_\+t}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aed0daddde1bec07e95e9ecf1ac285ec2}\label{sys__vim_8h_aed0daddde1bec07e95e9ecf1ac285ec2}} 
+typedef struct \mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg}} {\bfseries vim\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}{system\+Interrupt}} \{ \mbox{\hyperlink{group___v_i_m_ga068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\+\_\+\+IRQ}} = 0U
+, \mbox{\hyperlink{group___v_i_m_ga068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}{SYS\+\_\+\+FIQ}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for clock sources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a623ee80dfdeb0dabf202441d071b2ae4}\label{sys__vim_8h_a623ee80dfdeb0dabf202441d071b2ae4}} 
+void {\bfseries esm\+High\+Interrupt} (void)
+\begin{DoxyCompactList}\small\item\em High Level Interrupt for ESM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__vim_8h_a1f9f763a00757966f0aa9acfffc715c4}\label{sys__vim_8h_a1f9f763a00757966f0aa9acfffc715c4}} 
+void {\bfseries phantom\+Interrupt} (void)
+\item 
+void \mbox{\hyperlink{group___v_i_m_ga894b6f212b72787bfa97f1ac62877167}{vim\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes VIM module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___v_i_m_ga1a269c8383f7cbf75df048bb812307bb}{vim\+Channel\+Map}} (uint32 request, uint32 channel, \mbox{\hyperlink{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}{t\+\_\+isr\+Func\+PTR}} handler)
+\begin{DoxyCompactList}\small\item\em Map selected interrupt request to the selected channel. \end{DoxyCompactList}\item 
+void {\bfseries vim\+Enable\+Interrupt} (uint32 channel, system\+Interrupt\+\_\+t inttype)
+\item 
+void \mbox{\hyperlink{group___v_i_m_gac4c74a2a1d17f9c7ec4cc3ba156a230e}{vim\+Disable\+Interrupt}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Disable interrupt for the the selected channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___v_i_m_gae8b4aff17dfb436d01775ae6fce955c1}{vim\+Get\+Config\+Value}} (\mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Vectored Interrupt Module Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item VIM Type Definitions
+\item VIM General Definitions
+\end{DoxyItemize}which are relevant for Vectored Interrupt Controller. 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}\label{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}} 
+\index{sys\_vim.h@{sys\_vim.h}!t\_isrFuncPTR@{t\_isrFuncPTR}}
+\index{t\_isrFuncPTR@{t\_isrFuncPTR}!sys\_vim.h@{sys\_vim.h}}
+\doxysubsubsection{\texorpdfstring{t\_isrFuncPTR}{t\_isrFuncPTR}}
+{\footnotesize\ttfamily t\+\_\+isr\+Func\+PTR}
+
+
+
+ISR Function Pointer Type Definition. 
+
+This type is used to access the ISR handler. 
+
+\doxysubsection{Перечисления}
+\mbox{\Hypertarget{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}\label{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}} 
+\index{sys\_vim.h@{sys\_vim.h}!systemInterrupt@{systemInterrupt}}
+\index{systemInterrupt@{systemInterrupt}!sys\_vim.h@{sys\_vim.h}}
+\doxysubsubsection{\texorpdfstring{systemInterrupt}{systemInterrupt}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}{system\+Interrupt}}}
+
+
+
+Alias names for clock sources. 
+
+This enumeration is used to provide alias names for the clock sources\+:
+\begin{DoxyItemize}
+\item IRQ
+\item FIQ 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYS\_IRQ@{SYS\_IRQ}!sys\_vim.h@{sys\_vim.h}}\index{sys\_vim.h@{sys\_vim.h}!SYS\_IRQ@{SYS\_IRQ}}}\mbox{\Hypertarget{sys__vim_8h_ga068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}\label{sys__vim_8h_ga068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}} 
+SYS\+\_\+\+IRQ&Alias for IRQ interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYS\_FIQ@{SYS\_FIQ}!sys\_vim.h@{sys\_vim.h}}\index{sys\_vim.h@{sys\_vim.h}!SYS\_FIQ@{SYS\_FIQ}}}\mbox{\Hypertarget{sys__vim_8h_ga068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}\label{sys__vim_8h_ga068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}} 
+SYS\+\_\+\+FIQ&Alias for FIQ interrupt \\
+\hline
+
+\end{DoxyEnumFields}

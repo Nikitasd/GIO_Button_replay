@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: Файл include/Button_Confition.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл Button_Confition.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Application button counter.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="_button___events_8h_source.html">Button_Events.h</a>&gt;</code><br />
+<code>#include &quot;stdint.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="gio_8h_source.html">gio.h</a>&quot;</code><br />
+</div>
+<p><a href="_button___confition_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a0f7c5cd20b836ab541774bbca9d4bd16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_button___confition_8h.html#a0f7c5cd20b836ab541774bbca9d4bd16">Click_Count</a> (struct <a class="el" href="struct_button___state.html">Button_State</a> *button)</td></tr>
+<tr class="memdesc:a0f7c5cd20b836ab541774bbca9d4bd16"><td class="mdescLeft">&#160;</td><td class="mdescRight">countdown from the moment the signal was given from the button  <br /></td></tr>
+<tr class="separator:a0f7c5cd20b836ab541774bbca9d4bd16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a45c8c6e80a85ebcc4e7eda7d96803"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_button___confition_8h.html#a96a45c8c6e80a85ebcc4e7eda7d96803">NoClick_Count</a> (struct <a class="el" href="struct_button___state.html">Button_State</a> *button)</td></tr>
+<tr class="memdesc:a96a45c8c6e80a85ebcc4e7eda7d96803"><td class="mdescLeft">&#160;</td><td class="mdescRight">countdown since no signal from the button  <br /></td></tr>
+<tr class="separator:a96a45c8c6e80a85ebcc4e7eda7d96803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed99148112602f2c51be004d8cf8607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_button___confition_8h.html#a8ed99148112602f2c51be004d8cf8607">replay</a> (struct <a class="el" href="struct_button___state.html">Button_State</a> *button)</td></tr>
+<tr class="memdesc:a8ed99148112602f2c51be004d8cf8607"><td class="mdescLeft">&#160;</td><td class="mdescRight">looping the excerpt of signal states stored in an array.  <br /></td></tr>
+<tr class="separator:a8ed99148112602f2c51be004d8cf8607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Application button counter. </p>
+<dl class="section date"><dt>Дата</dt><dd>04-Jan-2023</dd></dl>
+<p>This file contains functions for counting down the presence/absence of a signal from a button </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a0f7c5cd20b836ab541774bbca9d4bd16" name="a0f7c5cd20b836ab541774bbca9d4bd16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7c5cd20b836ab541774bbca9d4bd16">&#9670;&#160;</a></span>Click_Count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Click_Count </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_button___state.html">Button_State</a> *&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>countdown from the moment the signal was given from the button </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">counter</td><td>- signal duration storage parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>counter signal duration </dd></dl>
+
+</div>
+</div>
+<a id="a96a45c8c6e80a85ebcc4e7eda7d96803" name="a96a45c8c6e80a85ebcc4e7eda7d96803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a45c8c6e80a85ebcc4e7eda7d96803">&#9670;&#160;</a></span>NoClick_Count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoClick_Count </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_button___state.html">Button_State</a> *&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>countdown since no signal from the button </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">counter</td><td>- parameter for storing the duration of the absence of a signal </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>counter signal duration </dd></dl>
+
+</div>
+</div>
+<a id="a8ed99148112602f2c51be004d8cf8607" name="a8ed99148112602f2c51be004d8cf8607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed99148112602f2c51be004d8cf8607">&#9670;&#160;</a></span>replay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void replay </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_button___state.html">Button_State</a> *&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>looping the excerpt of signal states stored in an array. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delay</td><td>- time delay. </td></tr>
+    <tr><td class="paramname">counter</td><td>- counter of elements of the array that stores the time of the signal (its absence). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

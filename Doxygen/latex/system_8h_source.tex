@@ -1,0 +1,364 @@
+\hypertarget{system_8h_source}{}\doxysection{system.\+h}
+\label{system_8h_source}\index{include/system.h@{include/system.h}}
+\mbox{\hyperlink{system_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00044\ \textcolor{comment}{*}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifndef\ \_\_SYS\_SYSTEM\_H\_\_}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ \_\_SYS\_SYSTEM\_H\_\_}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__system_8h}{reg\_system.h}}"{}}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__flash_8h}{reg\_flash.h}}"{}}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__tcram_8h}{reg\_tcram.h}}"{}}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00056\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00060\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{/*\ System\ General\ Definitions\ */}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166}{systemClockSource}}}
+\DoxyCodeLine{00079\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}{SYS\_OSC}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0U,\ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{SYS\_PLL1}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 1U,\ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad42fcc1d275719112a852c11b3eede7a}{SYS\_EXTERNAL1}}\ \ \ \ \ \ \ \ \ \ =\ 3U,\ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a656058b3b4ba277c21d4d87a16ca413a}{SYS\_LPO\_LOW}}\ \ \ \ \ \ \ \ \ \ =\ 4U,\ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a938db45d5c14c66808b8a6bd4dd02f03}{SYS\_LPO\_HIGH}}\ \ \ \ \ \ \ \ =\ 5U,\ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad93eb68c73c5e29c5b12b37589fe80f0}{SYS\_PLL2}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 6U,\ \ }
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a8c9b841abfc1e4233557848305d5e831}{SYS\_EXTERNAL2}}\ \ \ \ \ \ =\ 7U,\ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 9U\ \ \ }
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ SYS\_DOZE\_MODE\ \ \ \ \ \ \ \ 0x000F3F02U}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ SYS\_SNOOZE\_MODE\ \ \ \ \ \ 0x000F3F03U}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ SYS\_SLEEP\_MODE\ \ \ \ \ \ \ 0x000FFFFFU}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ LPO\_TRIM\_VALUE\ \ \ \ \ \ \ (((*(volatile\ uint32\ *)0xF00801B4U)\ \&\ 0xFFFF0000U)>>16U)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ SYS\_EXCEPTION\ \ \ \ \ \ \ \ (*(volatile\ uint32\ *)0xFFFFFFE4U)}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ POWERON\_RESET\ \ \ \ \ \ \ \ 0x8000U}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ OSC\_FAILURE\_RESET\ \ \ \ 0x4000U}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ WATCHDOG\_RESET\ \ \ \ \ \ \ 0x2000U}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ ICEPICK\_RESET\ \ \ \ \ \ \ \ 0x2000U}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ CPU\_RESET\ \ \ \ \ \ \ \ \ \ \ \ 0x0020U}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ SW\_RESET\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0010U}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ WATCHDOG\_STATUS\ \ \ \ \ (*(volatile\ uint32\ *)0xFFFFFC98U)}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ DEVICE\_ID\_REV\ \ \ \ \ \ \ (*(volatile\ uint32\ *)0xFFFFFFF0U)}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ OSC\_FREQ\ \ \ \ \ 16.0F}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ PLL1\_FREQ\ \ \ \ 80.00F}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ LPO\_LF\_FREQ\ \ 0.080F}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ LPO\_HF\_FREQ\ \ 10.000F}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ PLL2\_FREQ\ \ \ \ 0.00F}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ GCLK\_FREQ\ \ \ \ 80.000F}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ HCLK\_FREQ\ \ \ \ 80.000F}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ RTI\_FREQ\ \ \ \ \ 80.000F}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ AVCLK1\_FREQ\ \ 80.000F}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#define\ AVCLK2\_FREQ\ \ 0.0F}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ AVCLK3\_FREQ\ \ 0.0F}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ AVCLK4\_FREQ\ \ 0.0F}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ VCLK1\_FREQ\ \ \ 80.000F}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ VCLK2\_FREQ\ \ \ 80.000F}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ VCLK3\_FREQ\ \ \ 40.000F}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#define\ VCLK4\_FREQ\ \ \ 0.0F}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00232\ \textcolor{comment}{/*SAFETYMCUSW\ 79\ S\ MR:19.4\ <APPROVED>\ "{}\ Value\ comes\ from\ GUI\ drop\ down\ option\ "{}\ */}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#define\ SYS\_PRE1\ (SYS\_PLL1)}}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00248\ \textcolor{comment}{/*SAFETYMCUSW\ 79\ S\ MR:19.4\ <APPROVED>\ "{}\ Value\ comes\ from\ GUI\ drop\ down\ option\ "{}\ */}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ SYS\_PRE2\ (SYS\_PLL1)}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \textcolor{comment}{/*\ Configuration\ registers\ */}}
+\DoxyCodeLine{00252\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsystem__config__reg}{system\_config\_reg}}}
+\DoxyCodeLine{00253\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ uint32\ CONFIG\_SYSPC1;}
+\DoxyCodeLine{00255\ \ \ \ \ uint32\ CONFIG\_SYSPC2;}
+\DoxyCodeLine{00256\ \ \ \ \ uint32\ CONFIG\_SYSPC7;}
+\DoxyCodeLine{00257\ \ \ \ \ uint32\ CONFIG\_SYSPC8;}
+\DoxyCodeLine{00258\ \ \ \ \ uint32\ CONFIG\_SYSPC9;}
+\DoxyCodeLine{00259\ \ \ \ \ uint32\ CONFIG\_CSDIS;}
+\DoxyCodeLine{00260\ \ \ \ \ uint32\ CONFIG\_CDDIS;}
+\DoxyCodeLine{00261\ \ \ \ \ uint32\ CONFIG\_GHVSRC;}
+\DoxyCodeLine{00262\ \ \ \ \ uint32\ CONFIG\_VCLKASRC;}
+\DoxyCodeLine{00263\ \ \ \ \ uint32\ CONFIG\_RCLKSRC;}
+\DoxyCodeLine{00264\ \ \ \ \ uint32\ CONFIG\_MSTGCR;}
+\DoxyCodeLine{00265\ \ \ \ \ uint32\ CONFIG\_MINITGCR;}
+\DoxyCodeLine{00266\ \ \ \ \ uint32\ CONFIG\_MSINENA;}
+\DoxyCodeLine{00267\ \ \ \ \ uint32\ CONFIG\_PLLCTL1;}
+\DoxyCodeLine{00268\ \ \ \ \ uint32\ CONFIG\_PLLCTL2;}
+\DoxyCodeLine{00269\ \ \ \ \ uint32\ CONFIG\_UERFLAG;}
+\DoxyCodeLine{00270\ \ \ \ \ uint32\ CONFIG\_LPOMONCTL;}
+\DoxyCodeLine{00271\ \ \ \ \ uint32\ CONFIG\_CLKTEST;}
+\DoxyCodeLine{00272\ \ \ \ \ uint32\ CONFIG\_DFTCTRLREG1;}
+\DoxyCodeLine{00273\ \ \ \ \ uint32\ CONFIG\_DFTCTRLREG2;}
+\DoxyCodeLine{00274\ \ \ \ \ uint32\ CONFIG\_GPREG1;}
+\DoxyCodeLine{00275\ \ \ \ \ uint32\ CONFIG\_RAMGCR;}
+\DoxyCodeLine{00276\ \ \ \ \ uint32\ CONFIG\_BMMCR1;}
+\DoxyCodeLine{00277\ \ \ \ \ uint32\ CONFIG\_MMUGCR;}
+\DoxyCodeLine{00278\ \ \ \ \ uint32\ CONFIG\_CLKCNTL;}
+\DoxyCodeLine{00279\ \ \ \ \ uint32\ CONFIG\_ECPCNTL;}
+\DoxyCodeLine{00280\ \ \ \ \ uint32\ CONFIG\_DEVCR1;}
+\DoxyCodeLine{00281\ \ \ \ \ uint32\ CONFIG\_SYSECR;}
+\DoxyCodeLine{00282\ \ \ \ \ uint32\ CONFIG\_STCCLKDIV;}
+\DoxyCodeLine{00283\ \ \ \ \ uint32\ CONFIG\_CLKSLIP;}
+\DoxyCodeLine{00284\ \ \ \ \ uint32\ CONFIG\_EFC\_CTLEN;}
+\DoxyCodeLine{00285\ \}\ \mbox{\hyperlink{structsystem__config__reg}{system\_config\_reg\_t}};}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \textcolor{comment}{/*\ Configuration\ registers\ initial\ value\ */}}
+\DoxyCodeLine{00288\ \textcolor{preprocessor}{\#define\ SYS\_SYSPC1\_CONFIGVALUE\ \ 0U}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#define\ SYS\_SYSPC2\_CONFIGVALUE\ \ 1U}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \textcolor{preprocessor}{\#define\ SYS\_SYSPC7\_CONFIGVALUE\ \ 0U}}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#define\ SYS\_SYSPC8\_CONFIGVALUE\ \ 0U}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#define\ SYS\_SYSPC9\_CONFIGVALUE\ \ 1U}}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\#define\ SYS\_CSDIS\_CONFIGVALUE\ \ \ (0x00000000U\(\backslash\)}}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0x00000000U\ \(\backslash\)}}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0x00000008U\ \(\backslash\)}}
+\DoxyCodeLine{00301\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0x00000080U\ \(\backslash\)}}
+\DoxyCodeLine{00302\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0x00000000U\ \(\backslash\)}}
+\DoxyCodeLine{00303\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0x00000040U\ \(\backslash\)}}
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0x00000000U\(\backslash\)}}
+\DoxyCodeLine{00305\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ 0x4U)}}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00307\ \textcolor{preprocessor}{\#define\ SYS\_CDDIS\_CONFIGVALUE\ \ \ (\ (uint32)((uint32)0U\ <<\ 4U\ )\(\backslash\)}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)1U\ <<\ 5U\ )\(\backslash\)}}
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 8U\ )\(\backslash\)}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 10U)\(\backslash\)}}
+\DoxyCodeLine{00311\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 11U)\ )}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\#define\ SYS\_GHVSRC\_CONFIGVALUE\ \ (\ (uint32)((uint32)SYS\_OSC\ <<\ 24U)\ \(\backslash\)}}
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)SYS\_OSC\ <<\ 16U)\ \(\backslash\)}}
+\DoxyCodeLine{00315\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)SYS\_PLL1\ <<\ 0U)\ )}}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\#define\ SYS\_VCLKASRC\_CONFIGVALUE\ \ \ \ (\ (uint32)((uint32)SYS\_VCLK\ <<\ 8U)\(\backslash\)}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)SYS\_VCLK\ <<\ 0U)\ )}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#define\ SYS\_RCLKSRC\_CONFIGVALUE\ \ \ \ \ (\ (uint32)((uint32)1U\ <<\ 24U)\(\backslash\)}}
+\DoxyCodeLine{00321\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)SYS\_VCLK\ <<\ 16U)\(\backslash\)}}
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)1U\ <<\ 8U)\(\backslash\)}}
+\DoxyCodeLine{00323\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)SYS\_VCLK\ <<\ 0U)\ )}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00325\ \textcolor{preprocessor}{\#define\ SYS\_MSTGCR\_CONFIGVALUE\ \ \ \ \ \ 0x00000105U}}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \textcolor{preprocessor}{\#define\ SYS\_MINITGCR\_CONFIGVALUE\ \ \ \ 0x5U}}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \textcolor{preprocessor}{\#define\ SYS\_MSINENA\_CONFIGVALUE\ \ \ \ \ 0U}}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \textcolor{preprocessor}{\#define\ SYS\_PLLCTL1\_CONFIGVALUE\_1\ \ \ (\ (uint32)0x00000000U\ \(\backslash\)}}
+\DoxyCodeLine{00332\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)0x20000000U\ \(\backslash\)}}
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0x1FU\ <<\ 24U)\ \(\backslash\)}}
+\DoxyCodeLine{00334\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)0x00000000U\ \(\backslash\)}}
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)(6U\ -\/\ 1U)<<\ 16U)\(\backslash\)}}
+\DoxyCodeLine{00336\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)(0x7700U))}}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00338\ \textcolor{preprocessor}{\#define\ SYS\_PLLCTL1\_CONFIGVALUE\_2\ \ \ (((SYS\_PLLCTL1\_CONFIGVALUE\_1)\ \&\ 0xE0FFFFFFU)\ |\ (uint32)((uint32)(2U\ -\/\ 1U)\ <<\ 24U))}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00340\ \textcolor{preprocessor}{\#define\ SYS\_PLLCTL2\_CONFIGVALUE\ \ \ \ \ (\ (uint32)0x00000000U\(\backslash\)}}
+\DoxyCodeLine{00341\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)255U\ <<\ 22U)\(\backslash\)}}
+\DoxyCodeLine{00342\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)7U\ <<\ 12U)\(\backslash\)}}
+\DoxyCodeLine{00343\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)(2U\ -\/\ 1U)<<\ 9U)\(\backslash\)}}
+\DoxyCodeLine{00344\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)61U)}}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00346\ \textcolor{preprocessor}{\#define\ SYS\_UERFLAG\_CONFIGVALUE\ \ \ \ \ 0U}}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \textcolor{preprocessor}{\#define\ SYS\_LPOMONCTL\_CONFIGVALUE\_1\ ((uint32)((uint32)1U\ <<\ 24U)\ |\ LPO\_TRIM\_VALUE)}}
+\DoxyCodeLine{00349\ \textcolor{preprocessor}{\#define\ SYS\_LPOMONCTL\_CONFIGVALUE\_2\ ((uint32)((uint32)1U\ <<\ 24U)\ |\ (uint32)((uint32)16U\ <<\ 8U)\ |\ 16U)}}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\#define\ SYS\_CLKTEST\_CONFIGVALUE\ \ \ \ \ 0x000A0000U}}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\#define\ SYS\_DFTCTRLREG1\_CONFIGVALUE\ 0x00002205U}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \textcolor{preprocessor}{\#define\ SYS\_DFTCTRLREG2\_CONFIGVALUE\ 0x5U}}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \textcolor{preprocessor}{\#define\ SYS\_GPREG1\_CONFIGVALUE\ \ 0x0005FFFFU}}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \textcolor{preprocessor}{\#define\ SYS\_RAMGCR\_CONFIGVALUE\ \ 0x00050000U}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#define\ SYS\_BMMCR1\_CONFIGVALUE\ \ 0xAU}}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ \textcolor{preprocessor}{\#define\ SYS\_MMUGCR\_CONFIGVALUE\ \ 0U}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \textcolor{preprocessor}{\#define\ SYS\_CLKCNTL\_CONFIGVALUE\ \ \ \ \ (\ 0x00000100U\ \(\backslash\)}}
+\DoxyCodeLine{00366\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 16U)\ \(\backslash\)}}
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 24U)\ )\ }}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\#define\ SYS\_ECPCNTL\_CONFIGVALUE\ \ \ \ \ (\ (uint32)((uint32)0U\ <<\ 24U)\(\backslash\)}}
+\DoxyCodeLine{00370\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 23U)\(\backslash\)}}
+\DoxyCodeLine{00371\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)(8U\ -\/\ 1U)\ \&\ 0xFFFFU)\ )}}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00373\ \textcolor{preprocessor}{\#define\ SYS\_DEVCR1\_CONFIGVALUE\ \ 0xAU}}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#define\ SYS\_SYSECR\_CONFIGVALUE\ \ 0x00004000U}}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00377\ \textcolor{preprocessor}{\#define\ SYS2\_PLLCTL3\_CONFIGVALUE\_2\ \ (((SYS2\_PLLCTL3\_CONFIGVALUE\_1)\ \&\ 0xE0FFFFFFU)\ |\ (uint32)((uint32)(1U\ -\/\ 1U)\ <<\ 24U))}}
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\#define\ SYS2\_STCCLKDIV\_CONFIGVALUE\ \ 0U}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#define\ SYS2\_CLKSLIP\_CONFIGVALUE\ \ \ \ 0x5U}}
+\DoxyCodeLine{00380\ \textcolor{preprocessor}{\#define\ SYS2\_EFC\_CTLEN\_CONFIGVALUE\ \ 0x5U}}
+\DoxyCodeLine{00381\ \ \ \ \ }
+\DoxyCodeLine{00382\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_ab3c7742b0b313a8ac595a0ae677c3ccc}{systemGetConfigValue}}(\mbox{\hyperlink{structsystem__config__reg}{system\_config\_reg\_t}}\ *config\_reg,\ \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\_value\_type\_t}}\ type);}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00385\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \textcolor{comment}{/*\ FlashW\ General\ Definitions\ */}}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00398\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332}{flashWPowerModes}}}
+\DoxyCodeLine{00399\ \{}
+\DoxyCodeLine{00400\ \ \ \ \ \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a0aad210a70d765f145599be0d031305a}{SYS\_SLEEP}}\ \ \ =\ 0U,\ }
+\DoxyCodeLine{00401\ \ \ \ \ \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332aa2d92b531427b40c13049bd7e1976187}{SYS\_STANDBY}}\ =\ 1U,\ }
+\DoxyCodeLine{00402\ \ \ \ \ \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{SYS\_ACTIVE}}\ \ =\ 3U\ \ }
+\DoxyCodeLine{00403\ \};}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (2)\ */}}
+\DoxyCodeLine{00406\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \textcolor{preprocessor}{\#define\ FSM\_WR\_ENA\_HL\ \ \ \ \ \ \ (*(volatile\ uint32\ *)0xFFF87288U)}}
+\DoxyCodeLine{00410\ \textcolor{preprocessor}{\#define\ EEPROM\_CONFIG\_HL\ \ \ \ (*(volatile\ uint32\ *)0xFFF872B8U)}}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00412\ \textcolor{comment}{/*\ Configuration\ registers\ */}}
+\DoxyCodeLine{00413\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtcmflash__config__reg}{tcmflash\_config\_reg}}}
+\DoxyCodeLine{00414\ \{}
+\DoxyCodeLine{00415\ \ \ \ \ uint32\ CONFIG\_FRDCNTL;}
+\DoxyCodeLine{00416\ \ \ \ \ uint32\ CONFIG\_FEDACCTRL1;}
+\DoxyCodeLine{00417\ \ \ \ \ uint32\ CONFIG\_FEDACCTRL2;}
+\DoxyCodeLine{00418\ \ \ \ \ uint32\ CONFIG\_FEDACSDIS;}
+\DoxyCodeLine{00419\ \ \ \ \ uint32\ CONFIG\_FBPROT;}
+\DoxyCodeLine{00420\ \ \ \ \ uint32\ CONFIG\_FBSE;}
+\DoxyCodeLine{00421\ \ \ \ \ uint32\ CONFIG\_FBAC;}
+\DoxyCodeLine{00422\ \ \ \ \ uint32\ CONFIG\_FBFALLBACK;}
+\DoxyCodeLine{00423\ \ \ \ \ uint32\ CONFIG\_FPAC1;}
+\DoxyCodeLine{00424\ \ \ \ \ uint32\ CONFIG\_FPAC2;}
+\DoxyCodeLine{00425\ \ \ \ \ uint32\ CONFIG\_FMAC;}
+\DoxyCodeLine{00426\ \ \ \ \ uint32\ CONFIG\_FLOCK;}
+\DoxyCodeLine{00427\ \ \ \ \ uint32\ CONFIG\_FDIAGCTRL;}
+\DoxyCodeLine{00428\ \ \ \ \ uint32\ CONFIG\_FEDACSDIS2;}
+\DoxyCodeLine{00429\ \}\ \mbox{\hyperlink{structtcmflash__config__reg}{tcmflash\_config\_reg\_t}};}
+\DoxyCodeLine{00430\ }
+\DoxyCodeLine{00431\ \textcolor{comment}{/*\ Configuration\ registers\ initial\ value\ */}}
+\DoxyCodeLine{00432\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FRDCNTL\_CONFIGVALUE\ \ \ \ \ \ \ \ (0x00000000U\ |\ (uint32)((uint32)1U\ <<\ 8U)\ |\ (uint32)((uint32)0U\ <<\ 4U)\ |\ \ 1U)}}
+\DoxyCodeLine{00433\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FEDACCTRL1\_CONFIGVALUE\ \ \ \ \ 0x000A0005U}}
+\DoxyCodeLine{00434\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FEDACCTRL2\_CONFIGVALUE\ \ \ \ \ 0U}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FEDACSDIS\_CONFIGVALUE\ \ \ \ \ \ 0U}}
+\DoxyCodeLine{00436\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FBPROT\_CONFIGVALUE\ \ \ \ \ \ \ \ \ 0U}}
+\DoxyCodeLine{00437\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FBSE\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ \ 0U}}
+\DoxyCodeLine{00438\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FBAC\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ \ 0xFU}}
+\DoxyCodeLine{00439\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FBFALLBACK\_CONFIGVALUE\ \ \ \ \ (\ (uint32)((uint32)SYS\_ACTIVE\ <<\ 14U)\ \(\backslash\)}}
+\DoxyCodeLine{00440\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)3U\ <<\ 12U)\ \(\backslash\)}}
+\DoxyCodeLine{00441\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)3U\ <<\ 10U)\ \(\backslash\)}}
+\DoxyCodeLine{00442\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)3U\ <<\ 8U)\ \(\backslash\)}}
+\DoxyCodeLine{00443\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)3U\ <<\ 6U)\ \(\backslash\)}}
+\DoxyCodeLine{00444\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)3U\ <<\ 4U)\ \(\backslash\)}}
+\DoxyCodeLine{00445\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)3U\ <<\ 2U)\ \(\backslash\)}}
+\DoxyCodeLine{00446\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)SYS\_ACTIVE\ <<\ 0U)\ )}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00448\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FPAC1\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ 0x00C80001U}}
+\DoxyCodeLine{00449\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FPAC2\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ 0U}}
+\DoxyCodeLine{00450\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FMAC\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ \ 0U}}
+\DoxyCodeLine{00451\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FLOCK\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ 0x55AAU}}
+\DoxyCodeLine{00452\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FDIAGCTRL\_CONFIGVALUE\ \ \ \ \ \ 0x000A0000U}}
+\DoxyCodeLine{00453\ \textcolor{preprocessor}{\#define\ TCMFLASH\_FEDACSDIS2\_CONFIGVALUE\ \ \ \ \ 0U}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_afa983f739f63d48487aec38706af5a6f}{tcmflashGetConfigValue}}(\mbox{\hyperlink{structtcmflash__config__reg}{tcmflash\_config\_reg\_t}}\ *config\_reg,\ \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\_value\_type\_t}}\ type);}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (3)\ */}}
+\DoxyCodeLine{00458\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00461\ \textcolor{comment}{/*\ System\ Interface\ Functions\ */}}
+\DoxyCodeLine{00462\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_a45f46deb7644048176d5e9347afb939a}{setupPLL}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00463\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_aaa231cc5e90591363431c63f15360567}{trimLPO}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00464\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_ac357ba2b9a5627af15fa7be057fffd06}{customTrimLPO}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00465\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_a4490b16ad7d041537868dc9732b3dac2}{setupFlash}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00466\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_a57d84f612fd0d9fec4cd8ac58b5d10c3}{periphInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00467\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_aa26c333cac9e8481986232eb8f0d9244}{mapClocks}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00468\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_ab11a117f1e08391f23d1da05930e7acf}{systemInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00469\ \textcolor{keywordtype}{void}\ systemPowerDown(uint32\ mode);}
+\DoxyCodeLine{00470\ }
+\DoxyCodeLine{00471\ }
+\DoxyCodeLine{00472\ \textcolor{comment}{/*Configuration\ registers}}
+\DoxyCodeLine{00473\ \textcolor{comment}{*\ index\ 0:\ Even\ RAM}}
+\DoxyCodeLine{00474\ \textcolor{comment}{*\ index\ 1:\ Odd\ RAM}}
+\DoxyCodeLine{00475\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00476\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsram__config__reg}{sram\_config\_reg}}}
+\DoxyCodeLine{00477\ \{}
+\DoxyCodeLine{00478\ \ \ \ \ uint32\ CONFIG\_RAMCTRL[2U];}
+\DoxyCodeLine{00479\ \ \ \ \ uint32\ CONFIG\_RAMTHRESHOLD[2U];}
+\DoxyCodeLine{00480\ \ \ \ \ uint32\ CONFIG\_RAMINTCTRL[2U];}
+\DoxyCodeLine{00481\ \ \ \ \ uint32\ CONFIG\_RAMTEST[2U];}
+\DoxyCodeLine{00482\ \ \ \ \ uint32\ CONFIG\_RAMADDRDECVECT[2U];}
+\DoxyCodeLine{00483\ \}\ \mbox{\hyperlink{structsram__config__reg}{sram\_config\_reg\_t}};}
+\DoxyCodeLine{00484\ }
+\DoxyCodeLine{00485\ \textcolor{comment}{/*\ Configuration\ registers\ initial\ value\ */}}
+\DoxyCodeLine{00486\ \textcolor{preprocessor}{\#define\ SRAM\_RAMCTRL\_CONFIGVALUE\ \ \ \ \ \ \ \ 0x0005000AU}}
+\DoxyCodeLine{00487\ \textcolor{preprocessor}{\#define\ SRAM\_RAMTHRESHOLD\_CONFIGVALUE\ \ \ 1U}}
+\DoxyCodeLine{00488\ \textcolor{preprocessor}{\#define\ SRAM\_RAMINTCTRL\_CONFIGVALUE\ 1U}}
+\DoxyCodeLine{00489\ \textcolor{preprocessor}{\#define\ SRAM\_RAMTEST\_CONFIGVALUE\ \ \ \ \ \ \ \ 0x5U}}
+\DoxyCodeLine{00490\ \textcolor{preprocessor}{\#define\ SRAM\_RAMADDRDECVECT\_CONFIGVALUE\ 0U}}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_ac61ec208839bdc4fec42ea50268b4db3}{sramGetConfigValue}}(\mbox{\hyperlink{structsram__config__reg}{sram\_config\_reg\_t}}\ *config\_reg,\ \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\_value\_type\_t}}\ type);}
+\DoxyCodeLine{00493\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00494\ \}}
+\DoxyCodeLine{00495\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*extern\ "{}C"{}\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

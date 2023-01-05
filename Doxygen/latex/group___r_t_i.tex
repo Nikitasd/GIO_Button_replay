@@ -1,0 +1,572 @@
+\hypertarget{group___r_t_i}{}\doxysection{RTI}
+\label{group___r_t_i}\index{RTI@{RTI}}
+
+
+Real Time Interrupt Module.  
+
+
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___r_t_i_ga2ab125f7a976afe88811407a39ea1c28}{rti\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes RTI Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga63a9d423e889e4be4dcda5856974ab03}{rti\+Start\+Counter}} (uint32 counter)
+\begin{DoxyCompactList}\small\item\em Starts RTI Counter block. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_gafb1297e071d25cf401b1590487bce097}{rti\+Stop\+Counter}} (uint32 counter)
+\begin{DoxyCompactList}\small\item\em Stops RTI Counter block. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group___r_t_i_ga3f5dba3038d17156658db9a648eb2425}{rti\+Reset\+Counter}} (uint32 counter)
+\begin{DoxyCompactList}\small\item\em Reset RTI Counter block. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga68be9dfa7c820e7ccb3c4e059288d371}{rti\+Set\+Period}} (uint32 compare, uint32 period)
+\begin{DoxyCompactList}\small\item\em Set new period of RTI compare. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group___r_t_i_ga33763f05be8311dc9ee88a8a6099dbeb}{rti\+Get\+Period}} (uint32 compare)
+\begin{DoxyCompactList}\small\item\em Get current period of RTI compare. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group___r_t_i_gaacf32f218cb795601b6a0c8e36a1aaa4}{rti\+Get\+Current\+Tick}} (uint32 compare)
+\begin{DoxyCompactList}\small\item\em Get current tick of RTI compare. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga049b10a8828d1d06e900beba6359fed8}{rti\+Enable\+Notification}} (uint32 notification)
+\begin{DoxyCompactList}\small\item\em Enable notification of RTI module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_gab2415e212403ef711e6804bbf0ffb3b0}{rti\+Disable\+Notification}} (uint32 notification)
+\begin{DoxyCompactList}\small\item\em Disable notification of RTI module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga747a5cd06ff82d29a014e88fbe20aa93}{dwd\+Init}} (uint16 dwd\+Preload)
+\begin{DoxyCompactList}\small\item\em Initialize DWD Expiration Period. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga2d333bcf3001b04a60d6d19e336ccc1e}{dwwd\+Init}} (dwwd\+Reaction\+\_\+t Reaction, uint16 dwd\+Preload, dwwd\+Window\+Size\+\_\+t Window\+\_\+\+Size)
+\begin{DoxyCompactList}\small\item\em Initialize DWD Expiration Period. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group___r_t_i_gafcec3271ff40c336ea4b7619d149d448}{dwwd\+Get\+Current\+Down\+Counter}} (void)
+\begin{DoxyCompactList}\small\item\em Get the current DWWD Down Counter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga2602a205a0268023fbb8984e82626c7e}{dwd\+Counter\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enable DWD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga1ebb089b241933fd6dd88747520f50f5}{dwd\+Set\+Preload}} (uint16 dwd\+Preload)
+\begin{DoxyCompactList}\small\item\em Initialize DWD Expiration Period. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_gaa7fafc67ed4059093a612cabc42026e5}{dwd\+Reset}} (void)
+\begin{DoxyCompactList}\small\item\em Reset Digital Watchdog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga882dc32b3f7e02d7654254b7d6127467}{dwd\+Generate\+Sys\+Reset}} (void)
+\begin{DoxyCompactList}\small\item\em Generate System Reset through DWD. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group___r_t_i_gacb458563eda6221fb18bd0187e8375fc}{Isdwd\+Key\+Sequence\+Correct}} (void)
+\begin{DoxyCompactList}\small\item\em Check if DWD Key sequence correct. \end{DoxyCompactList}\item 
+dwd\+Reset\+Status\+\_\+t \mbox{\hyperlink{group___r_t_i_ga870dd0c9c043e31be58aee3a2a6b25fb}{dwd\+Get\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Check if Reset is generated due to DWD. \end{DoxyCompactList}\item 
+dwd\+Violation\+\_\+t \mbox{\hyperlink{group___r_t_i_gac91a05e949909b52d4b8fe401a4500f9}{dwd\+Get\+Violation\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Check the status of the DWD or DWWD violation happened. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga788f96ec4de7cbbb2ad2e3794d6efb53}{dwd\+Clear\+Flag}} (void)
+\begin{DoxyCompactList}\small\item\em Clear the DWD violation flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_ga530b7108aae1d3f0ad319eb8a959d920}{rti\+Get\+Config\+Value}} (\mbox{\hyperlink{structrti__config__reg}{rti\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_i_gaff8f87a03bb4b08ef56c289d91ff610e}{rti\+Notification}} (uint32 notification)
+\begin{DoxyCompactList}\small\item\em Notification of RTI module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Real Time Interrupt Module. 
+
+The real-\/time interrupt (RTI) module provides timer functionality for operating systems and for benchmarking code. The RTI module can incorporate several counters that define the timebases needed for scheduling in the operating system.
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__rti_8h}{reg\+\_\+rti.\+h}}
+\item \mbox{\hyperlink{rti_8h}{rti.\+h}}
+\item \mbox{\hyperlink{rti_8c}{rti.\+c}} 
+\end{DoxyItemize}
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{group___r_t_i_ga788f96ec4de7cbbb2ad2e3794d6efb53}\label{group___r_t_i_ga788f96ec4de7cbbb2ad2e3794d6efb53}} 
+\index{RTI@{RTI}!dwdClearFlag@{dwdClearFlag}}
+\index{dwdClearFlag@{dwdClearFlag}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwdClearFlag()}{dwdClearFlag()}}
+{\footnotesize\ttfamily void dwd\+Clear\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clear the DWD violation flag. 
+
+This function will clear dwd status register. \mbox{\Hypertarget{group___r_t_i_ga2602a205a0268023fbb8984e82626c7e}\label{group___r_t_i_ga2602a205a0268023fbb8984e82626c7e}} 
+\index{RTI@{RTI}!dwdCounterEnable@{dwdCounterEnable}}
+\index{dwdCounterEnable@{dwdCounterEnable}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwdCounterEnable()}{dwdCounterEnable()}}
+{\footnotesize\ttfamily void dwd\+Counter\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable DWD. 
+
+This function will Enable the DWD counter. \mbox{\Hypertarget{group___r_t_i_ga882dc32b3f7e02d7654254b7d6127467}\label{group___r_t_i_ga882dc32b3f7e02d7654254b7d6127467}} 
+\index{RTI@{RTI}!dwdGenerateSysReset@{dwdGenerateSysReset}}
+\index{dwdGenerateSysReset@{dwdGenerateSysReset}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwdGenerateSysReset()}{dwdGenerateSysReset()}}
+{\footnotesize\ttfamily void dwd\+Generate\+Sys\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Generate System Reset through DWD. 
+
+This function can be called to generate system reset using DWD. \mbox{\Hypertarget{group___r_t_i_ga870dd0c9c043e31be58aee3a2a6b25fb}\label{group___r_t_i_ga870dd0c9c043e31be58aee3a2a6b25fb}} 
+\index{RTI@{RTI}!dwdGetStatus@{dwdGetStatus}}
+\index{dwdGetStatus@{dwdGetStatus}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwdGetStatus()}{dwdGetStatus()}}
+{\footnotesize\ttfamily dwd\+Reset\+Status\+\_\+t dwd\+Get\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if Reset is generated due to DWD. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return\+:
+\begin{DoxyItemize}
+\item Reset\+\_\+\+Generated\+: When the Reset is generated due to DWD.
+\item No\+\_\+\+Reset\+\_\+\+Generated\+: No Reset is generated due to DWD.
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function will get dwd Reset status. \mbox{\Hypertarget{group___r_t_i_gac91a05e949909b52d4b8fe401a4500f9}\label{group___r_t_i_gac91a05e949909b52d4b8fe401a4500f9}} 
+\index{RTI@{RTI}!dwdGetViolationStatus@{dwdGetViolationStatus}}
+\index{dwdGetViolationStatus@{dwdGetViolationStatus}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwdGetViolationStatus()}{dwdGetViolationStatus()}}
+{\footnotesize\ttfamily dwd\+Violation\+\_\+t dwd\+Get\+Violation\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check the status of the DWD or DWWD violation happened. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return one of following violations occured\+:
+\begin{DoxyItemize}
+\item No\+Time\+\_\+\+Violation
+\item Key\+\_\+\+Seq\+\_\+\+Violation
+\item Time\+\_\+\+Window\+\_\+\+Violation
+\item End\+Time\+\_\+\+Window\+\_\+\+Violation
+\item Start\+Time\+\_\+\+Window\+\_\+\+Violation
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function will get status of the DWD or DWWD violation status. \mbox{\Hypertarget{group___r_t_i_ga747a5cd06ff82d29a014e88fbe20aa93}\label{group___r_t_i_ga747a5cd06ff82d29a014e88fbe20aa93}} 
+\index{RTI@{RTI}!dwdInit@{dwdInit}}
+\index{dwdInit@{dwdInit}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwdInit()}{dwdInit()}}
+{\footnotesize\ttfamily void dwd\+Init (\begin{DoxyParamCaption}\item[{uint16}]{dwd\+Preload }\end{DoxyParamCaption})}
+
+
+
+Initialize DWD Expiration Period. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em dwd\+Preload} & DWD Preload value for expiration time.
+\begin{DoxyItemize}
+\item Texp = (dwd\+Preload +1) / RTICLK
+\item n\+: Divide by n + 1
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function can be called to set the DWD expiration \mbox{\Hypertarget{group___r_t_i_gaa7fafc67ed4059093a612cabc42026e5}\label{group___r_t_i_gaa7fafc67ed4059093a612cabc42026e5}} 
+\index{RTI@{RTI}!dwdReset@{dwdReset}}
+\index{dwdReset@{dwdReset}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwdReset()}{dwdReset()}}
+{\footnotesize\ttfamily void dwd\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reset Digital Watchdog. 
+
+This function can be called to reset Digital Watchdog. \mbox{\Hypertarget{group___r_t_i_ga1ebb089b241933fd6dd88747520f50f5}\label{group___r_t_i_ga1ebb089b241933fd6dd88747520f50f5}} 
+\index{RTI@{RTI}!dwdSetPreload@{dwdSetPreload}}
+\index{dwdSetPreload@{dwdSetPreload}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwdSetPreload()}{dwdSetPreload()}}
+{\footnotesize\ttfamily void dwd\+Set\+Preload (\begin{DoxyParamCaption}\item[{uint16}]{dwd\+Preload }\end{DoxyParamCaption})}
+
+
+
+Initialize DWD Expiration Period. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em dwd\+Preload} & DWD Preload value for the watchdog expiration time.
+\begin{DoxyItemize}
+\item Texp = (dwd\+Preload +1) / RTICLK
+\item n\+: Divide by n + 1
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function can be called to set the Preload value for the watchdog expiration time. \mbox{\Hypertarget{group___r_t_i_gafcec3271ff40c336ea4b7619d149d448}\label{group___r_t_i_gafcec3271ff40c336ea4b7619d149d448}} 
+\index{RTI@{RTI}!dwwdGetCurrentDownCounter@{dwwdGetCurrentDownCounter}}
+\index{dwwdGetCurrentDownCounter@{dwwdGetCurrentDownCounter}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwwdGetCurrentDownCounter()}{dwwdGetCurrentDownCounter()}}
+{\footnotesize\ttfamily uint32 dwwd\+Get\+Current\+Down\+Counter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the current DWWD Down Counter. 
+
+\begin{DoxyReturn}{Возвращает}
+Current tick of selected compare
+\end{DoxyReturn}
+This function will get the current DWWD down counter value. \mbox{\Hypertarget{group___r_t_i_ga2d333bcf3001b04a60d6d19e336ccc1e}\label{group___r_t_i_ga2d333bcf3001b04a60d6d19e336ccc1e}} 
+\index{RTI@{RTI}!dwwdInit@{dwwdInit}}
+\index{dwwdInit@{dwwdInit}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{dwwdInit()}{dwwdInit()}}
+{\footnotesize\ttfamily void dwwd\+Init (\begin{DoxyParamCaption}\item[{dwwd\+Reaction\+\_\+t}]{Reaction,  }\item[{uint16}]{dwd\+Preload,  }\item[{dwwd\+Window\+Size\+\_\+t}]{Window\+\_\+\+Size }\end{DoxyParamCaption})}
+
+
+
+Initialize DWD Expiration Period. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em Reaction} & DWWD reaction if the watchdog is serviced outside the time window.
+\begin{DoxyItemize}
+\item Generate\+\_\+\+Reset ~\newline
+
+\item Generate\+\_\+\+NMI 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em dwd\+Preload} & DWWD Preload value for the watchdog expiration time.
+\begin{DoxyItemize}
+\item Texp = (dwd\+Preload +1) / RTICLK
+\item n\+: Divide by n + 1 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em Window\+\_\+\+Size} & DWWD time window size
+\begin{DoxyItemize}
+\item Size\+\_\+100\+\_\+\+Percent
+\item Size\+\_\+50\+\_\+\+Percent
+\item Size\+\_\+25\+\_\+\+Percent
+\item Size\+\_\+12\+\_\+5\+\_\+\+Percent
+\item Size\+\_\+6\+\_\+25\+\_\+\+Percent
+\item Size\+\_\+3\+\_\+125\+\_\+\+Percent
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function can be called to set the DWD expiration \mbox{\Hypertarget{group___r_t_i_gacb458563eda6221fb18bd0187e8375fc}\label{group___r_t_i_gacb458563eda6221fb18bd0187e8375fc}} 
+\index{RTI@{RTI}!IsdwdKeySequenceCorrect@{IsdwdKeySequenceCorrect}}
+\index{IsdwdKeySequenceCorrect@{IsdwdKeySequenceCorrect}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{IsdwdKeySequenceCorrect()}{IsdwdKeySequenceCorrect()}}
+{\footnotesize\ttfamily boolean Isdwd\+Key\+Sequence\+Correct (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if DWD Key sequence correct. 
+
+\begin{DoxyReturn}{Возвращает}
+The function will return\+:
+\begin{DoxyItemize}
+\item TRUE\+: When the DWD key sequence is written correctly.
+\item FALSE\+: When the DWD key sequence is written incorrectly / not written.
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function will get status of the DWD Key sequence. \mbox{\Hypertarget{group___r_t_i_gab2415e212403ef711e6804bbf0ffb3b0}\label{group___r_t_i_gab2415e212403ef711e6804bbf0ffb3b0}} 
+\index{RTI@{RTI}!rtiDisableNotification@{rtiDisableNotification}}
+\index{rtiDisableNotification@{rtiDisableNotification}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiDisableNotification()}{rtiDisableNotification()}}
+{\footnotesize\ttfamily void rti\+Disable\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{notification }\end{DoxyParamCaption})}
+
+
+
+Disable notification of RTI module. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em notification} & Select notification of RTI module\+:
+\begin{DoxyItemize}
+\item rti\+NOTIFICATION\+\_\+\+COMPARE0\+: RTI compare 0 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE1\+: RTI compare 1 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE2\+: RTI compare 2 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE3\+: RTI compare 3 notification
+\item rti\+NOTIFICATION\+\_\+\+TIMEBASE\+: RTI Timebase notification
+\item rti\+NOTIFICATION\+\_\+\+COUNTER0\+: RTI counter 0 overflow notification
+\item rti\+NOTIFICATION\+\_\+\+COUNTER1\+: RTI counter 1 overflow notification
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will disable the selected notification of a RTI module. It is possible to disable multiple notifications masked. \begin{DoxyNote}{Заметки}
+The function rti\+Init has to be called before this function can be used.~\newline
+ This function has to be executed in privileged mode.
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_ga049b10a8828d1d06e900beba6359fed8}\label{group___r_t_i_ga049b10a8828d1d06e900beba6359fed8}} 
+\index{RTI@{RTI}!rtiEnableNotification@{rtiEnableNotification}}
+\index{rtiEnableNotification@{rtiEnableNotification}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiEnableNotification()}{rtiEnableNotification()}}
+{\footnotesize\ttfamily void rti\+Enable\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{notification }\end{DoxyParamCaption})}
+
+
+
+Enable notification of RTI module. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em notification} & Select notification of RTI module\+:
+\begin{DoxyItemize}
+\item rti\+NOTIFICATION\+\_\+\+COMPARE0\+: RTI compare 0 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE1\+: RTI compare 1 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE2\+: RTI compare 2 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE3\+: RTI compare 3 notification
+\item rti\+NOTIFICATION\+\_\+\+TIMEBASE\+: RTI Timebase notification
+\item rti\+NOTIFICATION\+\_\+\+COUNTER0\+: RTI counter 0 overflow notification
+\item rti\+NOTIFICATION\+\_\+\+COUNTER1\+: RTI counter 1 overflow notification
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will enable the selected notification of a RTI module. It is possible to enable multiple notifications masked. \begin{DoxyNote}{Заметки}
+The function rti\+Init has to be called before this function can be used.~\newline
+ This function has to be executed in privileged mode.
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_ga530b7108aae1d3f0ad319eb8a959d920}\label{group___r_t_i_ga530b7108aae1d3f0ad319eb8a959d920}} 
+\index{RTI@{RTI}!rtiGetConfigValue@{rtiGetConfigValue}}
+\index{rtiGetConfigValue@{rtiGetConfigValue}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiGetConfigValue()}{rtiGetConfigValue()}}
+{\footnotesize\ttfamily void rti\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrti__config__reg}{rti\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg \mbox{\Hypertarget{group___r_t_i_gaacf32f218cb795601b6a0c8e36a1aaa4}\label{group___r_t_i_gaacf32f218cb795601b6a0c8e36a1aaa4}} 
+\index{RTI@{RTI}!rtiGetCurrentTick@{rtiGetCurrentTick}}
+\index{rtiGetCurrentTick@{rtiGetCurrentTick}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiGetCurrentTick()}{rtiGetCurrentTick()}}
+{\footnotesize\ttfamily uint32 rti\+Get\+Current\+Tick (\begin{DoxyParamCaption}\item[{uint32}]{compare }\end{DoxyParamCaption})}
+
+
+
+Get current tick of RTI compare. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em compare} & Select compare to return the current tick\+:
+\begin{DoxyItemize}
+\item rti\+COMPARE0\+: RTI compare 0 will return the current tick
+\item rti\+COMPARE1\+: RTI compare 1 will return the current tick
+\item rti\+COMPARE2\+: RTI compare 2 will return the current tick
+\item rti\+COMPARE3\+: RTI compare 3 will return the current tick 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Current tick of selected compare
+\end{DoxyReturn}
+This function will return the current tick of the selected compare. \begin{DoxyNote}{Заметки}
+The function rti\+Init has to be called before this function can be used.
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_ga33763f05be8311dc9ee88a8a6099dbeb}\label{group___r_t_i_ga33763f05be8311dc9ee88a8a6099dbeb}} 
+\index{RTI@{RTI}!rtiGetPeriod@{rtiGetPeriod}}
+\index{rtiGetPeriod@{rtiGetPeriod}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiGetPeriod()}{rtiGetPeriod()}}
+{\footnotesize\ttfamily uint32 rti\+Get\+Period (\begin{DoxyParamCaption}\item[{uint32}]{compare }\end{DoxyParamCaption})}
+
+
+
+Get current period of RTI compare. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em compare} & Select compare to return the current period\+:
+\begin{DoxyItemize}
+\item rti\+COMPARE0\+: RTI compare 0 will return the current period
+\item rti\+COMPARE1\+: RTI compare 1 will return the current period
+\item rti\+COMPARE2\+: RTI compare 2 will return the current period
+\item rti\+COMPARE3\+: RTI compare 3 will return the current period 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Current period of selected compare in \mbox{[}ticks -\/ 1\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0x00000000\+: Divide by 1
+\item n\+: Divide by n + 1
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function will return the period of the selected compare. \begin{DoxyNote}{Заметки}
+The function rti\+Init has to be called before this function can be used.
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_ga2ab125f7a976afe88811407a39ea1c28}\label{group___r_t_i_ga2ab125f7a976afe88811407a39ea1c28}} 
+\index{RTI@{RTI}!rtiInit@{rtiInit}}
+\index{rtiInit@{rtiInit}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiInit()}{rtiInit()}}
+{\footnotesize\ttfamily void rti\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes RTI Driver. 
+
+This function initializes the RTI driver. {\bfseries{Initialize}} {\bfseries{RTI1\+:}} 
+
+
+\begin{DoxyItemize}
+\item Setup debug options and disable both counter blocks
+\item Enable/\+Disable capture event sources for both counter blocks
+\item Setup input source compare 0-\/3
+\item Reset up counter 0
+\item Reset free running counter 0
+\item Setup up counter 0 compare value
+\begin{DoxyItemize}
+\item 0x00000000\+: Divide by 2$^\wedge$32
+\item 0x00000001-\/0x\+FFFFFFFF\+: Divide by (CPUC0 + 1)
+\end{DoxyItemize}
+\item Reset up counter 1
+\item Reset free running counter 1
+\item Setup up counter 1 compare value
+\begin{DoxyItemize}
+\item 0x00000000\+: Divide by 2$^\wedge$32
+\item 0x00000001-\/0x\+FFFFFFFF\+: Divide by (CPUC1 + 1)
+\end{DoxyItemize}
+\item Setup compare 0 value. This value is compared with selected free running counter.
+\item Setup update compare 0 value. This value is added to the compare 0 value on each compare match.
+\item Setup compare 1 value. This value is compared with selected free running counter.
+\item Setup update compare 1 value. This value is added to the compare 1 value on each compare match.
+\item Setup compare 2 value. This value is compared with selected free running counter.
+\item Setup update compare 2 value. This value is added to the compare 2 value on each compare match.
+\item Setup compare 3 value. This value is compared with selected free running counter.
+\item Setup update compare 3 value. This value is added to the compare 3 value on each compare match.
+\item Clear all pending interrupts
+\item Disable all interrupts
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Заметки}
+This function has to be called before the driver can be used.~\newline
+ This function has to be executed in privileged mode.~\newline
+ This function does not start the counters.
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_gaff8f87a03bb4b08ef56c289d91ff610e}\label{group___r_t_i_gaff8f87a03bb4b08ef56c289d91ff610e}} 
+\index{RTI@{RTI}!rtiNotification@{rtiNotification}}
+\index{rtiNotification@{rtiNotification}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiNotification()}{rtiNotification()}}
+{\footnotesize\ttfamily void rti\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{notification }\end{DoxyParamCaption})}
+
+
+
+Notification of RTI module. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em notification} & Select notification of RTI module\+:
+\begin{DoxyItemize}
+\item rti\+NOTIFICATION\+\_\+\+COMPARE0\+: RTI compare 0 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE1\+: RTI compare 1 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE2\+: RTI compare 2 notification
+\item rti\+NOTIFICATION\+\_\+\+COMPARE3\+: RTI compare 3 notification
+\item rti\+NOTIFICATION\+\_\+\+TIMEBASE\+: RTI Timebase notification
+\item rti\+NOTIFICATION\+\_\+\+COUNTER0\+: RTI counter 0 overflow notification
+\item rti\+NOTIFICATION\+\_\+\+COUNTER1\+: RTI counter 1 overflow notification
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+This function has to be provide by the user. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_ga3f5dba3038d17156658db9a648eb2425}\label{group___r_t_i_ga3f5dba3038d17156658db9a648eb2425}} 
+\index{RTI@{RTI}!rtiResetCounter@{rtiResetCounter}}
+\index{rtiResetCounter@{rtiResetCounter}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiResetCounter()}{rtiResetCounter()}}
+{\footnotesize\ttfamily uint32 rti\+Reset\+Counter (\begin{DoxyParamCaption}\item[{uint32}]{counter }\end{DoxyParamCaption})}
+
+
+
+Reset RTI Counter block. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em counter} & Select counter block to be reset\+:
+\begin{DoxyItemize}
+\item rti\+COUNTER\+\_\+\+BLOCK0\+: RTI counter block 0 will be reset
+\item rti\+COUNTER\+\_\+\+BLOCK1\+: RTI counter block 1 will be reset 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+The function will return\+:
+\begin{DoxyItemize}
+\item 0\+: When the counter reset wasn\textquotesingle{}t successful ~\newline
+
+\item 1\+: When the counter reset was successful ~\newline
+
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function resets selected counter block of the selected RTI module. \begin{DoxyNote}{Заметки}
+The function rti\+Init has to be called before this function can be used.~\newline
+ This function has to be executed in privileged mode.~\newline
+ The selected counter block has to be stopped before it can reset.
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_ga68be9dfa7c820e7ccb3c4e059288d371}\label{group___r_t_i_ga68be9dfa7c820e7ccb3c4e059288d371}} 
+\index{RTI@{RTI}!rtiSetPeriod@{rtiSetPeriod}}
+\index{rtiSetPeriod@{rtiSetPeriod}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiSetPeriod()}{rtiSetPeriod()}}
+{\footnotesize\ttfamily void rti\+Set\+Period (\begin{DoxyParamCaption}\item[{uint32}]{compare,  }\item[{uint32}]{period }\end{DoxyParamCaption})}
+
+
+
+Set new period of RTI compare. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em compare} & Select compare to change period\+:
+\begin{DoxyItemize}
+\item rti\+COMPARE0\+: RTI compare 0 will change the period
+\item rti\+COMPARE1\+: RTI compare 1 will change the period
+\item rti\+COMPARE2\+: RTI compare 2 will change the period
+\item rti\+COMPARE3\+: RTI compare 3 will change the period 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em period} & new period in \mbox{[}ticks -\/ 1\mbox{]}\+:
+\begin{DoxyItemize}
+\item 0x00000000\+: Divide by 1
+\item n\+: Divide by n + 1
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will change the period of the selected compare. \begin{DoxyNote}{Заметки}
+The function rti\+Init has to be called before this function can be used.~\newline
+ This function has to be executed in privileged mode.~\newline
+ When the corresponding counter block is not stopped,~\newline
+ the period will change on the next compare match of the old period.
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_ga63a9d423e889e4be4dcda5856974ab03}\label{group___r_t_i_ga63a9d423e889e4be4dcda5856974ab03}} 
+\index{RTI@{RTI}!rtiStartCounter@{rtiStartCounter}}
+\index{rtiStartCounter@{rtiStartCounter}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiStartCounter()}{rtiStartCounter()}}
+{\footnotesize\ttfamily void rti\+Start\+Counter (\begin{DoxyParamCaption}\item[{uint32}]{counter }\end{DoxyParamCaption})}
+
+
+
+Starts RTI Counter block. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em counter} & Select counter block to be started\+:
+\begin{DoxyItemize}
+\item rti\+COUNTER\+\_\+\+BLOCK0\+: RTI counter block 0 will be started
+\item rti\+COUNTER\+\_\+\+BLOCK1\+: RTI counter block 1 will be started
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function starts selected counter block of the selected RTI module. \begin{DoxyNote}{Заметки}
+The function rti\+Init has to be called before this function can be used.~\newline
+ This function has to be executed in privileged mode.
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_t_i_gafb1297e071d25cf401b1590487bce097}\label{group___r_t_i_gafb1297e071d25cf401b1590487bce097}} 
+\index{RTI@{RTI}!rtiStopCounter@{rtiStopCounter}}
+\index{rtiStopCounter@{rtiStopCounter}!RTI@{RTI}}
+\doxysubsubsection{\texorpdfstring{rtiStopCounter()}{rtiStopCounter()}}
+{\footnotesize\ttfamily void rti\+Stop\+Counter (\begin{DoxyParamCaption}\item[{uint32}]{counter }\end{DoxyParamCaption})}
+
+
+
+Stops RTI Counter block. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em counter} & Select counter to be stopped\+:
+\begin{DoxyItemize}
+\item rti\+COUNTER\+\_\+\+BLOCK0\+: RTI counter block 0 will be stopped
+\item rti\+COUNTER\+\_\+\+BLOCK1\+: RTI counter block 1 will be stopped
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function stops selected counter block of the selected RTI module. \begin{DoxyNote}{Заметки}
+The function rti\+Init has to be called before this function can be used.~\newline
+ This function has to be executed in privileged mode.
+\end{DoxyNote}

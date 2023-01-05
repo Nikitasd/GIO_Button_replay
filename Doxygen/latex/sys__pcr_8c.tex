@@ -1,0 +1,64 @@
+\hypertarget{sys__pcr_8c}{}\doxysection{Файл source/sys\+\_\+pcr.c}
+\label{sys__pcr_8c}\index{source/sys\_pcr.c@{source/sys\_pcr.c}}
+
+
+PCR Driver Implementation File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+pcr.\+h\char`\"{}}\newline
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___p_c_r_ga679957e2193edaa80b99e729846cbd7b}{peripheral\+\_\+\+Frame\+\_\+\+Protection\+\_\+\+Set}} (\mbox{\hyperlink{sys__pcr_8h_a4291668901af156196ff9a8c80744d6c}{peripheral\+\_\+\+Frame\+\_\+\+Select\+\_\+t}} peripheral\+\_\+\+Frame)
+\begin{DoxyCompactList}\small\item\em Set the peripheral protection of the selected frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_gad5d3f7152cb9a997621d25ea347ec799}{peripheral\+\_\+\+Frame\+\_\+\+Protection\+\_\+\+Clr}} (\mbox{\hyperlink{sys__pcr_8h_a4291668901af156196ff9a8c80744d6c}{peripheral\+\_\+\+Frame\+\_\+\+Select\+\_\+t}} peripheral\+\_\+\+Frame)
+\begin{DoxyCompactList}\small\item\em Clear the peripheral protection of the selected frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga9d02d103ab548f8fb9714662b2142c87}{peripheral\+\_\+\+Frame\+\_\+\+Powerdown\+\_\+\+Set}} (\mbox{\hyperlink{sys__pcr_8h_a4291668901af156196ff9a8c80744d6c}{peripheral\+\_\+\+Frame\+\_\+\+Select\+\_\+t}} peripheral\+\_\+\+Frame)
+\begin{DoxyCompactList}\small\item\em Take the selected peripheral to powerdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga4d766343724f5d75811c840a8205f271}{peripheral\+\_\+\+Frame\+\_\+\+Powerdown\+\_\+\+Clr}} (\mbox{\hyperlink{sys__pcr_8h_a4291668901af156196ff9a8c80744d6c}{peripheral\+\_\+\+Frame\+\_\+\+Select\+\_\+t}} peripheral\+\_\+\+Frame)
+\begin{DoxyCompactList}\small\item\em Bring the selected peripheral frame out of powerdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga892f9898707985e8b43511056370d9e9}{peripheral\+\_\+\+Mem\+\_\+\+Frame\+\_\+\+Prot\+\_\+\+Set}} (peripheral\+\_\+\+Memory\+Frame\+\_\+\+CS\+\_\+t peripheral\+\_\+\+Memory\+\_\+\+Frame\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Set the peripheral memory protection of the selected frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_gaf333f465489e49c0be59c30001fc13ab}{peripheral\+\_\+\+Mem\+\_\+\+Frame\+\_\+\+Prot\+\_\+\+Clr}} (peripheral\+\_\+\+Memory\+Frame\+\_\+\+CS\+\_\+t peripheral\+\_\+\+Memory\+\_\+\+Frame\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Clear the peripheral memory protection of the selected frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga237b7fbf1df7dc1ca66b9353e49d6804}{peripheral\+\_\+\+Mem\+\_\+\+Frame\+\_\+\+Pwrdwn\+\_\+\+Set}} (peripheral\+\_\+\+Memory\+Frame\+\_\+\+CS\+\_\+t peripheral\+\_\+\+Memory\+\_\+\+Frame\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Take the selected peripheral memory frame to powerdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_gaf6b86c171c83977f822e2516d592908e}{peripheral\+\_\+\+Mem\+\_\+\+Frame\+\_\+\+Pwrdwn\+\_\+\+Clr}} (peripheral\+\_\+\+Memory\+Frame\+\_\+\+CS\+\_\+t peripheral\+\_\+\+Memory\+\_\+\+Frame\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Bring the selected peripheral Memory frame out of powerdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga3aa6fff20c4727bc0f47bd11b6fb0f67}{peripheral\+\_\+\+Protection\+\_\+\+Set}} (\mbox{\hyperlink{sys__pcr_8h_a5dc630d513f526a99529dc00beb6f1bc}{peripheral\+\_\+\+Quad\+\_\+\+Chip\+Select\+\_\+t}} peripheral\+\_\+\+Quad\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Set the peripheral protection of all the selected frames. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_gaed96b83b57b010e429bb206a5a132fc5}{peripheral\+\_\+\+Protection\+\_\+\+Clr}} (\mbox{\hyperlink{sys__pcr_8h_a5dc630d513f526a99529dc00beb6f1bc}{peripheral\+\_\+\+Quad\+\_\+\+Chip\+Select\+\_\+t}} peripheral\+\_\+\+Quad\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Clear the peripheral protection of all the selected frames. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga05485660e4052e6dc39bdf799c1d230c}{peripheral\+\_\+\+Powerdown\+\_\+\+Set}} (\mbox{\hyperlink{sys__pcr_8h_a5dc630d513f526a99529dc00beb6f1bc}{peripheral\+\_\+\+Quad\+\_\+\+Chip\+Select\+\_\+t}} peripheral\+\_\+\+Quad\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Take all the selected peripheral frame to powerdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_gad7decd98e2ec454e10faa3bc47ea41c5}{peripheral\+\_\+\+Powerdown\+\_\+\+Clr}} (\mbox{\hyperlink{sys__pcr_8h_a5dc630d513f526a99529dc00beb6f1bc}{peripheral\+\_\+\+Quad\+\_\+\+Chip\+Select\+\_\+t}} peripheral\+\_\+\+Quad\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Bring all the selected peripheral frame out of powerdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_gac91d838fa6f00ac05cad5548544b35ae}{peripheral\+\_\+\+Memory\+\_\+\+Protection\+\_\+\+Set}} (\mbox{\hyperlink{sys__pcr_8h_aa0418650527a6213916f3bf80fa28ee4}{peripheral\+\_\+\+Memory\+\_\+\+Chip\+Select\+\_\+t}} peripheral\+\_\+\+Memory\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Set the peripheral memory protection of all the selected frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga197fab609f970467d21e7260e105b40f}{peripheral\+\_\+\+Memory\+\_\+\+Protection\+\_\+\+Clr}} (\mbox{\hyperlink{sys__pcr_8h_aa0418650527a6213916f3bf80fa28ee4}{peripheral\+\_\+\+Memory\+\_\+\+Chip\+Select\+\_\+t}} peripheral\+\_\+\+Memory\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Clear the peripheral memory protection of all the selected frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_gafad4ba777fed7174769ebea7f0d4d09a}{peripheral\+\_\+\+Memory\+\_\+\+Powerdown\+\_\+\+Set}} (\mbox{\hyperlink{sys__pcr_8h_aa0418650527a6213916f3bf80fa28ee4}{peripheral\+\_\+\+Memory\+\_\+\+Chip\+Select\+\_\+t}} peripheral\+\_\+\+Memory\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Take all the selected peripheral memory frame to powerdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga0d579027ce66548a6d5615d1f91f6609}{peripheral\+\_\+\+Memory\+\_\+\+Powerdown\+\_\+\+Clr}} (\mbox{\hyperlink{sys__pcr_8h_aa0418650527a6213916f3bf80fa28ee4}{peripheral\+\_\+\+Memory\+\_\+\+Chip\+Select\+\_\+t}} peripheral\+\_\+\+Memory\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Bring all the selected peripheral Memory frame out of powerdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga7fa9e8dbf4d9c74ac6ed4702de31ec5b}{peripheral\+\_\+\+Powerdown\+\_\+\+Status}} (\mbox{\hyperlink{sys__pcr_8h_a5dc630d513f526a99529dc00beb6f1bc}{peripheral\+\_\+\+Quad\+\_\+\+Chip\+Select\+\_\+t}} $\ast$peripheral\+\_\+\+Quad\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Get the powerdown status of the peripheral frames. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_gaa1755d9e0a3ef6ff63591408fa3474e7}{peripheral\+\_\+\+Protection\+\_\+\+Status}} (\mbox{\hyperlink{sys__pcr_8h_a5dc630d513f526a99529dc00beb6f1bc}{peripheral\+\_\+\+Quad\+\_\+\+Chip\+Select\+\_\+t}} $\ast$peripheral\+\_\+\+Quad\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Get the protection status of the peripheral frames. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga0400e27e52f6494c19216c6093773e7d}{peripheral\+\_\+\+Memory\+\_\+\+Protection\+\_\+\+Status}} (\mbox{\hyperlink{sys__pcr_8h_aa0418650527a6213916f3bf80fa28ee4}{peripheral\+\_\+\+Memory\+\_\+\+Chip\+Select\+\_\+t}} $\ast$peripheral\+\_\+\+Memory\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Get the protection set of all the peripheral Memory frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga29d72393ecbf549e97dce6a69e1ab0dc}{peripheral\+\_\+\+Memory\+\_\+\+Powerdown\+\_\+\+Status}} (\mbox{\hyperlink{sys__pcr_8h_aa0418650527a6213916f3bf80fa28ee4}{peripheral\+\_\+\+Memory\+\_\+\+Chip\+Select\+\_\+t}} $\ast$peripheral\+\_\+\+Memory\+\_\+\+CS)
+\begin{DoxyCompactList}\small\item\em Get the powerdown status of all the peripheral Memory frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_c_r_ga018d04d417591bbe03342ec34a043781}{pcr\+Get\+Config\+Value}} (\mbox{\hyperlink{structpcr__config__reg}{pcr\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+PCR Driver Implementation File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01 
+\end{DoxyVersion}

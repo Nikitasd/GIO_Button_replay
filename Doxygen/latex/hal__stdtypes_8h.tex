@@ -1,0 +1,134 @@
+\hypertarget{hal__stdtypes_8h}{}\doxysection{Файл include/hal\+\_\+stdtypes.h}
+\label{hal__stdtypes_8h}\index{include/hal\_stdtypes.h@{include/hal\_stdtypes.h}}
+
+
+HALCo\+Gen standard types header File.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_std___version_info_type}{Std\+\_\+\+Version\+Info\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a90bb030adb3acfba49aa0e5a25295445}\label{hal__stdtypes_8h_a90bb030adb3acfba49aa0e5a25295445}} 
+\#define {\bfseries \+\_\+\+UINT64\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a2c2d291bb2bab1b59e44d2a501311962}\label{hal__stdtypes_8h_a2c2d291bb2bab1b59e44d2a501311962}} 
+\#define {\bfseries \+\_\+\+UINT32\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a1cbf71da57df242c8d7135ccd8b54f93}\label{hal__stdtypes_8h_a1cbf71da57df242c8d7135ccd8b54f93}} 
+\#define {\bfseries \+\_\+\+UINT16\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a892e0ec5b3512add5b0226b79466121b}\label{hal__stdtypes_8h_a892e0ec5b3512add5b0226b79466121b}} 
+\#define {\bfseries \+\_\+\+UINT8\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_af5dd75fab460b349a427f7dca4154f08}\label{hal__stdtypes_8h_af5dd75fab460b349a427f7dca4154f08}} 
+\#define {\bfseries \+\_\+\+BOOLEAN\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aa0601ab13a445bd25a1e0b19b2d8baa8}\label{hal__stdtypes_8h_aa0601ab13a445bd25a1e0b19b2d8baa8}} 
+\#define {\bfseries \+\_\+\+SINT64\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_afb69a6e9b85ba8fdc386ce6a4a056624}\label{hal__stdtypes_8h_afb69a6e9b85ba8fdc386ce6a4a056624}} 
+\#define {\bfseries \+\_\+\+SINT32\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aa10ab57bf83b7cd720d11168d2e4ae14}\label{hal__stdtypes_8h_aa10ab57bf83b7cd720d11168d2e4ae14}} 
+\#define {\bfseries \+\_\+\+SINT16\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aa6909cf8c504dd8e400f4d7f9f9857b9}\label{hal__stdtypes_8h_aa6909cf8c504dd8e400f4d7f9f9857b9}} 
+\#define {\bfseries \+\_\+\+SINT8\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a93549077f4c0e940e89745a3b27ece09}\label{hal__stdtypes_8h_a93549077f4c0e940e89745a3b27ece09}} 
+\#define {\bfseries \+\_\+\+FLOAT32\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a89c91425680cdbd455a6d71c22b1b8e6}\label{hal__stdtypes_8h_a89c91425680cdbd455a6d71c22b1b8e6}} 
+\#define {\bfseries \+\_\+\+FLOAT64\+\_\+\+DECLARED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_adc710bf088dd6e6e41b1643d3152bb2c}\label{hal__stdtypes_8h_adc710bf088dd6e6e41b1643d3152bb2c}} 
+\#define {\bfseries STATUSTYPEDEFINED}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a1e7cc741c56207a8872ea58373276925}\label{hal__stdtypes_8h_a1e7cc741c56207a8872ea58373276925}} 
+\#define {\bfseries E\+\_\+\+OK}~0x00U
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a1d155fa7a571f569a380bb42b1947eb4}\label{hal__stdtypes_8h_a1d155fa7a571f569a380bb42b1947eb4}} 
+\#define {\bfseries E\+\_\+\+NOT\+\_\+\+OK}~0x01U
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aa751842079e9148271cfc8acb6016a9b}\label{hal__stdtypes_8h_aa751842079e9148271cfc8acb6016a9b}} 
+\#define {\bfseries STD\+\_\+\+ON}~0x01U
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a06b00117603b302dddd3e5a16e355e60}\label{hal__stdtypes_8h_a06b00117603b302dddd3e5a16e355e60}} 
+\#define {\bfseries STD\+\_\+\+OFF}~0x00U
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}\label{hal__stdtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}} 
+\#define {\bfseries NULL}~((void $\ast$) 0U)
+\begin{DoxyCompactList}\small\item\em NULL definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a530f11a96e508d171d28564c8dc20942}\label{hal__stdtypes_8h_a530f11a96e508d171d28564c8dc20942}} 
+\#define {\bfseries NULL\+\_\+\+PTR}~((void $\ast$)0x0)
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{hal__stdtypes_8h_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\#define {\bfseries TRUE}~true
+\begin{DoxyCompactList}\small\item\em definition for TRUE \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{hal__stdtypes_8h_aa93f0eb578d23995850d61f7d61c55c1}} 
+\#define {\bfseries FALSE}~false
+\begin{DoxyCompactList}\small\item\em BOOLEAN definition for FALSE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_abc0f5bc07737e498f287334775dff2b6}\label{hal__stdtypes_8h_abc0f5bc07737e498f287334775dff2b6}} 
+typedef uint64\+\_\+t {\bfseries uint64}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_acbd4acd0d29e2d6c43104827f77d9cd2}\label{hal__stdtypes_8h_acbd4acd0d29e2d6c43104827f77d9cd2}} 
+typedef uint32\+\_\+t {\bfseries uint32}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_ac2a9e79eb120216f855626495b7bd18a}\label{hal__stdtypes_8h_ac2a9e79eb120216f855626495b7bd18a}} 
+typedef uint16\+\_\+t {\bfseries uint16}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a33a5e996e7a90acefb8b1c0bea47e365}\label{hal__stdtypes_8h_a33a5e996e7a90acefb8b1c0bea47e365}} 
+typedef uint8\+\_\+t {\bfseries uint8}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aecd72f10f6e3d199deeb780232685eb4}\label{hal__stdtypes_8h_aecd72f10f6e3d199deeb780232685eb4}} 
+typedef \+\_\+\+Bool {\bfseries boolean}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a4a4dc5c711b664e54ebabbb396e2a9d8}\label{hal__stdtypes_8h_a4a4dc5c711b664e54ebabbb396e2a9d8}} 
+typedef int64\+\_\+t {\bfseries sint64}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a5d039451549422729e7e13cc53be7528}\label{hal__stdtypes_8h_a5d039451549422729e7e13cc53be7528}} 
+typedef int32\+\_\+t {\bfseries sint32}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aa961e2cfd0d472f8870c6032a6773e36}\label{hal__stdtypes_8h_aa961e2cfd0d472f8870c6032a6773e36}} 
+typedef int16\+\_\+t {\bfseries sint16}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a3e55e6174885a377573f0f04b8be2e54}\label{hal__stdtypes_8h_a3e55e6174885a377573f0f04b8be2e54}} 
+typedef int8\+\_\+t {\bfseries sint8}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aacdc525d6f7bddb3ae95d5c311bd06a1}\label{hal__stdtypes_8h_aacdc525d6f7bddb3ae95d5c311bd06a1}} 
+typedef float {\bfseries float32}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a232fad1b0d6dcc7c16aabde98b2e2a80}\label{hal__stdtypes_8h_a232fad1b0d6dcc7c16aabde98b2e2a80}} 
+typedef double {\bfseries float64}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_aa79fdc8c8f68425fb17f50b589dba2fc}\label{hal__stdtypes_8h_aa79fdc8c8f68425fb17f50b589dba2fc}} 
+typedef uint8 {\bfseries Std\+\_\+\+Return\+Type}
+\item 
+\mbox{\Hypertarget{hal__stdtypes_8h_a808bee8c3dec881fb329ccdb92c3bb68}\label{hal__stdtypes_8h_a808bee8c3dec881fb329ccdb92c3bb68}} 
+typedef unsigned char {\bfseries Status\+Type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+HALCo\+Gen standard types header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Type and Global definitions which are relevant for all drivers. 
+\end{DoxyItemize}

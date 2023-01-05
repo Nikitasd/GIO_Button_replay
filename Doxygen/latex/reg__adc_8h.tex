@@ -1,0 +1,130 @@
+\hypertarget{reg__adc_8h}{}\doxysection{Файл include/reg\+\_\+adc.h}
+\label{reg__adc_8h}\index{include/reg\_adc.h@{include/reg\_adc.h}}
+
+
+ADC Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structadc_base}{adc\+Base}}
+\begin{DoxyCompactList}\small\item\em ADC Register Frame Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structadc_l_u_t_entry}{adc\+LUTEntry}}
+\begin{DoxyCompactList}\small\item\em ADC Look-\/\+Up Table Entry. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structadc_l_u_t}{adc\+LUT}}
+\begin{DoxyCompactList}\small\item\em ADC Look-\/\+Up Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adc\+REG1}}~((\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+C000U)
+\begin{DoxyCompactList}\small\item\em ADC1 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__adc_8h_a2ffc4dd9d6f4d851ae80390db9d66c12}{adc\+RAM1}}~($\ast$(volatile uint32 $\ast$)0x\+FF3\+E0000U)
+\begin{DoxyCompactList}\small\item\em ADC1 RAM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__adc_8h_ad8b4bb22017e0c1cef058858bbfca32d}{adc\+PARRAM1}}~($\ast$(volatile uint32 $\ast$)(0x\+FF3\+E0000U + 0x1000U))
+\begin{DoxyCompactList}\small\item\em ADC1 Parity RAM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__adc_8h_a290d8e4409d596c2b3ee834a4db0da8c}{adc\+LUT1}}~((\mbox{\hyperlink{reg__adc_8h_a5ea04629f89c96a77644aa9aa86985b0}{adc\+LUT\+\_\+t}} $\ast$) 0x\+FF3\+E2000U)
+\begin{DoxyCompactList}\small\item\em ADC1 Look-\/\+Up Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structadc_base}{adc\+Base}} \mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+BASE\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em ADC Register Frame Type Definition. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structadc_l_u_t_entry}{adc\+LUTEntry}} \mbox{\hyperlink{reg__adc_8h_a1c42e013424ed4edc03d76d40b801add}{adc\+LUTEntry\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em ADC Look-\/\+Up Table Entry. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structadc_l_u_t}{adc\+LUT}} \mbox{\hyperlink{reg__adc_8h_a5ea04629f89c96a77644aa9aa86985b0}{adc\+LUT\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em ADC Look-\/\+Up Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+ADC Register Layer Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the ADC driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{reg__adc_8h_a290d8e4409d596c2b3ee834a4db0da8c}\label{reg__adc_8h_a290d8e4409d596c2b3ee834a4db0da8c}} 
+\index{reg\_adc.h@{reg\_adc.h}!adcLUT1@{adcLUT1}}
+\index{adcLUT1@{adcLUT1}!reg\_adc.h@{reg\_adc.h}}
+\doxysubsubsection{\texorpdfstring{adcLUT1}{adcLUT1}}
+{\footnotesize\ttfamily \#define adc\+LUT1~((\mbox{\hyperlink{reg__adc_8h_a5ea04629f89c96a77644aa9aa86985b0}{adc\+LUT\+\_\+t}} $\ast$) 0x\+FF3\+E2000U)}
+
+
+
+ADC1 Look-\/\+Up Table. 
+
+This pointer is used by the ADC driver to access the ADC1 Look-\/\+Up Table. \mbox{\Hypertarget{reg__adc_8h_ad8b4bb22017e0c1cef058858bbfca32d}\label{reg__adc_8h_ad8b4bb22017e0c1cef058858bbfca32d}} 
+\index{reg\_adc.h@{reg\_adc.h}!adcPARRAM1@{adcPARRAM1}}
+\index{adcPARRAM1@{adcPARRAM1}!reg\_adc.h@{reg\_adc.h}}
+\doxysubsubsection{\texorpdfstring{adcPARRAM1}{adcPARRAM1}}
+{\footnotesize\ttfamily \#define adc\+PARRAM1~($\ast$(volatile uint32 $\ast$)(0x\+FF3\+E0000U + 0x1000U))}
+
+
+
+ADC1 Parity RAM Pointer. 
+
+This pointer is used by the ADC driver to access the ADC1 Parity RAM. \mbox{\Hypertarget{reg__adc_8h_a2ffc4dd9d6f4d851ae80390db9d66c12}\label{reg__adc_8h_a2ffc4dd9d6f4d851ae80390db9d66c12}} 
+\index{reg\_adc.h@{reg\_adc.h}!adcRAM1@{adcRAM1}}
+\index{adcRAM1@{adcRAM1}!reg\_adc.h@{reg\_adc.h}}
+\doxysubsubsection{\texorpdfstring{adcRAM1}{adcRAM1}}
+{\footnotesize\ttfamily \#define adc\+RAM1~($\ast$(volatile uint32 $\ast$)0x\+FF3\+E0000U)}
+
+
+
+ADC1 RAM Pointer. 
+
+This pointer is used by the ADC driver to access the ADC1 RAM. \mbox{\Hypertarget{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}\label{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}} 
+\index{reg\_adc.h@{reg\_adc.h}!adcREG1@{adcREG1}}
+\index{adcREG1@{adcREG1}!reg\_adc.h@{reg\_adc.h}}
+\doxysubsubsection{\texorpdfstring{adcREG1}{adcREG1}}
+{\footnotesize\ttfamily \#define adc\+REG1~((\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+C000U)}
+
+
+
+ADC1 Register Frame Pointer. 
+
+This pointer is used by the ADC driver to access the ADC1 registers. 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}\label{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}} 
+\index{reg\_adc.h@{reg\_adc.h}!adcBASE\_t@{adcBASE\_t}}
+\index{adcBASE\_t@{adcBASE\_t}!reg\_adc.h@{reg\_adc.h}}
+\doxysubsubsection{\texorpdfstring{adcBASE\_t}{adcBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+BASE\+\_\+t}}}
+
+
+
+ADC Register Frame Type Definition. 
+
+This type is used to access the ADC Registers. \mbox{\Hypertarget{reg__adc_8h_a5ea04629f89c96a77644aa9aa86985b0}\label{reg__adc_8h_a5ea04629f89c96a77644aa9aa86985b0}} 
+\index{reg\_adc.h@{reg\_adc.h}!adcLUT\_t@{adcLUT\_t}}
+\index{adcLUT\_t@{adcLUT\_t}!reg\_adc.h@{reg\_adc.h}}
+\doxysubsubsection{\texorpdfstring{adcLUT\_t}{adcLUT\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__adc_8h_a5ea04629f89c96a77644aa9aa86985b0}{adc\+LUT\+\_\+t}}}
+
+
+
+ADC Look-\/\+Up Table. 
+
+This type is used to access the ADC Look-\/\+Up Table. \mbox{\Hypertarget{reg__adc_8h_a1c42e013424ed4edc03d76d40b801add}\label{reg__adc_8h_a1c42e013424ed4edc03d76d40b801add}} 
+\index{reg\_adc.h@{reg\_adc.h}!adcLUTEntry\_t@{adcLUTEntry\_t}}
+\index{adcLUTEntry\_t@{adcLUTEntry\_t}!reg\_adc.h@{reg\_adc.h}}
+\doxysubsubsection{\texorpdfstring{adcLUTEntry\_t}{adcLUTEntry\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__adc_8h_a1c42e013424ed4edc03d76d40b801add}{adc\+LUTEntry\+\_\+t}}}
+
+
+
+ADC Look-\/\+Up Table Entry. 
+
+This type is used to access the Look-\/\+Up Table Entry. 

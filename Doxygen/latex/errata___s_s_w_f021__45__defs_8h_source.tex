@@ -1,0 +1,205 @@
+\hypertarget{errata___s_s_w_f021__45__defs_8h_source}{}\doxysection{errata\+\_\+\+SSWF021\+\_\+45\+\_\+defs.\+h}
+\label{errata___s_s_w_f021__45__defs_8h_source}\index{include/errata\_SSWF021\_45\_defs.h@{include/errata\_SSWF021\_45\_defs.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{*}}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{*}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{*}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_ERRATA\_SSWF021\_45\_DEFS\_H\_}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ INCLUDE\_ERRATA\_SSWF021\_45\_DEFS\_H\_}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uint32\_t;}
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ uint32\_t\ uint32;}
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsystem_base1}{systemBase1}}}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ uint32\ SYSPC1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0000\ */}}
+\DoxyCodeLine{00049\ \ \ \ \ uint32\ SYSPC2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0004\ */}}
+\DoxyCodeLine{00050\ \ \ \ \ uint32\ SYSPC3;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0008\ */}}
+\DoxyCodeLine{00051\ \ \ \ \ uint32\ SYSPC4;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x000C\ */}}
+\DoxyCodeLine{00052\ \ \ \ \ uint32\ SYSPC5;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0010\ */}}
+\DoxyCodeLine{00053\ \ \ \ \ uint32\ SYSPC6;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0014\ */}}
+\DoxyCodeLine{00054\ \ \ \ \ uint32\ SYSPC7;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0018\ */}}
+\DoxyCodeLine{00055\ \ \ \ \ uint32\ SYSPC8;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x001C\ */}}
+\DoxyCodeLine{00056\ \ \ \ \ uint32\ SYSPC9;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0020\ */}}
+\DoxyCodeLine{00057\ \ \ \ \ uint32\ SSWPLL1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0024\ */}}
+\DoxyCodeLine{00058\ \ \ \ \ uint32\ SSWPLL2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0028\ */}}
+\DoxyCodeLine{00059\ \ \ \ \ uint32\ SSWPLL3;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x002C\ */}}
+\DoxyCodeLine{00060\ \ \ \ \ uint32\ CSDIS;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0030\ */}}
+\DoxyCodeLine{00061\ \ \ \ \ uint32\ CSDISSET;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0034\ */}}
+\DoxyCodeLine{00062\ \ \ \ \ uint32\ CSDISCLR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0038\ */}}
+\DoxyCodeLine{00063\ \ \ \ \ uint32\ CDDIS;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x003C\ */}}
+\DoxyCodeLine{00064\ \ \ \ \ uint32\ CDDISSET;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0040\ */}}
+\DoxyCodeLine{00065\ \ \ \ \ uint32\ CDDISCLR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0044\ */}}
+\DoxyCodeLine{00066\ \ \ \ \ uint32\ GHVSRC;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0048\ */}}
+\DoxyCodeLine{00067\ \ \ \ \ uint32\ VCLKASRC;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x004C\ */}}
+\DoxyCodeLine{00068\ \ \ \ \ uint32\ RCLKSRC;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0050\ */}}
+\DoxyCodeLine{00069\ \ \ \ \ uint32\ CSVSTAT;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0054\ */}}
+\DoxyCodeLine{00070\ \ \ \ \ uint32\ MSTGCR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0058\ */}}
+\DoxyCodeLine{00071\ \ \ \ \ uint32\ MINITGCR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x005C\ */}}
+\DoxyCodeLine{00072\ \ \ \ \ uint32\ MSINENA;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0060\ */}}
+\DoxyCodeLine{00073\ \ \ \ \ uint32\ MSTFAIL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0064\ */}}
+\DoxyCodeLine{00074\ \ \ \ \ uint32\ MSTCGSTAT;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0068\ */}}
+\DoxyCodeLine{00075\ \ \ \ \ uint32\ MINISTAT;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x006C\ */}}
+\DoxyCodeLine{00076\ \ \ \ \ uint32\ PLLCTL1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0070\ */}}
+\DoxyCodeLine{00077\ \ \ \ \ uint32\ PLLCTL2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0074\ */}}
+\DoxyCodeLine{00078\ \ \ \ \ uint32\ SYSPC10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0078\ */}}
+\DoxyCodeLine{00079\ \ \ \ \ uint32\ DIEIDL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x007C\ */}}
+\DoxyCodeLine{00080\ \ \ \ \ uint32\ DIEIDH;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0080\ */}}
+\DoxyCodeLine{00081\ \ \ \ \ uint32\ VRCTL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0084\ */}}
+\DoxyCodeLine{00082\ \ \ \ \ uint32\ LPOMONCTL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0088\ */}}
+\DoxyCodeLine{00083\ \ \ \ \ uint32\ CLKTEST;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x008C\ */}}
+\DoxyCodeLine{00084\ \ \ \ \ uint32\ DFTCTRLREG1;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0090\ */}}
+\DoxyCodeLine{00085\ \ \ \ \ uint32\ DFTCTRLREG2;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0094\ */}}
+\DoxyCodeLine{00086\ \ \ \ \ uint32\ \ \ rsvd1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0098\ */}}
+\DoxyCodeLine{00087\ \ \ \ \ uint32\ \ \ rsvd2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x009C\ */}}
+\DoxyCodeLine{00088\ \ \ \ \ uint32\ GPREG1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00A0\ */}}
+\DoxyCodeLine{00089\ \ \ \ \ uint32\ BTRMSEL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00A4\ */}}
+\DoxyCodeLine{00090\ \ \ \ \ uint32\ IMPFASTS;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00A8\ */}}
+\DoxyCodeLine{00091\ \ \ \ \ uint32\ IMPFTADD;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00AC\ */}}
+\DoxyCodeLine{00092\ \ \ \ \ uint32\ SSISR1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00B0\ */}}
+\DoxyCodeLine{00093\ \ \ \ \ uint32\ SSISR2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00B4\ */}}
+\DoxyCodeLine{00094\ \ \ \ \ uint32\ SSISR3;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00B8\ */}}
+\DoxyCodeLine{00095\ \ \ \ \ uint32\ SSISR4;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00BC\ */}}
+\DoxyCodeLine{00096\ \ \ \ \ uint32\ RAMGCR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00C0\ */}}
+\DoxyCodeLine{00097\ \ \ \ \ uint32\ BMMCR1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00C4\ */}}
+\DoxyCodeLine{00098\ \ \ \ \ uint32\ BMMCR2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00C8\ */}}
+\DoxyCodeLine{00099\ \ \ \ \ uint32\ CPURSTCR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00CC\ */}}
+\DoxyCodeLine{00100\ \ \ \ \ uint32\ CLKCNTL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00D0\ */}}
+\DoxyCodeLine{00101\ \ \ \ \ uint32\ ECPCNTL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00D4\ */}}
+\DoxyCodeLine{00102\ \ \ \ \ uint32\ DSPGCR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00D8\ */}}
+\DoxyCodeLine{00103\ \ \ \ \ uint32\ DEVCR1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00DC\ */}}
+\DoxyCodeLine{00104\ \ \ \ \ uint32\ SYSECR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00E0\ */}}
+\DoxyCodeLine{00105\ \ \ \ \ uint32\ SYSESR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00E4\ */}}
+\DoxyCodeLine{00106\ \ \ \ \ uint32\ SYSTASR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00E8\ */}}
+\DoxyCodeLine{00107\ \ \ \ \ uint32\ GBLSTAT;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00EC\ */}}
+\DoxyCodeLine{00108\ \ \ \ \ uint32\ DEV;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00F0\ */}}
+\DoxyCodeLine{00109\ \ \ \ \ uint32\ SSIVEC;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00F4\ */}}
+\DoxyCodeLine{00110\ \ \ \ \ uint32\ SSIF;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x00F8\ */}}
+\DoxyCodeLine{00111\ \}\ \mbox{\hyperlink{structsystem_base1}{systemBASE1\_t}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsystem_base2}{systemBase2}}}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ uint32\ PLLCTL3;\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0000\ */}}
+\DoxyCodeLine{00116\ \ \ \ \ uint32\ \ \ rsvd1;\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0004\ */}}
+\DoxyCodeLine{00117\ \ \ \ \ uint32\ STCCLKDIV;\ \ \ \ \ \ \textcolor{comment}{/*\ 0x0008\ */}}
+\DoxyCodeLine{00118\ \ \ \ \ uint32\ \ \ rsvd2[6U];\ \ \ \ \ \textcolor{comment}{/*\ 0x000C\ */}}
+\DoxyCodeLine{00119\ \ \ \ \ uint32\ ECPCNTRL0;\ \ \ \ \ \ \textcolor{comment}{/*\ 0x0024\ */}}
+\DoxyCodeLine{00120\ \ \ \ \ uint32\ \ \ rsvd3[5U];\ \ \ \ \ \textcolor{comment}{/*\ 0x0028\ */}}
+\DoxyCodeLine{00121\ \ \ \ \ uint32\ CLK2CNTL;\ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x003C\ */}}
+\DoxyCodeLine{00122\ \ \ \ \ uint32\ VCLKACON1;\ \ \ \ \ \ \textcolor{comment}{/*\ 0x0040\ */}}
+\DoxyCodeLine{00123\ \ \ \ \ uint32\ \ rsvd4[11U];\ \ \ \ \ \textcolor{comment}{/*\ 0x0044\ */}}
+\DoxyCodeLine{00124\ \ \ \ \ uint32\ \ CLKSLIP;\ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0070\ */}}
+\DoxyCodeLine{00125\ \ \ \ \ uint32\ \ rsvd5[30U];\ \ \ \ \ \ \textcolor{comment}{/*\ 0x0074\ */}}
+\DoxyCodeLine{00126\ \ \ \ \ uint32\ \ EFC\_CTLEN;\ \ \ \ \ \textcolor{comment}{/*\ 0x00EC\ */}}
+\DoxyCodeLine{00127\ \ \ \ \ uint32\ \ DIEIDL\_REG0;\ \ \ \textcolor{comment}{/*\ 0x00F0\ */}}
+\DoxyCodeLine{00128\ \ \ \ \ uint32\ \ DIEIDH\_REG1;\ \ \ \textcolor{comment}{/*\ 0x00F4\ */}}
+\DoxyCodeLine{00129\ \ \ \ \ uint32\ \ DIEIDL\_REG2;\ \ \ \textcolor{comment}{/*\ 0x00F8\ */}}
+\DoxyCodeLine{00130\ \ \ \ \ uint32\ \ DIEIDH\_REG3;\ \ \ \textcolor{comment}{/*\ 0x00FC\ */}}
+\DoxyCodeLine{00131\ \}\ \mbox{\hyperlink{structsystem_base2}{systemBASE2\_t}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structesm_base}{esmBase}}}
+\DoxyCodeLine{00134\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ uint32\ EEPAPR1;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0000\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00136\ \ \ \ \ uint32\ DEPAPR1;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00137\ \ \ \ \ uint32\ IESR1;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00138\ \ \ \ \ uint32\ IECR1;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x000C\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00139\ \ \ \ \ uint32\ ILSR1;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00140\ \ \ \ \ uint32\ ILCR1;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00141\ \ \ \ \ uint32\ SR1[3U];\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0018,\ 0x001C,\ 0x0020\ */}}
+\DoxyCodeLine{00142\ \ \ \ \ uint32\ EPSR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00143\ \ \ \ \ uint32\ IOFFHR;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00144\ \ \ \ \ uint32\ IOFFLR;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x002C\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00145\ \ \ \ \ uint32\ LTCR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00146\ \ \ \ \ uint32\ LTCPR;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00147\ \ \ \ \ uint32\ EKR;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00148\ \ \ \ \ uint32\ SSR2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x003C\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00149\ \ \ \ \ uint32\ IEPSR4;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00150\ \ \ \ \ uint32\ IEPCR4;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00151\ \ \ \ \ uint32\ IESR4;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00152\ \ \ \ \ uint32\ IECR4;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x004C\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00153\ \ \ \ \ uint32\ ILSR4;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00154\ \ \ \ \ uint32\ ILCR4;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00155\ \ \ \ \ uint32\ SR4[3U];\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 0x0058,\ 0x005C,\ 0x0060\ */}}
+\DoxyCodeLine{00156\ \}\ \mbox{\hyperlink{structesm_base}{esmBASE\_t}};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdcc_base}{dccBase}}}
+\DoxyCodeLine{00159\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_ab893b766406eb65ef57d804f2c956c7e}{GCTRL}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00161\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_a98f89791b07727e6da31354e30b6c9f9}{REV}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00162\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_af08de5c921d2c422955ee0120cfc8004}{CNT0SEED}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_a6201ae1d64a32547c323cc8f4b39c889}{VALID0SEED}};\ \ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_a84a223c05876134dd3dd81fdc03d96b3}{CNT1SEED}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00165\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_a52428e045b7acb00f0c394e0cd54a60e}{STAT}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00166\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_a9d5cef0b1dfd1300dfe650d65b1825eb}{CNT0}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_ac29671000a12bbde883436930518e29c}{VALID0}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00168\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_a358c11a7c14242ece3f4a73262453eba}{CNT1}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00169\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_a21d552b81675d80d0ca03cd87f0debd5}{CNT1CLKSRC}};\ \ \ \ }
+\DoxyCodeLine{00170\ \ \ \ \ uint32\ \mbox{\hyperlink{structdcc_base_ab60cdaa540e1ee89984a19f12a4607fa}{CNT0CLKSRC}};\ \ \ \ }
+\DoxyCodeLine{00171\ \}\ \mbox{\hyperlink{structdcc_base}{dccBASE\_t}};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489}{dcc1clocksource}}}
+\DoxyCodeLine{00174\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489a38a952b6f05f0ca43033aa7110a2180d}{DCC1\_CNT0\_HF\_LPO}}\ \ \ \ =\ 0x5U,\ \ \ \ }
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489a550d294ba66dd6460ee109bde7193340}{DCC1\_CNT0\_TCK}}\ \ \ \ \ \ \ =\ 0xAU,\ \ \ \ }
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489ac5bf7c15709072e6f4b6592fafc3c6a4}{DCC1\_CNT0\_OSCIN}}\ \ \ \ \ =\ 0xFU,\ \ \ \ }
+\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489abce2b2a0462a9e5d8a8d36c856d2cfe8}{DCC1\_CNT1\_PLL1}}\ \ \ \ \ \ =\ 0x0U,\ \ \ \ }
+\DoxyCodeLine{00180\ \ \ \ \ DCC1\_CNT1\_PLL2\ \ \ \ \ \ =\ 0x1U,\ \ \ \ }
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489a544d3c4262140a91ad6d45fba9faf70f}{DCC1\_CNT1\_LF\_LPO}}\ \ \ \ =\ 0x2U,\ \ \ \ }
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489a07fd22a6a3b3b2d023fb3a9e781f2f1f}{DCC1\_CNT1\_HF\_LPO}}\ \ \ \ =\ 0x3U,\ \ \ \ }
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489ab0c4ce54442bdc6a37f639dfa92d070d}{DCC1\_CNT1\_EXTCLKIN1}}\ =\ 0x5U,\ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ DCC1\_CNT1\_EXTCLKIN2\ =\ 0x6U,\ \ \ \ }
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489ae4917223e93a59be956f7fde9a3dc8db}{DCC1\_CNT1\_VCLK}}\ \ \ \ \ \ =\ 0x8U,\ \ \ \ }
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489ae50fe282fa0148428d3ac92a76fa3a2f}{DCC1\_CNT1\_N2HET1\_31}}\ =\ 0xAU\ \ \ \ \ }
+\DoxyCodeLine{00187\ \};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ SYS\_CLKSRC\_PLL1\ 0x00000002U}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ SYS\_CLKSRC\_PLL2\ 0x00000040U}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ SYS\_CLKCNTRL\_PENA\ 0x00000100U}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ ESM\_SR1\_PLL1SLIP\ 0x400U}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ ESM\_SR4\_PLL2SLIP\ 0x400U}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ PLL1\ 0x08}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ PLL2\ 0x80}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ dcc1CNT1\_CLKSRC\_PLL1\ 0x0000A000U}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ dcc1CNT1\_CLKSRC\_PLL2\ 0x0000A001U}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ systemREG1\ ((systemBASE1\_t\ *)0xFFFFFF00U)}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ systemREG2\ ((systemBASE2\_t\ *)0xFFFFE100U)}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#define\ esmREG\ ((esmBASE\_t\ *)0xFFFFF500U)}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ dccREG1\ \ \ ((dccBASE\_t\ *)0xFFFFEC00U)}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INCLUDE\_ERRATA\_SSWF021\_45\_DEFS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

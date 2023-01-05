@@ -1,0 +1,333 @@
+\hypertarget{dcc_8h}{}\doxysection{Файл include/dcc.h}
+\label{dcc_8h}\index{include/dcc.h@{include/dcc.h}}
+
+
+DCC Driver Definition File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+dcc.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdcc__config__reg}{dcc\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dcc_8h_ac44dc06d3dbb75454ccae15606634830}{dcc1\+CNT0\+\_\+\+CLKSRC\+\_\+\+HFLPO}}~0x00000005U
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 0 Clock Source HFLPO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_a10a8079346261bbf44dec661211a6f84}{dcc1\+CNT0\+\_\+\+CLKSRC\+\_\+\+TCK}}~0x0000000\+AU
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 0 Clock Source TCK. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_ab3dc780a4fb0d31737ccd6d8b0a74c0f}{dcc1\+CNT0\+\_\+\+CLKSRC\+\_\+\+OSCIN}}~0x0000000\+FU
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 0 Clock Source OSCIN. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_a22713145af2679eb85fb52377c01068d}{dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+PLL1}}~0x0000\+A000U
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 1 Clock Source PLL1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_a6105b4199b473a7b74a7f9a20f6a3280}{dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+LFLPO}}~0x0000\+A002U
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 1 Clock Source LFLPO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_a558f7066f713de7f8f6664dc0d01803d}{dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+HFLPO}}~0x0000\+A003U
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 1 Clock Source HFLPO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_ae638f7f2e6d9bfcb431ed7fdec839c83}{dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+EXTCLKIN1}}~0x0000\+A005U
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 1 Clock Source EXTCLKIN1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_ac1d46528731ed3c1c41c35030fc6eb10}{dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+VCLK}}~0x0000\+A008U
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 1 Clock Source VCLK. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_a4b7eb53a203deb0ffe3060f3c27d1925}{dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+N2\+HET1\+\_\+31}}~0x0000500\+FU
+\begin{DoxyCompactList}\small\item\em Alias name for DCC1 Counter 1 Clock Source N2\+HET1\+\_\+31. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_aefa8457ca1dff6f5890cbbee88fe76b5}{dcc\+NOTIFICATION\+\_\+\+DONE}}~0x0000\+A000U
+\begin{DoxyCompactList}\small\item\em Alias name for DCC Done notification. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{dcc_8h_a8cdabb05c191cb82a740e637768b9aa2}{dcc\+NOTIFICATION\+\_\+\+ERROR}}~0x000000\+A0U
+\begin{DoxyCompactList}\small\item\em Alias name for DCC Error notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{dcc_8h_ae01455248dc451b3371a9ef041a8b6b3}\label{dcc_8h_ae01455248dc451b3371a9ef041a8b6b3}} 
+typedef struct \mbox{\hyperlink{structdcc__config__reg}{dcc\+\_\+config\+\_\+reg}} {\bfseries dcc\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489}{dcc1clocksource}} \{ \newline
+\mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489a38a952b6f05f0ca43033aa7110a2180d}{DCC1\+\_\+\+CNT0\+\_\+\+HF\+\_\+\+LPO}} = 0x5U
+, \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489a550d294ba66dd6460ee109bde7193340}{DCC1\+\_\+\+CNT0\+\_\+\+TCK}} = 0x\+AU
+, \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489ac5bf7c15709072e6f4b6592fafc3c6a4}{DCC1\+\_\+\+CNT0\+\_\+\+OSCIN}} = 0x\+FU
+, \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489abce2b2a0462a9e5d8a8d36c856d2cfe8}{DCC1\+\_\+\+CNT1\+\_\+\+PLL1}} = 0x0U
+, \newline
+\mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489a544d3c4262140a91ad6d45fba9faf70f}{DCC1\+\_\+\+CNT1\+\_\+\+LF\+\_\+\+LPO}} = 0x2U
+, \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489a07fd22a6a3b3b2d023fb3a9e781f2f1f}{DCC1\+\_\+\+CNT1\+\_\+\+HF\+\_\+\+LPO}} = 0x3U
+, \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489ab0c4ce54442bdc6a37f639dfa92d070d}{DCC1\+\_\+\+CNT1\+\_\+\+EXTCLKIN1}} = 0x5U
+, \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489ae4917223e93a59be956f7fde9a3dc8db}{DCC1\+\_\+\+CNT1\+\_\+\+VCLK}} = 0x8U
+, \newline
+\mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489ae50fe282fa0148428d3ac92a76fa3a2f}{DCC1\+\_\+\+CNT1\+\_\+\+N2\+HET1\+\_\+31}} = 0x\+AU
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489a38a952b6f05f0ca43033aa7110a2180d}{DCC1\+\_\+\+CNT0\+\_\+\+HF\+\_\+\+LPO}} = 0x5U
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489a550d294ba66dd6460ee109bde7193340}{DCC1\+\_\+\+CNT0\+\_\+\+TCK}} = 0x\+AU
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489ac5bf7c15709072e6f4b6592fafc3c6a4}{DCC1\+\_\+\+CNT0\+\_\+\+OSCIN}} = 0x\+FU
+, \newline
+\mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489abce2b2a0462a9e5d8a8d36c856d2cfe8}{DCC1\+\_\+\+CNT1\+\_\+\+PLL1}} = 0x0U
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489ac65d766e7bfe40cca2927b1769d93ac7}{DCC1\+\_\+\+CNT1\+\_\+\+PLL2}} = 0x1U
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489a544d3c4262140a91ad6d45fba9faf70f}{DCC1\+\_\+\+CNT1\+\_\+\+LF\+\_\+\+LPO}} = 0x2U
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489a07fd22a6a3b3b2d023fb3a9e781f2f1f}{DCC1\+\_\+\+CNT1\+\_\+\+HF\+\_\+\+LPO}} = 0x3U
+, \newline
+\mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489ab0c4ce54442bdc6a37f639dfa92d070d}{DCC1\+\_\+\+CNT1\+\_\+\+EXTCLKIN1}} = 0x5U
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489a9f825f8e4ff631322b9f0cac7cf71f00}{DCC1\+\_\+\+CNT1\+\_\+\+EXTCLKIN2}} = 0x6U
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489ae4917223e93a59be956f7fde9a3dc8db}{DCC1\+\_\+\+CNT1\+\_\+\+VCLK}} = 0x8U
+, \mbox{\hyperlink{errata___s_s_w_f021__45__defs_8h_a85353d58e849e1abaa682c468b2cb489ae50fe282fa0148428d3ac92a76fa3a2f}{DCC1\+\_\+\+CNT1\+\_\+\+N2\+HET1\+\_\+31}} = 0x\+AU
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for dcc clock sources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries dcc\+Init} (void)
+\item 
+void {\bfseries dcc\+Set\+Counter0\+Seed} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc, uint32 cnt0seed)
+\item 
+void {\bfseries dcc\+Set\+Tolerance} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc, uint32 valid0seed)
+\item 
+void {\bfseries dcc\+Set\+Counter1\+Seed} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc, uint32 cnt1seed)
+\item 
+void {\bfseries dcc\+Set\+Seed} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc, uint32 cnt0seed, uint32 valid0seed, uint32 cnt1seed)
+\item 
+void {\bfseries dcc\+Select\+Clock\+Source} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc, uint32 cnt0\+\_\+\+Clock\+\_\+\+Source, uint32 cnt1\+\_\+\+Clock\+\_\+\+Source)
+\item 
+void {\bfseries dcc\+Enable} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc)
+\item 
+void {\bfseries dcc\+Disable} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc)
+\item 
+uint32 {\bfseries dcc\+Get\+Err\+Status} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc)
+\item 
+void {\bfseries dcc\+Enable\+Notification} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc, uint32 notification)
+\item 
+void {\bfseries dcc\+Disable\+Notification} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc, uint32 notification)
+\item 
+void {\bfseries dcc1\+Get\+Config\+Value} (\mbox{\hyperlink{structdcc__config__reg}{dcc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void \mbox{\hyperlink{group___d_c_c_ga9301dd9fb759cb7cd0e3da1cae7d5f99}{dcc\+Notification}} (\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$dcc, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+DCC Driver Definition File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01 
+\end{DoxyVersion}
+
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{dcc_8h_ac44dc06d3dbb75454ccae15606634830}\label{dcc_8h_ac44dc06d3dbb75454ccae15606634830}} 
+\index{dcc.h@{dcc.h}!dcc1CNT0\_CLKSRC\_HFLPO@{dcc1CNT0\_CLKSRC\_HFLPO}}
+\index{dcc1CNT0\_CLKSRC\_HFLPO@{dcc1CNT0\_CLKSRC\_HFLPO}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT0\_CLKSRC\_HFLPO}{dcc1CNT0\_CLKSRC\_HFLPO}}
+{\footnotesize\ttfamily \#define dcc1\+CNT0\+\_\+\+CLKSRC\+\_\+\+HFLPO~0x00000005U}
+
+
+
+Alias name for DCC1 Counter 0 Clock Source HFLPO. 
+
+This is an alias name for the Clock Source HFLPO for DCC1 Counter 0.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt0\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_ab3dc780a4fb0d31737ccd6d8b0a74c0f}\label{dcc_8h_ab3dc780a4fb0d31737ccd6d8b0a74c0f}} 
+\index{dcc.h@{dcc.h}!dcc1CNT0\_CLKSRC\_OSCIN@{dcc1CNT0\_CLKSRC\_OSCIN}}
+\index{dcc1CNT0\_CLKSRC\_OSCIN@{dcc1CNT0\_CLKSRC\_OSCIN}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT0\_CLKSRC\_OSCIN}{dcc1CNT0\_CLKSRC\_OSCIN}}
+{\footnotesize\ttfamily \#define dcc1\+CNT0\+\_\+\+CLKSRC\+\_\+\+OSCIN~0x0000000\+FU}
+
+
+
+Alias name for DCC1 Counter 0 Clock Source OSCIN. 
+
+This is an alias name for the Clock Source OSCIN for DCC1 Counter 0.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt0\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_a10a8079346261bbf44dec661211a6f84}\label{dcc_8h_a10a8079346261bbf44dec661211a6f84}} 
+\index{dcc.h@{dcc.h}!dcc1CNT0\_CLKSRC\_TCK@{dcc1CNT0\_CLKSRC\_TCK}}
+\index{dcc1CNT0\_CLKSRC\_TCK@{dcc1CNT0\_CLKSRC\_TCK}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT0\_CLKSRC\_TCK}{dcc1CNT0\_CLKSRC\_TCK}}
+{\footnotesize\ttfamily \#define dcc1\+CNT0\+\_\+\+CLKSRC\+\_\+\+TCK~0x0000000\+AU}
+
+
+
+Alias name for DCC1 Counter 0 Clock Source TCK. 
+
+This is an alias name for the Clock Source TCK for DCC1 Counter 0.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt0\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_ae638f7f2e6d9bfcb431ed7fdec839c83}\label{dcc_8h_ae638f7f2e6d9bfcb431ed7fdec839c83}} 
+\index{dcc.h@{dcc.h}!dcc1CNT1\_CLKSRC\_EXTCLKIN1@{dcc1CNT1\_CLKSRC\_EXTCLKIN1}}
+\index{dcc1CNT1\_CLKSRC\_EXTCLKIN1@{dcc1CNT1\_CLKSRC\_EXTCLKIN1}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT1\_CLKSRC\_EXTCLKIN1}{dcc1CNT1\_CLKSRC\_EXTCLKIN1}}
+{\footnotesize\ttfamily \#define dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+EXTCLKIN1~0x0000\+A005U}
+
+
+
+Alias name for DCC1 Counter 1 Clock Source EXTCLKIN1. 
+
+This is an alias name for the Clock Source EXTCLKIN1 for DCC1 Counter 1.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt1\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_a558f7066f713de7f8f6664dc0d01803d}\label{dcc_8h_a558f7066f713de7f8f6664dc0d01803d}} 
+\index{dcc.h@{dcc.h}!dcc1CNT1\_CLKSRC\_HFLPO@{dcc1CNT1\_CLKSRC\_HFLPO}}
+\index{dcc1CNT1\_CLKSRC\_HFLPO@{dcc1CNT1\_CLKSRC\_HFLPO}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT1\_CLKSRC\_HFLPO}{dcc1CNT1\_CLKSRC\_HFLPO}}
+{\footnotesize\ttfamily \#define dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+HFLPO~0x0000\+A003U}
+
+
+
+Alias name for DCC1 Counter 1 Clock Source HFLPO. 
+
+This is an alias name for the Clock Source HFLPO for DCC1 Counter 1.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt1\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_a6105b4199b473a7b74a7f9a20f6a3280}\label{dcc_8h_a6105b4199b473a7b74a7f9a20f6a3280}} 
+\index{dcc.h@{dcc.h}!dcc1CNT1\_CLKSRC\_LFLPO@{dcc1CNT1\_CLKSRC\_LFLPO}}
+\index{dcc1CNT1\_CLKSRC\_LFLPO@{dcc1CNT1\_CLKSRC\_LFLPO}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT1\_CLKSRC\_LFLPO}{dcc1CNT1\_CLKSRC\_LFLPO}}
+{\footnotesize\ttfamily \#define dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+LFLPO~0x0000\+A002U}
+
+
+
+Alias name for DCC1 Counter 1 Clock Source LFLPO. 
+
+This is an alias name for the Clock Source LFLPO for DCC1 Counter 1.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt1\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_a4b7eb53a203deb0ffe3060f3c27d1925}\label{dcc_8h_a4b7eb53a203deb0ffe3060f3c27d1925}} 
+\index{dcc.h@{dcc.h}!dcc1CNT1\_CLKSRC\_N2HET1\_31@{dcc1CNT1\_CLKSRC\_N2HET1\_31}}
+\index{dcc1CNT1\_CLKSRC\_N2HET1\_31@{dcc1CNT1\_CLKSRC\_N2HET1\_31}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT1\_CLKSRC\_N2HET1\_31}{dcc1CNT1\_CLKSRC\_N2HET1\_31}}
+{\footnotesize\ttfamily \#define dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+N2\+HET1\+\_\+31~0x0000500\+FU}
+
+
+
+Alias name for DCC1 Counter 1 Clock Source N2\+HET1\+\_\+31. 
+
+This is an alias name for the Clock Source N2\+HET1\+\_\+31 for DCC1 Counter 1.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt1\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_a22713145af2679eb85fb52377c01068d}\label{dcc_8h_a22713145af2679eb85fb52377c01068d}} 
+\index{dcc.h@{dcc.h}!dcc1CNT1\_CLKSRC\_PLL1@{dcc1CNT1\_CLKSRC\_PLL1}}
+\index{dcc1CNT1\_CLKSRC\_PLL1@{dcc1CNT1\_CLKSRC\_PLL1}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT1\_CLKSRC\_PLL1}{dcc1CNT1\_CLKSRC\_PLL1}}
+{\footnotesize\ttfamily \#define dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+PLL1~0x0000\+A000U}
+
+
+
+Alias name for DCC1 Counter 1 Clock Source PLL1. 
+
+This is an alias name for the Clock Source PLL for DCC1 Counter 1.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt1\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_ac1d46528731ed3c1c41c35030fc6eb10}\label{dcc_8h_ac1d46528731ed3c1c41c35030fc6eb10}} 
+\index{dcc.h@{dcc.h}!dcc1CNT1\_CLKSRC\_VCLK@{dcc1CNT1\_CLKSRC\_VCLK}}
+\index{dcc1CNT1\_CLKSRC\_VCLK@{dcc1CNT1\_CLKSRC\_VCLK}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1CNT1\_CLKSRC\_VCLK}{dcc1CNT1\_CLKSRC\_VCLK}}
+{\footnotesize\ttfamily \#define dcc1\+CNT1\+\_\+\+CLKSRC\+\_\+\+VCLK~0x0000\+A008U}
+
+
+
+Alias name for DCC1 Counter 1 Clock Source VCLK. 
+
+This is an alias name for the Clock Source VCLK for DCC1 Counter 1.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape cnt1\+\_\+\+Clock\+\_\+\+Source} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_aefa8457ca1dff6f5890cbbee88fe76b5}\label{dcc_8h_aefa8457ca1dff6f5890cbbee88fe76b5}} 
+\index{dcc.h@{dcc.h}!dccNOTIFICATION\_DONE@{dccNOTIFICATION\_DONE}}
+\index{dccNOTIFICATION\_DONE@{dccNOTIFICATION\_DONE}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dccNOTIFICATION\_DONE}{dccNOTIFICATION\_DONE}}
+{\footnotesize\ttfamily \#define dcc\+NOTIFICATION\+\_\+\+DONE~0x0000\+A000U}
+
+
+
+Alias name for DCC Done notification. 
+
+This is an alias name for the DCC Done notification.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape notification} 
+\end{DoxyNote}
+\mbox{\Hypertarget{dcc_8h_a8cdabb05c191cb82a740e637768b9aa2}\label{dcc_8h_a8cdabb05c191cb82a740e637768b9aa2}} 
+\index{dcc.h@{dcc.h}!dccNOTIFICATION\_ERROR@{dccNOTIFICATION\_ERROR}}
+\index{dccNOTIFICATION\_ERROR@{dccNOTIFICATION\_ERROR}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dccNOTIFICATION\_ERROR}{dccNOTIFICATION\_ERROR}}
+{\footnotesize\ttfamily \#define dcc\+NOTIFICATION\+\_\+\+ERROR~0x000000\+A0U}
+
+
+
+Alias name for DCC Error notification. 
+
+This is an alias name for the DCC Error notification.
+
+\begin{DoxyNote}{Заметки}
+This value should be used for API argument {\itshape notification} 
+\end{DoxyNote}
+
+
+\doxysubsection{Перечисления}
+\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489}} 
+\index{dcc.h@{dcc.h}!dcc1clocksource@{dcc1clocksource}}
+\index{dcc1clocksource@{dcc1clocksource}!dcc.h@{dcc.h}}
+\doxysubsubsection{\texorpdfstring{dcc1clocksource}{dcc1clocksource}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dcc_8h_a85353d58e849e1abaa682c468b2cb489}{dcc1clocksource}}}
+
+
+
+Alias names for dcc clock sources. 
+
+This enumeration is used to provide alias names for the clock sources\+: \begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT0\_HF\_LPO@{DCC1\_CNT0\_HF\_LPO}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT0\_HF\_LPO@{DCC1\_CNT0\_HF\_LPO}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489a38a952b6f05f0ca43033aa7110a2180d}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489a38a952b6f05f0ca43033aa7110a2180d}} 
+DCC1\+\_\+\+CNT0\+\_\+\+HF\+\_\+\+LPO&Alias for DCC1 CNT 0 CLOCK SOURCE 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT0\_TCK@{DCC1\_CNT0\_TCK}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT0\_TCK@{DCC1\_CNT0\_TCK}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489a550d294ba66dd6460ee109bde7193340}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489a550d294ba66dd6460ee109bde7193340}} 
+DCC1\+\_\+\+CNT0\+\_\+\+TCK&Alias for DCC1 CNT 0 CLOCK SOURCE 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT0\_OSCIN@{DCC1\_CNT0\_OSCIN}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT0\_OSCIN@{DCC1\_CNT0\_OSCIN}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489ac5bf7c15709072e6f4b6592fafc3c6a4}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489ac5bf7c15709072e6f4b6592fafc3c6a4}} 
+DCC1\+\_\+\+CNT0\+\_\+\+OSCIN&Alias for DCC1 CNT 0 CLOCK SOURCE 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT1\_PLL1@{DCC1\_CNT1\_PLL1}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT1\_PLL1@{DCC1\_CNT1\_PLL1}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489abce2b2a0462a9e5d8a8d36c856d2cfe8}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489abce2b2a0462a9e5d8a8d36c856d2cfe8}} 
+DCC1\+\_\+\+CNT1\+\_\+\+PLL1&Alias for DCC1 CNT 1 CLOCK SOURCE 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT1\_LF\_LPO@{DCC1\_CNT1\_LF\_LPO}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT1\_LF\_LPO@{DCC1\_CNT1\_LF\_LPO}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489a544d3c4262140a91ad6d45fba9faf70f}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489a544d3c4262140a91ad6d45fba9faf70f}} 
+DCC1\+\_\+\+CNT1\+\_\+\+LF\+\_\+\+LPO&Alias for DCC1 CNT 1 CLOCK SOURCE 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT1\_HF\_LPO@{DCC1\_CNT1\_HF\_LPO}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT1\_HF\_LPO@{DCC1\_CNT1\_HF\_LPO}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489a07fd22a6a3b3b2d023fb3a9e781f2f1f}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489a07fd22a6a3b3b2d023fb3a9e781f2f1f}} 
+DCC1\+\_\+\+CNT1\+\_\+\+HF\+\_\+\+LPO&Alias for DCC1 CNT 1 CLOCK SOURCE 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT1\_EXTCLKIN1@{DCC1\_CNT1\_EXTCLKIN1}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT1\_EXTCLKIN1@{DCC1\_CNT1\_EXTCLKIN1}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489ab0c4ce54442bdc6a37f639dfa92d070d}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489ab0c4ce54442bdc6a37f639dfa92d070d}} 
+DCC1\+\_\+\+CNT1\+\_\+\+EXTCLKIN1&Alias for DCC1 CNT 1 CLOCK SOURCE 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT1\_VCLK@{DCC1\_CNT1\_VCLK}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT1\_VCLK@{DCC1\_CNT1\_VCLK}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489ae4917223e93a59be956f7fde9a3dc8db}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489ae4917223e93a59be956f7fde9a3dc8db}} 
+DCC1\+\_\+\+CNT1\+\_\+\+VCLK&Alias for DCC1 CNT 1 CLOCK SOURCE 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCC1\_CNT1\_N2HET1\_31@{DCC1\_CNT1\_N2HET1\_31}!dcc.h@{dcc.h}}\index{dcc.h@{dcc.h}!DCC1\_CNT1\_N2HET1\_31@{DCC1\_CNT1\_N2HET1\_31}}}\mbox{\Hypertarget{dcc_8h_a85353d58e849e1abaa682c468b2cb489ae50fe282fa0148428d3ac92a76fa3a2f}\label{dcc_8h_a85353d58e849e1abaa682c468b2cb489ae50fe282fa0148428d3ac92a76fa3a2f}} 
+DCC1\+\_\+\+CNT1\+\_\+\+N2\+HET1\+\_\+31&Alias for DCC1 CNT 1 CLOCK SOURCE 9 \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,61 @@
+\hypertarget{structcrc_mod_config}{}\doxysection{Структура crc\+Mod\+Config}
+\label{structcrc_mod_config}\index{crcModConfig@{crcModConfig}}
+
+
+CRC mode specific parameters.  
+
+
+
+
+{\ttfamily \#include $<$crc.\+h$>$}
+
+\doxysubsection*{Поля данных}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \mbox{\hyperlink{structcrc_mod_config_a529849bacc8e06bf51e26416c0315a1f}{mode}}
+\item 
+uint32 \mbox{\hyperlink{structcrc_mod_config_af530155cdc798f4ac5289fa234a47f6f}{crc\+\_\+channel}}
+\item 
+uint64 $\ast$ \mbox{\hyperlink{structcrc_mod_config_a4aa9d2313acfca30565133fa96e4154f}{src\+\_\+data\+\_\+pat}}
+\item 
+uint32 \mbox{\hyperlink{structcrc_mod_config_a5aa3531dd083fe63a88233bbe12663a6}{data\+\_\+length}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+CRC mode specific parameters. 
+
+This type is used to pass crc mode specific parameters 
+
+\doxysubsection{Поля}
+\mbox{\Hypertarget{structcrc_mod_config_af530155cdc798f4ac5289fa234a47f6f}\label{structcrc_mod_config_af530155cdc798f4ac5289fa234a47f6f}} 
+\index{crcModConfig@{crcModConfig}!crc\_channel@{crc\_channel}}
+\index{crc\_channel@{crc\_channel}!crcModConfig@{crcModConfig}}
+\doxysubsubsection{\texorpdfstring{crc\_channel}{crc\_channel}}
+{\footnotesize\ttfamily uint32 crc\+\_\+channel}
+
+CRC channel-\/0,1 ~\newline
+ \mbox{\Hypertarget{structcrc_mod_config_a5aa3531dd083fe63a88233bbe12663a6}\label{structcrc_mod_config_a5aa3531dd083fe63a88233bbe12663a6}} 
+\index{crcModConfig@{crcModConfig}!data\_length@{data\_length}}
+\index{data\_length@{data\_length}!crcModConfig@{crcModConfig}}
+\doxysubsubsection{\texorpdfstring{data\_length}{data\_length}}
+{\footnotesize\ttfamily uint32 data\+\_\+length}
+
+Pattern data length.\+Number of 64 bit size word \mbox{\Hypertarget{structcrc_mod_config_a529849bacc8e06bf51e26416c0315a1f}\label{structcrc_mod_config_a529849bacc8e06bf51e26416c0315a1f}} 
+\index{crcModConfig@{crcModConfig}!mode@{mode}}
+\index{mode@{mode}!crcModConfig@{crcModConfig}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily uint32 mode}
+
+Mode of operation ~\newline
+ \mbox{\Hypertarget{structcrc_mod_config_a4aa9d2313acfca30565133fa96e4154f}\label{structcrc_mod_config_a4aa9d2313acfca30565133fa96e4154f}} 
+\index{crcModConfig@{crcModConfig}!src\_data\_pat@{src\_data\_pat}}
+\index{src\_data\_pat@{src\_data\_pat}!crcModConfig@{crcModConfig}}
+\doxysubsubsection{\texorpdfstring{src\_data\_pat}{src\_data\_pat}}
+{\footnotesize\ttfamily uint64$\ast$ src\+\_\+data\+\_\+pat}
+
+Pattern data 
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{crc_8h}{crc.\+h}}\end{DoxyCompactItemize}

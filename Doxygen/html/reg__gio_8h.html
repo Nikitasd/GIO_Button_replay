@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: Файл include/reg_gio.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Структуры данных</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a>  </div>
+  <div class="headertitle"><div class="title">Файл reg_gio.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>GIO Register Layer Header File.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="sys__common_8h_source.html">sys_common.h</a>&quot;</code><br />
+</div>
+<p><a href="reg__gio_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Структуры данных</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgio_base.html">gioBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GIO Base Register Definition.  <a href="structgio_base.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgio_port.html">gioPort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GIO Port Register Definition.  <a href="structgio_port.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:acf3fc7487b247fa20e47f99b3551b8dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reg__gio_8h.html#acf3fc7487b247fa20e47f99b3551b8dd">gioREG</a>&#160;&#160;&#160;((<a class="el" href="reg__gio_8h.html#aa668c4a0178e1b9a1ccdf772286ff0b4">gioBASE_t</a> *)0xFFF7BC00U)</td></tr>
+<tr class="memdesc:acf3fc7487b247fa20e47f99b3551b8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">GIO Register Frame Pointer.  <br /></td></tr>
+<tr class="separator:acf3fc7487b247fa20e47f99b3551b8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20775a37d510c0bd217a9f75c90a574"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reg__gio_8h.html#ae20775a37d510c0bd217a9f75c90a574">gioPORTA</a>&#160;&#160;&#160;((<a class="el" href="reg__gio_8h.html#ad276ab0b3bc4719e20bc91adf2bfcfe7">gioPORT_t</a> *)0xFFF7BC34U)</td></tr>
+<tr class="memdesc:ae20775a37d510c0bd217a9f75c90a574"><td class="mdescLeft">&#160;</td><td class="mdescRight">GIO Port (A) Register Pointer.  <br /></td></tr>
+<tr class="separator:ae20775a37d510c0bd217a9f75c90a574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:aa668c4a0178e1b9a1ccdf772286ff0b4"><td class="memItemLeft" align="right" valign="top">typedef volatile struct <a class="el" href="structgio_base.html">gioBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reg__gio_8h.html#aa668c4a0178e1b9a1ccdf772286ff0b4">gioBASE_t</a></td></tr>
+<tr class="memdesc:aa668c4a0178e1b9a1ccdf772286ff0b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">GIO Register Frame Type Definition.  <br /></td></tr>
+<tr class="separator:aa668c4a0178e1b9a1ccdf772286ff0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad276ab0b3bc4719e20bc91adf2bfcfe7"><td class="memItemLeft" align="right" valign="top">typedef volatile struct <a class="el" href="structgio_port.html">gioPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reg__gio_8h.html#ad276ab0b3bc4719e20bc91adf2bfcfe7">gioPORT_t</a></td></tr>
+<tr class="memdesc:ad276ab0b3bc4719e20bc91adf2bfcfe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">GIO Port Register Type Definition.  <br /></td></tr>
+<tr class="separator:ad276ab0b3bc4719e20bc91adf2bfcfe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>GIO Register Layer Header File. </p>
+<dl class="section date"><dt>Дата</dt><dd>11-Dec-2018 </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>04.07.01</dd></dl>
+<p>This file contains:</p><ul>
+<li>Definitions</li>
+<li>Types</li>
+<li>Interface Prototypes</li>
+</ul>
+<p>which are relevant for the GIO driver. </p>
+</div><h2 class="groupheader">Макросы</h2>
+<a id="ae20775a37d510c0bd217a9f75c90a574" name="ae20775a37d510c0bd217a9f75c90a574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20775a37d510c0bd217a9f75c90a574">&#9670;&#160;</a></span>gioPORTA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define gioPORTA&#160;&#160;&#160;((<a class="el" href="reg__gio_8h.html#ad276ab0b3bc4719e20bc91adf2bfcfe7">gioPORT_t</a> *)0xFFF7BC34U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GIO Port (A) Register Pointer. </p>
+<p>Pointer used by the GIO driver to access PORTA </p>
+
+</div>
+</div>
+<a id="acf3fc7487b247fa20e47f99b3551b8dd" name="acf3fc7487b247fa20e47f99b3551b8dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3fc7487b247fa20e47f99b3551b8dd">&#9670;&#160;</a></span>gioREG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define gioREG&#160;&#160;&#160;((<a class="el" href="reg__gio_8h.html#aa668c4a0178e1b9a1ccdf772286ff0b4">gioBASE_t</a> *)0xFFF7BC00U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GIO Register Frame Pointer. </p>
+<p>This pointer is used by the GIO driver to access the gio module registers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="aa668c4a0178e1b9a1ccdf772286ff0b4" name="aa668c4a0178e1b9a1ccdf772286ff0b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa668c4a0178e1b9a1ccdf772286ff0b4">&#9670;&#160;</a></span>gioBASE_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="reg__gio_8h.html#aa668c4a0178e1b9a1ccdf772286ff0b4">gioBASE_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GIO Register Frame Type Definition. </p>
+<p>This type is used to access the GIO Registers. </p>
+
+</div>
+</div>
+<a id="ad276ab0b3bc4719e20bc91adf2bfcfe7" name="ad276ab0b3bc4719e20bc91adf2bfcfe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad276ab0b3bc4719e20bc91adf2bfcfe7">&#9670;&#160;</a></span>gioPORT_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="reg__gio_8h.html#ad276ab0b3bc4719e20bc91adf2bfcfe7">gioPORT_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GIO Port Register Type Definition. </p>
+<p>This type is used to access the GIO Port Registers. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

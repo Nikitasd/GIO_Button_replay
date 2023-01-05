@@ -1,0 +1,89 @@
+\hypertarget{structgio_port}{}\doxysection{Структура gio\+Port}
+\label{structgio_port}\index{gioPort@{gioPort}}
+
+
+GIO Port Register Definition.  
+
+
+
+
+{\ttfamily \#include $<$reg\+\_\+gio.\+h$>$}
+
+\doxysubsection*{Поля данных}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \mbox{\hyperlink{structgio_port_a1f7c46c73a21947be1d27aa0436b8c84}{DIR}}
+\item 
+uint32 \mbox{\hyperlink{structgio_port_a0aad77b47de633a0c8e9b953cba464dd}{DIN}}
+\item 
+uint32 \mbox{\hyperlink{structgio_port_a2ab5ff289fcd14492e0d4ccb60189f1d}{DOUT}}
+\item 
+uint32 \mbox{\hyperlink{structgio_port_ae26cdf9d49a938a5fe988d1470ae6a20}{DSET}}
+\item 
+uint32 \mbox{\hyperlink{structgio_port_a4221196c2bea53f44cc90ee4b9e537c1}{DCLR}}
+\item 
+uint32 \mbox{\hyperlink{structgio_port_a15d9c4276cb8ca1575d7769de651f580}{PDR}}
+\item 
+uint32 \mbox{\hyperlink{structgio_port_ae0375052eb5bd939bf748f95cebfb177}{PULDIS}}
+\item 
+uint32 \mbox{\hyperlink{structgio_port_acbc2104f394353c69043e38e3d4056ce}{PSL}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+GIO Port Register Definition. 
+
+\doxysubsection{Поля}
+\mbox{\Hypertarget{structgio_port_a4221196c2bea53f44cc90ee4b9e537c1}\label{structgio_port_a4221196c2bea53f44cc90ee4b9e537c1}} 
+\index{gioPort@{gioPort}!DCLR@{DCLR}}
+\index{DCLR@{DCLR}!gioPort@{gioPort}}
+\doxysubsubsection{\texorpdfstring{DCLR}{DCLR}}
+{\footnotesize\ttfamily uint32 DCLR}
+
+0x0010\+: Data Output Clear Register \mbox{\Hypertarget{structgio_port_a0aad77b47de633a0c8e9b953cba464dd}\label{structgio_port_a0aad77b47de633a0c8e9b953cba464dd}} 
+\index{gioPort@{gioPort}!DIN@{DIN}}
+\index{DIN@{DIN}!gioPort@{gioPort}}
+\doxysubsubsection{\texorpdfstring{DIN}{DIN}}
+{\footnotesize\ttfamily uint32 DIN}
+
+0x0004\+: Data Input Register \mbox{\Hypertarget{structgio_port_a1f7c46c73a21947be1d27aa0436b8c84}\label{structgio_port_a1f7c46c73a21947be1d27aa0436b8c84}} 
+\index{gioPort@{gioPort}!DIR@{DIR}}
+\index{DIR@{DIR}!gioPort@{gioPort}}
+\doxysubsubsection{\texorpdfstring{DIR}{DIR}}
+{\footnotesize\ttfamily uint32 DIR}
+
+0x0000\+: Data Direction Register \mbox{\Hypertarget{structgio_port_a2ab5ff289fcd14492e0d4ccb60189f1d}\label{structgio_port_a2ab5ff289fcd14492e0d4ccb60189f1d}} 
+\index{gioPort@{gioPort}!DOUT@{DOUT}}
+\index{DOUT@{DOUT}!gioPort@{gioPort}}
+\doxysubsubsection{\texorpdfstring{DOUT}{DOUT}}
+{\footnotesize\ttfamily uint32 DOUT}
+
+0x0008\+: Data Output Register \mbox{\Hypertarget{structgio_port_ae26cdf9d49a938a5fe988d1470ae6a20}\label{structgio_port_ae26cdf9d49a938a5fe988d1470ae6a20}} 
+\index{gioPort@{gioPort}!DSET@{DSET}}
+\index{DSET@{DSET}!gioPort@{gioPort}}
+\doxysubsubsection{\texorpdfstring{DSET}{DSET}}
+{\footnotesize\ttfamily uint32 DSET}
+
+0x000C\+: Data Output Set Register \mbox{\Hypertarget{structgio_port_a15d9c4276cb8ca1575d7769de651f580}\label{structgio_port_a15d9c4276cb8ca1575d7769de651f580}} 
+\index{gioPort@{gioPort}!PDR@{PDR}}
+\index{PDR@{PDR}!gioPort@{gioPort}}
+\doxysubsubsection{\texorpdfstring{PDR}{PDR}}
+{\footnotesize\ttfamily uint32 PDR}
+
+0x0014\+: Open Drain Register \mbox{\Hypertarget{structgio_port_acbc2104f394353c69043e38e3d4056ce}\label{structgio_port_acbc2104f394353c69043e38e3d4056ce}} 
+\index{gioPort@{gioPort}!PSL@{PSL}}
+\index{PSL@{PSL}!gioPort@{gioPort}}
+\doxysubsubsection{\texorpdfstring{PSL}{PSL}}
+{\footnotesize\ttfamily uint32 PSL}
+
+0x001C\+: Pull Up/\+Down Selection Register \mbox{\Hypertarget{structgio_port_ae0375052eb5bd939bf748f95cebfb177}\label{structgio_port_ae0375052eb5bd939bf748f95cebfb177}} 
+\index{gioPort@{gioPort}!PULDIS@{PULDIS}}
+\index{PULDIS@{PULDIS}!gioPort@{gioPort}}
+\doxysubsubsection{\texorpdfstring{PULDIS}{PULDIS}}
+{\footnotesize\ttfamily uint32 PULDIS}
+
+0x0018\+: Pullup Disable Register 
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{reg__gio_8h}{reg\+\_\+gio.\+h}}\end{DoxyCompactItemize}

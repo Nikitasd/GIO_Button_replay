@@ -1,0 +1,81 @@
+\hypertarget{reg__sci_8h}{}\doxysection{Файл include/reg\+\_\+sci.h}
+\label{reg__sci_8h}\index{include/reg\_sci.h@{include/reg\_sci.h}}
+
+
+SCI Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsci_base}{sci\+Base}}
+\begin{DoxyCompactList}\small\item\em SCI Base Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilin\+REG}}~((\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+E400U)
+\begin{DoxyCompactList}\small\item\em SCILIN (LIN -\/ Compatibility Mode) Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__sci_8h_a51bbf8e6fb276b45f9218beab9e38152}{scilin\+PORT}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$)0x\+FFF7\+E440U)
+\begin{DoxyCompactList}\small\item\em SCILIN (LIN -\/ Compatibility Mode) Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structsci_base}{sci\+Base}} \mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+BASE\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em SCI Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+SCI Register Layer Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the SCI driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{reg__sci_8h_a51bbf8e6fb276b45f9218beab9e38152}\label{reg__sci_8h_a51bbf8e6fb276b45f9218beab9e38152}} 
+\index{reg\_sci.h@{reg\_sci.h}!scilinPORT@{scilinPORT}}
+\index{scilinPORT@{scilinPORT}!reg\_sci.h@{reg\_sci.h}}
+\doxysubsubsection{\texorpdfstring{scilinPORT}{scilinPORT}}
+{\footnotesize\ttfamily \#define scilin\+PORT~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$)0x\+FFF7\+E440U)}
+
+
+
+SCILIN (LIN -\/ Compatibility Mode) Register Frame Pointer. 
+
+Pointer used by the GIO driver to access I/O PORT of LIN (use the GIO drivers to access the port pins). \mbox{\Hypertarget{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}\label{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}} 
+\index{reg\_sci.h@{reg\_sci.h}!scilinREG@{scilinREG}}
+\index{scilinREG@{scilinREG}!reg\_sci.h@{reg\_sci.h}}
+\doxysubsubsection{\texorpdfstring{scilinREG}{scilinREG}}
+{\footnotesize\ttfamily \#define scilin\+REG~((\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+E400U)}
+
+
+
+SCILIN (LIN -\/ Compatibility Mode) Register Frame Pointer. 
+
+This pointer is used by the SCI driver to access the sci module registers. 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}\label{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}} 
+\index{reg\_sci.h@{reg\_sci.h}!sciBASE\_t@{sciBASE\_t}}
+\index{sciBASE\_t@{sciBASE\_t}!reg\_sci.h@{reg\_sci.h}}
+\doxysubsubsection{\texorpdfstring{sciBASE\_t}{sciBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+BASE\+\_\+t}}}
+
+
+
+SCI Register Frame Type Definition. 
+
+This type is used to access the SCI Registers.
+
+This type is used to access the SCI Registers. 

@@ -1,0 +1,127 @@
+\hypertarget{reg__het_8h}{}\doxysection{Файл include/reg\+\_\+het.h}
+\label{reg__het_8h}\index{include/reg\_het.h@{include/reg\_het.h}}
+
+
+HET Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhet_base}{het\+Base}}
+\begin{DoxyCompactList}\small\item\em HET Register Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhet_instruction_base}{het\+Instruction\+Base}}
+\begin{DoxyCompactList}\small\item\em HET Instruction Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhet1_ram_base}{het1\+Ram\+Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__het_8h_a1fb756f91c591fa0957b44eb250396bf}{het\+REG1}}~((\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+B800U)
+\begin{DoxyCompactList}\small\item\em HET Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__het_8h_a0507173424fc65ce46e9ebf620e7dc80}{het\+PORT1}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$)0x\+FFF7\+B84\+CU)
+\begin{DoxyCompactList}\small\item\em HET GIO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__het_8h_a47dbf1307cd13ba18806c05e9189eba4}{het\+RAM1}}~((\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$)0x\+FF460000U)
+\begin{DoxyCompactList}\small\item\em NHET1 RAM Pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{reg__het_8h_a831d4ef81d07013f8e8478702ab8e42c}\label{reg__het_8h_a831d4ef81d07013f8e8478702ab8e42c}} 
+\#define {\bfseries NHET1\+RAMPARLOC}~($\ast$(volatile uint32 $\ast$)0x\+FF462000U)
+\item 
+\mbox{\Hypertarget{reg__het_8h_a6aae1483595041407c136119bdf439dd}\label{reg__het_8h_a6aae1483595041407c136119bdf439dd}} 
+\#define {\bfseries NHET1\+RAMLOC}~($\ast$(volatile uint32 $\ast$)0x\+FF460000U)
+\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structhet_base}{het\+Base}} \mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em HET Register Frame Type Definition. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structhet_instruction_base}{het\+Instruction\+Base}} \mbox{\hyperlink{reg__het_8h_a51adb6af5a27a385e04c8750e3645738}{het\+INSTRUCTION\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em HET Instruction Type Definition. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structhet1_ram_base}{het1\+Ram\+Base}} \mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em HET RAM Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+HET Register Layer Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the HET driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{reg__het_8h_a0507173424fc65ce46e9ebf620e7dc80}\label{reg__het_8h_a0507173424fc65ce46e9ebf620e7dc80}} 
+\index{reg\_het.h@{reg\_het.h}!hetPORT1@{hetPORT1}}
+\index{hetPORT1@{hetPORT1}!reg\_het.h@{reg\_het.h}}
+\doxysubsubsection{\texorpdfstring{hetPORT1}{hetPORT1}}
+{\footnotesize\ttfamily \#define het\+PORT1~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$)0x\+FFF7\+B84\+CU)}
+
+
+
+HET GIO Port Register Pointer. 
+
+Pointer used by the GIO driver to access I/O PORT of HET1 (use the GIO drivers to access the port pins). \mbox{\Hypertarget{reg__het_8h_a47dbf1307cd13ba18806c05e9189eba4}\label{reg__het_8h_a47dbf1307cd13ba18806c05e9189eba4}} 
+\index{reg\_het.h@{reg\_het.h}!hetRAM1@{hetRAM1}}
+\index{hetRAM1@{hetRAM1}!reg\_het.h@{reg\_het.h}}
+\doxysubsubsection{\texorpdfstring{hetRAM1}{hetRAM1}}
+{\footnotesize\ttfamily \#define het\+RAM1~((\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$)0x\+FF460000U)}
+
+
+
+NHET1 RAM Pointer. 
+
+This pointer is used by the HET driver to access the NHET1 memory. \mbox{\Hypertarget{reg__het_8h_a1fb756f91c591fa0957b44eb250396bf}\label{reg__het_8h_a1fb756f91c591fa0957b44eb250396bf}} 
+\index{reg\_het.h@{reg\_het.h}!hetREG1@{hetREG1}}
+\index{hetREG1@{hetREG1}!reg\_het.h@{reg\_het.h}}
+\doxysubsubsection{\texorpdfstring{hetREG1}{hetREG1}}
+{\footnotesize\ttfamily \#define het\+REG1~((\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+B800U)}
+
+
+
+HET Register Frame Pointer. 
+
+This pointer is used by the HET driver to access the het module registers. 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}\label{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}} 
+\index{reg\_het.h@{reg\_het.h}!hetBASE\_t@{hetBASE\_t}}
+\index{hetBASE\_t@{hetBASE\_t}!reg\_het.h@{reg\_het.h}}
+\doxysubsubsection{\texorpdfstring{hetBASE\_t}{hetBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}}}
+
+
+
+HET Register Frame Type Definition. 
+
+This type is used to access the HET Registers.
+
+This type is used to access the HET Registers. \mbox{\Hypertarget{reg__het_8h_a51adb6af5a27a385e04c8750e3645738}\label{reg__het_8h_a51adb6af5a27a385e04c8750e3645738}} 
+\index{reg\_het.h@{reg\_het.h}!hetINSTRUCTION\_t@{hetINSTRUCTION\_t}}
+\index{hetINSTRUCTION\_t@{hetINSTRUCTION\_t}!reg\_het.h@{reg\_het.h}}
+\doxysubsubsection{\texorpdfstring{hetINSTRUCTION\_t}{hetINSTRUCTION\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__het_8h_a51adb6af5a27a385e04c8750e3645738}{het\+INSTRUCTION\+\_\+t}}}
+
+
+
+HET Instruction Type Definition. 
+
+This type is used to access a HET Instruction. \mbox{\Hypertarget{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}\label{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}} 
+\index{reg\_het.h@{reg\_het.h}!hetRAMBASE\_t@{hetRAMBASE\_t}}
+\index{hetRAMBASE\_t@{hetRAMBASE\_t}!reg\_het.h@{reg\_het.h}}
+\doxysubsubsection{\texorpdfstring{hetRAMBASE\_t}{hetRAMBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}}}
+
+
+
+HET RAM Type Definition. 
+
+This type is used to access the HET RAM. 

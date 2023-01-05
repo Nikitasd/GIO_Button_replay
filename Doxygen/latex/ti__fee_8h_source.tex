@@ -1,0 +1,510 @@
+\hypertarget{ti__fee_8h_source}{}\doxysection{ti\+\_\+fee.\+h}
+\label{ti__fee_8h_source}\index{include/ti\_fee.h@{include/ti\_fee.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ FILE\ DESCRIPTION}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ File:\ \ ti\_fee.h}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Project:\ \ Tms570\_TIFEEDriver}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ \ \ \ \ \ \ Module:\ \ TIFEEDriver}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ \ \ Generator:\ \ None}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ \ Description:\ \ This\ file\ implements\ the\ TI\ FEE\ Api.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ Author:\ \ Vishwanath\ Reddy}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Revision\ History}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ Version\ \ \ \ \ \ \ \ Date\ \ \ \ \ \ \ \ \ Author\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Change\ ID\ \ \ \ \ \ \ \ Description}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ 00.01.00\ \ \ \ \ \ \ 31Aug2012\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ 0000000000000\ \ \ \ Initial\ Version\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ 00.01.01\ \ \ \ \ \ \ 29Oct2012\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ 0000000000000\ \ \ \ Changes\ for\ implementing\ Error\ Recovery}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ 00.01.02\ \ \ \ \ \ \ 30Nov2012\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00097786\ \ \ \ Misra\ Fixes,\ Memory\ segmentation\ changes.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ 00.01.03\ \ \ \ \ \ \ 14Jan2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00098510\ \ \ \ Changes\ as\ requested\ by\ Vector.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ 00.01.04\ \ \ \ \ \ \ 12Feb2012\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00099152\ \ \ \ Integration\ issues\ fix.\ }}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ 00.01.05\ \ \ \ \ \ \ 04Mar2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00099152\ \ \ \ Added\ Deleting\ a\ block\ feature,\ bug\ fixes.\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ 00.01.06\ \ \ \ \ \ \ 11Mar2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00099152\ \ \ \ Added\ feature\ :\ copying\ of\ unconfigured\ blocks.\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ 00.01.07\ \ \ \ \ \ \ 15Mar2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00099152\ \ \ \ Added\ feature\ :\ Number\ of\ 8\ bytes\ writes,\ fixed\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ issue\ with\ copy\ blocks.\ }}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ 00.01.08\ \ \ \ \ \ \ 05Apr2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00099152\ \ \ \ Added\ feature\ :\ CRC\ check\ for\ unconfigured\ \ blocks,}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Main\ function\ modified\ to\ complete\ writes\ as\ fast\ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ as\ possible,\ Added\ Non\ polling\ mode\ support.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ 00.01.09\ \ \ \ \ \ \ 19Apr2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00099152\ \ \ \ Warning\ removal,\ Added\ feature\ comparision\ of\ data\ \ }}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ during\ write.\ \ }}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ 00.01.10\ \ \ \ \ \ \ 11Jun2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00101845\ \ \ \ Updated\ version\ information.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ 00.01.11\ \ \ \ \ \ \ 05Jul2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00101643\ \ \ \ Updated\ version\ information.\ \ \ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *\ 01.12.00\ \ \ \ \ \ \ 13Dec2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00105412\ \ \ \ Traceability\ tags\ added.\ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MISRA\ C\ fixes.\ Version\ info\ corrected.\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ 01.13.00\ \ \ \ \ \ \ 30Dec2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ 0000000000000\ \ \ \ Undated\ version\ info\ for\ \ SDOCM00107976}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ and\ SDOCM00105795.\ \ \ \ \ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ 01.13.01\ \ \ \ \ \ \ 19May2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ 0000000000000\ \ \ \ Updated\ version\ info\ for\ \ SDOCM00107913}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ and\ SDOCM00107622.\ \ \ \ \ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ 01.13.02\ \ \ \ \ \ \ 12Jun2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ 0000000000000\ \ \ \ Updated\ version\ info\ for\ SDOCM00108238}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 01.14.00\ \ \ \ \ \ \ 26Mar2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Update\ version\ info\ for\ SDOCM00107161.\ }}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ 01.15.00\ \ \ \ \ \ \ 06Jun2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Support\ for\ Conqueror.}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ 01.16.00\ \ \ \ \ \ \ 15Jul2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00112141\ \ \ \ Remove\ \ MISRA\ warnings.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *\ 01.16.01\ \ \ \ \ \ \ 12Sep2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00112930\ \ \ \ Prototype\ for\ TI\_Fee\_SuspendResumeErase\ added.}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TI\_Fee\_EraseCommandType\ enum\ added.\ \ \ \ }}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ extern\ added\ for\ TI\_Fee\_bEraseSuspended.\ \ \ \ \ }}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ 01.17.00\ \ \ \ \ \ \ 15Oct2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00113379\ \ \ \ RAM\ Optimization\ changes.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ 01.17.01\ \ \ \ \ \ \ 30Oct2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00113536\ \ \ \ Support\ for\ TMS570LS07xx,TMS570LS09xx,}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TMS570LS05xx,\ RM44Lx.\ }}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ *\ 01.17.02\ \ \ \ \ \ \ 26Dec2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00114102\ \ \ \ FLEE\ Errata\ Fix.}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SDOCM00114104\ \ \ \ Change\ ALL\ 1's\ OK\ check\ condition.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Updated\ version\ info.\ Added\ new\ macros.}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SDOCM00114423\ \ \ \ Add\ new\ enum\ TI\_Fee\_DeviceType.}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Add\ new\ variable\ TI\_Fee\_MaxSectors\ and\ }}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prototype\ TI\_FeeInternal\_PopulateStructures.\ }}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ *\ 01.18.00\ \ \ \ \ \ \ 12Oct2015\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00119455\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Update\ ti\_fee\_util.c\ file\ for\ the}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bugfix\ "{}If\ morethan\ one\ data\ set\ is\ config-\/}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ured,\ then\ a\ valid\ block\ may\ get\ invalidated\ if}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ multiple\ valid\ blocks\ are\ present\ in\ FEE\ memory.\ }}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ *\ 01.18.01\ \ \ \ \ \ \ 17Nov2015\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00120161\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ In\ TI\_FeeInternal\_FeeManager,\ do\ not\ change\ the\ }}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ to\ IDLE,after\ completing\ the\ copy\ operation.\ }}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ *\ 01.18.02\ \ \ \ \ \ \ 05Feb2016\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00121158\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Add\ a\ call\ of\ TI\_FeeInternal\_PollFlashStatus()}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ before\ reading\ data\ from\ FEE\ bank\ in}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TI\_FeeInternal\_UpdateBlockOffsetArray(),}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TI\_Fee\_WriteAsync(),TI\_Fee\_WriteSync(),}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TI\_Fee\_ReadSync(),\ TI\_Fee\_Read()}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ *\ 01.18.03\ \ \ \ \ \ \ 30June2016\ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00122388\ \ \ \ Update\ patch\ version\ TI\_FEE\_SW\_PATCH\_VERSION.}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TI\_FEE\_FLASH\_CRC\_ENABLE\ is\ renamed\ to\ }}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TI\_FEE\_FLASH\_CHECKSUM\_ENABLE.\ \ }}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SDOCM00122429\ \ \ \ In\ ti\_fee\_types.h,\ add\ error\ when\ endianess\ }}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ is\ not\ defined.}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ *\ 01.19.00\ \ \ \ \ \ \ 08Augu2016\ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00122592\ \ \ \ Update\ patch\ version\ TI\_FEE\_MINOR\_VERSION.}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Code\ for\ using\ partially\ ersed\ sector\ is\ now\ }}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ removed.\ }}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Bugfix\ for\ FEE\ reading\ from\ unimplemented\ memory}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ space.}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ *\ 01.19.01\ \ \ \ \ \ \ 12Augu2016\ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00122543\ \ \ \ Update\ patch\ version\ TI\_FEE\_MINOR\_VERSION.}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Synchronous\ write\ API\ modified\ to\ avoid\ copy\ of\ }}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ already\ copied\ block.}}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ *\ 01.19.02\ \ \ \ \ \ \ 25Janu2017\ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00122832\ \ \ \ Update\ patch\ version\ TI\_FEE\_MINOR\_VERSION.}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Format\ API\ modified\ to\ erase\ all\ configured\ VS.\ }}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SDOCM00122833\ \ \ \ In\ API\ TI\_Fee\_ErrorRecovery,\ added\ polling\ for}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flash\ status\ before\ calling\ TI\_Fee\_Init.}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ *\ 01.19.03\ \ \ \ \ \ \ 15May2017\ \ \ \ Prathap\ Srinivasan\ \ \ SDOCM00122917\ \ \ \ Added\ TI\_Fee\_bIsMainFunctionCalled\ Global\ Variable.\ }}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ *\ 01.19.04\ \ \ \ \ \ \ 05Dec2017\ \ \ \ Prathap\ Srinivasan\ \ \ HERCULES\_SW-\/5082\ Update\ version\ history.}}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00091\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00092\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00093\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00094\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00095\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00096\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00097\ \textcolor{comment}{*}}
+\DoxyCodeLine{00098\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00099\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00100\ \textcolor{comment}{*}}
+\DoxyCodeLine{00101\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00102\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00103\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00104\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00105\ \textcolor{comment}{*}}
+\DoxyCodeLine{00106\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00107\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00108\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00109\ \textcolor{comment}{*}}
+\DoxyCodeLine{00110\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00111\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00112\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00113\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00114\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00115\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00116\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00117\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00118\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00119\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00120\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00121\ \textcolor{comment}{*}}
+\DoxyCodeLine{00122\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#ifndef\ TI\_FEE\_H}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ TI\_FEE\_H}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00128\ \textcolor{comment}{\ *\ INCLUDES}}
+\DoxyCodeLine{00129\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hal__stdtypes_8h}{hal\_stdtypes.h}}"{}}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#include\ "{}fee\_interface.h"{}}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#include\ "{}ti\_fee\_types.h"{}}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#include\ "{}ti\_fee\_cfg.h"{}}}
+\DoxyCodeLine{00134\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00135\ \textcolor{comment}{\ *\ \ GLOBAL\ CONSTANT\ MACROS}}
+\DoxyCodeLine{00136\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00137\ \textcolor{comment}{/*\ Fee\ Published\ Information\ */}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ TI\_FEE\_MAJOR\_VERSION\ \ \ \ 3U}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ TI\_FEE\_MINOR\_VERSION\ \ \ \ 0U}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ TI\_FEE\_PATCH\_VERSION\ \ \ \ 2U}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ TI\_FEE\_SW\_MAJOR\_VERSION\ 1U}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ TI\_FEE\_SW\_MINOR\_VERSION\ 19U}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ TI\_FEE\_SW\_PATCH\_VERSION\ 4U}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ TI\_FEE\_VIRTUAL\_SECTOR\_VERSION\ 1U}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{comment}{/*\ Virtual\ sector\ states\ */}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ ActiveVSHi\ \ \ \ \ \ \ \ \ \ 0x0000FFFFU}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ ActiveVSLo\ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ CopyVSHi\ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFFU}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ CopyVSLo\ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ EmptyVSHi\ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFFU}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ EmptyVSLo\ \ \ \ \ \ \ \ \ \ \ 0x0000FFFFU}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ InvalidVSHi\ \ \ \ \ \ \ \ \ 0xFFFFFFFFU}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ InvalidVSLo\ \ \ \ \ \ \ \ \ 0xFFFFFFFFU}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ ReadyforEraseVSHi\ \ \ 0x00000000U}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ ReadyforEraseVSLo\ \ \ 0x00000000U}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{comment}{/*\ Data\ Block\ states*/}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ EmptyBlockHi\ \ \ \ \ \ \ \ \ 0xFFFFFFFFU}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ EmptyBlockLo\ \ \ \ \ \ \ \ \ 0xFFFFFFFFU}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ StartProgramBlockHi\ \ 0xFFFF0000U}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ StartProgramBlockLo\ \ 0xFFFFFFFFU}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ ValidBlockHi\ \ \ \ \ \ \ \ \ 0x00000000U}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ ValidBlockLo\ \ \ \ \ \ \ \ \ 0xFFFFFFFFU}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ InvalidBlockHi\ \ \ \ \ \ \ 0x00000000U}}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ InvalidBlockLo\ \ \ \ \ \ \ 0xFFFF0000U}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ CorruptBlockHi\ \ \ \ \ \ \ 0x00000000U}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ CorruptBlockLo\ \ \ \ \ \ \ 0x00000000U}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ FEE\_BANK\ 0U}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{comment}{/*\ Enable/Disable\ FEE\ sectors\ */}}
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#define\ FEE\_DISABLE\_SECTORS\_31\_00\ 0x00000000U}}
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#define\ FEE\_DISABLE\_SECTORS\_63\_32\ 0x00000000U}}
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ FEE\_ENABLE\_SECTORS\_31\_00\ \ 0xFFFFFFFFU\ }}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ FEE\_ENABLE\_SECTORS\_63\_32\ \ 0xFFFFFFFFU\ }}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00180\ \textcolor{comment}{\ *\ \ GLOBAL\ DATA\ TYPES\ AND\ STRUCTURES}}
+\DoxyCodeLine{00181\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00182\ \textcolor{comment}{/*\ Structures\ used\ */}}
+\DoxyCodeLine{00183\ \textcolor{comment}{/*\ Enum\ to\ describe\ the\ Fee\ Status\ types\ */}}
+\DoxyCodeLine{00184\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00185\ \{}
+\DoxyCodeLine{00186\ \ \ \ TI\_FEE\_OK\ =\ 0U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Function\ returned\ no\ error\ */}}
+\DoxyCodeLine{00187\ \ \ \ TI\_FEE\_ERROR\ =\ 1U\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Function\ returned\ an\ error\ */}}
+\DoxyCodeLine{00188\ \}\ TI\_Fee\_StatusType;}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{comment}{/*\ Enum\ to\ describe\ the\ Virtual\ Sector\ State\ */}}
+\DoxyCodeLine{00191\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00192\ \{}
+\DoxyCodeLine{00193\ \ \ \ VsState\_Invalid=1U,}
+\DoxyCodeLine{00194\ \ \ \ VsState\_Empty=2U,}
+\DoxyCodeLine{00195\ \ \ \ VsState\_Copy=3U,}
+\DoxyCodeLine{00196\ \ \ \ VsState\_Active=4U,}
+\DoxyCodeLine{00197\ \ \ \ VsState\_ReadyForErase=5U}
+\DoxyCodeLine{00198\ \}VirtualSectorStatesType;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \textcolor{comment}{/*\ Enum\ to\ describe\ the\ Block\ State\ */}}
+\DoxyCodeLine{00201\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00202\ \{\ \ \ }
+\DoxyCodeLine{00203\ \ \ \ Block\_StartProg=1U,}
+\DoxyCodeLine{00204\ \ \ \ Block\_Valid=2U,\ \ \ }
+\DoxyCodeLine{00205\ \ \ \ Block\_Invalid=3U\ \ \ }
+\DoxyCodeLine{00206\ \}BlockStatesType;}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{comment}{/*\ Enum\ for\ error\ trpes\ */}}
+\DoxyCodeLine{00209\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00210\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ Error\_Nil=0U,}
+\DoxyCodeLine{00212\ \ \ \ \ Error\_TwoActiveVS=1U,}
+\DoxyCodeLine{00213\ \ \ \ \ Error\_TwoCopyVS=2U,\ }
+\DoxyCodeLine{00214\ \ \ \ \ Error\_SetupStateMachine=3U,}
+\DoxyCodeLine{00215\ \ \ \ \ Error\_CopyButNoActiveVS=4U,}
+\DoxyCodeLine{00216\ \ \ \ \ Error\_NoActiveVS=5U,}
+\DoxyCodeLine{00217\ \ \ \ \ Error\_BlockInvalid=6U,}
+\DoxyCodeLine{00218\ \ \ \ \ Error\_NullDataPtr=7U,}
+\DoxyCodeLine{00219\ \ \ \ \ Error\_NoFreeVS=8U,}
+\DoxyCodeLine{00220\ \ \ \ \ Error\_InvalidVirtualSectorParameter=9U,}
+\DoxyCodeLine{00221\ \ \ \ \ Error\_ExceedSectorOnBank=10U,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00222\ \ \ \ \ Error\_EraseVS=11U,}
+\DoxyCodeLine{00223\ \ \ \ \ Error\_BlockOffsetGtBlockSize=12U,}
+\DoxyCodeLine{00224\ \ \ \ \ Error\_LengthParam=13U,}
+\DoxyCodeLine{00225\ \ \ \ \ Error\_FeeUninit=14U,}
+\DoxyCodeLine{00226\ \ \ \ \ Error\_Suspend=15U,}
+\DoxyCodeLine{00227\ \ \ \ \ Error\_InvalidBlockIndex=16U,}
+\DoxyCodeLine{00228\ \ \ \ \ Error\_NoErase=17U,}
+\DoxyCodeLine{00229\ \ \ \ \ Error\_CurrentAddress=18U,}
+\DoxyCodeLine{00230\ \ \ \ \ Error\_Exceed\_No\_Of\_DataSets=19U}
+\DoxyCodeLine{00231\ \}TI\_Fee\_ErrorCodeType;}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00234\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ Suspend\_Erase=0U,}
+\DoxyCodeLine{00236\ \ \ \ \ Resume\_Erase}
+\DoxyCodeLine{00237\ \}TI\_Fee\_EraseCommandType;}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \textcolor{comment}{/*\ Enum\ to\ describe\ the\ Device\ types\ */}}
+\DoxyCodeLine{00240\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00241\ \{}
+\DoxyCodeLine{00242\ \ \ \ CHAMPION\ =\ 0U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Function\ returned\ no\ error\ */}}
+\DoxyCodeLine{00243\ \ \ \ ARCHER\ =\ 1U\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Function\ returned\ an\ error\ */}}
+\DoxyCodeLine{00244\ \}\ TI\_Fee\_DeviceType;}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \textcolor{keyword}{typedef}\ uint32\ TI\_Fee\_AddressType;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Used\ for\ defining\ variables\ to\ indicate\ number\ of\ }}
+\DoxyCodeLine{00247\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bytes\ for\ address\ offset\ */}}
+\DoxyCodeLine{00248\ \textcolor{keyword}{typedef}\ uint32\ TI\_Fee\_LengthType;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Used\ for\ defining\ variables\ to\ indicate\ number\ of\ }}
+\DoxyCodeLine{00249\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bytes\ per\ read/write/erase\ */}}
+\DoxyCodeLine{00250\ \textcolor{keyword}{typedef}\ TI\_Fee\_ErrorCodeType\ Fee\_ErrorCodeType;}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{comment}{/*\ Structure\ used\ when\ defining\ virtual\ sectors\ */}}
+\DoxyCodeLine{00253\ \textcolor{comment}{/*\ The\ following\ error\ checks\ need\ to\ be\ performed:\ */}}
+\DoxyCodeLine{00254\ \textcolor{comment}{/*\ Virtual\ Sector\ definitions\ are\ not\ allowed\ to\ overlap\ */}}
+\DoxyCodeLine{00255\ \textcolor{comment}{/*\ Virtual\ Sector\ definition\ is\ at\ least\ twice\ the\ size\ in\ bytes\ of\ the\ total\ size\ of\ all\ defined\ blocks\ */}}
+\DoxyCodeLine{00256\ \textcolor{comment}{/*\ We\ will\ need\ to\ define\ a\ formula\ to\ indicate\ if\ the\ number\ of\ write\ cycles\ indicated\ in\ the\ block\ definitions\ */}}
+\DoxyCodeLine{00257\ \textcolor{comment}{/*\ is\ possible\ in\ the\ defined\ Virtual\ Sector.\ */}}
+\DoxyCodeLine{00258\ \textcolor{comment}{/*\ Ending\ sector\ cannot\ be\ less\ than\ Starting\ sector\ */}}
+\DoxyCodeLine{00259\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00260\ \{}
+\DoxyCodeLine{00261\ \ \ \ uint16\ \ FeeVirtualSectorNumber;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Virtual\ Sector's\ Number\ -\/\ 0\ and\ 0xFFFF\ values\ are\ not\ allowed*/}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Minimum\ 1,\ Maximum\ 4\ */}}
+\DoxyCodeLine{00263\ \ \ \ uint16\ \ FeeFlashBank;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Flash\ Bank\ to\ use\ for\ virtual\ sector.\ */}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ As\ we\ do\ not\ allow\ Flash\ EEPROM\ Emulation\ in\ Bank\ 0,\ }}
+\DoxyCodeLine{00265\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0\ is\ not\ a\ valid\ option\ */}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Defaultvalue\ 1,\ Minimum\ 1,\ Maxiumum\ 7\ */}\ \ \ }
+\DoxyCodeLine{00267\ \ \ \ Fapi\_FlashSectorType\ FeeStartSector;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Defines\ the\ Starting\ Sector\ inthe\ Bank\ for\ this\ VirtualSector*/}}
+\DoxyCodeLine{00268\ \ \ \ Fapi\_FlashSectorType\ FeeEndSector;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Defines\ the\ Ending\ Sector\ inthe\ Bank\ for\ this\ Virtual\ Sector\ */}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Start\ and\ End\ sectors\ can\ be\ the\ same,\ which\ indicates\ only\ }}
+\DoxyCodeLine{00270\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ one\ sector\ */}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ is\ the\ entire\ virtual\ sector.\ */}}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Values\ are\ based\ on\ the\ FLASH\_SECT\ enum\ */}}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Defaultvalue\ and\ Min\ is\ the\ same\ sector\ defined\ as\ the\ starting}}
+\DoxyCodeLine{00274\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sector\ */}}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Max\ values\ are\ based\ onthe\ device\ definition\ file\ being\ used.*/}}
+\DoxyCodeLine{00276\ \}\ \mbox{\hyperlink{struct_fee___virtual_sector_config_type}{Fee\_VirtualSectorConfigType}};}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \textcolor{comment}{/*\ Structure\ used\ when\ defining\ blocks\ */}}
+\DoxyCodeLine{00279\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00280\ \{}
+\DoxyCodeLine{00281\ \ \ \ uint16\ \ FeeBlockNumber;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Block's\ Number\ -\/\ 0\ and\ 0xFFFF\ values\ are\ not\ allowed\ */}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Start\ 1,\ Next:\ Number\ of\ Blocks\ +\ 1,\ Min\ 1,\ Max\ 0xFFFE\ */}}
+\DoxyCodeLine{00283\ \ \ \ uint16\ \ FeeBlockSize;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Block's\ Size\ -\/\ Actual\ number\ of\ bits\ used\ is\ reduced\ */}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ by\ number\ of\ bits\ used\ for\ dataset.\ */}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Default\ 8,\ Min\ 1,\ Max\ (2\string^(16-\/\#\ of\ Dataset\ Bits))-\/1\ */}}
+\DoxyCodeLine{00286\ \ \ \ \textcolor{keywordtype}{boolean}\ FeeImmediateData;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ if\ the\ block\ is\ used\ for\ immediate\ data\ */}}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Default:\ False\ */}}
+\DoxyCodeLine{00288\ \ \ \ uint32\ \ FeeNumberOfWriteCycles;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Number\ of\ write\ cycles\ this\ block\ requires\ */}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Default:\ 0,\ but\ this\ will\ not\ be\ a\ valid\ number.\ \ }}
+\DoxyCodeLine{00290\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Force\ customer\ to\ select\ a\ value\ */}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Min\ 1,\ Max\ (2\string^32)-\/1\ */}}
+\DoxyCodeLine{00292\ \ \ \ uint8\ \ \ FeeDeviceIndex;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Device\ Index\ -\/\ This\ will\ always\ be\ 0\ */}}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Fixed\ value:\ 0\ */}}
+\DoxyCodeLine{00294\ \ \ \ uint8\ \ \ FeeNumberOfDataSets;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Number\ of\ DataSets\ for\ the\ Block\ */}}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Default\ value:\ 1\ */}\ \ \ }
+\DoxyCodeLine{00296\ \ \ \ uint8\ \ \ FeeEEPNumber;\ }
+\DoxyCodeLine{00297\ \}\ \mbox{\hyperlink{struct_fee___block_config_type}{Fee\_BlockConfigType}};}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \textcolor{comment}{/*\ Structure\ used\ for\ Global\ variables\ */}}
+\DoxyCodeLine{00301\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00302\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oFlashNextAddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ The\ next\ Flash\ Address\ to\ write\ to\ */}}
+\DoxyCodeLine{00304\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oCopyCurrentAddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ Address\ within\ the\ Active\ VS\ }}
+\DoxyCodeLine{00305\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ which\ will\ be\ copied\ to\ Copy\ VS\ */}}
+\DoxyCodeLine{00306\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oCopyNextAddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ Address\ within\ the\ Copy\ VS\ to\ }}
+\DoxyCodeLine{00307\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ which\ the\ data\ from\ Active\ VS\ will\ be\ copied\ to\ */}}
+\DoxyCodeLine{00308\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_u32nextwriteaddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ next\ free\ Address\ within\ the\ curent\ }}
+\DoxyCodeLine{00309\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VS\ to\ which\ the\ data\ will\ be\ written\ */}\ \ }
+\DoxyCodeLine{00310\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oVirtualSectorStartAddress;\ \ \ \ \ \ \textcolor{comment}{/*\ Start\ Address\ of\ the\ current\ Virtual\ Sector\ */}}
+\DoxyCodeLine{00311\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oVirtualSectorEndAddress;\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ End\ Address\ of\ the\ current\ Virtual\ Sector\ */}\ }
+\DoxyCodeLine{00312\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oCopyVirtualSectorAddress;\ \ \ \ \ \ \ \textcolor{comment}{/*\ Start\ Address\ of\ the\ Copy\ Virtual\ Address\ */}}
+\DoxyCodeLine{00313\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oCurrentStartAddress;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Start\ Address\ of\ the\ Previous\ Block\ \ \ */}}
+\DoxyCodeLine{00314\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oCurrentBlockHeader;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Start\ Address\ of\ the\ Block\ which\ is\ being\ currently\ }}
+\DoxyCodeLine{00315\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ written*/}}
+\DoxyCodeLine{00316\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oWriteAddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Address\ within\ the\ VS\ where\ data\ is\ to\ be\ written\ */}}
+\DoxyCodeLine{00317\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oCopyWriteAddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Address\ within\ the\ VS\ where\ data\ is\ to\ be\ copied\ */}}
+\DoxyCodeLine{00318\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oActiveVirtualSectorAddress;\ \ \ \ \ \textcolor{comment}{/*\ Start\ Address\ of\ the\ Active\ VS\ */}}
+\DoxyCodeLine{00319\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oBlankFailAddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Address\ of\ first\ non-\/blank\ location\ */}}
+\DoxyCodeLine{00320\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oActiveVirtualSectorStartAddress;\textcolor{comment}{/*\ Start\ Address\ of\ the\ active\ VS\ */}}
+\DoxyCodeLine{00321\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oActiveVirtualSectorEndAddress;\ \ \textcolor{comment}{/*\ End\ Address\ of\ the\ active\ VS\ */}\ \ }
+\DoxyCodeLine{00322\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oCopyVirtualSectorStartAddress;\ \ \textcolor{comment}{/*\ Start\ Address\ of\ the\ Copy\ VS\ */}\ \ }
+\DoxyCodeLine{00323\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_oCopyVirtualSectorEndAddress;\ \ \ \ \textcolor{comment}{/*\ End\ Address\ of\ the\ Copy\ VS\ */}}
+\DoxyCodeLine{00324\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_u32nextActiveVSwriteaddress;\ \ \ \ \ \textcolor{comment}{/*\ Next\ write\ address\ in\ Active\ VS\ */}}
+\DoxyCodeLine{00325\ \ \ \ \ TI\_Fee\_AddressType\ Fee\_u32nextCopyVSwriteaddress;\ \ \ \ \ \ \ \textcolor{comment}{/*\ Next\ write\ address\ in\ Copy\ VS\ */}}
+\DoxyCodeLine{00326\ \ \ \ \ uint16\ Fee\_u16CopyBlockSize;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ size\ of\ current\ block\ in\ bytes\ which\ is\ }}
+\DoxyCodeLine{00327\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ been\ copied\ from\ Active\ to\ Copy\ VS\ */}}
+\DoxyCodeLine{00328\ \ \ \ \ uint8\ Fee\_u8VirtualSectorStart;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Index\ of\ the\ Start\ Sector\ of\ the\ VS\ */}}
+\DoxyCodeLine{00329\ \ \ \ \ uint8\ Fee\_u8VirtualSectorEnd;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Index\ of\ the\ End\ Sector\ of\ the\ VS\ */}}
+\DoxyCodeLine{00330\ \ \ \ \ uint32\ Fee\_au32VirtualSectorStateValue[TI\_FEE\_VIRTUAL\_SECTOR\_OVERHEAD\ >>\ 2U];\ \ \ \ \ \ \ \textcolor{comment}{/*\ Array\ to\ store\ the\ Virtual\ }}
+\DoxyCodeLine{00331\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sector\ Header\ and\ }}
+\DoxyCodeLine{00332\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Information\ record\ */}}
+\DoxyCodeLine{00333\ \ \ \ \ uint8\ Fee\_au8VirtualSectorState[TI\_FEE\_NUMBER\_OF\_VIRTUAL\_SECTORS];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Stores\ the\ state\ of\ each\ }}
+\DoxyCodeLine{00334\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Virtual\ sector\ */}}
+\DoxyCodeLine{00335\ \ \ \ \ uint32\ Fee\_au32VirtualSectorEraseCount[TI\_FEE\_NUMBER\_OF\_VIRTUAL\_SECTORS];\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Array\ to\ store\ the\ erase\ }}
+\DoxyCodeLine{00336\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count\ of\ each\ Virtual\ }}
+\DoxyCodeLine{00337\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sector*/}}
+\DoxyCodeLine{00338\ \ \ \ \ uint16\ Fee\_au16BlockOffset[TI\_FEE\_TOTAL\_BLOCKS\_DATASETS];\ \ \ \ \ \ \ \textcolor{comment}{/*\ Array\ to\ store\ within\ the\ VS\ */}}
+\DoxyCodeLine{00339\ \ \ \ \ uint32\ Fee\_au32BlockHeader[TI\_FEE\_BLOCK\_OVERHEAD\ >>\ 2U];\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Array\ to\ store\ the\ Block\ Header\ value\ */}}
+\DoxyCodeLine{00340\ \ \ \ \ uint8\ \ Fee\_au8BlockCopyStatus[TI\_FEE\_TOTAL\_BLOCKS\_DATASETS];\ \ \ \ \textcolor{comment}{/*\ Array\ to\ storeblock\ copy\ status\ */}}
+\DoxyCodeLine{00341\ \ \ \ \ uint8\ Fee\_u8InternalVirtualSectorStart;\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ internal\ VS\ start\ index\ */}}
+\DoxyCodeLine{00342\ \ \ \ \ uint8\ Fee\_u8InternalVirtualSectorEnd;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ internal\ VS\ end\ index\ */}}
+\DoxyCodeLine{00343\ \ \ \ \ TI\_FeeModuleStatusType\ Fee\_ModuleState;\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ state\ of\ the\ FEE\ module\ */}\ }
+\DoxyCodeLine{00344\ \ \ \ \ TI\_FeeJobResultType\ Fee\_u16JobResult;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Stores\ the\ Job\ Result\ of\ the\ current\ command\ */}\ \ }
+\DoxyCodeLine{00345\ \ \ \ \ TI\_Fee\_StatusType\ Fee\_oStatus;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ status\ of\ FEE\ */}}
+\DoxyCodeLine{00346\ \ \ \ \ TI\_Fee\_ErrorCodeType\ Fee\_Error;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ Error\ code\ */}\ \ }
+\DoxyCodeLine{00347\ \ \ \ \ uint16\ Fee\_u16CopyBlockNumber;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Block\ number\ which\ is\ currently\ being\ copied\ */}\ \ \ \ \ \ }
+\DoxyCodeLine{00348\ \ \ \ \ uint16\ Fee\_u16BlockIndex;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Index\ of\ the\ Current\ Block\ */}\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00349\ \ \ \ \ uint16\ Fee\_u16BlockCopyIndex;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Index\ of\ the\ Block\ being\ copied\ from\ Copy\ to\ Active\ VS\ */}}
+\DoxyCodeLine{00350\ \ \ \ \ uint16\ Fee\_u16DataSetIndex;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Index\ of\ the\ Current\ DataSet\ */}}
+\DoxyCodeLine{00351\ \ \ \ \ uint16\ Fee\_u16ArrayIndex;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Index\ of\ the\ Current\ DataSet\ */}}
+\DoxyCodeLine{00352\ \ \ \ \ uint16\ Fee\_u16BlockSize;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Size\ of\ the\ current\ block\ in\ bytes\ */}\ \ \ \ }
+\DoxyCodeLine{00353\ \ \ \ \ uint16\ Fee\_u16BlockSizeinBlockHeader;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Size\ of\ the\ current\ block.\ Used\ to\ write\ into\ Block\ Header\ */}}
+\DoxyCodeLine{00354\ \ \ \ \ uint16\ Fee\_u16BlockNumberinBlockHeader;\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Number\ of\ the\ current\ block.\ Used\ to\ write\ into\ Block\ Header\ */}}
+\DoxyCodeLine{00355\ \ \ \ \ uint8\ \ Fee\_u8ActiveVirtualSector;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ FeeVirtualSectorNumber\ for\ the\ Active\ VS\ */}}
+\DoxyCodeLine{00356\ \ \ \ \ uint8\ \ Fee\_u8CopyVirtualSector;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ FeeVirtualSectorNumber\ for\ the\ Copy\ VS\ */}}
+\DoxyCodeLine{00357\ \ \ \ \ uint32\ Fee\_u32InternalEraseQueue;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ which\ VS\ can\ be\ erased\ when\ the\ FEE\ is\ in}}
+\DoxyCodeLine{00358\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BusyInternal\ State*/}\ \ \ \ \ }
+\DoxyCodeLine{00359\ \ \ \ \ uint8\ Fee\_u8WriteCopyVSHeader;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ number\ of\ bytes\ of\ the\ Copy\ VS\ Header\ being\ }}
+\DoxyCodeLine{00360\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ written\ */}}
+\DoxyCodeLine{00361\ \ \ \ \ uint8\ Fee\_u8WriteCount;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ number\ of\ bytes\ of\ the\ Block\ Header\ being\ }}
+\DoxyCodeLine{00362\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ written\ */}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00363\ \ \ \ \ uint8\ *\ Fee\_pu8ReadDataBuffer;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Pointer\ to\ read\ data\ */}}
+\DoxyCodeLine{00364\ \ \ \ \ uint8\ *\ Fee\_pu8ReadAddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Pointer\ to\ read\ address\ */}}
+\DoxyCodeLine{00365\ \ \ \ \ uint8\ *\ Fee\_pu8Data;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Pointer\ to\ the\ next\ data\ to\ be\ written\ to\ the\ VS\ */}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00366\ \ \ \ \ uint8\ *\ Fee\_pu8CopyData;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Pointer\ to\ the\ next\ data\ to\ be\ copied\ to\ the\ VS\ */}\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00367\ \ \ \ \ uint8\ *\ Fee\_pu8DataStart;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Pointer\ to\ the\ first\ data\ to\ be\ written\ to\ the\ VS\ */}\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keywordtype}{boolean}\ Fee\_bInvalidWriteBit;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ whether\ the\ block\ is\ written/invalidated/erased\ }}
+\DoxyCodeLine{00369\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for\ the\ first\ time\ */}}
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{keywordtype}{boolean}\ Fee\_bWriteData;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ that\ there\ is\ data\ which\ is\ pending\ to\ be\ written\ }}
+\DoxyCodeLine{00371\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\ the\ Block\ */}\ \ }
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordtype}{boolean}\ Fee\_bWriteBlockHeader;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ whether\ the\ Block\ Header\ has\ been\ written\ or\ not\ */}\ \ \ \ }
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordtype}{boolean}\ bWriteFirstTime;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ if\ the\ block\ is\ being\ written\ first\ time\ */}}
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordtype}{boolean}\ Fee\_bFindNextVirtualSector;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ if\ there\ is\ aneed\ to\ find\ next\ free\ VS\ */}}
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordtype}{boolean}\ Fee\_bWriteVSHeader;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ if\ block\ header\ needs\ to\ be\ written\ */}\ }
+\DoxyCodeLine{00376\ \ \ \ \ \textcolor{keywordtype}{boolean}\ Fee\_bWriteStartProgram;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ if\ start\ program\ block\ header\ needs\ to\ be\ written\ */}}
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keywordtype}{boolean}\ Fee\_bWritePartialBlockHeader;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ if\ start\ program\ block\ header\ needs\ to\ be\ written\ */}}
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\ \ \ \ \#if\ (TI\_FEE\_NUMBER\_OF\_UNCONFIGUREDBLOCKSTOCOPY\ !=\ 0U)}}
+\DoxyCodeLine{00379\ \ \ \ \ uint16\ Fee\_au16UnConfiguredBlockAddress[TI\_FEE\_NUMBER\_OF\_UNCONFIGUREDBLOCKSTOCOPY];\ \ \ \ \ \textcolor{comment}{/*\ Indicates\ }}
+\DoxyCodeLine{00380\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ number\ of\ unconfigured\ blocks\ to\ copy\ */}}
+\DoxyCodeLine{00381\ \ \ \ \ uint8\ \ Fee\_au8UnConfiguredBlockCopyStatus[TI\_FEE\_NUMBER\_OF\_UNCONFIGUREDBLOCKSTOCOPY];\ \ \ \textcolor{comment}{/*\ Array\ to\ store\ block\ }}
+\DoxyCodeLine{00382\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ copy\ status\ */}}
+\DoxyCodeLine{00383\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00384\ \}\mbox{\hyperlink{struct_t_i___fee___global_vars_type}{TI\_Fee\_GlobalVarsType}};}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00387\ \textcolor{comment}{\ *\ EXTERN\ Declarations}}
+\DoxyCodeLine{00388\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00389\ \textcolor{comment}{/*\ \ Fee\ Global\ Variables\ */}}
+\DoxyCodeLine{00390\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_fee___block_config_type}{Fee\_BlockConfigType}}\ Fee\_BlockConfiguration[TI\_FEE\_NUMBER\_OF\_BLOCKS];}
+\DoxyCodeLine{00391\ \textcolor{preprocessor}{\#if\ (TI\_FEE\_GENERATE\_DEVICEANDVIRTUALSECTORSTRUC\ ==\ STD\_OFF)}}
+\DoxyCodeLine{00392\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_fee___virtual_sector_config_type}{Fee\_VirtualSectorConfigType}}\ Fee\_VirtualSectorConfiguration[TI\_FEE\_NUMBER\_OF\_VIRTUAL\_SECTORS];}
+\DoxyCodeLine{00393\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_device___flash_type}{Device\_FlashType}}\ Device\_FlashDevice;}
+\DoxyCodeLine{00394\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00395\ \textcolor{preprocessor}{\#if\ (TI\_FEE\_GENERATE\_DEVICEANDVIRTUALSECTORSTRUC\ ==\ STD\_ON)}}
+\DoxyCodeLine{00396\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_fee___virtual_sector_config_type}{Fee\_VirtualSectorConfigType}}\ Fee\_VirtualSectorConfiguration[TI\_FEE\_NUMBER\_OF\_VIRTUAL\_SECTORS];}
+\DoxyCodeLine{00397\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_device___flash_type}{Device\_FlashType}}\ Device\_FlashDevice;}
+\DoxyCodeLine{00398\ \textcolor{keyword}{extern}\ uint8\ TI\_Fee\_MaxSectors;}
+\DoxyCodeLine{00399\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00400\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_t_i___fee___global_vars_type}{TI\_Fee\_GlobalVarsType}}\ TI\_Fee\_GlobalVariables[TI\_FEE\_NUMBER\_OF\_EEPS];}
+\DoxyCodeLine{00401\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{union_t_i___fee___status_word_type___u_n}{TI\_Fee\_StatusWordType\_UN}}\ TI\_Fee\_oStatusWord[TI\_FEE\_NUMBER\_OF\_EEPS];}
+\DoxyCodeLine{00402\ \textcolor{preprocessor}{\#if(TI\_FEE\_FLASH\_CHECKSUM\_ENABLE\ ==\ STD\_ON)}}
+\DoxyCodeLine{00403\ \textcolor{keyword}{extern}\ uint32\ TI\_Fee\_u32FletcherChecksum;}
+\DoxyCodeLine{00404\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00405\ \textcolor{keyword}{extern}\ uint32\ TI\_Fee\_u32BlockEraseCount;}
+\DoxyCodeLine{00406\ \textcolor{keyword}{extern}\ uint8\ TI\_Fee\_u8DataSets;}
+\DoxyCodeLine{00407\ \textcolor{keyword}{extern}\ uint8\ TI\_Fee\_u8DeviceIndex;}
+\DoxyCodeLine{00408\ \textcolor{keyword}{extern}\ uint32\ TI\_Fee\_u32ActCpyVS;}
+\DoxyCodeLine{00409\ \textcolor{keyword}{extern}\ uint8\ TI\_Fee\_u8ErrEraseVS;}
+\DoxyCodeLine{00410\ \textcolor{preprocessor}{\#if\ (TI\_FEE\_NUMBER\_OF\_UNCONFIGUREDBLOCKSTOCOPY\ !=\ 0U)}}
+\DoxyCodeLine{00411\ \textcolor{keyword}{extern}\ uint16\ TI\_Fee\_u16NumberOfUnconfiguredBlocks[TI\_FEE\_NUMBER\_OF\_EEPS];}
+\DoxyCodeLine{00412\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00413\ \textcolor{preprocessor}{\#if(TI\_FEE\_FLASH\_ERROR\_CORRECTION\_HANDLING\ ==\ TI\_Fee\_Fix)\ \ \ }}
+\DoxyCodeLine{00414\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{boolean}\ Fee\_bDoubleBitError;}
+\DoxyCodeLine{00415\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{boolean}\ Fee\_bSingleBitError;}
+\DoxyCodeLine{00416\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00417\ \textcolor{preprocessor}{\#if(TI\_FEE\_NUMBER\_OF\_EEPS==2U)}}
+\DoxyCodeLine{00418\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{union_t_i___fee___status_word_type___u_n}{TI\_Fee\_StatusWordType\_UN}}\ TI\_Fee\_oStatusWord\_Global;}
+\DoxyCodeLine{00419\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00420\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{boolean}\ TI\_Fee\_FapiInitCalled;\ }
+\DoxyCodeLine{00421\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{boolean}\ TI\_Fee\_bEraseSuspended;}
+\DoxyCodeLine{00422\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{boolean}\ TI\_Fee\_bIsMainFunctionCalled;}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00426\ \textcolor{comment}{\ *\ \ GLOBAL\ FUNCTION\ PROTOTYPES}}
+\DoxyCodeLine{00427\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00428\ \textcolor{comment}{/*\ \ Interface\ Functions\ */}}
+\DoxyCodeLine{00429\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ TI\_Fee\_Cancel(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00430\ \textcolor{keyword}{extern}\ Std\_ReturnType\ TI\_Fee\_EraseImmediateBlock(uint16\ BlockNumber);}
+\DoxyCodeLine{00431\ \textcolor{keyword}{extern}\ TI\_FeeModuleStatusType\ TI\_Fee\_GetStatus(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00432\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ TI\_Fee\_GetVersionInfo(\mbox{\hyperlink{struct_std___version_info_type}{Std\_VersionInfoType}}*\ VersionInfoPtr);}
+\DoxyCodeLine{00433\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ TI\_Fee\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00434\ \textcolor{keyword}{extern}\ Std\_ReturnType\ TI\_Fee\_InvalidateBlock(uint16\ BlockNumber);}
+\DoxyCodeLine{00435\ \textcolor{keyword}{extern}\ Std\_ReturnType\ TI\_Fee\_Read(uint16\ BlockNumber,}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\ BlockOffset,}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8*\ DataBufferPtr,}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\ Length);}
+\DoxyCodeLine{00439\ \textcolor{keyword}{extern}\ Std\_ReturnType\ TI\_Fee\_WriteAsync(uint16\ BlockNumber,\ uint8*\ DataBufferPtr);}
+\DoxyCodeLine{00440\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ TI\_Fee\_MainFunction(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00441\ \textcolor{keyword}{extern}\ TI\_Fee\_ErrorCodeType\ TI\_FeeErrorCode(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00442\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ TI\_Fee\_ErrorRecovery(TI\_Fee\_ErrorCodeType\ ErrorCode,\ uint8\ u8VirtualSector);}
+\DoxyCodeLine{00443\ \textcolor{keyword}{extern}\ TI\_FeeJobResultType\ TI\_Fee\_GetJobResult(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00444\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ TI\_Fee\_SuspendResumeErase(TI\_Fee\_EraseCommandType\ Command);}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ \textcolor{preprocessor}{\#if(TI\_FEE\_FLASH\_ERROR\_CORRECTION\_HANDLING\ ==\ TI\_Fee\_Fix)}}
+\DoxyCodeLine{00447\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ TI\_Fee\_ErrorHookSingleBitError(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00448\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ TI\_Fee\_ErrorHookDoubleBitError(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00449\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00450\ }
+\DoxyCodeLine{00451\ \textcolor{preprocessor}{\#if(TI\_FEE\_DRIVER\ ==\ 1U)}}
+\DoxyCodeLine{00452\ \textcolor{keyword}{extern}\ Std\_ReturnType\ TI\_Fee\_WriteSync(uint16\ BlockNumber,\ uint8*\ DataBufferPtr);}
+\DoxyCodeLine{00453\ \textcolor{keyword}{extern}\ Std\_ReturnType\ TI\_Fee\_Shutdown(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00454\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{boolean}\ TI\_Fee\_Format(uint32\ u32FormatKey);}
+\DoxyCodeLine{00455\ \textcolor{keyword}{extern}\ Std\_ReturnType\ TI\_Fee\_ReadSync(uint16\ BlockNumber,uint16\ BlockOffset,uint8*\ DataBufferPtr,uint16\ Length);}
+\DoxyCodeLine{00456\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00458\ \textcolor{comment}{/*\ \ TI\ Fee\ Internal\ Functions\ */}}
+\DoxyCodeLine{00459\ TI\_Fee\_AddressType\ TI\_FeeInternal\_GetNextFlashAddress(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00460\ TI\_Fee\_AddressType\ TI\_FeeInternal\_AlignAddressForECC(TI\_Fee\_AddressType\ oAddress);\ }
+\DoxyCodeLine{00461\ TI\_Fee\_AddressType\ TI\_FeeInternal\_GetCurrentBlockAddress(uint16\ BlockNumber,uint16\ DataSetNumber,\ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00462\ \textcolor{comment}{/*SAFETYMCUSW\ 61\ X\ MR:1.4,5.1\ <APPROVED>\ "{}Reason\ -\/\ \ TI\_FeeInternal\_GetVirtualSectorParameter\ name\ is\ required\ here."{}*/}}
+\DoxyCodeLine{00463\ uint32\ TI\_FeeInternal\_GetVirtualSectorParameter(Fapi\_FlashSectorType\ oSector,\ uint16\ u16Bank,\ \textcolor{keywordtype}{boolean}\ VirtualSectorInfo,\ }
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00465\ uint32\ TI\_FeeInternal\_PollFlashStatus(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00466\ uint16\ TI\_FeeInternal\_GetBlockSize(uint16\ BlockIndex);}
+\DoxyCodeLine{00467\ uint16\ TI\_FeeInternal\_GetBlockIndex(uint16\ BlockNumber);}
+\DoxyCodeLine{00468\ uint16\ TI\_FeeInternal\_GetDataSetIndex(uint16\ BlockNumber);}
+\DoxyCodeLine{00469\ uint16\ TI\_FeeInternal\_GetBlockNumber(uint16\ BlockNumber);}
+\DoxyCodeLine{00470\ uint8\ TI\_FeeInternal\_FindNextVirtualSector(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00471\ uint8\ TI\_FeeInternal\_WriteDataF021(\textcolor{keywordtype}{boolean}\ bCopy,uint16\ u16WriteSize,\ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00472\ \textcolor{keywordtype}{boolean}\ TI\_FeeInternal\_BlankCheck(uint32\ u32StartAddress,\ uint32\ u32EndAddress,\ uint16\ u16Bank,\ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00473\ Std\_ReturnType\ TI\_FeeInternal\_CheckReadParameters(uint32\ u32BlockSize,uint16\ BlockOffset,\ \textcolor{keyword}{const}\ uint8*\ DataBufferPtr,}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\ Length,\ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00475\ Std\_ReturnType\ TI\_FeeInternal\_CheckModuleState(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00476\ Std\_ReturnType\ TI\_FeeInternal\_InvalidateErase(uint16\ BlockNumber);}
+\DoxyCodeLine{00477\ TI\_Fee\_StatusType\ TI\_FeeInternal\_FeeManager(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00478\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_WriteVirtualSectorHeader(uint8\ FeeVirtualSectorNumber,\ VirtualSectorStatesType\ VsState,\ }
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\ u8EEPIndex)\ ;}
+\DoxyCodeLine{00480\ \textcolor{comment}{/*SAFETYMCUSW\ 61\ X\ MR:1.4,5.1\ <APPROVED>\ "{}Reason\ -\/\ \ TI\_FeeInternal\_GetVirtualSectorIndex\ name\ is\ required\ here."{}*/}}
+\DoxyCodeLine{00481\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_GetVirtualSectorIndex(Fapi\_FlashSectorType\ oSectorStart,\ Fapi\_FlashSectorType\ oSectorEnd,\ }
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\ u16Bank,\ \textcolor{keywordtype}{boolean}\ bOperation,\ \ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00483\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_WritePreviousBlockHeader(\textcolor{keywordtype}{boolean}\ bWrite,\ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00484\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_WriteBlockHeader(\textcolor{keywordtype}{boolean}\ bWrite,\ uint8\ u8EEPIndex,uint16\ Fee\_BlockSize\_u16,uint16\ u16BlockNumber);}
+\DoxyCodeLine{00485\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_SetClearCopyBlockState(uint8\ u8EEPIndex,\ \textcolor{keywordtype}{boolean}\ bSetClear);}
+\DoxyCodeLine{00486\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_SanityCheck(uint16\ BlockSize,\ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00487\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_StartProgramBlock(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00488\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_UpdateBlockOffsetArray(uint8\ u8EEPIndex,\ \textcolor{keywordtype}{boolean}\ bActCpyVS,uint8\ u8VirtualSector);}
+\DoxyCodeLine{00489\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_WriteInitialize(TI\_Fee\_AddressType\ oFlashNextAddress,\ uint8*\ DataBufferPtr,\ uint8\ u8EEPIndex);}
+\DoxyCodeLine{00490\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_CheckForError(uint8\ u8EEPIndex);}
+\DoxyCodeLine{00491\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_EnableRequiredFlashSector(uint32\ u32VirtualSectorStartAddress);}
+\DoxyCodeLine{00492\ uint16\ TI\_FeeInternal\_GetArrayIndex(uint16\ BlockNumber,\ uint16\ DataSetNumber,\ uint8\ u8EEPIndex,\ \textcolor{keywordtype}{boolean}\ bCallContext);}
+\DoxyCodeLine{00493\ \textcolor{preprocessor}{\#if(TI\_FEE\_FLASH\_CHECKSUM\_ENABLE\ ==\ STD\_ON)}}
+\DoxyCodeLine{00494\ uint32\ TI\_FeeInternal\_Fletcher16(\ uint8\ \textcolor{keyword}{const}\ *pu8data,\ uint16\ u16Length);}
+\DoxyCodeLine{00495\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\#if\ (TI\_FEE\_GENERATE\_DEVICEANDVIRTUALSECTORSTRUC\ ==\ STD\_ON)}}
+\DoxyCodeLine{00497\ \textcolor{keywordtype}{void}\ TI\_FeeInternal\_PopulateStructures(TI\_Fee\_DeviceType\ DeviceType);}
+\DoxyCodeLine{00498\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00499\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ TI\_FEE\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00500\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00501\ \textcolor{comment}{\ *\ \ END\ OF\ FILE:\ ti\_fee.h}}
+\DoxyCodeLine{00502\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ }
+
+\end{DoxyCode}

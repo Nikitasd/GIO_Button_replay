@@ -1,0 +1,166 @@
+\hypertarget{crc_8h_source}{}\doxysection{crc.\+h}
+\label{crc_8h_source}\index{include/crc.h@{include/crc.h}}
+\mbox{\hyperlink{crc_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*}}
+\DoxyCodeLine{00046\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifndef\ \_\_CRC\_H\_\_}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ \_\_CRC\_H\_\_}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__crc_8h}{reg\_crc.h}}"{}}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{/*\ CRC\ General\ Definitions\ */}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ CRCLEVEL\_ACTIVE\ 0x00U}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ CRC\_AUTO\ 0x00000001U}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ CRC\_SEMI\_CPU\ 0x00000002U}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ CRC\_FULL\_CPU\ 0x00000003U}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ CRC\_CH4\_TO\ 0x10000000U}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ CRC\_CH4\_UR\ 0x08000000U}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ CRC\_CH4\_OR\ 0x04000000U}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ CRC\_CH4\_FAIL\ 0x02000000U}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ CRC\_CH4\_CC\ 0x01000000U}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ CRC\_CH3\_TO\ 0x00100000U}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ CRC\_CH3\_UR\ 0x00080000U}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ CRC\_CH3\_OR\ 0x00040000U}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ CRC\_CH3\_FAIL\ 0x00020000U}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ CRC\_CH3\_CC\ 0x00010000U}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ CRC\_CH2\_TO\ 0x00001000U}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ CRC\_CH2\_UR\ 0x00000800U}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ CRC\_CH2\_OR\ 0x00000400U}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ CRC\_CH2\_FAIL\ 0x00000200U}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ CRC\_CH2\_CC\ 0x00000100U}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ CRC\_CH1\_TO\ 0x00000010U}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ CRC\_CH1\_UR\ 0x00000008U}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#define\ CRC\_CH1\_OR\ 0x00000004U}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ CRC\_CH1\_FAIL\ 0x00000002U}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ CRC\_CH1\_CC\ 0x00000001U}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ CRC\_CH1\ \ \ \ 0x00000000U}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ CRC\_CH2\ \ \ \ 0x00000001U}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ CRC\_CH3\ \ \ \ 0x00000002U}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ CRC\_CH4\ \ \ \ 0x00000003U}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00215\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcrc_mod_config}{crcModConfig}}}
+\DoxyCodeLine{00216\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_mod_config_a529849bacc8e06bf51e26416c0315a1f}{mode}};\ \ \ \ \ }
+\DoxyCodeLine{00218\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_mod_config_af530155cdc798f4ac5289fa234a47f6f}{crc\_channel}};\ \ \ \ \ }
+\DoxyCodeLine{00219\ \ \ \ \ uint64\ *\ \mbox{\hyperlink{structcrc_mod_config_a4aa9d2313acfca30565133fa96e4154f}{src\_data\_pat}};\ \ }
+\DoxyCodeLine{00220\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_mod_config_a5aa3531dd083fe63a88233bbe12663a6}{data\_length}};\ \ }
+\DoxyCodeLine{00221\ \}\ \mbox{\hyperlink{crc_8h_a4a5b790e8b5fc5856076750dab58b0fe}{crcModConfig\_t}};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00231\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcrc_config}{crcConfig}}}
+\DoxyCodeLine{00232\ \{}
+\DoxyCodeLine{00233\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_config_af530155cdc798f4ac5289fa234a47f6f}{crc\_channel}};\ \ \ \ \ }
+\DoxyCodeLine{00234\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_config_a529849bacc8e06bf51e26416c0315a1f}{mode}};\ \ \ \ \ }
+\DoxyCodeLine{00235\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_config_aaff865c9c9cc8b5b161c5f0dcc8ae150}{pcount}};\ \ \ \ \ }
+\DoxyCodeLine{00236\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_config_a13fa7d91561896dd215f4532e8cad149}{scount}};\ \ \ \ \ }
+\DoxyCodeLine{00237\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_config_ac8089319197355dba06307c851017098}{wdg\_preload}};\ \ }
+\DoxyCodeLine{00238\ \ \ \ \ uint32\ \mbox{\hyperlink{structcrc_config_ac0a1a75748c1831b18530b9f608d4eba}{block\_preload}};\ \ }
+\DoxyCodeLine{00240\ \}\ \mbox{\hyperlink{crc_8h_a997c339cbe1afadb1cf7b0269f927477}{crcConfig\_t}};}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00243\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcrc__config__reg}{crc\_config\_reg}}}
+\DoxyCodeLine{00246\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ uint32\ CONFIG\_CTRL0;}
+\DoxyCodeLine{00248\ \ \ \ \ uint32\ CONFIG\_CTRL1;}
+\DoxyCodeLine{00249\ \ \ \ \ uint32\ CONFIG\_CTRL2;}
+\DoxyCodeLine{00250\ \}\mbox{\hyperlink{structcrc__config__reg}{crc\_config\_reg\_t}};}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ CRC\_CTRL0\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ \ 0x00000000U}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ CRC\_CTRL1\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ \ 0x00000000U}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ CRC\_CTRL2\_CONFIGVALUE\ \ \ \ \ \ \ \ \ \ \ ((uint32)((uint32)0U\ <<\ 4U)\ |\ (uint32)(CRC\_FULL\_CPU)\ \ |\ (uint32)((uint32)CRC\_FULL\_CPU\ <<\ 8U))}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00275\ \textcolor{comment}{/*\ CRC\ Interface\ Functions\ */}}
+\DoxyCodeLine{00276\ \textcolor{keywordtype}{void}\ crcInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00277\ \textcolor{keywordtype}{void}\ crcSendPowerDown(\mbox{\hyperlink{structcrc_base}{crcBASE\_t}}\ *crc);}
+\DoxyCodeLine{00278\ \textcolor{keywordtype}{void}\ crcSignGen(\mbox{\hyperlink{structcrc_base}{crcBASE\_t}}\ *crc,\mbox{\hyperlink{structcrc_mod_config}{crcModConfig\_t}}\ *param);}
+\DoxyCodeLine{00279\ uint64\ crcGetPSASig(\mbox{\hyperlink{structcrc_base}{crcBASE\_t}}\ *crc,uint32\ channel);}
+\DoxyCodeLine{00280\ \textcolor{keywordtype}{void}\ crcChannelReset(\mbox{\hyperlink{structcrc_base}{crcBASE\_t}}\ *crc,uint32\ channel);}
+\DoxyCodeLine{00281\ \textcolor{keywordtype}{void}\ crcGetConfigValue(\mbox{\hyperlink{structcrc__config__reg}{crc\_config\_reg\_t}}\ *config\_reg,\ \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\_value\_type\_t}}\ type);}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00292\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___c_r_c_ga95b0b31099a6321977d0893c96ae5a9a}{crcNotification}}(\mbox{\hyperlink{structcrc_base}{crcBASE\_t}}\ *crc,\ uint32\ flags);}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (2)\ */}}
+\DoxyCodeLine{00295\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00299\ \}}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*extern\ "{}C"{}\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: Исходный файл include/reg_system.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">reg_system.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="reg__system_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">* Copyright (C) 2009-2018 Texas Instruments Incorporated - www.ti.com  </span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">* </span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">* </span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*  Redistribution and use in source and binary forms, with or without </span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*  modification, are permitted provided that the following conditions </span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*  are met:</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*    Redistributions of source code must retain the above copyright </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*    notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*    Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*    notice, this list of conditions and the following disclaimer in the </span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*    documentation and/or other materials provided with the   </span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">*    distribution.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">*</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*    Neither the name of Texas Instruments Incorporated nor the names of</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*    its contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">*    from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">*</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT </span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT </span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT </span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">*  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE </span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">*</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#ifndef __REG_SYSTEM_H__</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define __REG_SYSTEM_H__</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &quot;<a class="code" href="sys__common_8h.html">sys_common.h</a>&quot;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &quot;<a class="code" href="reg__gio_8h.html">reg_gio.h</a>&quot;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">/* System Register Frame 1 Definition */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">typedef</span> <span class="keyword">volatile</span> <span class="keyword">struct </span><a class="code hl_struct" href="structsystem_base1.html">systemBase1</a></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    uint32 SYSPC1;                 <span class="comment">/* 0x0000 */</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    uint32 SYSPC2;                 <span class="comment">/* 0x0004 */</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    uint32 SYSPC3;                 <span class="comment">/* 0x0008 */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    uint32 SYSPC4;                 <span class="comment">/* 0x000C */</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    uint32 SYSPC5;                 <span class="comment">/* 0x0010 */</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    uint32 SYSPC6;                 <span class="comment">/* 0x0014 */</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    uint32 SYSPC7;                 <span class="comment">/* 0x0018 */</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    uint32 SYSPC8;                 <span class="comment">/* 0x001C */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    uint32 SYSPC9;                 <span class="comment">/* 0x0020 */</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    uint32   rsvd1;                <span class="comment">/* 0x0024 */</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    uint32   rsvd2;                <span class="comment">/* 0x0028 */</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    uint32   rsvd3;                <span class="comment">/* 0x002C */</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    uint32 CSDIS;                  <span class="comment">/* 0x0030 */</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    uint32 CSDISSET;               <span class="comment">/* 0x0034 */</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    uint32 CSDISCLR;               <span class="comment">/* 0x0038 */</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    uint32 CDDIS;                  <span class="comment">/* 0x003C */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    uint32 CDDISSET;               <span class="comment">/* 0x0040 */</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    uint32 CDDISCLR;               <span class="comment">/* 0x0044 */</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    uint32 GHVSRC;                 <span class="comment">/* 0x0048 */</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    uint32 VCLKASRC;               <span class="comment">/* 0x004C */</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    uint32 RCLKSRC;                <span class="comment">/* 0x0050 */</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    uint32 CSVSTAT;                <span class="comment">/* 0x0054 */</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    uint32 MSTGCR;                 <span class="comment">/* 0x0058 */</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    uint32 MINITGCR;               <span class="comment">/* 0x005C */</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    uint32 MSINENA;                <span class="comment">/* 0x0060 */</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    uint32 MSTFAIL;                <span class="comment">/* 0x0064 */</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    uint32 MSTCGSTAT;              <span class="comment">/* 0x0068 */</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    uint32 MINISTAT;               <span class="comment">/* 0x006C */</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    uint32 PLLCTL1;                <span class="comment">/* 0x0070 */</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    uint32 PLLCTL2;                <span class="comment">/* 0x0074 */</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    uint32 SYSPC10;                <span class="comment">/* 0x0078 */</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    uint32 DIEIDL;                 <span class="comment">/* 0x007C */</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    uint32 DIEIDH;                 <span class="comment">/* 0x0080 */</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    uint32   rsvd4;                <span class="comment">/* 0x0084 */</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    uint32 LPOMONCTL;              <span class="comment">/* 0x0088 */</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    uint32 CLKTEST;                <span class="comment">/* 0x008C */</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    uint32 DFTCTRLREG1;            <span class="comment">/* 0x0090 */</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    uint32 DFTCTRLREG2;            <span class="comment">/* 0x0094 */</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    uint32   rsvd5;                <span class="comment">/* 0x0098 */</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    uint32   rsvd6;                <span class="comment">/* 0x009C */</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    uint32 GPREG1;                 <span class="comment">/* 0x00A0 */</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    uint32   rsvd7;                <span class="comment">/* 0x00A4 */</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    uint32 IMPFASTS;               <span class="comment">/* 0x00A8 */</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    uint32 IMPFTADD;               <span class="comment">/* 0x00AC */</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    uint32 SSISR1;                 <span class="comment">/* 0x00B0 */</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    uint32 SSISR2;                 <span class="comment">/* 0x00B4 */</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    uint32 SSISR3;                 <span class="comment">/* 0x00B8 */</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    uint32 SSISR4;                 <span class="comment">/* 0x00BC */</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    uint32 RAMGCR;                 <span class="comment">/* 0x00C0 */</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    uint32 BMMCR1;                 <span class="comment">/* 0x00C4 */</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    uint32 BMMCR2;                 <span class="comment">/* 0x00C8 */</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    uint32 CPURSTCR;               <span class="comment">/* 0x00CC */</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    uint32 CLKCNTL;                <span class="comment">/* 0x00D0 */</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    uint32 ECPCNTL;                <span class="comment">/* 0x00D4 */</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    uint32   rsvd8;                <span class="comment">/* 0x00D8 */</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    uint32 DEVCR1;                 <span class="comment">/* 0x00DC */</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    uint32 SYSECR;                 <span class="comment">/* 0x00E0 */</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    uint32 SYSESR;                 <span class="comment">/* 0x00E4 */</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    uint32 SYSTASR;                <span class="comment">/* 0x00E8 */</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    uint32 GBLSTAT;                <span class="comment">/* 0x00EC */</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    uint32 DEV;                    <span class="comment">/* 0x00F0 */</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    uint32 SSIVEC;                 <span class="comment">/* 0x00F4 */</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    uint32 SSIF;                   <span class="comment">/* 0x00F8 */</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>} <a class="code hl_struct" href="structsystem_base1.html">systemBASE1_t</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="reg__system_8h.html#a8c52b62df956810205e4da7a2fd74efa">  139</a></span><span class="preprocessor">#define systemREG1 ((systemBASE1_t *)0xFFFFFF00U)</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="reg__system_8h.html#a12b48f93d241c382e5a1b25855bc04db">  147</a></span><span class="preprocessor">#define systemPORT ((gioPORT_t *)0xFFFFFF04U)</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">/* USER CODE BEGIN (0) */</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">/* USER CODE END */</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">/* System Register Frame 2 Definition */</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">typedef</span> <span class="keyword">volatile</span> <span class="keyword">struct </span><a class="code hl_struct" href="structsystem_base2.html">systemBase2</a></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>{</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    uint32   rsvd1;        <span class="comment">/* 0x0000 */</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    uint32   rsvd2;        <span class="comment">/* 0x0004 */</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    uint32 STCCLKDIV;      <span class="comment">/* 0x0008 */</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    uint32   rsvd3[25U];   <span class="comment">/* 0x000C */</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    uint32  CLKSLIP;       <span class="comment">/* 0x0070 */</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    uint32  rsvd7[30U];    <span class="comment">/* 0x0074 */</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    uint32  EFC_CTLEN;     <span class="comment">/* 0x00EC */</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    uint32  DIEIDL_REG0;   <span class="comment">/* 0x00F0 */</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    uint32  DIEIDH_REG1;   <span class="comment">/* 0x00F4 */</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    uint32  DIEIDL_REG2;   <span class="comment">/* 0x00F8 */</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    uint32  DIEIDH_REG3;   <span class="comment">/* 0x00FC */</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>} <a class="code hl_struct" href="structsystem_base2.html">systemBASE2_t</a>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="reg__system_8h.html#aa7b03254a6e13afea4c05b2fe8b2186b">  183</a></span><span class="preprocessor">#define systemREG2 ((systemBASE2_t *)0xFFFFE100U)</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="areg__gio_8h_html"><div class="ttname"><a href="reg__gio_8h.html">reg_gio.h</a></div><div class="ttdoc">GIO Register Layer Header File.</div></div>
+<div class="ttc" id="astructsystem_base1_html"><div class="ttname"><a href="structsystem_base1.html">systemBase1</a></div><div class="ttdoc">System Register Frame 1 Definition.</div><div class="ttdef"><b>Definition:</b> errata_SSWF021_45_defs.h:47</div></div>
+<div class="ttc" id="astructsystem_base2_html"><div class="ttname"><a href="structsystem_base2.html">systemBase2</a></div><div class="ttdoc">System Register Frame 2 Definition.</div><div class="ttdef"><b>Definition:</b> errata_SSWF021_45_defs.h:114</div></div>
+<div class="ttc" id="asys__common_8h_html"><div class="ttname"><a href="sys__common_8h.html">sys_common.h</a></div><div class="ttdoc">Common Header File.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

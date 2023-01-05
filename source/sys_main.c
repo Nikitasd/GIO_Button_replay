@@ -43,31 +43,20 @@
 
 
 /* USER CODE BEGIN (0) */
-/** @brief Configuring the GIO I/O Module
- */
+
+#include <Button_Confition.h>
+#include <Button_Events.h>
 #include "gio.h"
 #include "sys_common.h"
-/* USER CODE END */
 
+/* USER CODE END */
+#include "stdint.h"
 /* Include Files */
 
-
 /* USER CODE BEGIN (1) */
-/** @brief Button entry structure
-   * @param Button_amount[4] - an array storing signal/absence time
-   * button signal.
-   * @param Button_Counter - signal connection counter, when using a
-   * signal it is in ñonsequences will change.
-   * @param button - Button_State object structure
- */
-struct Button_State{
-    long int Button_amount[4];
-    unsigned int Button_Counter;
-};
-struct Button_State button;
 /* USER CODE END */
 
-/** @fn void main(void)
+/*! @fn void main(void)
 *   @brief Application main function
 *   @note This function is empty by default.
 *
@@ -76,75 +65,68 @@ struct Button_State button;
 */
 
 /* USER CODE BEGIN (2) */
-/** @brief Countdown from the moment the signal was given from the button
-  * @param counter - parameter storing signal duration
-  * @return counter signal duration
+/* USER CODE END */
+/* USER CODE BEGIN (3) */
+/*!
+ * @param gioSetDirection setting up GIO pins
+ * @code
+ *      gioSetDirection(gioPORTA, 1 << 2);
+ * @endcode
+ * @param button a structure object that stores button states
+ * @code
+ *      struct Button_State button;
+ * @endcode
+ *
  */
-int Click_Count(void) {
-    long int counter = 0;
-    while(gioGetBit(gioPORTA, 7)){
-        counter += 1;
-    }
-    return counter;
-}
+int main(void)
+{
+    struct Button_State button;
+    gioInit();
+    gioSetDirection(gioPORTA, 1 << 2);
+    button.Button_Counter = 0;
 
-/** @brief Countdown since no signal from the button
-  * @param counter - parameter storing the duration of the absence of a signal
-  * @return counter no signal duration
- */
-int NoClick_Count(void){
-    long int counter = 0;
-    while(gioGetBit(gioPORTA, 7) == 0){
-        counter += 1;
-    }
-    return counter;
-}
-
-/** @brief looping the excerpt of signal states stored in an array.
-  * @param delay - time delay.
-  * @param counter counter of elements of the array that stores the time
-  * of the signal (its absence).
- */
-void replay(void){
-    long int delay, counter;
     while(1){
-        for(counter = 0; counter < 4; counter++){
-            delay = button.Button_amount[counter]*4;
-            gioToggleBit(gioPORTA, 2);
-            while(delay--);
+/*!
+ * Once we have filled the array of the Button State structure, we call the
+ * replay() function
+ * @code
+ * if(button.Button_Amount[Num_Of_Button_Events - 1] != 0){
+ *      replay(&button);
+ *  }
+ *  @endcode
+ */
+        if(button.Button_Amount[Num_Of_Button_Events - 1] != 0){
+            replay(&button);
+        }
+/*!
+ * If there is a signal from channel 7, run the Click_Count function
+ * @code
+ *  if(gioGetBit(gioPORTA,7)){
+            Click_Count(&button);
+            button.Button_Counter += 1;
+        }
+ * @endcode
+ */
+        if(gioGetBit(gioPORTA,7)){
+            Click_Count(&button);
+            button.Button_Counter += 1;
+        }
+/*!
+* If there is no signal from channel 7, run the NoClick_Count function
+* @code
+*  if(gioGetBit(gioPORTA,7)){
+        NoClick_Count(&button);
+        button.Button_Counter += 1;
+}
+* @endcode
+*
+*/
+        if(button.Button_Amount[0] != 0 && gioGetBit(gioPORTA, 7) == 0){
+            NoClick_Count(&button);
+            button.Button_Counter += 1;
         }
     }
 }
 /* USER CODE END */
-
-int main(void)
-{
-/* USER CODE BEGIN (3) */
-/** @brief configuring and initializing the GIO module
-  * @detailed when a signal is given from the button, the function is started
-  * Click_Count(), which counts the time of the signal. As soon as we
-  * release the button, the NoClick_Count() function is launched, which
-  * counts down the time of no signal. As soon as we have filled
-  * array, the replay() function is run, which performs an excerpt
-  * time stored in an array.
- */
-    gioInit();
-    gioSetDirection(gioPORTA, 1 << 2);
-    button.Button_Counter = 0;
-    while(1){
-        if(button.Button_amount[3] != 0){
-            replay();
-        }
-        if(gioGetBit(gioPORTA,7)){
-            button.Button_amount[button.Button_Counter] = Click_Count();
-            button.Button_Counter += 1;
-        }
-        if(button.Button_amount[0] != 0 && gioGetBit(gioPORTA, 7) == 0){
-            button.Button_amount[button.Button_Counter] = NoClick_Count();
-            button.Button_Counter += 1;
-        }
-    }
-    /* USER CODE END */
-}
 /* USER CODE BEGIN (4) */
 /* USER CODE END */

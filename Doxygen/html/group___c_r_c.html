@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: CRC</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">CRC</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Cyclic Redundancy Check Controller Module.  
+<a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga5a735798e6972adc694a5428dd7ccaf9"><td class="memItemLeft" align="right" valign="top"><a id="ga5a735798e6972adc694a5428dd7ccaf9" name="ga5a735798e6972adc694a5428dd7ccaf9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crcInit</b> (void)</td></tr>
+<tr class="separator:ga5a735798e6972adc694a5428dd7ccaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae40127ece03dcad369c9f97beb1896a1"><td class="memItemLeft" align="right" valign="top"><a id="gae40127ece03dcad369c9f97beb1896a1" name="gae40127ece03dcad369c9f97beb1896a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crcSendPowerDown</b> (<a class="el" href="reg__crc_8h.html#a5d27a33c6347de7aac595ad4daefb611">crcBASE_t</a> *crc)</td></tr>
+<tr class="separator:gae40127ece03dcad369c9f97beb1896a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2cc29c9cd4a9604d8edf06506936b19f"><td class="memItemLeft" align="right" valign="top"><a id="ga2cc29c9cd4a9604d8edf06506936b19f" name="ga2cc29c9cd4a9604d8edf06506936b19f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crcSignGen</b> (<a class="el" href="reg__crc_8h.html#a5d27a33c6347de7aac595ad4daefb611">crcBASE_t</a> *crc, <a class="el" href="crc_8h.html#a4a5b790e8b5fc5856076750dab58b0fe">crcModConfig_t</a> *param)</td></tr>
+<tr class="separator:ga2cc29c9cd4a9604d8edf06506936b19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeadba4ed7fdff253219b22953d45c2dd"><td class="memItemLeft" align="right" valign="top"><a id="gaeadba4ed7fdff253219b22953d45c2dd" name="gaeadba4ed7fdff253219b22953d45c2dd"></a>
+uint64&#160;</td><td class="memItemRight" valign="bottom"><b>crcGetPSASig</b> (<a class="el" href="reg__crc_8h.html#a5d27a33c6347de7aac595ad4daefb611">crcBASE_t</a> *crc, uint32 channel)</td></tr>
+<tr class="separator:gaeadba4ed7fdff253219b22953d45c2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43f0c3ac380bc6da46f2f12b7273a815"><td class="memItemLeft" align="right" valign="top"><a id="ga43f0c3ac380bc6da46f2f12b7273a815" name="ga43f0c3ac380bc6da46f2f12b7273a815"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crcChannelReset</b> (<a class="el" href="reg__crc_8h.html#a5d27a33c6347de7aac595ad4daefb611">crcBASE_t</a> *crc, uint32 channel)</td></tr>
+<tr class="separator:ga43f0c3ac380bc6da46f2f12b7273a815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7f8e03a592d066d89b53ce3c474facc"><td class="memItemLeft" align="right" valign="top"><a id="gab7f8e03a592d066d89b53ce3c474facc" name="gab7f8e03a592d066d89b53ce3c474facc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>crcGetConfigValue</b> (<a class="el" href="structcrc__config__reg.html">crc_config_reg_t</a> *config_reg, <a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a> type)</td></tr>
+<tr class="separator:gab7f8e03a592d066d89b53ce3c474facc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga95b0b31099a6321977d0893c96ae5a9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_r_c.html#ga95b0b31099a6321977d0893c96ae5a9a">crcNotification</a> (<a class="el" href="reg__crc_8h.html#a5d27a33c6347de7aac595ad4daefb611">crcBASE_t</a> *crc, uint32 flags)</td></tr>
+<tr class="memdesc:ga95b0b31099a6321977d0893c96ae5a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt callback.  <br /></td></tr>
+<tr class="separator:ga95b0b31099a6321977d0893c96ae5a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>Cyclic Redundancy Check Controller Module. </p>
+<p>The CRC controller is a module that is used to perform CRC (Cyclic Redundancy Check) to verify the integrity of memory system. A signature representing the contents of the memory is obtained when the contents of the memory are read into CRC controller. The responsibility of CRC controller is to calculate the signature for a set of data and then compare the calculated signature value against a pre-determined good signature value. CRC controller supports two channels to perform CRC calculation on multiple memories in parallel and can be used on any memory system.</p>
+<p>Related Files</p><ul>
+<li><a class="el" href="reg__crc_8h.html" title="CRC Register Layer Header File.">reg_crc.h</a></li>
+<li><a class="el" href="crc_8h.html" title="CRC Driver Header File.">crc.h</a></li>
+<li>crc.c </li>
+</ul>
+<h2 class="groupheader">Функции</h2>
+<a id="ga95b0b31099a6321977d0893c96ae5a9a" name="ga95b0b31099a6321977d0893c96ae5a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga95b0b31099a6321977d0893c96ae5a9a">&#9670;&#160;</a></span>crcNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crcNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="reg__crc_8h.html#a5d27a33c6347de7aac595ad4daefb611">crcBASE_t</a> *&#160;</td>
+          <td class="paramname"><em>crc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt callback. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">crc</td><td>- crc module base address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>- copy of error interrupt flags</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This is a callback that is provided by the application and is called upon an interrupt. The parameter passed to the callback is a copy of the interrupt flag register. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

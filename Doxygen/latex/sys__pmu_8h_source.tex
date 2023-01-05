@@ -1,0 +1,157 @@
+\hypertarget{sys__pmu_8h_source}{}\doxysection{sys\+\_\+pmu.\+h}
+\label{sys__pmu_8h_source}\index{include/sys\_pmu.h@{include/sys\_pmu.h}}
+\mbox{\hyperlink{sys__pmu_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00019\ \textcolor{comment}{*}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{*}}
+\DoxyCodeLine{00044\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#ifndef\ \_\_SYS\_PMU\_H\_\_}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ \_\_SYS\_PMU\_H\_\_}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sys__common_8h}{sys\_common.h}}"{}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ pmuCOUNTER0\ 0x00000001U}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ pmuCOUNTER1\ 0x00000002U}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ pmuCOUNTER2\ 0x00000004U}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ pmuCYCLE\_COUNTER\ 0x80000000U}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{sys__pmu_8h_a03b6725533687e62c10550dea45089be}{pmuEvent}}}
+\DoxyCodeLine{00101\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ PMU\_INST\_CACHE\_MISS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x01U,}
+\DoxyCodeLine{00103\ \ \ \ \ PMU\_DATA\_CACHE\_MISS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x03U,}
+\DoxyCodeLine{00104\ \ \ \ \ PMU\_DATA\_CACHE\_ACCESS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x04U,}
+\DoxyCodeLine{00105\ \ \ \ \ PMU\_DATA\_READ\_ARCH\_EXECUTED\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x06U,}
+\DoxyCodeLine{00106\ \ \ \ \ PMU\_DATA\_WRITE\_ARCH\_EXECUTED\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x07U,}
+\DoxyCodeLine{00107\ \ \ \ \ PMU\_INST\_ARCH\_EXECUTED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x08U,}
+\DoxyCodeLine{00108\ \ \ \ \ PMU\_EXCEPTION\_TAKEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x09U,}
+\DoxyCodeLine{00109\ \ \ \ \ PMU\_EXCEPTION\_RETURN\_ARCH\_EXECUTED\ \ \ \ \ \ =\ 0x0AU,}
+\DoxyCodeLine{00110\ \ \ \ \ PMU\_CHANGE\_TO\_CONTEXT\_ID\_EXECUTED\ \ \ \ \ \ \ =\ 0x0BU,}
+\DoxyCodeLine{00111\ \ \ \ \ PMU\_SW\_CHANGE\_OF\_PC\_ARCH\_EXECUTED\ \ \ \ \ \ \ =\ 0x0CU,}
+\DoxyCodeLine{00112\ \ \ \ \ PMU\_BRANCH\_IMM\_INST\_ARCH\_EXECUTED\ \ \ \ \ \ \ =\ 0x0DU,}
+\DoxyCodeLine{00113\ \ \ \ \ PMU\_PROC\_RETURN\_ARCH\_EXECUTED\ \ \ \ \ \ \ \ \ \ \ =\ 0x0EU,}
+\DoxyCodeLine{00114\ \ \ \ \ PMU\_UNALIGNED\_ACCESS\_ARCH\_EXECUTED\ \ \ \ \ \ =\ 0x0FU,}
+\DoxyCodeLine{00115\ \ \ \ \ PMU\_BRANCH\_MISSPREDICTED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x10U,}
+\DoxyCodeLine{00116\ \ \ \ \ PMU\_CYCLE\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x11U,}
+\DoxyCodeLine{00117\ \ \ \ \ PMU\_PREDICTABLE\_BRANCHES\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x12U,}
+\DoxyCodeLine{00118\ \ \ \ \ PMU\_INST\_BUFFER\_STALL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x40U,}
+\DoxyCodeLine{00119\ \ \ \ \ PMU\_DATA\_DEPENDENCY\_INST\_STALL\ \ \ \ \ \ \ \ \ \ =\ 0x41U,}
+\DoxyCodeLine{00120\ \ \ \ \ PMU\_DATA\_CACHE\_WRITE\_BACK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x42U,}
+\DoxyCodeLine{00121\ \ \ \ \ PMU\_EXT\_MEMORY\_REQUEST\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x43U,}
+\DoxyCodeLine{00122\ \ \ \ \ PMU\_LSU\_BUSY\_STALL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x44U,}
+\DoxyCodeLine{00123\ \ \ \ \ PMU\_FORCED\_DRAIN\_OFSTORE\_BUFFER\ \ \ \ \ \ \ \ \ =\ 0x45U,}
+\DoxyCodeLine{00124\ \ \ \ \ PMU\_FIQ\_DISABLED\_CYCLE\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x46U,}
+\DoxyCodeLine{00125\ \ \ \ \ PMU\_IRQ\_DISABLED\_CYCLE\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x47U,}
+\DoxyCodeLine{00126\ \ \ \ \ PMU\_ETMEXTOUT\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x48U,}
+\DoxyCodeLine{00127\ \ \ \ \ PMU\_ETMEXTOUT\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x49U,}
+\DoxyCodeLine{00128\ \ \ \ \ PMU\_INST\_CACHE\_TAG\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4AU,}
+\DoxyCodeLine{00129\ \ \ \ \ PMU\_INST\_CACHE\_DATA\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ \ =\ 0x4BU,}
+\DoxyCodeLine{00130\ \ \ \ \ PMU\_DATA\_CACHE\_TAG\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4CU,}
+\DoxyCodeLine{00131\ \ \ \ \ PMU\_DATA\_CACHE\_DATA\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ \ =\ 0x4DU,}
+\DoxyCodeLine{00132\ \ \ \ \ PMU\_TCM\_FATAL\_ECC\_ERROR\_PREFETCH\ \ \ \ \ \ \ \ =\ 0x4EU,}
+\DoxyCodeLine{00133\ \ \ \ \ PMU\_TCM\_FATAL\_ECC\_ERROR\_LOAD\_STORE\ \ \ \ \ \ =\ 0x4FU,}
+\DoxyCodeLine{00134\ \ \ \ \ PMU\_STORE\_BUFFER\_MERGE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x50U,}
+\DoxyCodeLine{00135\ \ \ \ \ PMU\_LSU\_STALL\_STORE\_BUFFER\_FULL\ \ \ \ \ \ \ \ \ =\ 0x51U,}
+\DoxyCodeLine{00136\ \ \ \ \ PMU\_LSU\_STALL\_STORE\_QUEUE\_FULL\ \ \ \ \ \ \ \ \ \ =\ 0x52U,}
+\DoxyCodeLine{00137\ \ \ \ \ PMU\_INTEGER\_DIV\_EXECUTED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x53U,}
+\DoxyCodeLine{00138\ \ \ \ \ PMU\_STALL\_INTEGER\_DIV\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x54U,}
+\DoxyCodeLine{00139\ \ \ \ \ PMU\_PLD\_INST\_LINE\_FILL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x55U,}
+\DoxyCodeLine{00140\ \ \ \ \ PMU\_PLD\_INST\_NO\_LINE\_FILL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x56U,}
+\DoxyCodeLine{00141\ \ \ \ \ PMU\_NON\_CACHEABLE\_ACCESS\_AXI\_MASTER\ \ \ \ \ =\ 0x57U,}
+\DoxyCodeLine{00142\ \ \ \ \ PMU\_INST\_CACHE\_ACCESS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x58U,}
+\DoxyCodeLine{00143\ \ \ \ \ PMU\_DOUBLE\_DATA\_CACHE\_ISSUE\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x59U,}
+\DoxyCodeLine{00144\ \ \ \ \ PMU\_DUAL\_ISSUE\_CASE\_A\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x5AU,}
+\DoxyCodeLine{00145\ \ \ \ \ PMU\_DUAL\_ISSUE\_CASE\_B1\_B2\_F2\_F2D\ \ \ \ \ \ \ \ =\ 0x5BU,}
+\DoxyCodeLine{00146\ \ \ \ \ PMU\_DUAL\_ISSUE\_OTHER\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x5CU,}
+\DoxyCodeLine{00147\ \ \ \ \ PMU\_DP\_FLOAT\_INST\_EXCECUTED\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x5DU,}
+\DoxyCodeLine{00148\ \ \ \ \ PMU\_DUAL\_ISSUED\_PAIR\_INST\_ARCH\_EXECUTED\ =\ 0x5EU,}
+\DoxyCodeLine{00149\ \ \ \ \ PMU\_DATA\_CACHE\_DATA\_FATAL\_ECC\_ERROR\ \ \ \ \ =\ 0x60U,}
+\DoxyCodeLine{00150\ \ \ \ \ PMU\_DATA\_CACHE\_TAG\_FATAL\_ECC\_ERROR\ \ \ \ \ \ =\ 0x61U,}
+\DoxyCodeLine{00151\ \ \ \ \ PMU\_PROCESSOR\_LIVE\_LOCK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x62U,}
+\DoxyCodeLine{00152\ \ \ \ \ PMU\_ATCM\_MULTI\_BIT\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x64U,}
+\DoxyCodeLine{00153\ \ \ \ \ PMU\_B0TCM\_MULTI\_BIT\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ \ =\ 0x65U,}
+\DoxyCodeLine{00154\ \ \ \ \ PMU\_B1TCM\_MULTI\_BIT\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ \ =\ 0x66U,}
+\DoxyCodeLine{00155\ \ \ \ \ PMU\_ATCM\_SINGLE\_BIT\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ \ =\ 0x67U,}
+\DoxyCodeLine{00156\ \ \ \ \ PMU\_B0TCM\_SINGLE\_BIT\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ =\ 0x68U,}
+\DoxyCodeLine{00157\ \ \ \ \ PMU\_B1TCM\_SINGLE\_BIT\_ECC\_ERROR\ \ \ \ \ \ \ \ \ \ =\ 0x69U,}
+\DoxyCodeLine{00158\ \ \ \ \ PMU\_TCM\_COR\_ECC\_ERROR\_LOAD\_STORE\ \ \ \ \ \ \ \ =\ 0x6AU,}
+\DoxyCodeLine{00159\ \ \ \ \ PMU\_TCM\_COR\_ECC\_ERROR\_PREFETCH\ \ \ \ \ \ \ \ \ \ =\ 0x6BU,}
+\DoxyCodeLine{00160\ \ \ \ \ PMU\_TCM\_FATAL\_ECC\_ERROR\_AXI\_SLAVE\ \ \ \ \ \ \ =\ 0x6CU,}
+\DoxyCodeLine{00161\ \ \ \ \ PMU\_TCM\_COR\_ECC\_ERROR\_AXI\_SLAVE\ \ \ \ \ \ \ \ \ =\ 0x6DU}
+\DoxyCodeLine{00162\ \};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00167\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_a90fc368eb9dc59ce3950e63908177e05}{\_pmuInit\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00172\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_a6bcb569866117b8d50c05b8d992cb3e0}{\_pmuEnableCountersGlobal\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_a1bdff81dac3f3361f65b97a4197793a2}{\_pmuDisableCountersGlobal\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_a868e2a6eb16abc1de2c39e8ccb8e9a04}{\_pmuResetCycleCounter\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_abcd7f459dc3ba0d4747df97b76084bb7}{\_pmuResetEventCounters\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_a21f3fc4ef80d58b22d0545a5c08f230e}{\_pmuResetCounters\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00198\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_a05119721bf5533e9271717127c18c22c}{\_pmuStartCounters\_}}(uint32\ counters);}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00204\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_abab4f00952caa5d6596db0e6de0f445c}{\_pmuStopCounters\_}}(uint32\ counters);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00211\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sys__pmu_8h_a4937c9f733852b81cddafbb29e679cff}{\_pmuSetCountEvent\_}}(uint32\ counter,\ uint32\ event);}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00218\ uint32\ \mbox{\hyperlink{sys__pmu_8h_afd1c5a6e4a8806b15d4e8f72bd33fa16}{\_pmuGetCycleCount\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00226\ uint32\ \mbox{\hyperlink{sys__pmu_8h_a201e93f10a431344ef380507d3106cd1}{\_pmuGetEventCount\_}}(uint32\ counter);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00233\ uint32\ \mbox{\hyperlink{sys__pmu_8h_a1141fd5ac2cd84e241cfc28e8068928f}{\_pmuGetOverflow\_}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00236\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00239\ \}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*extern\ "{}C"{}\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,136 @@
+\hypertarget{gio_8h}{}\doxysection{Файл include/gio.h}
+\label{gio_8h}\index{include/gio.h@{include/gio.h}}
+
+
+GIO Driver Definition File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgio__config__reg}{gio\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{gio_8h_a7e068ab48e368ad95f126f60993d8976}\label{gio_8h_a7e068ab48e368ad95f126f60993d8976}} 
+\#define {\bfseries GIO\+\_\+\+INTDET\+\_\+\+CONFIGVALUE}~0U
+\item 
+\#define \mbox{\hyperlink{gio_8h_ab35c7a7146b275d8ca6bb55f72143b77}{GIO\+\_\+\+POL\+\_\+\+CONFIGVALUE}}
+\item 
+\#define \mbox{\hyperlink{gio_8h_a6d4833a4d99d472f669173178225fe6e}{GIO\+\_\+\+INTENASET\+\_\+\+CONFIGVALUE}}
+\item 
+\#define \mbox{\hyperlink{gio_8h_a5d2617814d2c91e431aedb470ceb3494}{GIO\+\_\+\+LVLSET\+\_\+\+CONFIGVALUE}}
+\item 
+\mbox{\Hypertarget{gio_8h_acfb7d90ee90a8633942c20f2451464f6}\label{gio_8h_acfb7d90ee90a8633942c20f2451464f6}} 
+\#define {\bfseries GIO\+\_\+\+PORTADIR\+\_\+\+CONFIGVALUE}~((uint32)((uint32)0U $<$$<$ 0U) $\vert$ (uint32)((uint32)0U $<$$<$ 1U) $\vert$ (uint32)((uint32)0U $<$$<$ 2U) $\vert$ (uint32)((uint32)0U $<$$<$ 3U) $\vert$ (uint32)((uint32)0U $<$$<$ 4U) $\vert$ (uint32)((uint32)0U $<$$<$ 5U) $\vert$ (uint32)((uint32)0U $<$$<$ 6U) $\vert$ (uint32)((uint32)0U $<$$<$ 7U))
+\item 
+\mbox{\Hypertarget{gio_8h_ac346129940126541dae29f8351e06b3f}\label{gio_8h_ac346129940126541dae29f8351e06b3f}} 
+\#define {\bfseries GIO\+\_\+\+PORTAPDR\+\_\+\+CONFIGVALUE}~((uint32)((uint32)0U $<$$<$ 0U) $\vert$ (uint32)((uint32)0U $<$$<$ 1U) $\vert$ (uint32)((uint32)0U $<$$<$ 2U) $\vert$ (uint32)((uint32)0U $<$$<$ 3U) $\vert$ (uint32)((uint32)0U $<$$<$ 4U) $\vert$ (uint32)((uint32)0U $<$$<$ 5U) $\vert$ (uint32)((uint32)0U $<$$<$ 6U) $\vert$ (uint32)((uint32)0U $<$$<$ 7U))
+\item 
+\mbox{\Hypertarget{gio_8h_a04e7230179dce742556dd49337bcfe84}\label{gio_8h_a04e7230179dce742556dd49337bcfe84}} 
+\#define {\bfseries GIO\+\_\+\+PORTAPSL\+\_\+\+CONFIGVALUE}~((uint32)((uint32)0U $<$$<$ 0U) $\vert$ (uint32)((uint32)0U $<$$<$ 1U) $\vert$ (uint32)((uint32)0U $<$$<$ 2U) $\vert$ (uint32)((uint32)0U $<$$<$ 3U) $\vert$ (uint32)((uint32)0U $<$$<$ 4U) $\vert$ (uint32)((uint32)0U $<$$<$ 5U) $\vert$ (uint32)((uint32)0U $<$$<$ 6U) $\vert$ (uint32)((uint32)0U $<$$<$ 7U))
+\item 
+\mbox{\Hypertarget{gio_8h_a03e581f78f5189f2ebdbc4452f753471}\label{gio_8h_a03e581f78f5189f2ebdbc4452f753471}} 
+\#define {\bfseries GIO\+\_\+\+PORTAPULDIS\+\_\+\+CONFIGVALUE}~((uint32)((uint32)0U $<$$<$ 0U) $\vert$ (uint32)((uint32)0U $<$$<$ 1U) $\vert$ (uint32)((uint32)0U $<$$<$ 2U) $\vert$(uint32)((uint32)0U $<$$<$ 3U) $\vert$ (uint32)((uint32)0U $<$$<$ 4U) $\vert$ (uint32)((uint32)0U $<$$<$ 5U) $\vert$ (uint32)((uint32)0U $<$$<$ 6U) $\vert$ (uint32)((uint32)0U $<$$<$ 7U))
+\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{gio_8h_a8593b5bc9dd947b2018f5057322b5451}\label{gio_8h_a8593b5bc9dd947b2018f5057322b5451}} 
+typedef struct \mbox{\hyperlink{structgio__config__reg}{gio\+\_\+config\+\_\+reg}} {\bfseries gio\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___g_i_o_ga3a5c5cc04b0105eb43cf8f5556e8207e}{gio\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the GIO Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___g_i_o_ga0eb9c6b99f383108e0e9ae15e5fd1450}{gio\+Set\+Direction}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 dir)
+\begin{DoxyCompactList}\small\item\em Set Port Direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___g_i_o_ga976443b96aca877a030f1e38865f6e44}{gio\+Set\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit, uint32 value)
+\begin{DoxyCompactList}\small\item\em Write Bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___g_i_o_gacc590bf80401dda7f74995de1fc14bf2}{gio\+Set\+Port}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 value)
+\begin{DoxyCompactList}\small\item\em Write Port Value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group___g_i_o_gaa8da3702193326982ea93af3f1e505fd}{gio\+Get\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\begin{DoxyCompactList}\small\item\em Read Bit. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group___g_i_o_ga84c1081ad04ee2a9ce8f4cc3a446cfaf}{gio\+Get\+Port}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port)
+\begin{DoxyCompactList}\small\item\em Read Port Value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___g_i_o_ga33d415247aa6af62c6ce4258da5a5f82}{gio\+Toggle\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\begin{DoxyCompactList}\small\item\em Write Bit. \end{DoxyCompactList}\item 
+void {\bfseries gio\+Enable\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+void {\bfseries gio\+Disable\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+void {\bfseries gio\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+void \mbox{\hyperlink{group___g_i_o_gadf4ea1311a3d6b62f91e76ef2c6edd50}{gio\+Get\+Config\+Value}} (\mbox{\hyperlink{structgio__config__reg}{gio\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+GIO Driver Definition File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01 
+\end{DoxyVersion}
+
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{gio_8h_a6d4833a4d99d472f669173178225fe6e}\label{gio_8h_a6d4833a4d99d472f669173178225fe6e}} 
+\index{gio.h@{gio.h}!GIO\_INTENASET\_CONFIGVALUE@{GIO\_INTENASET\_CONFIGVALUE}}
+\index{GIO\_INTENASET\_CONFIGVALUE@{GIO\_INTENASET\_CONFIGVALUE}!gio.h@{gio.h}}
+\doxysubsubsection{\texorpdfstring{GIO\_INTENASET\_CONFIGVALUE}{GIO\_INTENASET\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define GIO\+\_\+\+INTENASET\+\_\+\+CONFIGVALUE}
+
+{\bfseries Макроопределение\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32)((uint32)0U\ <<\ 0U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 1U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 2U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 3U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 4U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 5U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 6U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 7U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gio_8h_a5d2617814d2c91e431aedb470ceb3494}\label{gio_8h_a5d2617814d2c91e431aedb470ceb3494}} 
+\index{gio.h@{gio.h}!GIO\_LVLSET\_CONFIGVALUE@{GIO\_LVLSET\_CONFIGVALUE}}
+\index{GIO\_LVLSET\_CONFIGVALUE@{GIO\_LVLSET\_CONFIGVALUE}!gio.h@{gio.h}}
+\doxysubsubsection{\texorpdfstring{GIO\_LVLSET\_CONFIGVALUE}{GIO\_LVLSET\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define GIO\+\_\+\+LVLSET\+\_\+\+CONFIGVALUE}
+
+{\bfseries Макроопределение\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32)((uint32)0U\ <<\ 0U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 1U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 2U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 3U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 4U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 5U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 6U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 7U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gio_8h_ab35c7a7146b275d8ca6bb55f72143b77}\label{gio_8h_ab35c7a7146b275d8ca6bb55f72143b77}} 
+\index{gio.h@{gio.h}!GIO\_POL\_CONFIGVALUE@{GIO\_POL\_CONFIGVALUE}}
+\index{GIO\_POL\_CONFIGVALUE@{GIO\_POL\_CONFIGVALUE}!gio.h@{gio.h}}
+\doxysubsubsection{\texorpdfstring{GIO\_POL\_CONFIGVALUE}{GIO\_POL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define GIO\+\_\+\+POL\+\_\+\+CONFIGVALUE}
+
+{\bfseries Макроопределение\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32)((uint32)0U\ <<\ 0U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 1U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 2U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 3U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 4U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 5U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 6U)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint32)((uint32)0U\ <<\ 7U))}
+
+\end{DoxyCode}

@@ -1,0 +1,467 @@
+\hypertarget{structcan_base}{}\doxysection{Структура can\+Base}
+\label{structcan_base}\index{canBase@{canBase}}
+
+
+CAN Register Frame Definition.  
+
+
+
+
+{\ttfamily \#include $<$reg\+\_\+can.\+h$>$}
+
+\doxysubsection*{Поля данных}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_ae6b6b1f1e40e4f30fbda343a935dbed2}{CTL}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_aa107415b41a0ff6449673815462e2b38}{ES}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a877235b34e6952b6c4cebaa5ba99572b}{EERC}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a31238f0525ded4a90f227977dbae9dbf}{BTR}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a19d1f8bb5e7c8c5e7534802a88bf634e}{INT}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a8c542e543bcff234b38dbb7ad21d3e2a}{TEST}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a157d52061ee945a71c2c46674a89cf40}{rsvd1}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a858115371c5b947e8b82b9689510e96d}{PERR}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_ab6ea9d1e235e279603c76bcc9b28a22b}{rsvd2}} \mbox{[}24\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_aa827271094bfd20916f9c15a2fce565c}{ABOTR}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a6eebb7d0634641627b9d770ee3a5e7e4}{TXRQX}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a2b3ee0272b058e743dac6e59b0362d6e}{TXRQx}} \mbox{[}4U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a1a8af7233d5ad21cf8f3861d85d7c15d}{NWDATX}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a5630539d96e134898df33d9a9bc3b6bb}{NWDATx}} \mbox{[}4U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a7b33d0b98ba32ef87266d89aa83fda22}{INTPNDX}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a5204f6c92724f9c4012f670c5a77cf70}{INTPNDx}} \mbox{[}4U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_aceb7ff54ac53870d28b234acc7983817}{MSGVALX}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a75b502aeb6f15f347faeee8f2ef09ebb}{MSGVALx}} \mbox{[}4U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_aa739ac0b1d8a4ba9751159e9a9b5bb37}{rsvd3}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a7b2a7d0470002a01936f8b57f12b6471}{INTMUXx}} \mbox{[}4U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a1de4d6702d9a006f3d76d2fabae79e1e}{rsvd4}} \mbox{[}6\mbox{]}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_afdfcb74a603f90324af39d08b7f26b7f}{rsvd9}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_a359c13fe7632234bb00d3f8388814afb}{IF1\+CMD}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_a49113bdd1fdc7434b28a6cc0d06c81a5}{IF1\+STAT}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_ad26a77aa3255b6cf6bb1f1205a8447b9}{IF1\+NO}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a1fe8499cc3a9c826954eb7430da190ff}{IF1\+MSK}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a4ae567961e684e041ce4cc7324476bbb}{IF1\+ARB}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_afc913b8611fb4c7bd0eb5bf1eb4cf7df}{IF1\+MCTL}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_addd045dd9353431e91320e644a1361c7}{IF1\+DATx}} \mbox{[}8U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a32f1fdbc851f08c2620877e15da3acc1}{rsvd5}} \mbox{[}2\mbox{]}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_a91cac5dba6502a71d32bb030df74be4f}{rsvd10}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_a56d22f6518153c55c81fff8ebca16a91}{IF2\+CMD}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_abef609573bb06d6db9524e0406d089b1}{IF2\+STAT}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_afb29b9d70370c02c0b889e326846e114}{IF2\+NO}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a1d0efb9bf06af27ff9abbd47dbf72aaa}{IF2\+MSK}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_ad07ec84ba8a3d8c154c3c2e24c753bbd}{IF2\+ARB}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a7d217b38aaa02b29325dec60460b686c}{IF2\+MCTL}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_ac0bd349a591871e3a8aac874de19dd20}{IF2\+DATx}} \mbox{[}8U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_ac5fd49c3d2fe681f74c3c51eeadf8f69}{rsvd6}} \mbox{[}2\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a2b65ecf017876bf9f4aefff31f31fbe5}{IF3\+OBS}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_ae8e4fd2bb22e37f73c52403127650321}{IF3\+MSK}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_af3f6931492ae9963eb371a129dbe0b0b}{IF3\+ARB}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_aa0b6dbbf73e216f51bfba3c7931c1503}{IF3\+MCTL}}
+\item 
+uint8 \mbox{\hyperlink{structcan_base_aec9caf4422b3a9f6e52d5098e2327047}{IF3\+DATx}} \mbox{[}8U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a82a427d2bbeb379f4e225ca51bb81702}{rsvd7}} \mbox{[}2\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a4562be33aceab2a0574ea4f77ae36a14}{IF3\+UEy}} \mbox{[}4U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a558c6b294b9e8c35322784ae057e63a3}{rsvd8}} \mbox{[}28\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_a95a36a9e4ef4b82123e38b8de4e0b0ff}{TIOC}}
+\item 
+uint32 \mbox{\hyperlink{structcan_base_aff911aa8a7a934562f0333bf5c9c312e}{RIOC}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+CAN Register Frame Definition. 
+
+This type is used to access the CAN Registers. 
+
+\doxysubsection{Поля}
+\mbox{\Hypertarget{structcan_base_aa827271094bfd20916f9c15a2fce565c}\label{structcan_base_aa827271094bfd20916f9c15a2fce565c}} 
+\index{canBase@{canBase}!ABOTR@{ABOTR}}
+\index{ABOTR@{ABOTR}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{ABOTR}{ABOTR}}
+{\footnotesize\ttfamily uint32 ABOTR}
+
+0x0080\+: Auto Bus On Time Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a31238f0525ded4a90f227977dbae9dbf}\label{structcan_base_a31238f0525ded4a90f227977dbae9dbf}} 
+\index{canBase@{canBase}!BTR@{BTR}}
+\index{BTR@{BTR}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{BTR}{BTR}}
+{\footnotesize\ttfamily uint32 BTR}
+
+0x000C\+: Bit Timing Register ~\newline
+ \mbox{\Hypertarget{structcan_base_ae6b6b1f1e40e4f30fbda343a935dbed2}\label{structcan_base_ae6b6b1f1e40e4f30fbda343a935dbed2}} 
+\index{canBase@{canBase}!CTL@{CTL}}
+\index{CTL@{CTL}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{CTL}{CTL}}
+{\footnotesize\ttfamily uint32 CTL}
+
+0x0000\+: Control Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a877235b34e6952b6c4cebaa5ba99572b}\label{structcan_base_a877235b34e6952b6c4cebaa5ba99572b}} 
+\index{canBase@{canBase}!EERC@{EERC}}
+\index{EERC@{EERC}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{EERC}{EERC}}
+{\footnotesize\ttfamily uint32 EERC}
+
+0x0008\+: Error Counter Register ~\newline
+ \mbox{\Hypertarget{structcan_base_aa107415b41a0ff6449673815462e2b38}\label{structcan_base_aa107415b41a0ff6449673815462e2b38}} 
+\index{canBase@{canBase}!ES@{ES}}
+\index{ES@{ES}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{ES}{ES}}
+{\footnotesize\ttfamily uint32 ES}
+
+0x0004\+: Error and Status Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a4ae567961e684e041ce4cc7324476bbb}\label{structcan_base_a4ae567961e684e041ce4cc7324476bbb}} 
+\index{canBase@{canBase}!IF1ARB@{IF1ARB}}
+\index{IF1ARB@{IF1ARB}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF1ARB}{IF1ARB}}
+{\footnotesize\ttfamily uint32 IF1\+ARB}
+
+0x0108\+: IF1 Arbitration Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a359c13fe7632234bb00d3f8388814afb}\label{structcan_base_a359c13fe7632234bb00d3f8388814afb}} 
+\index{canBase@{canBase}!IF1CMD@{IF1CMD}}
+\index{IF1CMD@{IF1CMD}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF1CMD}{IF1CMD}}
+{\footnotesize\ttfamily uint8 IF1\+CMD}
+
+0x0100\+: IF1 Command Register, Command ~\newline
+ \mbox{\Hypertarget{structcan_base_addd045dd9353431e91320e644a1361c7}\label{structcan_base_addd045dd9353431e91320e644a1361c7}} 
+\index{canBase@{canBase}!IF1DATx@{IF1DATx}}
+\index{IF1DATx@{IF1DATx}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF1DATx}{IF1DATx}}
+{\footnotesize\ttfamily uint8 IF1\+DATx\mbox{[}8U\mbox{]}}
+
+0x0110-\/0x0114\+: IF1 Data A and B Registers ~\newline
+ \mbox{\Hypertarget{structcan_base_afc913b8611fb4c7bd0eb5bf1eb4cf7df}\label{structcan_base_afc913b8611fb4c7bd0eb5bf1eb4cf7df}} 
+\index{canBase@{canBase}!IF1MCTL@{IF1MCTL}}
+\index{IF1MCTL@{IF1MCTL}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF1MCTL}{IF1MCTL}}
+{\footnotesize\ttfamily uint32 IF1\+MCTL}
+
+0x010C\+: IF1 Message Control Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a1fe8499cc3a9c826954eb7430da190ff}\label{structcan_base_a1fe8499cc3a9c826954eb7430da190ff}} 
+\index{canBase@{canBase}!IF1MSK@{IF1MSK}}
+\index{IF1MSK@{IF1MSK}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF1MSK}{IF1MSK}}
+{\footnotesize\ttfamily uint32 IF1\+MSK}
+
+0x0104\+: IF1 Mask Register ~\newline
+ \mbox{\Hypertarget{structcan_base_ad26a77aa3255b6cf6bb1f1205a8447b9}\label{structcan_base_ad26a77aa3255b6cf6bb1f1205a8447b9}} 
+\index{canBase@{canBase}!IF1NO@{IF1NO}}
+\index{IF1NO@{IF1NO}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF1NO}{IF1NO}}
+{\footnotesize\ttfamily uint8 IF1\+NO}
+
+0x0100\+: IF1 Command Register, Msg Number ~\newline
+ \mbox{\Hypertarget{structcan_base_a49113bdd1fdc7434b28a6cc0d06c81a5}\label{structcan_base_a49113bdd1fdc7434b28a6cc0d06c81a5}} 
+\index{canBase@{canBase}!IF1STAT@{IF1STAT}}
+\index{IF1STAT@{IF1STAT}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF1STAT}{IF1STAT}}
+{\footnotesize\ttfamily uint8 IF1\+STAT}
+
+0x0100\+: IF1 Command Register, Status ~\newline
+ \mbox{\Hypertarget{structcan_base_ad07ec84ba8a3d8c154c3c2e24c753bbd}\label{structcan_base_ad07ec84ba8a3d8c154c3c2e24c753bbd}} 
+\index{canBase@{canBase}!IF2ARB@{IF2ARB}}
+\index{IF2ARB@{IF2ARB}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF2ARB}{IF2ARB}}
+{\footnotesize\ttfamily uint32 IF2\+ARB}
+
+0x0128\+: IF2 Arbitration Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a56d22f6518153c55c81fff8ebca16a91}\label{structcan_base_a56d22f6518153c55c81fff8ebca16a91}} 
+\index{canBase@{canBase}!IF2CMD@{IF2CMD}}
+\index{IF2CMD@{IF2CMD}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF2CMD}{IF2CMD}}
+{\footnotesize\ttfamily uint8 IF2\+CMD}
+
+0x0120\+: IF2 Command Register, Command ~\newline
+ \mbox{\Hypertarget{structcan_base_ac0bd349a591871e3a8aac874de19dd20}\label{structcan_base_ac0bd349a591871e3a8aac874de19dd20}} 
+\index{canBase@{canBase}!IF2DATx@{IF2DATx}}
+\index{IF2DATx@{IF2DATx}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF2DATx}{IF2DATx}}
+{\footnotesize\ttfamily uint8 IF2\+DATx\mbox{[}8U\mbox{]}}
+
+0x0130-\/0x0134\+: IF2 Data A and B Registers ~\newline
+ \mbox{\Hypertarget{structcan_base_a7d217b38aaa02b29325dec60460b686c}\label{structcan_base_a7d217b38aaa02b29325dec60460b686c}} 
+\index{canBase@{canBase}!IF2MCTL@{IF2MCTL}}
+\index{IF2MCTL@{IF2MCTL}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF2MCTL}{IF2MCTL}}
+{\footnotesize\ttfamily uint32 IF2\+MCTL}
+
+0x012C\+: IF2 Message Control Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a1d0efb9bf06af27ff9abbd47dbf72aaa}\label{structcan_base_a1d0efb9bf06af27ff9abbd47dbf72aaa}} 
+\index{canBase@{canBase}!IF2MSK@{IF2MSK}}
+\index{IF2MSK@{IF2MSK}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF2MSK}{IF2MSK}}
+{\footnotesize\ttfamily uint32 IF2\+MSK}
+
+0x0124\+: IF2 Mask Register ~\newline
+ \mbox{\Hypertarget{structcan_base_afb29b9d70370c02c0b889e326846e114}\label{structcan_base_afb29b9d70370c02c0b889e326846e114}} 
+\index{canBase@{canBase}!IF2NO@{IF2NO}}
+\index{IF2NO@{IF2NO}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF2NO}{IF2NO}}
+{\footnotesize\ttfamily uint8 IF2\+NO}
+
+0x0120\+: IF2 Command Register, Msg Number ~\newline
+ \mbox{\Hypertarget{structcan_base_abef609573bb06d6db9524e0406d089b1}\label{structcan_base_abef609573bb06d6db9524e0406d089b1}} 
+\index{canBase@{canBase}!IF2STAT@{IF2STAT}}
+\index{IF2STAT@{IF2STAT}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF2STAT}{IF2STAT}}
+{\footnotesize\ttfamily uint8 IF2\+STAT}
+
+0x0120\+: IF2 Command Register, Status ~\newline
+ \mbox{\Hypertarget{structcan_base_af3f6931492ae9963eb371a129dbe0b0b}\label{structcan_base_af3f6931492ae9963eb371a129dbe0b0b}} 
+\index{canBase@{canBase}!IF3ARB@{IF3ARB}}
+\index{IF3ARB@{IF3ARB}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF3ARB}{IF3ARB}}
+{\footnotesize\ttfamily uint32 IF3\+ARB}
+
+0x0148\+: IF3 Arbitration Register ~\newline
+ \mbox{\Hypertarget{structcan_base_aec9caf4422b3a9f6e52d5098e2327047}\label{structcan_base_aec9caf4422b3a9f6e52d5098e2327047}} 
+\index{canBase@{canBase}!IF3DATx@{IF3DATx}}
+\index{IF3DATx@{IF3DATx}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF3DATx}{IF3DATx}}
+{\footnotesize\ttfamily uint8 IF3\+DATx\mbox{[}8U\mbox{]}}
+
+0x0150-\/0x0154\+: IF3 Data A and B Registers ~\newline
+ \mbox{\Hypertarget{structcan_base_aa0b6dbbf73e216f51bfba3c7931c1503}\label{structcan_base_aa0b6dbbf73e216f51bfba3c7931c1503}} 
+\index{canBase@{canBase}!IF3MCTL@{IF3MCTL}}
+\index{IF3MCTL@{IF3MCTL}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF3MCTL}{IF3MCTL}}
+{\footnotesize\ttfamily uint32 IF3\+MCTL}
+
+0x014C\+: IF3 Message Control Register ~\newline
+ \mbox{\Hypertarget{structcan_base_ae8e4fd2bb22e37f73c52403127650321}\label{structcan_base_ae8e4fd2bb22e37f73c52403127650321}} 
+\index{canBase@{canBase}!IF3MSK@{IF3MSK}}
+\index{IF3MSK@{IF3MSK}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF3MSK}{IF3MSK}}
+{\footnotesize\ttfamily uint32 IF3\+MSK}
+
+0x0144\+: IF3 Mask Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a2b65ecf017876bf9f4aefff31f31fbe5}\label{structcan_base_a2b65ecf017876bf9f4aefff31f31fbe5}} 
+\index{canBase@{canBase}!IF3OBS@{IF3OBS}}
+\index{IF3OBS@{IF3OBS}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF3OBS}{IF3OBS}}
+{\footnotesize\ttfamily uint32 IF3\+OBS}
+
+0x0140\+: IF3 Observation Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a4562be33aceab2a0574ea4f77ae36a14}\label{structcan_base_a4562be33aceab2a0574ea4f77ae36a14}} 
+\index{canBase@{canBase}!IF3UEy@{IF3UEy}}
+\index{IF3UEy@{IF3UEy}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{IF3UEy}{IF3UEy}}
+{\footnotesize\ttfamily uint32 IF3\+UEy\mbox{[}4U\mbox{]}}
+
+0x0160-\/0x016C\+: IF3 Update Enable Registers ~\newline
+ \mbox{\Hypertarget{structcan_base_a19d1f8bb5e7c8c5e7534802a88bf634e}\label{structcan_base_a19d1f8bb5e7c8c5e7534802a88bf634e}} 
+\index{canBase@{canBase}!INT@{INT}}
+\index{INT@{INT}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{INT}{INT}}
+{\footnotesize\ttfamily uint32 INT}
+
+0x0010\+: Interrupt Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a7b2a7d0470002a01936f8b57f12b6471}\label{structcan_base_a7b2a7d0470002a01936f8b57f12b6471}} 
+\index{canBase@{canBase}!INTMUXx@{INTMUXx}}
+\index{INTMUXx@{INTMUXx}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{INTMUXx}{INTMUXx}}
+{\footnotesize\ttfamily uint32 INTMUXx\mbox{[}4U\mbox{]}}
+
+0x00\+D8-\/0x00\+E4\+: Interrupt Multiplexer Registers \mbox{\Hypertarget{structcan_base_a7b33d0b98ba32ef87266d89aa83fda22}\label{structcan_base_a7b33d0b98ba32ef87266d89aa83fda22}} 
+\index{canBase@{canBase}!INTPNDX@{INTPNDX}}
+\index{INTPNDX@{INTPNDX}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{INTPNDX}{INTPNDX}}
+{\footnotesize\ttfamily uint32 INTPNDX}
+
+0x00\+AC\+: Interrupt Pending X Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a5204f6c92724f9c4012f670c5a77cf70}\label{structcan_base_a5204f6c92724f9c4012f670c5a77cf70}} 
+\index{canBase@{canBase}!INTPNDx@{INTPNDx}}
+\index{INTPNDx@{INTPNDx}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{INTPNDx}{INTPNDx}}
+{\footnotesize\ttfamily uint32 INTPNDx\mbox{[}4U\mbox{]}}
+
+0x00\+B0-\/0x00\+BC\+: Interrupt Pending Registers ~\newline
+ \mbox{\Hypertarget{structcan_base_aceb7ff54ac53870d28b234acc7983817}\label{structcan_base_aceb7ff54ac53870d28b234acc7983817}} 
+\index{canBase@{canBase}!MSGVALX@{MSGVALX}}
+\index{MSGVALX@{MSGVALX}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{MSGVALX}{MSGVALX}}
+{\footnotesize\ttfamily uint32 MSGVALX}
+
+0x00\+C0\+: Message Valid X Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a75b502aeb6f15f347faeee8f2ef09ebb}\label{structcan_base_a75b502aeb6f15f347faeee8f2ef09ebb}} 
+\index{canBase@{canBase}!MSGVALx@{MSGVALx}}
+\index{MSGVALx@{MSGVALx}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{MSGVALx}{MSGVALx}}
+{\footnotesize\ttfamily uint32 MSGVALx\mbox{[}4U\mbox{]}}
+
+0x00\+C4-\/0x00\+D0\+: Message Valid Registers ~\newline
+ \mbox{\Hypertarget{structcan_base_a1a8af7233d5ad21cf8f3861d85d7c15d}\label{structcan_base_a1a8af7233d5ad21cf8f3861d85d7c15d}} 
+\index{canBase@{canBase}!NWDATX@{NWDATX}}
+\index{NWDATX@{NWDATX}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{NWDATX}{NWDATX}}
+{\footnotesize\ttfamily uint32 NWDATX}
+
+0x0098\+: New Data X Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a5630539d96e134898df33d9a9bc3b6bb}\label{structcan_base_a5630539d96e134898df33d9a9bc3b6bb}} 
+\index{canBase@{canBase}!NWDATx@{NWDATx}}
+\index{NWDATx@{NWDATx}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{NWDATx}{NWDATx}}
+{\footnotesize\ttfamily uint32 NWDATx\mbox{[}4U\mbox{]}}
+
+0x009\+C-\/0x00\+A8\+: New Data Registers ~\newline
+ \mbox{\Hypertarget{structcan_base_a858115371c5b947e8b82b9689510e96d}\label{structcan_base_a858115371c5b947e8b82b9689510e96d}} 
+\index{canBase@{canBase}!PERR@{PERR}}
+\index{PERR@{PERR}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{PERR}{PERR}}
+{\footnotesize\ttfamily uint32 PERR}
+
+0x001C\+: Parity/\+SECDED Error Code Register ~\newline
+ \mbox{\Hypertarget{structcan_base_aff911aa8a7a934562f0333bf5c9c312e}\label{structcan_base_aff911aa8a7a934562f0333bf5c9c312e}} 
+\index{canBase@{canBase}!RIOC@{RIOC}}
+\index{RIOC@{RIOC}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{RIOC}{RIOC}}
+{\footnotesize\ttfamily uint32 RIOC}
+
+0x01\+E4\+: RX IO Control Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a157d52061ee945a71c2c46674a89cf40}\label{structcan_base_a157d52061ee945a71c2c46674a89cf40}} 
+\index{canBase@{canBase}!rsvd1@{rsvd1}}
+\index{rsvd1@{rsvd1}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd1}{rsvd1}}
+{\footnotesize\ttfamily uint32 rsvd1}
+
+0x0018\+: Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_a91cac5dba6502a71d32bb030df74be4f}\label{structcan_base_a91cac5dba6502a71d32bb030df74be4f}} 
+\index{canBase@{canBase}!rsvd10@{rsvd10}}
+\index{rsvd10@{rsvd10}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd10}{rsvd10}}
+{\footnotesize\ttfamily uint8 rsvd10}
+
+0x0120\+: IF2 Command Register, Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_ab6ea9d1e235e279603c76bcc9b28a22b}\label{structcan_base_ab6ea9d1e235e279603c76bcc9b28a22b}} 
+\index{canBase@{canBase}!rsvd2@{rsvd2}}
+\index{rsvd2@{rsvd2}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd2}{rsvd2}}
+{\footnotesize\ttfamily uint32 rsvd2\mbox{[}24\mbox{]}}
+
+0x002C -\/ 0x7C\+: Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_aa739ac0b1d8a4ba9751159e9a9b5bb37}\label{structcan_base_aa739ac0b1d8a4ba9751159e9a9b5bb37}} 
+\index{canBase@{canBase}!rsvd3@{rsvd3}}
+\index{rsvd3@{rsvd3}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd3}{rsvd3}}
+{\footnotesize\ttfamily uint32 rsvd3}
+
+0x00\+D4\+: Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_a1de4d6702d9a006f3d76d2fabae79e1e}\label{structcan_base_a1de4d6702d9a006f3d76d2fabae79e1e}} 
+\index{canBase@{canBase}!rsvd4@{rsvd4}}
+\index{rsvd4@{rsvd4}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd4}{rsvd4}}
+{\footnotesize\ttfamily uint32 rsvd4\mbox{[}6\mbox{]}}
+
+0x00\+E8\+: Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_a32f1fdbc851f08c2620877e15da3acc1}\label{structcan_base_a32f1fdbc851f08c2620877e15da3acc1}} 
+\index{canBase@{canBase}!rsvd5@{rsvd5}}
+\index{rsvd5@{rsvd5}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd5}{rsvd5}}
+{\footnotesize\ttfamily uint32 rsvd5\mbox{[}2\mbox{]}}
+
+0x0118\+: Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_ac5fd49c3d2fe681f74c3c51eeadf8f69}\label{structcan_base_ac5fd49c3d2fe681f74c3c51eeadf8f69}} 
+\index{canBase@{canBase}!rsvd6@{rsvd6}}
+\index{rsvd6@{rsvd6}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd6}{rsvd6}}
+{\footnotesize\ttfamily uint32 rsvd6\mbox{[}2\mbox{]}}
+
+0x0138\+: Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_a82a427d2bbeb379f4e225ca51bb81702}\label{structcan_base_a82a427d2bbeb379f4e225ca51bb81702}} 
+\index{canBase@{canBase}!rsvd7@{rsvd7}}
+\index{rsvd7@{rsvd7}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd7}{rsvd7}}
+{\footnotesize\ttfamily uint32 rsvd7\mbox{[}2\mbox{]}}
+
+0x0158\+: Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_a558c6b294b9e8c35322784ae057e63a3}\label{structcan_base_a558c6b294b9e8c35322784ae057e63a3}} 
+\index{canBase@{canBase}!rsvd8@{rsvd8}}
+\index{rsvd8@{rsvd8}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd8}{rsvd8}}
+{\footnotesize\ttfamily uint32 rsvd8\mbox{[}28\mbox{]}}
+
+0x0170\+: Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_afdfcb74a603f90324af39d08b7f26b7f}\label{structcan_base_afdfcb74a603f90324af39d08b7f26b7f}} 
+\index{canBase@{canBase}!rsvd9@{rsvd9}}
+\index{rsvd9@{rsvd9}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{rsvd9}{rsvd9}}
+{\footnotesize\ttfamily uint8 rsvd9}
+
+0x0100\+: IF1 Command Register, Reserved ~\newline
+ \mbox{\Hypertarget{structcan_base_a8c542e543bcff234b38dbb7ad21d3e2a}\label{structcan_base_a8c542e543bcff234b38dbb7ad21d3e2a}} 
+\index{canBase@{canBase}!TEST@{TEST}}
+\index{TEST@{TEST}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{TEST}{TEST}}
+{\footnotesize\ttfamily uint32 TEST}
+
+0x0014\+: Test Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a95a36a9e4ef4b82123e38b8de4e0b0ff}\label{structcan_base_a95a36a9e4ef4b82123e38b8de4e0b0ff}} 
+\index{canBase@{canBase}!TIOC@{TIOC}}
+\index{TIOC@{TIOC}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{TIOC}{TIOC}}
+{\footnotesize\ttfamily uint32 TIOC}
+
+0x01\+E0\+: TX IO Control Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a6eebb7d0634641627b9d770ee3a5e7e4}\label{structcan_base_a6eebb7d0634641627b9d770ee3a5e7e4}} 
+\index{canBase@{canBase}!TXRQX@{TXRQX}}
+\index{TXRQX@{TXRQX}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{TXRQX}{TXRQX}}
+{\footnotesize\ttfamily uint32 TXRQX}
+
+0x0084\+: Transmission Request X Register ~\newline
+ \mbox{\Hypertarget{structcan_base_a2b3ee0272b058e743dac6e59b0362d6e}\label{structcan_base_a2b3ee0272b058e743dac6e59b0362d6e}} 
+\index{canBase@{canBase}!TXRQx@{TXRQx}}
+\index{TXRQx@{TXRQx}!canBase@{canBase}}
+\doxysubsubsection{\texorpdfstring{TXRQx}{TXRQx}}
+{\footnotesize\ttfamily uint32 TXRQx\mbox{[}4U\mbox{]}}
+
+0x0088-\/0x0094\+: Transmission Request Registers ~\newline
+ 
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{reg__can_8h}{reg\+\_\+can.\+h}}\end{DoxyCompactItemize}

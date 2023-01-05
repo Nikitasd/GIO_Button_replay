@@ -1,0 +1,66 @@
+\hypertarget{reg__rti_8h}{}\doxysection{Файл include/reg\+\_\+rti.h}
+\label{reg__rti_8h}\index{include/reg\_rti.h@{include/reg\_rti.h}}
+
+
+RTI Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrti_base}{rti\+Base}}
+\begin{DoxyCompactList}\small\item\em RTI Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__rti_8h_a2c9d188af67e11a262a97da59eebb850}{rti\+REG1}}~((\mbox{\hyperlink{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}{rti\+BASE\+\_\+t}} $\ast$)0x\+FFFFFC00U)
+\begin{DoxyCompactList}\small\item\em RTI1 Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structrti_base}{rti\+Base}} \mbox{\hyperlink{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}{rti\+BASE\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em RTI Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+RTI Register Layer Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the RTI driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{reg__rti_8h_a2c9d188af67e11a262a97da59eebb850}\label{reg__rti_8h_a2c9d188af67e11a262a97da59eebb850}} 
+\index{reg\_rti.h@{reg\_rti.h}!rtiREG1@{rtiREG1}}
+\index{rtiREG1@{rtiREG1}!reg\_rti.h@{reg\_rti.h}}
+\doxysubsubsection{\texorpdfstring{rtiREG1}{rtiREG1}}
+{\footnotesize\ttfamily \#define rti\+REG1~((\mbox{\hyperlink{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}{rti\+BASE\+\_\+t}} $\ast$)0x\+FFFFFC00U)}
+
+
+
+RTI1 Register Frame Pointer. 
+
+This pointer is used by the RTI driver to access the RTI1 registers. 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}\label{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}} 
+\index{reg\_rti.h@{reg\_rti.h}!rtiBASE\_t@{rtiBASE\_t}}
+\index{rtiBASE\_t@{rtiBASE\_t}!reg\_rti.h@{reg\_rti.h}}
+\doxysubsubsection{\texorpdfstring{rtiBASE\_t}{rtiBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}{rti\+BASE\+\_\+t}}}
+
+
+
+RTI Register Frame Type Definition. 
+
+This type is used to access the RTI Registers. 

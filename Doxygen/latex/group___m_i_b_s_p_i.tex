@@ -1,0 +1,94 @@
+\hypertarget{group___m_i_b_s_p_i}{}\doxysection{MIBSPI}
+\label{group___m_i_b_s_p_i}\index{MIBSPI@{MIBSPI}}
+
+
+Multi-\/\+Buffered Serial Peripheral Interface Module.  
+
+
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_ga20200787a0780b382c5b2df36c01baa0}\label{group___m_i_b_s_p_i_ga20200787a0780b382c5b2df36c01baa0}} 
+void {\bfseries mibspi\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_gafee4245ce44107234f8cd8df7238f84a}\label{group___m_i_b_s_p_i_gafee4245ce44107234f8cd8df7238f84a}} 
+void {\bfseries mibspi\+Set\+Functional} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 port)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_gaeeefb6348a13cc2cb9ca94358bd7dc1e}\label{group___m_i_b_s_p_i_gaeeefb6348a13cc2cb9ca94358bd7dc1e}} 
+void {\bfseries mibspi\+Set\+Data} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 group, uint16 $\ast$data)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_gad0e6627b793fdf98379a8882c3ba51db}\label{group___m_i_b_s_p_i_gad0e6627b793fdf98379a8882c3ba51db}} 
+uint32 {\bfseries mibspi\+Get\+Data} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 group, uint16 $\ast$data)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_ga1b7e7994b97f4091a98e5f3e1a01daca}\label{group___m_i_b_s_p_i_ga1b7e7994b97f4091a98e5f3e1a01daca}} 
+void {\bfseries mibspi\+Transfer} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 group)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_ga8f3767bfccce97a2337c345437f75e0d}\label{group___m_i_b_s_p_i_ga8f3767bfccce97a2337c345437f75e0d}} 
+boolean {\bfseries mibspi\+Is\+Transfer\+Complete} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 group)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_ga794ff0ed38140a38660cf93f98eb36ca}\label{group___m_i_b_s_p_i_ga794ff0ed38140a38660cf93f98eb36ca}} 
+void {\bfseries mibspi\+Enable\+Group\+Notification} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 group, uint32 level)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_ga6e90295632d3a85692fa06ab01f2e034}\label{group___m_i_b_s_p_i_ga6e90295632d3a85692fa06ab01f2e034}} 
+void {\bfseries mibspi\+Disable\+Group\+Notification} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 group)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_ga9880a2139fa6e70d39f2998385b26a5a}\label{group___m_i_b_s_p_i_ga9880a2139fa6e70d39f2998385b26a5a}} 
+void {\bfseries mibspi\+Enable\+Loopback} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}} Loopbacktype)
+\item 
+\mbox{\Hypertarget{group___m_i_b_s_p_i_gaca093161e14ee2f45df18c5ecb67207f}\label{group___m_i_b_s_p_i_gaca093161e14ee2f45df18c5ecb67207f}} 
+void {\bfseries mibspi\+Disable\+Loopback} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi)
+\item 
+void \mbox{\hyperlink{group___m_i_b_s_p_i_ga003ad3b6efad9f83d79ce393f2c59798}{mibspi\+Notification}} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Error interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_i_b_s_p_i_ga56ca4c637b138b735ad4d3de542a84e0}{mibspi\+Group\+Notification}} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$mibspi, uint32 group)
+\begin{DoxyCompactList}\small\item\em Transfer complete notification callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Multi-\/\+Buffered Serial Peripheral Interface Module. 
+
+The Mib\+SPI/\+Mib\+SPIP is a high-\/speed synchronous serial input/output port that allows a serial bit stream of programmed length (2 to 16 bits) to be shifted in and out of the device at a programmed bit-\/transfer rate. The Mib\+SPI has a programmable buffer memory that enables programmed transmission to be completed without CPU intervention
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__mibspi_8h}{reg\+\_\+mibspi.\+h}}
+\item \mbox{\hyperlink{mibspi_8h}{mibspi.\+h}}
+\item mibspi.\+c 
+\end{DoxyItemize}
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{group___m_i_b_s_p_i_ga56ca4c637b138b735ad4d3de542a84e0}\label{group___m_i_b_s_p_i_ga56ca4c637b138b735ad4d3de542a84e0}} 
+\index{MIBSPI@{MIBSPI}!mibspiGroupNotification@{mibspiGroupNotification}}
+\index{mibspiGroupNotification@{mibspiGroupNotification}!MIBSPI@{MIBSPI}}
+\doxysubsubsection{\texorpdfstring{mibspiGroupNotification()}{mibspiGroupNotification()}}
+{\footnotesize\ttfamily void mibspi\+Group\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$}]{mibspi,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Transfer complete notification callback. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em mibspi} & -\/ mib\+Spi module base address \\
+\hline
+\mbox{\texttt{ in}}  & {\em group} & -\/ Transfer group\\
+\hline
+\end{DoxyParams}
+This is a callback function provided by the application. It is call when a transfer is complete. The parameter is the transfer group that triggered the interrupt. \mbox{\Hypertarget{group___m_i_b_s_p_i_ga003ad3b6efad9f83d79ce393f2c59798}\label{group___m_i_b_s_p_i_ga003ad3b6efad9f83d79ce393f2c59798}} 
+\index{MIBSPI@{MIBSPI}!mibspiNotification@{mibspiNotification}}
+\index{mibspiNotification@{mibspiNotification}!MIBSPI@{MIBSPI}}
+\doxysubsubsection{\texorpdfstring{mibspiNotification()}{mibspiNotification()}}
+{\footnotesize\ttfamily void mibspi\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+BASE\+\_\+t}} $\ast$}]{mibspi,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Error interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em mibspi} & -\/ mib\+Spi module base address \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & -\/ Copy of error interrupt flags\\
+\hline
+\end{DoxyParams}
+This is a error callback that is provided by the application and is call upon an error interrupt. The paramer passed to the callback is a copy of the error interrupt flag register. 

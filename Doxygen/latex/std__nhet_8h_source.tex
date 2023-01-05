@@ -1,0 +1,2500 @@
+\hypertarget{std__nhet_8h_source}{}\doxysection{std\+\_\+nhet.\+h}
+\label{std__nhet_8h_source}\index{include/std\_nhet.h@{include/std\_nhet.h}}
+\mbox{\hyperlink{std__nhet_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{*}}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{*}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{*}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ \_\_STD\_NHET\_H\_\_}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ \_\_STD\_NHET\_H\_\_}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00045\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sys__common_8h}{sys\_common.h}}"{}}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00054\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#ifndef\ HET\_v2}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#\ \ \ define\ HET\_v2\ 0}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#if\ ((\_\_little\_endian\_\_\ ==\ 0)\ ||\ (\_\_LITTLE\_ENDIAN\_\_\ ==\ 0)\ ||\ defined(\_TMS470\_BIG)\ ||\ defined(\_\_big\_endian\_\_))}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#ifndef\ HETBYTE}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#\ \ \ define\ HETBYTE\ uint8}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmemory__format}{memory\_format}}}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \ \ uint32\ program\_word\ \ ;}
+\DoxyCodeLine{00069\ \ \ uint32\ control\_word\ \ ;}
+\DoxyCodeLine{00070\ \ \ uint32\ data\_word\ \ \ \ \ ;}
+\DoxyCodeLine{00071\ \ \ uint32\ reserved\_word\ ;}
+\DoxyCodeLine{00072\ \}\ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ ;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00075\ \textcolor{comment}{/*\ ACMP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00076\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00077\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structacmp__format}{acmp\_format}}}
+\DoxyCodeLine{00078\ \{}
+\DoxyCodeLine{00079\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00080\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00081\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00082\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00083\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00084\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00087\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00088\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00089\ \ \ uint32\ coutprv\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00090\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00091\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00092\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00093\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00094\ \ \ uint32\ ext\_reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00095\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;\ }
+\DoxyCodeLine{00096\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00097\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00098\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00099\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00100\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00101\ \ }
+\DoxyCodeLine{00102\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00103\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ \ ;}
+\DoxyCodeLine{00104\ \ }
+\DoxyCodeLine{00105\ \}\ \mbox{\hyperlink{structacmp__format}{ACMP\_FIELDS}};}
+\DoxyCodeLine{00106\ \ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \mbox{\hyperlink{structacmp__format}{ACMP\_FIELDS}}\ \ acmp\ \ \ ;}
+\DoxyCodeLine{00110\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00111\ \}\ \mbox{\hyperlink{union_a_c_m_p___i_n_s_t_r_u_c_t_i_o_n}{ACMP\_INSTRUCTION}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00115\ \textcolor{comment}{/*\ ECMP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00116\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00117\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structecmp__format}{ecmp\_format}}\ \ \ }
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00120\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00121\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00124\ \ \ uint32\ hr\_lr\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00125\ \ \ uint32\ angle\_compare\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00126\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00129\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00130\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00131\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00132\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00133\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00134\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00135\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00136\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00137\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00138\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00139\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00140\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00141\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ }
+\DoxyCodeLine{00144\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00145\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \}\ \mbox{\hyperlink{structecmp__format}{ECMP\_FIELDS}};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00150\ \{}
+\DoxyCodeLine{00151\ \ \ \mbox{\hyperlink{structecmp__format}{ECMP\_FIELDS}}\ \ ecmp\ \ \ ;}
+\DoxyCodeLine{00152\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00153\ \}\ \mbox{\hyperlink{union_e_c_m_p___i_n_s_t_r_u_c_t_i_o_n}{ECMP\_INSTRUCTION}};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00157\ \textcolor{comment}{/*\ SCMP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00158\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00159\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structscmp__format}{scmp\_format}}\ \ \ \ \ }
+\DoxyCodeLine{00160\ \{}
+\DoxyCodeLine{00161\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00162\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00163\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00165\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00166\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00167\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00168\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00171\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00172\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00173\ \ \ uint32\ coutprv\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00174\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00175\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00176\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00177\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00178\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00179\ \ \ uint32\ compare\_mode\ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00180\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00181\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00182\ \ \ uint32\ restart\_en\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00183\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ }
+\DoxyCodeLine{00186\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00187\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \}\ \mbox{\hyperlink{structscmp__format}{SCMP\_FIELDS}}\ ;}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00192\ \{}
+\DoxyCodeLine{00193\ \ \ \mbox{\hyperlink{structscmp__format}{SCMP\_FIELDS}}\ \ scmp\ \ \ ;}
+\DoxyCodeLine{00194\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00195\ \}\ \mbox{\hyperlink{union_s_c_m_p___i_n_s_t_r_u_c_t_i_o_n}{SCMP\_INSTRUCTION}};}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00199\ \textcolor{comment}{/*\ MCMP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00200\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00201\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmcmp__format}{mcmp\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00202\ \{}
+\DoxyCodeLine{00203\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00204\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00205\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00206\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00207\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00208\ \ \ uint32\ hr\_lr\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00209\ \ \ uint32\ angle\_compare\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00210\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00211\ \ \ uint32\ save\_subtract\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00212\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00213\ \ }
+\DoxyCodeLine{00214\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00215\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00216\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00217\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00218\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00219\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00220\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00221\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00222\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{00223\ \ \ uint32\ order\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{00224\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00225\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00226\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00227\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00228\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00229\ \ }
+\DoxyCodeLine{00230\ \ \ }
+\DoxyCodeLine{00231\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00232\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00233\ \ }
+\DoxyCodeLine{00234\ \}\ \mbox{\hyperlink{structmcmp__format}{MCMP\_FIELDS}}\ ;\ }
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00237\ \{}
+\DoxyCodeLine{00238\ \ \ \mbox{\hyperlink{structmcmp__format}{MCMP\_FIELDS}}\ \ mcmp\ \ \ ;}
+\DoxyCodeLine{00239\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00240\ \}\ \mbox{\hyperlink{union_m_c_m_p___i_n_s_t_r_u_c_t_i_o_n}{MCMP\_INSTRUCTION}};}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00244\ \textcolor{comment}{/*\ MOV64\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00245\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00246\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmov64__format}{mov64\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00247\ \{}
+\DoxyCodeLine{00248\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00249\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00250\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00251\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00252\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00255\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00256\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00257\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00258\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00259\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00260\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00261\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00262\ \ \ uint32\ compare\_mode\ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00263\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00264\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00265\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00266\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00267\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00268\ \ }
+\DoxyCodeLine{00269\ \ \ }
+\DoxyCodeLine{00270\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00271\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \}\ \mbox{\hyperlink{structmov64__format}{MOV64\_FIELDS}}\ ;\ }
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00276\ \{}
+\DoxyCodeLine{00277\ \ \ \mbox{\hyperlink{structmov64__format}{MOV64\_FIELDS}}\ \ mov64\ \ ;}
+\DoxyCodeLine{00278\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ memory\ ;}
+\DoxyCodeLine{00279\ \}\ \mbox{\hyperlink{union_m_o_v64___i_n_s_t_r_u_c_t_i_o_n}{MOV64\_INSTRUCTION}};}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00283\ \textcolor{comment}{/*\ DADM64\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00284\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00285\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdadm64__format}{dadm64\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00286\ \{}
+\DoxyCodeLine{00287\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00288\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00289\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00290\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00291\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00292\ \ }
+\DoxyCodeLine{00293\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00294\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00295\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00296\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00297\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00298\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00299\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00300\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00301\ \ \ uint32\ compare\_mode\ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00302\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00303\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00304\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00305\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00306\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00307\ \ }
+\DoxyCodeLine{00308\ \ \ }
+\DoxyCodeLine{00309\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00310\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00311\ \ }
+\DoxyCodeLine{00312\ \}\ \mbox{\hyperlink{structdadm64__format}{DADM64\_FIELDS}}\ ;\ }
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00315\ \{}
+\DoxyCodeLine{00316\ \ \ \mbox{\hyperlink{structdadm64__format}{DADM64\_FIELDS}}\ \ dadm64\ ;}
+\DoxyCodeLine{00317\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ \ memory\ ;}
+\DoxyCodeLine{00318\ \}\ \mbox{\hyperlink{union_d_a_d_m64___i_n_s_t_r_u_c_t_i_o_n}{DADM64\_INSTRUCTION}};}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00322\ \textcolor{comment}{/*\ RADM64\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00323\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00324\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_r_a_d_m64__format}{RADM64\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00325\ \{}
+\DoxyCodeLine{00326\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00327\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00328\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00329\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00330\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00331\ \ }
+\DoxyCodeLine{00332\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00333\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00334\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00335\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00336\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00337\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00338\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00339\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00340\ \ \ uint32\ compare\_mode\ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00341\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00342\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00343\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00344\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00345\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00346\ \ }
+\DoxyCodeLine{00347\ \ \ }
+\DoxyCodeLine{00348\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00349\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00350\ \ }
+\DoxyCodeLine{00351\ \}\ \mbox{\hyperlink{struct_r_a_d_m64__format}{RADM64\_FIELDS}}\ ;\ }
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00355\ \{}
+\DoxyCodeLine{00356\ \ \ \mbox{\hyperlink{struct_r_a_d_m64__format}{RADM64\_FIELDS}}\ \ radm64\ ;}
+\DoxyCodeLine{00357\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ \ memory\ ;}
+\DoxyCodeLine{00358\ \}\ \mbox{\hyperlink{union_r_a_d_m64___i_n_s_t_r_u_c_t_i_o_n}{RADM64\_INSTRUCTION}};}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00362\ \textcolor{comment}{/*\ MOV32\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00363\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00364\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_m_o_v32__format}{MOV32\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00365\ \{}
+\DoxyCodeLine{00366\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00367\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00368\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00369\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00370\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00371\ \ }
+\DoxyCodeLine{00372\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00373\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00374\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00375\ \ \ uint32\ z\_flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00376\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 15\ ;}
+\DoxyCodeLine{00377\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00378\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ \ }
+\DoxyCodeLine{00379\ \ \ uint32\ move\_type\ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;\ \ \ \ \ }
+\DoxyCodeLine{00380\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00381\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00382\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00383\ \ }
+\DoxyCodeLine{00384\ \ \ }
+\DoxyCodeLine{00385\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00386\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00387\ \ }
+\DoxyCodeLine{00388\ \}\ \mbox{\hyperlink{struct_m_o_v32__format}{MOV32\_FIELDS}}\ ;\ }
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00392\ \{}
+\DoxyCodeLine{00393\ \ \ \mbox{\hyperlink{struct_m_o_v32__format}{MOV32\_FIELDS}}\ \ mov32\ \ ;}
+\DoxyCodeLine{00394\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ memory\ ;}
+\DoxyCodeLine{00395\ \}\ \mbox{\hyperlink{union_m_o_v32___i_n_s_t_r_u_c_t_i_o_n}{MOV32\_INSTRUCTION}};}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00399\ \textcolor{comment}{/*\ ADM32\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00400\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00401\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_d_m32__format}{ADM32\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00402\ \{}
+\DoxyCodeLine{00403\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00404\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00405\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00406\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00407\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00408\ \ }
+\DoxyCodeLine{00409\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00410\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00411\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 19\ ;}
+\DoxyCodeLine{00412\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00413\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00414\ \ \ uint32\ move\_type\ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00415\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00416\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00417\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00418\ \ }
+\DoxyCodeLine{00419\ \ \ }
+\DoxyCodeLine{00420\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00421\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00422\ \ }
+\DoxyCodeLine{00423\ \}\ \mbox{\hyperlink{struct_a_d_m32__format}{ADM32\_FIELDS}}\ ;\ }
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00426\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00427\ \{}
+\DoxyCodeLine{00428\ \ \ \mbox{\hyperlink{struct_a_d_m32__format}{ADM32\_FIELDS}}\ \ adm32\ \ ;}
+\DoxyCodeLine{00429\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ memory\ ;}
+\DoxyCodeLine{00430\ \}\ \mbox{\hyperlink{union_a_d_m32___i_n_s_t_r_u_c_t_i_o_n}{ADM32\_INSTRUCTION}};}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00434\ \textcolor{comment}{/*\ ADCNST\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00435\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00436\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_d_c_n_s_t__format}{ADCNST\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00437\ \{}
+\DoxyCodeLine{00438\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00439\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00440\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00441\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00442\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00443\ \ }
+\DoxyCodeLine{00444\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00445\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ \textcolor{comment}{/*\ pk\ */}}
+\DoxyCodeLine{00446\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00447\ \ \ uint32\ constant\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00448\ \ }
+\DoxyCodeLine{00449\ \ \ }
+\DoxyCodeLine{00450\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00451\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00452\ \ }
+\DoxyCodeLine{00453\ \}\ \mbox{\hyperlink{struct_a_d_c_n_s_t__format}{ADCNST\_FIELDS}}\ ;}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00457\ \{}
+\DoxyCodeLine{00458\ \ \ \mbox{\hyperlink{struct_a_d_c_n_s_t__format}{ADCNST\_FIELDS}}\ \ adcnst\ ;}
+\DoxyCodeLine{00459\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ \ memory\ ;}
+\DoxyCodeLine{00460\ \}\ \mbox{\hyperlink{union_a_d_c_n_s_t___i_n_s_t_r_u_c_t_i_o_n}{ADCNST\_INSTRUCTION}};}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00463\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00464\ \textcolor{comment}{/*\ ADD\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00465\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00467\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_d_d__format}{ADD\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00468\ \{}
+\DoxyCodeLine{00469\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00470\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00471\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00472\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00473\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00474\ \ }
+\DoxyCodeLine{00475\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00476\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00477\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00478\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00479\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00480\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00481\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00482\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00483\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00484\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00485\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00486\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00487\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00488\ \ }
+\DoxyCodeLine{00489\ \ \ }
+\DoxyCodeLine{00490\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00491\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00492\ \ }
+\DoxyCodeLine{00493\ \}\ \mbox{\hyperlink{struct_a_d_d__format}{ADD\_FIELDS}}\ ;}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00497\ \{}
+\DoxyCodeLine{00498\ \ \ \mbox{\hyperlink{struct_a_d_d__format}{ADD\_FIELDS}}\ \ add\ ;}
+\DoxyCodeLine{00499\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{00500\ \}\ \mbox{\hyperlink{union_a_d_d___i_n_s_t_r_u_c_t_i_o_n}{ADD\_INSTRUCTION}};}
+\DoxyCodeLine{00501\ }
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00505\ \textcolor{comment}{/*\ ADC\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00506\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00508\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_d_c__format}{ADC\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00509\ \{}
+\DoxyCodeLine{00510\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00511\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00512\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00513\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00514\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00515\ \ }
+\DoxyCodeLine{00516\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00517\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00518\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00519\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00520\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00521\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00522\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00523\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00524\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00525\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00526\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00527\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00528\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00529\ \ }
+\DoxyCodeLine{00530\ \ \ }
+\DoxyCodeLine{00531\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00532\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00533\ \ }
+\DoxyCodeLine{00534\ \}\ \mbox{\hyperlink{struct_a_d_c__format}{ADC\_FIELDS}}\ ;}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ }
+\DoxyCodeLine{00537\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00538\ \{}
+\DoxyCodeLine{00539\ \ \ \mbox{\hyperlink{struct_a_d_c__format}{ADC\_FIELDS}}\ \ adc\ ;}
+\DoxyCodeLine{00540\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{00541\ \}\ \mbox{\hyperlink{union_a_d_c___i_n_s_t_r_u_c_t_i_o_n}{ADC\_INSTRUCTION}};}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ }
+\DoxyCodeLine{00545\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00546\ \textcolor{comment}{/*\ SUB\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00547\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00548\ }
+\DoxyCodeLine{00549\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_u_b__format}{SUB\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00550\ \{}
+\DoxyCodeLine{00551\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00552\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00553\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00554\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00555\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00556\ \ }
+\DoxyCodeLine{00557\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00558\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00559\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00560\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00561\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00562\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00563\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00564\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00565\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00566\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00567\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00568\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00569\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00570\ \ }
+\DoxyCodeLine{00571\ \ \ }
+\DoxyCodeLine{00572\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00573\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00574\ \ }
+\DoxyCodeLine{00575\ \}\ \mbox{\hyperlink{struct_s_u_b__format}{SUB\_FIELDS}}\ ;}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00578\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00579\ \{}
+\DoxyCodeLine{00580\ \ \ \mbox{\hyperlink{struct_s_u_b__format}{SUB\_FIELDS}}\ \ sub\ ;}
+\DoxyCodeLine{00581\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{00582\ \}\ \mbox{\hyperlink{union_s_u_b___i_n_s_t_r_u_c_t_i_o_n}{SUB\_INSTRUCTION}};}
+\DoxyCodeLine{00583\ }
+\DoxyCodeLine{00584\ }
+\DoxyCodeLine{00585\ }
+\DoxyCodeLine{00586\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00587\ \textcolor{comment}{/*\ SBB\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00588\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00590\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_b_b__format}{SBB\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00591\ \{}
+\DoxyCodeLine{00592\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00593\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00594\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00595\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00596\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00597\ \ }
+\DoxyCodeLine{00598\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00599\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00600\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00601\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00602\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00603\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00604\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00605\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00606\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00607\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00608\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00609\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00610\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00611\ \ }
+\DoxyCodeLine{00612\ \ \ }
+\DoxyCodeLine{00613\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00614\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00615\ \ }
+\DoxyCodeLine{00616\ \}\ \mbox{\hyperlink{struct_s_b_b__format}{SBB\_FIELDS}}\ ;}
+\DoxyCodeLine{00617\ }
+\DoxyCodeLine{00618\ }
+\DoxyCodeLine{00619\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00620\ \{}
+\DoxyCodeLine{00621\ \ \ \mbox{\hyperlink{struct_s_b_b__format}{SBB\_FIELDS}}\ \ sbb\ ;}
+\DoxyCodeLine{00622\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{00623\ \}\ \mbox{\hyperlink{union_s_b_b___i_n_s_t_r_u_c_t_i_o_n}{SBB\_INSTRUCTION}};}
+\DoxyCodeLine{00624\ }
+\DoxyCodeLine{00625\ }
+\DoxyCodeLine{00626\ }
+\DoxyCodeLine{00627\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00628\ \textcolor{comment}{/*\ AND\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00629\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00630\ }
+\DoxyCodeLine{00631\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_n_d__format}{AND\_format}}}
+\DoxyCodeLine{00632\ \{}
+\DoxyCodeLine{00633\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00634\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00635\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00636\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00637\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00638\ \ }
+\DoxyCodeLine{00639\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00640\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00641\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00642\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00643\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00644\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00645\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00646\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00647\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00648\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00649\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00650\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00651\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00652\ \ }
+\DoxyCodeLine{00653\ \ \ }
+\DoxyCodeLine{00654\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00655\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00656\ \ }
+\DoxyCodeLine{00657\ \}\ \mbox{\hyperlink{struct_a_n_d__format}{AND\_FIELDS}}\ ;}
+\DoxyCodeLine{00658\ }
+\DoxyCodeLine{00659\ }
+\DoxyCodeLine{00660\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00661\ \{}
+\DoxyCodeLine{00662\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00663\ \ \ \mbox{\hyperlink{struct_a_n_d__format}{AND\_FIELDS}}\ \ and\_cpp\ ;}
+\DoxyCodeLine{00664\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00665\ \ \ \mbox{\hyperlink{struct_a_n_d__format}{AND\_FIELDS}}\ \ and\ ;}
+\DoxyCodeLine{00666\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00667\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{00668\ \}\ \mbox{\hyperlink{union_a_n_d___i_n_s_t_r_u_c_t_i_o_n}{AND\_INSTRUCTION}};}
+\DoxyCodeLine{00669\ }
+\DoxyCodeLine{00670\ }
+\DoxyCodeLine{00671\ }
+\DoxyCodeLine{00672\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00673\ \textcolor{comment}{/*\ OR\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00674\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00675\ }
+\DoxyCodeLine{00676\ }
+\DoxyCodeLine{00677\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_o_r__format}{OR\_format}}}
+\DoxyCodeLine{00678\ \{}
+\DoxyCodeLine{00679\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00680\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00681\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00682\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00683\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00684\ \ }
+\DoxyCodeLine{00685\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00686\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00687\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00688\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00689\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00690\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00691\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00692\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00693\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00694\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00695\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00696\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00697\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00698\ \ }
+\DoxyCodeLine{00699\ \ \ }
+\DoxyCodeLine{00700\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00701\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00702\ \ }
+\DoxyCodeLine{00703\ \}\ \mbox{\hyperlink{struct_o_r__format}{OR\_FIELDS}}\ ;}
+\DoxyCodeLine{00704\ }
+\DoxyCodeLine{00705\ }
+\DoxyCodeLine{00706\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00707\ \{}
+\DoxyCodeLine{00708\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00709\ \ \ \mbox{\hyperlink{struct_o_r__format}{OR\_FIELDS}}\ \ or\_cpp\ ;}
+\DoxyCodeLine{00710\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00711\ \ \ \mbox{\hyperlink{struct_o_r__format}{OR\_FIELDS}}\ \ or\ ;}
+\DoxyCodeLine{00712\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00713\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{00714\ \}\ \mbox{\hyperlink{union_o_r___i_n_s_t_r_u_c_t_i_o_n}{OR\_INSTRUCTION}};}
+\DoxyCodeLine{00715\ }
+\DoxyCodeLine{00716\ }
+\DoxyCodeLine{00717\ }
+\DoxyCodeLine{00718\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00719\ \textcolor{comment}{/*\ XOR\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00720\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00721\ }
+\DoxyCodeLine{00722\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_x_o_r__format}{XOR\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00723\ \{}
+\DoxyCodeLine{00724\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00725\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00726\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00727\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00728\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00729\ \ }
+\DoxyCodeLine{00730\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00731\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00732\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00733\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00734\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00735\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00736\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00737\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00738\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00739\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00740\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00741\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00742\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00743\ \ }
+\DoxyCodeLine{00744\ \ \ }
+\DoxyCodeLine{00745\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00746\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00747\ \ }
+\DoxyCodeLine{00748\ \}\ \mbox{\hyperlink{struct_x_o_r__format}{XOR\_FIELDS}}\ ;}
+\DoxyCodeLine{00749\ }
+\DoxyCodeLine{00750\ }
+\DoxyCodeLine{00751\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00752\ \{}
+\DoxyCodeLine{00753\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00754\ \ \ \mbox{\hyperlink{struct_x_o_r__format}{XOR\_FIELDS}}\ \ xor\_cpp\ ;}
+\DoxyCodeLine{00755\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00756\ \ \ \mbox{\hyperlink{struct_x_o_r__format}{XOR\_FIELDS}}\ \ xor\ ;}
+\DoxyCodeLine{00757\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00758\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{00759\ \}\ \mbox{\hyperlink{union_x_o_r___i_n_s_t_r_u_c_t_i_o_n}{XOR\_INSTRUCTION}};}
+\DoxyCodeLine{00760\ }
+\DoxyCodeLine{00761\ }
+\DoxyCodeLine{00762\ }
+\DoxyCodeLine{00763\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00764\ \textcolor{comment}{/*\ CNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00765\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00766\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_n_t__format}{CNT\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00767\ \{}
+\DoxyCodeLine{00768\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00769\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00770\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00771\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00772\ \ \ uint32\ angle\_cnt\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00773\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00774\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00775\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00776\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00777\ \ }
+\DoxyCodeLine{00778\ }
+\DoxyCodeLine{00779\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00780\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00781\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00782\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00783\ \ \ uint32\ max\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00784\ }
+\DoxyCodeLine{00785\ \ \ }
+\DoxyCodeLine{00786\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00787\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00788\ }
+\DoxyCodeLine{00789\ \}\ \mbox{\hyperlink{struct_c_n_t__format}{CNT\_FIELDS}}\ ;\ }
+\DoxyCodeLine{00790\ }
+\DoxyCodeLine{00791\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00792\ \{}
+\DoxyCodeLine{00793\ \ \ \mbox{\hyperlink{struct_c_n_t__format}{CNT\_FIELDS}}\ \ \ cnt\ \ \ \ ;\ }
+\DoxyCodeLine{00794\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00795\ \}\ \mbox{\hyperlink{union_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{CNT\_INSTRUCTION}};}
+\DoxyCodeLine{00796\ }
+\DoxyCodeLine{00797\ }
+\DoxyCodeLine{00798\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00799\ \textcolor{comment}{/*\ APCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00800\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00801\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structapcnt__format}{apcnt\_format}}}
+\DoxyCodeLine{00802\ \{}
+\DoxyCodeLine{00803\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00804\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00805\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00806\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00807\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00808\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00809\ \ \ uint32\ edge\_select\ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00810\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00811\ }
+\DoxyCodeLine{00812\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00813\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00814\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00815\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00816\ \ \ uint32\ count\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00817\ \ }
+\DoxyCodeLine{00818\ \ \ }
+\DoxyCodeLine{00819\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00820\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00821\ \ }
+\DoxyCodeLine{00822\ \}\ \mbox{\hyperlink{structapcnt__format}{APCNT\_FIELDS}}\ ;}
+\DoxyCodeLine{00823\ \ }
+\DoxyCodeLine{00824\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{00825\ \{}
+\DoxyCodeLine{00826\ \ \ \mbox{\hyperlink{structapcnt__format}{APCNT\_FIELDS}}\ \ apcnt\ \ \ ;}
+\DoxyCodeLine{00827\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00828\ \}\ \mbox{\hyperlink{union_a_p_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{APCNT\_INSTRUCTION}};}
+\DoxyCodeLine{00829\ \ }
+\DoxyCodeLine{00830\ \ }
+\DoxyCodeLine{00831\ }
+\DoxyCodeLine{00832\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00833\ \textcolor{comment}{/*\ PCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00834\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00835\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpcnt__format}{pcnt\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00836\ \{}
+\DoxyCodeLine{00837\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00838\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00839\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00840\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00841\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00842\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00843\ \ \ uint32\ period\_pulse\_select\ \ :\ 2\ ;}
+\DoxyCodeLine{00844\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00845\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00846\ }
+\DoxyCodeLine{00847\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00848\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00849\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00850\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00851\ \ \ uint32\ count\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00852\ }
+\DoxyCodeLine{00853\ \ \ }
+\DoxyCodeLine{00854\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00855\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00856\ }
+\DoxyCodeLine{00857\ \}\ \mbox{\hyperlink{structpcnt__format}{PCNT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{00858\ }
+\DoxyCodeLine{00859\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00860\ \{}
+\DoxyCodeLine{00861\ \ \ \mbox{\hyperlink{structpcnt__format}{PCNT\_FIELDS}}\ \ pcnt\ \ \ ;\ }
+\DoxyCodeLine{00862\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00863\ \}\ \mbox{\hyperlink{union_p_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{PCNT\_INSTRUCTION}};}
+\DoxyCodeLine{00864\ }
+\DoxyCodeLine{00865\ }
+\DoxyCodeLine{00866\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00867\ \textcolor{comment}{/*\ SCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00868\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00869\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structscnt__format}{scnt\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00870\ \{}
+\DoxyCodeLine{00871\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00872\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00873\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00874\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00875\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00876\ \ \ uint32\ count\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00877\ \ \ uint32\ step\_width\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00878\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00879\ }
+\DoxyCodeLine{00880\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00881\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00882\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00883\ \ \ uint32\ gap\_start\ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00884\ }
+\DoxyCodeLine{00885\ \ \ }
+\DoxyCodeLine{00886\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00887\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00888\ }
+\DoxyCodeLine{00889\ \}\ \mbox{\hyperlink{structscnt__format}{SCNT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{00890\ }
+\DoxyCodeLine{00891\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00892\ \{}
+\DoxyCodeLine{00893\ \ \ \mbox{\hyperlink{structscnt__format}{SCNT\_FIELDS}}\ \ scnt\ \ \ ;\ }
+\DoxyCodeLine{00894\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00895\ \}\ \mbox{\hyperlink{union_s_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{SCNT\_INSTRUCTION}};}
+\DoxyCodeLine{00896\ }
+\DoxyCodeLine{00897\ }
+\DoxyCodeLine{00898\ }
+\DoxyCodeLine{00899\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00900\ \textcolor{comment}{/*\ ACNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00901\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00902\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structacnt__format}{acnt\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00903\ \{}
+\DoxyCodeLine{00904\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00905\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00906\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00907\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00908\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00909\ \ \ uint32\ edge\_select\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00910\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00911\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{00912\ }
+\DoxyCodeLine{00913\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00914\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00915\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00916\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00917\ \ \ uint32\ gap\_end\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00918\ \ }
+\DoxyCodeLine{00919\ \ \ }
+\DoxyCodeLine{00920\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00921\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00922\ }
+\DoxyCodeLine{00923\ \}\ \mbox{\hyperlink{structacnt__format}{ACNT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{00924\ }
+\DoxyCodeLine{00925\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00926\ \{}
+\DoxyCodeLine{00927\ \ \ \mbox{\hyperlink{structacnt__format}{ACNT\_FIELDS}}\ \ acnt\ \ \ ;\ }
+\DoxyCodeLine{00928\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00929\ \}\ \mbox{\hyperlink{union_a_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{ACNT\_INSTRUCTION}};}
+\DoxyCodeLine{00930\ }
+\DoxyCodeLine{00931\ }
+\DoxyCodeLine{00932\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00933\ \textcolor{comment}{/*\ ECNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00934\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00935\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structecnt__format}{ecnt\_format}}}
+\DoxyCodeLine{00936\ \{}
+\DoxyCodeLine{00937\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00938\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00939\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00940\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00941\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00942\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00943\ \ \ uint32\ count\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00944\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00945\ \ }
+\DoxyCodeLine{00946\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00947\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00948\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00949\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00950\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00951\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{00952\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00953\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00954\ \ \ uint32\ count\_cond\ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00955\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00956\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00957\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{00958\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00959\ }
+\DoxyCodeLine{00960\ \ \ }
+\DoxyCodeLine{00961\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00962\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00963\ \ }
+\DoxyCodeLine{00964\ \}\ \mbox{\hyperlink{structecnt__format}{ECNT\_FIELDS}}\ ;}
+\DoxyCodeLine{00965\ \ }
+\DoxyCodeLine{00966\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{00967\ \{}
+\DoxyCodeLine{00968\ \ \ \mbox{\hyperlink{structecnt__format}{ECNT\_FIELDS}}\ \ ecnt\ \ \ ;}
+\DoxyCodeLine{00969\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{00970\ \}\ \mbox{\hyperlink{union_e_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{ECNT\_INSTRUCTION}};}
+\DoxyCodeLine{00971\ }
+\DoxyCodeLine{00972\ }
+\DoxyCodeLine{00973\ }
+\DoxyCodeLine{00974\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00975\ \textcolor{comment}{/*\ RCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00976\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00977\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrcnt__format}{rcnt\_format}}}
+\DoxyCodeLine{00978\ \{}
+\DoxyCodeLine{00979\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{00980\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00981\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00982\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{00983\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{00984\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00985\ \ \ uint32\ count\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00986\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{00987\ \ \ uint32\ count\_mode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00988\ \ }
+\DoxyCodeLine{00989\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{00990\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{00991\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00992\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{00993\ \ \ uint32\ divisor\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00994\ }
+\DoxyCodeLine{00995\ \ \ }
+\DoxyCodeLine{00996\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{00997\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{00998\ \ }
+\DoxyCodeLine{00999\ \}\ \mbox{\hyperlink{structrcnt__format}{RCNT\_FIELDS}}\ ;}
+\DoxyCodeLine{01000\ \ }
+\DoxyCodeLine{01001\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{01002\ \{}
+\DoxyCodeLine{01003\ \ \ \mbox{\hyperlink{structrcnt__format}{RCNT\_FIELDS}}\ \ rcnt\ \ \ ;}
+\DoxyCodeLine{01004\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01005\ \}\ \mbox{\hyperlink{union_r_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{RCNT\_INSTRUCTION}};}
+\DoxyCodeLine{01006\ }
+\DoxyCodeLine{01007\ }
+\DoxyCodeLine{01008\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01009\ \textcolor{comment}{/*\ DJNZ\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01010\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdjnz__format}{djnz\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01012\ \{}
+\DoxyCodeLine{01013\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01014\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01015\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01016\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01017\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01018\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01019\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01020\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01021\ }
+\DoxyCodeLine{01022\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01023\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01024\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01025\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01026\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01027\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 10\ ;}
+\DoxyCodeLine{01028\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01029\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01030\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01031\ }
+\DoxyCodeLine{01032\ \ \ }
+\DoxyCodeLine{01033\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01034\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01035\ }
+\DoxyCodeLine{01036\ \}\ \mbox{\hyperlink{structdjnz__format}{DJNZ\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{01037\ }
+\DoxyCodeLine{01038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01039\ \{}
+\DoxyCodeLine{01040\ \ \ \mbox{\hyperlink{structdjnz__format}{DJNZ\_FIELDS}}\ \ djnz\ \ \ ;\ }
+\DoxyCodeLine{01041\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01042\ \}\ \mbox{\hyperlink{union_d_j_n_z___i_n_s_t_r_u_c_t_i_o_n}{DJNZ\_INSTRUCTION}};}
+\DoxyCodeLine{01043\ }
+\DoxyCodeLine{01044\ }
+\DoxyCodeLine{01045\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01046\ \textcolor{comment}{/*\ DJZ\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01047\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdjz__format}{djz\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01049\ \{}
+\DoxyCodeLine{01050\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01051\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01052\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01053\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01054\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01055\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01056\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01057\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01058\ }
+\DoxyCodeLine{01059\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01060\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01061\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01062\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01063\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01064\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 10\ ;}
+\DoxyCodeLine{01065\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01066\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01067\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01068\ }
+\DoxyCodeLine{01069\ \ \ }
+\DoxyCodeLine{01070\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01071\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01072\ }
+\DoxyCodeLine{01073\ \}\ \mbox{\hyperlink{structdjz__format}{DJZ\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{01074\ }
+\DoxyCodeLine{01075\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01076\ \{}
+\DoxyCodeLine{01077\ \ \ \mbox{\hyperlink{structdjz__format}{DJZ\_FIELDS}}\ \ djz\ \ \ ;\ }
+\DoxyCodeLine{01078\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01079\ \}\ \mbox{\hyperlink{union_d_j_z___i_n_s_t_r_u_c_t_i_o_n}{DJZ\_INSTRUCTION}};}
+\DoxyCodeLine{01080\ }
+\DoxyCodeLine{01081\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01082\ \textcolor{comment}{/*\ PWCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01083\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01084\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpwcnt__format}{pwcnt\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01085\ \{}
+\DoxyCodeLine{01086\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01087\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01088\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01089\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01090\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01091\ \ \ uint32\ hr\_lr\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01092\ \ \ uint32\ count\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01093\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01094\ }
+\DoxyCodeLine{01095\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01096\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01097\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01098\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01099\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01100\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01101\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01102\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01103\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01104\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01105\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01106\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01107\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01108\ }
+\DoxyCodeLine{01109\ \ \ }
+\DoxyCodeLine{01110\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01111\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01112\ \ }
+\DoxyCodeLine{01113\ \}\ \mbox{\hyperlink{structpwcnt__format}{PWCNT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{01114\ }
+\DoxyCodeLine{01115\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01116\ \{}
+\DoxyCodeLine{01117\ \ \ \mbox{\hyperlink{structpwcnt__format}{PWCNT\_FIELDS}}\ \ pwcnt\ ;}
+\DoxyCodeLine{01118\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01119\ \}\ \mbox{\hyperlink{union_p_w_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{PWCNT\_INSTRUCTION}};}
+\DoxyCodeLine{01120\ }
+\DoxyCodeLine{01121\ }
+\DoxyCodeLine{01122\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01123\ \textcolor{comment}{/*\ WCAP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01124\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01125\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structwcap__format}{wcap\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01126\ \{}
+\DoxyCodeLine{01127\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01128\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01129\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01130\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01131\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01132\ \ \ uint32\ hr\_lr\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01133\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 8\ ;}
+\DoxyCodeLine{01134\ \ \ }
+\DoxyCodeLine{01135\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01136\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01137\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01138\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01139\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01140\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01141\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01142\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01143\ \ \ uint32\ capture\_condition\ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01144\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01145\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01146\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01147\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01148\ }
+\DoxyCodeLine{01149\ \ \ }
+\DoxyCodeLine{01150\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01151\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01152\ }
+\DoxyCodeLine{01153\ \}\ \mbox{\hyperlink{structwcap__format}{WCAP\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{01154\ }
+\DoxyCodeLine{01155\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01156\ \{}
+\DoxyCodeLine{01157\ \ \ \mbox{\hyperlink{structwcap__format}{WCAP\_FIELDS}}\ \ wcap\ \ \ ;\ }
+\DoxyCodeLine{01158\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01159\ \}\ \mbox{\hyperlink{union_w_c_a_p___i_n_s_t_r_u_c_t_i_o_n}{WCAP\_INSTRUCTION}};}
+\DoxyCodeLine{01160\ \ }
+\DoxyCodeLine{01161\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01162\ \textcolor{comment}{/*\ WCAPE\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01163\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01164\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structwcape__format}{wcape\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01165\ \{}
+\DoxyCodeLine{01166\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01167\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01168\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01169\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01170\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01171\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01172\ \ \ }
+\DoxyCodeLine{01173\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01174\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01175\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01176\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01177\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01178\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01179\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01180\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01181\ \ \ uint32\ capture\_condition\ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01182\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01183\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01184\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01185\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01186\ }
+\DoxyCodeLine{01187\ \ \ }
+\DoxyCodeLine{01188\ \ \ uint32\ ts\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01189\ \ \ uint32\ ec\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01190\ }
+\DoxyCodeLine{01191\ \}\ \mbox{\hyperlink{structwcape__format}{WCAPE\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{01192\ }
+\DoxyCodeLine{01193\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01194\ \{}
+\DoxyCodeLine{01195\ \ \ \mbox{\hyperlink{structwcape__format}{WCAPE\_FIELDS}}\ \ wcape\ \ \ ;\ }
+\DoxyCodeLine{01196\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01197\ \}\ \mbox{\hyperlink{union_w_c_a_p_e___i_n_s_t_r_u_c_t_i_o_n}{WCAPE\_INSTRUCTION}};}
+\DoxyCodeLine{01198\ \ }
+\DoxyCodeLine{01199\ }
+\DoxyCodeLine{01200\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01201\ \textcolor{comment}{/*\ BR\ \ \ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01202\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01203\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbr__format}{br\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01204\ \{}
+\DoxyCodeLine{01205\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01206\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01207\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01208\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01209\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01210\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01211\ }
+\DoxyCodeLine{01212\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01213\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01214\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01215\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01216\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01217\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01218\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01219\ }
+\DoxyCodeLine{01220\ \textcolor{preprocessor}{\#if\ HET\_v2}}
+\DoxyCodeLine{01221\ \ \ uint32\ branch\_condition\ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01222\ \textcolor{preprocessor}{\#else\ }}
+\DoxyCodeLine{01223\ \ \ uint32\ branch\_condition\ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01224\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01225\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01226\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{01227\ }
+\DoxyCodeLine{01228\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01229\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01230\ \ }
+\DoxyCodeLine{01231\ \ \ }
+\DoxyCodeLine{01232\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01233\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01234\ \ }
+\DoxyCodeLine{01235\ \}\ \mbox{\hyperlink{structbr__format}{BR\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{01236\ }
+\DoxyCodeLine{01237\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01238\ \{}
+\DoxyCodeLine{01239\ \ \ \mbox{\hyperlink{structbr__format}{BR\_FIELDS}}\ \ br\ \ \ \ \ ;\ }
+\DoxyCodeLine{01240\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ memory\ ;}
+\DoxyCodeLine{01241\ \}\ \mbox{\hyperlink{union_b_r___i_n_s_t_r_u_c_t_i_o_n}{BR\_INSTRUCTION}};}
+\DoxyCodeLine{01242\ }
+\DoxyCodeLine{01243\ \ }
+\DoxyCodeLine{01244\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01245\ \textcolor{comment}{/*\ SHFT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01246\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01247\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structshft__format}{shft\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01248\ \{}
+\DoxyCodeLine{01249\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01250\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01251\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01252\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01253\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01254\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01255\ \ \ uint32\ shift\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01256\ \ }
+\DoxyCodeLine{01257\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01258\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01259\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01260\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01261\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01262\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01263\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01264\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01265\ \ \ uint32\ shift\_condition\ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01266\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01267\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01268\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01269\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01270\ }
+\DoxyCodeLine{01271\ \ \ }
+\DoxyCodeLine{01272\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01273\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01274\ }
+\DoxyCodeLine{01275\ \}\ \mbox{\hyperlink{structshft__format}{SHFT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{01276\ }
+\DoxyCodeLine{01277\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01278\ \{}
+\DoxyCodeLine{01279\ \ \ \mbox{\hyperlink{structshft__format}{SHFT\_FIELDS}}\ \ shft\ \ \ ;\ }
+\DoxyCodeLine{01280\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01281\ \}\ \mbox{\hyperlink{union_s_h_f_t___i_n_s_t_r_u_c_t_i_o_n}{SHFT\_INSTRUCTION}};}
+\DoxyCodeLine{01282\ }
+\DoxyCodeLine{01283\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{01284\ }
+\DoxyCodeLine{01285\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01286\ }
+\DoxyCodeLine{01287\ \textcolor{preprocessor}{\#ifndef\ HETBYTE}}
+\DoxyCodeLine{01288\ \textcolor{preprocessor}{\#\ \ \ define\ HETBYTE\ uint8}}
+\DoxyCodeLine{01289\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01290\ }
+\DoxyCodeLine{01291\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmemory__format}{memory\_format}}}
+\DoxyCodeLine{01292\ \{}
+\DoxyCodeLine{01293\ \ \ uint32\ program\_word\ \ ;}
+\DoxyCodeLine{01294\ \ \ uint32\ control\_word\ \ ;}
+\DoxyCodeLine{01295\ \ \ uint32\ data\_word\ \ \ \ \ ;}
+\DoxyCodeLine{01296\ \ \ uint32\ reserved\_word\ ;}
+\DoxyCodeLine{01297\ \}\ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ ;}
+\DoxyCodeLine{01298\ \ }
+\DoxyCodeLine{01299\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01300\ \textcolor{comment}{/*\ ACMP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01301\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01302\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structacmp__format}{acmp\_format}}}
+\DoxyCodeLine{01303\ \{}
+\DoxyCodeLine{01304\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01305\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01306\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01307\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01308\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01309\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01310\ }
+\DoxyCodeLine{01311\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01312\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01313\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01314\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01315\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01316\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01317\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01318\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01319\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01320\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01321\ \ \ uint32\ coutprv\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01322\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01323\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01324\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;\ }
+\DoxyCodeLine{01325\ }
+\DoxyCodeLine{01326\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ \ ;}
+\DoxyCodeLine{01327\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01328\ \ }
+\DoxyCodeLine{01329\ \}\ \mbox{\hyperlink{structacmp__format}{ACMP\_FIELDS}};}
+\DoxyCodeLine{01330\ \ }
+\DoxyCodeLine{01331\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{01332\ \{}
+\DoxyCodeLine{01333\ \ \ \mbox{\hyperlink{structacmp__format}{ACMP\_FIELDS}}\ \ acmp\ \ \ ;}
+\DoxyCodeLine{01334\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01335\ \}\ \mbox{\hyperlink{union_a_c_m_p___i_n_s_t_r_u_c_t_i_o_n}{ACMP\_INSTRUCTION}};}
+\DoxyCodeLine{01336\ }
+\DoxyCodeLine{01337\ }
+\DoxyCodeLine{01338\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01339\ \textcolor{comment}{/*\ ECMP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01340\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01341\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structecmp__format}{ecmp\_format}}\ \ \ }
+\DoxyCodeLine{01342\ \{}
+\DoxyCodeLine{01343\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01344\ \ \ uint32\ angle\_compare\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01345\ \ \ uint32\ hr\_lr\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01346\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01347\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01348\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01349\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01350\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01351\ }
+\DoxyCodeLine{01352\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01353\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01354\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01355\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01356\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01357\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01358\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01359\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01360\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01361\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01362\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01363\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01364\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01365\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01366\ \ \ }
+\DoxyCodeLine{01367\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01368\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01369\ }
+\DoxyCodeLine{01370\ \}\ \mbox{\hyperlink{structecmp__format}{ECMP\_FIELDS}};}
+\DoxyCodeLine{01371\ }
+\DoxyCodeLine{01372\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01373\ \{}
+\DoxyCodeLine{01374\ \ \ \mbox{\hyperlink{structecmp__format}{ECMP\_FIELDS}}\ \ ecmp\ \ \ ;}
+\DoxyCodeLine{01375\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01376\ \}\ \mbox{\hyperlink{union_e_c_m_p___i_n_s_t_r_u_c_t_i_o_n}{ECMP\_INSTRUCTION}};}
+\DoxyCodeLine{01377\ }
+\DoxyCodeLine{01378\ }
+\DoxyCodeLine{01379\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01380\ \textcolor{comment}{/*\ SCMP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01381\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01382\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structscmp__format}{scmp\_format}}\ \ \ \ \ }
+\DoxyCodeLine{01383\ \{}
+\DoxyCodeLine{01384\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01385\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01386\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01387\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01388\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01389\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01390\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01391\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01392\ }
+\DoxyCodeLine{01393\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01394\ \ \ uint32\ restart\_en\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01395\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01396\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01397\ \ \ uint32\ compare\_mode\ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01398\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01399\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01400\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01401\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01402\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01403\ \ \ uint32\ coutprv\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01404\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01405\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01406\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01407\ \ \ }
+\DoxyCodeLine{01408\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01409\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01410\ }
+\DoxyCodeLine{01411\ \}\ \mbox{\hyperlink{structscmp__format}{SCMP\_FIELDS}}\ ;}
+\DoxyCodeLine{01412\ }
+\DoxyCodeLine{01413\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01414\ \{}
+\DoxyCodeLine{01415\ \ \ \mbox{\hyperlink{structscmp__format}{SCMP\_FIELDS}}\ \ scmp\ \ \ ;}
+\DoxyCodeLine{01416\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01417\ \}\ \mbox{\hyperlink{union_s_c_m_p___i_n_s_t_r_u_c_t_i_o_n}{SCMP\_INSTRUCTION}};}
+\DoxyCodeLine{01418\ }
+\DoxyCodeLine{01419\ }
+\DoxyCodeLine{01420\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01421\ \textcolor{comment}{/*\ MCMP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01422\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01423\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmcmp__format}{mcmp\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01424\ \{}
+\DoxyCodeLine{01425\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01426\ \ \ uint32\ save\_subtract\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01427\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01428\ \ \ uint32\ angle\_compare\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01429\ \ \ uint32\ hr\_lr\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01430\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01431\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01432\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01433\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01434\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{01435\ \ }
+\DoxyCodeLine{01436\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01437\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01438\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01439\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01440\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01441\ \ \ uint32\ order\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01442\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{01443\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01444\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01445\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01446\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01447\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01448\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01449\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01450\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01451\ \ }
+\DoxyCodeLine{01452\ \ \ }
+\DoxyCodeLine{01453\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01454\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;\ }
+\DoxyCodeLine{01455\ }
+\DoxyCodeLine{01456\ \}\ \mbox{\hyperlink{structmcmp__format}{MCMP\_FIELDS}}\ ;\ }
+\DoxyCodeLine{01457\ }
+\DoxyCodeLine{01458\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01459\ \{}
+\DoxyCodeLine{01460\ \ \ \mbox{\hyperlink{structmcmp__format}{MCMP\_FIELDS}}\ \ mcmp\ \ \ ;}
+\DoxyCodeLine{01461\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{01462\ \}\ \mbox{\hyperlink{union_m_c_m_p___i_n_s_t_r_u_c_t_i_o_n}{MCMP\_INSTRUCTION}};}
+\DoxyCodeLine{01463\ }
+\DoxyCodeLine{01464\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01465\ \textcolor{comment}{/*\ MOV64\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01466\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01467\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmov64__format}{mov64\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01468\ \{}
+\DoxyCodeLine{01469\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01470\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01471\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01472\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01473\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01474\ }
+\DoxyCodeLine{01475\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01476\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01477\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01478\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01479\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01480\ \ \ uint32\ compare\_mode\ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01481\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01482\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01483\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01484\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01485\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01486\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01487\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01488\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;\ }
+\DoxyCodeLine{01489\ \ \ }
+\DoxyCodeLine{01490\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01491\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01492\ }
+\DoxyCodeLine{01493\ \}\ \mbox{\hyperlink{structmov64__format}{MOV64\_FIELDS}}\ ;\ }
+\DoxyCodeLine{01494\ }
+\DoxyCodeLine{01495\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01496\ \{}
+\DoxyCodeLine{01497\ \ \ \mbox{\hyperlink{structmov64__format}{MOV64\_FIELDS}}\ \ mov64\ \ ;}
+\DoxyCodeLine{01498\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ memory\ ;}
+\DoxyCodeLine{01499\ \}\ \mbox{\hyperlink{union_m_o_v64___i_n_s_t_r_u_c_t_i_o_n}{MOV64\_INSTRUCTION}};}
+\DoxyCodeLine{01500\ }
+\DoxyCodeLine{01501\ }
+\DoxyCodeLine{01502\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01503\ \textcolor{comment}{/*\ DADM64\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01504\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01505\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdadm64__format}{dadm64\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01506\ \{}
+\DoxyCodeLine{01507\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01508\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01509\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01510\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01511\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01512\ }
+\DoxyCodeLine{01513\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01514\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01515\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01516\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01517\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01518\ \ \ uint32\ compare\_mode\ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01519\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01520\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01521\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01522\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01523\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01524\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01525\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01526\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;\ }
+\DoxyCodeLine{01527\ \ \ }
+\DoxyCodeLine{01528\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01529\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01530\ \ }
+\DoxyCodeLine{01531\ \}\ \mbox{\hyperlink{structdadm64__format}{DADM64\_FIELDS}}\ ;\ }
+\DoxyCodeLine{01532\ }
+\DoxyCodeLine{01533\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01534\ \{}
+\DoxyCodeLine{01535\ \ \ \mbox{\hyperlink{structdadm64__format}{DADM64\_FIELDS}}\ \ dadm64\ ;}
+\DoxyCodeLine{01536\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ \ memory\ ;}
+\DoxyCodeLine{01537\ \}\ \mbox{\hyperlink{union_d_a_d_m64___i_n_s_t_r_u_c_t_i_o_n}{DADM64\_INSTRUCTION}};}
+\DoxyCodeLine{01538\ }
+\DoxyCodeLine{01539\ }
+\DoxyCodeLine{01540\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01541\ \textcolor{comment}{/*\ RADM64\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01542\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01543\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_r_a_d_m64__format}{RADM64\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01544\ \{}
+\DoxyCodeLine{01545\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01546\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01547\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01548\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01549\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01550\ }
+\DoxyCodeLine{01551\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01552\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01553\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01554\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01555\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01556\ \ \ uint32\ compare\_mode\ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01557\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01558\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01559\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01560\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01561\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01562\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01563\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01564\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;\ }
+\DoxyCodeLine{01565\ \ \ }
+\DoxyCodeLine{01566\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01567\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;\ }
+\DoxyCodeLine{01568\ }
+\DoxyCodeLine{01569\ \}\ \mbox{\hyperlink{struct_r_a_d_m64__format}{RADM64\_FIELDS}}\ ;\ }
+\DoxyCodeLine{01570\ }
+\DoxyCodeLine{01571\ }
+\DoxyCodeLine{01572\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01573\ \{}
+\DoxyCodeLine{01574\ \ \ \mbox{\hyperlink{struct_r_a_d_m64__format}{RADM64\_FIELDS}}\ \ radm64\ ;}
+\DoxyCodeLine{01575\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ \ memory\ ;}
+\DoxyCodeLine{01576\ \}\ \mbox{\hyperlink{union_r_a_d_m64___i_n_s_t_r_u_c_t_i_o_n}{RADM64\_INSTRUCTION}};}
+\DoxyCodeLine{01577\ }
+\DoxyCodeLine{01578\ }
+\DoxyCodeLine{01579\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01580\ \textcolor{comment}{/*\ MOV32\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01581\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01582\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_m_o_v32__format}{MOV32\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01583\ \{}
+\DoxyCodeLine{01584\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01585\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01586\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01587\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01588\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01589\ \ }
+\DoxyCodeLine{01590\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01591\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01592\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01593\ \ \ uint32\ move\_type\ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01594\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01595\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01596\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 15\ ;}
+\DoxyCodeLine{01597\ \ \ uint32\ z\_flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01598\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01599\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01600\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;\ }
+\DoxyCodeLine{01601\ \ \ }
+\DoxyCodeLine{01602\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01603\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01604\ \ }
+\DoxyCodeLine{01605\ \}\ \mbox{\hyperlink{struct_m_o_v32__format}{MOV32\_FIELDS}}\ ;\ }
+\DoxyCodeLine{01606\ }
+\DoxyCodeLine{01607\ }
+\DoxyCodeLine{01608\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01609\ \{}
+\DoxyCodeLine{01610\ \ \ \mbox{\hyperlink{struct_m_o_v32__format}{MOV32\_FIELDS}}\ \ mov32\ \ ;}
+\DoxyCodeLine{01611\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ memory\ ;}
+\DoxyCodeLine{01612\ \}\ \mbox{\hyperlink{union_m_o_v32___i_n_s_t_r_u_c_t_i_o_n}{MOV32\_INSTRUCTION}};}
+\DoxyCodeLine{01613\ }
+\DoxyCodeLine{01614\ }
+\DoxyCodeLine{01615\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01616\ \textcolor{comment}{/*\ ADM32\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01617\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01618\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_d_m32__format}{ADM32\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01619\ \{}
+\DoxyCodeLine{01620\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01621\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01622\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01623\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01624\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01625\ }
+\DoxyCodeLine{01626\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01627\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{01628\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01629\ \ \ uint32\ move\_type\ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01630\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01631\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01632\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 19\ ;}
+\DoxyCodeLine{01633\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01634\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;\ }
+\DoxyCodeLine{01635\ \ \ }
+\DoxyCodeLine{01636\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01637\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01638\ \ \ \ }
+\DoxyCodeLine{01639\ \}\ \mbox{\hyperlink{struct_a_d_m32__format}{ADM32\_FIELDS}}\ ;\ }
+\DoxyCodeLine{01640\ }
+\DoxyCodeLine{01641\ }
+\DoxyCodeLine{01642\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01643\ \{}
+\DoxyCodeLine{01644\ \ \ \mbox{\hyperlink{struct_a_d_m32__format}{ADM32\_FIELDS}}\ \ adm32\ \ ;}
+\DoxyCodeLine{01645\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ memory\ ;}
+\DoxyCodeLine{01646\ \}\ \mbox{\hyperlink{union_a_d_m32___i_n_s_t_r_u_c_t_i_o_n}{ADM32\_INSTRUCTION}};}
+\DoxyCodeLine{01647\ }
+\DoxyCodeLine{01648\ }
+\DoxyCodeLine{01649\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01650\ \textcolor{comment}{/*\ ADCNST\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01651\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01652\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_d_c_n_s_t__format}{ADCNST\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01653\ \{}
+\DoxyCodeLine{01654\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01655\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01656\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01657\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01658\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01659\ \ }
+\DoxyCodeLine{01660\ \ \ uint32\ constant\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01661\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01662\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;\ }
+\DoxyCodeLine{01663\ \ \ }
+\DoxyCodeLine{01664\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{01665\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;\ }
+\DoxyCodeLine{01666\ }
+\DoxyCodeLine{01667\ \}\ \mbox{\hyperlink{struct_a_d_c_n_s_t__format}{ADCNST\_FIELDS}}\ ;}
+\DoxyCodeLine{01668\ }
+\DoxyCodeLine{01669\ }
+\DoxyCodeLine{01670\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01671\ \{}
+\DoxyCodeLine{01672\ \ \ \mbox{\hyperlink{struct_a_d_c_n_s_t__format}{ADCNST\_FIELDS}}\ \ adcnst\ ;}
+\DoxyCodeLine{01673\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ \ \ memory\ ;}
+\DoxyCodeLine{01674\ \}\ \mbox{\hyperlink{union_a_d_c_n_s_t___i_n_s_t_r_u_c_t_i_o_n}{ADCNST\_INSTRUCTION}};}
+\DoxyCodeLine{01675\ }
+\DoxyCodeLine{01676\ }
+\DoxyCodeLine{01677\ }
+\DoxyCodeLine{01678\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01679\ \textcolor{comment}{/*\ ADD\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01680\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01681\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_d_d__format}{ADD\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01682\ \{}
+\DoxyCodeLine{01683\ }
+\DoxyCodeLine{01684\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01685\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01686\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01687\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01688\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01689\ }
+\DoxyCodeLine{01690\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{01691\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01692\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01693\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01694\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01695\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01696\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01697\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01698\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01699\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01700\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01701\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01702\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01703\ }
+\DoxyCodeLine{01704\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;\ }
+\DoxyCodeLine{01705\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01706\ \ }
+\DoxyCodeLine{01707\ \ }
+\DoxyCodeLine{01708\ \}\ \mbox{\hyperlink{struct_a_d_d__format}{ADD\_FIELDS}}\ ;}
+\DoxyCodeLine{01709\ }
+\DoxyCodeLine{01710\ }
+\DoxyCodeLine{01711\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01712\ \{}
+\DoxyCodeLine{01713\ \ \ \mbox{\hyperlink{struct_a_d_d__format}{ADD\_FIELDS}}\ \ add\ ;}
+\DoxyCodeLine{01714\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{01715\ \}\ \mbox{\hyperlink{union_a_d_d___i_n_s_t_r_u_c_t_i_o_n}{ADD\_INSTRUCTION}};}
+\DoxyCodeLine{01716\ }
+\DoxyCodeLine{01717\ }
+\DoxyCodeLine{01718\ }
+\DoxyCodeLine{01719\ }
+\DoxyCodeLine{01720\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01721\ \textcolor{comment}{/*\ ADC\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01722\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01723\ }
+\DoxyCodeLine{01724\ }
+\DoxyCodeLine{01725\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_d_c__format}{ADC\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01726\ \{}
+\DoxyCodeLine{01727\ }
+\DoxyCodeLine{01728\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01729\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01730\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01731\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01732\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01733\ }
+\DoxyCodeLine{01734\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{01735\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01736\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01737\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01738\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01739\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01740\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01741\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01742\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01743\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01744\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01745\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01746\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01747\ }
+\DoxyCodeLine{01748\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;\ }
+\DoxyCodeLine{01749\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01750\ \ }
+\DoxyCodeLine{01751\ \ }
+\DoxyCodeLine{01752\ \}\ \mbox{\hyperlink{struct_a_d_c__format}{ADC\_FIELDS}}\ ;}
+\DoxyCodeLine{01753\ }
+\DoxyCodeLine{01754\ }
+\DoxyCodeLine{01755\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01756\ \{}
+\DoxyCodeLine{01757\ \ \ \mbox{\hyperlink{struct_a_d_c__format}{ADC\_FIELDS}}\ \ adc\ ;}
+\DoxyCodeLine{01758\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{01759\ \}\ \mbox{\hyperlink{union_a_d_c___i_n_s_t_r_u_c_t_i_o_n}{ADC\_INSTRUCTION}};}
+\DoxyCodeLine{01760\ }
+\DoxyCodeLine{01761\ }
+\DoxyCodeLine{01762\ }
+\DoxyCodeLine{01763\ }
+\DoxyCodeLine{01764\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01765\ \textcolor{comment}{/*\ SUB\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01766\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01767\ }
+\DoxyCodeLine{01768\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_u_b__format}{SUB\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01769\ \{}
+\DoxyCodeLine{01770\ }
+\DoxyCodeLine{01771\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01772\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01773\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01774\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01775\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01776\ }
+\DoxyCodeLine{01777\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{01778\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01779\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01780\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01781\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01782\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01783\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01784\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01785\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01786\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01787\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01788\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01789\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01790\ }
+\DoxyCodeLine{01791\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;\ }
+\DoxyCodeLine{01792\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01793\ \ }
+\DoxyCodeLine{01794\ \ }
+\DoxyCodeLine{01795\ \}\ \mbox{\hyperlink{struct_s_u_b__format}{SUB\_FIELDS}}\ ;}
+\DoxyCodeLine{01796\ }
+\DoxyCodeLine{01797\ }
+\DoxyCodeLine{01798\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01799\ \{}
+\DoxyCodeLine{01800\ \ \ \mbox{\hyperlink{struct_s_u_b__format}{SUB\_FIELDS}}\ \ sub\ ;}
+\DoxyCodeLine{01801\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{01802\ \}\ \mbox{\hyperlink{union_s_u_b___i_n_s_t_r_u_c_t_i_o_n}{SUB\_INSTRUCTION}};}
+\DoxyCodeLine{01803\ }
+\DoxyCodeLine{01804\ }
+\DoxyCodeLine{01805\ }
+\DoxyCodeLine{01806\ }
+\DoxyCodeLine{01807\ }
+\DoxyCodeLine{01808\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01809\ \textcolor{comment}{/*\ SBB\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01810\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01811\ }
+\DoxyCodeLine{01812\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_b_b__format}{SBB\_format}}}
+\DoxyCodeLine{01813\ \{}
+\DoxyCodeLine{01814\ }
+\DoxyCodeLine{01815\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01816\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01817\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01818\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01819\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01820\ }
+\DoxyCodeLine{01821\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{01822\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01823\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01824\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01825\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01826\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01827\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01828\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01829\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01830\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01831\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01832\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01833\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01834\ }
+\DoxyCodeLine{01835\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;\ }
+\DoxyCodeLine{01836\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01837\ \ }
+\DoxyCodeLine{01838\ \ }
+\DoxyCodeLine{01839\ \}\ \mbox{\hyperlink{struct_s_b_b__format}{SBB\_FIELDS}}\ ;}
+\DoxyCodeLine{01840\ }
+\DoxyCodeLine{01841\ }
+\DoxyCodeLine{01842\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01843\ \{}
+\DoxyCodeLine{01844\ \ \ \mbox{\hyperlink{struct_s_b_b__format}{SBB\_FIELDS}}\ \ sbb\ ;}
+\DoxyCodeLine{01845\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{01846\ \}\ \mbox{\hyperlink{union_s_b_b___i_n_s_t_r_u_c_t_i_o_n}{SBB\_INSTRUCTION}};}
+\DoxyCodeLine{01847\ }
+\DoxyCodeLine{01848\ }
+\DoxyCodeLine{01849\ }
+\DoxyCodeLine{01850\ }
+\DoxyCodeLine{01851\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01852\ \textcolor{comment}{/*\ AND\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01853\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01854\ }
+\DoxyCodeLine{01855\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_n_d__format}{AND\_format}}}
+\DoxyCodeLine{01856\ \{}
+\DoxyCodeLine{01857\ }
+\DoxyCodeLine{01858\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01859\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01860\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01861\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01862\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01863\ }
+\DoxyCodeLine{01864\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{01865\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01866\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01867\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01868\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01869\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01870\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01871\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01872\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01873\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01874\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01875\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01876\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01877\ }
+\DoxyCodeLine{01878\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;\ }
+\DoxyCodeLine{01879\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01880\ \ }
+\DoxyCodeLine{01881\ \ }
+\DoxyCodeLine{01882\ \}\ \mbox{\hyperlink{struct_a_n_d__format}{AND\_FIELDS}}\ ;}
+\DoxyCodeLine{01883\ }
+\DoxyCodeLine{01884\ }
+\DoxyCodeLine{01885\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01886\ \{}
+\DoxyCodeLine{01887\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{01888\ \ \ \mbox{\hyperlink{struct_a_n_d__format}{AND\_FIELDS}}\ \ and\_cpp\ ;}
+\DoxyCodeLine{01889\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01890\ \ \ \mbox{\hyperlink{struct_a_n_d__format}{AND\_FIELDS}}\ \ and\ ;}
+\DoxyCodeLine{01891\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01892\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{01893\ \}\ \mbox{\hyperlink{union_a_n_d___i_n_s_t_r_u_c_t_i_o_n}{AND\_INSTRUCTION}};}
+\DoxyCodeLine{01894\ }
+\DoxyCodeLine{01895\ }
+\DoxyCodeLine{01896\ }
+\DoxyCodeLine{01897\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01898\ \textcolor{comment}{/*\ OR\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01899\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01900\ }
+\DoxyCodeLine{01901\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_o_r__format}{OR\_format}}}
+\DoxyCodeLine{01902\ \{}
+\DoxyCodeLine{01903\ }
+\DoxyCodeLine{01904\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01905\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01906\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01907\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01908\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01909\ }
+\DoxyCodeLine{01910\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{01911\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01912\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01913\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01914\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01915\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01916\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01917\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01918\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01919\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01920\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01921\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01922\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01923\ }
+\DoxyCodeLine{01924\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;\ }
+\DoxyCodeLine{01925\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01926\ \ }
+\DoxyCodeLine{01927\ \ }
+\DoxyCodeLine{01928\ \}\ \mbox{\hyperlink{struct_o_r__format}{OR\_FIELDS}}\ ;}
+\DoxyCodeLine{01929\ }
+\DoxyCodeLine{01930\ }
+\DoxyCodeLine{01931\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01932\ \{}
+\DoxyCodeLine{01933\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{01934\ \ \ \mbox{\hyperlink{struct_o_r__format}{OR\_FIELDS}}\ \ or\_cpp\ ;}
+\DoxyCodeLine{01935\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01936\ \ \ \mbox{\hyperlink{struct_o_r__format}{OR\_FIELDS}}\ \ or\ ;}
+\DoxyCodeLine{01937\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01938\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{01939\ \}\ \mbox{\hyperlink{union_o_r___i_n_s_t_r_u_c_t_i_o_n}{OR\_INSTRUCTION}};}
+\DoxyCodeLine{01940\ }
+\DoxyCodeLine{01941\ }
+\DoxyCodeLine{01942\ }
+\DoxyCodeLine{01943\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01944\ \textcolor{comment}{/*\ XOR\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01945\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01946\ }
+\DoxyCodeLine{01947\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_x_o_r__format}{XOR\_format}}}
+\DoxyCodeLine{01948\ \{}
+\DoxyCodeLine{01949\ }
+\DoxyCodeLine{01950\ \ \ uint32\ remote\_address\ \ \ \ \ \ \ :\ 9\ ;\ }
+\DoxyCodeLine{01951\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01952\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{01953\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{01954\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{01955\ }
+\DoxyCodeLine{01956\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{01957\ \ \ uint32\ reg\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01958\ \ \ uint32\ rem\_dest\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{01959\ \ \ uint32\ sub\_opcode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01960\ \ \ uint32\ init\_flag\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01961\ \ \ uint32\ reg\_ext\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01962\ \ \ uint32\ shft\_cnt\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01963\ \ \ uint32\ shft\_mode\ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01964\ \ \ uint32\ src\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01965\ \ \ uint32\ src\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{01966\ \ \ uint32\ sub\_opcode3\ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{01967\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01968\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{01969\ }
+\DoxyCodeLine{01970\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;\ }
+\DoxyCodeLine{01971\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{01972\ \ }
+\DoxyCodeLine{01973\ \ }
+\DoxyCodeLine{01974\ \}\ \mbox{\hyperlink{struct_x_o_r__format}{XOR\_FIELDS}}\ ;}
+\DoxyCodeLine{01975\ }
+\DoxyCodeLine{01976\ }
+\DoxyCodeLine{01977\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{01978\ \{}
+\DoxyCodeLine{01979\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{01980\ \ \ \mbox{\hyperlink{struct_x_o_r__format}{XOR\_FIELDS}}\ \ xor\_cpp\ ;}
+\DoxyCodeLine{01981\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01982\ \ \ \mbox{\hyperlink{struct_x_o_r__format}{XOR\_FIELDS}}\ \ xor\ ;}
+\DoxyCodeLine{01983\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01984\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ memory\ ;}
+\DoxyCodeLine{01985\ \}\ \mbox{\hyperlink{union_x_o_r___i_n_s_t_r_u_c_t_i_o_n}{XOR\_INSTRUCTION}};}
+\DoxyCodeLine{01986\ }
+\DoxyCodeLine{01987\ }
+\DoxyCodeLine{01988\ }
+\DoxyCodeLine{01989\ }
+\DoxyCodeLine{01990\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01991\ \textcolor{comment}{/*\ CNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{01992\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{01993\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_n_t__format}{CNT\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01994\ \{}
+\DoxyCodeLine{01995\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01996\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01997\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01998\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{01999\ \ \ uint32\ angle\_cnt\ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02000\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02001\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02002\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;\ \ }
+\DoxyCodeLine{02003\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;\ \ }
+\DoxyCodeLine{02004\ }
+\DoxyCodeLine{02005\ \ \ uint32\ max\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02006\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02007\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02008\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02009\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02010\ \ \ }
+\DoxyCodeLine{02011\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02012\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02013\ }
+\DoxyCodeLine{02014\ \}\ \mbox{\hyperlink{struct_c_n_t__format}{CNT\_FIELDS}}\ ;\ }
+\DoxyCodeLine{02015\ }
+\DoxyCodeLine{02016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02017\ \{}
+\DoxyCodeLine{02018\ \ \ \mbox{\hyperlink{struct_c_n_t__format}{CNT\_FIELDS}}\ \ \ cnt\ \ \ \ ;\ }
+\DoxyCodeLine{02019\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02020\ \}\ \mbox{\hyperlink{union_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{CNT\_INSTRUCTION}};}
+\DoxyCodeLine{02021\ }
+\DoxyCodeLine{02022\ }
+\DoxyCodeLine{02023\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02024\ \textcolor{comment}{/*\ APCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02025\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structapcnt__format}{apcnt\_format}}}
+\DoxyCodeLine{02027\ \{}
+\DoxyCodeLine{02028\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02029\ \ \ uint32\ edge\_select\ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02030\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02031\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02032\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02033\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02034\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02035\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02036\ }
+\DoxyCodeLine{02037\ \ \ uint32\ count\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02038\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02039\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02040\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02041\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;\ }
+\DoxyCodeLine{02042\ \ \ }
+\DoxyCodeLine{02043\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02044\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;\ }
+\DoxyCodeLine{02045\ }
+\DoxyCodeLine{02046\ \}\ \mbox{\hyperlink{structapcnt__format}{APCNT\_FIELDS}}\ ;}
+\DoxyCodeLine{02047\ \ }
+\DoxyCodeLine{02048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{02049\ \{}
+\DoxyCodeLine{02050\ \ \ \mbox{\hyperlink{structapcnt__format}{APCNT\_FIELDS}}\ \ apcnt\ \ \ ;}
+\DoxyCodeLine{02051\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02052\ \}\ \mbox{\hyperlink{union_a_p_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{APCNT\_INSTRUCTION}};}
+\DoxyCodeLine{02053\ \ }
+\DoxyCodeLine{02054\ \ }
+\DoxyCodeLine{02055\ }
+\DoxyCodeLine{02056\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02057\ \textcolor{comment}{/*\ PCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02058\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpcnt__format}{pcnt\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02060\ \{}
+\DoxyCodeLine{02061\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02062\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02063\ \ \ uint32\ period\_pulse\_select\ \ :\ 2\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02064\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02065\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02066\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02067\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02068\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02069\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02070\ }
+\DoxyCodeLine{02071\ \ \ uint32\ count\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02072\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02073\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02074\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02075\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02076\ \ \ }
+\DoxyCodeLine{02077\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02078\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02079\ }
+\DoxyCodeLine{02080\ \}\ \mbox{\hyperlink{structpcnt__format}{PCNT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02081\ }
+\DoxyCodeLine{02082\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02083\ \{}
+\DoxyCodeLine{02084\ \ \ \mbox{\hyperlink{structpcnt__format}{PCNT\_FIELDS}}\ \ pcnt\ \ \ ;\ }
+\DoxyCodeLine{02085\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02086\ \}\ \mbox{\hyperlink{union_p_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{PCNT\_INSTRUCTION}};}
+\DoxyCodeLine{02087\ }
+\DoxyCodeLine{02088\ }
+\DoxyCodeLine{02089\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02090\ \textcolor{comment}{/*\ SCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02091\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02092\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structscnt__format}{scnt\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02093\ \{}
+\DoxyCodeLine{02094\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02095\ \ \ uint32\ step\_width\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02096\ \ \ uint32\ count\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02097\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02098\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02099\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02100\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02101\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02102\ }
+\DoxyCodeLine{02103\ \ \ uint32\ gap\_start\ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02104\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02105\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02106\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02107\ \ \ }
+\DoxyCodeLine{02108\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02109\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02110\ }
+\DoxyCodeLine{02111\ \}\ \mbox{\hyperlink{structscnt__format}{SCNT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02112\ }
+\DoxyCodeLine{02113\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02114\ \{}
+\DoxyCodeLine{02115\ \ \ \mbox{\hyperlink{structscnt__format}{SCNT\_FIELDS}}\ \ scnt\ \ \ ;\ }
+\DoxyCodeLine{02116\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02117\ \}\ \mbox{\hyperlink{union_s_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{SCNT\_INSTRUCTION}};}
+\DoxyCodeLine{02118\ }
+\DoxyCodeLine{02119\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02120\ \textcolor{comment}{/*\ ACNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02121\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02122\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structacnt__format}{acnt\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02123\ \{}
+\DoxyCodeLine{02124\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;\ }
+\DoxyCodeLine{02125\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02126\ \ \ uint32\ edge\_select\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02127\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02128\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02129\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02130\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02131\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02132\ }
+\DoxyCodeLine{02133\ \ \ uint32\ gap\_end\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02134\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02135\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02136\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02137\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;\ }
+\DoxyCodeLine{02138\ \ \ }
+\DoxyCodeLine{02139\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02140\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02141\ }
+\DoxyCodeLine{02142\ \}\ \mbox{\hyperlink{structacnt__format}{ACNT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02143\ }
+\DoxyCodeLine{02144\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02145\ \{}
+\DoxyCodeLine{02146\ \ \ \mbox{\hyperlink{structacnt__format}{ACNT\_FIELDS}}\ \ acnt\ \ \ ;\ }
+\DoxyCodeLine{02147\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02148\ \}\ \mbox{\hyperlink{union_a_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{ACNT\_INSTRUCTION}};}
+\DoxyCodeLine{02149\ }
+\DoxyCodeLine{02150\ }
+\DoxyCodeLine{02151\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02152\ \textcolor{comment}{/*\ ECNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02153\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02154\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structecnt__format}{ecnt\_format}}}
+\DoxyCodeLine{02155\ \{}
+\DoxyCodeLine{02156\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02157\ \ \ uint32\ count\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02158\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02159\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02160\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02161\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02162\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02163\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02164\ \ }
+\DoxyCodeLine{02165\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02166\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{02167\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02168\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02169\ \ \ uint32\ count\_cond\ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02170\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02171\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02172\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02173\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02174\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02175\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02176\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02177\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02178\ \ \ }
+\DoxyCodeLine{02179\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02180\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;\ }
+\DoxyCodeLine{02181\ \ }
+\DoxyCodeLine{02182\ }
+\DoxyCodeLine{02183\ \}\ \mbox{\hyperlink{structecnt__format}{ECNT\_FIELDS}}\ ;}
+\DoxyCodeLine{02184\ \ }
+\DoxyCodeLine{02185\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{02186\ \{}
+\DoxyCodeLine{02187\ \ \ \mbox{\hyperlink{structecnt__format}{ECNT\_FIELDS}}\ \ ecnt\ \ \ ;}
+\DoxyCodeLine{02188\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02189\ \}\ \mbox{\hyperlink{union_e_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{ECNT\_INSTRUCTION}};}
+\DoxyCodeLine{02190\ }
+\DoxyCodeLine{02191\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02192\ \textcolor{comment}{/*\ RCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02193\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02194\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrcnt__format}{rcnt\_format}}}
+\DoxyCodeLine{02195\ \{}
+\DoxyCodeLine{02196\ }
+\DoxyCodeLine{02197\ \ \ uint32\ count\_mode1\ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02198\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02199\ \ \ uint32\ count\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02200\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02201\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02202\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02203\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02204\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02205\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02206\ }
+\DoxyCodeLine{02207\ }
+\DoxyCodeLine{02208\ \ \ uint32\ divisor\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;\ \ }
+\DoxyCodeLine{02209\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02210\ \ \ uint32\ control\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02211\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02212\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02213\ }
+\DoxyCodeLine{02214\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;\ \ }
+\DoxyCodeLine{02215\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02216\ }
+\DoxyCodeLine{02217\ \ }
+\DoxyCodeLine{02218\ \}\ \mbox{\hyperlink{structrcnt__format}{RCNT\_FIELDS}}\ ;}
+\DoxyCodeLine{02219\ \ }
+\DoxyCodeLine{02220\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{02221\ \{}
+\DoxyCodeLine{02222\ \ \ \mbox{\hyperlink{structrcnt__format}{RCNT\_FIELDS}}\ \ rcnt\ \ \ ;}
+\DoxyCodeLine{02223\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02224\ \}\ \mbox{\hyperlink{union_r_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{RCNT\_INSTRUCTION}};}
+\DoxyCodeLine{02225\ }
+\DoxyCodeLine{02226\ }
+\DoxyCodeLine{02227\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02228\ \textcolor{comment}{/*\ DJNZ\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02229\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02230\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdjnz__format}{djnz\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02231\ \{}
+\DoxyCodeLine{02232\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02233\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02234\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02235\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02236\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ }
+\DoxyCodeLine{02237\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02238\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02239\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02240\ }
+\DoxyCodeLine{02241\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02242\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{02243\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02244\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 10\ ;}
+\DoxyCodeLine{02245\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02246\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02247\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02248\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02249\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02250\ \ \ }
+\DoxyCodeLine{02251\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02252\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02253\ }
+\DoxyCodeLine{02254\ \}\ \mbox{\hyperlink{structdjnz__format}{DJNZ\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02255\ }
+\DoxyCodeLine{02256\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02257\ \{}
+\DoxyCodeLine{02258\ \ \ \mbox{\hyperlink{structdjnz__format}{DJNZ\_FIELDS}}\ \ djnz\ \ \ ;\ }
+\DoxyCodeLine{02259\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02260\ \}\ \mbox{\hyperlink{union_d_j_n_z___i_n_s_t_r_u_c_t_i_o_n}{DJNZ\_INSTRUCTION}};}
+\DoxyCodeLine{02261\ }
+\DoxyCodeLine{02262\ }
+\DoxyCodeLine{02263\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02264\ \textcolor{comment}{/*\ DJZ\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02265\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02266\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdjz__format}{djz\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02267\ \{}
+\DoxyCodeLine{02268\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02269\ \ \ uint32\ sub\_opcode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02270\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02271\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02272\ \ \ uint32\ next\_program\_address\ :\ 9\ ;\ }
+\DoxyCodeLine{02273\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02274\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02275\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02276\ }
+\DoxyCodeLine{02277\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02278\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{02279\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02280\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 10\ ;}
+\DoxyCodeLine{02281\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02282\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02283\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02284\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02285\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02286\ \ \ }
+\DoxyCodeLine{02287\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02288\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02289\ }
+\DoxyCodeLine{02290\ \}\ \mbox{\hyperlink{structdjz__format}{DJZ\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02291\ }
+\DoxyCodeLine{02292\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02293\ \{}
+\DoxyCodeLine{02294\ \ \ \mbox{\hyperlink{structdjz__format}{DJZ\_FIELDS}}\ \ djz\ \ \ ;\ }
+\DoxyCodeLine{02295\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02296\ \}\ \mbox{\hyperlink{union_d_j_z___i_n_s_t_r_u_c_t_i_o_n}{DJZ\_INSTRUCTION}};}
+\DoxyCodeLine{02297\ }
+\DoxyCodeLine{02298\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02299\ \textcolor{comment}{/*\ PWCNT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02300\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02301\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpwcnt__format}{pwcnt\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02302\ \{}
+\DoxyCodeLine{02303\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02304\ \ \ uint32\ count\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02305\ \ \ uint32\ hr\_lr\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02306\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02307\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02308\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02309\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02310\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02311\ }
+\DoxyCodeLine{02312\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02313\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{02314\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02315\ \ \ uint32\ opposite\_action\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02316\ \ \ uint32\ pin\_action\ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02317\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02318\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02319\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02320\ \ \ uint32\ en\_pin\_action\ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02321\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02322\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02323\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02324\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02325\ \ \ }
+\DoxyCodeLine{02326\ }
+\DoxyCodeLine{02327\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02328\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;\ \ }
+\DoxyCodeLine{02329\ \ }
+\DoxyCodeLine{02330\ \}\ \mbox{\hyperlink{structpwcnt__format}{PWCNT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02331\ }
+\DoxyCodeLine{02332\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02333\ \{}
+\DoxyCodeLine{02334\ \ \ \mbox{\hyperlink{structpwcnt__format}{PWCNT\_FIELDS}}\ \ pwcnt\ ;}
+\DoxyCodeLine{02335\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02336\ \}\ \mbox{\hyperlink{union_p_w_c_n_t___i_n_s_t_r_u_c_t_i_o_n}{PWCNT\_INSTRUCTION}};}
+\DoxyCodeLine{02337\ }
+\DoxyCodeLine{02338\ }
+\DoxyCodeLine{02339\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02340\ \textcolor{comment}{/*\ WCAP\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02341\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02342\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structwcap__format}{wcap\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02343\ \{}
+\DoxyCodeLine{02344\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 8\ ;}
+\DoxyCodeLine{02345\ \ \ uint32\ hr\_lr\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02346\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02347\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02348\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02349\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02350\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;\ }
+\DoxyCodeLine{02351\ \ \ }
+\DoxyCodeLine{02352\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02353\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{02354\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02355\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02356\ \ \ uint32\ capture\_condition\ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02357\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02358\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02359\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02360\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02361\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02362\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02363\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02364\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02365\ \ \ }
+\DoxyCodeLine{02366\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02367\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02368\ }
+\DoxyCodeLine{02369\ \}\ \mbox{\hyperlink{structwcap__format}{WCAP\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02370\ }
+\DoxyCodeLine{02371\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02372\ \{}
+\DoxyCodeLine{02373\ \ \ \mbox{\hyperlink{structwcap__format}{WCAP\_FIELDS}}\ \ wcap\ \ \ ;\ }
+\DoxyCodeLine{02374\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02375\ \}\ \mbox{\hyperlink{union_w_c_a_p___i_n_s_t_r_u_c_t_i_o_n}{WCAP\_INSTRUCTION}};}
+\DoxyCodeLine{02376\ \ }
+\DoxyCodeLine{02377\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02378\ \textcolor{comment}{/*\ WCAPE\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02379\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02380\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structwcape__format}{wcape\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02381\ \{}
+\DoxyCodeLine{02382\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02383\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02384\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02385\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02386\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02387\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;\ \ }
+\DoxyCodeLine{02388\ }
+\DoxyCodeLine{02389\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02390\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{02391\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02392\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02393\ \ \ uint32\ capture\_condition\ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02394\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02395\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02396\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02397\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02398\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02399\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02400\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02401\ \ \ }
+\DoxyCodeLine{02402\ \ \ uint32\ ec\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02403\ \ \ uint32\ ts\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02404\ }
+\DoxyCodeLine{02405\ \}\ \mbox{\hyperlink{structwcape__format}{WCAPE\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02406\ }
+\DoxyCodeLine{02407\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02408\ \{}
+\DoxyCodeLine{02409\ \ \ \mbox{\hyperlink{structwcape__format}{WCAPE\_FIELDS}}\ \ wcape\ \ \ ;\ }
+\DoxyCodeLine{02410\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02411\ \}\ \mbox{\hyperlink{union_w_c_a_p_e___i_n_s_t_r_u_c_t_i_o_n}{WCAPE\_INSTRUCTION}};}
+\DoxyCodeLine{02412\ \ }
+\DoxyCodeLine{02413\ }
+\DoxyCodeLine{02414\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02415\ \textcolor{comment}{/*\ BR\ \ \ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02416\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02417\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbr__format}{br\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02418\ \{}
+\DoxyCodeLine{02419\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02420\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02421\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02422\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02423\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02424\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;}
+\DoxyCodeLine{02425\ }
+\DoxyCodeLine{02426\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02427\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02428\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02429\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02430\ \ \ uint32\ branch\_condition\ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02431\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02432\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02433\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02434\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02435\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02436\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02437\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;\ }
+\DoxyCodeLine{02438\ \ \ }
+\DoxyCodeLine{02439\ \ \ uint32\ hr\_data\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02440\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02441\ }
+\DoxyCodeLine{02442\ \}\ \mbox{\hyperlink{structbr__format}{BR\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02443\ }
+\DoxyCodeLine{02444\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02445\ \{}
+\DoxyCodeLine{02446\ \ \ \mbox{\hyperlink{structbr__format}{BR\_FIELDS}}\ \ br\ \ \ \ \ ;\ }
+\DoxyCodeLine{02447\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ memory\ ;}
+\DoxyCodeLine{02448\ \}\ \mbox{\hyperlink{union_b_r___i_n_s_t_r_u_c_t_i_o_n}{BR\_INSTRUCTION}};}
+\DoxyCodeLine{02449\ }
+\DoxyCodeLine{02450\ \ }
+\DoxyCodeLine{02451\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02452\ \textcolor{comment}{/*\ SHFT\ INSTRUCTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02453\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{02454\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structshft__format}{shft\_format}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02455\ \{}
+\DoxyCodeLine{02456\ \ \ uint32\ shift\_mode\ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02457\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02458\ \ \ uint32\ op\_code\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 4\ ;}
+\DoxyCodeLine{02459\ \ \ uint32\ next\_program\_address\ :\ 9\ ;}
+\DoxyCodeLine{02460\ \ \ uint32\ brk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02461\ \ \ uint32\ reqnum\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02462\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 6\ ;\ }
+\DoxyCodeLine{02463\ }
+\DoxyCodeLine{02464\ \ \ uint32\ interrupt\_enable\ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02465\ \ \ uint32\ ab\_register\_select\ \ \ :\ 1\ ;}
+\DoxyCodeLine{02466\ \ \ uint32\ t\_register\_select\ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02467\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02468\ \ \ uint32\ shift\_condition\ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02469\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02470\ \ \ uint32\ pin\_select\ \ \ \ \ \ \ \ \ \ \ :\ 5\ ;}
+\DoxyCodeLine{02471\ \ \ uint32\ cond\_addr\ \ \ \ \ \ \ \ \ \ \ \ :\ 9\ ;}
+\DoxyCodeLine{02472\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02473\ \ \ uint32\ previous\_bit\ \ \ \ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02474\ \ \ uint32\ auto\_read\_clear\ \ \ \ \ \ :\ 1\ ;}
+\DoxyCodeLine{02475\ \ \ uint32\ request\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 2\ ;}
+\DoxyCodeLine{02476\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 3\ ;}
+\DoxyCodeLine{02477\ \ \ }
+\DoxyCodeLine{02478\ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 7\ ;}
+\DoxyCodeLine{02479\ \ \ uint32\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 25\ ;}
+\DoxyCodeLine{02480\ }
+\DoxyCodeLine{02481\ \}\ \mbox{\hyperlink{structshft__format}{SHFT\_FIELDS}}\ ;\ \ \ \ \ \ }
+\DoxyCodeLine{02482\ }
+\DoxyCodeLine{02483\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{02484\ \{}
+\DoxyCodeLine{02485\ \ \ \mbox{\hyperlink{structshft__format}{SHFT\_FIELDS}}\ \ shft\ \ \ ;\ }
+\DoxyCodeLine{02486\ \ \ \mbox{\hyperlink{structmemory__format}{HET\_MEMORY}}\ \ \ memory\ ;}
+\DoxyCodeLine{02487\ \}\ \mbox{\hyperlink{union_s_h_f_t___i_n_s_t_r_u_c_t_i_o_n}{SHFT\_INSTRUCTION}};}
+\DoxyCodeLine{02488\ }
+\DoxyCodeLine{02489\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02490\ }
+\DoxyCodeLine{02491\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (2)\ */}}
+\DoxyCodeLine{02492\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{02493\ }
+\DoxyCodeLine{02494\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{02495\ \}}
+\DoxyCodeLine{02496\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*extern\ "{}C"{}\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{02497\ }
+\DoxyCodeLine{02498\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02499\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ End\ Of\ File\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+
+\end{DoxyCode}

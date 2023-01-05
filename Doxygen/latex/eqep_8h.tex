@@ -1,0 +1,796 @@
+\hypertarget{eqep_8h}{}\doxysection{Файл include/eqep.h}
+\label{eqep_8h}\index{include/eqep.h@{include/eqep.h}}
+
+
+EQEP Driver Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+eqep.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeqep__config__reg}{eqep\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{eqep_8h_ac1502338e7ee448825273b3ce389ceae}\label{eqep_8h_ac1502338e7ee448825273b3ce389ceae}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+QSRC}~((uint16)((uint16)3U  $<$$<$ 14U))  /$\ast$$<$position counter source selection   $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a80e134fc8ecf1e9e976e83a9cc66b408}\label{eqep_8h_a80e134fc8ecf1e9e976e83a9cc66b408}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+SOEN}~((uint16)((uint16)1U  $<$$<$ 13U))  /$\ast$$<$sync output enable                  $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a7e1e12948f964061d16344c341c5b4d3}\label{eqep_8h_a7e1e12948f964061d16344c341c5b4d3}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+SPSEL}~((uint16)((uint16)1U  $<$$<$ 12U))  /$\ast$$<$sync output pin selection           $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a3e09590ed1eaf6193343d0aba82a6de5}\label{eqep_8h_a3e09590ed1eaf6193343d0aba82a6de5}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+XCR}~((uint16)((uint16)1U  $<$$<$ 11U))  /$\ast$$<$external clock rate                 $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a494eafdc657d9e4112b9a12c33c0ef32}\label{eqep_8h_a494eafdc657d9e4112b9a12c33c0ef32}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+SWAP}~((uint16)((uint16)1U  $<$$<$ 10U))  /$\ast$$<$swap quadrature clock inputs        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a99da5e3ac617d068b822f805b8dd249f}\label{eqep_8h_a99da5e3ac617d068b822f805b8dd249f}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+IGATE}~((uint16)((uint16)1U  $<$$<$  9U))  /$\ast$$<$index pulse gating option           $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a4e541ad9dcbdbde30c85a673d397ae4d}\label{eqep_8h_a4e541ad9dcbdbde30c85a673d397ae4d}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+QAP}~((uint16)((uint16)1U  $<$$<$  8U))  /$\ast$$<$QEPA input polarity                 $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a7470027b6cbfc165e396968c20370dde}\label{eqep_8h_a7470027b6cbfc165e396968c20370dde}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+QBP}~((uint16)((uint16)1U  $<$$<$  7U))  /$\ast$$<$QEPB input polarity                 $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a42b8c0bfd4d44f6c71f598cb05e55191}\label{eqep_8h_a42b8c0bfd4d44f6c71f598cb05e55191}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+QIP}~((uint16)((uint16)1U  $<$$<$  6U))  /$\ast$$<$QEPI input polarity                 $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a5036f8eee5fb4456a31f033f4335b0f9}\label{eqep_8h_a5036f8eee5fb4456a31f033f4335b0f9}} 
+\#define {\bfseries e\+QEP\+\_\+\+QDECCTL\+\_\+\+QSP}~((uint16)((uint16)1U  $<$$<$  5U))  /$\ast$$<$QEPS input polarity                 $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a846438b88c74aa8e73ab0dc57d6be39e}\label{eqep_8h_a846438b88c74aa8e73ab0dc57d6be39e}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+FREESOFT}~((uint16)((uint16)3U $<$$<$ 14U))  /$\ast$$<$emulation control bit                                          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a936c024c8a31b3b3c677a8340be1913a}\label{eqep_8h_a936c024c8a31b3b3c677a8340be1913a}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+PCRM}~((uint16)((uint16)3U $<$$<$ 12U))  /$\ast$$<$emulation control bit                                          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a537b09ddf54072b546f9750432985f82}\label{eqep_8h_a537b09ddf54072b546f9750432985f82}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+SEI}~((uint16)((uint16)3U $<$$<$ 10U))  /$\ast$$<$strobe event initialization of position counter                $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a7a90c1f287a399047f801f11faa8a89c}\label{eqep_8h_a7a90c1f287a399047f801f11faa8a89c}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+IEI}~((uint16)((uint16)3U $<$$<$  8U))  /$\ast$$<$index event initialization of position counter                 $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a445abb1e9210c3d815ce161d7a7aca50}\label{eqep_8h_a445abb1e9210c3d815ce161d7a7aca50}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+SWI}~((uint16)((uint16)1U $<$$<$  7U))  /$\ast$$<$software initialization of position counter                    $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a2d1d977e0a7b2f3e1e0bf45d5c56cc9c}\label{eqep_8h_a2d1d977e0a7b2f3e1e0bf45d5c56cc9c}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+SEL}~((uint16)((uint16)1U $<$$<$  6U))  /$\ast$$<$strobe event latch of position counter                         $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a1a49086cb25dc17f80f5bc7e02c14d69}\label{eqep_8h_a1a49086cb25dc17f80f5bc7e02c14d69}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+IEL}~((uint16)((uint16)3U $<$$<$  4U))  /$\ast$$<$index event latch of position counter ((uint16)((uint16)software index marker)  $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a39d0582616d4c638691a3789c2dab8db}\label{eqep_8h_a39d0582616d4c638691a3789c2dab8db}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+QPEN}~((uint16)((uint16)1U $<$$<$  3U))  /$\ast$$<$quad position counter enable/software reset                    $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a430d1dde578d01b3ae4988578df2b1bd}\label{eqep_8h_a430d1dde578d01b3ae4988578df2b1bd}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+QCLM}~((uint16)((uint16)1U $<$$<$  2U))  /$\ast$$<$QEP capture latch mode                                         $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a820a8000f03e8a85c7f601c49acd708b}\label{eqep_8h_a820a8000f03e8a85c7f601c49acd708b}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+UTE}~((uint16)((uint16)1U $<$$<$  1U))  /$\ast$$<$QEP unit timer enable                                          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a3bb798ac34f337c149d99b59b1a1c16b}\label{eqep_8h_a3bb798ac34f337c149d99b59b1a1c16b}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPCTL\+\_\+\+WDE}~((uint16)((uint16)1U $<$$<$  0U))  /$\ast$$<$watchdog timer enable                                          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a71f8142d507f6a2528da4263ab916820}\label{eqep_8h_a71f8142d507f6a2528da4263ab916820}} 
+\#define {\bfseries e\+QEP\+\_\+\+QPOSCTL\+\_\+\+PCSHDW}~((uint16)((uint16)1U $<$$<$ 15U)) /$\ast$$<$position compare shadow enable                                     $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_aeffc791dd78f71b2fc5e2dd57e4b3b6a}\label{eqep_8h_aeffc791dd78f71b2fc5e2dd57e4b3b6a}} 
+\#define {\bfseries e\+QEP\+\_\+\+QPOSCTL\+\_\+\+PCLOAD}~((uint16)((uint16)1U $<$$<$ 14U)) /$\ast$$<$position compare shadow load mode                                  $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_aa72b259130d4d9853b123c43eeae1951}\label{eqep_8h_aa72b259130d4d9853b123c43eeae1951}} 
+\#define {\bfseries e\+QEP\+\_\+\+QPOSCTL\+\_\+\+PCPOL}~((uint16)((uint16)1U $<$$<$ 13U)) /$\ast$$<$load when QPOSCNT = QPOSCMP                                        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_adbbb91bdb40b3ef4543273561846b777}\label{eqep_8h_adbbb91bdb40b3ef4543273561846b777}} 
+\#define {\bfseries e\+QEP\+\_\+\+QPOSCTL\+\_\+\+PCE}~((uint16)((uint16)1U $<$$<$ 12U)) /$\ast$$<$position compare enable/disable                                    $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ac64aa81dd5a83aedea70aca55ae73b4c}\label{eqep_8h_ac64aa81dd5a83aedea70aca55ae73b4c}} 
+\#define {\bfseries e\+QEP\+\_\+\+QPOSCTL\+\_\+\+PCSPW}~((uint16)((uint16)4095U $<$$<$  0U)) /$\ast$$<$selection position compare sync output pulse width                 $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ae7749b73789898b05090232d9ef3d1c1}\label{eqep_8h_ae7749b73789898b05090232d9ef3d1c1}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCAPCTL\+\_\+\+CEN}~((uint16)((uint16)1U $<$$<$ 15U)) /$\ast$$<$enable QEP capture                $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a395097de2ac54372a4284a4802499851}\label{eqep_8h_a395097de2ac54372a4284a4802499851}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCAPCTL\+\_\+\+CCPS}~((uint16)((uint16)7U $<$$<$  4U)) /$\ast$$<$qep capture timer clock prescaler $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a6dd30799c077a9a954a5b70eb4a424dc}\label{eqep_8h_a6dd30799c077a9a954a5b70eb4a424dc}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCAPCTL\+\_\+\+UPPS}~((uint16)((uint16)15U $<$$<$  0U)) /$\ast$$<$unit position event prescaler     $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a9009120a87976e619f5ec53053cad72d}\label{eqep_8h_a9009120a87976e619f5ec53053cad72d}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+UTO}~((uint16)((uint16)1U $<$$<$ 11U)) /$\ast$$<$unit timeout interrupt enable                    $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a4aba56cda69d4c4e396912addb0f803c}\label{eqep_8h_a4aba56cda69d4c4e396912addb0f803c}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+IEL}~((uint16)((uint16)1U $<$$<$ 10U)) /$\ast$$<$index event latch interrupt enable               $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a53683b4db0ce1ed1b97766ed219fdc1c}\label{eqep_8h_a53683b4db0ce1ed1b97766ed219fdc1c}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+SEL}~((uint16)((uint16)1U $<$$<$  9U)) /$\ast$$<$strobe event latch interrupt enable            $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a91ff4a241e0fc18f073b34353e66177f}\label{eqep_8h_a91ff4a241e0fc18f073b34353e66177f}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+PCM}~((uint16)((uint16)1U $<$$<$  8U)) /$\ast$$<$position compare match interrupt enable         $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a64fd854dde1c624597edb0d325e9caa4}\label{eqep_8h_a64fd854dde1c624597edb0d325e9caa4}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+PCR}~((uint16)((uint16)1U $<$$<$  7U)) /$\ast$$<$position compare ready interrupt enable          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a49a299bb696debec39075f94f397fadf}\label{eqep_8h_a49a299bb696debec39075f94f397fadf}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+PCO}~((uint16)((uint16)1U $<$$<$  6U)) /$\ast$$<$position counter overflow interrupt enable       $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_aa62bde239b48c30ae0528a9cd56ace93}\label{eqep_8h_aa62bde239b48c30ae0528a9cd56ace93}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+PCU}~((uint16)((uint16)1U $<$$<$  5U)) /$\ast$$<$position counter underflow interrupt enable      $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_acc1bca055169a1f6760b99245b6605c7}\label{eqep_8h_acc1bca055169a1f6760b99245b6605c7}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+WTO}~((uint16)((uint16)1U $<$$<$  4U)) /$\ast$$<$watchdog time out interrupt enable               $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ab8de04e793c72dd1ff46429ee56143cd}\label{eqep_8h_ab8de04e793c72dd1ff46429ee56143cd}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+QDC}~((uint16)((uint16)1U $<$$<$  3U)) /$\ast$$<$quadrature direction change interrupt enable     $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ab2cdaf1d1858baca47fa788b4d26eeee}\label{eqep_8h_ab2cdaf1d1858baca47fa788b4d26eeee}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+QPE}~((uint16)((uint16)1U $<$$<$  2U)) /$\ast$$<$quadrature phase error interrupt enable          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a06400001d9fe5f771419e3b5b31cec5d}\label{eqep_8h_a06400001d9fe5f771419e3b5b31cec5d}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEINT\+\_\+\+PCE}~((uint16)((uint16)1U $<$$<$  1U)) /$\ast$$<$position counter error interrupt enable          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a5c6131d70b347327ef611d008c8d0082}\label{eqep_8h_a5c6131d70b347327ef611d008c8d0082}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+UTO}~((uint16)((uint16)1U $<$$<$ 11U)) /$\ast$$<$unit timeout interrupt flag                       $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ae84537684676232746c3e23e64ca7e61}\label{eqep_8h_ae84537684676232746c3e23e64ca7e61}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+IEL}~((uint16)((uint16)1U $<$$<$ 10U)) /$\ast$$<$index event latch interrupt flag                  $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ad685d6e7fdcc7fe7a2927380aea32aac}\label{eqep_8h_ad685d6e7fdcc7fe7a2927380aea32aac}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+SEL}~((uint16)((uint16)1U $<$$<$  9U)) /$\ast$$<$strobe event latch interrupt flag               $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_af37c5a10ced88ac1c812d75f6817c722}\label{eqep_8h_af37c5a10ced88ac1c812d75f6817c722}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+PCM}~((uint16)((uint16)1U $<$$<$  8U)) /$\ast$$<$position compare match interrupt flag             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ac3802c23d12b2919fca888cdb7f71b12}\label{eqep_8h_ac3802c23d12b2919fca888cdb7f71b12}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+PCR}~((uint16)((uint16)1U $<$$<$  7U)) /$\ast$$<$position compare ready interrupt flag             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ad786393bbbac62b180fdd927f0805592}\label{eqep_8h_ad786393bbbac62b180fdd927f0805592}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+PCO}~((uint16)((uint16)1U $<$$<$  6U)) /$\ast$$<$position counter overflow interrupt flag          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ac07a1f12185372aef13f449186c01a26}\label{eqep_8h_ac07a1f12185372aef13f449186c01a26}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+PCU}~((uint16)((uint16)1U $<$$<$  5U)) /$\ast$$<$position counter underflow interrupt flag         $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a4cc33d0ada4c43ee8a9603d6b4f7b19f}\label{eqep_8h_a4cc33d0ada4c43ee8a9603d6b4f7b19f}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+WTO}~((uint16)((uint16)1U $<$$<$  4U)) /$\ast$$<$watchdog time out interrupt flag                  $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_aad6233b915816c3047b11d7ae65500c3}\label{eqep_8h_aad6233b915816c3047b11d7ae65500c3}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+QDC}~((uint16)((uint16)1U $<$$<$  3U)) /$\ast$$<$quadrature direction change interrupt flag        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a53ea58452708f18f869c8775f74ec09e}\label{eqep_8h_a53ea58452708f18f869c8775f74ec09e}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+QPE}~((uint16)((uint16)1U $<$$<$  2U)) /$\ast$$<$quadrature phase error interrupt flag             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a6b5722288716a0ff425eedb7adfe558c}\label{eqep_8h_a6b5722288716a0ff425eedb7adfe558c}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFLG\+\_\+\+PCE}~((uint16)((uint16)1U $<$$<$  1U)) /$\ast$$<$position counter error interrupt flag             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a7cebe50ec4b1652f9979f8c859a52c6d}\label{eqep_8h_a7cebe50ec4b1652f9979f8c859a52c6d}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+UTO}~((uint16)((uint16)1U $<$$<$ 11U)) /$\ast$$<$clear unit timeout interrupt flag                  $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a17887fbefbd483574e8815eba5033cd4}\label{eqep_8h_a17887fbefbd483574e8815eba5033cd4}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+IEL}~((uint16)((uint16)1U $<$$<$ 10U)) /$\ast$$<$clear index event latch interrupt flag             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a913678e70587726459af534d6f0da776}\label{eqep_8h_a913678e70587726459af534d6f0da776}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+SEL}~((uint16)((uint16)1U $<$$<$  9U)) /$\ast$$<$clear strobe event latch interrupt flag            $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ad30a3edb6d9d879129a4bad6e57d0a1c}\label{eqep_8h_ad30a3edb6d9d879129a4bad6e57d0a1c}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+PCM}~((uint16)((uint16)1U $<$$<$  8U)) /$\ast$$<$clear position compare match interrupt flag        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a1d478e114e382d84e9eb36a6f09d57d8}\label{eqep_8h_a1d478e114e382d84e9eb36a6f09d57d8}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+PCR}~((uint16)((uint16)1U $<$$<$  7U)) /$\ast$$<$clear position compare ready interrupt flag        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a63a402d1df6be40eb9a7a2f30dcb0d9b}\label{eqep_8h_a63a402d1df6be40eb9a7a2f30dcb0d9b}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+PCO}~((uint16)((uint16)1U $<$$<$  6U)) /$\ast$$<$clear position counter overflow interrupt flag     $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ab232f988077ba759ccfc53807fce640f}\label{eqep_8h_ab232f988077ba759ccfc53807fce640f}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+PCU}~((uint16)((uint16)1U $<$$<$  5U)) /$\ast$$<$clear position counter underflow interrupt flag    $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a3371782e1d11811716861bdaf8c375b5}\label{eqep_8h_a3371782e1d11811716861bdaf8c375b5}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+WTO}~((uint16)((uint16)1U $<$$<$  4U)) /$\ast$$<$clear watchdog time out interrupt flag             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a918df3b1a72058ead6a1e2a01eeb12a0}\label{eqep_8h_a918df3b1a72058ead6a1e2a01eeb12a0}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+QDC}~((uint16)((uint16)1U $<$$<$  3U)) /$\ast$$<$clear quadrature direction change interrupt flag   $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ab0d051e4311e360d66f52b2eb6626bbd}\label{eqep_8h_ab0d051e4311e360d66f52b2eb6626bbd}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+QPE}~((uint16)((uint16)1U $<$$<$  2U)) /$\ast$$<$clear quadrature phase error interrupt flag        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a7e17604eec407fd7d2833b73d2a4b76d}\label{eqep_8h_a7e17604eec407fd7d2833b73d2a4b76d}} 
+\#define {\bfseries e\+QEP\+\_\+\+QCLR\+\_\+\+PCE}~((uint16)((uint16)1U $<$$<$  1U)) /$\ast$$<$clear position counter error interrupt flag        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a85fa892e413d125e654d57b5ab207a88}\label{eqep_8h_a85fa892e413d125e654d57b5ab207a88}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+UTO}~((uint16)((uint16)1U $<$$<$ 11U)) /$\ast$$<$force unit timeout interrupt                       $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a6dec2a2906d6b1cc0e9856f60f641e7f}\label{eqep_8h_a6dec2a2906d6b1cc0e9856f60f641e7f}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+IEL}~((uint16)((uint16)1U $<$$<$ 10U)) /$\ast$$<$force index event latch interrupt                  $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a7e775dc9989b06f3150441b65fbb8d9e}\label{eqep_8h_a7e775dc9989b06f3150441b65fbb8d9e}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+SEL}~((uint16)((uint16)1U $<$$<$  9U)) /$\ast$$<$force strobe event latch interrupt                 $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_af39ded321647ed427febba2c27195acf}\label{eqep_8h_af39ded321647ed427febba2c27195acf}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+PCM}~((uint16)((uint16)1U $<$$<$  8U)) /$\ast$$<$force position compare match interrupt             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a1991cb95a7d3978a787e372fec8eb446}\label{eqep_8h_a1991cb95a7d3978a787e372fec8eb446}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+PCR}~((uint16)((uint16)1U $<$$<$  7U)) /$\ast$$<$force position compare ready interrupt             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_af4c21fde7ea64f2dfeba3d4c71528dd9}\label{eqep_8h_af4c21fde7ea64f2dfeba3d4c71528dd9}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+PCO}~((uint16)((uint16)1U $<$$<$  6U)) /$\ast$$<$force position counter overflow interrupt          $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a6ef841cca827198e7ef7e27ae904310f}\label{eqep_8h_a6ef841cca827198e7ef7e27ae904310f}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+PCU}~((uint16)((uint16)1U $<$$<$  5U)) /$\ast$$<$force position counter underflow interrupt         $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_aa110788abb7c21ade1affeba9b526ee6}\label{eqep_8h_aa110788abb7c21ade1affeba9b526ee6}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+WTO}~((uint16)((uint16)1U $<$$<$  4U)) /$\ast$$<$force watchdog time out interrupt                  $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a451ef38d67bb0a9e30846067058347ec}\label{eqep_8h_a451ef38d67bb0a9e30846067058347ec}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+QDC}~((uint16)((uint16)1U $<$$<$  3U)) /$\ast$$<$force quadrature direction change interrupt        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a4294a19fa8143a8e3088fef8a6f316bd}\label{eqep_8h_a4294a19fa8143a8e3088fef8a6f316bd}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+QPE}~((uint16)((uint16)1U $<$$<$  2U)) /$\ast$$<$force quadrature phase error interrupt             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a5fffd677ea695c3565e40550982b96ee}\label{eqep_8h_a5fffd677ea695c3565e40550982b96ee}} 
+\#define {\bfseries e\+QEP\+\_\+\+QFRC\+\_\+\+PCE}~((uint16)((uint16)1U $<$$<$  1U)) /$\ast$$<$force position counter error interrupt             $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a3c99ca9f8cf0d140c14f3ba2e7977f39}\label{eqep_8h_a3c99ca9f8cf0d140c14f3ba2e7977f39}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPSTS\+\_\+\+UPEVNT}~((uint16)((uint16)1U $<$$<$ 7U))  /$\ast$$<$unit position event flag                       $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ae3929ecdf0b373fd66992a1f2e245945}\label{eqep_8h_ae3929ecdf0b373fd66992a1f2e245945}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPSTS\+\_\+\+FDF}~((uint16)((uint16)1U $<$$<$ 6U))  /$\ast$$<$direction on the first index marker            $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a0a1cfa4acef2e9e01bfcf8bb66a5584b}\label{eqep_8h_a0a1cfa4acef2e9e01bfcf8bb66a5584b}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPSTS\+\_\+\+QDF}~((uint16)((uint16)1U $<$$<$ 5U))  /$\ast$$<$quadrature direction flag                      $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_adadbb49476459f0b161da7567b12c02b}\label{eqep_8h_adadbb49476459f0b161da7567b12c02b}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPSTS\+\_\+\+QDLF}~((uint16)((uint16)1U $<$$<$ 4U))  /$\ast$$<$direction latch flag                           $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a9af858c00ac268f386cda8bd88274c1c}\label{eqep_8h_a9af858c00ac268f386cda8bd88274c1c}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPSTS\+\_\+\+COEF}~((uint16)((uint16)1U $<$$<$ 3U))  /$\ast$$<$capture overflow error flag                    $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a0551fd0054ffb90aebfd36401b469012}\label{eqep_8h_a0551fd0054ffb90aebfd36401b469012}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPSTS\+\_\+\+CDEF}~((uint16)((uint16)1U $<$$<$ 2U))  /$\ast$$<$capture direction error flag                   $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_a5b251ff41da54902cc68c7dc3c66ebb8}\label{eqep_8h_a5b251ff41da54902cc68c7dc3c66ebb8}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPSTS\+\_\+\+FIMF}~((uint16)((uint16)1U $<$$<$ 1U))  /$\ast$$<$first index marker flag                        $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_ae0a52574faa02f57fcef9cf47a15eafd}\label{eqep_8h_ae0a52574faa02f57fcef9cf47a15eafd}} 
+\#define {\bfseries e\+QEP\+\_\+\+QEPSTS\+\_\+\+PCEF}~((uint16)((uint16)1U $<$$<$ 0U))  /$\ast$$<$position counter error flag                    $\ast$/
+\item 
+\mbox{\Hypertarget{eqep_8h_af682ea05d81d2c1e10d9264fee8f3b33}\label{eqep_8h_af682ea05d81d2c1e10d9264fee8f3b33}} 
+\#define {\bfseries e\+QEP\+\_\+\+QUADRATURE\+\_\+\+COUNT}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_a3ab0bcc7f3267f516d1d7ba872e703c5}\label{eqep_8h_a3ab0bcc7f3267f516d1d7ba872e703c5}} 
+\#define {\bfseries e\+QEP\+\_\+\+DIRECTION\+\_\+\+COUNT}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_a94aba226f366a27afc976e13eea1a962}\label{eqep_8h_a94aba226f366a27afc976e13eea1a962}} 
+\#define {\bfseries e\+QEP\+\_\+\+UP\+\_\+\+COUNT}~0x02U
+\item 
+\mbox{\Hypertarget{eqep_8h_a589ca0461f642034deed804fb37db6ca}\label{eqep_8h_a589ca0461f642034deed804fb37db6ca}} 
+\#define {\bfseries e\+QEP\+\_\+\+DOWN\+\_\+\+COUNT}~0x03U
+\item 
+\mbox{\Hypertarget{eqep_8h_af4e882381a97597bfa7529aea3e07863}\label{eqep_8h_af4e882381a97597bfa7529aea3e07863}} 
+\#define {\bfseries e\+QEP\+\_\+\+RESOLUTION\+\_\+2x}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_ad046126ce4f013241001a1d24b06d68b}\label{eqep_8h_ad046126ce4f013241001a1d24b06d68b}} 
+\#define {\bfseries e\+QEP\+\_\+\+RESOLUTION\+\_\+1x}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_ae79dcf14fed2e6836d67760aa8c9b624}\label{eqep_8h_ae79dcf14fed2e6836d67760aa8c9b624}} 
+\#define {\bfseries e\+QEP\+\_\+\+CLOCKWISE}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_ac2987ada59cd3aef7fd885bb02175f06}\label{eqep_8h_ac2987ada59cd3aef7fd885bb02175f06}} 
+\#define {\bfseries e\+QEP\+\_\+\+COUNTERCLOCKWISE}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_ae3c4ee8063c10a99f486fd1d1ded60c4}\label{eqep_8h_ae3c4ee8063c10a99f486fd1d1ded60c4}} 
+\#define {\bfseries e\+QEP\+\_\+\+RISING\+\_\+\+EDGE}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_a23a2799050c0dcffa300f19a686ef28b}\label{eqep_8h_a23a2799050c0dcffa300f19a686ef28b}} 
+\#define {\bfseries e\+QEP\+\_\+\+FALLING\+\_\+\+EDGE}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_a3ccf0da582dd3a96e550542275e9182b}\label{eqep_8h_a3ccf0da582dd3a96e550542275e9182b}} 
+\#define {\bfseries e\+QEP\+\_\+\+DIRECTON\+\_\+\+DEPENDENT}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_a96bb96c73e119e5ef64fcfa6c210621e}\label{eqep_8h_a96bb96c73e119e5ef64fcfa6c210621e}} 
+\#define {\bfseries e\+QEP\+\_\+\+LATCH\+\_\+\+RISING\+\_\+\+EDGE}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_ac7e16a5b73c66e9ce3f6f59a2e1ff61e}\label{eqep_8h_ac7e16a5b73c66e9ce3f6f59a2e1ff61e}} 
+\#define {\bfseries e\+QEP\+\_\+\+LATCH\+\_\+\+FALLING\+\_\+\+EDGE}~0x02U
+\item 
+\mbox{\Hypertarget{eqep_8h_a50f11e75ab3933e91639aaafcd9f36ef}\label{eqep_8h_a50f11e75ab3933e91639aaafcd9f36ef}} 
+\#define {\bfseries e\+QEP\+\_\+\+LATCH\+\_\+\+SW\+\_\+\+INDEX\+\_\+\+MARKER}~0x03U
+\item 
+\mbox{\Hypertarget{eqep_8h_a6ae40363773e34b56a05db389e173773}\label{eqep_8h_a6ae40363773e34b56a05db389e173773}} 
+\#define {\bfseries e\+QEP\+\_\+\+INDEX\+\_\+\+EVENT}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_a8fc132de908b195d792212c90f0c44c5}\label{eqep_8h_a8fc132de908b195d792212c90f0c44c5}} 
+\#define {\bfseries e\+QEP\+\_\+\+MAX\+\_\+\+POSITION}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_a30dbfbdc5b94f4ae663abae02e0479aa}\label{eqep_8h_a30dbfbdc5b94f4ae663abae02e0479aa}} 
+\#define {\bfseries e\+QEP\+\_\+\+FIRST\+\_\+\+INDEX\+\_\+\+EVENT}~0x02U
+\item 
+\mbox{\Hypertarget{eqep_8h_a22a7d7affe9cc925406c3cee0e8ed792}\label{eqep_8h_a22a7d7affe9cc925406c3cee0e8ed792}} 
+\#define {\bfseries e\+QEP\+\_\+\+UNITTIME\+\_\+\+EVENT}~0x03U
+\item 
+\mbox{\Hypertarget{eqep_8h_a21dc9d05072369083e1a693ce88a1f75}\label{eqep_8h_a21dc9d05072369083e1a693ce88a1f75}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+1}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_a976c05b5dfd609ea2222067c0245f651}\label{eqep_8h_a976c05b5dfd609ea2222067c0245f651}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+2}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_af999f92ddb3bccd2bc13e6618dbfac5b}\label{eqep_8h_af999f92ddb3bccd2bc13e6618dbfac5b}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+4}~0x02U
+\item 
+\mbox{\Hypertarget{eqep_8h_a4bd2b0306d56835d201ccc66ff9ac32c}\label{eqep_8h_a4bd2b0306d56835d201ccc66ff9ac32c}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+8}~0x03U
+\item 
+\mbox{\Hypertarget{eqep_8h_a60001a15de7b111aa583ac5c10bdd2f1}\label{eqep_8h_a60001a15de7b111aa583ac5c10bdd2f1}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+16}~0x04U
+\item 
+\mbox{\Hypertarget{eqep_8h_a59683e39e977d7fb1518cc8032e7a924}\label{eqep_8h_a59683e39e977d7fb1518cc8032e7a924}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+32}~0x05U
+\item 
+\mbox{\Hypertarget{eqep_8h_afc1367553b915e9ea6bd37dd2f529c99}\label{eqep_8h_afc1367553b915e9ea6bd37dd2f529c99}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+64}~0x06U
+\item 
+\mbox{\Hypertarget{eqep_8h_aee6ffa4ab22a3e817dfc5f04e2b1cf08}\label{eqep_8h_aee6ffa4ab22a3e817dfc5f04e2b1cf08}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+128}~0x07U
+\item 
+\mbox{\Hypertarget{eqep_8h_af35abaf3498ae804cf23250f6ad96de0}\label{eqep_8h_af35abaf3498ae804cf23250f6ad96de0}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+256}~0x08U
+\item 
+\mbox{\Hypertarget{eqep_8h_acded7c1228a2293828f8e659ddf21614}\label{eqep_8h_acded7c1228a2293828f8e659ddf21614}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+512}~0x09U
+\item 
+\mbox{\Hypertarget{eqep_8h_a9243e023ec1cccd7bbf130b51180ee5c}\label{eqep_8h_a9243e023ec1cccd7bbf130b51180ee5c}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+1024}~0x0\+AU
+\item 
+\mbox{\Hypertarget{eqep_8h_a980c97c92279260cf61e875742c28707}\label{eqep_8h_a980c97c92279260cf61e875742c28707}} 
+\#define {\bfseries e\+QEP\+\_\+\+PS\+\_\+2048}~0x0\+BU
+\item 
+\mbox{\Hypertarget{eqep_8h_a77a3a42f1d1be5910c6fa0af79c7b2f6}\label{eqep_8h_a77a3a42f1d1be5910c6fa0af79c7b2f6}} 
+\#define {\bfseries e\+QEP\+\_\+\+ON\+\_\+\+POSITION\+\_\+\+COUNTER\+\_\+\+READ}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_a3c2b26c609a7e5eaf6f40a6df452acd5}\label{eqep_8h_a3c2b26c609a7e5eaf6f40a6df452acd5}} 
+\#define {\bfseries e\+QEP\+\_\+\+ON\+\_\+\+UNIT\+\_\+\+TIMOUT\+\_\+\+EVENT}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_ad7b03534f209d9f28c65842195ab725a}\label{eqep_8h_ad7b03534f209d9f28c65842195ab725a}} 
+\#define {\bfseries e\+QEP\+\_\+\+INDEX\+\_\+\+PIN}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_a152f63389a1f2cbec1f79a98c795f119}\label{eqep_8h_a152f63389a1f2cbec1f79a98c795f119}} 
+\#define {\bfseries e\+QEP\+\_\+\+STROBE\+\_\+\+PIN}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_a4fac46cc07ea1aa4ac26ecc84326b53e}\label{eqep_8h_a4fac46cc07ea1aa4ac26ecc84326b53e}} 
+\#define {\bfseries e\+QEP\+\_\+\+QPOSCNT\+\_\+\+EQ\+\_\+0}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_a9fe1d84a26b2e422d46cbf7e91f45bbe}\label{eqep_8h_a9fe1d84a26b2e422d46cbf7e91f45bbe}} 
+\#define {\bfseries e\+QEP\+\_\+\+QPOSCNT\+\_\+\+EQ\+\_\+\+QPSCMP}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_a55daad09b086ac12067712939ab1adec}\label{eqep_8h_a55daad09b086ac12067712939ab1adec}} 
+\#define {\bfseries e\+QEP\+\_\+\+ACTIVE\+\_\+\+HIGH}~0x00U
+\item 
+\mbox{\Hypertarget{eqep_8h_ade67a1cfdcea03cf82c769ef0d0a6011}\label{eqep_8h_ade67a1cfdcea03cf82c769ef0d0a6011}} 
+\#define {\bfseries e\+QEP\+\_\+\+ACTIVE\+\_\+\+LOW}~0x01U
+\item 
+\mbox{\Hypertarget{eqep_8h_a6df12dcce8db259e7bca0bc3aef5797a}\label{eqep_8h_a6df12dcce8db259e7bca0bc3aef5797a}} 
+\#define {\bfseries EQEP1\+\_\+\+QPOSINIT\+\_\+\+CONFIGVALUE}~((uint32)0x00000000U)
+\item 
+\mbox{\Hypertarget{eqep_8h_a77c49df7c0860c8d65155a17bc5b3d20}\label{eqep_8h_a77c49df7c0860c8d65155a17bc5b3d20}} 
+\#define {\bfseries EQEP1\+\_\+\+QPOSMAX\+\_\+\+CONFIGVALUE}~((uint32)0x00000000U)
+\item 
+\mbox{\Hypertarget{eqep_8h_a2dc0412cb2765ee3d22e10e92731bc57}\label{eqep_8h_a2dc0412cb2765ee3d22e10e92731bc57}} 
+\#define {\bfseries EQEP1\+\_\+\+QPOSCMP\+\_\+\+CONFIGVALUE}~((uint32)0x00000000U)
+\item 
+\mbox{\Hypertarget{eqep_8h_abadef916d6fefcc6daac081a808623fb}\label{eqep_8h_abadef916d6fefcc6daac081a808623fb}} 
+\#define {\bfseries EQEP1\+\_\+\+QUPRD\+\_\+\+CONFIGVALUE}~((uint32)0x00000000U)
+\item 
+\mbox{\Hypertarget{eqep_8h_ac7d055240ce8ff2333f5c0bb2ff7208d}\label{eqep_8h_ac7d055240ce8ff2333f5c0bb2ff7208d}} 
+\#define {\bfseries EQEP1\+\_\+\+QWDPRD\+\_\+\+CONFIGVALUE}~((uint16) 0x0000U)
+\item 
+\#define \mbox{\hyperlink{eqep_8h_a33ed8ec502f0b505a44d214561b98cef}{EQEP1\+\_\+\+QDECCTL\+\_\+\+CONFIGVALUE}}
+\item 
+\#define \mbox{\hyperlink{eqep_8h_a0a9a4b628fb01ba25d18580a4fbe966e}{EQEP1\+\_\+\+QEPCTL\+\_\+\+CONFIGVALUE}}
+\item 
+\#define \mbox{\hyperlink{eqep_8h_a281f8b57bf7aaa9e18cac6e6b44b3403}{EQEP1\+\_\+\+QCAPCTL\+\_\+\+CONFIGVALUE}}
+\item 
+\#define \mbox{\hyperlink{eqep_8h_a0c846c025f47d98b25d9a8becd019a55}{EQEP1\+\_\+\+QPOSCTL\+\_\+\+CONFIGVALUE}}
+\item 
+\#define \mbox{\hyperlink{eqep_8h_a335f1cb1a6f917195d21451aa1670a62}{EQEP1\+\_\+\+QEINT\+\_\+\+CONFIGVALUE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{eqep_8h_af96c692980160deca64987c02e4d3007}\label{eqep_8h_af96c692980160deca64987c02e4d3007}} 
+typedef struct \mbox{\hyperlink{structeqep__config__reg}{eqep\+\_\+config\+\_\+reg}} {\bfseries eqep\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{eqep_8h_aecc2adc0247918c6cff8d2405e18902c}\label{eqep_8h_aecc2adc0247918c6cff8d2405e18902c}} 
+enum \mbox{\hyperlink{eqep_8h_aecc2adc0247918c6cff8d2405e18902c}{e\+QEP\+\_\+\+Qsrc\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Qsrc\+\_\+\+Quad\+\_\+\+Count\+\_\+\+Mode} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+, {\bfseries e\+QEP\+\_\+\+Qsrc\+\_\+\+Dir\+\_\+\+Count\+\_\+\+Mode} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+, {\bfseries e\+QEP\+\_\+\+Qsrc\+\_\+\+Up\+\_\+\+Count\+\_\+\+Mode} =((uint16)2U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+, {\bfseries e\+QEP\+\_\+\+Qsrc\+\_\+\+Down\+\_\+\+Count\+\_\+\+Mode} =((uint16)3U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+ \}
+\begin{DoxyCompactList}\small\item\em QEP counting mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_afc2173b548889c9e522724c28d72cf83}\label{eqep_8h_afc2173b548889c9e522724c28d72cf83}} 
+enum \mbox{\hyperlink{eqep_8h_afc2173b548889c9e522724c28d72cf83}{e\+QEP\+\_\+\+Spsel\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Spsel\+\_\+\+Index\+\_\+\+Pin\+\_\+\+Sync\+\_\+\+Output} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 12U)
+, {\bfseries e\+QEP\+\_\+\+Spsel\+\_\+\+Strobe\+\_\+\+Pin\+\_\+\+Sync\+\_\+\+Output} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 12U)
+ \}
+\begin{DoxyCompactList}\small\item\em Sync output pin selection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a1ad1a4f36a78f5e6f3280953d8af7d33}\label{eqep_8h_a1ad1a4f36a78f5e6f3280953d8af7d33}} 
+enum \mbox{\hyperlink{eqep_8h_a1ad1a4f36a78f5e6f3280953d8af7d33}{e\+QEP\+\_\+\+Xcr\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Xcr\+\_\+2x\+\_\+\+Res} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 11U)
+, {\bfseries e\+QEP\+\_\+\+Xcr\+\_\+1x\+\_\+\+Res} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 11U)
+ \}
+\begin{DoxyCompactList}\small\item\em External clock rate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a519296c72cbf00c495252d19cedf77cb}\label{eqep_8h_a519296c72cbf00c495252d19cedf77cb}} 
+enum \mbox{\hyperlink{eqep_8h_a519296c72cbf00c495252d19cedf77cb}{e\+QEP\+\_\+\+Swap\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Swap\+\_\+\+Not\+\_\+\+Swapped} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 10U)
+, {\bfseries e\+QEP\+\_\+\+Swap\+\_\+\+Swapped} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 10U)
+ \}
+\begin{DoxyCompactList}\small\item\em Swap A/B channels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_ad9c770966d6fb72f096e6df7a74e5cb8}\label{eqep_8h_ad9c770966d6fb72f096e6df7a74e5cb8}} 
+enum \mbox{\hyperlink{eqep_8h_ad9c770966d6fb72f096e6df7a74e5cb8}{e\+QEP\+\_\+\+Igate\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Igate\+\_\+\+Disable} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 9U)
+, {\bfseries e\+QEP\+\_\+\+Igate\+\_\+\+Enable} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 9U)
+ \}
+\begin{DoxyCompactList}\small\item\em Index gating. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a37d85471445d50ce16eeab11e2270736}\label{eqep_8h_a37d85471445d50ce16eeab11e2270736}} 
+enum \mbox{\hyperlink{eqep_8h_a37d85471445d50ce16eeab11e2270736}{e\+QEP\+\_\+\+Qap\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Qap\+\_\+\+No\+\_\+\+Effect} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8U)
+, {\bfseries e\+QEP\+\_\+\+Qap\+\_\+\+Inverted} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8U)
+ \}
+\begin{DoxyCompactList}\small\item\em Channel A polarity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_afc29a5e24b03a06d4e52a93fbcfee822}\label{eqep_8h_afc29a5e24b03a06d4e52a93fbcfee822}} 
+enum \mbox{\hyperlink{eqep_8h_afc29a5e24b03a06d4e52a93fbcfee822}{e\+QEP\+\_\+\+Qbp\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Qbp\+\_\+\+No\+\_\+\+Effect} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 7U)
+, {\bfseries e\+QEP\+\_\+\+Qbp\+\_\+\+Inverted} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 7U)
+ \}
+\begin{DoxyCompactList}\small\item\em Channel B polarity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_afcc2655699b97debc2be04b7a5c2a38c}\label{eqep_8h_afcc2655699b97debc2be04b7a5c2a38c}} 
+enum \mbox{\hyperlink{eqep_8h_afcc2655699b97debc2be04b7a5c2a38c}{e\+QEP\+\_\+\+Qip\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Qip\+\_\+\+No\+\_\+\+Effect} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6U)
+, {\bfseries e\+QEP\+\_\+\+Qip\+\_\+\+Inverted} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6U)
+ \}
+\begin{DoxyCompactList}\small\item\em Index polarity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a1830a9053a06aac231ccfb0a04f40531}\label{eqep_8h_a1830a9053a06aac231ccfb0a04f40531}} 
+enum \mbox{\hyperlink{eqep_8h_a1830a9053a06aac231ccfb0a04f40531}{e\+QEP\+\_\+\+Qsp\+\_\+t}} \{ {\bfseries e\+QEP\+\_\+\+Qsp\+\_\+\+No\+\_\+\+Effect} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5U)
+, {\bfseries e\+QEP\+\_\+\+Qsp\+\_\+\+Inverted} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5U)
+ \}
+\begin{DoxyCompactList}\small\item\em Channel S polarity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a2b1496a3443daa81aafc216c4a0195e9}\label{eqep_8h_a2b1496a3443daa81aafc216c4a0195e9}} 
+enum \mbox{\hyperlink{eqep_8h_a2b1496a3443daa81aafc216c4a0195e9}{QEPCTL\+\_\+\+Freesoft\+\_\+t}} \{ {\bfseries QEPCTL\+\_\+\+Freesoft\+\_\+\+Immediate\+\_\+\+Halt} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+, {\bfseries QEPCTL\+\_\+\+Freesoft\+\_\+\+Rollover\+\_\+\+Halt} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+, {\bfseries QEPCTL\+\_\+\+Freesoft\+\_\+\+Unaffected\+\_\+\+Halt} =((uint16)2U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+ \}
+\begin{DoxyCompactList}\small\item\em Emulation control bits. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a2fe80bde268284b0d1d1357739c16461}\label{eqep_8h_a2fe80bde268284b0d1d1357739c16461}} 
+enum \mbox{\hyperlink{eqep_8h_a2fe80bde268284b0d1d1357739c16461}{QEPCTL\+\_\+\+Pcrm\+\_\+t}} \{ {\bfseries QEPCTL\+\_\+\+Pcrm\+\_\+\+Index\+\_\+\+Reset} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 12U)
+, {\bfseries QEPCTL\+\_\+\+Pcrm\+\_\+\+Max\+\_\+\+Reset} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 12U)
+, {\bfseries QEPCTL\+\_\+\+Pcrm\+\_\+\+First\+\_\+\+Index\+\_\+\+Reset} =((uint16)2U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 12U)
+, {\bfseries QEPCTL\+\_\+\+Pcrm\+\_\+\+Unit\+\_\+\+Time\+\_\+\+Reset} =((uint16)3U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 12U)
+ \}
+\begin{DoxyCompactList}\small\item\em Position counter reset mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a5dc92778c8ba021dec80dfd704526251}\label{eqep_8h_a5dc92778c8ba021dec80dfd704526251}} 
+enum \mbox{\hyperlink{eqep_8h_a5dc92778c8ba021dec80dfd704526251}{QEPCTL\+\_\+\+Sei\+\_\+t}} \{ {\bfseries QEPCTL\+\_\+\+Sei\+\_\+\+Nothing} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 10U)
+, {\bfseries QEPCTL\+\_\+\+Sei\+\_\+\+Rising\+\_\+\+Edge\+\_\+\+Init} =((uint16)2U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 10U)
+, {\bfseries QEPCTL\+\_\+\+Sei\+\_\+\+Rising\+\_\+\+Falling\+\_\+\+Edge\+\_\+\+Init} =((uint16)3U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 10U)
+ \}
+\begin{DoxyCompactList}\small\item\em Strobe event initialization of position counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a07e1895876cbc221c587de63ac943941}\label{eqep_8h_a07e1895876cbc221c587de63ac943941}} 
+enum \mbox{\hyperlink{eqep_8h_a07e1895876cbc221c587de63ac943941}{QEPCTL\+\_\+\+Iei\+\_\+t}} \{ {\bfseries QEPCTL\+\_\+\+Iei\+\_\+\+Nothing} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8U)
+, {\bfseries QEPCTL\+\_\+\+Iei\+\_\+\+Rising\+\_\+\+Edge\+\_\+\+Init} =((uint16)2U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8U)
+, {\bfseries QEPCTL\+\_\+\+Iei\+\_\+\+Rising\+\_\+\+Falling\+\_\+\+Edge\+\_\+\+Init} =((uint16)3U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8U)
+ \}
+\begin{DoxyCompactList}\small\item\em Index event initialization of position counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a1fdb677f694a760fd5c6c48f4e2e68a1}\label{eqep_8h_a1fdb677f694a760fd5c6c48f4e2e68a1}} 
+enum \mbox{\hyperlink{eqep_8h_a1fdb677f694a760fd5c6c48f4e2e68a1}{QEPCTL\+\_\+\+Swi\+\_\+t}} \{ {\bfseries QEPCTL\+\_\+\+Swi\+\_\+\+Nothing} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 7U)
+, {\bfseries QEPCTL\+\_\+\+Swi\+\_\+\+Auto\+\_\+\+Init\+\_\+\+Counter} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 7U)
+ \}
+\begin{DoxyCompactList}\small\item\em Software initialization of position counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a509391511ea6a9b74effc7296a02ed1a}\label{eqep_8h_a509391511ea6a9b74effc7296a02ed1a}} 
+enum \mbox{\hyperlink{eqep_8h_a509391511ea6a9b74effc7296a02ed1a}{QEPCTL\+\_\+\+Sel\+\_\+t}} \{ {\bfseries QEPCTL\+\_\+\+Sel\+\_\+\+Rising\+\_\+\+Edge} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6U)
+, {\bfseries QEPCTL\+\_\+\+Sel\+\_\+\+Rising\+\_\+\+Falling\+\_\+\+Edge} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6U)
+ \}
+\begin{DoxyCompactList}\small\item\em Strobe event latch of position counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_af07b37d99d0fb7f0d72c9ff773f11ed9}\label{eqep_8h_af07b37d99d0fb7f0d72c9ff773f11ed9}} 
+enum \mbox{\hyperlink{eqep_8h_af07b37d99d0fb7f0d72c9ff773f11ed9}{QEPCTL\+\_\+\+Iel\+\_\+t}} \{ {\bfseries QEPCTL\+\_\+\+Iel\+\_\+\+Rising\+\_\+\+Edge} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, {\bfseries QEPCTL\+\_\+\+Iel\+\_\+\+Falling\+\_\+\+Edge} =((uint16)2U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, {\bfseries QEPCTL\+\_\+\+Iel\+\_\+\+Software\+\_\+\+Index\+\_\+\+Marker} =((uint16)3U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+ \}
+\begin{DoxyCompactList}\small\item\em Index event latch of position counter (software index marker) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a1b50ca16d72d3ca37d4485d58d5e63cf}\label{eqep_8h_a1b50ca16d72d3ca37d4485d58d5e63cf}} 
+enum \mbox{\hyperlink{eqep_8h_a1b50ca16d72d3ca37d4485d58d5e63cf}{QEPCTL\+\_\+\+Qclm\+\_\+t}} \{ {\bfseries QEPCTL\+\_\+\+Qclm\+\_\+\+Latch\+\_\+on\+\_\+\+CPU\+\_\+\+Read} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2U)
+, {\bfseries QEPCTL\+\_\+\+Qclm\+\_\+\+Latch\+\_\+on\+\_\+\+Unit\+\_\+\+Timeout} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2U)
+ \}
+\begin{DoxyCompactList}\small\item\em QEP capture latch mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a0b20a147da260f54fba916f699746fd4}\label{eqep_8h_a0b20a147da260f54fba916f699746fd4}} 
+enum \mbox{\hyperlink{eqep_8h_a0b20a147da260f54fba916f699746fd4}{QPOSCTL\+\_\+\+Pcshdw\+\_\+t}} \{ {\bfseries QPOSCTL\+\_\+\+Pcshdw\+\_\+\+Load\+\_\+\+Immediate} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 15U)
+, {\bfseries QPOSCTL\+\_\+\+Pcshdw\+\_\+\+Shadow\+\_\+\+Enabled} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 15U)
+ \}
+\begin{DoxyCompactList}\small\item\em Position compare shadow enable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_aa1ff01381af29aa4f5c3f832436c7ee2}\label{eqep_8h_aa1ff01381af29aa4f5c3f832436c7ee2}} 
+enum \mbox{\hyperlink{eqep_8h_aa1ff01381af29aa4f5c3f832436c7ee2}{QPOSCTL\+\_\+\+Pcload\+\_\+t}} \{ {\bfseries QPOSCTL\+\_\+\+Pcload\+\_\+\+Load\+\_\+\+Posn\+\_\+\+Count\+\_\+\+Zero} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+, {\bfseries QPOSCTL\+\_\+\+Pcload\+\_\+\+Load\+\_\+\+Posn\+\_\+\+Count\+\_\+\+Equal\+\_\+\+Compare} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14U)
+ \}
+\begin{DoxyCompactList}\small\item\em Position compare shadow load mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_ae3cf3203447fa7385a954d34a60ccc54}\label{eqep_8h_ae3cf3203447fa7385a954d34a60ccc54}} 
+enum \mbox{\hyperlink{eqep_8h_ae3cf3203447fa7385a954d34a60ccc54}{QPOSCTL\+\_\+\+Pcpol\+\_\+t}} \{ {\bfseries QPOSCTL\+\_\+\+Pcpol\+\_\+\+Active\+\_\+\+High} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 13U)
+, {\bfseries QPOSCTL\+\_\+\+Pcpol\+\_\+\+Active\+\_\+\+Low} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 13U)
+ \}
+\begin{DoxyCompactList}\small\item\em Polarity of sync output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a08f798e9373fc418750c942760fc87a8}\label{eqep_8h_a08f798e9373fc418750c942760fc87a8}} 
+enum \mbox{\hyperlink{eqep_8h_a08f798e9373fc418750c942760fc87a8}{QCAPCTL\+\_\+\+Ccps\+\_\+t}} \{ \newline
+{\bfseries QCAPCTL\+\_\+\+Ccps\+\_\+\+Capture\+\_\+\+Div\+\_\+1} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, {\bfseries QCAPCTL\+\_\+\+Ccps\+\_\+\+Capture\+\_\+\+Div\+\_\+2} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, {\bfseries QCAPCTL\+\_\+\+Ccps\+\_\+\+Capture\+\_\+\+Div\+\_\+4} =((uint16)2U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, {\bfseries QCAPCTL\+\_\+\+Ccps\+\_\+\+Capture\+\_\+\+Div\+\_\+8} =((uint16)3U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, \newline
+{\bfseries QCAPCTL\+\_\+\+Ccps\+\_\+\+Capture\+\_\+\+Div\+\_\+16} =((uint16)4U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, {\bfseries QCAPCTL\+\_\+\+Ccps\+\_\+\+Capture\+\_\+\+Div\+\_\+32} =((uint16)5U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, {\bfseries QCAPCTL\+\_\+\+Ccps\+\_\+\+Capture\+\_\+\+Div\+\_\+64} =((uint16)6U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, {\bfseries QCAPCTL\+\_\+\+Ccps\+\_\+\+Capture\+\_\+\+Div\+\_\+128} =((uint16)7U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+ \}
+\begin{DoxyCompactList}\small\item\em QEP capture timer clock prescaler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_a4d46fc2c96c979ef396d19f283b92be0}\label{eqep_8h_a4d46fc2c96c979ef396d19f283b92be0}} 
+enum \mbox{\hyperlink{eqep_8h_a4d46fc2c96c979ef396d19f283b92be0}{QCAPCTL\+\_\+\+Upps\+\_\+t}} \{ \newline
+{\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+1\+\_\+\+Prescale} =((uint16)0U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+2\+\_\+\+Prescale} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+4\+\_\+\+Prescale} =((uint16)2U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+8\+\_\+\+Prescale} =((uint16)3U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, \newline
+{\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+16\+\_\+\+Prescale} =((uint16)4U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+32\+\_\+\+Prescale} =((uint16)5U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+64\+\_\+\+Prescale} =((uint16)6U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+128\+\_\+\+Prescale} =((uint16)7U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, \newline
+{\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+256\+\_\+\+Prescale} =((uint16)8U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+512\+\_\+\+Prescale} =((uint16)9U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+1024\+\_\+\+Prescale} =((uint16)10U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+, {\bfseries QCAPCTL\+\_\+\+Upps\+\_\+\+Div\+\_\+2048\+\_\+\+Prescale} =((uint16)11U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0U)
+ \}
+\begin{DoxyCompactList}\small\item\em Unit position event prescaler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{eqep_8h_af85f2f99be537503acd2fddf67e63caf}\label{eqep_8h_af85f2f99be537503acd2fddf67e63caf}} 
+enum \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\+\_\+t}} \{ \newline
+{\bfseries QEINT\+\_\+\+Uto} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 11U)
+, {\bfseries QEINT\+\_\+\+Iel} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 10U)
+, {\bfseries QEINT\+\_\+\+Sel} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 9U)
+, {\bfseries QEINT\+\_\+\+Pcm} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8U)
+, \newline
+{\bfseries QEINT\+\_\+\+Pcr} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 7U)
+, {\bfseries QEINT\+\_\+\+Pco} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6U)
+, {\bfseries QEINT\+\_\+\+Pcu} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5U)
+, {\bfseries QEINT\+\_\+\+Wto} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4U)
+, \newline
+{\bfseries QEINT\+\_\+\+Qdc} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3U)
+, {\bfseries QEINT\+\_\+\+Qpe} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2U)
+, {\bfseries QEINT\+\_\+\+Pce} =((uint16)1U \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1U)
+ \}
+\begin{DoxyCompactList}\small\item\em QEP interrupt enable flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries QEPInit} (void)
+\item 
+void {\bfseries eqep\+Clear\+All\+Interrupt\+Flags} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Clear\+Interrupt\+Flag} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\+\_\+t}} QEINT\+\_\+type)
+\item 
+void {\bfseries eqep\+Clear\+Posn\+Counter} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Disable\+All\+Interrupts} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Disable\+Capture} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Disable\+Gate\+Index} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Disable\+Interrupt} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\+\_\+t}} QEINT\+\_\+type)
+\item 
+void {\bfseries eqep\+Disable\+Posn\+Compare} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Disable\+Posn\+Compare\+Shadow} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Disable\+Sync\+Out} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Disable\+Unit\+Timer} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Disable\+Watchdog} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Enable\+Capture} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Enable\+Counter} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Enable\+Gate\+Index} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Enable\+Interrupt} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\+\_\+t}} QEINT\+\_\+type)
+\item 
+void {\bfseries eqep\+Enable\+Posn\+Compare} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Enable\+Posn\+Compare\+Shadow} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Enable\+Sync\+Out} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Enable\+Unit\+Timer} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Enable\+Watchdog} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Force\+Interrupt} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\+\_\+t}} QEINT\+\_\+type)
+\item 
+uint16 {\bfseries eqep\+Read\+Capture\+Period\+Latch} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+uint16 {\bfseries eqep\+Read\+Capture\+Timer\+Latch} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+uint16 {\bfseries eqep\+Read\+Interrupt\+Flag} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\+\_\+t}} QEINT\+\_\+type)
+\item 
+uint32 {\bfseries eqep\+Read\+Posn\+Compare} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+uint32 {\bfseries eqep\+Read\+Posn\+Count} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+uint32 {\bfseries eqep\+Read\+Posn\+Index\+Latch} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+uint32 {\bfseries eqep\+Read\+Posn\+Latch} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+uint32 {\bfseries eqep\+Read\+Posn\+Strobe\+Latch} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+uint16 {\bfseries eqep\+Read\+Status} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Reset\+Counter} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep)
+\item 
+void {\bfseries eqep\+Set\+Capture\+Latch\+Mode} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a1b50ca16d72d3ca37d4485d58d5e63cf}{QEPCTL\+\_\+\+Qclm\+\_\+t}} QEPCTL\+\_\+\+Qclm)
+\item 
+void {\bfseries eqep\+Set\+Capture\+Period} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, uint16 period)
+\item 
+void {\bfseries eqep\+Set\+Capture\+Prescale} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a08f798e9373fc418750c942760fc87a8}{QCAPCTL\+\_\+\+Ccps\+\_\+t}} QCAPCTL\+\_\+\+Ccps)
+\item 
+void {\bfseries eqep\+Set\+Emu\+Control} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a2b1496a3443daa81aafc216c4a0195e9}{QEPCTL\+\_\+\+Freesoft\+\_\+t}} QEPCTL\+\_\+\+Freesoft)
+\item 
+void {\bfseries eqep\+Set\+Ext\+Clock\+Rate} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a1ad1a4f36a78f5e6f3280953d8af7d33}{e\+QEP\+\_\+\+Xcr\+\_\+t}} e\+QEP\+\_\+\+Xcr)
+\item 
+void {\bfseries eqep\+Set\+Index\+Event\+Init} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a07e1895876cbc221c587de63ac943941}{QEPCTL\+\_\+\+Iei\+\_\+t}} QEPCTL\+\_\+\+Iei)
+\item 
+void {\bfseries eqep\+Set\+Index\+Event\+Latch} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_af07b37d99d0fb7f0d72c9ff773f11ed9}{QEPCTL\+\_\+\+Iel\+\_\+t}} QEPCTL\+\_\+\+Iel)
+\item 
+void {\bfseries eqep\+Set\+Index\+Polarity} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_afcc2655699b97debc2be04b7a5c2a38c}{e\+QEP\+\_\+\+Qip\+\_\+t}} e\+QEP\+\_\+\+Qip)
+\item 
+void {\bfseries eqep\+Set\+Max\+Posn\+Count} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, uint32 max\+\_\+count)
+\item 
+void {\bfseries eqep\+Set\+Posn\+Compare\+Pulse\+Width} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, uint16 pulse\+\_\+width)
+\item 
+void {\bfseries eqep\+Set\+Posn\+Compare\+Shadow\+Load} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_aa1ff01381af29aa4f5c3f832436c7ee2}{QPOSCTL\+\_\+\+Pcload\+\_\+t}} QPOSCTL\+\_\+\+Pcload)
+\item 
+void {\bfseries eqep\+Set\+Posn\+Count\+Reset\+Mode} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a2fe80bde268284b0d1d1357739c16461}{QEPCTL\+\_\+\+Pcrm\+\_\+t}} QEPCTL\+\_\+\+Pcrm)
+\item 
+void {\bfseries eqep\+Set\+Posn\+Init\+Count} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, uint32 init\+\_\+count)
+\item 
+void {\bfseries eqep\+Set\+Select\+Sync\+Pin} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_afc2173b548889c9e522724c28d72cf83}{e\+QEP\+\_\+\+Spsel\+\_\+t}} e\+QEP\+\_\+\+SPsel)
+\item 
+void {\bfseries eqep\+Set\+Soft\+Init} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a1fdb677f694a760fd5c6c48f4e2e68a1}{QEPCTL\+\_\+\+Swi\+\_\+t}} QEPCTL\+\_\+\+Swi)
+\item 
+void {\bfseries eqep\+Set\+Strobe\+Event\+Init} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a5dc92778c8ba021dec80dfd704526251}{QEPCTL\+\_\+\+Sei\+\_\+t}} QEPCTL\+\_\+\+Sei)
+\item 
+void {\bfseries eqep\+Set\+Strobe\+Event\+Latch} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a509391511ea6a9b74effc7296a02ed1a}{QEPCTL\+\_\+\+Sel\+\_\+t}} QEPCTL\+\_\+\+Sel)
+\item 
+void {\bfseries eqep\+Set\+Strobe\+Polarity} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a1830a9053a06aac231ccfb0a04f40531}{e\+QEP\+\_\+\+Qsp\+\_\+t}} e\+QEP\+\_\+\+Qsp)
+\item 
+void {\bfseries eqep\+Set\+Swap\+Quad\+Inputs} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a519296c72cbf00c495252d19cedf77cb}{e\+QEP\+\_\+\+Swap\+\_\+t}} e\+QEP\+\_\+\+Swap)
+\item 
+void {\bfseries eqep\+Set\+Synch\+Output\+Compare\+Polarity} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_ae3cf3203447fa7385a954d34a60ccc54}{QPOSCTL\+\_\+\+Pcpol\+\_\+t}} QPOSCTL\+\_\+\+Pcpol)
+\item 
+void {\bfseries eqep\+Set\+Unit\+Period} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, uint32 unit\+\_\+period)
+\item 
+void {\bfseries eqep\+Set\+Unit\+Posn\+Prescale} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a4d46fc2c96c979ef396d19f283b92be0}{QCAPCTL\+\_\+\+Upps\+\_\+t}} QCAPCTL\+\_\+\+Upps)
+\item 
+void {\bfseries eqep\+Set\+Watchdog\+Period} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, uint16 watchdog\+\_\+period)
+\item 
+void {\bfseries eqep\+Setup\+Strobe\+Event\+Latch} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a509391511ea6a9b74effc7296a02ed1a}{QEPCTL\+\_\+\+Sel\+\_\+t}} QEPCTL\+\_\+\+Sel)
+\item 
+void {\bfseries eqep\+Set\+APolarity} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_a37d85471445d50ce16eeab11e2270736}{e\+QEP\+\_\+\+Qap\+\_\+t}} e\+QEP\+\_\+\+Qap)
+\item 
+void {\bfseries eqep\+Set\+BPolarity} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_afc29a5e24b03a06d4e52a93fbcfee822}{e\+QEP\+\_\+\+Qbp\+\_\+t}} e\+QEP\+\_\+\+Qbp)
+\item 
+void {\bfseries eqep\+Set\+QEPSource} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, \mbox{\hyperlink{eqep_8h_aecc2adc0247918c6cff8d2405e18902c}{e\+QEP\+\_\+\+Qsrc\+\_\+t}} e\+QEP\+\_\+\+Qsrc)
+\item 
+void {\bfseries eqep\+Write\+Posn\+Compare} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, uint32 posn)
+\item 
+void \mbox{\hyperlink{group__e_q_e_p_ga72d2907736f69bffc6183f5a610f22a2}{eqep\+Notification}} (\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+BASE\+\_\+t}} $\ast$eqep, uint16 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void {\bfseries eqep1\+Get\+Config\+Value} (\mbox{\hyperlink{structeqep__config__reg}{eqep\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+EQEP Driver Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01 
+\end{DoxyVersion}
+
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{eqep_8h_a281f8b57bf7aaa9e18cac6e6b44b3403}\label{eqep_8h_a281f8b57bf7aaa9e18cac6e6b44b3403}} 
+\index{eqep.h@{eqep.h}!EQEP1\_QCAPCTL\_CONFIGVALUE@{EQEP1\_QCAPCTL\_CONFIGVALUE}}
+\index{EQEP1\_QCAPCTL\_CONFIGVALUE@{EQEP1\_QCAPCTL\_CONFIGVALUE}!eqep.h@{eqep.h}}
+\doxysubsubsection{\texorpdfstring{EQEP1\_QCAPCTL\_CONFIGVALUE}{EQEP1\_QCAPCTL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define EQEP1\+\_\+\+QCAPCTL\+\_\+\+CONFIGVALUE}
+
+{\bfseries Макроопределение\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)((uint16)eQEP\_PS\_8\ <<\ 4U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_PS\_512)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)0x0000U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{eqep_8h_a33ed8ec502f0b505a44d214561b98cef}\label{eqep_8h_a33ed8ec502f0b505a44d214561b98cef}} 
+\index{eqep.h@{eqep.h}!EQEP1\_QDECCTL\_CONFIGVALUE@{EQEP1\_QDECCTL\_CONFIGVALUE}}
+\index{EQEP1\_QDECCTL\_CONFIGVALUE@{EQEP1\_QDECCTL\_CONFIGVALUE}!eqep.h@{eqep.h}}
+\doxysubsubsection{\texorpdfstring{EQEP1\_QDECCTL\_CONFIGVALUE}{EQEP1\_QDECCTL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define EQEP1\+\_\+\+QDECCTL\+\_\+\+CONFIGVALUE}
+
+{\bfseries Макроопределение\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)((uint16)eQEP\_DIRECTION\_COUNT\ <<\ 14U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 13U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_INDEX\_PIN\ <<\ 12U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_RESOLUTION\_1x\ <<\ 11U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 10U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 9U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 8U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 7U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 6U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 5U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)0x0000U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{eqep_8h_a335f1cb1a6f917195d21451aa1670a62}\label{eqep_8h_a335f1cb1a6f917195d21451aa1670a62}} 
+\index{eqep.h@{eqep.h}!EQEP1\_QEINT\_CONFIGVALUE@{EQEP1\_QEINT\_CONFIGVALUE}}
+\index{EQEP1\_QEINT\_CONFIGVALUE@{EQEP1\_QEINT\_CONFIGVALUE}!eqep.h@{eqep.h}}
+\doxysubsubsection{\texorpdfstring{EQEP1\_QEINT\_CONFIGVALUE}{EQEP1\_QEINT\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define EQEP1\+\_\+\+QEINT\+\_\+\+CONFIGVALUE}
+
+{\bfseries Макроопределение\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)((uint16)0U\ <<\ 11U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 10U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 9U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 8U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 7U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 6U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 5U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 4U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 3U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 2U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 1U)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{eqep_8h_a0a9a4b628fb01ba25d18580a4fbe966e}\label{eqep_8h_a0a9a4b628fb01ba25d18580a4fbe966e}} 
+\index{eqep.h@{eqep.h}!EQEP1\_QEPCTL\_CONFIGVALUE@{EQEP1\_QEPCTL\_CONFIGVALUE}}
+\index{EQEP1\_QEPCTL\_CONFIGVALUE@{EQEP1\_QEPCTL\_CONFIGVALUE}!eqep.h@{eqep.h}}
+\doxysubsubsection{\texorpdfstring{EQEP1\_QEPCTL\_CONFIGVALUE}{EQEP1\_QEPCTL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define EQEP1\+\_\+\+QEPCTL\+\_\+\+CONFIGVALUE}
+
+{\bfseries Макроопределение\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)((uint16)eQEP\_MAX\_POSITION\ <<\ 12U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 11U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_DIRECTON\_DEPENDENT\ <<\ 10U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 9U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_RISING\_EDGE\ <<\ 8U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 7U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_RISING\_EDGE\ <<\ 6U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_LATCH\_RISING\_EDGE\ <<\ 4U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_ON\_POSITION\_COUNTER\_READ\ <<\ 2U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)0x0000U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{eqep_8h_a0c846c025f47d98b25d9a8becd019a55}\label{eqep_8h_a0c846c025f47d98b25d9a8becd019a55}} 
+\index{eqep.h@{eqep.h}!EQEP1\_QPOSCTL\_CONFIGVALUE@{EQEP1\_QPOSCTL\_CONFIGVALUE}}
+\index{EQEP1\_QPOSCTL\_CONFIGVALUE@{EQEP1\_QPOSCTL\_CONFIGVALUE}!eqep.h@{eqep.h}}
+\doxysubsubsection{\texorpdfstring{EQEP1\_QPOSCTL\_CONFIGVALUE}{EQEP1\_QPOSCTL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define EQEP1\+\_\+\+QPOSCTL\+\_\+\+CONFIGVALUE}
+
+{\bfseries Макроопределение\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)((uint16)0U\ <<\ 15U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_QPOSCNT\_EQ\_QPSCMP\ <<\ 14U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_ACTIVE\_HIGH\ <<\ 13U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0x000U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)0x0000U))}
+
+\end{DoxyCode}

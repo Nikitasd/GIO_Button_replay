@@ -1,0 +1,79 @@
+\hypertarget{reg__crc_8h_source}{}\doxysection{reg\+\_\+crc.\+h}
+\label{reg__crc_8h_source}\index{include/reg\_crc.h@{include/reg\_crc.h}}
+\mbox{\hyperlink{reg__crc_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*}}
+\DoxyCodeLine{00046\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifndef\ \_\_REG\_CRC\_H\_\_}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ \_\_REG\_CRC\_H\_\_}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sys__common_8h}{sys\_common.h}}"{}}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00055\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ Crc\ Register\ Frame\ Definition\ */}}
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcrc_base}{crcBase}}}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a4a0fe92536d7d8d5ffe4bdc7145a8349}{CTRL0}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_af19154a0a6e6a77aad296ecabf01ad32}{rvd1}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a77d6ec72e247f53699a8554235c468da}{CTRL1}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_adc5a2dea152c5ed1832ec2238c349bc7}{rvd2}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a98e4862ac30729e0901f558474d3e6f5}{CTRL2}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_afc700c84f46e2997aa5957ff9c7ba755}{rvd3}}[19];\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a73c96141e5397deedc135883201310e8}{PSA\_SIGREGL1}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_ad145794f773c35ca00bdff75fc764d16}{PSA\_SIGREGH1}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a8c0f84acb5a78ec3d1e125a46d079e38}{rvd4}}[4];\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a1b0d9abb6e911a042b3a1eaa020c3610}{RAW\_DATAREGL1}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a5e23e5a8a3a26f314649f2c1adfab0b8}{RAW\_DATAREGH1}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_aec2e7aa3bef1cbf44016c94ce272cbbd}{rvd5}}[8];\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a87a574f08e68e3bbd1f42c434bac72fc}{PSA\_SIGREGL2}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a394634ae11043fc8e731adbe8f9a78be}{PSA\_SIGREGH2}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_ad145bdbcc9cbb838472466812f5f324c}{rvd6}}[4];\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a06ce1b02574a429e935187e1043484ee}{RAW\_DATAREGL2}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcrc_base_a411a260b6794171db503c85e0d51aded}{RAW\_DATAREGH2}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \}\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crcBASE\_t}};}
+\DoxyCodeLine{00088\ \ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ crcREG\ ((crcBASE\_t\ *)0xFE000000U)}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00097\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

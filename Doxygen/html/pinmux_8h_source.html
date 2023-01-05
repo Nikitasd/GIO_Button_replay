@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: Исходный файл include/pinmux.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pinmux.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pinmux_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">* Copyright (C) 2009-2018 Texas Instruments Incorporated - www.ti.com  </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">* </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">* </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">*  Redistribution and use in source and binary forms, with or without </span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*  modification, are permitted provided that the following conditions </span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*  are met:</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">*</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">*    Redistributions of source code must retain the above copyright </span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*    notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*    Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*    notice, this list of conditions and the following disclaimer in the </span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*    documentation and/or other materials provided with the   </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*    distribution.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*    Neither the name of Texas Instruments Incorporated nor the names of</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*    its contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*    from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">*</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS </span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT </span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">*  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, </span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT </span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">*  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">*</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#ifndef __PINMUX_H__</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define __PINMUX_H__</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &quot;<a class="code" href="reg__pinmux_8h.html">reg_pinmux.h</a>&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define PINMUX_PIN_1_SHIFT          8U</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define PINMUX_PIN_2_SHIFT          0U</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define PINMUX_PIN_5_SHIFT          8U</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define PINMUX_PIN_8_SHIFT          16U</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define PINMUX_PIN_9_SHIFT          24U</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define PINMUX_PIN_10_SHIFT         0U</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define PINMUX_PIN_12_SHIFT         8U</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define PINMUX_PIN_18_SHIFT         16U</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#define PINMUX_PIN_27_SHIFT         0U</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#define PINMUX_PIN_36_SHIFT         16U</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define PINMUX_PIN_37_SHIFT         24U</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define PINMUX_PIN_38_SHIFT         0U</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define PINMUX_PIN_39_SHIFT         8U</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define PINMUX_PIN_58_SHIFT         16U</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#define PINMUX_PIN_68_SHIFT         8U</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define PINMUX_PIN_93_SHIFT         8U</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#define PINMUX_PIN_1_MASK           (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_1_SHIFT))</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#define PINMUX_PIN_2_MASK           (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_2_SHIFT))</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define PINMUX_PIN_5_MASK           (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_5_SHIFT))</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#define PINMUX_PIN_8_MASK           (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_8_SHIFT))</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#define PINMUX_PIN_9_MASK           (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_9_SHIFT))</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#define PINMUX_PIN_10_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_10_SHIFT))</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#define PINMUX_PIN_12_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_12_SHIFT))</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#define PINMUX_PIN_18_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_18_SHIFT))</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#define PINMUX_PIN_27_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_27_SHIFT))</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#define PINMUX_PIN_36_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_36_SHIFT))</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#define PINMUX_PIN_37_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_37_SHIFT))</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#define PINMUX_PIN_38_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_38_SHIFT))</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#define PINMUX_PIN_39_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_39_SHIFT))</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#define PINMUX_PIN_58_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_58_SHIFT))</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#define PINMUX_PIN_68_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_68_SHIFT))</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#define PINMUX_PIN_93_MASK          (~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_93_SHIFT))</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#define PINMUX_PIN_1_GIOA_0         ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_1_SHIFT))</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#define PINMUX_PIN_1_SPI3nCS_3      ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_1_SHIFT))</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#define PINMUX_PIN_2_GIOA_1         ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_2_SHIFT))</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#define PINMUX_PIN_2_SPI3nCS_2      ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_2_SHIFT))</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#define PINMUX_PIN_5_GIOA_2         ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_5_SHIFT))</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#define PINMUX_PIN_5_SPI3nCS_1      ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_5_SHIFT))</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#define PINMUX_PIN_8_GIOA_3         ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_8_SHIFT))</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#define PINMUX_PIN_8_SPI2nCS_3      ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_8_SHIFT))</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#define PINMUX_PIN_9_GIOA_4         ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_9_SHIFT))</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#define PINMUX_PIN_9_SPI2nCS_2      ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_9_SHIFT))</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#define PINMUX_PIN_10_GIOA_5        ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_10_SHIFT))</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#define PINMUX_PIN_10_EXTCLKIN      ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_10_SHIFT))</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#define PINMUX_PIN_12_GIOA_6        ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_12_SHIFT))</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#define PINMUX_PIN_12_SPI2nCS_1     ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_12_SHIFT))</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#define PINMUX_PIN_12_HET_31        ((uint32)((uint32)0x4U &lt;&lt;  PINMUX_PIN_12_SHIFT))</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#define PINMUX_PIN_18_GIOA_7        ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_18_SHIFT))</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#define PINMUX_PIN_18_HET_29        ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_18_SHIFT))</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#define PINMUX_PIN_27_MIBSPI1nCS_2  ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_27_SHIFT))</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#define PINMUX_PIN_27_HET_20        ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_27_SHIFT))</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#define PINMUX_PIN_27_HET_19        ((uint32)((uint32)0x4U &lt;&lt;  PINMUX_PIN_27_SHIFT))</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#define PINMUX_PIN_36_SPI3CLK       ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_36_SHIFT))</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#define PINMUX_PIN_36_EQEPA         ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_36_SHIFT))</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#define PINMUX_PIN_37_SPI3nENA      ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_37_SHIFT))</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#define PINMUX_PIN_37_EQEPB         ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_37_SHIFT))</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#define PINMUX_PIN_38_SPI3nCS_0     ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_38_SHIFT))</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#define PINMUX_PIN_38_EQEPI         ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_38_SHIFT))</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#define PINMUX_PIN_39_MIBSPI1nCS_3  ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_39_SHIFT))</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#define PINMUX_PIN_39_HET_26        ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_39_SHIFT))</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#define PINMUX_PIN_58_ADEVT         ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_58_SHIFT))</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#define PINMUX_PIN_58_HET_28        ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_58_SHIFT))</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#define PINMUX_PIN_68_MIBSPI1nENA   ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_68_SHIFT))</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">#define PINMUX_PIN_68_HET_23        ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_68_SHIFT))</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#define PINMUX_PIN_68_HET_30        ((uint32)((uint32)0x4U &lt;&lt;  PINMUX_PIN_68_SHIFT))</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#define PINMUX_PIN_93_MIBSPI1nCS_1  ((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_93_SHIFT))</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#define PINMUX_PIN_93_EQEPS         ((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_93_SHIFT))</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#define PINMUX_PIN_93_HET_17        ((uint32)((uint32)0x4U &lt;&lt;  PINMUX_PIN_93_SHIFT))</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="structpinmux__config__reg.html">  138</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structpinmux__config__reg.html">pinmux_config_reg</a></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>{</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    uint32 CONFIG_PINMMR0;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    uint32 CONFIG_PINMMR1;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    uint32 CONFIG_PINMMR2;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    uint32 CONFIG_PINMMR3;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    uint32 CONFIG_PINMMR4;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    uint32 CONFIG_PINMMR5;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    uint32 CONFIG_PINMMR6;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}<a class="code hl_struct" href="structpinmux__config__reg.html">pinmux_config_reg_t</a>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___i_o_m_m.html#ga8fac89d371c9be80b507da3c31144423">muxInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___i_o_m_m.html#gae1d5925bc43dd10efb0529ed8fea7e5d">pinmuxGetConfigValue</a>(<a class="code hl_struct" href="structpinmux__config__reg.html">pinmux_config_reg_t</a> *config_reg, <a class="code hl_typedef" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a> type);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">/* USER CODE BEGIN (0) */</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">/* USER CODE END */</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup___i_o_m_m_html_ga8fac89d371c9be80b507da3c31144423"><div class="ttname"><a href="group___i_o_m_m.html#ga8fac89d371c9be80b507da3c31144423">muxInit</a></div><div class="ttdeci">void muxInit(void)</div><div class="ttdoc">Initializes the PINMUX Driver.</div><div class="ttdef"><b>Definition:</b> pinmux.c:81</div></div>
+<div class="ttc" id="agroup___i_o_m_m_html_gae1d5925bc43dd10efb0529ed8fea7e5d"><div class="ttname"><a href="group___i_o_m_m.html#gae1d5925bc43dd10efb0529ed8fea7e5d">pinmuxGetConfigValue</a></div><div class="ttdeci">void pinmuxGetConfigValue(pinmux_config_reg_t *config_reg, config_value_type_t type)</div><div class="ttdoc">Get the initial or current values of the configuration registers.</div><div class="ttdef"><b>Definition:</b> pinmux.c:137</div></div>
+<div class="ttc" id="areg__pinmux_8h_html"><div class="ttname"><a href="reg__pinmux_8h.html">reg_pinmux.h</a></div><div class="ttdoc">PINMUX Register Layer Header File.</div></div>
+<div class="ttc" id="astructpinmux__config__reg_html"><div class="ttname"><a href="structpinmux__config__reg.html">pinmux_config_reg</a></div><div class="ttdef"><b>Definition:</b> pinmux.h:139</div></div>
+<div class="ttc" id="asys__common_8h_html_a9daf9a5992391b058477d28d107ee5e2"><div class="ttname"><a href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a></div><div class="ttdeci">enum config_value_type config_value_type_t</div><div class="ttdoc">config type Type Definition</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,753 @@
+\hypertarget{structadc_base}{}\doxysection{Структура adc\+Base}
+\label{structadc_base}\index{adcBase@{adcBase}}
+
+
+ADC Register Frame Definition.  
+
+
+
+
+{\ttfamily \#include $<$reg\+\_\+adc.\+h$>$}
+
+\doxysubsection*{Поля данных}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_acbef3d0ce6ddc6bc7eee93cc5e0c0cef}{RSTCR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a4c38f022f4de7468ab8370dabba45e93}{OPMODECR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a67b7ccf96a073bac9cc22fd16523cedf}{CLOCKCR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a3e67dd602faaa1de9f1a1d7318df837c}{CALCR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ae1b6572cf3f0d2225b45bdcf54c73635}{Gx\+MODECR}} \mbox{[}3U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aeb05b8e960a9e68585a7332210243ab4}{EVSRC}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a08f2bc2f833e36bb70a7edfc3a2dc80d}{G1\+SRC}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_adb065b0c38b1122c668a596305ad86a5}{G2\+SRC}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a7b7b8123c90a8dc10be364cb79d41dfb}{Gx\+INTENA}} \mbox{[}3U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a5676c58792d3fd315141e39531d912a6}{Gx\+INTFLG}} \mbox{[}3U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a0e47a292e62eb77691f957bff508eadc}{Gx\+INTCR}} \mbox{[}3U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ab2aa765a87c95004dc2dd9068877ddbb}{EVDMACR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a05f7a060b3dbfd51dd897b164db2074a}{G1\+DMACR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_af5420c2ec1dbadb3da5783af533a0fdb}{G2\+DMACR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aa3f9fcc0d117b30c6a7bdf415431cbbe}{BNDCR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a00839c4253c228c45f242c03785abf6e}{BNDEND}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aece4f78b43eb0804e9b17d134976b249}{EVSAMP}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ad76b9530f329e46e1692ef4fe84202fb}{G1\+SAMP}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a949847770a8102abce7aeed015115aa1}{G2\+SAMP}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aad703129eba4e2e2994077a68cc74abd}{EVSR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a4ff090cbc64599307978bbe38f5f139a}{G1\+SR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a0d8bb245d41a1839dcfb215fc9741bd6}{G2\+SR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a39abeca21025886ad51c419e2b35074e}{Gx\+SEL}} \mbox{[}3U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_afd4a9373c4327e2800ceb7da4c5d344b}{CALR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ab9d627185628d29065c2603b43de25b8}{SMSTATE}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aec5ddfd4a0e7cc81f8495d88ea8244cd}{LASTCONV}}
+\item 
+\mbox{\Hypertarget{structadc_base_a1ae04a159bade4ee1bf771e982c95e0a}\label{structadc_base_a1ae04a159bade4ee1bf771e982c95e0a}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32 \mbox{\hyperlink{structadc_base_aa16fee2748c89af9d7a5e6fb9b2499c1}{BUF0}}\\
+\>uint32 \mbox{\hyperlink{structadc_base_afb7932dd7334812841f94aa464708900}{BUF1}}\\
+\>uint32 \mbox{\hyperlink{structadc_base_af0951bee8f4acacdb10c50a46c01b578}{BUF2}}\\
+\>uint32 \mbox{\hyperlink{structadc_base_aa5b0bd641eca5cfa49072ef73658073b}{BUF3}}\\
+\>uint32 \mbox{\hyperlink{structadc_base_a905585a323fce87539119263b03db1ae}{BUF4}}\\
+\>uint32 \mbox{\hyperlink{structadc_base_a87ed27280cd0bf7efe6093bc40a211de}{BUF5}}\\
+\>uint32 \mbox{\hyperlink{structadc_base_a823a313f41f7d32f0c87a8f2e958248d}{BUF6}}\\
+\>uint32 \mbox{\hyperlink{structadc_base_ac1efc5f5452fc41884446eedddea99e5}{BUF7}}\\
+\} {\bfseries GxBUF} \mbox{[}3U\mbox{]}\\
+
+\end{tabbing}\item 
+uint32 \mbox{\hyperlink{structadc_base_ad65e8c514876c88534023bb2daf85847}{EVEMUBUFFER}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a45a6c4ceb87d4af48479404ee6bcd784}{G1\+EMUBUFFER}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a575de2ab44328d0f0cbede0e969511e2}{G2\+EMUBUFFER}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ac4aacdae242d540932b072690afdfdb0}{EVTDIR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a83641b6866b0b0e3ce97fbf294290e5e}{EVTOUT}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ae20d284746de341343df40a4cf9b0805}{EVTIN}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ae5031f0ba7ded2a2e5d0840c756ef5ac}{EVTSET}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a7d081b61b43ff4d35ab9b49c220fe524}{EVTCLR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aa7bd44fb353c931bde234a160615924a}{EVTPDR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aec99bf3b02ab03bfb51c68b24ebe3543}{EVTDIS}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aa6f9a8a5fee700f4ecd495acf6b3925d}{EVTPSEL}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a0f576963fe5fa9351c7817d2bb622643}{EVSAMPDISEN}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aa44d46c16d5c3a85257ade334c299533}{G1\+SAMPDISEN}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a69a48b0a0ed8bc383dbd78c0f5ef6f80}{G2\+SAMPDISEN}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a46f278a93eb4b72b822a4d6b6ca39076}{MAGINTCR1}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_afd4d3bdd7a1cb581eb3a9a52dade7296}{MAGINT1\+MASK}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a8b85073957a379577155bc3e01a80c38}{MAGINTCR2}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ad3e5da0afa58c32d8c266635ee94ca41}{MAGINT2\+MASK}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a5bc67df9a8d8f0374b9dff3d142701f7}{MAGINTCR3}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a91dd97aba71cb1d36494eb072736d91e}{MAGINT3\+MASK}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a157d52061ee945a71c2c46674a89cf40}{rsvd1}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_af7e9341fe6900c82e1dc8f9d31036cfc}{rsvd2}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aa739ac0b1d8a4ba9751159e9a9b5bb37}{rsvd3}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a7cdaa346531096f97ff5a92cee5d88f4}{rsvd4}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ad029847b498ddf9d1d76ef69e2c6614e}{rsvd5}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_af45f35dc2dea75eb65ccffa9be1872ac}{rsvd6}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a77877d2b757936a250b3805b93246ff0}{MAGTHRINTENASET}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a6db5ae3b235df2a5788a7ead99918b9d}{MAGTHRINTENACLR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ad7ada2afe4ff0d4ef56230ad70743ef9}{MAGTHRINTFLG}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ae749ba88c57c45887efb5065f59ae9df}{MAGTHRINTOFFSET}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a1ab5c1b0f58803cf1dd246c3abeadb1f}{Gx\+FIFORESETCR}} \mbox{[}3U\mbox{]}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a7b80dc194e0ea162ebc1afc5fc27a53e}{EVRAMADDR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_af15bbd1b9c14ea6e0cfd1f64274b2920}{G1\+RAMADDR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a5f7328571d59b856845fa4b2272b418c}{G2\+RAMADDR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a6801cf501a5db879d21fc1aaef2f555f}{PARCR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_af238db865db8df52dd4373cc70abf6bc}{PARADDR}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a4db474fc3eeb084fb912a3e4db2525b2}{PWRUPDLYCTRL}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_ade3feeff475fb39ad53591d9b3a37d9e}{rsvd7}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_aa5e161d0bdb260b9d5384e7ed12cacfc}{ADEVCHNSELMODECTRL}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a53d266b293c0fcfd3a14339954813055}{ADG1\+CHNSELMODECTRL}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a842cd46afde2f4db46bcd8af328bb603}{ADG2\+CHNSELMODECTRL}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a6ea0c43dc899b7f54090774f035cf2ee}{ADEVCURRCOUNT}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a3c833a0699d2bc5399eb480d6c82303c}{ADEVMAXCOUNT}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_af51b73417bfa4f2489a07b2d440d0133}{ADG1\+CURRCOUNT}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a92da736a24df6f9c5dce5fdc3a7ad056}{ADG1\+MAXCOUNT}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a56ce973020e9f244ab4284a768518693}{ADG2\+CURRCOUNT}}
+\item 
+uint32 \mbox{\hyperlink{structadc_base_a5d2f6c33b6c5ab5ab0c0cba97f113ad6}{ADG2\+MAXCOUNT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+ADC Register Frame Definition. 
+
+This type is used to access the ADC Registers. 
+
+\doxysubsection{Поля}
+\mbox{\Hypertarget{structadc_base_aa5e161d0bdb260b9d5384e7ed12cacfc}\label{structadc_base_aa5e161d0bdb260b9d5384e7ed12cacfc}} 
+\index{adcBase@{adcBase}!ADEVCHNSELMODECTRL@{ADEVCHNSELMODECTRL}}
+\index{ADEVCHNSELMODECTRL@{ADEVCHNSELMODECTRL}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADEVCHNSELMODECTRL}{ADEVCHNSELMODECTRL}}
+{\footnotesize\ttfamily uint32 ADEVCHNSELMODECTRL}
+
+0x0190\+: Event Group Channel Selection Mode Control Register \mbox{\Hypertarget{structadc_base_a6ea0c43dc899b7f54090774f035cf2ee}\label{structadc_base_a6ea0c43dc899b7f54090774f035cf2ee}} 
+\index{adcBase@{adcBase}!ADEVCURRCOUNT@{ADEVCURRCOUNT}}
+\index{ADEVCURRCOUNT@{ADEVCURRCOUNT}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADEVCURRCOUNT}{ADEVCURRCOUNT}}
+{\footnotesize\ttfamily uint32 ADEVCURRCOUNT}
+
+0x019C\+: Event Group Current Count Register ~\newline
+ \mbox{\Hypertarget{structadc_base_a3c833a0699d2bc5399eb480d6c82303c}\label{structadc_base_a3c833a0699d2bc5399eb480d6c82303c}} 
+\index{adcBase@{adcBase}!ADEVMAXCOUNT@{ADEVMAXCOUNT}}
+\index{ADEVMAXCOUNT@{ADEVMAXCOUNT}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADEVMAXCOUNT}{ADEVMAXCOUNT}}
+{\footnotesize\ttfamily uint32 ADEVMAXCOUNT}
+
+0x01\+A0\+: Event Group Max Count Register ~\newline
+ \mbox{\Hypertarget{structadc_base_a53d266b293c0fcfd3a14339954813055}\label{structadc_base_a53d266b293c0fcfd3a14339954813055}} 
+\index{adcBase@{adcBase}!ADG1CHNSELMODECTRL@{ADG1CHNSELMODECTRL}}
+\index{ADG1CHNSELMODECTRL@{ADG1CHNSELMODECTRL}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADG1CHNSELMODECTRL}{ADG1CHNSELMODECTRL}}
+{\footnotesize\ttfamily uint32 ADG1\+CHNSELMODECTRL}
+
+0x0194\+: Group1 Channel Selection Mode Control Register ~\newline
+ \mbox{\Hypertarget{structadc_base_af51b73417bfa4f2489a07b2d440d0133}\label{structadc_base_af51b73417bfa4f2489a07b2d440d0133}} 
+\index{adcBase@{adcBase}!ADG1CURRCOUNT@{ADG1CURRCOUNT}}
+\index{ADG1CURRCOUNT@{ADG1CURRCOUNT}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADG1CURRCOUNT}{ADG1CURRCOUNT}}
+{\footnotesize\ttfamily uint32 ADG1\+CURRCOUNT}
+
+0x01\+A4\+: Group1 Current Count Register ~\newline
+ \mbox{\Hypertarget{structadc_base_a92da736a24df6f9c5dce5fdc3a7ad056}\label{structadc_base_a92da736a24df6f9c5dce5fdc3a7ad056}} 
+\index{adcBase@{adcBase}!ADG1MAXCOUNT@{ADG1MAXCOUNT}}
+\index{ADG1MAXCOUNT@{ADG1MAXCOUNT}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADG1MAXCOUNT}{ADG1MAXCOUNT}}
+{\footnotesize\ttfamily uint32 ADG1\+MAXCOUNT}
+
+0x01\+A8\+: Group1 Max Count Register ~\newline
+ \mbox{\Hypertarget{structadc_base_a842cd46afde2f4db46bcd8af328bb603}\label{structadc_base_a842cd46afde2f4db46bcd8af328bb603}} 
+\index{adcBase@{adcBase}!ADG2CHNSELMODECTRL@{ADG2CHNSELMODECTRL}}
+\index{ADG2CHNSELMODECTRL@{ADG2CHNSELMODECTRL}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADG2CHNSELMODECTRL}{ADG2CHNSELMODECTRL}}
+{\footnotesize\ttfamily uint32 ADG2\+CHNSELMODECTRL}
+
+0x0198\+: Group2 Channel Selection Mode Control Register ~\newline
+ \mbox{\Hypertarget{structadc_base_a56ce973020e9f244ab4284a768518693}\label{structadc_base_a56ce973020e9f244ab4284a768518693}} 
+\index{adcBase@{adcBase}!ADG2CURRCOUNT@{ADG2CURRCOUNT}}
+\index{ADG2CURRCOUNT@{ADG2CURRCOUNT}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADG2CURRCOUNT}{ADG2CURRCOUNT}}
+{\footnotesize\ttfamily uint32 ADG2\+CURRCOUNT}
+
+0x01\+AC\+: Group2 Current Count Register ~\newline
+ \mbox{\Hypertarget{structadc_base_a5d2f6c33b6c5ab5ab0c0cba97f113ad6}\label{structadc_base_a5d2f6c33b6c5ab5ab0c0cba97f113ad6}} 
+\index{adcBase@{adcBase}!ADG2MAXCOUNT@{ADG2MAXCOUNT}}
+\index{ADG2MAXCOUNT@{ADG2MAXCOUNT}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{ADG2MAXCOUNT}{ADG2MAXCOUNT}}
+{\footnotesize\ttfamily uint32 ADG2\+MAXCOUNT}
+
+0x01\+B0\+: Group2 Max Count Register ~\newline
+ \mbox{\Hypertarget{structadc_base_aa3f9fcc0d117b30c6a7bdf415431cbbe}\label{structadc_base_aa3f9fcc0d117b30c6a7bdf415431cbbe}} 
+\index{adcBase@{adcBase}!BNDCR@{BNDCR}}
+\index{BNDCR@{BNDCR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BNDCR}{BNDCR}}
+{\footnotesize\ttfamily uint32 BNDCR}
+
+0x0058\+: Buffer boundary control register ~\newline
+ \mbox{\Hypertarget{structadc_base_a00839c4253c228c45f242c03785abf6e}\label{structadc_base_a00839c4253c228c45f242c03785abf6e}} 
+\index{adcBase@{adcBase}!BNDEND@{BNDEND}}
+\index{BNDEND@{BNDEND}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BNDEND}{BNDEND}}
+{\footnotesize\ttfamily uint32 BNDEND}
+
+0x005C\+: Buffer boundary end register ~\newline
+ \mbox{\Hypertarget{structadc_base_aa16fee2748c89af9d7a5e6fb9b2499c1}\label{structadc_base_aa16fee2748c89af9d7a5e6fb9b2499c1}} 
+\index{adcBase@{adcBase}!BUF0@{BUF0}}
+\index{BUF0@{BUF0}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BUF0}{BUF0}}
+{\footnotesize\ttfamily uint32 BUF0}
+
+0x0090,0x00\+B0,0x00\+D0\+: Group 0-\/2 result buffer 1 register ~\newline
+ \mbox{\Hypertarget{structadc_base_afb7932dd7334812841f94aa464708900}\label{structadc_base_afb7932dd7334812841f94aa464708900}} 
+\index{adcBase@{adcBase}!BUF1@{BUF1}}
+\index{BUF1@{BUF1}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BUF1}{BUF1}}
+{\footnotesize\ttfamily uint32 BUF1}
+
+0x0094,0x00\+B4,0x00\+D4\+: Group 0-\/2 result buffer 1 register ~\newline
+ \mbox{\Hypertarget{structadc_base_af0951bee8f4acacdb10c50a46c01b578}\label{structadc_base_af0951bee8f4acacdb10c50a46c01b578}} 
+\index{adcBase@{adcBase}!BUF2@{BUF2}}
+\index{BUF2@{BUF2}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BUF2}{BUF2}}
+{\footnotesize\ttfamily uint32 BUF2}
+
+0x0098,0x00\+B8,0x00\+D8\+: Group 0-\/2 result buffer 2 register ~\newline
+ \mbox{\Hypertarget{structadc_base_aa5b0bd641eca5cfa49072ef73658073b}\label{structadc_base_aa5b0bd641eca5cfa49072ef73658073b}} 
+\index{adcBase@{adcBase}!BUF3@{BUF3}}
+\index{BUF3@{BUF3}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BUF3}{BUF3}}
+{\footnotesize\ttfamily uint32 BUF3}
+
+0x009C,0x00\+BC,0x00\+DC\+: Group 0-\/2 result buffer 3 register ~\newline
+ \mbox{\Hypertarget{structadc_base_a905585a323fce87539119263b03db1ae}\label{structadc_base_a905585a323fce87539119263b03db1ae}} 
+\index{adcBase@{adcBase}!BUF4@{BUF4}}
+\index{BUF4@{BUF4}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BUF4}{BUF4}}
+{\footnotesize\ttfamily uint32 BUF4}
+
+0x00\+A0,0x00\+C0,0x00\+E0\+: Group 0-\/2 result buffer 4 register ~\newline
+ \mbox{\Hypertarget{structadc_base_a87ed27280cd0bf7efe6093bc40a211de}\label{structadc_base_a87ed27280cd0bf7efe6093bc40a211de}} 
+\index{adcBase@{adcBase}!BUF5@{BUF5}}
+\index{BUF5@{BUF5}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BUF5}{BUF5}}
+{\footnotesize\ttfamily uint32 BUF5}
+
+0x00\+A4,0x00\+C4,0x00\+E4\+: Group 0-\/2 result buffer 5 register ~\newline
+ \mbox{\Hypertarget{structadc_base_a823a313f41f7d32f0c87a8f2e958248d}\label{structadc_base_a823a313f41f7d32f0c87a8f2e958248d}} 
+\index{adcBase@{adcBase}!BUF6@{BUF6}}
+\index{BUF6@{BUF6}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BUF6}{BUF6}}
+{\footnotesize\ttfamily uint32 BUF6}
+
+0x00\+A8,0x00\+C8,0x00\+E8\+: Group 0-\/2 result buffer 6 register ~\newline
+ \mbox{\Hypertarget{structadc_base_ac1efc5f5452fc41884446eedddea99e5}\label{structadc_base_ac1efc5f5452fc41884446eedddea99e5}} 
+\index{adcBase@{adcBase}!BUF7@{BUF7}}
+\index{BUF7@{BUF7}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{BUF7}{BUF7}}
+{\footnotesize\ttfamily uint32 BUF7}
+
+0x00\+AC,0x00\+CC,0x00\+EC\+: Group 0-\/2 result buffer 7 register ~\newline
+ \mbox{\Hypertarget{structadc_base_a3e67dd602faaa1de9f1a1d7318df837c}\label{structadc_base_a3e67dd602faaa1de9f1a1d7318df837c}} 
+\index{adcBase@{adcBase}!CALCR@{CALCR}}
+\index{CALCR@{CALCR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{CALCR}{CALCR}}
+{\footnotesize\ttfamily uint32 CALCR}
+
+0x000C\+: Calibration control register ~\newline
+ \mbox{\Hypertarget{structadc_base_afd4a9373c4327e2800ceb7da4c5d344b}\label{structadc_base_afd4a9373c4327e2800ceb7da4c5d344b}} 
+\index{adcBase@{adcBase}!CALR@{CALR}}
+\index{CALR@{CALR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{CALR}{CALR}}
+{\footnotesize\ttfamily uint32 CALR}
+
+0x0084\+: Calibration register ~\newline
+ \mbox{\Hypertarget{structadc_base_a67b7ccf96a073bac9cc22fd16523cedf}\label{structadc_base_a67b7ccf96a073bac9cc22fd16523cedf}} 
+\index{adcBase@{adcBase}!CLOCKCR@{CLOCKCR}}
+\index{CLOCKCR@{CLOCKCR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{CLOCKCR}{CLOCKCR}}
+{\footnotesize\ttfamily uint32 CLOCKCR}
+
+0x0008\+: Clock control register ~\newline
+ \mbox{\Hypertarget{structadc_base_ab2aa765a87c95004dc2dd9068877ddbb}\label{structadc_base_ab2aa765a87c95004dc2dd9068877ddbb}} 
+\index{adcBase@{adcBase}!EVDMACR@{EVDMACR}}
+\index{EVDMACR@{EVDMACR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVDMACR}{EVDMACR}}
+{\footnotesize\ttfamily uint32 EVDMACR}
+
+0x004C\+: Group 0 DMA control register ~\newline
+ \mbox{\Hypertarget{structadc_base_ad65e8c514876c88534023bb2daf85847}\label{structadc_base_ad65e8c514876c88534023bb2daf85847}} 
+\index{adcBase@{adcBase}!EVEMUBUFFER@{EVEMUBUFFER}}
+\index{EVEMUBUFFER@{EVEMUBUFFER}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVEMUBUFFER}{EVEMUBUFFER}}
+{\footnotesize\ttfamily uint32 EVEMUBUFFER}
+
+0x00\+F0\+: Group 0 emulation result buffer ~\newline
+ \mbox{\Hypertarget{structadc_base_a7b80dc194e0ea162ebc1afc5fc27a53e}\label{structadc_base_a7b80dc194e0ea162ebc1afc5fc27a53e}} 
+\index{adcBase@{adcBase}!EVRAMADDR@{EVRAMADDR}}
+\index{EVRAMADDR@{EVRAMADDR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVRAMADDR}{EVRAMADDR}}
+{\footnotesize\ttfamily uint32 EVRAMADDR}
+
+0x0174\+: Group 0 RAM pointer register ~\newline
+ \mbox{\Hypertarget{structadc_base_aece4f78b43eb0804e9b17d134976b249}\label{structadc_base_aece4f78b43eb0804e9b17d134976b249}} 
+\index{adcBase@{adcBase}!EVSAMP@{EVSAMP}}
+\index{EVSAMP@{EVSAMP}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVSAMP}{EVSAMP}}
+{\footnotesize\ttfamily uint32 EVSAMP}
+
+0x0060\+: Group 0 sample window register ~\newline
+ \mbox{\Hypertarget{structadc_base_a0f576963fe5fa9351c7817d2bb622643}\label{structadc_base_a0f576963fe5fa9351c7817d2bb622643}} 
+\index{adcBase@{adcBase}!EVSAMPDISEN@{EVSAMPDISEN}}
+\index{EVSAMPDISEN@{EVSAMPDISEN}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVSAMPDISEN}{EVSAMPDISEN}}
+{\footnotesize\ttfamily uint32 EVSAMPDISEN}
+
+0x011C\+: Group 0 sample discharge register ~\newline
+ \mbox{\Hypertarget{structadc_base_aad703129eba4e2e2994077a68cc74abd}\label{structadc_base_aad703129eba4e2e2994077a68cc74abd}} 
+\index{adcBase@{adcBase}!EVSR@{EVSR}}
+\index{EVSR@{EVSR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVSR}{EVSR}}
+{\footnotesize\ttfamily uint32 EVSR}
+
+0x006C\+: Group 0 status register ~\newline
+ \mbox{\Hypertarget{structadc_base_aeb05b8e960a9e68585a7332210243ab4}\label{structadc_base_aeb05b8e960a9e68585a7332210243ab4}} 
+\index{adcBase@{adcBase}!EVSRC@{EVSRC}}
+\index{EVSRC@{EVSRC}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVSRC}{EVSRC}}
+{\footnotesize\ttfamily uint32 EVSRC}
+
+0x001C\+: Group 0 trigger source control register ~\newline
+ \mbox{\Hypertarget{structadc_base_a7d081b61b43ff4d35ab9b49c220fe524}\label{structadc_base_a7d081b61b43ff4d35ab9b49c220fe524}} 
+\index{adcBase@{adcBase}!EVTCLR@{EVTCLR}}
+\index{EVTCLR@{EVTCLR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVTCLR}{EVTCLR}}
+{\footnotesize\ttfamily uint32 EVTCLR}
+
+0x010C\+: Event pin clear register ~\newline
+ \mbox{\Hypertarget{structadc_base_ac4aacdae242d540932b072690afdfdb0}\label{structadc_base_ac4aacdae242d540932b072690afdfdb0}} 
+\index{adcBase@{adcBase}!EVTDIR@{EVTDIR}}
+\index{EVTDIR@{EVTDIR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVTDIR}{EVTDIR}}
+{\footnotesize\ttfamily uint32 EVTDIR}
+
+0x00\+FC\+: Event pin direction register ~\newline
+ \mbox{\Hypertarget{structadc_base_aec99bf3b02ab03bfb51c68b24ebe3543}\label{structadc_base_aec99bf3b02ab03bfb51c68b24ebe3543}} 
+\index{adcBase@{adcBase}!EVTDIS@{EVTDIS}}
+\index{EVTDIS@{EVTDIS}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVTDIS}{EVTDIS}}
+{\footnotesize\ttfamily uint32 EVTDIS}
+
+0x0114\+: Event pin pull disable register ~\newline
+ \mbox{\Hypertarget{structadc_base_ae20d284746de341343df40a4cf9b0805}\label{structadc_base_ae20d284746de341343df40a4cf9b0805}} 
+\index{adcBase@{adcBase}!EVTIN@{EVTIN}}
+\index{EVTIN@{EVTIN}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVTIN}{EVTIN}}
+{\footnotesize\ttfamily uint32 EVTIN}
+
+0x0104\+: Event pin digital input register ~\newline
+ \mbox{\Hypertarget{structadc_base_a83641b6866b0b0e3ce97fbf294290e5e}\label{structadc_base_a83641b6866b0b0e3ce97fbf294290e5e}} 
+\index{adcBase@{adcBase}!EVTOUT@{EVTOUT}}
+\index{EVTOUT@{EVTOUT}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVTOUT}{EVTOUT}}
+{\footnotesize\ttfamily uint32 EVTOUT}
+
+0x0100\+: Event pin digital output register ~\newline
+ \mbox{\Hypertarget{structadc_base_aa7bd44fb353c931bde234a160615924a}\label{structadc_base_aa7bd44fb353c931bde234a160615924a}} 
+\index{adcBase@{adcBase}!EVTPDR@{EVTPDR}}
+\index{EVTPDR@{EVTPDR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVTPDR}{EVTPDR}}
+{\footnotesize\ttfamily uint32 EVTPDR}
+
+0x0110\+: Event pin open drain register ~\newline
+ \mbox{\Hypertarget{structadc_base_aa6f9a8a5fee700f4ecd495acf6b3925d}\label{structadc_base_aa6f9a8a5fee700f4ecd495acf6b3925d}} 
+\index{adcBase@{adcBase}!EVTPSEL@{EVTPSEL}}
+\index{EVTPSEL@{EVTPSEL}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVTPSEL}{EVTPSEL}}
+{\footnotesize\ttfamily uint32 EVTPSEL}
+
+0x0118\+: Event pin pull select register ~\newline
+ \mbox{\Hypertarget{structadc_base_ae5031f0ba7ded2a2e5d0840c756ef5ac}\label{structadc_base_ae5031f0ba7ded2a2e5d0840c756ef5ac}} 
+\index{adcBase@{adcBase}!EVTSET@{EVTSET}}
+\index{EVTSET@{EVTSET}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{EVTSET}{EVTSET}}
+{\footnotesize\ttfamily uint32 EVTSET}
+
+0x0108\+: Event pin set register ~\newline
+ \mbox{\Hypertarget{structadc_base_a05f7a060b3dbfd51dd897b164db2074a}\label{structadc_base_a05f7a060b3dbfd51dd897b164db2074a}} 
+\index{adcBase@{adcBase}!G1DMACR@{G1DMACR}}
+\index{G1DMACR@{G1DMACR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G1DMACR}{G1DMACR}}
+{\footnotesize\ttfamily uint32 G1\+DMACR}
+
+0x0050\+: Group 1 DMA control register ~\newline
+ \mbox{\Hypertarget{structadc_base_a45a6c4ceb87d4af48479404ee6bcd784}\label{structadc_base_a45a6c4ceb87d4af48479404ee6bcd784}} 
+\index{adcBase@{adcBase}!G1EMUBUFFER@{G1EMUBUFFER}}
+\index{G1EMUBUFFER@{G1EMUBUFFER}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G1EMUBUFFER}{G1EMUBUFFER}}
+{\footnotesize\ttfamily uint32 G1\+EMUBUFFER}
+
+0x00\+F4\+: Group 1 emulation result buffer ~\newline
+ \mbox{\Hypertarget{structadc_base_af15bbd1b9c14ea6e0cfd1f64274b2920}\label{structadc_base_af15bbd1b9c14ea6e0cfd1f64274b2920}} 
+\index{adcBase@{adcBase}!G1RAMADDR@{G1RAMADDR}}
+\index{G1RAMADDR@{G1RAMADDR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G1RAMADDR}{G1RAMADDR}}
+{\footnotesize\ttfamily uint32 G1\+RAMADDR}
+
+0x0178\+: Group 1 RAM pointer register ~\newline
+ \mbox{\Hypertarget{structadc_base_ad76b9530f329e46e1692ef4fe84202fb}\label{structadc_base_ad76b9530f329e46e1692ef4fe84202fb}} 
+\index{adcBase@{adcBase}!G1SAMP@{G1SAMP}}
+\index{G1SAMP@{G1SAMP}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G1SAMP}{G1SAMP}}
+{\footnotesize\ttfamily uint32 G1\+SAMP}
+
+0x0064\+: Group 1 sample window register ~\newline
+ \mbox{\Hypertarget{structadc_base_aa44d46c16d5c3a85257ade334c299533}\label{structadc_base_aa44d46c16d5c3a85257ade334c299533}} 
+\index{adcBase@{adcBase}!G1SAMPDISEN@{G1SAMPDISEN}}
+\index{G1SAMPDISEN@{G1SAMPDISEN}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G1SAMPDISEN}{G1SAMPDISEN}}
+{\footnotesize\ttfamily uint32 G1\+SAMPDISEN}
+
+0x0120\+: Group 1 sample discharge register ~\newline
+ \mbox{\Hypertarget{structadc_base_a4ff090cbc64599307978bbe38f5f139a}\label{structadc_base_a4ff090cbc64599307978bbe38f5f139a}} 
+\index{adcBase@{adcBase}!G1SR@{G1SR}}
+\index{G1SR@{G1SR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G1SR}{G1SR}}
+{\footnotesize\ttfamily uint32 G1\+SR}
+
+0x0070\+: Group 1 status register ~\newline
+ \mbox{\Hypertarget{structadc_base_a08f2bc2f833e36bb70a7edfc3a2dc80d}\label{structadc_base_a08f2bc2f833e36bb70a7edfc3a2dc80d}} 
+\index{adcBase@{adcBase}!G1SRC@{G1SRC}}
+\index{G1SRC@{G1SRC}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G1SRC}{G1SRC}}
+{\footnotesize\ttfamily uint32 G1\+SRC}
+
+0x0020\+: Group 1 trigger source control register ~\newline
+ \mbox{\Hypertarget{structadc_base_af5420c2ec1dbadb3da5783af533a0fdb}\label{structadc_base_af5420c2ec1dbadb3da5783af533a0fdb}} 
+\index{adcBase@{adcBase}!G2DMACR@{G2DMACR}}
+\index{G2DMACR@{G2DMACR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G2DMACR}{G2DMACR}}
+{\footnotesize\ttfamily uint32 G2\+DMACR}
+
+0x0054\+: Group 2 DMA control register ~\newline
+ \mbox{\Hypertarget{structadc_base_a575de2ab44328d0f0cbede0e969511e2}\label{structadc_base_a575de2ab44328d0f0cbede0e969511e2}} 
+\index{adcBase@{adcBase}!G2EMUBUFFER@{G2EMUBUFFER}}
+\index{G2EMUBUFFER@{G2EMUBUFFER}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G2EMUBUFFER}{G2EMUBUFFER}}
+{\footnotesize\ttfamily uint32 G2\+EMUBUFFER}
+
+0x00\+F8\+: Group 2 emulation result buffer ~\newline
+ \mbox{\Hypertarget{structadc_base_a5f7328571d59b856845fa4b2272b418c}\label{structadc_base_a5f7328571d59b856845fa4b2272b418c}} 
+\index{adcBase@{adcBase}!G2RAMADDR@{G2RAMADDR}}
+\index{G2RAMADDR@{G2RAMADDR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G2RAMADDR}{G2RAMADDR}}
+{\footnotesize\ttfamily uint32 G2\+RAMADDR}
+
+0x017C\+: Group 2 RAM pointer register ~\newline
+ \mbox{\Hypertarget{structadc_base_a949847770a8102abce7aeed015115aa1}\label{structadc_base_a949847770a8102abce7aeed015115aa1}} 
+\index{adcBase@{adcBase}!G2SAMP@{G2SAMP}}
+\index{G2SAMP@{G2SAMP}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G2SAMP}{G2SAMP}}
+{\footnotesize\ttfamily uint32 G2\+SAMP}
+
+0x0068\+: Group 2 sample window register ~\newline
+ \mbox{\Hypertarget{structadc_base_a69a48b0a0ed8bc383dbd78c0f5ef6f80}\label{structadc_base_a69a48b0a0ed8bc383dbd78c0f5ef6f80}} 
+\index{adcBase@{adcBase}!G2SAMPDISEN@{G2SAMPDISEN}}
+\index{G2SAMPDISEN@{G2SAMPDISEN}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G2SAMPDISEN}{G2SAMPDISEN}}
+{\footnotesize\ttfamily uint32 G2\+SAMPDISEN}
+
+0x0124\+: Group 2 sample discharge register ~\newline
+ \mbox{\Hypertarget{structadc_base_a0d8bb245d41a1839dcfb215fc9741bd6}\label{structadc_base_a0d8bb245d41a1839dcfb215fc9741bd6}} 
+\index{adcBase@{adcBase}!G2SR@{G2SR}}
+\index{G2SR@{G2SR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G2SR}{G2SR}}
+{\footnotesize\ttfamily uint32 G2\+SR}
+
+0x0074\+: Group 2 status register ~\newline
+ \mbox{\Hypertarget{structadc_base_adb065b0c38b1122c668a596305ad86a5}\label{structadc_base_adb065b0c38b1122c668a596305ad86a5}} 
+\index{adcBase@{adcBase}!G2SRC@{G2SRC}}
+\index{G2SRC@{G2SRC}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{G2SRC}{G2SRC}}
+{\footnotesize\ttfamily uint32 G2\+SRC}
+
+0x0024\+: Group 2 trigger source control register ~\newline
+ \mbox{\Hypertarget{structadc_base_a1ab5c1b0f58803cf1dd246c3abeadb1f}\label{structadc_base_a1ab5c1b0f58803cf1dd246c3abeadb1f}} 
+\index{adcBase@{adcBase}!GxFIFORESETCR@{GxFIFORESETCR}}
+\index{GxFIFORESETCR@{GxFIFORESETCR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{GxFIFORESETCR}{GxFIFORESETCR}}
+{\footnotesize\ttfamily uint32 Gx\+FIFORESETCR\mbox{[}3U\mbox{]}}
+
+0x0168,0x016C,0x0170\+: Group 0-\/2 fifo reset register ~\newline
+ \mbox{\Hypertarget{structadc_base_a0e47a292e62eb77691f957bff508eadc}\label{structadc_base_a0e47a292e62eb77691f957bff508eadc}} 
+\index{adcBase@{adcBase}!GxINTCR@{GxINTCR}}
+\index{GxINTCR@{GxINTCR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{GxINTCR}{GxINTCR}}
+{\footnotesize\ttfamily uint32 Gx\+INTCR\mbox{[}3U\mbox{]}}
+
+0x0040-\/0x0048\+: Group 0-\/2 interrupt threshold register ~\newline
+ \mbox{\Hypertarget{structadc_base_a7b7b8123c90a8dc10be364cb79d41dfb}\label{structadc_base_a7b7b8123c90a8dc10be364cb79d41dfb}} 
+\index{adcBase@{adcBase}!GxINTENA@{GxINTENA}}
+\index{GxINTENA@{GxINTENA}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{GxINTENA}{GxINTENA}}
+{\footnotesize\ttfamily uint32 Gx\+INTENA\mbox{[}3U\mbox{]}}
+
+0x0028,0x002C,0x0030\+: Group 0-\/2 interrupt enable register \mbox{\Hypertarget{structadc_base_a5676c58792d3fd315141e39531d912a6}\label{structadc_base_a5676c58792d3fd315141e39531d912a6}} 
+\index{adcBase@{adcBase}!GxINTFLG@{GxINTFLG}}
+\index{GxINTFLG@{GxINTFLG}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{GxINTFLG}{GxINTFLG}}
+{\footnotesize\ttfamily uint32 Gx\+INTFLG\mbox{[}3U\mbox{]}}
+
+0x0034,0x0038,0x003C\+: Group 0-\/2 interrupt flag register ~\newline
+ \mbox{\Hypertarget{structadc_base_ae1b6572cf3f0d2225b45bdcf54c73635}\label{structadc_base_ae1b6572cf3f0d2225b45bdcf54c73635}} 
+\index{adcBase@{adcBase}!GxMODECR@{GxMODECR}}
+\index{GxMODECR@{GxMODECR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{GxMODECR}{GxMODECR}}
+{\footnotesize\ttfamily uint32 Gx\+MODECR\mbox{[}3U\mbox{]}}
+
+0x0010,0x0014,0x0018\+: Group 0-\/2 mode control register ~\newline
+ \mbox{\Hypertarget{structadc_base_a39abeca21025886ad51c419e2b35074e}\label{structadc_base_a39abeca21025886ad51c419e2b35074e}} 
+\index{adcBase@{adcBase}!GxSEL@{GxSEL}}
+\index{GxSEL@{GxSEL}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{GxSEL}{GxSEL}}
+{\footnotesize\ttfamily uint32 Gx\+SEL\mbox{[}3U\mbox{]}}
+
+0x0078-\/0x007C\+: Group 0-\/2 channel select register ~\newline
+ \mbox{\Hypertarget{structadc_base_aec5ddfd4a0e7cc81f8495d88ea8244cd}\label{structadc_base_aec5ddfd4a0e7cc81f8495d88ea8244cd}} 
+\index{adcBase@{adcBase}!LASTCONV@{LASTCONV}}
+\index{LASTCONV@{LASTCONV}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{LASTCONV}{LASTCONV}}
+{\footnotesize\ttfamily uint32 LASTCONV}
+
+0x008C\+: Last conversion register ~\newline
+ \mbox{\Hypertarget{structadc_base_afd4d3bdd7a1cb581eb3a9a52dade7296}\label{structadc_base_afd4d3bdd7a1cb581eb3a9a52dade7296}} 
+\index{adcBase@{adcBase}!MAGINT1MASK@{MAGINT1MASK}}
+\index{MAGINT1MASK@{MAGINT1MASK}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGINT1MASK}{MAGINT1MASK}}
+{\footnotesize\ttfamily uint32 MAGINT1\+MASK}
+
+0x012C\+: Magnitude interrupt mask register 1 ~\newline
+ \mbox{\Hypertarget{structadc_base_ad3e5da0afa58c32d8c266635ee94ca41}\label{structadc_base_ad3e5da0afa58c32d8c266635ee94ca41}} 
+\index{adcBase@{adcBase}!MAGINT2MASK@{MAGINT2MASK}}
+\index{MAGINT2MASK@{MAGINT2MASK}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGINT2MASK}{MAGINT2MASK}}
+{\footnotesize\ttfamily uint32 MAGINT2\+MASK}
+
+0x0134\+: Magnitude interrupt mask register 2 ~\newline
+ \mbox{\Hypertarget{structadc_base_a91dd97aba71cb1d36494eb072736d91e}\label{structadc_base_a91dd97aba71cb1d36494eb072736d91e}} 
+\index{adcBase@{adcBase}!MAGINT3MASK@{MAGINT3MASK}}
+\index{MAGINT3MASK@{MAGINT3MASK}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGINT3MASK}{MAGINT3MASK}}
+{\footnotesize\ttfamily uint32 MAGINT3\+MASK}
+
+0x013C\+: Magnitude interrupt mask register 3 ~\newline
+ \mbox{\Hypertarget{structadc_base_a46f278a93eb4b72b822a4d6b6ca39076}\label{structadc_base_a46f278a93eb4b72b822a4d6b6ca39076}} 
+\index{adcBase@{adcBase}!MAGINTCR1@{MAGINTCR1}}
+\index{MAGINTCR1@{MAGINTCR1}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGINTCR1}{MAGINTCR1}}
+{\footnotesize\ttfamily uint32 MAGINTCR1}
+
+0x0128\+: Magnitude interrupt control register 1 ~\newline
+ \mbox{\Hypertarget{structadc_base_a8b85073957a379577155bc3e01a80c38}\label{structadc_base_a8b85073957a379577155bc3e01a80c38}} 
+\index{adcBase@{adcBase}!MAGINTCR2@{MAGINTCR2}}
+\index{MAGINTCR2@{MAGINTCR2}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGINTCR2}{MAGINTCR2}}
+{\footnotesize\ttfamily uint32 MAGINTCR2}
+
+0x0130\+: Magnitude interrupt control register 2 ~\newline
+ \mbox{\Hypertarget{structadc_base_a5bc67df9a8d8f0374b9dff3d142701f7}\label{structadc_base_a5bc67df9a8d8f0374b9dff3d142701f7}} 
+\index{adcBase@{adcBase}!MAGINTCR3@{MAGINTCR3}}
+\index{MAGINTCR3@{MAGINTCR3}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGINTCR3}{MAGINTCR3}}
+{\footnotesize\ttfamily uint32 MAGINTCR3}
+
+0x0138\+: Magnitude interrupt control register 3 ~\newline
+ \mbox{\Hypertarget{structadc_base_a6db5ae3b235df2a5788a7ead99918b9d}\label{structadc_base_a6db5ae3b235df2a5788a7ead99918b9d}} 
+\index{adcBase@{adcBase}!MAGTHRINTENACLR@{MAGTHRINTENACLR}}
+\index{MAGTHRINTENACLR@{MAGTHRINTENACLR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGTHRINTENACLR}{MAGTHRINTENACLR}}
+{\footnotesize\ttfamily uint32 MAGTHRINTENACLR}
+
+0x015C\+: Magnitude interrupt clear register ~\newline
+ \mbox{\Hypertarget{structadc_base_a77877d2b757936a250b3805b93246ff0}\label{structadc_base_a77877d2b757936a250b3805b93246ff0}} 
+\index{adcBase@{adcBase}!MAGTHRINTENASET@{MAGTHRINTENASET}}
+\index{MAGTHRINTENASET@{MAGTHRINTENASET}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGTHRINTENASET}{MAGTHRINTENASET}}
+{\footnotesize\ttfamily uint32 MAGTHRINTENASET}
+
+0x0158\+: Magnitude interrupt set register ~\newline
+ \mbox{\Hypertarget{structadc_base_ad7ada2afe4ff0d4ef56230ad70743ef9}\label{structadc_base_ad7ada2afe4ff0d4ef56230ad70743ef9}} 
+\index{adcBase@{adcBase}!MAGTHRINTFLG@{MAGTHRINTFLG}}
+\index{MAGTHRINTFLG@{MAGTHRINTFLG}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGTHRINTFLG}{MAGTHRINTFLG}}
+{\footnotesize\ttfamily uint32 MAGTHRINTFLG}
+
+0x0160\+: Magnitude interrupt flag register ~\newline
+ \mbox{\Hypertarget{structadc_base_ae749ba88c57c45887efb5065f59ae9df}\label{structadc_base_ae749ba88c57c45887efb5065f59ae9df}} 
+\index{adcBase@{adcBase}!MAGTHRINTOFFSET@{MAGTHRINTOFFSET}}
+\index{MAGTHRINTOFFSET@{MAGTHRINTOFFSET}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{MAGTHRINTOFFSET}{MAGTHRINTOFFSET}}
+{\footnotesize\ttfamily uint32 MAGTHRINTOFFSET}
+
+0x0164\+: Magnitude interrupt offset register ~\newline
+ \mbox{\Hypertarget{structadc_base_a4c38f022f4de7468ab8370dabba45e93}\label{structadc_base_a4c38f022f4de7468ab8370dabba45e93}} 
+\index{adcBase@{adcBase}!OPMODECR@{OPMODECR}}
+\index{OPMODECR@{OPMODECR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{OPMODECR}{OPMODECR}}
+{\footnotesize\ttfamily uint32 OPMODECR}
+
+0x0004\+: Operating mode control register ~\newline
+ \mbox{\Hypertarget{structadc_base_af238db865db8df52dd4373cc70abf6bc}\label{structadc_base_af238db865db8df52dd4373cc70abf6bc}} 
+\index{adcBase@{adcBase}!PARADDR@{PARADDR}}
+\index{PARADDR@{PARADDR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{PARADDR}{PARADDR}}
+{\footnotesize\ttfamily uint32 PARADDR}
+
+0x0184\+: Parity error address register ~\newline
+ \mbox{\Hypertarget{structadc_base_a6801cf501a5db879d21fc1aaef2f555f}\label{structadc_base_a6801cf501a5db879d21fc1aaef2f555f}} 
+\index{adcBase@{adcBase}!PARCR@{PARCR}}
+\index{PARCR@{PARCR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{PARCR}{PARCR}}
+{\footnotesize\ttfamily uint32 PARCR}
+
+0x0180\+: Parity control register ~\newline
+ \mbox{\Hypertarget{structadc_base_a4db474fc3eeb084fb912a3e4db2525b2}\label{structadc_base_a4db474fc3eeb084fb912a3e4db2525b2}} 
+\index{adcBase@{adcBase}!PWRUPDLYCTRL@{PWRUPDLYCTRL}}
+\index{PWRUPDLYCTRL@{PWRUPDLYCTRL}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{PWRUPDLYCTRL}{PWRUPDLYCTRL}}
+{\footnotesize\ttfamily uint32 PWRUPDLYCTRL}
+
+0x0188\+: Power-\/\+Up delay control register ~\newline
+ \mbox{\Hypertarget{structadc_base_acbef3d0ce6ddc6bc7eee93cc5e0c0cef}\label{structadc_base_acbef3d0ce6ddc6bc7eee93cc5e0c0cef}} 
+\index{adcBase@{adcBase}!RSTCR@{RSTCR}}
+\index{RSTCR@{RSTCR}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{RSTCR}{RSTCR}}
+{\footnotesize\ttfamily uint32 RSTCR}
+
+0x0000\+: Reset control register ~\newline
+ \mbox{\Hypertarget{structadc_base_a157d52061ee945a71c2c46674a89cf40}\label{structadc_base_a157d52061ee945a71c2c46674a89cf40}} 
+\index{adcBase@{adcBase}!rsvd1@{rsvd1}}
+\index{rsvd1@{rsvd1}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{rsvd1}{rsvd1}}
+{\footnotesize\ttfamily uint32 rsvd1}
+
+0x0140\+: Reserved ~\newline
+ \mbox{\Hypertarget{structadc_base_af7e9341fe6900c82e1dc8f9d31036cfc}\label{structadc_base_af7e9341fe6900c82e1dc8f9d31036cfc}} 
+\index{adcBase@{adcBase}!rsvd2@{rsvd2}}
+\index{rsvd2@{rsvd2}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{rsvd2}{rsvd2}}
+{\footnotesize\ttfamily uint32 rsvd2}
+
+0x0144\+: Reserved ~\newline
+ \mbox{\Hypertarget{structadc_base_aa739ac0b1d8a4ba9751159e9a9b5bb37}\label{structadc_base_aa739ac0b1d8a4ba9751159e9a9b5bb37}} 
+\index{adcBase@{adcBase}!rsvd3@{rsvd3}}
+\index{rsvd3@{rsvd3}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{rsvd3}{rsvd3}}
+{\footnotesize\ttfamily uint32 rsvd3}
+
+0x0148\+: Reserved ~\newline
+ \mbox{\Hypertarget{structadc_base_a7cdaa346531096f97ff5a92cee5d88f4}\label{structadc_base_a7cdaa346531096f97ff5a92cee5d88f4}} 
+\index{adcBase@{adcBase}!rsvd4@{rsvd4}}
+\index{rsvd4@{rsvd4}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{rsvd4}{rsvd4}}
+{\footnotesize\ttfamily uint32 rsvd4}
+
+0x014C\+: Reserved ~\newline
+ \mbox{\Hypertarget{structadc_base_ad029847b498ddf9d1d76ef69e2c6614e}\label{structadc_base_ad029847b498ddf9d1d76ef69e2c6614e}} 
+\index{adcBase@{adcBase}!rsvd5@{rsvd5}}
+\index{rsvd5@{rsvd5}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{rsvd5}{rsvd5}}
+{\footnotesize\ttfamily uint32 rsvd5}
+
+0x0150\+: Reserved ~\newline
+ \mbox{\Hypertarget{structadc_base_af45f35dc2dea75eb65ccffa9be1872ac}\label{structadc_base_af45f35dc2dea75eb65ccffa9be1872ac}} 
+\index{adcBase@{adcBase}!rsvd6@{rsvd6}}
+\index{rsvd6@{rsvd6}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{rsvd6}{rsvd6}}
+{\footnotesize\ttfamily uint32 rsvd6}
+
+0x0154\+: Reserved ~\newline
+ \mbox{\Hypertarget{structadc_base_ade3feeff475fb39ad53591d9b3a37d9e}\label{structadc_base_ade3feeff475fb39ad53591d9b3a37d9e}} 
+\index{adcBase@{adcBase}!rsvd7@{rsvd7}}
+\index{rsvd7@{rsvd7}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{rsvd7}{rsvd7}}
+{\footnotesize\ttfamily uint32 rsvd7}
+
+0x018C\+: Reserved ~\newline
+ \mbox{\Hypertarget{structadc_base_ab9d627185628d29065c2603b43de25b8}\label{structadc_base_ab9d627185628d29065c2603b43de25b8}} 
+\index{adcBase@{adcBase}!SMSTATE@{SMSTATE}}
+\index{SMSTATE@{SMSTATE}!adcBase@{adcBase}}
+\doxysubsubsection{\texorpdfstring{SMSTATE}{SMSTATE}}
+{\footnotesize\ttfamily uint32 SMSTATE}
+
+0x0088\+: State machine state register ~\newline
+ 
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{reg__adc_8h}{reg\+\_\+adc.\+h}}\end{DoxyCompactItemize}

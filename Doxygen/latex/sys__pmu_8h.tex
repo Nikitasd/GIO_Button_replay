@@ -1,0 +1,316 @@
+\hypertarget{sys__pmu_8h}{}\doxysection{Файл include/sys\+\_\+pmu.h}
+\label{sys__pmu_8h}\index{include/sys\_pmu.h@{include/sys\_pmu.h}}
+
+
+System Pmu Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sys__pmu_8h_a3b312c6bf558a4205710c5e44c3cc0b4}{pmu\+COUNTER0}}~0x00000001U
+\begin{DoxyCompactList}\small\item\em pmu event counter 0 mask \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__pmu_8h_a88033e0068fb11f854560d06d6c51714}{pmu\+COUNTER1}}~0x00000002U
+\begin{DoxyCompactList}\small\item\em pmu event counter 1 mask \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__pmu_8h_a6004659aa96b626f1126404017564abe}{pmu\+COUNTER2}}~0x00000004U
+\begin{DoxyCompactList}\small\item\em pmu event counter 2 mask \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__pmu_8h_a6ee477e201310d4686e202a584c00f9e}{pmu\+CYCLE\+\_\+\+COUNTER}}~0x80000000U
+\begin{DoxyCompactList}\small\item\em pmu cycle counter mask \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sys__pmu_8h_a03b6725533687e62c10550dea45089be}{pmu\+Event}} \{ \newline
+{\bfseries PMU\+\_\+\+INST\+\_\+\+CACHE\+\_\+\+MISS} = 0x01U
+, {\bfseries PMU\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+MISS} = 0x03U
+, {\bfseries PMU\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+ACCESS} = 0x04U
+, {\bfseries PMU\+\_\+\+DATA\+\_\+\+READ\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x06U
+, \newline
+{\bfseries PMU\+\_\+\+DATA\+\_\+\+WRITE\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x07U
+, {\bfseries PMU\+\_\+\+INST\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x08U
+, {\bfseries PMU\+\_\+\+EXCEPTION\+\_\+\+TAKEN} = 0x09U
+, {\bfseries PMU\+\_\+\+EXCEPTION\+\_\+\+RETURN\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x0\+AU
+, \newline
+{\bfseries PMU\+\_\+\+CHANGE\+\_\+\+TO\+\_\+\+CONTEXT\+\_\+\+ID\+\_\+\+EXECUTED} = 0x0\+BU
+, {\bfseries PMU\+\_\+\+SW\+\_\+\+CHANGE\+\_\+\+OF\+\_\+\+PC\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x0\+CU
+, {\bfseries PMU\+\_\+\+BRANCH\+\_\+\+IMM\+\_\+\+INST\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x0\+DU
+, {\bfseries PMU\+\_\+\+PROC\+\_\+\+RETURN\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x0\+EU
+, \newline
+{\bfseries PMU\+\_\+\+UNALIGNED\+\_\+\+ACCESS\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x0\+FU
+, {\bfseries PMU\+\_\+\+BRANCH\+\_\+\+MISSPREDICTED} = 0x10U
+, {\bfseries PMU\+\_\+\+CYCLE\+\_\+\+COUNT} = 0x11U
+, {\bfseries PMU\+\_\+\+PREDICTABLE\+\_\+\+BRANCHES} = 0x12U
+, \newline
+{\bfseries PMU\+\_\+\+INST\+\_\+\+BUFFER\+\_\+\+STALL} = 0x40U
+, {\bfseries PMU\+\_\+\+DATA\+\_\+\+DEPENDENCY\+\_\+\+INST\+\_\+\+STALL} = 0x41U
+, {\bfseries PMU\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+WRITE\+\_\+\+BACK} = 0x42U
+, {\bfseries PMU\+\_\+\+EXT\+\_\+\+MEMORY\+\_\+\+REQUEST} = 0x43U
+, \newline
+{\bfseries PMU\+\_\+\+LSU\+\_\+\+BUSY\+\_\+\+STALL} = 0x44U
+, {\bfseries PMU\+\_\+\+FORCED\+\_\+\+DRAIN\+\_\+\+OFSTORE\+\_\+\+BUFFER} = 0x45U
+, {\bfseries PMU\+\_\+\+FIQ\+\_\+\+DISABLED\+\_\+\+CYCLE\+\_\+\+COUNT} = 0x46U
+, {\bfseries PMU\+\_\+\+IRQ\+\_\+\+DISABLED\+\_\+\+CYCLE\+\_\+\+COUNT} = 0x47U
+, \newline
+{\bfseries PMU\+\_\+\+ETMEXTOUT\+\_\+0} = 0x48U
+, {\bfseries PMU\+\_\+\+ETMEXTOUT\+\_\+1} = 0x49U
+, {\bfseries PMU\+\_\+\+INST\+\_\+\+CACHE\+\_\+\+TAG\+\_\+\+ECC\+\_\+\+ERROR} = 0x4\+AU
+, {\bfseries PMU\+\_\+\+INST\+\_\+\+CACHE\+\_\+\+DATA\+\_\+\+ECC\+\_\+\+ERROR} = 0x4\+BU
+, \newline
+{\bfseries PMU\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+TAG\+\_\+\+ECC\+\_\+\+ERROR} = 0x4\+CU
+, {\bfseries PMU\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+DATA\+\_\+\+ECC\+\_\+\+ERROR} = 0x4\+DU
+, {\bfseries PMU\+\_\+\+TCM\+\_\+\+FATAL\+\_\+\+ECC\+\_\+\+ERROR\+\_\+\+PREFETCH} = 0x4\+EU
+, {\bfseries PMU\+\_\+\+TCM\+\_\+\+FATAL\+\_\+\+ECC\+\_\+\+ERROR\+\_\+\+LOAD\+\_\+\+STORE} = 0x4\+FU
+, \newline
+{\bfseries PMU\+\_\+\+STORE\+\_\+\+BUFFER\+\_\+\+MERGE} = 0x50U
+, {\bfseries PMU\+\_\+\+LSU\+\_\+\+STALL\+\_\+\+STORE\+\_\+\+BUFFER\+\_\+\+FULL} = 0x51U
+, {\bfseries PMU\+\_\+\+LSU\+\_\+\+STALL\+\_\+\+STORE\+\_\+\+QUEUE\+\_\+\+FULL} = 0x52U
+, {\bfseries PMU\+\_\+\+INTEGER\+\_\+\+DIV\+\_\+\+EXECUTED} = 0x53U
+, \newline
+{\bfseries PMU\+\_\+\+STALL\+\_\+\+INTEGER\+\_\+\+DIV} = 0x54U
+, {\bfseries PMU\+\_\+\+PLD\+\_\+\+INST\+\_\+\+LINE\+\_\+\+FILL} = 0x55U
+, {\bfseries PMU\+\_\+\+PLD\+\_\+\+INST\+\_\+\+NO\+\_\+\+LINE\+\_\+\+FILL} = 0x56U
+, {\bfseries PMU\+\_\+\+NON\+\_\+\+CACHEABLE\+\_\+\+ACCESS\+\_\+\+AXI\+\_\+\+MASTER} = 0x57U
+, \newline
+{\bfseries PMU\+\_\+\+INST\+\_\+\+CACHE\+\_\+\+ACCESS} = 0x58U
+, {\bfseries PMU\+\_\+\+DOUBLE\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+ISSUE} = 0x59U
+, {\bfseries PMU\+\_\+\+DUAL\+\_\+\+ISSUE\+\_\+\+CASE\+\_\+A} = 0x5\+AU
+, {\bfseries PMU\+\_\+\+DUAL\+\_\+\+ISSUE\+\_\+\+CASE\+\_\+\+B1\+\_\+\+B2\+\_\+\+F2\+\_\+\+F2D} = 0x5\+BU
+, \newline
+{\bfseries PMU\+\_\+\+DUAL\+\_\+\+ISSUE\+\_\+\+OTHER} = 0x5\+CU
+, {\bfseries PMU\+\_\+\+DP\+\_\+\+FLOAT\+\_\+\+INST\+\_\+\+EXCECUTED} = 0x5\+DU
+, {\bfseries PMU\+\_\+\+DUAL\+\_\+\+ISSUED\+\_\+\+PAIR\+\_\+\+INST\+\_\+\+ARCH\+\_\+\+EXECUTED} = 0x5\+EU
+, {\bfseries PMU\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+DATA\+\_\+\+FATAL\+\_\+\+ECC\+\_\+\+ERROR} = 0x60U
+, \newline
+{\bfseries PMU\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+TAG\+\_\+\+FATAL\+\_\+\+ECC\+\_\+\+ERROR} = 0x61U
+, {\bfseries PMU\+\_\+\+PROCESSOR\+\_\+\+LIVE\+\_\+\+LOCK} = 0x62U
+, {\bfseries PMU\+\_\+\+ATCM\+\_\+\+MULTI\+\_\+\+BIT\+\_\+\+ECC\+\_\+\+ERROR} = 0x64U
+, {\bfseries PMU\+\_\+\+B0\+TCM\+\_\+\+MULTI\+\_\+\+BIT\+\_\+\+ECC\+\_\+\+ERROR} = 0x65U
+, \newline
+{\bfseries PMU\+\_\+\+B1\+TCM\+\_\+\+MULTI\+\_\+\+BIT\+\_\+\+ECC\+\_\+\+ERROR} = 0x66U
+, {\bfseries PMU\+\_\+\+ATCM\+\_\+\+SINGLE\+\_\+\+BIT\+\_\+\+ECC\+\_\+\+ERROR} = 0x67U
+, {\bfseries PMU\+\_\+\+B0\+TCM\+\_\+\+SINGLE\+\_\+\+BIT\+\_\+\+ECC\+\_\+\+ERROR} = 0x68U
+, {\bfseries PMU\+\_\+\+B1\+TCM\+\_\+\+SINGLE\+\_\+\+BIT\+\_\+\+ECC\+\_\+\+ERROR} = 0x69U
+, \newline
+{\bfseries PMU\+\_\+\+TCM\+\_\+\+COR\+\_\+\+ECC\+\_\+\+ERROR\+\_\+\+LOAD\+\_\+\+STORE} = 0x6\+AU
+, {\bfseries PMU\+\_\+\+TCM\+\_\+\+COR\+\_\+\+ECC\+\_\+\+ERROR\+\_\+\+PREFETCH} = 0x6\+BU
+, {\bfseries PMU\+\_\+\+TCM\+\_\+\+FATAL\+\_\+\+ECC\+\_\+\+ERROR\+\_\+\+AXI\+\_\+\+SLAVE} = 0x6\+CU
+, {\bfseries PMU\+\_\+\+TCM\+\_\+\+COR\+\_\+\+ECC\+\_\+\+ERROR\+\_\+\+AXI\+\_\+\+SLAVE} = 0x6\+DU
+ \}
+\begin{DoxyCompactList}\small\item\em pmu event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__pmu_8h_a90fc368eb9dc59ce3950e63908177e05}\label{sys__pmu_8h_a90fc368eb9dc59ce3950e63908177e05}} 
+void {\bfseries \+\_\+pmu\+Init\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Performance Monitor Unit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_a6bcb569866117b8d50c05b8d992cb3e0}\label{sys__pmu_8h_a6bcb569866117b8d50c05b8d992cb3e0}} 
+void {\bfseries \+\_\+pmu\+Enable\+Counters\+Global\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Enable and reset cycle counter and all 3 event counters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_a1bdff81dac3f3361f65b97a4197793a2}\label{sys__pmu_8h_a1bdff81dac3f3361f65b97a4197793a2}} 
+void {\bfseries \+\_\+pmu\+Disable\+Counters\+Global\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Disable cycle counter and all 3 event counters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_a868e2a6eb16abc1de2c39e8ccb8e9a04}\label{sys__pmu_8h_a868e2a6eb16abc1de2c39e8ccb8e9a04}} 
+void {\bfseries \+\_\+pmu\+Reset\+Cycle\+Counter\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Reset cycle counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_abcd7f459dc3ba0d4747df97b76084bb7}\label{sys__pmu_8h_abcd7f459dc3ba0d4747df97b76084bb7}} 
+void {\bfseries \+\_\+pmu\+Reset\+Event\+Counters\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Reset event counters 0-\/2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_a21f3fc4ef80d58b22d0545a5c08f230e}\label{sys__pmu_8h_a21f3fc4ef80d58b22d0545a5c08f230e}} 
+void {\bfseries \+\_\+pmu\+Reset\+Counters\+\_\+} (void)
+\begin{DoxyCompactList}\small\item\em Reset cycle counter and event counters 0-\/2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__pmu_8h_a05119721bf5533e9271717127c18c22c}{\+\_\+pmu\+Start\+Counters\+\_\+}} (uint32 counters)
+\begin{DoxyCompactList}\small\item\em Starts selected counters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__pmu_8h_abab4f00952caa5d6596db0e6de0f445c}{\+\_\+pmu\+Stop\+Counters\+\_\+}} (uint32 counters)
+\begin{DoxyCompactList}\small\item\em Stops selected counters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__pmu_8h_a4937c9f733852b81cddafbb29e679cff}{\+\_\+pmu\+Set\+Count\+Event\+\_\+}} (uint32 counter, uint32 event)
+\begin{DoxyCompactList}\small\item\em Set event counter count event. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__pmu_8h_afd1c5a6e4a8806b15d4e8f72bd33fa16}{\+\_\+pmu\+Get\+Cycle\+Count\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns current cycle counter value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__pmu_8h_a201e93f10a431344ef380507d3106cd1}{\+\_\+pmu\+Get\+Event\+Count\+\_\+}} (uint32 counter)
+\begin{DoxyCompactList}\small\item\em Returns current event counter value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__pmu_8h_a1141fd5ac2cd84e241cfc28e8068928f}{\+\_\+pmu\+Get\+Overflow\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns current overflow register and clear flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+System Pmu Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Pmu Interface Functions
+\end{DoxyItemize}which are relevant for the performance monitor unit driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{sys__pmu_8h_a3b312c6bf558a4205710c5e44c3cc0b4}\label{sys__pmu_8h_a3b312c6bf558a4205710c5e44c3cc0b4}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!pmuCOUNTER0@{pmuCOUNTER0}}
+\index{pmuCOUNTER0@{pmuCOUNTER0}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{pmuCOUNTER0}{pmuCOUNTER0}}
+{\footnotesize\ttfamily \#define pmu\+COUNTER0~0x00000001U}
+
+
+
+pmu event counter 0 mask 
+
+Alias for pmu event counter 0 mask
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro as a parameter \textquotesingle{}counters\textquotesingle{} in APIs {\itshape pmu\+Start\+Counters} and {\itshape pmu\+Stop\+Counters} 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__pmu_8h_a88033e0068fb11f854560d06d6c51714}\label{sys__pmu_8h_a88033e0068fb11f854560d06d6c51714}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!pmuCOUNTER1@{pmuCOUNTER1}}
+\index{pmuCOUNTER1@{pmuCOUNTER1}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{pmuCOUNTER1}{pmuCOUNTER1}}
+{\footnotesize\ttfamily \#define pmu\+COUNTER1~0x00000002U}
+
+
+
+pmu event counter 1 mask 
+
+Alias for pmu event counter 1 mask
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro as a parameter \textquotesingle{}counters\textquotesingle{} in APIs {\itshape pmu\+Start\+Counters} and {\itshape pmu\+Stop\+Counters} 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__pmu_8h_a6004659aa96b626f1126404017564abe}\label{sys__pmu_8h_a6004659aa96b626f1126404017564abe}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!pmuCOUNTER2@{pmuCOUNTER2}}
+\index{pmuCOUNTER2@{pmuCOUNTER2}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{pmuCOUNTER2}{pmuCOUNTER2}}
+{\footnotesize\ttfamily \#define pmu\+COUNTER2~0x00000004U}
+
+
+
+pmu event counter 2 mask 
+
+Alias for pmu event counter 2 mask
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro as a parameter \textquotesingle{}counters\textquotesingle{} in APIs {\itshape pmu\+Start\+Counters} and {\itshape pmu\+Stop\+Counters} 
+\end{DoxyNote}
+\mbox{\Hypertarget{sys__pmu_8h_a6ee477e201310d4686e202a584c00f9e}\label{sys__pmu_8h_a6ee477e201310d4686e202a584c00f9e}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!pmuCYCLE\_COUNTER@{pmuCYCLE\_COUNTER}}
+\index{pmuCYCLE\_COUNTER@{pmuCYCLE\_COUNTER}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{pmuCYCLE\_COUNTER}{pmuCYCLE\_COUNTER}}
+{\footnotesize\ttfamily \#define pmu\+CYCLE\+\_\+\+COUNTER~0x80000000U}
+
+
+
+pmu cycle counter mask 
+
+Alias for pmu event counter mask
+
+\begin{DoxyNote}{Заметки}
+\+: Use this macro as a parameter \textquotesingle{}counters\textquotesingle{} in APIs {\itshape pmu\+Start\+Counters} and {\itshape pmu\+Stop\+Counters} 
+\end{DoxyNote}
+
+
+\doxysubsection{Перечисления}
+\mbox{\Hypertarget{sys__pmu_8h_a03b6725533687e62c10550dea45089be}\label{sys__pmu_8h_a03b6725533687e62c10550dea45089be}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!pmuEvent@{pmuEvent}}
+\index{pmuEvent@{pmuEvent}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{pmuEvent}{pmuEvent}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__pmu_8h_a03b6725533687e62c10550dea45089be}{pmu\+Event}}}
+
+
+
+pmu event 
+
+Alias for pmu event counter increment source 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{sys__pmu_8h_afd1c5a6e4a8806b15d4e8f72bd33fa16}\label{sys__pmu_8h_afd1c5a6e4a8806b15d4e8f72bd33fa16}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!\_pmuGetCycleCount\_@{\_pmuGetCycleCount\_}}
+\index{\_pmuGetCycleCount\_@{\_pmuGetCycleCount\_}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{\_pmuGetCycleCount\_()}{\_pmuGetCycleCount\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+pmu\+Get\+Cycle\+Count\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns current cycle counter value. 
+
+\begin{DoxyReturn}{Возвращает}
+cycle count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__pmu_8h_a201e93f10a431344ef380507d3106cd1}\label{sys__pmu_8h_a201e93f10a431344ef380507d3106cd1}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!\_pmuGetEventCount\_@{\_pmuGetEventCount\_}}
+\index{\_pmuGetEventCount\_@{\_pmuGetEventCount\_}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{\_pmuGetEventCount\_()}{\_pmuGetEventCount\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+pmu\+Get\+Event\+Count\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{counter }\end{DoxyParamCaption})}
+
+
+
+Returns current event counter value. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em counter} & -\/ Counter select 0..2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+event counter count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__pmu_8h_a1141fd5ac2cd84e241cfc28e8068928f}\label{sys__pmu_8h_a1141fd5ac2cd84e241cfc28e8068928f}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!\_pmuGetOverflow\_@{\_pmuGetOverflow\_}}
+\index{\_pmuGetOverflow\_@{\_pmuGetOverflow\_}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{\_pmuGetOverflow\_()}{\_pmuGetOverflow\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+pmu\+Get\+Overflow\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns current overflow register and clear flags. 
+
+\begin{DoxyReturn}{Возвращает}
+overflow flags. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__pmu_8h_a4937c9f733852b81cddafbb29e679cff}\label{sys__pmu_8h_a4937c9f733852b81cddafbb29e679cff}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!\_pmuSetCountEvent\_@{\_pmuSetCountEvent\_}}
+\index{\_pmuSetCountEvent\_@{\_pmuSetCountEvent\_}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{\_pmuSetCountEvent\_()}{\_pmuSetCountEvent\_()}}
+{\footnotesize\ttfamily void \+\_\+pmu\+Set\+Count\+Event\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{counter,  }\item[{uint32}]{event }\end{DoxyParamCaption})}
+
+
+
+Set event counter count event. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em counter} & -\/ Counter select 0..2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em event} & -\/ Count event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sys__pmu_8h_a05119721bf5533e9271717127c18c22c}\label{sys__pmu_8h_a05119721bf5533e9271717127c18c22c}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!\_pmuStartCounters\_@{\_pmuStartCounters\_}}
+\index{\_pmuStartCounters\_@{\_pmuStartCounters\_}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{\_pmuStartCounters\_()}{\_pmuStartCounters\_()}}
+{\footnotesize\ttfamily void \+\_\+pmu\+Start\+Counters\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{counters }\end{DoxyParamCaption})}
+
+
+
+Starts selected counters. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em counters} & -\/ Counter mask \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sys__pmu_8h_abab4f00952caa5d6596db0e6de0f445c}\label{sys__pmu_8h_abab4f00952caa5d6596db0e6de0f445c}} 
+\index{sys\_pmu.h@{sys\_pmu.h}!\_pmuStopCounters\_@{\_pmuStopCounters\_}}
+\index{\_pmuStopCounters\_@{\_pmuStopCounters\_}!sys\_pmu.h@{sys\_pmu.h}}
+\doxysubsubsection{\texorpdfstring{\_pmuStopCounters\_()}{\_pmuStopCounters\_()}}
+{\footnotesize\ttfamily void \+\_\+pmu\+Stop\+Counters\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{counters }\end{DoxyParamCaption})}
+
+
+
+Stops selected counters. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em counters} & -\/ Counter mask \\
+\hline
+\end{DoxyParams}

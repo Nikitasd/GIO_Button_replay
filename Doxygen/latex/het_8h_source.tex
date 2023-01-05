@@ -1,0 +1,217 @@
+\hypertarget{het_8h_source}{}\doxysection{het.\+h}
+\label{het_8h_source}\index{include/het.h@{include/het.h}}
+\mbox{\hyperlink{het_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00015\ \textcolor{comment}{*}}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*}}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#ifndef\ \_\_HET\_H\_\_}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ \_\_HET\_H\_\_}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__het_8h}{reg\_het.h}}"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00055\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ pwm0\ 0U}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ pwm1\ 1U}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ pwm2\ 2U}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ pwm3\ 3U}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ pwm4\ 4U}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ pwm5\ 5U}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ pwm6\ 6U}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ pwm7\ 7U}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ edge0\ 0U}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ edge1\ 1U}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ edge2\ 2U}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ edge3\ 3U}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ edge4\ 4U}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ edge5\ 5U}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ edge6\ 6U}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ edge7\ 7U}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ cap0\ 0U}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ cap1\ 1U}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ cap2\ 2U}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ cap3\ 3U}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#define\ cap4\ 4U}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ cap5\ 5U}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ cap6\ 6U}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#define\ cap7\ 7U}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ pwmEND\_OF\_DUTY\ 2U}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#define\ pwmEND\_OF\_PERIOD\ 4U}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ pwmEND\_OF\_BOTH\ 6U}}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00249\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00262\ \textcolor{keyword}{enum}\ hetPinSelect}
+\DoxyCodeLine{00263\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ PIN\_HET\_0\ =\ 0U,}
+\DoxyCodeLine{00265\ \ \ \ \ PIN\_HET\_1\ =\ 1U,}
+\DoxyCodeLine{00266\ \ \ \ \ PIN\_HET\_2\ =\ 2U,}
+\DoxyCodeLine{00267\ \ \ \ \ PIN\_HET\_3\ =\ 3U,}
+\DoxyCodeLine{00268\ \ \ \ \ PIN\_HET\_4\ =\ 4U,}
+\DoxyCodeLine{00269\ \ \ \ \ PIN\_HET\_5\ =\ 5U,}
+\DoxyCodeLine{00270\ \ \ \ \ PIN\_HET\_6\ =\ 6U,}
+\DoxyCodeLine{00271\ \ \ \ \ PIN\_HET\_7\ =\ 7U,}
+\DoxyCodeLine{00272\ \ \ \ \ PIN\_HET\_8\ =\ 8U,}
+\DoxyCodeLine{00273\ \ \ \ \ PIN\_HET\_9\ =\ 9U,}
+\DoxyCodeLine{00274\ \ \ \ \ PIN\_HET\_10\ =\ 10U,}
+\DoxyCodeLine{00275\ \ \ \ \ PIN\_HET\_11\ =\ 11U,}
+\DoxyCodeLine{00276\ \ \ \ \ PIN\_HET\_12\ =\ 12U,}
+\DoxyCodeLine{00277\ \ \ \ \ PIN\_HET\_13\ =\ 13U,}
+\DoxyCodeLine{00278\ \ \ \ \ PIN\_HET\_14\ =\ 14U,}
+\DoxyCodeLine{00279\ \ \ \ \ PIN\_HET\_15\ =\ 15U,}
+\DoxyCodeLine{00280\ \ \ \ \ PIN\_HET\_16\ =\ 16U,}
+\DoxyCodeLine{00281\ \ \ \ \ PIN\_HET\_17\ =\ 17U,}
+\DoxyCodeLine{00282\ \ \ \ \ PIN\_HET\_18\ =\ 18U,}
+\DoxyCodeLine{00283\ \ \ \ \ PIN\_HET\_19\ =\ 19U,}
+\DoxyCodeLine{00284\ \ \ \ \ PIN\_HET\_20\ =\ 20U,}
+\DoxyCodeLine{00285\ \ \ \ \ PIN\_HET\_21\ =\ 21U,}
+\DoxyCodeLine{00286\ \ \ \ \ PIN\_HET\_22\ =\ 22U,}
+\DoxyCodeLine{00287\ \ \ \ \ PIN\_HET\_23\ =\ 23U,}
+\DoxyCodeLine{00288\ \ \ \ \ PIN\_HET\_24\ =\ 24U,}
+\DoxyCodeLine{00289\ \ \ \ \ PIN\_HET\_25\ =\ 25U,}
+\DoxyCodeLine{00290\ \ \ \ \ PIN\_HET\_26\ =\ 26U,}
+\DoxyCodeLine{00291\ \ \ \ \ PIN\_HET\_27\ =\ 27U,}
+\DoxyCodeLine{00292\ \ \ \ \ PIN\_HET\_28\ =\ 28U,}
+\DoxyCodeLine{00293\ \ \ \ \ PIN\_HET\_29\ =\ 29U,}
+\DoxyCodeLine{00294\ \ \ \ \ PIN\_HET\_30\ =\ 30U,}
+\DoxyCodeLine{00295\ \ \ \ \ PIN\_HET\_31\ =\ 31U}
+\DoxyCodeLine{00296\ \};}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00309\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structhet_signal}{hetSignal}}}
+\DoxyCodeLine{00310\ \{}
+\DoxyCodeLine{00311\ \ \ \ \ uint32\ \mbox{\hyperlink{structhet_signal_a20542f6c49d4fb044133010ee40ff44d}{duty}};\ \ \ }
+\DoxyCodeLine{00312\ \ \ \ \ float64\ \ \ \mbox{\hyperlink{structhet_signal_aa5b9cc63e77bb19dfb64af93b45c7669}{period}};\ }
+\DoxyCodeLine{00313\ \}\ \mbox{\hyperlink{het_8h_a87f46a75dd7fcc91f1664567ea27ea14}{hetSIGNAL\_t}};}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \textcolor{comment}{/*\ Configuration\ registers\ */}}
+\DoxyCodeLine{00317\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structhet__config__reg}{het\_config\_reg}}}
+\DoxyCodeLine{00318\ \{}
+\DoxyCodeLine{00319\ \ \ \ \ uint32\ CONFIG\_GCR;}
+\DoxyCodeLine{00320\ \ \ \ \ uint32\ CONFIG\_PFR;}
+\DoxyCodeLine{00321\ \ \ \ \ uint32\ CONFIG\_INTENAS;}
+\DoxyCodeLine{00322\ \ \ \ \ uint32\ CONFIG\_INTENAC;}
+\DoxyCodeLine{00323\ \ \ \ \ uint32\ CONFIG\_PRY;}
+\DoxyCodeLine{00324\ \ \ \ \ uint32\ CONFIG\_AND;}
+\DoxyCodeLine{00325\ \ \ \ \ uint32\ CONFIG\_HRSH;}
+\DoxyCodeLine{00326\ \ \ \ \ uint32\ CONFIG\_XOR;}
+\DoxyCodeLine{00327\ \ \ \ \ uint32\ CONFIG\_DIR;}
+\DoxyCodeLine{00328\ \ \ \ \ uint32\ CONFIG\_PDR;\ \ }
+\DoxyCodeLine{00329\ \ \ \ \ uint32\ CONFIG\_PULDIS;}
+\DoxyCodeLine{00330\ \ \ \ \ uint32\ CONFIG\_PSL;\ \ }
+\DoxyCodeLine{00331\ \ \ \ \ uint32\ CONFIG\_PCR;\ \ }
+\DoxyCodeLine{00332\ \}\ \mbox{\hyperlink{structhet__config__reg}{het\_config\_reg\_t}};}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00355\ \textcolor{comment}{/*\ HET\ Interface\ Functions\ */}}
+\DoxyCodeLine{00356\ \textcolor{keywordtype}{void}\ hetInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \textcolor{comment}{/*\ PWM\ Interface\ Functions\ */}}
+\DoxyCodeLine{00359\ \textcolor{keywordtype}{void}\ \ \ pwmStart(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM,uint32\ pwm);}
+\DoxyCodeLine{00360\ \textcolor{keywordtype}{void}\ \ \ pwmStop(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM,uint32\ pwm);}
+\DoxyCodeLine{00361\ \textcolor{keywordtype}{void}\ \ \ pwmSetDuty(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM,uint32\ pwm,\ uint32\ pwmDuty);}
+\DoxyCodeLine{00362\ \textcolor{keywordtype}{void}\ \ \ pwmSetSignal(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM,uint32\ pwm,\ \mbox{\hyperlink{structhet_signal}{hetSIGNAL\_t}}\ signal);}
+\DoxyCodeLine{00363\ \textcolor{keywordtype}{void}\ \ \ pwmGetSignal(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM,uint32\ pwm,\ \mbox{\hyperlink{structhet_signal}{hetSIGNAL\_t}}\ *signal);}
+\DoxyCodeLine{00364\ \textcolor{keywordtype}{void}\ \ \ pwmEnableNotification(\mbox{\hyperlink{structhet_base}{hetBASE\_t}}\ *\ hetREG,uint32\ pwm,\ uint32\ notification);}
+\DoxyCodeLine{00365\ \textcolor{keywordtype}{void}\ \ \ pwmDisableNotification(\mbox{\hyperlink{structhet_base}{hetBASE\_t}}\ *\ hetREG,uint32\ pwm,\ uint32\ notification);}
+\DoxyCodeLine{00366\ \textcolor{keywordtype}{void}\ \ \ pwmNotification(\mbox{\hyperlink{structhet_base}{hetBASE\_t}}\ *\ hetREG,uint32\ pwm,\ uint32\ notification);}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00368\ \textcolor{comment}{/*\ Edge\ Interface\ Functions\ */}}
+\DoxyCodeLine{00369\ \textcolor{keywordtype}{void}\ \ \ edgeResetCounter(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM,uint32\ edge);}
+\DoxyCodeLine{00370\ uint32\ edgeGetCounter(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM,uint32\ edge);}
+\DoxyCodeLine{00371\ \textcolor{keywordtype}{void}\ \ \ edgeEnableNotification(\mbox{\hyperlink{structhet_base}{hetBASE\_t}}\ *\ hetREG,uint32\ edge);}
+\DoxyCodeLine{00372\ \textcolor{keywordtype}{void}\ \ \ edgeDisableNotification(\mbox{\hyperlink{structhet_base}{hetBASE\_t}}\ *\ hetREG,uint32\ edge);}
+\DoxyCodeLine{00373\ \textcolor{keywordtype}{void}\ \ \ edgeNotification(\mbox{\hyperlink{structhet_base}{hetBASE\_t}}\ *\ hetREG,uint32\ edge);}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \textcolor{comment}{/*\ Captured\ Signal\ Interface\ Functions\ */}}
+\DoxyCodeLine{00376\ \textcolor{keywordtype}{void}\ capGetSignal(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM,\ uint32\ cap,\ \mbox{\hyperlink{structhet_signal}{hetSIGNAL\_t}}\ *signal);}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \textcolor{comment}{/*\ Timestamp\ Interface\ Functions\ */}}
+\DoxyCodeLine{00379\ \textcolor{keywordtype}{void}\ \ \ hetResetTimestamp(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM);}
+\DoxyCodeLine{00380\ uint32\ hetGetTimestamp(\mbox{\hyperlink{structhet1_ram_base}{hetRAMBASE\_t}}\ *\ hetRAM);}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00395\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___h_e_t_gaffe14e0c36fcb4ca9dd388e58a97b75f}{hetNotification}}(\mbox{\hyperlink{structhet_base}{hetBASE\_t}}\ *het,\ uint32\ offset);}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (2)\ */}}
+\DoxyCodeLine{00398\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00401\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00402\ \}}
+\DoxyCodeLine{00403\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*extern\ "{}C"{}\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

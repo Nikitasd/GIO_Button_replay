@@ -1,0 +1,54 @@
+\hypertarget{reg__dcc_8h}{}\doxysection{Файл include/reg\+\_\+dcc.h}
+\label{reg__dcc_8h}\index{include/reg\_dcc.h@{include/reg\_dcc.h}}
+
+
+DCC Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdcc_base}{dcc\+Base}}
+\begin{DoxyCompactList}\small\item\em DCC Base Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__dcc_8h_a282bf67b9f4229987fc21e047a6a1693}{dcc\+REG1}}~((\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$)0x\+FFFFEC00U)
+\begin{DoxyCompactList}\small\item\em DCC1 Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reg__dcc_8h_a95d838c0b06dd3a516a693427071eb73}\label{reg__dcc_8h_a95d838c0b06dd3a516a693427071eb73}} 
+typedef volatile struct \mbox{\hyperlink{structdcc_base}{dcc\+Base}} {\bfseries dcc\+BASE\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+DCC Register Layer Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the DCC driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{reg__dcc_8h_a282bf67b9f4229987fc21e047a6a1693}\label{reg__dcc_8h_a282bf67b9f4229987fc21e047a6a1693}} 
+\index{reg\_dcc.h@{reg\_dcc.h}!dccREG1@{dccREG1}}
+\index{dccREG1@{dccREG1}!reg\_dcc.h@{reg\_dcc.h}}
+\doxysubsubsection{\texorpdfstring{dccREG1}{dccREG1}}
+{\footnotesize\ttfamily \#define dcc\+REG1~((\mbox{\hyperlink{structdcc_base}{dcc\+BASE\+\_\+t}} $\ast$)0x\+FFFFEC00U)}
+
+
+
+DCC1 Register Frame Pointer. 
+
+This pointer is used by the DCC driver to access the dcc2 module registers. 

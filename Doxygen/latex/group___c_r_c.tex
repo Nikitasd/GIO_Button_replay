@@ -1,0 +1,63 @@
+\hypertarget{group___c_r_c}{}\doxysection{CRC}
+\label{group___c_r_c}\index{CRC@{CRC}}
+
+
+Cyclic Redundancy Check Controller Module.  
+
+
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___c_r_c_ga5a735798e6972adc694a5428dd7ccaf9}\label{group___c_r_c_ga5a735798e6972adc694a5428dd7ccaf9}} 
+void {\bfseries crc\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___c_r_c_gae40127ece03dcad369c9f97beb1896a1}\label{group___c_r_c_gae40127ece03dcad369c9f97beb1896a1}} 
+void {\bfseries crc\+Send\+Power\+Down} (\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+BASE\+\_\+t}} $\ast$crc)
+\item 
+\mbox{\Hypertarget{group___c_r_c_ga2cc29c9cd4a9604d8edf06506936b19f}\label{group___c_r_c_ga2cc29c9cd4a9604d8edf06506936b19f}} 
+void {\bfseries crc\+Sign\+Gen} (\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+BASE\+\_\+t}} $\ast$crc, \mbox{\hyperlink{crc_8h_a4a5b790e8b5fc5856076750dab58b0fe}{crc\+Mod\+Config\+\_\+t}} $\ast$param)
+\item 
+\mbox{\Hypertarget{group___c_r_c_gaeadba4ed7fdff253219b22953d45c2dd}\label{group___c_r_c_gaeadba4ed7fdff253219b22953d45c2dd}} 
+uint64 {\bfseries crc\+Get\+PSASig} (\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+BASE\+\_\+t}} $\ast$crc, uint32 channel)
+\item 
+\mbox{\Hypertarget{group___c_r_c_ga43f0c3ac380bc6da46f2f12b7273a815}\label{group___c_r_c_ga43f0c3ac380bc6da46f2f12b7273a815}} 
+void {\bfseries crc\+Channel\+Reset} (\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+BASE\+\_\+t}} $\ast$crc, uint32 channel)
+\item 
+\mbox{\Hypertarget{group___c_r_c_gab7f8e03a592d066d89b53ce3c474facc}\label{group___c_r_c_gab7f8e03a592d066d89b53ce3c474facc}} 
+void {\bfseries crc\+Get\+Config\+Value} (\mbox{\hyperlink{structcrc__config__reg}{crc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void \mbox{\hyperlink{group___c_r_c_ga95b0b31099a6321977d0893c96ae5a9a}{crc\+Notification}} (\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+BASE\+\_\+t}} $\ast$crc, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Cyclic Redundancy Check Controller Module. 
+
+The CRC controller is a module that is used to perform CRC (Cyclic Redundancy Check) to verify the integrity of memory system. A signature representing the contents of the memory is obtained when the contents of the memory are read into CRC controller. The responsibility of CRC controller is to calculate the signature for a set of data and then compare the calculated signature value against a pre-\/determined good signature value. CRC controller supports two channels to perform CRC calculation on multiple memories in parallel and can be used on any memory system.
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__crc_8h}{reg\+\_\+crc.\+h}}
+\item \mbox{\hyperlink{crc_8h}{crc.\+h}}
+\item crc.\+c 
+\end{DoxyItemize}
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{group___c_r_c_ga95b0b31099a6321977d0893c96ae5a9a}\label{group___c_r_c_ga95b0b31099a6321977d0893c96ae5a9a}} 
+\index{CRC@{CRC}!crcNotification@{crcNotification}}
+\index{crcNotification@{crcNotification}!CRC@{CRC}}
+\doxysubsubsection{\texorpdfstring{crcNotification()}{crcNotification()}}
+{\footnotesize\ttfamily void crc\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+BASE\+\_\+t}} $\ast$}]{crc,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em crc} & -\/ crc module base address \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & -\/ copy of error interrupt flags\\
+\hline
+\end{DoxyParams}
+This is a callback that is provided by the application and is called upon an interrupt. The parameter passed to the callback is a copy of the interrupt flag register. 

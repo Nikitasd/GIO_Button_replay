@@ -1,0 +1,194 @@
+\hypertarget{group___c_a_n}{}\doxysection{CAN}
+\label{group___c_a_n}\index{CAN@{CAN}}
+
+
+Controller Area Network Module.  
+
+
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga2d3efc34f7704ab23c293aac2be47764}\label{group___c_a_n_ga2d3efc34f7704ab23c293aac2be47764}} 
+void {\bfseries can\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga25acaa78fa2c30c393816a3f3e4b5f7c}\label{group___c_a_n_ga25acaa78fa2c30c393816a3f3e4b5f7c}} 
+uint32 {\bfseries can\+Transmit} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box, const uint8 $\ast$data)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga1d9e0b086772f54b215f65962c704b82}\label{group___c_a_n_ga1d9e0b086772f54b215f65962c704b82}} 
+uint32 {\bfseries can\+Get\+Data} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box, uint8 $\ast$const data)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga15999e728cf76894d085e91d9e741099}\label{group___c_a_n_ga15999e728cf76894d085e91d9e741099}} 
+uint32 {\bfseries can\+Send\+Remote\+Frame} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga3d43bba504e28804aa96e0e2e00d68fa}\label{group___c_a_n_ga3d43bba504e28804aa96e0e2e00d68fa}} 
+uint32 {\bfseries can\+Fill\+Message\+Object\+Data} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box, const uint8 $\ast$data)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga90c2fd9d51bca56e652da71570099295}\label{group___c_a_n_ga90c2fd9d51bca56e652da71570099295}} 
+uint32 {\bfseries can\+Is\+Tx\+Message\+Pending} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga5c0dda98d1341dbae341b4b6ea73a478}\label{group___c_a_n_ga5c0dda98d1341dbae341b4b6ea73a478}} 
+uint32 {\bfseries can\+Is\+Rx\+Message\+Arrived} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+\mbox{\Hypertarget{group___c_a_n_gae353977bb29792a4297cb4ece4fd7e9c}\label{group___c_a_n_gae353977bb29792a4297cb4ece4fd7e9c}} 
+uint32 {\bfseries can\+Is\+Message\+Box\+Valid} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga1c340f76d9eb647dbc6d01db099b0431}\label{group___c_a_n_ga1c340f76d9eb647dbc6d01db099b0431}} 
+uint32 {\bfseries can\+Get\+Last\+Error} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_gaf4802fe6abe62c1ca43e118438dd48c3}\label{group___c_a_n_gaf4802fe6abe62c1ca43e118438dd48c3}} 
+uint32 {\bfseries can\+Get\+Error\+Level} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_gac7704998743bb22648e947b29a544bae}\label{group___c_a_n_gac7704998743bb22648e947b29a544bae}} 
+void {\bfseries can\+Enable\+Error\+Notification} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_gaaf364da9e334318c980ff42a40b4b11d}\label{group___c_a_n_gaaf364da9e334318c980ff42a40b4b11d}} 
+void {\bfseries can\+Disable\+Error\+Notification} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga0acd0f1c9a17f321a40754a93f2d8696}\label{group___c_a_n_ga0acd0f1c9a17f321a40754a93f2d8696}} 
+void {\bfseries can\+Enable\+Status\+Change\+Notification} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga7d16cc0c633d487a0c6ba6dd0d6aa15a}\label{group___c_a_n_ga7d16cc0c633d487a0c6ba6dd0d6aa15a}} 
+void {\bfseries can\+Disable\+Status\+Change\+Notification} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_gae46d75070d42e6c074c7badf986fe98f}\label{group___c_a_n_gae46d75070d42e6c074c7badf986fe98f}} 
+void {\bfseries can\+Enableloopback} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, \mbox{\hyperlink{can_8h_afe14b0f6de1003d9440f90e9df86918a}{canloop\+Back\+Type\+\_\+t}} Loopbacktype)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga965046b34f4e45c97de1d08c2ba73cb4}\label{group___c_a_n_ga965046b34f4e45c97de1d08c2ba73cb4}} 
+void {\bfseries can\+Disableloopback} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga2813ca316c5420f49c7045bac182fd01}\label{group___c_a_n_ga2813ca316c5420f49c7045bac182fd01}} 
+void {\bfseries can\+Io\+Set\+Direction} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 Tx\+Dir, uint32 Rx\+Dir)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga1f6f3bbe2bf26e51b6a3c01b7e5d6d4e}\label{group___c_a_n_ga1f6f3bbe2bf26e51b6a3c01b7e5d6d4e}} 
+void {\bfseries can\+Io\+Set\+Port} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 Tx\+Value, uint32 Rx\+Value)
+\item 
+\mbox{\Hypertarget{group___c_a_n_gabb2b7807d43b7208031e1a2f0974ee00}\label{group___c_a_n_gabb2b7807d43b7208031e1a2f0974ee00}} 
+uint32 {\bfseries can\+Io\+Tx\+Get\+Bit} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga47e373a708ae421d26dc96f62d150492}\label{group___c_a_n_ga47e373a708ae421d26dc96f62d150492}} 
+uint32 {\bfseries can\+Io\+Rx\+Get\+Bit} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node)
+\item 
+\mbox{\Hypertarget{group___c_a_n_ga15061ba9ad17a032d93d482a63e5093a}\label{group___c_a_n_ga15061ba9ad17a032d93d482a63e5093a}} 
+uint32 {\bfseries can\+Get\+ID} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\item 
+\mbox{\Hypertarget{group___c_a_n_gad3e61dde13d979566ce64264af4f3de6}\label{group___c_a_n_gad3e61dde13d979566ce64264af4f3de6}} 
+void {\bfseries can\+Update\+ID} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box, uint32 msg\+Box\+Arbit\+Val)
+\item 
+void \mbox{\hyperlink{group___c_a_n_gab54b99b32b9402b55b845029f9118b77}{can\+Error\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 notification)
+\begin{DoxyCompactList}\small\item\em Error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___c_a_n_gafb381df2cdfb4e84f43df0226a757002}{can\+Status\+Change\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 notification)
+\begin{DoxyCompactList}\small\item\em Status Change notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___c_a_n_gacac999ab73fd61efe4dfc10883ea287c}{can\+Message\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Message notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Controller Area Network Module. 
+
+The Controller Area Network is a high-\/integrity, serial, multi-\/master communication protocol for distributed real-\/time applications. This CAN module is implemented according to ISO 11898-\/1 and is suitable for industrial, automotive and general embedded communications
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__can_8h}{reg\+\_\+can.\+h}}
+\item \mbox{\hyperlink{can_8h}{can.\+h}}
+\item can.\+c 
+\end{DoxyItemize}
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{group___c_a_n_gab54b99b32b9402b55b845029f9118b77}\label{group___c_a_n_gab54b99b32b9402b55b845029f9118b77}} 
+\index{CAN@{CAN}!canErrorNotification@{canErrorNotification}}
+\index{canErrorNotification@{canErrorNotification}!CAN@{CAN}}
+\doxysubsubsection{\texorpdfstring{canErrorNotification()}{canErrorNotification()}}
+{\footnotesize\ttfamily void can\+Error\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{notification }\end{DoxyParamCaption})}
+
+
+
+Error notification. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em node} & Pointer to CAN node\+:
+\begin{DoxyItemize}
+\item can\+REG1\+: CAN1 node pointer
+\item can\+REG2\+: CAN2 node pointer
+\item can\+REG3\+: CAN3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em notification} & Error notification code\+:
+\begin{DoxyItemize}
+\item can\+LEVEL\+\_\+\+PASSIVE (0x20) \+: When RX-\/ or TX error counter are between 32 and 63 ~\newline
+
+\item can\+LEVEL\+\_\+\+WARNING (0x40) \+: When RX-\/ or TX error counter are between 64 and 127 ~\newline
+
+\item can\+LEVEL\+\_\+\+BUS\+\_\+\+OFF (0x80) \+: When RX-\/ or TX error counter are between 128 and 255 ~\newline
+
+\item can\+LEVEL\+\_\+\+PARITY\+\_\+\+ERR (0x100)\+: When RX-\/ or TX error counter are above 256
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+This function has to be provide by the user. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___c_a_n_gacac999ab73fd61efe4dfc10883ea287c}\label{group___c_a_n_gacac999ab73fd61efe4dfc10883ea287c}} 
+\index{CAN@{CAN}!canMessageNotification@{canMessageNotification}}
+\index{canMessageNotification@{canMessageNotification}!CAN@{CAN}}
+\doxysubsubsection{\texorpdfstring{canMessageNotification()}{canMessageNotification()}}
+{\footnotesize\ttfamily void can\+Message\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box }\end{DoxyParamCaption})}
+
+
+
+Message notification. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em node} & Pointer to CAN node\+:
+\begin{DoxyItemize}
+\item can\+REG1\+: CAN1 node pointer
+\item can\+REG2\+: CAN2 node pointer
+\item can\+REG3\+: CAN3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em message\+Box} & Message box number of CAN node\+:
+\begin{DoxyItemize}
+\item can\+MESSAGE\+\_\+\+BOX1\+: CAN message box 1
+\item can\+MESSAGE\+\_\+\+BOXn\+: CAN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+MESSAGE\+\_\+\+BOX64\+: CAN message box 64
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+This function has to be provide by the user. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___c_a_n_gafb381df2cdfb4e84f43df0226a757002}\label{group___c_a_n_gafb381df2cdfb4e84f43df0226a757002}} 
+\index{CAN@{CAN}!canStatusChangeNotification@{canStatusChangeNotification}}
+\index{canStatusChangeNotification@{canStatusChangeNotification}!CAN@{CAN}}
+\doxysubsubsection{\texorpdfstring{canStatusChangeNotification()}{canStatusChangeNotification()}}
+{\footnotesize\ttfamily void can\+Status\+Change\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{notification }\end{DoxyParamCaption})}
+
+
+
+Status Change notification. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em node} & Pointer to CAN node\+:
+\begin{DoxyItemize}
+\item can\+REG1\+: CAN1 node pointer
+\item can\+REG2\+: CAN2 node pointer
+\item can\+REG3\+: CAN3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em notification} & Status change notification code\+:
+\begin{DoxyItemize}
+\item can\+LEVEL\+\_\+\+Tx\+OK (0x08) \+: When successful transmission ~\newline
+
+\item can\+LEVEL\+\_\+\+Rx\+OK (0x10) \+: When successful reception ~\newline
+
+\item can\+LEVEL\+\_\+\+Wake\+Up\+Pnd (0x200)\+: When successful Wake\+Up to system initiated
+\item can\+LEVEL\+\_\+\+PDA (0x400)\+: When successful low power mode entrance
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+This function has to be provide by the user. 
+\end{DoxyNote}

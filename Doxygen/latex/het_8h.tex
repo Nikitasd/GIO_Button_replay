@@ -1,0 +1,464 @@
+\hypertarget{het_8h}{}\doxysection{Файл include/het.h}
+\label{het_8h}\index{include/het.h@{include/het.h}}
+
+
+HET Driver Definition File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+het.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhet_signal}{het\+Signal}}
+\begin{DoxyCompactList}\small\item\em HET Signal Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhet__config__reg}{het\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{het_8h_a3294ddaef714cae4c1f9429fb6307469}{pwm0}}~0U
+\begin{DoxyCompactList}\small\item\em Pwm signal 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_ab1786e3c917e226a224c195ac0cf3326}{pwm1}}~1U
+\begin{DoxyCompactList}\small\item\em Pwm signal 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a765611caf8a98219da1f403f0d4d285a}{pwm2}}~2U
+\begin{DoxyCompactList}\small\item\em Pwm signal 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a27f84e2321632c7f71966fcfa4b839dd}{pwm3}}~3U
+\begin{DoxyCompactList}\small\item\em Pwm signal 3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_ab100bb59e3100edbc3a74d5374a9112b}{pwm4}}~4U
+\begin{DoxyCompactList}\small\item\em Pwm signal 4. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a4779307327a2c6f081dc42cf3d7d2f48}{pwm5}}~5U
+\begin{DoxyCompactList}\small\item\em Pwm signal 5. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_ae275de12768513b2d4d18eaec8433dea}{pwm6}}~6U
+\begin{DoxyCompactList}\small\item\em Pwm signal 6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a270d36d3a389aaf3c9a7c05f583b6778}{pwm7}}~7U
+\begin{DoxyCompactList}\small\item\em Pwm signal 7. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a65b9ba69b02dab18914473e2b48f41aa}{edge0}}~0U
+\begin{DoxyCompactList}\small\item\em Edge signal 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_adb030db1068ead14220782945a20828a}{edge1}}~1U
+\begin{DoxyCompactList}\small\item\em Edge signal 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_aee1af7311563eef1ff7738113439c48c}{edge2}}~2U
+\begin{DoxyCompactList}\small\item\em Edge signal 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_accd4487f0c1f4d05ca5e1060b0bd29fa}{edge3}}~3U
+\begin{DoxyCompactList}\small\item\em Edge signal 3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_aa66f2205258098531a5d76cfddaa6683}{edge4}}~4U
+\begin{DoxyCompactList}\small\item\em Edge signal 4. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a48323099e16e36b097397ac9053061e4}{edge5}}~5U
+\begin{DoxyCompactList}\small\item\em Edge signal 5. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a41e616dc3944be624db491b89a4b2696}{edge6}}~6U
+\begin{DoxyCompactList}\small\item\em Edge signal 6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a6150a9161ba5415ca500145fd7abc33b}{edge7}}~7U
+\begin{DoxyCompactList}\small\item\em Edge signal 7. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a6669b84efb0004837c04f1a3f4e81995}{cap0}}~0U
+\begin{DoxyCompactList}\small\item\em Capture signal 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a641bc400e883119534b16a3c18163b75}{cap1}}~1U
+\begin{DoxyCompactList}\small\item\em Capture signal 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a012faad8c9bb7aef79f8d296dfbcf50c}{cap2}}~2U
+\begin{DoxyCompactList}\small\item\em Capture signal 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_af0580310f5d5aa25fcac60e790c3586e}{cap3}}~3U
+\begin{DoxyCompactList}\small\item\em Capture signal 3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_aa66ef3a164decf27256cb272e5d7aaad}{cap4}}~4U
+\begin{DoxyCompactList}\small\item\em Capture signal 4. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a40972f745e59f45597a6a92ecbd61ac8}{cap5}}~5U
+\begin{DoxyCompactList}\small\item\em Capture signal 5. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_ab5b8fdacb0bd4edefa9102fb21471df0}{cap6}}~6U
+\begin{DoxyCompactList}\small\item\em Capture signal 6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a16b926b35f877c749a565b8d6760a8c1}{cap7}}~7U
+\begin{DoxyCompactList}\small\item\em Capture signal 7. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a4a18cdf9c61137b98c6fada070a15d8c}{pwm\+END\+\_\+\+OF\+\_\+\+DUTY}}~2U
+\begin{DoxyCompactList}\small\item\em Pwm end of duty. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_a62f8b88061c6945792d018989b4e483d}{pwm\+END\+\_\+\+OF\+\_\+\+PERIOD}}~4U
+\begin{DoxyCompactList}\small\item\em Pwm end of period. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{het_8h_ab97854e086155122d7b3e7f286fdd050}{pwm\+END\+\_\+\+OF\+\_\+\+BOTH}}~6U
+\begin{DoxyCompactList}\small\item\em Pwm end of duty and period. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhet_signal}{het\+Signal}} \mbox{\hyperlink{het_8h_a87f46a75dd7fcc91f1664567ea27ea14}{het\+SIGNAL\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em HET Signal Type Definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{het_8h_a897d7cbeb63b74d70c4d0d32eb4dcac7}\label{het_8h_a897d7cbeb63b74d70c4d0d32eb4dcac7}} 
+typedef struct \mbox{\hyperlink{structhet__config__reg}{het\+\_\+config\+\_\+reg}} {\bfseries het\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{het_8h_ac7c904d3b0b0c2f90e953162704d78ec}\label{het_8h_ac7c904d3b0b0c2f90e953162704d78ec}} 
+enum {\bfseries het\+Pin\+Select} \{ \newline
+{\bfseries PIN\+\_\+\+HET\+\_\+0} = 0U
+, {\bfseries PIN\+\_\+\+HET\+\_\+1} = 1U
+, {\bfseries PIN\+\_\+\+HET\+\_\+2} = 2U
+, {\bfseries PIN\+\_\+\+HET\+\_\+3} = 3U
+, \newline
+{\bfseries PIN\+\_\+\+HET\+\_\+4} = 4U
+, {\bfseries PIN\+\_\+\+HET\+\_\+5} = 5U
+, {\bfseries PIN\+\_\+\+HET\+\_\+6} = 6U
+, {\bfseries PIN\+\_\+\+HET\+\_\+7} = 7U
+, \newline
+{\bfseries PIN\+\_\+\+HET\+\_\+8} = 8U
+, {\bfseries PIN\+\_\+\+HET\+\_\+9} = 9U
+, {\bfseries PIN\+\_\+\+HET\+\_\+10} = 10U
+, {\bfseries PIN\+\_\+\+HET\+\_\+11} = 11U
+, \newline
+{\bfseries PIN\+\_\+\+HET\+\_\+12} = 12U
+, {\bfseries PIN\+\_\+\+HET\+\_\+13} = 13U
+, {\bfseries PIN\+\_\+\+HET\+\_\+14} = 14U
+, {\bfseries PIN\+\_\+\+HET\+\_\+15} = 15U
+, \newline
+{\bfseries PIN\+\_\+\+HET\+\_\+16} = 16U
+, {\bfseries PIN\+\_\+\+HET\+\_\+17} = 17U
+, {\bfseries PIN\+\_\+\+HET\+\_\+18} = 18U
+, {\bfseries PIN\+\_\+\+HET\+\_\+19} = 19U
+, \newline
+{\bfseries PIN\+\_\+\+HET\+\_\+20} = 20U
+, {\bfseries PIN\+\_\+\+HET\+\_\+21} = 21U
+, {\bfseries PIN\+\_\+\+HET\+\_\+22} = 22U
+, {\bfseries PIN\+\_\+\+HET\+\_\+23} = 23U
+, \newline
+{\bfseries PIN\+\_\+\+HET\+\_\+24} = 24U
+, {\bfseries PIN\+\_\+\+HET\+\_\+25} = 25U
+, {\bfseries PIN\+\_\+\+HET\+\_\+26} = 26U
+, {\bfseries PIN\+\_\+\+HET\+\_\+27} = 27U
+, \newline
+{\bfseries PIN\+\_\+\+HET\+\_\+28} = 28U
+, {\bfseries PIN\+\_\+\+HET\+\_\+29} = 29U
+, {\bfseries PIN\+\_\+\+HET\+\_\+30} = 30U
+, {\bfseries PIN\+\_\+\+HET\+\_\+31} = 31U
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries het\+Init} (void)
+\item 
+void {\bfseries pwm\+Start} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM, uint32 pwm)
+\item 
+void {\bfseries pwm\+Stop} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM, uint32 pwm)
+\item 
+void {\bfseries pwm\+Set\+Duty} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM, uint32 pwm, uint32 pwm\+Duty)
+\item 
+void {\bfseries pwm\+Set\+Signal} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM, uint32 pwm, \mbox{\hyperlink{het_8h_a87f46a75dd7fcc91f1664567ea27ea14}{het\+SIGNAL\+\_\+t}} signal)
+\item 
+void {\bfseries pwm\+Get\+Signal} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM, uint32 pwm, \mbox{\hyperlink{het_8h_a87f46a75dd7fcc91f1664567ea27ea14}{het\+SIGNAL\+\_\+t}} $\ast$signal)
+\item 
+void {\bfseries pwm\+Enable\+Notification} (\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$het\+REG, uint32 pwm, uint32 notification)
+\item 
+void {\bfseries pwm\+Disable\+Notification} (\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$het\+REG, uint32 pwm, uint32 notification)
+\item 
+void {\bfseries pwm\+Notification} (\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$het\+REG, uint32 pwm, uint32 notification)
+\item 
+void {\bfseries edge\+Reset\+Counter} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM, uint32 edge)
+\item 
+uint32 {\bfseries edge\+Get\+Counter} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM, uint32 edge)
+\item 
+void {\bfseries edge\+Enable\+Notification} (\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$het\+REG, uint32 edge)
+\item 
+void {\bfseries edge\+Disable\+Notification} (\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$het\+REG, uint32 edge)
+\item 
+void {\bfseries edge\+Notification} (\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$het\+REG, uint32 edge)
+\item 
+void {\bfseries cap\+Get\+Signal} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM, uint32 cap, \mbox{\hyperlink{het_8h_a87f46a75dd7fcc91f1664567ea27ea14}{het\+SIGNAL\+\_\+t}} $\ast$signal)
+\item 
+void {\bfseries het\+Reset\+Timestamp} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM)
+\item 
+uint32 {\bfseries het\+Get\+Timestamp} (\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+RAMBASE\+\_\+t}} $\ast$het\+RAM)
+\item 
+void \mbox{\hyperlink{group___h_e_t_gaffe14e0c36fcb4ca9dd388e58a97b75f}{het\+Notification}} (\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+BASE\+\_\+t}} $\ast$het, uint32 offset)
+\begin{DoxyCompactList}\small\item\em het interrupt callback \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+HET Driver Definition File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01 
+\end{DoxyVersion}
+
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{het_8h_a6669b84efb0004837c04f1a3f4e81995}\label{het_8h_a6669b84efb0004837c04f1a3f4e81995}} 
+\index{het.h@{het.h}!cap0@{cap0}}
+\index{cap0@{cap0}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{cap0}{cap0}}
+{\footnotesize\ttfamily \#define cap0~0U}
+
+
+
+Capture signal 0. 
+
+Alias for capture signal 0 \mbox{\Hypertarget{het_8h_a641bc400e883119534b16a3c18163b75}\label{het_8h_a641bc400e883119534b16a3c18163b75}} 
+\index{het.h@{het.h}!cap1@{cap1}}
+\index{cap1@{cap1}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{cap1}{cap1}}
+{\footnotesize\ttfamily \#define cap1~1U}
+
+
+
+Capture signal 1. 
+
+Alias for capture signal 1 \mbox{\Hypertarget{het_8h_a012faad8c9bb7aef79f8d296dfbcf50c}\label{het_8h_a012faad8c9bb7aef79f8d296dfbcf50c}} 
+\index{het.h@{het.h}!cap2@{cap2}}
+\index{cap2@{cap2}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{cap2}{cap2}}
+{\footnotesize\ttfamily \#define cap2~2U}
+
+
+
+Capture signal 2. 
+
+Alias for capture signal 2 \mbox{\Hypertarget{het_8h_af0580310f5d5aa25fcac60e790c3586e}\label{het_8h_af0580310f5d5aa25fcac60e790c3586e}} 
+\index{het.h@{het.h}!cap3@{cap3}}
+\index{cap3@{cap3}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{cap3}{cap3}}
+{\footnotesize\ttfamily \#define cap3~3U}
+
+
+
+Capture signal 3. 
+
+Alias for capture signal 3 \mbox{\Hypertarget{het_8h_aa66ef3a164decf27256cb272e5d7aaad}\label{het_8h_aa66ef3a164decf27256cb272e5d7aaad}} 
+\index{het.h@{het.h}!cap4@{cap4}}
+\index{cap4@{cap4}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{cap4}{cap4}}
+{\footnotesize\ttfamily \#define cap4~4U}
+
+
+
+Capture signal 4. 
+
+Alias for capture signal 4 \mbox{\Hypertarget{het_8h_a40972f745e59f45597a6a92ecbd61ac8}\label{het_8h_a40972f745e59f45597a6a92ecbd61ac8}} 
+\index{het.h@{het.h}!cap5@{cap5}}
+\index{cap5@{cap5}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{cap5}{cap5}}
+{\footnotesize\ttfamily \#define cap5~5U}
+
+
+
+Capture signal 5. 
+
+Alias for capture signal 5 \mbox{\Hypertarget{het_8h_ab5b8fdacb0bd4edefa9102fb21471df0}\label{het_8h_ab5b8fdacb0bd4edefa9102fb21471df0}} 
+\index{het.h@{het.h}!cap6@{cap6}}
+\index{cap6@{cap6}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{cap6}{cap6}}
+{\footnotesize\ttfamily \#define cap6~6U}
+
+
+
+Capture signal 6. 
+
+Alias for capture signal 6 \mbox{\Hypertarget{het_8h_a16b926b35f877c749a565b8d6760a8c1}\label{het_8h_a16b926b35f877c749a565b8d6760a8c1}} 
+\index{het.h@{het.h}!cap7@{cap7}}
+\index{cap7@{cap7}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{cap7}{cap7}}
+{\footnotesize\ttfamily \#define cap7~7U}
+
+
+
+Capture signal 7. 
+
+Alias for capture signal 7 \mbox{\Hypertarget{het_8h_a65b9ba69b02dab18914473e2b48f41aa}\label{het_8h_a65b9ba69b02dab18914473e2b48f41aa}} 
+\index{het.h@{het.h}!edge0@{edge0}}
+\index{edge0@{edge0}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{edge0}{edge0}}
+{\footnotesize\ttfamily \#define edge0~0U}
+
+
+
+Edge signal 0. 
+
+Alias for edge signal 0 \mbox{\Hypertarget{het_8h_adb030db1068ead14220782945a20828a}\label{het_8h_adb030db1068ead14220782945a20828a}} 
+\index{het.h@{het.h}!edge1@{edge1}}
+\index{edge1@{edge1}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{edge1}{edge1}}
+{\footnotesize\ttfamily \#define edge1~1U}
+
+
+
+Edge signal 1. 
+
+Alias for edge signal 1 \mbox{\Hypertarget{het_8h_aee1af7311563eef1ff7738113439c48c}\label{het_8h_aee1af7311563eef1ff7738113439c48c}} 
+\index{het.h@{het.h}!edge2@{edge2}}
+\index{edge2@{edge2}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{edge2}{edge2}}
+{\footnotesize\ttfamily \#define edge2~2U}
+
+
+
+Edge signal 2. 
+
+Alias for edge signal 2 \mbox{\Hypertarget{het_8h_accd4487f0c1f4d05ca5e1060b0bd29fa}\label{het_8h_accd4487f0c1f4d05ca5e1060b0bd29fa}} 
+\index{het.h@{het.h}!edge3@{edge3}}
+\index{edge3@{edge3}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{edge3}{edge3}}
+{\footnotesize\ttfamily \#define edge3~3U}
+
+
+
+Edge signal 3. 
+
+Alias for edge signal 3 \mbox{\Hypertarget{het_8h_aa66f2205258098531a5d76cfddaa6683}\label{het_8h_aa66f2205258098531a5d76cfddaa6683}} 
+\index{het.h@{het.h}!edge4@{edge4}}
+\index{edge4@{edge4}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{edge4}{edge4}}
+{\footnotesize\ttfamily \#define edge4~4U}
+
+
+
+Edge signal 4. 
+
+Alias for edge signal 4 \mbox{\Hypertarget{het_8h_a48323099e16e36b097397ac9053061e4}\label{het_8h_a48323099e16e36b097397ac9053061e4}} 
+\index{het.h@{het.h}!edge5@{edge5}}
+\index{edge5@{edge5}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{edge5}{edge5}}
+{\footnotesize\ttfamily \#define edge5~5U}
+
+
+
+Edge signal 5. 
+
+Alias for edge signal 5 \mbox{\Hypertarget{het_8h_a41e616dc3944be624db491b89a4b2696}\label{het_8h_a41e616dc3944be624db491b89a4b2696}} 
+\index{het.h@{het.h}!edge6@{edge6}}
+\index{edge6@{edge6}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{edge6}{edge6}}
+{\footnotesize\ttfamily \#define edge6~6U}
+
+
+
+Edge signal 6. 
+
+Alias for edge signal 6 \mbox{\Hypertarget{het_8h_a6150a9161ba5415ca500145fd7abc33b}\label{het_8h_a6150a9161ba5415ca500145fd7abc33b}} 
+\index{het.h@{het.h}!edge7@{edge7}}
+\index{edge7@{edge7}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{edge7}{edge7}}
+{\footnotesize\ttfamily \#define edge7~7U}
+
+
+
+Edge signal 7. 
+
+Alias for edge signal 7 \mbox{\Hypertarget{het_8h_a3294ddaef714cae4c1f9429fb6307469}\label{het_8h_a3294ddaef714cae4c1f9429fb6307469}} 
+\index{het.h@{het.h}!pwm0@{pwm0}}
+\index{pwm0@{pwm0}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwm0}{pwm0}}
+{\footnotesize\ttfamily \#define pwm0~0U}
+
+
+
+Pwm signal 0. 
+
+Alias for pwm signal 0 \mbox{\Hypertarget{het_8h_ab1786e3c917e226a224c195ac0cf3326}\label{het_8h_ab1786e3c917e226a224c195ac0cf3326}} 
+\index{het.h@{het.h}!pwm1@{pwm1}}
+\index{pwm1@{pwm1}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwm1}{pwm1}}
+{\footnotesize\ttfamily \#define pwm1~1U}
+
+
+
+Pwm signal 1. 
+
+Alias for pwm signal 1 \mbox{\Hypertarget{het_8h_a765611caf8a98219da1f403f0d4d285a}\label{het_8h_a765611caf8a98219da1f403f0d4d285a}} 
+\index{het.h@{het.h}!pwm2@{pwm2}}
+\index{pwm2@{pwm2}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwm2}{pwm2}}
+{\footnotesize\ttfamily \#define pwm2~2U}
+
+
+
+Pwm signal 2. 
+
+Alias for pwm signal 2 \mbox{\Hypertarget{het_8h_a27f84e2321632c7f71966fcfa4b839dd}\label{het_8h_a27f84e2321632c7f71966fcfa4b839dd}} 
+\index{het.h@{het.h}!pwm3@{pwm3}}
+\index{pwm3@{pwm3}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwm3}{pwm3}}
+{\footnotesize\ttfamily \#define pwm3~3U}
+
+
+
+Pwm signal 3. 
+
+Alias for pwm signal 3 \mbox{\Hypertarget{het_8h_ab100bb59e3100edbc3a74d5374a9112b}\label{het_8h_ab100bb59e3100edbc3a74d5374a9112b}} 
+\index{het.h@{het.h}!pwm4@{pwm4}}
+\index{pwm4@{pwm4}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwm4}{pwm4}}
+{\footnotesize\ttfamily \#define pwm4~4U}
+
+
+
+Pwm signal 4. 
+
+Alias for pwm signal 4 \mbox{\Hypertarget{het_8h_a4779307327a2c6f081dc42cf3d7d2f48}\label{het_8h_a4779307327a2c6f081dc42cf3d7d2f48}} 
+\index{het.h@{het.h}!pwm5@{pwm5}}
+\index{pwm5@{pwm5}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwm5}{pwm5}}
+{\footnotesize\ttfamily \#define pwm5~5U}
+
+
+
+Pwm signal 5. 
+
+Alias for pwm signal 5 \mbox{\Hypertarget{het_8h_ae275de12768513b2d4d18eaec8433dea}\label{het_8h_ae275de12768513b2d4d18eaec8433dea}} 
+\index{het.h@{het.h}!pwm6@{pwm6}}
+\index{pwm6@{pwm6}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwm6}{pwm6}}
+{\footnotesize\ttfamily \#define pwm6~6U}
+
+
+
+Pwm signal 6. 
+
+Alias for pwm signal 6 \mbox{\Hypertarget{het_8h_a270d36d3a389aaf3c9a7c05f583b6778}\label{het_8h_a270d36d3a389aaf3c9a7c05f583b6778}} 
+\index{het.h@{het.h}!pwm7@{pwm7}}
+\index{pwm7@{pwm7}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwm7}{pwm7}}
+{\footnotesize\ttfamily \#define pwm7~7U}
+
+
+
+Pwm signal 7. 
+
+Alias for pwm signal 7 \mbox{\Hypertarget{het_8h_ab97854e086155122d7b3e7f286fdd050}\label{het_8h_ab97854e086155122d7b3e7f286fdd050}} 
+\index{het.h@{het.h}!pwmEND\_OF\_BOTH@{pwmEND\_OF\_BOTH}}
+\index{pwmEND\_OF\_BOTH@{pwmEND\_OF\_BOTH}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwmEND\_OF\_BOTH}{pwmEND\_OF\_BOTH}}
+{\footnotesize\ttfamily \#define pwm\+END\+\_\+\+OF\+\_\+\+BOTH~6U}
+
+
+
+Pwm end of duty and period. 
+
+Alias for pwm end of duty and period notification \mbox{\Hypertarget{het_8h_a4a18cdf9c61137b98c6fada070a15d8c}\label{het_8h_a4a18cdf9c61137b98c6fada070a15d8c}} 
+\index{het.h@{het.h}!pwmEND\_OF\_DUTY@{pwmEND\_OF\_DUTY}}
+\index{pwmEND\_OF\_DUTY@{pwmEND\_OF\_DUTY}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwmEND\_OF\_DUTY}{pwmEND\_OF\_DUTY}}
+{\footnotesize\ttfamily \#define pwm\+END\+\_\+\+OF\+\_\+\+DUTY~2U}
+
+
+
+Pwm end of duty. 
+
+Alias for pwm end of duty notification \mbox{\Hypertarget{het_8h_a62f8b88061c6945792d018989b4e483d}\label{het_8h_a62f8b88061c6945792d018989b4e483d}} 
+\index{het.h@{het.h}!pwmEND\_OF\_PERIOD@{pwmEND\_OF\_PERIOD}}
+\index{pwmEND\_OF\_PERIOD@{pwmEND\_OF\_PERIOD}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{pwmEND\_OF\_PERIOD}{pwmEND\_OF\_PERIOD}}
+{\footnotesize\ttfamily \#define pwm\+END\+\_\+\+OF\+\_\+\+PERIOD~4U}
+
+
+
+Pwm end of period. 
+
+Alias for pwm end of period notification 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{het_8h_a87f46a75dd7fcc91f1664567ea27ea14}\label{het_8h_a87f46a75dd7fcc91f1664567ea27ea14}} 
+\index{het.h@{het.h}!hetSIGNAL\_t@{hetSIGNAL\_t}}
+\index{hetSIGNAL\_t@{hetSIGNAL\_t}!het.h@{het.h}}
+\doxysubsubsection{\texorpdfstring{hetSIGNAL\_t}{hetSIGNAL\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{het_8h_a87f46a75dd7fcc91f1664567ea27ea14}{het\+SIGNAL\+\_\+t}}}
+
+
+
+HET Signal Type Definition. 
+
+This type is used to access HET Signal Information. 

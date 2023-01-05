@@ -1,0 +1,209 @@
+\hypertarget{ti__fee__types_8h_source}{}\doxysection{ti\+\_\+fee\+\_\+types.\+h}
+\label{ti__fee__types_8h_source}\index{include/ti\_fee\_types.h@{include/ti\_fee\_types.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ FILE\ DESCRIPTION}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ File:\ \ ti\_fee\_types.h}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Project:\ \ Tms570\_TIFEEDriver}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ \ \ \ \ \ \ Module:\ \ TIFEEDriver}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ \ \ Generator:\ \ None}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ \ Description:\ \ This\ file\ implements\ the\ TI\ FEE\ Api.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ Author:\ \ Vishwanath\ Reddy}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Revision\ History}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ Version\ \ \ \ \ \ \ \ Date\ \ \ \ \ \ \ \ \ Author\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Change\ ID\ \ \ \ \ \ \ \ Description}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ 03.00.00\ \ \ \ \ \ \ 31Aug2012\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ 0000000000000\ \ \ \ Initial\ Version}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ 00.01.00\ \ \ \ \ \ \ 31Aug2012\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ 0000000000000\ \ \ \ Initial\ Version}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ 00.01.02\ \ \ \ \ \ \ 30Nov2012\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00097786\ \ \ \ Misra\ Fixes,\ Memory\ segmentation\ changes.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ 01.12.00\ \ \ \ \ \ \ 13Dec2013\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00105412\ \ \ \ MISRA\ C\ fixes.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ 01.15.00\ \ \ \ \ \ \ 06Jun2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Support\ for\ LC\ Varients.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ 01.16.00\ \ \ \ \ \ \ 15Jul2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00112141\ \ \ \ Remove\ \ MISRA\ warnings.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ 01.18.00\ \ \ \ \ \ \ 12Oct2015\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00119455\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ 01.18.01\ \ \ \ \ \ \ 17Nov2015\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00120161\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ 01.18.02\ \ \ \ \ \ \ 05Feb2016\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00121158\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ 01.18.03\ \ \ \ \ \ \ 30June2016\ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00122388\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SDOCM00122429\ \ \ \ Added\ error\ when\ endianess\ is\ not\ defined.}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ 01.19.00\ \ \ \ \ \ \ 08Augu2016\ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00122592\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ 01.19.01\ \ \ \ \ \ \ 12Augu2016\ \ \ Vishwanath\ Reddy\ \ \ \ \ SDOCM00122543\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ 01.19.03\ \ \ \ \ \ \ 15May2017\ \ \ \ Prathap\ Srinivasan\ \ \ SDOCM00122917\ \ \ \ Update\ version\ history.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ 01.19.04\ \ \ \ \ \ \ 05Dec2017\ \ \ \ Prathap\ Srinivasan\ \ \ HERCULES\_SW-\/5082\ Update\ version\ history.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00044\ \textcolor{comment}{*}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00046\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00047\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00048\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00049\ \textcolor{comment}{*}}
+\DoxyCodeLine{00050\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00051\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00052\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00053\ \textcolor{comment}{*}}
+\DoxyCodeLine{00054\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00055\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00056\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00057\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00058\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00059\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00060\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00061\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00062\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00063\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00064\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00065\ \textcolor{comment}{*}}
+\DoxyCodeLine{00066\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#ifndef\ TI\_FEE\_TYPES\_H}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ TI\_FEE\_TYPES\_H}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ *\ INCLUDES}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#include\ "{}Device\_header.h"{}}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#ifndef\ TI\_Fee\_None}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ TI\_Fee\_None\ 0x00U\ \ \ }\textcolor{comment}{/*Take\ no\ action\ on\ single\ bit\ errors,\ (respond\ with\ corrected\ data),\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*return\ error\ for\ uncorrectable\ error\ reads\ (multibit\ errors\ for\ ECC\ or\ parity\ failures)*/}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*For\ devices\ with\ no\ ECC\ (they\ may\ have\ parity\ or\ not)\ the\ only\ valid\ option\ is\ none.\ */}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#ifndef\ TI\_Fee\_Fix}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ TI\_Fee\_Fix\ 0x01U\ \ \ \ }\textcolor{comment}{/*\ single\ bit\ error\ will\ be\ fixed\ by\ reprogramming\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ return\ previous\ valid\ data\ for\ uncorrectable\ error\ reads\ (multi\ bit\ errors\ for\ ECC\ }}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ or\ parity\ failures).\ */}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#if\ !defined(\_LITTLE\_ENDIAN)\ \&\&\ !defined(\_BIG\_ENDIAN)}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#error\ "{}Target\ Endianess\ is\ not\ defined.\ Include\ F021\ header\ files\ and\ library."{}}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{comment}{/*SAFETYMCUSW\ 74\ S\ MR:18.4\ <APPROVED>\ "{}Reason\ -\/\ union\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00093\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }}
+\DoxyCodeLine{00094\ \{\ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ uint16\ Fee\_u16StatusWord;\ \ \ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_BIG\_ENDIAN}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00098\ \ \ \ \ \{\ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ uint16\ Reserved:\ 5U;\ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ uint16\ Erase:1U;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ uint16\ ReadSync:1U;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ uint16\ ProgramFailed:1U;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ uint16\ Read:1U;\ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ uint16\ WriteSync:1U;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ uint16\ WriteAsync:1U;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ uint16\ EraseImmediate:1U;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ uint16\ InvalidateBlock:1U;\ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ uint16\ Copy:1U;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ uint16\ Initialized:1U;\ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ uint16\ SingleBitError:1U;}
+\DoxyCodeLine{00135\ \ \ \ \ \}Fee\_StatusWordType\_ST;}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_LITTLE\_ENDIAN}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00139\ \ \ \ \ \{\ \ \ \ \ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ uint16\ SingleBitError:1U;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ uint16\ Initialized:1U;\ \ \ \ \ \ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ uint16\ Copy:1U;\ \ \ \ \ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ uint16\ InvalidateBlock:1U;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ uint16\ EraseImmediate:1U;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ uint16\ WriteAsync:1U;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ uint16\ WriteSync:1U;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ uint16\ Read:1U;\ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ uint16\ ProgramFailed:1U;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ uint16\ ReadSync:1U;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ uint16\ Erase:1U;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 42\ S\ MR:3.5\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ declaration\ is\ necessary\ here."{}*/}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 73\ S\ MR:6.4\ <APPROVED>\ "{}Reason\ -\/\ Bit\ field\ is\ declared\ as\ unsigned."{}*/}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ uint16\ Reserved:\ 5U;}
+\DoxyCodeLine{00176\ \ \ \ \ \}Fee\_StatusWordType\_ST;}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00178\ \}\mbox{\hyperlink{union_t_i___fee___status_word_type___u_n}{TI\_Fee\_StatusWordType\_UN}};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00181\ \{}
+\DoxyCodeLine{00182\ \ \ \ UNINIT,}
+\DoxyCodeLine{00183\ \ \ \ IDLE,}
+\DoxyCodeLine{00184\ \ \ \ \textcolor{comment}{/*SAFETYMCUSW\ 91\ S\ MR:5.2,5.6,5.7\ <APPROVED>\ "{}Reason\ -\/\ BUSY\ in\ F021\ is\ a\ member\ of\ structure."{}*/}}
+\DoxyCodeLine{00185\ \ \ \ BUSY,}
+\DoxyCodeLine{00186\ \ \ \ BUSY\_INTERNAL}
+\DoxyCodeLine{00187\ \}TI\_FeeModuleStatusType;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00190\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ JOB\_OK,}
+\DoxyCodeLine{00192\ \ \ \ \ JOB\_FAILED,}
+\DoxyCodeLine{00193\ \ \ \ \ JOB\_PENDING,}
+\DoxyCodeLine{00194\ \ \ \ \ JOB\_CANCELLED,}
+\DoxyCodeLine{00195\ \ \ \ \ BLOCK\_INCONSISTENT,}
+\DoxyCodeLine{00196\ \ \ \ \ BLOCK\_INVALID}
+\DoxyCodeLine{00197\ \}TI\_FeeJobResultType;}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ TI\_FEE\_TYPES\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00202\ \textcolor{comment}{\ *\ \ END\ OF\ FILE:\ ti\_fee\_types.h}}
+\DoxyCodeLine{00203\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+
+\end{DoxyCode}

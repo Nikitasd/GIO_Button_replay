@@ -1,0 +1,601 @@
+\hypertarget{eqep_8h_source}{}\doxysection{eqep.\+h}
+\label{eqep_8h_source}\index{include/eqep.h@{include/eqep.h}}
+\mbox{\hyperlink{eqep_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00015\ \textcolor{comment}{*}}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*}}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#ifndef\ \_\_eQEP\_H\_\_}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ \_\_eQEP\_H\_\_}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00047\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__eqep_8h}{reg\_eqep.h}}"{}}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{/*QDECCTL\ Register\ */}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_QSRC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)3U\ \ <<\ 14U))\ \ \ \ \ }\textcolor{comment}{/*<position\ counter\ source\ selection\ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_SOEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ 13U))\ \ \ \ \ }\textcolor{comment}{/*<sync\ output\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_SPSEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ 12U))\ \ \ \ \ }\textcolor{comment}{/*<sync\ output\ pin\ selection\ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_XCR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ 11U))\ \ \ \ \ }\textcolor{comment}{/*<external\ clock\ rate\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_SWAP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ 10U))\ \ \ \ \ }\textcolor{comment}{/*<swap\ quadrature\ clock\ inputs\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_IGATE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ \ 9U))\ \ \ \ \ }\textcolor{comment}{/*<index\ pulse\ gating\ option\ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_QAP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ \ 8U))\ \ \ \ \ }\textcolor{comment}{/*<QEPA\ input\ polarity\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_QBP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ \ 7U))\ \ \ \ \ }\textcolor{comment}{/*<QEPB\ input\ polarity\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_QIP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ \ 6U))\ \ \ \ \ }\textcolor{comment}{/*<QEPI\ input\ polarity\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ eQEP\_QDECCTL\_QSP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ \ <<\ \ 5U))\ \ \ \ \ }\textcolor{comment}{/*<QEPS\ input\ polarity\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*QEPCTL\ Register\ */}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_FREESOFT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)3U\ <<\ 14U))\ \ \ \ \ \ }\textcolor{comment}{/*<emulation\ control\ bit\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_PCRM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)3U\ <<\ 12U))\ \ \ \ \ \ }\textcolor{comment}{/*<emulation\ control\ bit\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_SEI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)3U\ <<\ 10U))\ \ \ \ \ \ }\textcolor{comment}{/*<strobe\ event\ initialization\ of\ position\ counter\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_IEI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)3U\ <<\ \ 8U))\ \ \ \ \ \ }\textcolor{comment}{/*<index\ event\ initialization\ of\ position\ counter\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_SWI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 7U))\ \ \ \ \ \ }\textcolor{comment}{/*<software\ initialization\ of\ position\ counter\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_SEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 6U))\ \ \ \ \ \ }\textcolor{comment}{/*<strobe\ event\ latch\ of\ position\ counter\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_IEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)3U\ <<\ \ 4U))\ \ \ \ \ \ }\textcolor{comment}{/*<index\ event\ latch\ of\ position\ counter\ ((uint16)((uint16)software\ index\ marker)\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_QPEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 3U))\ \ \ \ \ \ }\textcolor{comment}{/*<quad\ position\ counter\ enable/software\ reset\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_QCLM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 2U))\ \ \ \ \ \ }\textcolor{comment}{/*<QEP\ capture\ latch\ mode\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_UTE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 1U))\ \ \ \ \ \ }\textcolor{comment}{/*<QEP\ unit\ timer\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ eQEP\_QEPCTL\_WDE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 0U))\ \ \ \ \ \ }\textcolor{comment}{/*<watchdog\ timer\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \textcolor{comment}{/*QPOSCTL\ Register\ */}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ eQEP\_QPOSCTL\_PCSHDW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 15U))\ \ }\textcolor{comment}{/*<position\ compare\ shadow\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ eQEP\_QPOSCTL\_PCLOAD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 14U))\ \ }\textcolor{comment}{/*<position\ compare\ shadow\ load\ mode\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ eQEP\_QPOSCTL\_PCPOL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 13U))\ \ }\textcolor{comment}{/*<load\ when\ QPOSCNT\ =\ QPOSCMP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ eQEP\_QPOSCTL\_PCE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 12U))\ \ }\textcolor{comment}{/*<position\ compare\ enable/disable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ eQEP\_QPOSCTL\_PCSPW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)4095U\ <<\ \ 0U))\ \ \ }\textcolor{comment}{/*<selection\ position\ compare\ sync\ output\ pulse\ width\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{comment}{/*QCAPCTL\ Register\ */}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ eQEP\_QCAPCTL\_CEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 15U))\ \ }\textcolor{comment}{/*<enable\ QEP\ capture\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ eQEP\_QCAPCTL\_CCPS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)7U\ <<\ \ 4U))\ \ }\textcolor{comment}{/*<qep\ capture\ timer\ clock\ prescaler\ */}\textcolor{preprocessor}{\ }}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ eQEP\_QCAPCTL\_UPPS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)15U\ <<\ \ 0U))\ }\textcolor{comment}{/*<unit\ position\ event\ prescaler\ \ \ \ \ */}\textcolor{preprocessor}{\ }}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{/*QEINT\ Register\ */}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_UTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 11U))\ \ }\textcolor{comment}{/*<unit\ timeout\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_IEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 10U))\ \ }\textcolor{comment}{/*<index\ event\ latch\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_SEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 9U))\ \ }\textcolor{comment}{/*<strobe\ event\ latch\ \ \ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_PCM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 8U))\ \ }\textcolor{comment}{/*<position\ compare\ match\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_PCR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 7U))\ \ }\textcolor{comment}{/*<position\ compare\ ready\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_PCO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 6U))\ \ }\textcolor{comment}{/*<position\ counter\ overflow\ interrupt\ enable\ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_PCU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 5U))\ \ }\textcolor{comment}{/*<position\ counter\ underflow\ interrupt\ enable\ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_WTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 4U))\ \ }\textcolor{comment}{/*<watchdog\ time\ out\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_QDC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 3U))\ \ }\textcolor{comment}{/*<quadrature\ direction\ change\ interrupt\ enable\ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_QPE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 2U))\ \ }\textcolor{comment}{/*<quadrature\ phase\ error\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ eQEP\_QEINT\_PCE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 1U))\ \ }\textcolor{comment}{/*<position\ counter\ error\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \textcolor{comment}{/*QFLG\ Register\ */}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_UTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 11U))\ \ }\textcolor{comment}{/*<unit\ timeout\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_IEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 10U))\ \ }\textcolor{comment}{/*<index\ event\ latch\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_SEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 9U))\ \ }\textcolor{comment}{/*<strobe\ event\ latch\ \ \ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_PCM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 8U))\ \ }\textcolor{comment}{/*<position\ compare\ match\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_PCR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 7U))\ \ }\textcolor{comment}{/*<position\ compare\ ready\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_PCO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 6U))\ \ }\textcolor{comment}{/*<position\ counter\ overflow\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_PCU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 5U))\ \ }\textcolor{comment}{/*<position\ counter\ underflow\ interrupt\ flag\ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_WTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 4U))\ \ }\textcolor{comment}{/*<watchdog\ time\ out\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_QDC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 3U))\ \ }\textcolor{comment}{/*<quadrature\ direction\ change\ interrupt\ flag\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_QPE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 2U))\ \ }\textcolor{comment}{/*<quadrature\ phase\ error\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ eQEP\_QFLG\_PCE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 1U))\ \ }\textcolor{comment}{/*<position\ counter\ error\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{comment}{/*QCLR\ Register\ */}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_UTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 11U))\ \ }\textcolor{comment}{/*<clear\ unit\ timeout\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_IEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 10U))\ \ }\textcolor{comment}{/*<clear\ index\ event\ latch\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_SEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 9U))\ \ }\textcolor{comment}{/*<clear\ strobe\ event\ latch\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_PCM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 8U))\ \ }\textcolor{comment}{/*<clear\ position\ compare\ match\ interrupt\ flag\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_PCR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 7U))\ \ }\textcolor{comment}{/*<clear\ position\ compare\ ready\ interrupt\ flag\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_PCO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 6U))\ \ }\textcolor{comment}{/*<clear\ position\ counter\ overflow\ interrupt\ flag\ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_PCU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 5U))\ \ }\textcolor{comment}{/*<clear\ position\ counter\ underflow\ interrupt\ flag\ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_WTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 4U))\ \ }\textcolor{comment}{/*<clear\ watchdog\ time\ out\ interrupt\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_QDC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 3U))\ \ }\textcolor{comment}{/*<clear\ quadrature\ direction\ change\ interrupt\ flag\ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_QPE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 2U))\ \ }\textcolor{comment}{/*<clear\ quadrature\ phase\ error\ interrupt\ flag\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ eQEP\_QCLR\_PCE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 1U))\ \ }\textcolor{comment}{/*<clear\ position\ counter\ error\ interrupt\ flag\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{comment}{/*QFRC\ Register\ */}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_UTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 11U))\ \ }\textcolor{comment}{/*<force\ unit\ timeout\ interrupt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_IEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 10U))\ \ }\textcolor{comment}{/*<force\ index\ event\ latch\ interrupt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_SEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 9U))\ \ }\textcolor{comment}{/*<force\ strobe\ event\ latch\ interrupt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_PCM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 8U))\ \ }\textcolor{comment}{/*<force\ position\ compare\ match\ interrupt\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_PCR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 7U))\ \ }\textcolor{comment}{/*<force\ position\ compare\ ready\ interrupt\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_PCO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 6U))\ \ }\textcolor{comment}{/*<force\ position\ counter\ overflow\ interrupt\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_PCU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 5U))\ \ }\textcolor{comment}{/*<force\ position\ counter\ underflow\ interrupt\ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_WTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 4U))\ \ }\textcolor{comment}{/*<force\ watchdog\ time\ out\ interrupt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_QDC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 3U))\ \ }\textcolor{comment}{/*<force\ quadrature\ direction\ change\ interrupt\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_QPE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 2U))\ \ }\textcolor{comment}{/*<force\ quadrature\ phase\ error\ interrupt\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ eQEP\_QFRC\_PCE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ \ 1U))\ \ }\textcolor{comment}{/*<force\ position\ counter\ error\ interrupt\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{comment}{/*QEPSTS\ Register\ */}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ eQEP\_QEPSTS\_UPEVNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 7U))\ \ \ \ \ \ \ \ }\textcolor{comment}{/*<unit\ position\ event\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ eQEP\_QEPSTS\_FDF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 6U))\ \ \ \ \ \ \ \ }\textcolor{comment}{/*<direction\ on\ the\ first\ index\ marker\ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ eQEP\_QEPSTS\_QDF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 5U))\ \ \ \ \ \ \ \ }\textcolor{comment}{/*<quadrature\ direction\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ eQEP\_QEPSTS\_QDLF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 4U))\ \ \ \ \ \ \ \ }\textcolor{comment}{/*<direction\ latch\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ eQEP\_QEPSTS\_COEF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 3U))\ \ \ \ \ \ \ \ }\textcolor{comment}{/*<capture\ overflow\ error\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ eQEP\_QEPSTS\_CDEF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 2U))\ \ \ \ \ \ \ \ }\textcolor{comment}{/*<capture\ direction\ error\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ eQEP\_QEPSTS\_FIMF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 1U))\ \ \ \ \ \ \ \ }\textcolor{comment}{/*<first\ index\ marker\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ eQEP\_QEPSTS\_PCEF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint16)((uint16)1U\ <<\ 0U))\ \ \ \ \ \ \ \ }\textcolor{comment}{/*<position\ counter\ error\ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00157\ \textcolor{comment}{/*PC\ mode\ \ */}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ eQEP\_QUADRATURE\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ eQEP\_DIRECTION\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ eQEP\_UP\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02U}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ eQEP\_DOWN\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x03U}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{comment}{/*External\ Clock\ Rate\ */}\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ eQEP\_RESOLUTION\_2x\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ eQEP\_RESOLUTION\_1x\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{comment}{/*Direction\ */}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ eQEP\_CLOCKWISE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ eQEP\_COUNTERCLOCKWISE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{comment}{/*Edge\ */}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ eQEP\_RISING\_EDGE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#define\ eQEP\_FALLING\_EDGE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#define\ eQEP\_DIRECTON\_DEPENDENT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{comment}{/*Index\ event\ latch\ of\ position\ counter\ */}\ }
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ eQEP\_LATCH\_RISING\_EDGE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ eQEP\_LATCH\_FALLING\_EDGE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02U}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ eQEP\_LATCH\_SW\_INDEX\_MARKER\ \ \ \ \ \ \ \ \ \ \ \ 0x03U}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{comment}{/*Position\ counter\ reset\ mode\ */}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ eQEP\_INDEX\_EVENT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ eQEP\_MAX\_POSITION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ eQEP\_FIRST\_INDEX\_EVENT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02U}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ eQEP\_UNITTIME\_EVENT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x03U}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{comment}{/*eQEP\ capture\ timer\ clock\ prescaler\ and\ Unit\ position\ event\ prescaler\ */}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02U}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x03U}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x04U}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x05U}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_64\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x06U}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x07U}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x08U}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_512\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x09U}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_1024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0AU}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ eQEP\_PS\_2048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0BU}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{comment}{/*eQEP\ capture\ latch\ mode\ */}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ eQEP\_ON\_POSITION\_COUNTER\_READ\ \ \ \ \ \ \ \ \ 0x00U}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ eQEP\_ON\_UNIT\_TIMOUT\_EVENT\ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{comment}{/*Sync\ output\ pin\ selection\ */}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ eQEP\_INDEX\_PIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ eQEP\_STROBE\_PIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \textcolor{comment}{/*Position-\/compare\ shadow\ load\ mode\ */}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ eQEP\_QPOSCNT\_EQ\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ eQEP\_QPOSCNT\_EQ\_QPSCMP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{comment}{/*Polarity\ of\ sync\ output\ */}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ eQEP\_ACTIVE\_HIGH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ eQEP\_ACTIVE\_LOW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{comment}{/***************************************************************************}}
+\DoxyCodeLine{00218\ \textcolor{comment}{*\ the\ typedefs}}
+\DoxyCodeLine{00219\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00222\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00223\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ eQEP\_Qsrc\_Quad\_Count\_Mode=((uint16)0U\ <<\ 14U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<quadrature\ count\ mode\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00225\ \ \ \ \ eQEP\_Qsrc\_Dir\_Count\_Mode=((uint16)1U\ <<\ 14U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<direction\ count\ mode\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00226\ \ \ \ \ eQEP\_Qsrc\_Up\_Count\_Mode=((uint16)2U\ <<\ 14U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<up\ count\ mode\ for\ frequency\ measurement\ (QCLK=XCLK,\ QDIR=1U)\ \ \ */}}
+\DoxyCodeLine{00227\ \ \ \ \ eQEP\_Qsrc\_Down\_Count\_Mode=((uint16)3U\ <<\ 14U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<down\ count\ mode\ for\ frequency\ measurement\ (QCLK=XCLK,\ QDIR=0U)\ */}}
+\DoxyCodeLine{00228\ \}\ \mbox{\hyperlink{eqep_8h_aecc2adc0247918c6cff8d2405e18902c}{eQEP\_Qsrc\_t}};}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00232\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00233\ \{\ \ \ }
+\DoxyCodeLine{00234\ \ \ \ \ eQEP\_Spsel\_Index\_Pin\_Sync\_Output=((uint16)0U\ <<\ 12U),\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<index\ pin\ for\ sync\ output\ \ */}}
+\DoxyCodeLine{00235\ \ \ \ \ eQEP\_Spsel\_Strobe\_Pin\_Sync\_Output=((uint16)1U\ <<\ 12U)\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<strobe\ pin\ for\ sync\ output\ */}\ }
+\DoxyCodeLine{00236\ \}\ \mbox{\hyperlink{eqep_8h_afc2173b548889c9e522724c28d72cf83}{eQEP\_Spsel\_t}};}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00240\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00241\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ eQEP\_Xcr\_2x\_Res=((uint16)0U\ <<\ 11U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<2x\ resolution:\ count\ the\ rising/falling\ edge\ \ */}}
+\DoxyCodeLine{00243\ \ \ \ \ eQEP\_Xcr\_1x\_Res=((uint16)1U\ <<\ 11U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<1x\ resolution:\ count\ the\ rising\ edge\ only\ \ \ \ \ */}}
+\DoxyCodeLine{00244\ \}\ \mbox{\hyperlink{eqep_8h_a1ad1a4f36a78f5e6f3280953d8af7d33}{eQEP\_Xcr\_t}};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00248\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00249\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ eQEP\_Swap\_Not\_Swapped=((uint16)0U\ <<\ 10U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<quad\ inputs\ not\ swapped\ \ */}}
+\DoxyCodeLine{00251\ \ \ \ \ eQEP\_Swap\_Swapped=((uint16)1U\ <<\ 10U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<quad\ inputs\ swapped\ \ \ \ \ \ */}}
+\DoxyCodeLine{00252\ \}\ \mbox{\hyperlink{eqep_8h_a519296c72cbf00c495252d19cedf77cb}{eQEP\_Swap\_t}};}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00256\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00257\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ eQEP\_Igate\_Disable=((uint16)0U\ <<\ 9U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<disable\ gating\ of\ index\ pulse\ \ */}}
+\DoxyCodeLine{00259\ \ \ \ \ eQEP\_Igate\_Enable=((uint16)1U\ <<\ 9U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<enable\ gating\ of\ index\ pulse\ \ \ */}}
+\DoxyCodeLine{00260\ \}\ \mbox{\hyperlink{eqep_8h_ad9c770966d6fb72f096e6df7a74e5cb8}{eQEP\_Igate\_t}};}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00264\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00265\ \{}
+\DoxyCodeLine{00266\ \ \ \ \ eQEP\_Qap\_No\_Effect=((uint16)0U\ <<\ 8U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<no\ effect\ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00267\ \ \ \ \ eQEP\_Qap\_Inverted=((uint16)1U\ <<\ 8U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<negates\ QEPA\ input\ \ */}}
+\DoxyCodeLine{00268\ \}\ \mbox{\hyperlink{eqep_8h_a37d85471445d50ce16eeab11e2270736}{eQEP\_Qap\_t}};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00272\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00273\ \{}
+\DoxyCodeLine{00274\ \ \ \ \ eQEP\_Qbp\_No\_Effect=((uint16)0U\ <<\ 7U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<no\ effect\ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00275\ \ \ \ \ eQEP\_Qbp\_Inverted=((uint16)1U\ <<\ 7U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<negates\ QEPB\ input\ \ */}}
+\DoxyCodeLine{00276\ \}\ \mbox{\hyperlink{eqep_8h_afc29a5e24b03a06d4e52a93fbcfee822}{eQEP\_Qbp\_t}};}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00280\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00281\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ eQEP\_Qip\_No\_Effect=((uint16)0U\ <<\ 6U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<no\ effect\ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00283\ \ \ \ \ eQEP\_Qip\_Inverted=((uint16)1U\ <<\ 6U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<negates\ QEPI\ input\ */}}
+\DoxyCodeLine{00284\ \}\ \mbox{\hyperlink{eqep_8h_afcc2655699b97debc2be04b7a5c2a38c}{eQEP\_Qip\_t}};}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00288\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00289\ \{}
+\DoxyCodeLine{00290\ \ \ \ \ eQEP\_Qsp\_No\_Effect=((uint16)0U\ <<\ 5U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<no\ effect*/}}
+\DoxyCodeLine{00291\ \ \ \ \ eQEP\_Qsp\_Inverted=((uint16)1U\ <<\ 5U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<negates\ QEPS\ input\ */}}
+\DoxyCodeLine{00292\ \}\ \mbox{\hyperlink{eqep_8h_a1830a9053a06aac231ccfb0a04f40531}{eQEP\_Qsp\_t}};}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00296\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00297\ \{}
+\DoxyCodeLine{00298\ \ \ \ \ QEPCTL\_Freesoft\_Immediate\_Halt=((uint16)0U\ <<\ 14U),\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position,\ watchdog,\ unit\ timer,\ capture\ timer\ stops\ immediately\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00299\ \ \ \ \ QEPCTL\_Freesoft\_Rollover\_Halt=((uint16)1U\ <<\ 14U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position,\ watchdog,\ unit\ timer\ continues\ until\ rollover,\ capture\ counts\ until\ next\ unit\ period\ event\ \ */}}
+\DoxyCodeLine{00300\ \ \ \ \ QEPCTL\_Freesoft\_Unaffected\_Halt=((uint16)2U\ <<\ 14U)\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position,\ watchdog,\ unit\ timer,\ capture\ timer\ unaffected\ by\ emu\ suspend\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00301\ \}\ \mbox{\hyperlink{eqep_8h_a2b1496a3443daa81aafc216c4a0195e9}{QEPCTL\_Freesoft\_t}};}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00305\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00306\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ QEPCTL\_Pcrm\_Index\_Reset=((uint16)0U\ <<\ 12U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ counter\ reset\ on\ index\ event\ \ \ \ \ \ */}}
+\DoxyCodeLine{00308\ \ \ \ \ QEPCTL\_Pcrm\_Max\_Reset=((uint16)1U\ <<\ 12U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ counter\ reset\ on\ max\ position\ \ \ \ \ */}}
+\DoxyCodeLine{00309\ \ \ \ \ QEPCTL\_Pcrm\_First\_Index\_Reset=((uint16)2U\ <<\ 12U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ counter\ reset\ on\ first\ index\ event*/}}
+\DoxyCodeLine{00310\ \ \ \ \ QEPCTL\_Pcrm\_Unit\_Time\_Reset=((uint16)3U\ <<\ 12U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ counter\ reset\ on\ unit\ time\ event\ \ */}}
+\DoxyCodeLine{00311\ \}\ \mbox{\hyperlink{eqep_8h_a2fe80bde268284b0d1d1357739c16461}{QEPCTL\_Pcrm\_t}};}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00315\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00316\ \{\ }
+\DoxyCodeLine{00317\ \ \ \ \ QEPCTL\_Sei\_Nothing=((uint16)0U\ <<\ 10U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<does\ nothing\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00318\ \ \ \ \ QEPCTL\_Sei\_Rising\_Edge\_Init=((uint16)2U\ <<\ 10U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<initializes\ on\ rising\ edge\ of\ QEPS\ signal\ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00319\ \ \ \ \ QEPCTL\_Sei\_Rising\_Falling\_Edge\_Init=((uint16)3U\ <<\ 10U)\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<initializes\ on\ rising/falling\ edge\ of\ QEPS\ signal\ \ */}}
+\DoxyCodeLine{00320\ \}\ \mbox{\hyperlink{eqep_8h_a5dc92778c8ba021dec80dfd704526251}{QEPCTL\_Sei\_t}};}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00324\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00325\ \{}
+\DoxyCodeLine{00326\ \ \ \ \ QEPCTL\_Iei\_Nothing=((uint16)0U\ <<\ 8U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<does\ nothing\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00327\ \ \ \ \ QEPCTL\_Iei\_Rising\_Edge\_Init=((uint16)2U\ <<\ 8U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<initializes\ on\ rising\ edge\ of\ QEPI\ signal\ \ */}}
+\DoxyCodeLine{00328\ \ \ \ \ QEPCTL\_Iei\_Rising\_Falling\_Edge\_Init=((uint16)3U\ <<\ 8U)\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<initializes\ on\ falling\ edge\ of\ QEPI\ signal\ */}}
+\DoxyCodeLine{00329\ \}\ \mbox{\hyperlink{eqep_8h_a07e1895876cbc221c587de63ac943941}{QEPCTL\_Iei\_t}};}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00333\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00334\ \{}
+\DoxyCodeLine{00335\ \ \ \ \ QEPCTL\_Swi\_Nothing=((uint16)0U\ <<\ 7U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<does\ nothing\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00336\ \ \ \ \ QEPCTL\_Swi\_Auto\_Init\_Counter=((uint16)1U\ <<\ 7U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<init\ position\ counter\ (QPOSCNT=QPOSINIT)\ */}}
+\DoxyCodeLine{00337\ \}\ \mbox{\hyperlink{eqep_8h_a1fdb677f694a760fd5c6c48f4e2e68a1}{QEPCTL\_Swi\_t}};}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00341\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00342\ \{}
+\DoxyCodeLine{00343\ \ \ \ \ QEPCTL\_Sel\_Rising\_Edge=((uint16)0U\ <<\ 6U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<Position\ counter\ latched\ on\ rising\ edge\ of\ QEPS\ strobe\ (QPOSSLAT\ =\ POSCCNT)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00344\ \ \ \ \ QEPCTL\_Sel\_Rising\_Falling\_Edge=((uint16)1U\ <<\ 6U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<Clockwise:\ position\ counter\ latched\ on\ rising\ edge,\ counter\ clockwise:\ latched\ on\ falling\ edge\ */}}
+\DoxyCodeLine{00345\ \}\ \mbox{\hyperlink{eqep_8h_a509391511ea6a9b74effc7296a02ed1a}{QEPCTL\_Sel\_t}};}
+\DoxyCodeLine{00346\ \ \ \ \ }
+\DoxyCodeLine{00349\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00350\ \{}
+\DoxyCodeLine{00351\ \ \ \ \ QEPCTL\_Iel\_Rising\_Edge=((uint16)1U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<latches\ position\ counter\ on\ rising\ edge\ of\ index\ signal\ \ */}}
+\DoxyCodeLine{00352\ \ \ \ \ QEPCTL\_Iel\_Falling\_Edge=((uint16)2U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<ditto\ on\ falling\ edge\ of\ index\ signal\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00353\ \ \ \ \ QEPCTL\_Iel\_Software\_Index\_Marker=((uint16)3U\ <<\ 4U)\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<software\ index\ marker.\ \ See\ data\ sheet.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00354\ \}\ \mbox{\hyperlink{eqep_8h_af07b37d99d0fb7f0d72c9ff773f11ed9}{QEPCTL\_Iel\_t}};}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00358\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00359\ \{}
+\DoxyCodeLine{00360\ \ \ \ \ QEPCTL\_Qclm\_Latch\_on\_CPU\_Read=((uint16)0U\ <<\ 2U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<latch\ on\ position\ counter\ read\ by\ cpu\ \ */}}
+\DoxyCodeLine{00361\ \ \ \ \ QEPCTL\_Qclm\_Latch\_on\_Unit\_Timeout=((uint16)1U\ <<\ 2U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<latch\ on\ unit\ time\ out\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00362\ \}\ \mbox{\hyperlink{eqep_8h_a1b50ca16d72d3ca37d4485d58d5e63cf}{QEPCTL\_Qclm\_t}};}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00366\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00367\ \{}
+\DoxyCodeLine{00368\ \ \ \ \ QPOSCTL\_Pcshdw\_Load\_Immediate=((uint16)0U\ <<\ 15U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<shadow\ disabled,\ load\ immediate\ */}}
+\DoxyCodeLine{00369\ \ \ \ \ QPOSCTL\_Pcshdw\_Shadow\_Enabled=((uint16)1U\ <<\ 15U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<shadow\ enabled\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00370\ \}\ \mbox{\hyperlink{eqep_8h_a0b20a147da260f54fba916f699746fd4}{QPOSCTL\_Pcshdw\_t}};}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00374\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00375\ \{}
+\DoxyCodeLine{00376\ \ \ \ \ QPOSCTL\_Pcload\_Load\_Posn\_Count\_Zero=((uint16)0U\ <<\ 14U),\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<load\ on\ qposcnt\ =\ 0\ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00377\ \ \ \ \ QPOSCTL\_Pcload\_Load\_Posn\_Count\_Equal\_Compare=((uint16)1U\ <<\ 14U)\ \ \ \ \textcolor{comment}{/*<load\ when\ qposcnt\ =\ qposcmp\ \ */}}
+\DoxyCodeLine{00378\ \}\ \mbox{\hyperlink{eqep_8h_aa1ff01381af29aa4f5c3f832436c7ee2}{QPOSCTL\_Pcload\_t}};}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00382\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00383\ \{}
+\DoxyCodeLine{00384\ \ \ \ \ QPOSCTL\_Pcpol\_Active\_High=((uint16)0U\ <<\ 13U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<active\ high\ pulse\ output\ \ */}}
+\DoxyCodeLine{00385\ \ \ \ \ QPOSCTL\_Pcpol\_Active\_Low=((uint16)1U\ <<\ 13U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<active\ low\ pulse\ output\ \ \ */}}
+\DoxyCodeLine{00386\ \}\ \mbox{\hyperlink{eqep_8h_ae3cf3203447fa7385a954d34a60ccc54}{QPOSCTL\_Pcpol\_t}};}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00390\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00391\ \{}
+\DoxyCodeLine{00392\ \ \ \ \ QCAPCTL\_Ccps\_Capture\_Div\_1=((uint16)0U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<capclk\ =\ sysclkout/1\ \ \ */}}
+\DoxyCodeLine{00393\ \ \ \ \ QCAPCTL\_Ccps\_Capture\_Div\_2=((uint16)1U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<capclk\ =\ sysclkout/2\ \ \ */}}
+\DoxyCodeLine{00394\ \ \ \ \ QCAPCTL\_Ccps\_Capture\_Div\_4=((uint16)2U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<capclk\ =\ sysclkout/4\ \ \ */}}
+\DoxyCodeLine{00395\ \ \ \ \ QCAPCTL\_Ccps\_Capture\_Div\_8=((uint16)3U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<capclk\ =\ sysclkout/8\ \ \ */}}
+\DoxyCodeLine{00396\ \ \ \ \ QCAPCTL\_Ccps\_Capture\_Div\_16=((uint16)4U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<capclk\ =\ sysclkout/16\ \ */}}
+\DoxyCodeLine{00397\ \ \ \ \ QCAPCTL\_Ccps\_Capture\_Div\_32=((uint16)5U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<capclk\ =\ sysclkout/32\ \ */}}
+\DoxyCodeLine{00398\ \ \ \ \ QCAPCTL\_Ccps\_Capture\_Div\_64=((uint16)6U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<capclk\ =\ sysclkout/64\ \ */}}
+\DoxyCodeLine{00399\ \ \ \ \ QCAPCTL\_Ccps\_Capture\_Div\_128=((uint16)7U\ <<\ 4U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<capclk\ =\ sysclkout/128\ */}}
+\DoxyCodeLine{00400\ \}\ \mbox{\hyperlink{eqep_8h_a08f798e9373fc418750c942760fc87a8}{QCAPCTL\_Ccps\_t}};}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00404\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00405\ \{}
+\DoxyCodeLine{00406\ \ \ \ \ QCAPCTL\_Upps\_Div\_1\_Prescale=((uint16)0U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/1\ \ \ \ */}}
+\DoxyCodeLine{00407\ \ \ \ \ QCAPCTL\_Upps\_Div\_2\_Prescale=((uint16)1U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/2\ \ \ \ */}}
+\DoxyCodeLine{00408\ \ \ \ \ QCAPCTL\_Upps\_Div\_4\_Prescale=((uint16)2U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/4\ \ \ \ */}}
+\DoxyCodeLine{00409\ \ \ \ \ QCAPCTL\_Upps\_Div\_8\_Prescale=((uint16)3U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/8\ \ \ \ */}}
+\DoxyCodeLine{00410\ \ \ \ \ QCAPCTL\_Upps\_Div\_16\_Prescale=((uint16)4U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/16\ \ \ */}}
+\DoxyCodeLine{00411\ \ \ \ \ QCAPCTL\_Upps\_Div\_32\_Prescale=((uint16)5U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/32\ \ \ */}}
+\DoxyCodeLine{00412\ \ \ \ \ QCAPCTL\_Upps\_Div\_64\_Prescale=((uint16)6U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/64\ \ \ */}}
+\DoxyCodeLine{00413\ \ \ \ \ QCAPCTL\_Upps\_Div\_128\_Prescale=((uint16)7U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/128\ \ */}}
+\DoxyCodeLine{00414\ \ \ \ \ QCAPCTL\_Upps\_Div\_256\_Prescale=((uint16)8U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/256\ \ */}}
+\DoxyCodeLine{00415\ \ \ \ \ QCAPCTL\_Upps\_Div\_512\_Prescale=((uint16)9U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/512\ \ */}}
+\DoxyCodeLine{00416\ \ \ \ \ QCAPCTL\_Upps\_Div\_1024\_Prescale=((uint16)10U\ <<\ 0U),\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/1024\ */}}
+\DoxyCodeLine{00417\ \ \ \ \ QCAPCTL\_Upps\_Div\_2048\_Prescale=((uint16)11U\ <<\ 0U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<upevnt\ =\ qclk/2048\ */}}
+\DoxyCodeLine{00418\ \}\ \mbox{\hyperlink{eqep_8h_a4d46fc2c96c979ef396d19f283b92be0}{QCAPCTL\_Upps\_t}};}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00422\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00423\ \{}
+\DoxyCodeLine{00424\ \ \ \ \ QEINT\_Uto=((uint16)1U\ <<\ 11U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<unit\ time\ out\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00425\ \ \ \ \ QEINT\_Iel=((uint16)1U\ <<\ 10U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<index\ event\ latch\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00426\ \ \ \ \ QEINT\_Sel=((uint16)1U\ <<\ 9U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<strobe\ event\ latch\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00427\ \ \ \ \ QEINT\_Pcm=((uint16)1U\ <<\ 8U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ compare\ match\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00428\ \ \ \ \ QEINT\_Pcr=((uint16)1U\ <<\ 7U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ compare\ ready\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00429\ \ \ \ \ QEINT\_Pco=((uint16)1U\ <<\ 6U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ compare\ overflow\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00430\ \ \ \ \ QEINT\_Pcu=((uint16)1U\ <<\ 5U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ compare\ underflow\ interrupt\ enable\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00431\ \ \ \ \ QEINT\_Wto=((uint16)1U\ <<\ 4U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ compare\ watchdog\ time\ out\ interrupt\ enable\ */}}
+\DoxyCodeLine{00432\ \ \ \ \ QEINT\_Qdc=((uint16)1U\ <<\ 3U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<quadrature\ direction\ change\ interrupt\ enable\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00433\ \ \ \ \ QEINT\_Qpe=((uint16)1U\ <<\ 2U),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<quadrature\ phase\ error\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00434\ \ \ \ \ QEINT\_Pce=((uint16)1U\ <<\ 1U)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*<position\ counter\ interrupt\ enable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00435\ \}\ \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\_t}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00437\ \textcolor{comment}{/*\ Configuration\ registers\ */}}
+\DoxyCodeLine{00438\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structeqep__config__reg}{eqep\_config\_reg}}}
+\DoxyCodeLine{00439\ \{}
+\DoxyCodeLine{00440\ \ \ \ \ uint32\ CONFIG\_QPOSINIT;}
+\DoxyCodeLine{00441\ \ \ \ \ uint32\ CONFIG\_QPOSMAX;}
+\DoxyCodeLine{00442\ \ \ \ \ uint32\ CONFIG\_QPOSCMP;}
+\DoxyCodeLine{00443\ \ \ \ \ uint32\ CONFIG\_QUPRD;}
+\DoxyCodeLine{00444\ \ \ \ \ uint16\ CONFIG\_QWDPRD;}
+\DoxyCodeLine{00445\ \ \ \ \ uint16\ CONFIG\_QDECCTL;}
+\DoxyCodeLine{00446\ \ \ \ \ uint16\ CONFIG\_QEPCTL;}
+\DoxyCodeLine{00447\ \ \ \ \ uint16\ CONFIG\_QCAPCTL;}
+\DoxyCodeLine{00448\ \ \ \ \ uint16\ CONFIG\_QPOSCTL;\ \ }
+\DoxyCodeLine{00449\ \ \ \ \ uint16\ CONFIG\_QEINT;}
+\DoxyCodeLine{00450\ \}\ \mbox{\hyperlink{structeqep__config__reg}{eqep\_config\_reg\_t}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00451\ }
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \textcolor{preprocessor}{\#define\ EQEP1\_QPOSINIT\_CONFIGVALUE\ ((uint32)0x00000000U)}}
+\DoxyCodeLine{00454\ \textcolor{preprocessor}{\#define\ EQEP1\_QPOSMAX\_CONFIGVALUE\ ((uint32)0x00000000U)}}
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#define\ EQEP1\_QPOSCMP\_CONFIGVALUE\ ((uint32)0x00000000U)}}
+\DoxyCodeLine{00456\ \textcolor{preprocessor}{\#define\ EQEP1\_QUPRD\_CONFIGVALUE\ ((uint32)0x00000000U)}}
+\DoxyCodeLine{00457\ \textcolor{preprocessor}{\#define\ EQEP1\_QWDPRD\_CONFIGVALUE\ ((uint16)\ 0x0000U)}}
+\DoxyCodeLine{00458\ \textcolor{preprocessor}{\#define\ EQEP1\_QDECCTL\_CONFIGVALUE\ ((uint16)((uint16)((uint16)eQEP\_DIRECTION\_COUNT\ <<\ 14U)\(\backslash\)}}
+\DoxyCodeLine{00459\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 13U)\(\backslash\)}}
+\DoxyCodeLine{00460\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_INDEX\_PIN\ <<\ 12U)\(\backslash\)}}
+\DoxyCodeLine{00461\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_RESOLUTION\_1x\ <<\ 11U)\(\backslash\)}}
+\DoxyCodeLine{00462\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 10U)\(\backslash\)}}
+\DoxyCodeLine{00463\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 9U)\(\backslash\)}}
+\DoxyCodeLine{00464\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 8U)\(\backslash\)}}
+\DoxyCodeLine{00465\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 7U)\(\backslash\)}}
+\DoxyCodeLine{00466\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 6U)\(\backslash\)}}
+\DoxyCodeLine{00467\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 5U)\(\backslash\)}}
+\DoxyCodeLine{00468\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)0x0000U))}}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00470\ \textcolor{preprocessor}{\#define\ EQEP1\_QEPCTL\_CONFIGVALUE\ ((uint16)((uint16)((uint16)eQEP\_MAX\_POSITION\ <<\ 12U)\(\backslash\)}}
+\DoxyCodeLine{00471\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 11U)\(\backslash\)}}
+\DoxyCodeLine{00472\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_DIRECTON\_DEPENDENT\ <<\ 10U)\(\backslash\)}}
+\DoxyCodeLine{00473\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 9U)\(\backslash\)}}
+\DoxyCodeLine{00474\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_RISING\_EDGE\ <<\ 8U)\(\backslash\)}}
+\DoxyCodeLine{00475\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 7U)\(\backslash\)}}
+\DoxyCodeLine{00476\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_RISING\_EDGE\ <<\ 6U)\(\backslash\)}}
+\DoxyCodeLine{00477\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_LATCH\_RISING\_EDGE\ <<\ 4U)\(\backslash\)}}
+\DoxyCodeLine{00478\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_ON\_POSITION\_COUNTER\_READ\ <<\ 2U)\(\backslash\)}}
+\DoxyCodeLine{00479\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)0x0000U))}}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00481\ \textcolor{preprocessor}{\#define\ EQEP1\_QCAPCTL\_CONFIGVALUE\ ((uint16)((uint16)((uint16)eQEP\_PS\_8\ <<\ 4U)\(\backslash\)}}
+\DoxyCodeLine{00482\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_PS\_512)\(\backslash\)}}
+\DoxyCodeLine{00483\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)0x0000U))}}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00485\ \textcolor{preprocessor}{\#define\ EQEP1\_QPOSCTL\_CONFIGVALUE\ ((uint16)((uint16)((uint16)0U\ <<\ 15U)\(\backslash\)}}
+\DoxyCodeLine{00486\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_QPOSCNT\_EQ\_QPSCMP\ <<\ 14U)\(\backslash\)}}
+\DoxyCodeLine{00487\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)eQEP\_ACTIVE\_HIGH\ <<\ 13U)\(\backslash\)}}
+\DoxyCodeLine{00488\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0x000U)\(\backslash\)}}
+\DoxyCodeLine{00489\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)0x0000U))}}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00491\ \textcolor{preprocessor}{\#define\ EQEP1\_QEINT\_CONFIGVALUE\ ((uint16)((uint16)((uint16)0U\ <<\ 11U)\(\backslash\)}}
+\DoxyCodeLine{00492\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 10U)\(\backslash\)}}
+\DoxyCodeLine{00493\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 9U)\(\backslash\)}}
+\DoxyCodeLine{00494\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 8U)\(\backslash\)}}
+\DoxyCodeLine{00495\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 7U)\(\backslash\)}}
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 6U)\(\backslash\)}}
+\DoxyCodeLine{00497\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 5U)\(\backslash\)}}
+\DoxyCodeLine{00498\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 4U)\(\backslash\)}}
+\DoxyCodeLine{00499\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 3U)\(\backslash\)}}
+\DoxyCodeLine{00500\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 2U)\(\backslash\)}}
+\DoxyCodeLine{00501\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ (uint16)((uint16)0U\ <<\ 1U)))\ \ \ }}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00520\ \textcolor{comment}{/***************************************************************************}}
+\DoxyCodeLine{00521\ \textcolor{comment}{*the\ function\ prototypes}}
+\DoxyCodeLine{00522\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00524\ \textcolor{keywordtype}{void}\ QEPInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ }
+\DoxyCodeLine{00527\ \textcolor{keywordtype}{void}\ eqepClearAllInterruptFlags\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00528\ }
+\DoxyCodeLine{00529\ }
+\DoxyCodeLine{00530\ \textcolor{keywordtype}{void}\ eqepClearInterruptFlag\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\_t}}\ QEINT\_type);}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ }
+\DoxyCodeLine{00533\ \textcolor{keywordtype}{void}\ eqepClearPosnCounter\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \textcolor{keywordtype}{void}\ eqepDisableAllInterrupts\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00538\ \textcolor{keywordtype}{void}\ eqepDisableCapture\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00539\ }
+\DoxyCodeLine{00540\ }
+\DoxyCodeLine{00541\ \textcolor{keywordtype}{void}\ eqepDisableGateIndex\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ \textcolor{keywordtype}{void}\ eqepDisableInterrupt\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\_t}}\ QEINT\_type);}
+\DoxyCodeLine{00544\ }
+\DoxyCodeLine{00545\ \textcolor{keywordtype}{void}\ eqepDisablePosnCompare\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00546\ }
+\DoxyCodeLine{00547\ \textcolor{keywordtype}{void}\ eqepDisablePosnCompareShadow\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00548\ }
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00550\ \textcolor{keywordtype}{void}\ eqepDisableSyncOut\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00551\ }
+\DoxyCodeLine{00552\ \textcolor{keywordtype}{void}\ eqepDisableUnitTimer\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00553\ }
+\DoxyCodeLine{00554\ \textcolor{keywordtype}{void}\ eqepDisableWatchdog\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00555\ }
+\DoxyCodeLine{00556\ \textcolor{keywordtype}{void}\ eqepEnableCapture\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00557\ }
+\DoxyCodeLine{00558\ \textcolor{keywordtype}{void}\ eqepEnableCounter\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00559\ }
+\DoxyCodeLine{00560\ \textcolor{keywordtype}{void}\ eqepEnableGateIndex\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00561\ }
+\DoxyCodeLine{00562\ \textcolor{keywordtype}{void}\ eqepEnableInterrupt\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\_t}}\ QEINT\_type);}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00564\ \textcolor{keywordtype}{void}\ eqepEnablePosnCompare\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00565\ }
+\DoxyCodeLine{00566\ \textcolor{keywordtype}{void}\ eqepEnablePosnCompareShadow\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00567\ }
+\DoxyCodeLine{00568\ \textcolor{keywordtype}{void}\ eqepEnableSyncOut\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00569\ }
+\DoxyCodeLine{00570\ \textcolor{keywordtype}{void}\ eqepEnableUnitTimer\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00571\ }
+\DoxyCodeLine{00572\ \textcolor{keywordtype}{void}\ eqepEnableWatchdog\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00573\ }
+\DoxyCodeLine{00574\ \textcolor{keywordtype}{void}\ eqepForceInterrupt\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\_t}}\ QEINT\_type);}
+\DoxyCodeLine{00575\ }
+\DoxyCodeLine{00576\ uint16\ eqepReadCapturePeriodLatch\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00578\ uint16\ eqepReadCaptureTimerLatch\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00579\ }
+\DoxyCodeLine{00580\ uint16\ eqepReadInterruptFlag\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_af85f2f99be537503acd2fddf67e63caf}{QEINT\_t}}\ QEINT\_type);}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ uint32\ eqepReadPosnCompare\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00583\ }
+\DoxyCodeLine{00584\ uint32\ eqepReadPosnCount\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00585\ }
+\DoxyCodeLine{00586\ uint32\ eqepReadPosnIndexLatch\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00587\ }
+\DoxyCodeLine{00588\ uint32\ eqepReadPosnLatch\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00590\ uint32\ eqepReadPosnStrobeLatch\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00591\ }
+\DoxyCodeLine{00592\ uint16\ eqepReadStatus\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00593\ }
+\DoxyCodeLine{00594\ \textcolor{keywordtype}{void}\ eqepResetCounter\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep);}
+\DoxyCodeLine{00595\ }
+\DoxyCodeLine{00596\ \textcolor{keywordtype}{void}\ eqepSetCaptureLatchMode\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a1b50ca16d72d3ca37d4485d58d5e63cf}{QEPCTL\_Qclm\_t}}\ QEPCTL\_Qclm);}
+\DoxyCodeLine{00597\ }
+\DoxyCodeLine{00598\ \textcolor{keywordtype}{void}\ eqepSetCapturePeriod\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ uint16\ period);}
+\DoxyCodeLine{00599\ }
+\DoxyCodeLine{00600\ \textcolor{keywordtype}{void}\ eqepSetCapturePrescale\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a08f798e9373fc418750c942760fc87a8}{QCAPCTL\_Ccps\_t}}\ QCAPCTL\_Ccps);}
+\DoxyCodeLine{00601\ }
+\DoxyCodeLine{00602\ \textcolor{keywordtype}{void}\ eqepSetEmuControl\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a2b1496a3443daa81aafc216c4a0195e9}{QEPCTL\_Freesoft\_t}}\ QEPCTL\_Freesoft);}
+\DoxyCodeLine{00603\ }
+\DoxyCodeLine{00604\ \textcolor{keywordtype}{void}\ eqepSetExtClockRate\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a1ad1a4f36a78f5e6f3280953d8af7d33}{eQEP\_Xcr\_t}}\ eQEP\_Xcr);}
+\DoxyCodeLine{00605\ }
+\DoxyCodeLine{00606\ \textcolor{keywordtype}{void}\ eqepSetIndexEventInit\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a07e1895876cbc221c587de63ac943941}{QEPCTL\_Iei\_t}}\ QEPCTL\_Iei);}
+\DoxyCodeLine{00607\ }
+\DoxyCodeLine{00608\ \textcolor{keywordtype}{void}\ eqepSetIndexEventLatch\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_af07b37d99d0fb7f0d72c9ff773f11ed9}{QEPCTL\_Iel\_t}}\ QEPCTL\_Iel);}
+\DoxyCodeLine{00609\ }
+\DoxyCodeLine{00610\ \textcolor{keywordtype}{void}\ eqepSetIndexPolarity\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_afcc2655699b97debc2be04b7a5c2a38c}{eQEP\_Qip\_t}}\ eQEP\_Qip);}
+\DoxyCodeLine{00611\ }
+\DoxyCodeLine{00612\ \textcolor{keywordtype}{void}\ eqepSetMaxPosnCount\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ uint32\ max\_count);}
+\DoxyCodeLine{00613\ }
+\DoxyCodeLine{00614\ \textcolor{keywordtype}{void}\ eqepSetPosnComparePulseWidth\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ uint16\ pulse\_width);}
+\DoxyCodeLine{00615\ }
+\DoxyCodeLine{00616\ \textcolor{keywordtype}{void}\ eqepSetPosnCompareShadowLoad\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_aa1ff01381af29aa4f5c3f832436c7ee2}{QPOSCTL\_Pcload\_t}}\ QPOSCTL\_Pcload);}
+\DoxyCodeLine{00617\ }
+\DoxyCodeLine{00618\ \textcolor{keywordtype}{void}\ eqepSetPosnCountResetMode\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a2fe80bde268284b0d1d1357739c16461}{QEPCTL\_Pcrm\_t}}\ QEPCTL\_Pcrm);}
+\DoxyCodeLine{00619\ }
+\DoxyCodeLine{00620\ \textcolor{keywordtype}{void}\ eqepSetPosnInitCount\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ uint32\ init\_count);}
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00622\ \textcolor{keywordtype}{void}\ eqepSetSelectSyncPin\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_afc2173b548889c9e522724c28d72cf83}{eQEP\_Spsel\_t}}\ eQEP\_SPsel);}
+\DoxyCodeLine{00623\ }
+\DoxyCodeLine{00624\ \textcolor{keywordtype}{void}\ eqepSetSoftInit\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a1fdb677f694a760fd5c6c48f4e2e68a1}{QEPCTL\_Swi\_t}}\ QEPCTL\_Swi);}
+\DoxyCodeLine{00625\ }
+\DoxyCodeLine{00626\ \textcolor{keywordtype}{void}\ eqepSetStrobeEventInit\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a5dc92778c8ba021dec80dfd704526251}{QEPCTL\_Sei\_t}}\ QEPCTL\_Sei);}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00628\ \textcolor{keywordtype}{void}\ eqepSetStrobeEventLatch\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a509391511ea6a9b74effc7296a02ed1a}{QEPCTL\_Sel\_t}}\ QEPCTL\_Sel);}
+\DoxyCodeLine{00629\ }
+\DoxyCodeLine{00630\ \textcolor{keywordtype}{void}\ eqepSetStrobePolarity\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a1830a9053a06aac231ccfb0a04f40531}{eQEP\_Qsp\_t}}\ eQEP\_Qsp);}
+\DoxyCodeLine{00631\ }
+\DoxyCodeLine{00632\ \textcolor{keywordtype}{void}\ eqepSetSwapQuadInputs\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a519296c72cbf00c495252d19cedf77cb}{eQEP\_Swap\_t}}\ eQEP\_Swap);}
+\DoxyCodeLine{00633\ }
+\DoxyCodeLine{00634\ \textcolor{keywordtype}{void}\ eqepSetSynchOutputComparePolarity\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_ae3cf3203447fa7385a954d34a60ccc54}{QPOSCTL\_Pcpol\_t}}\ QPOSCTL\_Pcpol);}
+\DoxyCodeLine{00635\ }
+\DoxyCodeLine{00636\ \textcolor{keywordtype}{void}\ eqepSetUnitPeriod\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ uint32\ unit\_period);}
+\DoxyCodeLine{00637\ }
+\DoxyCodeLine{00638\ \textcolor{keywordtype}{void}\ eqepSetUnitPosnPrescale\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a4d46fc2c96c979ef396d19f283b92be0}{QCAPCTL\_Upps\_t}}\ QCAPCTL\_Upps);}
+\DoxyCodeLine{00639\ }
+\DoxyCodeLine{00640\ \textcolor{keywordtype}{void}\ eqepSetWatchdogPeriod\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ uint16\ watchdog\_period);}
+\DoxyCodeLine{00641\ }
+\DoxyCodeLine{00642\ \textcolor{keywordtype}{void}\ eqepSetupStrobeEventLatch\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a509391511ea6a9b74effc7296a02ed1a}{QEPCTL\_Sel\_t}}\ QEPCTL\_Sel);}
+\DoxyCodeLine{00643\ }
+\DoxyCodeLine{00644\ \textcolor{keywordtype}{void}\ eqepSetAPolarity\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_a37d85471445d50ce16eeab11e2270736}{eQEP\_Qap\_t}}\ eQEP\_Qap);}
+\DoxyCodeLine{00645\ }
+\DoxyCodeLine{00646\ \textcolor{keywordtype}{void}\ eqepSetBPolarity\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_afc29a5e24b03a06d4e52a93fbcfee822}{eQEP\_Qbp\_t}}\ eQEP\_Qbp);}
+\DoxyCodeLine{00647\ }
+\DoxyCodeLine{00648\ \textcolor{keywordtype}{void}\ eqepSetQEPSource\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ \mbox{\hyperlink{eqep_8h_aecc2adc0247918c6cff8d2405e18902c}{eQEP\_Qsrc\_t}}\ eQEP\_Qsrc);}
+\DoxyCodeLine{00649\ }
+\DoxyCodeLine{00650\ \textcolor{keywordtype}{void}\ eqepWritePosnCompare\ (\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,\ uint32\ posn);}
+\DoxyCodeLine{00651\ }
+\DoxyCodeLine{00656\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__e_q_e_p_ga72d2907736f69bffc6183f5a610f22a2}{eqepNotification}}(\mbox{\hyperlink{structeqep_b_a_s_e}{eqepBASE\_t}}\ *eqep,uint16\ flags);}
+\DoxyCodeLine{00657\ }
+\DoxyCodeLine{00658\ \textcolor{keywordtype}{void}\ eqep1GetConfigValue(\mbox{\hyperlink{structeqep__config__reg}{eqep\_config\_reg\_t}}\ *config\_reg,\ \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\_value\_type\_t}}\ type);}
+\DoxyCodeLine{00659\ }
+\DoxyCodeLine{00660\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (2)\ */}}
+\DoxyCodeLine{00661\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00662\ }
+\DoxyCodeLine{00665\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00666\ \}}
+\DoxyCodeLine{00667\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*extern\ "{}C"{}\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00668\ }
+\DoxyCodeLine{00669\ }
+\DoxyCodeLine{00670\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*end\ of\ \_QEP\_H\_\ definition\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

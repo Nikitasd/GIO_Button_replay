@@ -1,0 +1,88 @@
+\hypertarget{sys__main_8c}{}\doxysection{Файл source/sys\+\_\+main.c}
+\label{sys__main_8c}\index{source/sys\_main.c@{source/sys\_main.c}}
+
+
+Application main file.  
+
+
+{\ttfamily \#include $<$Button\+\_\+\+Confition.\+h$>$}\newline
+{\ttfamily \#include $<$Button\+\_\+\+Events.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}gio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sys__main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Application main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Application main file. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains an empty main function, which can be used for the application. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{sys__main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}\label{sys__main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}} 
+\index{sys\_main.c@{sys\_main.c}!main@{main}}
+\index{main@{main}!sys\_main.c@{sys\_main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily void main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Application main function. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em gio\+Set\+Direction} & setting up GIO pins 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{group___g_i_o_ga0eb9c6b99f383108e0e9ae15e5fd1450}{gioSetDirection}}(\mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}},\ 1\ <<\ 2);}
+
+\end{DoxyCode}
+ \\
+\hline
+{\em button} & a structure object that stores button states 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_button___state}{Button\_State}}\ button;}
+
+\end{DoxyCode}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Заметки}
+This function is empty by default.
+\end{DoxyNote}
+This function is called after startup. The user can use this function to implement the application. Once we have filled the array of the Button State structure, we call the \mbox{\hyperlink{_button___confition_8h_a8ed99148112602f2c51be004d8cf8607}{replay()}} function 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(button.Button\_Amount[Num\_Of\_Button\_Events\ -\/\ 1]\ !=\ 0)\{}
+\DoxyCodeLine{\ \ \ \ \ \mbox{\hyperlink{_button___confition_8h_a8ed99148112602f2c51be004d8cf8607}{replay}}(\&button);}
+\DoxyCodeLine{\ \}}
+
+\end{DoxyCode}
+
+
+If there is a signal from channel 7, run the Click\+\_\+\+Count function 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(\mbox{\hyperlink{group___g_i_o_gaa8da3702193326982ea93af3f1e505fd}{gioGetBit}}(\mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}},7))\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_button___confition_8h_a0f7c5cd20b836ab541774bbca9d4bd16}{Click\_Count}}(\&button);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ button.Button\_Counter\ +=\ 1;}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+If there is no signal from channel 7, run the No\+Click\+\_\+\+Count function 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{group___g_i_o_gaa8da3702193326982ea93af3f1e505fd}{gioGetBit}}(\mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}},7))\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_button___confition_8h_a96a45c8c6e80a85ebcc4e7eda7d96803}{NoClick\_Count}}(\&button);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ button.Button\_Counter\ +=\ 1;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

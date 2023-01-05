@@ -1,0 +1,56 @@
+\hypertarget{reg__tcram_8h}{}\doxysection{Файл include/reg\+\_\+tcram.h}
+\label{reg__tcram_8h}\index{include/reg\_tcram.h@{include/reg\_tcram.h}}
+
+
+TCRAM Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtcram_base}{tcram\+Base}}
+\begin{DoxyCompactList}\small\item\em TCRAM Wrapper Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reg__tcram_8h_a35a4b84abe530e111ae3f78448401496}\label{reg__tcram_8h_a35a4b84abe530e111ae3f78448401496}} 
+\#define {\bfseries tcram1\+REG}~((\mbox{\hyperlink{reg__tcram_8h_aee62f1c2688662e49cfb374ae10ab38f}{tcram\+BASE\+\_\+t}} $\ast$)(0x\+FFFFF800U))
+\item 
+\mbox{\Hypertarget{reg__tcram_8h_a5803e75e624e3b5ce1a6d50c68ad34f2}\label{reg__tcram_8h_a5803e75e624e3b5ce1a6d50c68ad34f2}} 
+\#define {\bfseries tcram2\+REG}~((\mbox{\hyperlink{reg__tcram_8h_aee62f1c2688662e49cfb374ae10ab38f}{tcram\+BASE\+\_\+t}} $\ast$)(0x\+FFFFF900U))
+\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structtcram_base}{tcram\+Base}} \mbox{\hyperlink{reg__tcram_8h_aee62f1c2688662e49cfb374ae10ab38f}{tcram\+BASE\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em TCRAM Wrapper Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+TCRAM Register Layer Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{reg__tcram_8h_aee62f1c2688662e49cfb374ae10ab38f}\label{reg__tcram_8h_aee62f1c2688662e49cfb374ae10ab38f}} 
+\index{reg\_tcram.h@{reg\_tcram.h}!tcramBASE\_t@{tcramBASE\_t}}
+\index{tcramBASE\_t@{tcramBASE\_t}!reg\_tcram.h@{reg\_tcram.h}}
+\doxysubsubsection{\texorpdfstring{tcramBASE\_t}{tcramBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__tcram_8h_aee62f1c2688662e49cfb374ae10ab38f}{tcram\+BASE\+\_\+t}}}
+
+
+
+TCRAM Wrapper Register Frame Type Definition. 
+
+This type is used to access the TCRAM Wrapper Registers. 

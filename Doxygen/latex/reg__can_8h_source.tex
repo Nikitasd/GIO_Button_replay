@@ -1,0 +1,138 @@
+\hypertarget{reg__can_8h_source}{}\doxysection{reg\+\_\+can.\+h}
+\label{reg__can_8h_source}\index{include/reg\_can.h@{include/reg\_can.h}}
+\mbox{\hyperlink{reg__can_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*}}
+\DoxyCodeLine{00046\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifndef\ \_\_REG\_CAN\_H\_\_}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ \_\_REG\_CAN\_H\_\_}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sys__common_8h}{sys\_common.h}}"{}}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ Can\ Register\ Frame\ Definition\ */}}
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcan_base}{canBase}}}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_ae6b6b1f1e40e4f30fbda343a935dbed2}{CTL}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_aa107415b41a0ff6449673815462e2b38}{ES}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a877235b34e6952b6c4cebaa5ba99572b}{EERC}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a31238f0525ded4a90f227977dbae9dbf}{BTR}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a19d1f8bb5e7c8c5e7534802a88bf634e}{INT}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a8c542e543bcff234b38dbb7ad21d3e2a}{TEST}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a157d52061ee945a71c2c46674a89cf40}{rsvd1}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a858115371c5b947e8b82b9689510e96d}{PERR}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_ab6ea9d1e235e279603c76bcc9b28a22b}{rsvd2}}[24];\ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_aa827271094bfd20916f9c15a2fce565c}{ABOTR}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a6eebb7d0634641627b9d770ee3a5e7e4}{TXRQX}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a2b3ee0272b058e743dac6e59b0362d6e}{TXRQx}}[4U];\ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a1a8af7233d5ad21cf8f3861d85d7c15d}{NWDATX}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a5630539d96e134898df33d9a9bc3b6bb}{NWDATx}}[4U];\ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a7b33d0b98ba32ef87266d89aa83fda22}{INTPNDX}};\ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a5204f6c92724f9c4012f670c5a77cf70}{INTPNDx}}[4U];\ \ }
+\DoxyCodeLine{00088\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_aceb7ff54ac53870d28b234acc7983817}{MSGVALX}};\ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a75b502aeb6f15f347faeee8f2ef09ebb}{MSGVALx}}[4U];\ \ }
+\DoxyCodeLine{00090\ \ \ \ \ uint32\ \ \ \ \ \ \ \ \mbox{\hyperlink{structcan_base_aa739ac0b1d8a4ba9751159e9a9b5bb37}{rsvd3}};\ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a7b2a7d0470002a01936f8b57f12b6471}{INTMUXx}}[4U];\ \ }
+\DoxyCodeLine{00092\ \ \ \ \ uint32\ \ \ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a1de4d6702d9a006f3d76d2fabae79e1e}{rsvd4}}[6];\ \ \ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#if\ ((\_\_little\_endian\_\_\ ==\ 1)\ ||\ (\_\_LITTLE\_ENDIAN\_\_\ ==\ 1))}}
+\DoxyCodeLine{00094\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_ad26a77aa3255b6cf6bb1f1205a8447b9}{IF1NO}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_a49113bdd1fdc7434b28a6cc0d06c81a5}{IF1STAT}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_a359c13fe7632234bb00d3f8388814afb}{IF1CMD}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ uint8\ \ \ \mbox{\hyperlink{structcan_base_afdfcb74a603f90324af39d08b7f26b7f}{rsvd9}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00099\ \ \ \ \ uint8\ \ \ \mbox{\hyperlink{structcan_base_afdfcb74a603f90324af39d08b7f26b7f}{rsvd9}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_a359c13fe7632234bb00d3f8388814afb}{IF1CMD}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_a49113bdd1fdc7434b28a6cc0d06c81a5}{IF1STAT}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_ad26a77aa3255b6cf6bb1f1205a8447b9}{IF1NO}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00104\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a1fe8499cc3a9c826954eb7430da190ff}{IF1MSK}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a4ae567961e684e041ce4cc7324476bbb}{IF1ARB}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_afc913b8611fb4c7bd0eb5bf1eb4cf7df}{IF1MCTL}};\ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_addd045dd9353431e91320e644a1361c7}{IF1DATx}}[8U];\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ uint32\ \ \ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a32f1fdbc851f08c2620877e15da3acc1}{rsvd5}}[2];\ \ \ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#if\ ((\_\_little\_endian\_\_\ ==\ 1)\ ||\ (\_\_LITTLE\_ENDIAN\_\_\ ==\ 1))}}
+\DoxyCodeLine{00110\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_afb29b9d70370c02c0b889e326846e114}{IF2NO}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_abef609573bb06d6db9524e0406d089b1}{IF2STAT}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_a56d22f6518153c55c81fff8ebca16a91}{IF2CMD}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ uint8\ \ \ \mbox{\hyperlink{structcan_base_a91cac5dba6502a71d32bb030df74be4f}{rsvd10}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00115\ \ \ \ \ uint8\ \ \ \mbox{\hyperlink{structcan_base_a91cac5dba6502a71d32bb030df74be4f}{rsvd10}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_a56d22f6518153c55c81fff8ebca16a91}{IF2CMD}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_abef609573bb06d6db9524e0406d089b1}{IF2STAT}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_afb29b9d70370c02c0b889e326846e114}{IF2NO}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00120\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a1d0efb9bf06af27ff9abbd47dbf72aaa}{IF2MSK}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_ad07ec84ba8a3d8c154c3c2e24c753bbd}{IF2ARB}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a7d217b38aaa02b29325dec60460b686c}{IF2MCTL}};\ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_ac0bd349a591871e3a8aac874de19dd20}{IF2DATx}}[8U];\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ uint32\ \ \ \ \ \ \ \ \mbox{\hyperlink{structcan_base_ac5fd49c3d2fe681f74c3c51eeadf8f69}{rsvd6}}[2];\ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a2b65ecf017876bf9f4aefff31f31fbe5}{IF3OBS}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_ae8e4fd2bb22e37f73c52403127650321}{IF3MSK}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_af3f6931492ae9963eb371a129dbe0b0b}{IF3ARB}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_aa0b6dbbf73e216f51bfba3c7931c1503}{IF3MCTL}};\ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ uint8\ \mbox{\hyperlink{structcan_base_aec9caf4422b3a9f6e52d5098e2327047}{IF3DATx}}[8U];\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ uint32\ \ \ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a82a427d2bbeb379f4e225ca51bb81702}{rsvd7}}[2];\ \ \ }
+\DoxyCodeLine{00131\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a4562be33aceab2a0574ea4f77ae36a14}{IF3UEy}}[4U];\ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ uint32\ \ \ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a558c6b294b9e8c35322784ae057e63a3}{rsvd8}}[28];\ \ }
+\DoxyCodeLine{00133\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_a95a36a9e4ef4b82123e38b8de4e0b0ff}{TIOC}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00134\ \ \ \ \ uint32\ \ \ \ \ \ \mbox{\hyperlink{structcan_base_aff911aa8a7a934562f0333bf5c9c312e}{RIOC}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ \}\ \mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{canBASE\_t}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ canREG1\ ((canBASE\_t\ *)0xFFF7DC00U)}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ canREG2\ ((canBASE\_t\ *)0xFFF7DE00U)}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ canRAM1\ (*(volatile\ uint32\ *)0xFF1E0000U)}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ canRAM2\ (*(volatile\ uint32\ *)0xFF1C0000U)}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ canPARRAM1\ (*(volatile\ uint32\ *)(0xFF1E0000U\ +\ 0x10U))}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ canPARRAM2\ (*(volatile\ uint32\ *)(0xFF1C0000U\ +\ 0x10U))}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00183\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

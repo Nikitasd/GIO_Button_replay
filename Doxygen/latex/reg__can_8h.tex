@@ -1,0 +1,126 @@
+\hypertarget{reg__can_8h}{}\doxysection{Файл include/reg\+\_\+can.h}
+\label{reg__can_8h}\index{include/reg\_can.h@{include/reg\_can.h}}
+
+
+CAN Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\doxysubsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcan_base}{can\+Base}}
+\begin{DoxyCompactList}\small\item\em CAN Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{can\+REG1}}~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+DC00U)
+\begin{DoxyCompactList}\small\item\em CAN1 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_a6c499bb0c4a06d96ec7d4264e8e943f8}{can\+REG2}}~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+DE00U)
+\begin{DoxyCompactList}\small\item\em CAN2 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_abafb9e8112c19ec9e8e3ac56cbeef409}{can\+RAM1}}~($\ast$(volatile uint32 $\ast$)0x\+FF1\+E0000U)
+\begin{DoxyCompactList}\small\item\em CAN1 Mailbox RAM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_a715cfdf91b3cca750214e1c9c9a5b6e2}{can\+RAM2}}~($\ast$(volatile uint32 $\ast$)0x\+FF1\+C0000U)
+\begin{DoxyCompactList}\small\item\em CAN2 Mailbox RAM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_ae6b205060d2fe86acdadc40de178493c}{can\+PARRAM1}}~($\ast$(volatile uint32 $\ast$)(0x\+FF1\+E0000U + 0x10U))
+\begin{DoxyCompactList}\small\item\em CAN1 Mailbox Parity RAM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_a371c9079cb797249148aeee08bdcd3f8}{can\+PARRAM2}}~($\ast$(volatile uint32 $\ast$)(0x\+FF1\+C0000U + 0x10U))
+\begin{DoxyCompactList}\small\item\em CAN2 Mailbox Parity RAM Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structcan_base}{can\+Base}} \mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em CAN Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+CAN Register Layer Header File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the CAN driver. 
+
+\doxysubsection{Макросы}
+\mbox{\Hypertarget{reg__can_8h_ae6b205060d2fe86acdadc40de178493c}\label{reg__can_8h_ae6b205060d2fe86acdadc40de178493c}} 
+\index{reg\_can.h@{reg\_can.h}!canPARRAM1@{canPARRAM1}}
+\index{canPARRAM1@{canPARRAM1}!reg\_can.h@{reg\_can.h}}
+\doxysubsubsection{\texorpdfstring{canPARRAM1}{canPARRAM1}}
+{\footnotesize\ttfamily \#define can\+PARRAM1~($\ast$(volatile uint32 $\ast$)(0x\+FF1\+E0000U + 0x10U))}
+
+
+
+CAN1 Mailbox Parity RAM Pointer. 
+
+This pointer is used by the CAN driver to access the CAN1 Parity RAM for testing RAM parity error detect logic. \mbox{\Hypertarget{reg__can_8h_a371c9079cb797249148aeee08bdcd3f8}\label{reg__can_8h_a371c9079cb797249148aeee08bdcd3f8}} 
+\index{reg\_can.h@{reg\_can.h}!canPARRAM2@{canPARRAM2}}
+\index{canPARRAM2@{canPARRAM2}!reg\_can.h@{reg\_can.h}}
+\doxysubsubsection{\texorpdfstring{canPARRAM2}{canPARRAM2}}
+{\footnotesize\ttfamily \#define can\+PARRAM2~($\ast$(volatile uint32 $\ast$)(0x\+FF1\+C0000U + 0x10U))}
+
+
+
+CAN2 Mailbox Parity RAM Pointer. 
+
+This pointer is used by the CAN driver to access the CAN2 Parity RAM for testing RAM parity error detect logic. \mbox{\Hypertarget{reg__can_8h_abafb9e8112c19ec9e8e3ac56cbeef409}\label{reg__can_8h_abafb9e8112c19ec9e8e3ac56cbeef409}} 
+\index{reg\_can.h@{reg\_can.h}!canRAM1@{canRAM1}}
+\index{canRAM1@{canRAM1}!reg\_can.h@{reg\_can.h}}
+\doxysubsubsection{\texorpdfstring{canRAM1}{canRAM1}}
+{\footnotesize\ttfamily \#define can\+RAM1~($\ast$(volatile uint32 $\ast$)0x\+FF1\+E0000U)}
+
+
+
+CAN1 Mailbox RAM Pointer. 
+
+This pointer is used by the CAN driver to access the CAN1 RAM. \mbox{\Hypertarget{reg__can_8h_a715cfdf91b3cca750214e1c9c9a5b6e2}\label{reg__can_8h_a715cfdf91b3cca750214e1c9c9a5b6e2}} 
+\index{reg\_can.h@{reg\_can.h}!canRAM2@{canRAM2}}
+\index{canRAM2@{canRAM2}!reg\_can.h@{reg\_can.h}}
+\doxysubsubsection{\texorpdfstring{canRAM2}{canRAM2}}
+{\footnotesize\ttfamily \#define can\+RAM2~($\ast$(volatile uint32 $\ast$)0x\+FF1\+C0000U)}
+
+
+
+CAN2 Mailbox RAM Pointer. 
+
+This pointer is used by the CAN driver to access the CAN2 RAM. \mbox{\Hypertarget{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}\label{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}} 
+\index{reg\_can.h@{reg\_can.h}!canREG1@{canREG1}}
+\index{canREG1@{canREG1}!reg\_can.h@{reg\_can.h}}
+\doxysubsubsection{\texorpdfstring{canREG1}{canREG1}}
+{\footnotesize\ttfamily \#define can\+REG1~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+DC00U)}
+
+
+
+CAN1 Register Frame Pointer. 
+
+This pointer is used by the CAN driver to access the CAN1 registers. \mbox{\Hypertarget{reg__can_8h_a6c499bb0c4a06d96ec7d4264e8e943f8}\label{reg__can_8h_a6c499bb0c4a06d96ec7d4264e8e943f8}} 
+\index{reg\_can.h@{reg\_can.h}!canREG2@{canREG2}}
+\index{canREG2@{canREG2}!reg\_can.h@{reg\_can.h}}
+\doxysubsubsection{\texorpdfstring{canREG2}{canREG2}}
+{\footnotesize\ttfamily \#define can\+REG2~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}} $\ast$)0x\+FFF7\+DE00U)}
+
+
+
+CAN2 Register Frame Pointer. 
+
+This pointer is used by the CAN driver to access the CAN2 registers. 
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{reg__can_8h_a54ace0879c28a425474845a63d662c05}\label{reg__can_8h_a54ace0879c28a425474845a63d662c05}} 
+\index{reg\_can.h@{reg\_can.h}!canBASE\_t@{canBASE\_t}}
+\index{canBASE\_t@{canBASE\_t}!reg\_can.h@{reg\_can.h}}
+\doxysubsubsection{\texorpdfstring{canBASE\_t}{canBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+BASE\+\_\+t}}}
+
+
+
+CAN Register Frame Type Definition. 
+
+This type is used to access the CAN Registers. 

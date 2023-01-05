@@ -1,0 +1,122 @@
+\hypertarget{_device__types_8h_source}{}\doxysection{Device\+\_\+types.\+h}
+\label{_device__types_8h_source}\index{include/Device\_types.h@{include/Device\_types.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/**********************************************************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ FILE\ DESCRIPTION}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ File:\ \ Device\_types.h}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Project:\ \ Tms570\_TIFEEDriver}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ \ \ \ \ \ \ Module:\ \ TIFEEDriver}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ \ \ Generator:\ \ None}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ \ Description:\ \ This\ file\ defines\ the\ structures.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ Author:\ \ Vishwanath\ Reddy}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Revision\ History}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ Version\ \ \ \ \ \ \ \ Date\ \ \ \ \ \ \ \ \ Author\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Change\ ID\ \ \ \ \ \ \ \ Description}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ 01.15.00\ \ \ \ \ \ \ 06Jun2014\ \ \ \ Vishwanath\ Reddy\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ History\ Added.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*}}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00045\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00046\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00047\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00048\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00049\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00050\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{*}}
+\DoxyCodeLine{00052\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{\ /*********************************************************************************************************************}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ *\ INCLUDES}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ *********************************************************************************************************************/}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#ifndef\ DEVICE\_TYPES\_H}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ DEVICE\_TYPES\_H}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hal__stdtypes_8h}{hal\_stdtypes.h}}"{}}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{/*\ Enum\ to\ describe\ the\ type\ of\ error\ handling\ on\ the\ device\ */}}
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \ \ \ Device\_ErrorHandlingNone,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Device\ has\ no\ error\ handling\ */}}
+\DoxyCodeLine{00069\ \ \ \ Device\_ErrorHandlingParity,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Device\ has\ parity\ error\ handling\ */}}
+\DoxyCodeLine{00070\ \ \ \ Device\_ErrorHandlingEcc\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Device\ has\ ECC\ error\ handling\ */}}
+\DoxyCodeLine{00071\ \}\ Device\_FlashErrorCorrectionProcessType;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{/*\ Enum\ to\ describe\ the\ ARM\ core\ on\ the\ device*/}}
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ Device\_CoreNone,\ \ \ \ \ \ \textcolor{comment}{/*\ To\ indicate\ that\ the\ device\ has\ a\ single\ core\ */}}
+\DoxyCodeLine{00077\ \ \ \ \ Device\_Arm7,\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ To\ indicate\ that\ the\ device\ has\ a\ ARM7\ core\ \ \ \ */}}
+\DoxyCodeLine{00078\ \ \ \ \ Device\_CortexR4,\ \ \ \ \ \ \textcolor{comment}{/*\ To\ indicate\ that\ the\ device\ has\ a\ CortexR4\ core\ */}}
+\DoxyCodeLine{00079\ \ \ \ \ Device\_CortexM3\ \ \ \ \ \ \ \textcolor{comment}{/*\ To\ indicate\ that\ the\ device\ has\ a\ CortexM3\ core\ */}}
+\DoxyCodeLine{00080\ \}Device\_ArmCoreType;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{/*\ Structure\ defines\ an\ individual\ sector\ within\ a\ bank\ */}}
+\DoxyCodeLine{00083\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00084\ \{\ \ \ }
+\DoxyCodeLine{00085\ \ \ \ Fapi\_FlashSectorType\ Device\_Sector;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Sector\ number\ */}\ }
+\DoxyCodeLine{00086\ \ \ \ uint32\ Device\_SectorStartAddress;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Starting\ address\ of\ the\ sector\ */}}
+\DoxyCodeLine{00087\ \ \ \ uint32\ Device\_SectorLength;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Length\ of\ the\ sector\ */}}
+\DoxyCodeLine{00088\ \ \ \ uint32\ Device\_MaxWriteCycles;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Number\ of\ cycles\ the\ sector\ is\ rated\ for\ */}}
+\DoxyCodeLine{00089\ \ \ \ uint32\ Device\_EccAddress;}
+\DoxyCodeLine{00090\ \ \ \ uint32\ Device\_EccLength;}
+\DoxyCodeLine{00091\ \}\ \mbox{\hyperlink{struct_device___sector_type}{Device\_SectorType}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{comment}{/*\ Structure\ defines\ an\ individual\ bank\ */}}
+\DoxyCodeLine{00094\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00095\ \{\ \ }
+\DoxyCodeLine{00096\ \ \ \ Fapi\_FmcRegistersType\ *\ Device\_ControlRegister;\ \ }
+\DoxyCodeLine{00097\ \ \ \ Fapi\_FlashBankType\ Device\_Core;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Core\ number\ for\ this\ bank\ */}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \mbox{\hyperlink{struct_device___sector_type}{Device\_SectorType}}\ Device\_SectorInfo[DEVICE\_BANK\_MAX\_NUMBER\_OF\_SECTORS];\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Array\ of\ the\ Sectors\ within\ a\ bank\ */}}
+\DoxyCodeLine{00099\ \}\ \mbox{\hyperlink{struct_device___bank_type}{Device\_BankType}};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{comment}{/*\ Structure\ defines\ the\ Flash\ structure\ of\ the\ device\ */}}
+\DoxyCodeLine{00102\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ uint8\ Device\_DeviceName[12];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Device\ name\ */}}
+\DoxyCodeLine{00105\ \ \ \ uint32\ Device\_EngineeringId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Device\ Engineering\ ID\ */}}
+\DoxyCodeLine{00106\ \ \ \ Device\_FlashErrorCorrectionProcessType\ Device\_FlashErrorHandlingProcessInfo;\ \ \textcolor{comment}{/*\ Indicates\ which\ type\ of\ bit\ Error\ handling\ is\ on\ the\ device\ */}\ \ \ }
+\DoxyCodeLine{00107\ \ \ \ Device\_ArmCoreType\ \ \ Device\_MasterCore;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ the\ Master\ core\ type\ on\ the\ device\ */}\ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \textcolor{keywordtype}{boolean}\ Device\_SupportsInterrupts;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Indicates\ if\ the\ device\ supports\ Flash\ interrupts\ for\ processing\ Flash\ */}\ \ \ }
+\DoxyCodeLine{00109\ \ \ \ uint32\ Device\_NominalWriteTime;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Nominal\ time\ for\ one\ write\ command\ operation\ in\ uS\ */}}
+\DoxyCodeLine{00110\ \ \ \ uint32\ Device\_MaximumWriteTime;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Maximum\ time\ for\ one\ write\ command\ operation\ in\ uS\ */}\ }
+\DoxyCodeLine{00111\ \ \ \ \mbox{\hyperlink{struct_device___bank_type}{Device\_BankType}}\ Device\_BankInfo[DEVICE\_NUMBER\_OF\_FLASH\_BANKS];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Array\ of\ Banks\ on\ the\ device\ */}}
+\DoxyCodeLine{00112\ \}\ \mbox{\hyperlink{struct_device___flash_type}{Device\_FlashType}};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DEVICE\_TYPES\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{comment}{/*\ End\ of\ File\ */}}
+
+\end{DoxyCode}

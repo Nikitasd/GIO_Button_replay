@@ -1,0 +1,156 @@
+\hypertarget{adc_8h_source}{}\doxysection{adc.\+h}
+\label{adc_8h_source}\index{include/adc.h@{include/adc.h}}
+\mbox{\hyperlink{adc_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{*\ Copyright\ (C)\ 2009-\/2018\ Texas\ Instruments\ Incorporated\ -\/\ www.ti.com\ \ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00017\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{*\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{*\ \ are\ met:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*\ \ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ \ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \ \ \ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ \ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ \ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ \ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ \ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{*\ \ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ \ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*}}
+\DoxyCodeLine{00046\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifndef\ \_\_ADC\_H\_\_}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ \_\_ADC\_H\_\_}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reg__adc_8h}{reg\_adc.h}}"{}}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (0)\ */}}
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{/*\ ADC\ General\ Definitions\ */}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ adcGROUP0\ 0U}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ adcGROUP1\ 1U}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ adcGROUP2\ 2U}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ ADC\_12\_BIT\_MODE\ 0x80000000U}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bb}{adcResolution}}}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{ADC\_12\_BIT}}\ =\ 0x00000000U,\ }
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba097409074f53819bad64f920c7a521ba}{ADC\_10\_BIT}}\ =\ 0x00000100U,\ }
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba05decbe8cd62f785cc2daaa1251b344e}{ADC\_8\_BIT}}\ \ =\ 0x00000200U\ \ }
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722e}{adcFiFoStatus}}}
+\DoxyCodeLine{00113\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722eabf6eef6a60cfbc6da9f31594d4946c27}{ADC\_FIFO\_IS\_NOT\_FULL}}\ =\ 0U,\ }
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722eab0fd4d36ef5e4c75df9c0f6ce35c7125}{ADC\_FIFO\_IS\_FULL}}\ \ \ \ \ =\ 1U,\ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722ea38a363af72c5debc1b1058ac49ab0719}{ADC\_FIFO\_OVERFLOW}}\ \ \ \ =\ 3U\ \ }
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00126\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315e}{adcConversionStatus}}}
+\DoxyCodeLine{00127\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315ea3c9c35d330bba4d6bacbdf1ae29350a3}{ADC\_CONVERSION\_IS\_NOT\_FINISHED}}\ =\ 0U,\ }
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315eae549f031eb0dbe0abbc3664e851c01c6}{ADC\_CONVERSION\_IS\_FINISHED}}\ \ \ \ \ =\ 8U\ \ }
+\DoxyCodeLine{00130\ \};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910c}{adc1HwTriggerSource}}}
+\DoxyCodeLine{00138\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910caadc2f5ee45815b73e5e4b86b3d75ae56}{ADC1\_EVENT}}\ =\ 0U,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca349abb22eb187f433a7d568c3c899f0c}{ADC1\_HET1\_8}}\ =\ 1U,\ \ \ \ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca27d6939dbe967300c24de3c3ab0b7138}{ADC1\_HET1\_10}}\ =\ 2U,\ \ \ \ \ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5f3cbb6c32deb0bc1a60a1e8d09ea789}{ADC1\_RTI\_COMP0}}\ =\ 3U,\ \ \ }
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca2126c6286b841948288a6e0896e424e2}{ADC1\_HET1\_12}}\ =\ 4U,\ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca113e4c94d42e72be932631b608571e2d}{ADC1\_HET1\_14}}\ =\ 5U,\ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadeb7f1d523fb804d5f79bc209d706b1d}{ADC1\_HET1\_17}}\ =\ 6U,\ \ \ \ \ }
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7cbb4fe40700b902192507eb7d402d54}{ADC1\_HET1\_19}}\ =\ 7U\ \ \ \ \ \ }
+\DoxyCodeLine{00147\ \};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (1)\ */}}
+\DoxyCodeLine{00151\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00161\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structadc_data}{adcData}}}
+\DoxyCodeLine{00162\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ uint32\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structadc_data_a3384d9640634d49e84776a97f3e2c241}{id}};\ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ uint16\ \mbox{\hyperlink{structadc_data_a4dd7e7f197e82dc6db279eed0a5dc820}{value}};\ \ }
+\DoxyCodeLine{00165\ \}\ \mbox{\hyperlink{adc_8h_afee29ee48ab2e8c8be88a9955d37d6b9}{adcData\_t}};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (2)\ */}}
+\DoxyCodeLine{00169\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00170\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structadc__config__reg}{adc\_config\_reg}}}
+\DoxyCodeLine{00171\ \{\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00172\ \ \ \ \ uint32\ CONFIG\_OPMODECR;}
+\DoxyCodeLine{00173\ \ \ \ \ uint32\ CONFIG\_CLOCKCR;}
+\DoxyCodeLine{00174\ \ \ \ \ uint32\ CONFIG\_GxMODECR[3U];}
+\DoxyCodeLine{00175\ \ \ \ \ uint32\ CONFIG\_G0SRC;}
+\DoxyCodeLine{00176\ \ \ \ \ uint32\ CONFIG\_G1SRC;}
+\DoxyCodeLine{00177\ \ \ \ \ uint32\ CONFIG\_G2SRC;}
+\DoxyCodeLine{00178\ \ \ \ \ uint32\ CONFIG\_BNDCR;}
+\DoxyCodeLine{00179\ \ \ \ \ uint32\ CONFIG\_BNDEND;}
+\DoxyCodeLine{00180\ \ \ \ \ uint32\ CONFIG\_G0SAMP;}
+\DoxyCodeLine{00181\ \ \ \ \ uint32\ CONFIG\_G1SAMP;}
+\DoxyCodeLine{00182\ \ \ \ \ uint32\ CONFIG\_G2SAMP;}
+\DoxyCodeLine{00183\ \ \ \ \ uint32\ CONFIG\_G0SAMPDISEN;}
+\DoxyCodeLine{00184\ \ \ \ \ uint32\ CONFIG\_G1SAMPDISEN;}
+\DoxyCodeLine{00185\ \ \ \ \ uint32\ CONFIG\_G2SAMPDISEN;}
+\DoxyCodeLine{00186\ \ \ \ \ uint32\ CONFIG\_PARCR;}
+\DoxyCodeLine{00187\ \}\mbox{\hyperlink{structadc__config__reg}{adc\_config\_reg\_t}};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00204\ \textcolor{comment}{/*\ ADC\ Interface\ Functions\ */}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{keywordtype}{void}\ adcInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00207\ \textcolor{keywordtype}{void}\ adcStartConversion(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group);}
+\DoxyCodeLine{00208\ \textcolor{keywordtype}{void}\ adcStopConversion(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group);}
+\DoxyCodeLine{00209\ \textcolor{keywordtype}{void}\ adcResetFiFo(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group);}
+\DoxyCodeLine{00210\ uint32\ \ adcGetData(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group,\ \mbox{\hyperlink{structadc_data}{adcData\_t}}\ *data);}
+\DoxyCodeLine{00211\ uint32\ \ adcIsFifoFull(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group);}
+\DoxyCodeLine{00212\ uint32\ \ adcIsConversionComplete(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group);}
+\DoxyCodeLine{00213\ \textcolor{keywordtype}{void}\ adcEnableNotification(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group);}
+\DoxyCodeLine{00214\ \textcolor{keywordtype}{void}\ adcDisableNotification(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group);}
+\DoxyCodeLine{00215\ \textcolor{keywordtype}{void}\ adcCalibration(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc);}
+\DoxyCodeLine{00216\ uint32\ adcMidPointCalibration(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc);}
+\DoxyCodeLine{00217\ \textcolor{keywordtype}{void}\ adcSetEVTPin(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ value);}
+\DoxyCodeLine{00218\ uint32\ adcGetEVTPin(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc);}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00232\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___a_d_c_ga753cd0a8988b0b7b5044cfc3cfb3298d}{adcNotification}}(\mbox{\hyperlink{structadc_base}{adcBASE\_t}}\ *adc,\ uint32\ group);}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00235\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ (3)\ */}}
+\DoxyCodeLine{00236\ \textcolor{comment}{/*\ USER\ CODE\ END\ */}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00239\ \}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

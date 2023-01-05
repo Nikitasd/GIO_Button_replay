@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GO: Файл include/pinmux.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Структуры данных</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл pinmux.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>PINMUX Driver Implementation File.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="reg__pinmux_8h_source.html">reg_pinmux.h</a>&quot;</code><br />
+</div>
+<p><a href="pinmux_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Структуры данных</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpinmux__config__reg.html">pinmux_config_reg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:aecc7b6166b304248cd8c98034df84d88"><td class="memItemLeft" align="right" valign="top"><a id="aecc7b6166b304248cd8c98034df84d88" name="aecc7b6166b304248cd8c98034df84d88"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_1_SHIFT</b>&#160;&#160;&#160;8U</td></tr>
+<tr class="separator:aecc7b6166b304248cd8c98034df84d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d8cdca5abc21a08cc905d32bfcf483"><td class="memItemLeft" align="right" valign="top"><a id="aa9d8cdca5abc21a08cc905d32bfcf483" name="aa9d8cdca5abc21a08cc905d32bfcf483"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_2_SHIFT</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:aa9d8cdca5abc21a08cc905d32bfcf483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdeb142435b40eedfcc83184156a7b01"><td class="memItemLeft" align="right" valign="top"><a id="afdeb142435b40eedfcc83184156a7b01" name="afdeb142435b40eedfcc83184156a7b01"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_5_SHIFT</b>&#160;&#160;&#160;8U</td></tr>
+<tr class="separator:afdeb142435b40eedfcc83184156a7b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f224d876155b1f8d6366b2ee4fd369"><td class="memItemLeft" align="right" valign="top"><a id="a78f224d876155b1f8d6366b2ee4fd369" name="a78f224d876155b1f8d6366b2ee4fd369"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_8_SHIFT</b>&#160;&#160;&#160;16U</td></tr>
+<tr class="separator:a78f224d876155b1f8d6366b2ee4fd369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70797801d157c0f54ecddcd81398205"><td class="memItemLeft" align="right" valign="top"><a id="ab70797801d157c0f54ecddcd81398205" name="ab70797801d157c0f54ecddcd81398205"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_9_SHIFT</b>&#160;&#160;&#160;24U</td></tr>
+<tr class="separator:ab70797801d157c0f54ecddcd81398205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00983d19e39c2170205af7ffa4b468e6"><td class="memItemLeft" align="right" valign="top"><a id="a00983d19e39c2170205af7ffa4b468e6" name="a00983d19e39c2170205af7ffa4b468e6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_10_SHIFT</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a00983d19e39c2170205af7ffa4b468e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb15f07d61d023a5b51827309fdd679a"><td class="memItemLeft" align="right" valign="top"><a id="afb15f07d61d023a5b51827309fdd679a" name="afb15f07d61d023a5b51827309fdd679a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_12_SHIFT</b>&#160;&#160;&#160;8U</td></tr>
+<tr class="separator:afb15f07d61d023a5b51827309fdd679a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b32d77dea9b400a9ca9dfd9175c8400"><td class="memItemLeft" align="right" valign="top"><a id="a4b32d77dea9b400a9ca9dfd9175c8400" name="a4b32d77dea9b400a9ca9dfd9175c8400"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_18_SHIFT</b>&#160;&#160;&#160;16U</td></tr>
+<tr class="separator:a4b32d77dea9b400a9ca9dfd9175c8400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c28ae673ce836e7da22a6928eb20f59"><td class="memItemLeft" align="right" valign="top"><a id="a6c28ae673ce836e7da22a6928eb20f59" name="a6c28ae673ce836e7da22a6928eb20f59"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_27_SHIFT</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:a6c28ae673ce836e7da22a6928eb20f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650ee5c92aa3d9357f4ca5f17536c058"><td class="memItemLeft" align="right" valign="top"><a id="a650ee5c92aa3d9357f4ca5f17536c058" name="a650ee5c92aa3d9357f4ca5f17536c058"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_36_SHIFT</b>&#160;&#160;&#160;16U</td></tr>
+<tr class="separator:a650ee5c92aa3d9357f4ca5f17536c058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2cd492edbeecc6b51b8b9710e1620bd"><td class="memItemLeft" align="right" valign="top"><a id="ae2cd492edbeecc6b51b8b9710e1620bd" name="ae2cd492edbeecc6b51b8b9710e1620bd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_37_SHIFT</b>&#160;&#160;&#160;24U</td></tr>
+<tr class="separator:ae2cd492edbeecc6b51b8b9710e1620bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd71508b74bbdd2daf08a5c5d49fe065"><td class="memItemLeft" align="right" valign="top"><a id="abd71508b74bbdd2daf08a5c5d49fe065" name="abd71508b74bbdd2daf08a5c5d49fe065"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_38_SHIFT</b>&#160;&#160;&#160;0U</td></tr>
+<tr class="separator:abd71508b74bbdd2daf08a5c5d49fe065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002bc3c850a3161dcb4a76801c561cd4"><td class="memItemLeft" align="right" valign="top"><a id="a002bc3c850a3161dcb4a76801c561cd4" name="a002bc3c850a3161dcb4a76801c561cd4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_39_SHIFT</b>&#160;&#160;&#160;8U</td></tr>
+<tr class="separator:a002bc3c850a3161dcb4a76801c561cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af594432bab515f2edd92815146bda119"><td class="memItemLeft" align="right" valign="top"><a id="af594432bab515f2edd92815146bda119" name="af594432bab515f2edd92815146bda119"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_58_SHIFT</b>&#160;&#160;&#160;16U</td></tr>
+<tr class="separator:af594432bab515f2edd92815146bda119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b18d959e86b2465f78622e96c34fae3"><td class="memItemLeft" align="right" valign="top"><a id="a5b18d959e86b2465f78622e96c34fae3" name="a5b18d959e86b2465f78622e96c34fae3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_68_SHIFT</b>&#160;&#160;&#160;8U</td></tr>
+<tr class="separator:a5b18d959e86b2465f78622e96c34fae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ebb751df68a23cae654f669b542c87"><td class="memItemLeft" align="right" valign="top"><a id="ac9ebb751df68a23cae654f669b542c87" name="ac9ebb751df68a23cae654f669b542c87"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_93_SHIFT</b>&#160;&#160;&#160;8U</td></tr>
+<tr class="separator:ac9ebb751df68a23cae654f669b542c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3e6c7ab34ff3830b6bdc3667bdb51d"><td class="memItemLeft" align="right" valign="top"><a id="aba3e6c7ab34ff3830b6bdc3667bdb51d" name="aba3e6c7ab34ff3830b6bdc3667bdb51d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_1_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_1_SHIFT))</td></tr>
+<tr class="separator:aba3e6c7ab34ff3830b6bdc3667bdb51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f2f681a960edf9b14b30e7e22fdb05"><td class="memItemLeft" align="right" valign="top"><a id="a18f2f681a960edf9b14b30e7e22fdb05" name="a18f2f681a960edf9b14b30e7e22fdb05"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_2_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_2_SHIFT))</td></tr>
+<tr class="separator:a18f2f681a960edf9b14b30e7e22fdb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab742156150ddf3dfc83df1fb75b24891"><td class="memItemLeft" align="right" valign="top"><a id="ab742156150ddf3dfc83df1fb75b24891" name="ab742156150ddf3dfc83df1fb75b24891"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_5_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_5_SHIFT))</td></tr>
+<tr class="separator:ab742156150ddf3dfc83df1fb75b24891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af665bb1ae95254ccf09ef4c006bcb58c"><td class="memItemLeft" align="right" valign="top"><a id="af665bb1ae95254ccf09ef4c006bcb58c" name="af665bb1ae95254ccf09ef4c006bcb58c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_8_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_8_SHIFT))</td></tr>
+<tr class="separator:af665bb1ae95254ccf09ef4c006bcb58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0780fc4eaf1fb7eb03cc691bc7af64"><td class="memItemLeft" align="right" valign="top"><a id="aca0780fc4eaf1fb7eb03cc691bc7af64" name="aca0780fc4eaf1fb7eb03cc691bc7af64"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_9_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_9_SHIFT))</td></tr>
+<tr class="separator:aca0780fc4eaf1fb7eb03cc691bc7af64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d631532d232866fb1b4a13f9f7106d8"><td class="memItemLeft" align="right" valign="top"><a id="a8d631532d232866fb1b4a13f9f7106d8" name="a8d631532d232866fb1b4a13f9f7106d8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_10_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_10_SHIFT))</td></tr>
+<tr class="separator:a8d631532d232866fb1b4a13f9f7106d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2145e81cbe3ea5bdbaa331aaa3398d08"><td class="memItemLeft" align="right" valign="top"><a id="a2145e81cbe3ea5bdbaa331aaa3398d08" name="a2145e81cbe3ea5bdbaa331aaa3398d08"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_12_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_12_SHIFT))</td></tr>
+<tr class="separator:a2145e81cbe3ea5bdbaa331aaa3398d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b897f910f52644a6b28f72c31aefaf"><td class="memItemLeft" align="right" valign="top"><a id="ab8b897f910f52644a6b28f72c31aefaf" name="ab8b897f910f52644a6b28f72c31aefaf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_18_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_18_SHIFT))</td></tr>
+<tr class="separator:ab8b897f910f52644a6b28f72c31aefaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ff118f72eafc5a9a81104b8db0e666"><td class="memItemLeft" align="right" valign="top"><a id="a94ff118f72eafc5a9a81104b8db0e666" name="a94ff118f72eafc5a9a81104b8db0e666"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_27_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_27_SHIFT))</td></tr>
+<tr class="separator:a94ff118f72eafc5a9a81104b8db0e666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39d091e8e6e163d7dcc04624f080a00"><td class="memItemLeft" align="right" valign="top"><a id="ac39d091e8e6e163d7dcc04624f080a00" name="ac39d091e8e6e163d7dcc04624f080a00"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_36_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_36_SHIFT))</td></tr>
+<tr class="separator:ac39d091e8e6e163d7dcc04624f080a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0f423149268f340d9352b1309ad062"><td class="memItemLeft" align="right" valign="top"><a id="a5d0f423149268f340d9352b1309ad062" name="a5d0f423149268f340d9352b1309ad062"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_37_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_37_SHIFT))</td></tr>
+<tr class="separator:a5d0f423149268f340d9352b1309ad062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa366dfdfbc02fe2fab430c0830e2f6e0"><td class="memItemLeft" align="right" valign="top"><a id="aa366dfdfbc02fe2fab430c0830e2f6e0" name="aa366dfdfbc02fe2fab430c0830e2f6e0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_38_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_38_SHIFT))</td></tr>
+<tr class="separator:aa366dfdfbc02fe2fab430c0830e2f6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae970fab034fe07828775cccbada09f5f"><td class="memItemLeft" align="right" valign="top"><a id="ae970fab034fe07828775cccbada09f5f" name="ae970fab034fe07828775cccbada09f5f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_39_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_39_SHIFT))</td></tr>
+<tr class="separator:ae970fab034fe07828775cccbada09f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6672e1c01838ec5d4a6e5625b44338b"><td class="memItemLeft" align="right" valign="top"><a id="ab6672e1c01838ec5d4a6e5625b44338b" name="ab6672e1c01838ec5d4a6e5625b44338b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_58_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_58_SHIFT))</td></tr>
+<tr class="separator:ab6672e1c01838ec5d4a6e5625b44338b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838bca6c20d905ddea97747b95ba2978"><td class="memItemLeft" align="right" valign="top"><a id="a838bca6c20d905ddea97747b95ba2978" name="a838bca6c20d905ddea97747b95ba2978"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_68_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_68_SHIFT))</td></tr>
+<tr class="separator:a838bca6c20d905ddea97747b95ba2978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac61a4bd65f7e7f46097942cddfc2ee2"><td class="memItemLeft" align="right" valign="top"><a id="aac61a4bd65f7e7f46097942cddfc2ee2" name="aac61a4bd65f7e7f46097942cddfc2ee2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_93_MASK</b>&#160;&#160;&#160;(~(uint32)((uint32)0xFFU &lt;&lt; PINMUX_PIN_93_SHIFT))</td></tr>
+<tr class="separator:aac61a4bd65f7e7f46097942cddfc2ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e839028a6f668cc30e08ef534911712"><td class="memItemLeft" align="right" valign="top"><a id="a1e839028a6f668cc30e08ef534911712" name="a1e839028a6f668cc30e08ef534911712"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_1_GIOA_0</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_1_SHIFT))</td></tr>
+<tr class="separator:a1e839028a6f668cc30e08ef534911712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24606443f5c75fef58a355e20f5e1055"><td class="memItemLeft" align="right" valign="top"><a id="a24606443f5c75fef58a355e20f5e1055" name="a24606443f5c75fef58a355e20f5e1055"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_1_SPI3nCS_3</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_1_SHIFT))</td></tr>
+<tr class="separator:a24606443f5c75fef58a355e20f5e1055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6a863372d8cf4a34823223eeec28a5"><td class="memItemLeft" align="right" valign="top"><a id="a8c6a863372d8cf4a34823223eeec28a5" name="a8c6a863372d8cf4a34823223eeec28a5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_2_GIOA_1</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_2_SHIFT))</td></tr>
+<tr class="separator:a8c6a863372d8cf4a34823223eeec28a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd24e5cb5c2f7ddcb3aaa7f22c04a058"><td class="memItemLeft" align="right" valign="top"><a id="abd24e5cb5c2f7ddcb3aaa7f22c04a058" name="abd24e5cb5c2f7ddcb3aaa7f22c04a058"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_2_SPI3nCS_2</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_2_SHIFT))</td></tr>
+<tr class="separator:abd24e5cb5c2f7ddcb3aaa7f22c04a058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af647d20d7021364e828e9c1ea743aa20"><td class="memItemLeft" align="right" valign="top"><a id="af647d20d7021364e828e9c1ea743aa20" name="af647d20d7021364e828e9c1ea743aa20"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_5_GIOA_2</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_5_SHIFT))</td></tr>
+<tr class="separator:af647d20d7021364e828e9c1ea743aa20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd798cd79dab9d54c4c7bd2fa58776a1"><td class="memItemLeft" align="right" valign="top"><a id="afd798cd79dab9d54c4c7bd2fa58776a1" name="afd798cd79dab9d54c4c7bd2fa58776a1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_5_SPI3nCS_1</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_5_SHIFT))</td></tr>
+<tr class="separator:afd798cd79dab9d54c4c7bd2fa58776a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b3ca08b260e9ed241e981609ce7c14"><td class="memItemLeft" align="right" valign="top"><a id="a01b3ca08b260e9ed241e981609ce7c14" name="a01b3ca08b260e9ed241e981609ce7c14"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_8_GIOA_3</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_8_SHIFT))</td></tr>
+<tr class="separator:a01b3ca08b260e9ed241e981609ce7c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012349696a148de60abbe59da3377324"><td class="memItemLeft" align="right" valign="top"><a id="a012349696a148de60abbe59da3377324" name="a012349696a148de60abbe59da3377324"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_8_SPI2nCS_3</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_8_SHIFT))</td></tr>
+<tr class="separator:a012349696a148de60abbe59da3377324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fcb80d2e8ba61e953f6b8c8748afb2"><td class="memItemLeft" align="right" valign="top"><a id="ae0fcb80d2e8ba61e953f6b8c8748afb2" name="ae0fcb80d2e8ba61e953f6b8c8748afb2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_9_GIOA_4</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_9_SHIFT))</td></tr>
+<tr class="separator:ae0fcb80d2e8ba61e953f6b8c8748afb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44963a6e8877fd2986665cd3a998dbbb"><td class="memItemLeft" align="right" valign="top"><a id="a44963a6e8877fd2986665cd3a998dbbb" name="a44963a6e8877fd2986665cd3a998dbbb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_9_SPI2nCS_2</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_9_SHIFT))</td></tr>
+<tr class="separator:a44963a6e8877fd2986665cd3a998dbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbbd8a20548c1b38b9e4021147c9b95"><td class="memItemLeft" align="right" valign="top"><a id="a5bbbd8a20548c1b38b9e4021147c9b95" name="a5bbbd8a20548c1b38b9e4021147c9b95"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_10_GIOA_5</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_10_SHIFT))</td></tr>
+<tr class="separator:a5bbbd8a20548c1b38b9e4021147c9b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17bc2307d89f1f4673fbe0a71ac43fc0"><td class="memItemLeft" align="right" valign="top"><a id="a17bc2307d89f1f4673fbe0a71ac43fc0" name="a17bc2307d89f1f4673fbe0a71ac43fc0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_10_EXTCLKIN</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_10_SHIFT))</td></tr>
+<tr class="separator:a17bc2307d89f1f4673fbe0a71ac43fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a97b86385b2d2df78e986aa8b4c8b86"><td class="memItemLeft" align="right" valign="top"><a id="a1a97b86385b2d2df78e986aa8b4c8b86" name="a1a97b86385b2d2df78e986aa8b4c8b86"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_12_GIOA_6</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_12_SHIFT))</td></tr>
+<tr class="separator:a1a97b86385b2d2df78e986aa8b4c8b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e750bcf45f6c0a0031b2f4361e1f23"><td class="memItemLeft" align="right" valign="top"><a id="a60e750bcf45f6c0a0031b2f4361e1f23" name="a60e750bcf45f6c0a0031b2f4361e1f23"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_12_SPI2nCS_1</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_12_SHIFT))</td></tr>
+<tr class="separator:a60e750bcf45f6c0a0031b2f4361e1f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bb542dda7d7d9418ca561a915d21479"><td class="memItemLeft" align="right" valign="top"><a id="a1bb542dda7d7d9418ca561a915d21479" name="a1bb542dda7d7d9418ca561a915d21479"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_12_HET_31</b>&#160;&#160;&#160;((uint32)((uint32)0x4U &lt;&lt;  PINMUX_PIN_12_SHIFT))</td></tr>
+<tr class="separator:a1bb542dda7d7d9418ca561a915d21479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e77e1bd0df84bf322d130a973d85f41"><td class="memItemLeft" align="right" valign="top"><a id="a5e77e1bd0df84bf322d130a973d85f41" name="a5e77e1bd0df84bf322d130a973d85f41"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_18_GIOA_7</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_18_SHIFT))</td></tr>
+<tr class="separator:a5e77e1bd0df84bf322d130a973d85f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac256a6c41d8d5d5d22d0906cab1ce7cc"><td class="memItemLeft" align="right" valign="top"><a id="ac256a6c41d8d5d5d22d0906cab1ce7cc" name="ac256a6c41d8d5d5d22d0906cab1ce7cc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_18_HET_29</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_18_SHIFT))</td></tr>
+<tr class="separator:ac256a6c41d8d5d5d22d0906cab1ce7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2007e7928db98befa1606f056a19791"><td class="memItemLeft" align="right" valign="top"><a id="ad2007e7928db98befa1606f056a19791" name="ad2007e7928db98befa1606f056a19791"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_27_MIBSPI1nCS_2</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_27_SHIFT))</td></tr>
+<tr class="separator:ad2007e7928db98befa1606f056a19791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6963e46f6a2300ffb87da9e0a09b5f"><td class="memItemLeft" align="right" valign="top"><a id="aff6963e46f6a2300ffb87da9e0a09b5f" name="aff6963e46f6a2300ffb87da9e0a09b5f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_27_HET_20</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_27_SHIFT))</td></tr>
+<tr class="separator:aff6963e46f6a2300ffb87da9e0a09b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3841718dfbe9d4e9d5e0699e5ef02414"><td class="memItemLeft" align="right" valign="top"><a id="a3841718dfbe9d4e9d5e0699e5ef02414" name="a3841718dfbe9d4e9d5e0699e5ef02414"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_27_HET_19</b>&#160;&#160;&#160;((uint32)((uint32)0x4U &lt;&lt;  PINMUX_PIN_27_SHIFT))</td></tr>
+<tr class="separator:a3841718dfbe9d4e9d5e0699e5ef02414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8e46fa0cdb8f2a9f390fa5dd0779113"><td class="memItemLeft" align="right" valign="top"><a id="af8e46fa0cdb8f2a9f390fa5dd0779113" name="af8e46fa0cdb8f2a9f390fa5dd0779113"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_36_SPI3CLK</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_36_SHIFT))</td></tr>
+<tr class="separator:af8e46fa0cdb8f2a9f390fa5dd0779113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47b6b35a72e5b0692e94377bcd7b68a"><td class="memItemLeft" align="right" valign="top"><a id="ad47b6b35a72e5b0692e94377bcd7b68a" name="ad47b6b35a72e5b0692e94377bcd7b68a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_36_EQEPA</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_36_SHIFT))</td></tr>
+<tr class="separator:ad47b6b35a72e5b0692e94377bcd7b68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebfc2d3c138fc1a346bf64552df93034"><td class="memItemLeft" align="right" valign="top"><a id="aebfc2d3c138fc1a346bf64552df93034" name="aebfc2d3c138fc1a346bf64552df93034"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_37_SPI3nENA</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_37_SHIFT))</td></tr>
+<tr class="separator:aebfc2d3c138fc1a346bf64552df93034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19c551068518108312c8cbc03ad9fc1"><td class="memItemLeft" align="right" valign="top"><a id="ab19c551068518108312c8cbc03ad9fc1" name="ab19c551068518108312c8cbc03ad9fc1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_37_EQEPB</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_37_SHIFT))</td></tr>
+<tr class="separator:ab19c551068518108312c8cbc03ad9fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae574ce6838b603f6b482cd2f56098fd3"><td class="memItemLeft" align="right" valign="top"><a id="ae574ce6838b603f6b482cd2f56098fd3" name="ae574ce6838b603f6b482cd2f56098fd3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_38_SPI3nCS_0</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_38_SHIFT))</td></tr>
+<tr class="separator:ae574ce6838b603f6b482cd2f56098fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a28031e9a611ed5dd4acd7968dbd586"><td class="memItemLeft" align="right" valign="top"><a id="a0a28031e9a611ed5dd4acd7968dbd586" name="a0a28031e9a611ed5dd4acd7968dbd586"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_38_EQEPI</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_38_SHIFT))</td></tr>
+<tr class="separator:a0a28031e9a611ed5dd4acd7968dbd586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488933af90623922241afd334b214a1c"><td class="memItemLeft" align="right" valign="top"><a id="a488933af90623922241afd334b214a1c" name="a488933af90623922241afd334b214a1c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_39_MIBSPI1nCS_3</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_39_SHIFT))</td></tr>
+<tr class="separator:a488933af90623922241afd334b214a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa656caa02130bad8fb427a3c14f38a34"><td class="memItemLeft" align="right" valign="top"><a id="aa656caa02130bad8fb427a3c14f38a34" name="aa656caa02130bad8fb427a3c14f38a34"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_39_HET_26</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_39_SHIFT))</td></tr>
+<tr class="separator:aa656caa02130bad8fb427a3c14f38a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46ca31305201532bf254f6bcb229eb71"><td class="memItemLeft" align="right" valign="top"><a id="a46ca31305201532bf254f6bcb229eb71" name="a46ca31305201532bf254f6bcb229eb71"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_58_ADEVT</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_58_SHIFT))</td></tr>
+<tr class="separator:a46ca31305201532bf254f6bcb229eb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca72174a04d234aa74464dc9a4ccab92"><td class="memItemLeft" align="right" valign="top"><a id="aca72174a04d234aa74464dc9a4ccab92" name="aca72174a04d234aa74464dc9a4ccab92"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_58_HET_28</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_58_SHIFT))</td></tr>
+<tr class="separator:aca72174a04d234aa74464dc9a4ccab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75899a1eb6285bd0d71a69582ec21d40"><td class="memItemLeft" align="right" valign="top"><a id="a75899a1eb6285bd0d71a69582ec21d40" name="a75899a1eb6285bd0d71a69582ec21d40"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_68_MIBSPI1nENA</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_68_SHIFT))</td></tr>
+<tr class="separator:a75899a1eb6285bd0d71a69582ec21d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4da3ba14a154b114ebe975b5b19b24a"><td class="memItemLeft" align="right" valign="top"><a id="af4da3ba14a154b114ebe975b5b19b24a" name="af4da3ba14a154b114ebe975b5b19b24a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_68_HET_23</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_68_SHIFT))</td></tr>
+<tr class="separator:af4da3ba14a154b114ebe975b5b19b24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa58ad4de934c28276bf9e54598e177e3"><td class="memItemLeft" align="right" valign="top"><a id="aa58ad4de934c28276bf9e54598e177e3" name="aa58ad4de934c28276bf9e54598e177e3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_68_HET_30</b>&#160;&#160;&#160;((uint32)((uint32)0x4U &lt;&lt;  PINMUX_PIN_68_SHIFT))</td></tr>
+<tr class="separator:aa58ad4de934c28276bf9e54598e177e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51499572918a201ac7eed2073abec6b7"><td class="memItemLeft" align="right" valign="top"><a id="a51499572918a201ac7eed2073abec6b7" name="a51499572918a201ac7eed2073abec6b7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_93_MIBSPI1nCS_1</b>&#160;&#160;&#160;((uint32)((uint32)0x1U &lt;&lt;  PINMUX_PIN_93_SHIFT))</td></tr>
+<tr class="separator:a51499572918a201ac7eed2073abec6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4abde53311d2b4011be2a9fe5a0ada9"><td class="memItemLeft" align="right" valign="top"><a id="af4abde53311d2b4011be2a9fe5a0ada9" name="af4abde53311d2b4011be2a9fe5a0ada9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_93_EQEPS</b>&#160;&#160;&#160;((uint32)((uint32)0x2U &lt;&lt;  PINMUX_PIN_93_SHIFT))</td></tr>
+<tr class="separator:af4abde53311d2b4011be2a9fe5a0ada9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05dac60a06116b6b625ec97500a8dcf7"><td class="memItemLeft" align="right" valign="top"><a id="a05dac60a06116b6b625ec97500a8dcf7" name="a05dac60a06116b6b625ec97500a8dcf7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PINMUX_PIN_93_HET_17</b>&#160;&#160;&#160;((uint32)((uint32)0x4U &lt;&lt;  PINMUX_PIN_93_SHIFT))</td></tr>
+<tr class="separator:a05dac60a06116b6b625ec97500a8dcf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a7bcca7a30436fddd1dbd76d5d05b3bfc"><td class="memItemLeft" align="right" valign="top"><a id="a7bcca7a30436fddd1dbd76d5d05b3bfc" name="a7bcca7a30436fddd1dbd76d5d05b3bfc"></a>
+typedef struct <a class="el" href="structpinmux__config__reg.html">pinmux_config_reg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pinmux_config_reg_t</b></td></tr>
+<tr class="separator:a7bcca7a30436fddd1dbd76d5d05b3bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga8fac89d371c9be80b507da3c31144423"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o_m_m.html#ga8fac89d371c9be80b507da3c31144423">muxInit</a> (void)</td></tr>
+<tr class="memdesc:ga8fac89d371c9be80b507da3c31144423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the PINMUX Driver.  <br /></td></tr>
+<tr class="separator:ga8fac89d371c9be80b507da3c31144423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1d5925bc43dd10efb0529ed8fea7e5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o_m_m.html#gae1d5925bc43dd10efb0529ed8fea7e5d">pinmuxGetConfigValue</a> (<a class="el" href="structpinmux__config__reg.html">pinmux_config_reg_t</a> *config_reg, <a class="el" href="sys__common_8h.html#a9daf9a5992391b058477d28d107ee5e2">config_value_type_t</a> type)</td></tr>
+<tr class="memdesc:gae1d5925bc43dd10efb0529ed8fea7e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial or current values of the configuration registers.  <br /></td></tr>
+<tr class="separator:gae1d5925bc43dd10efb0529ed8fea7e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>PINMUX Driver Implementation File. </p>
+<dl class="section date"><dt>Дата</dt><dd>11-Dec-2018 </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>04.07.01 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

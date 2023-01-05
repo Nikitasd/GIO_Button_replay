@@ -1,0 +1,43 @@
+\hypertarget{gio_8c}{}\doxysection{Файл source/gio.c}
+\label{gio_8c}\index{source/gio.c@{source/gio.c}}
+
+
+GIO Driver Implementation File.  
+
+
+{\ttfamily \#include \char`\"{}gio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+vim.\+h\char`\"{}}\newline
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___g_i_o_ga3a5c5cc04b0105eb43cf8f5556e8207e}{gio\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the GIO Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___g_i_o_ga0eb9c6b99f383108e0e9ae15e5fd1450}{gio\+Set\+Direction}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 dir)
+\begin{DoxyCompactList}\small\item\em Set Port Direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___g_i_o_ga976443b96aca877a030f1e38865f6e44}{gio\+Set\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit, uint32 value)
+\begin{DoxyCompactList}\small\item\em Write Bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___g_i_o_gacc590bf80401dda7f74995de1fc14bf2}{gio\+Set\+Port}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 value)
+\begin{DoxyCompactList}\small\item\em Write Port Value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group___g_i_o_gaa8da3702193326982ea93af3f1e505fd}{gio\+Get\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\begin{DoxyCompactList}\small\item\em Read Bit. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group___g_i_o_ga84c1081ad04ee2a9ce8f4cc3a446cfaf}{gio\+Get\+Port}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port)
+\begin{DoxyCompactList}\small\item\em Read Port Value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___g_i_o_ga33d415247aa6af62c6ce4258da5a5f82}{gio\+Toggle\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\begin{DoxyCompactList}\small\item\em Write Bit. \end{DoxyCompactList}\item 
+void {\bfseries gio\+Enable\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+void {\bfseries gio\+Disable\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+PORT\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+void \mbox{\hyperlink{group___g_i_o_gadf4ea1311a3d6b62f91e76ef2c6edd50}{gio\+Get\+Config\+Value}} (\mbox{\hyperlink{structgio__config__reg}{gio\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+GIO Driver Implementation File. 
+
+\begin{DoxyDate}{Дата}
+11-\/Dec-\/2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+04.\+07.\+01 
+\end{DoxyVersion}
