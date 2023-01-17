@@ -54,13 +54,16 @@
 #include "rti.h"
 
 /* USER CODE BEGIN (0) */
+#include <Button_Events.h>
+#include <Button_Condition.h>
+#include "stdint.h"
 /* USER CODE END */
 #pragma WEAK(esmGroup1Notification)
 void esmGroup1Notification(uint32 channel)
 {
 /*  enter user code between the USER CODE BEGIN and USER CODE END. */
 /* USER CODE BEGIN (1) */
-/* USER CODE END */
+    /* USER CODE END */
 }
 
 /* USER CODE BEGIN (2) */
@@ -70,7 +73,7 @@ void esmGroup2Notification(uint32 channel)
 {
 /*  enter user code between the USER CODE BEGIN and USER CODE END. */
 /* USER CODE BEGIN (3) */
-/* USER CODE END */
+    /* USER CODE END */
 }
 
 /* USER CODE BEGIN (4) */
@@ -80,7 +83,7 @@ void memoryPort0TestFailNotification(uint32 groupSelect, uint32 dataSelect, uint
 {
 /*  enter user code between the USER CODE BEGIN and USER CODE END. */
 /* USER CODE BEGIN (5) */
-/* USER CODE END */
+    /* USER CODE END */
 }
 
 /* USER CODE BEGIN (6) */
@@ -90,7 +93,7 @@ void memoryPort1TestFailNotification(uint32 groupSelect, uint32 dataSelect, uint
 {
 /*  enter user code between the USER CODE BEGIN and USER CODE END. */
 /* USER CODE BEGIN (7) */
-/* USER CODE END */
+    /* USER CODE END */
 }
 
 /* USER CODE BEGIN (8) */
@@ -100,7 +103,7 @@ void rtiNotification(uint32 notification)
 {
 /*  enter user code between the USER CODE BEGIN and USER CODE END. */
 /* USER CODE BEGIN (9) */
-/* USER CODE END */
+    /* USER CODE END */
 }
 
 /* USER CODE BEGIN (10) */
@@ -110,7 +113,8 @@ void gioNotification(gioPORT_t *port, uint32 bit)
 {
 /*  enter user code between the USER CODE BEGIN and USER CODE END. */
 /* USER CODE BEGIN (19) */
-/* USER CODE END */
+    Button_State_Push_Value_Counter();
+    /* USER CODE END */
 }
 
 /* USER CODE BEGIN (20) */

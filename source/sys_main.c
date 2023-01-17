@@ -44,19 +44,22 @@
 
 /* USER CODE BEGIN (0) */
 
-#include <Button_Confition.h>
+#include <Button_Condition.h>
 #include <Button_Events.h>
 #include "gio.h"
 #include "sys_common.h"
-
-/* USER CODE END */
+#include "rti.h"
 #include "stdint.h"
+/* USER CODE END */
+
 /* Include Files */
+
+#include "sys_common.h"
 
 /* USER CODE BEGIN (1) */
 /* USER CODE END */
 
-/*! @fn void main(void)
+/** @fn void main(void)
 *   @brief Application main function
 *   @note This function is empty by default.
 *
@@ -65,68 +68,87 @@
 */
 
 /* USER CODE BEGIN (2) */
+struct Button_State button;
 /* USER CODE END */
-/* USER CODE BEGIN (3) */
-/*!
- * @param gioSetDirection setting up GIO pins
- * @code
- *      gioSetDirection(gioPORTA, 1 << 2);
- * @endcode
- * @param button a structure object that stores button states
- * @code
- *      struct Button_State button;
- * @endcode
- *
- */
+
 int main(void)
 {
-    struct Button_State button;
+/* USER CODE BEGIN (3) */
+    /*!
+     * @param gioSetDirection setting up GIO pins
+     * @code
+     *      gioSetDirection(gioPORTA, 1 << 2);
+     * @endcode
+     * @param button a structure object that stores button states
+     * @code
+     *      struct Button_State button;
+     * @endcode
+     *
+     */
+    /* GIO INIT */
+    _enable_IRQ();
     gioInit();
     gioSetDirection(gioPORTA, 1 << 2);
-    button.Button_Counter = 0;
+    gioNotification(gioPORTA, 7);
+    /* RTI INIT */
+    rtiInit();
+    //rtiStartCounter(rtiCOUNTER_BLOCK0);
+    Button_Struct_Init(&button);
+    while (1)
+    {
+        /*!
+         * Once we have filled the array of the Button State structure, we call the
+         * replay() function
+         * @code
+         * if(button.Button_Amount[Num_Of_Button_Events - 1] != 0){
+         *      replay(&button);
+         *  }
+         *  @endcode
+         */
 
-    while(1){
-/*!
- * Once we have filled the array of the Button State structure, we call the
- * replay() function
- * @code
- * if(button.Button_Amount[Num_Of_Button_Events - 1] != 0){
- *      replay(&button);
- *  }
- *  @endcode
- */
-        if(button.Button_Amount[Num_Of_Button_Events - 1] != 0){
-            replay(&button);
+        if(gioGetBit(gioPORTA, 7) && button.Button_Amount[0] == 0){
+            rtiStartCounter(rtiCOUNTER_BLOCK0);
         }
-/*!
- * If there is a signal from channel 7, run the Click_Count function
- * @code
- *  if(gioGetBit(gioPORTA,7)){
-            Click_Count(&button);
-            button.Button_Counter += 1;
+
+        if (button.Button_Amount[Num_Of_Button_Events - 1] != 0)
+        {
+            gioDisableNotification(gioPORTA, 7);
+            Button_State_Replay();
+            gioEnableNotification(gioPORTA, 7);
         }
- * @endcode
- */
-        if(gioGetBit(gioPORTA,7)){
-            Click_Count(&button);
-            button.Button_Counter += 1;
-        }
-/*!
-* If there is no signal from channel 7, run the NoClick_Count function
-* @code
-*  if(gioGetBit(gioPORTA,7)){
-        NoClick_Count(&button);
-        button.Button_Counter += 1;
-}
-* @endcode
-*
-*/
-        if(button.Button_Amount[0] != 0 && gioGetBit(gioPORTA, 7) == 0){
-            NoClick_Count(&button);
-            button.Button_Counter += 1;
+        /*!
+         * If there is a signal from channel 7, run the Click_Count function
+         * @code
+         *  if(gioGetBit(gioPORTA,7)){
+         Click_Count(&button);
+         button.Button_Counter += 1;
+         }
+         * @endcode
+         */
+        /*if(gioGetBit(gioPORTA,7)){
+         Click_Count(Counter_Timer);
+         button.Button_Counter += 1;
+         }*/
+        /*!
+         * If there is no signal from channel 7, run the NoClick_Count function
+         * @code
+         *  if(gioGetBit(gioPORTA,7)){
+         NoClick_Count(&button);
+         button.Button_Counter += 1;
+         }
+         * @endcode
+         *
+         */
+        if (button.Button_Amount[0] != 0 && gioGetBit(gioPORTA, 7) == 0)
+        {
+            while (gioGetBit(gioPORTA, 7) == 0)
+                ;
+            Button_State_Push_Value_Counter();
         }
     }
+    /* USER CODE END */
 }
-/* USER CODE END */
+
+
 /* USER CODE BEGIN (4) */
 /* USER CODE END */
